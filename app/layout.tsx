@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Cadillac PFAS Event Trace",
-  description: "Interactive source-linked event trace for Cadillac WWTP, Wexford County Landfill leachate and Plett Road PFAS records.",
+  description: "Hierarchical, source-linked PFAS event trace with event timestamps, embedded file metadata and an evidence request queue.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 

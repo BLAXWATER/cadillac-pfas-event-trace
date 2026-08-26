@@ -1,0 +1,2 @@
+client_id,lab_id,lab_work_order,sampling_date,analysis_date,method,qc_batch,analyst,unit,reporting_limit,n_analytes,n_detected,n_non_detect,non_detect_percent,measured_detected_total_ng_L,half_RL_sensitivity_total_ng_L,censored_half_RL_contribution_ng_L,qc_results_outside_listed_acceptance
+WT2509100804JLB-A-DUP,2509147-06,2509147,2025-09-10,2025-09-20,533,B5I2234,AA,ng/L,2.0,25,9,16,64.0,141.0,157.0,16.0,1

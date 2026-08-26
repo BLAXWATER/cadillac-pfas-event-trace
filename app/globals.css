@@ -186,6 +186,26 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(40px, 6.6vw, 86px); line-heig
 .archive-meta { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; color: #7d909c; font-family: var(--font-mono); font-size: 10px; }
 .archive-meta [data-slot="badge"] { border-color: #36505e; color: var(--primary); background: rgba(38, 230, 247, .04); }
 .document-empty { padding: 30px; border: 1px dashed #334651; color: #91a4b0; text-align: center; }
+.reference-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.reference-summary > div { display: flex; gap: 12px; align-items: center; min-height: 64px; padding: 14px 16px; border: 1px solid #29404c; background: linear-gradient(135deg, rgba(18, 32, 41, .96), rgba(10, 17, 24, .96)); }
+.reference-summary svg { flex: 0 0 auto; width: 20px; color: var(--primary); }
+.reference-summary span { display: grid; color: #81949f; font-size: 11px; }
+.reference-summary strong { color: #e9f6f8; font-family: var(--font-mono); font-size: 18px; }
+.audit-details { margin: 0 0 18px; border: 1px solid #263844; background: #0a1118; }
+.audit-details summary { padding: 13px 15px; color: #a9bbc5; font-size: 12px; font-weight: 650; cursor: pointer; }
+.audit-details summary:hover, .audit-details summary:focus-visible { color: var(--primary); outline: none; }
+.audit-panel { padding: 0 15px 15px; border-top: 1px solid #22323d; }
+.audit-panel > p { margin: 13px 0; color: #748894; font-family: var(--font-mono); font-size: 10px; line-height: 1.6; }
+.audit-panel ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.audit-panel li { display: grid; grid-template-columns: minmax(240px, .85fr) minmax(0, 1.15fr); gap: 16px; padding-top: 8px; border-top: 1px solid #1f2e38; font-size: 11px; line-height: 1.5; }
+.audit-panel li strong { color: #c7d7df; overflow-wrap: anywhere; }
+.audit-panel li span { color: #81949f; }
+.reference-card { grid-template-rows: auto auto auto; align-items: start; }
+.reference-card .archive-meta, .reference-card h3, .reference-card .dataset-shape { grid-column: 1; }
+.reference-card > a { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
+.dataset-shape { display: flex; flex-wrap: wrap; gap: 6px 12px; color: #708591; font-family: var(--font-mono); font-size: 9px; }
+.dataset-shape span + span { position: relative; }
+.dataset-shape span + span::before { content: "·"; position: absolute; left: -8px; color: #3f5967; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 .document-dialog { width: min(1500px, 96vw) !important; max-width: none !important; height: 94vh; padding: 0 !important; gap: 0 !important; overflow: hidden; border-color: #314350 !important; background: #090d13 !important; }
@@ -253,5 +273,8 @@ footer p { margin: 0; }
   .document-grid { grid-template-columns: 1fr; max-height: 680px; }
   .archive-card { grid-template-columns: 1fr; }
   .archive-card > a { grid-column: 1; grid-row: auto; justify-self: start; }
+  .reference-summary { grid-template-columns: 1fr; }
+  .audit-panel li { grid-template-columns: 1fr; gap: 3px; }
+  .reference-card > a { grid-column: 1; grid-row: auto; }
   .request-card dl > div { grid-template-columns: 1fr; gap: 4px; }
 }

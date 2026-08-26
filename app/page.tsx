@@ -5,6 +5,8 @@ import {
   AlertTriangle,
   ArrowDown,
   CheckCircle2,
+  Database,
+  Download,
   ExternalLink,
   Factory,
   FileSearch,
@@ -15,6 +17,8 @@ import {
   Waves,
 } from "lucide-react";
 import dmrDocuments from "./dmr-documents.json";
+import referenceAudit from "./reference-audit.json";
+import referenceDocuments from "./reference-documents.json";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -81,6 +85,12 @@ const pdf = (
 });
 
 const noTime = "Time not stated";
+
+const formatBytes = (bytes: number) => {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+};
 
 const events: Event[] = [
   {
@@ -570,6 +580,8 @@ export default function Home() {
   const [selected, setSelected] = useState<Source | null>(null);
   const [documentQuery, setDocumentQuery] = useState("");
   const [documentType, setDocumentType] = useState("All records");
+  const [referenceQuery, setReferenceQuery] = useState("");
+  const [referenceType, setReferenceType] = useState("All datasets");
   const groups = Array.from(events.reduce<Map<string, Event[]>>((acc, event) => {
     const group = acc.get(event.year) ?? [];
     group.push(event);
@@ -582,6 +594,13 @@ export default function Home() {
   const filteredDocuments = dmrDocuments.filter((document) => {
     const matchesType = documentType === "All records" || document.type === documentType;
     const matchesQuery = !normalizedQuery || `${document.name} ${document.year} ${document.type}`.toLowerCase().includes(normalizedQuery);
+    return matchesType && matchesQuery;
+  });
+  const referenceTypes = ["All datasets", ...Array.from(new Set(referenceDocuments.map((document) => document.type)))];
+  const normalizedReferenceQuery = referenceQuery.trim().toLowerCase();
+  const filteredReferenceDocuments = referenceDocuments.filter((document) => {
+    const matchesType = referenceType === "All datasets" || document.type === referenceType;
+    const matchesQuery = !normalizedReferenceQuery || `${document.name} ${document.format} ${document.type}`.toLowerCase().includes(normalizedReferenceQuery);
     return matchesType && matchesQuery;
   });
   return (
@@ -678,6 +697,46 @@ export default function Home() {
             ))}
           </div>
           {filteredDocuments.length === 0 && <p className="document-empty">No documents match this search.</p>}
+        </section>
+
+        <section className="document-library reference-library" aria-labelledby="reference-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 00 · REFERENCE DATA</p><h2 id="reference-library-title">Search 106 verified datasets</h2></div>
+            <p>CSV exports, workbooks, manifests and research indexes are preserved as direct downloads. Each file was compared by content and structure before publishing.</p>
+          </div>
+          <div className="reference-summary" aria-label="Reference data audit summary">
+            <div><Database /><span><strong>{referenceAudit.publishedFileCount}</strong> distinct files</span></div>
+            <div><CheckCircle2 /><span><strong>{referenceAudit.excludedFileCount}</strong> duplicate copies excluded</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(referenceAudit.includedBytes)}</strong> published</span></div>
+          </div>
+          <details className="audit-details">
+            <summary>Review duplicate decisions and comparison methods</summary>
+            <div className="audit-panel">
+              <p>{referenceAudit.methods.join(" · ")}</p>
+              <ul>{referenceAudit.exclusions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search reference datasets</span><input value={referenceQuery} onChange={(event) => setReferenceQuery(event.target.value)} placeholder="Search filename, export or dataset type" /></label>
+            <label className="document-filter"><span className="sr-only">Filter by dataset type</span><select value={referenceType} onChange={(event) => setReferenceType(event.target.value)}>{referenceTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredReferenceDocuments.length}</strong> matching datasets</span>
+          </div>
+          <div className="document-grid reference-grid">
+            {filteredReferenceDocuments.map((document) => (
+              <article className="archive-card reference-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <div className="dataset-shape">
+                  {document.rows !== null && <span>{document.rows.toLocaleString()} rows</span>}
+                  {document.columns > 0 && <span>{document.columns} columns</span>}
+                  {document.sheets !== null && <span>{document.sheets} {document.sheets === 1 ? "sheet" : "sheets"}</span>}
+                  <span title={document.sha256}>SHA-256 {document.sha256.slice(0, 12)}…</span>
+                </div>
+                <Button asChild variant="outline" size="sm"><a href={document.url} download={document.name}>Download<Download /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredReferenceDocuments.length === 0 && <p className="document-empty">No reference datasets match this search.</p>}
         </section>
 
         <section className="evidence-queue" aria-labelledby="evidence-title">

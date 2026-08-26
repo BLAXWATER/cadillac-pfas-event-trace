@@ -1,0 +1,39 @@
+{
+  "sourceFileCount": 112,
+  "publishedFileCount": 106,
+  "excludedFileCount": 6,
+  "includedBytes": 23726709,
+  "methods": [
+    "SHA-256 byte comparison",
+    "Normalized CSV header and cell comparison",
+    "Row-order-independent CSV comparison",
+    "Workbook sheet, formula and cell-value comparison",
+    "ZIP-entry comparison against loose source files"
+  ],
+  "exclusions": [
+    {
+      "name": "Reference Data.zip",
+      "reason": "Archive duplicates the individually available loose source files."
+    },
+    {
+      "name": "01-30-2027 - EGLE_Wexford_County_Landfill_Full_Export - Copy.xlsx",
+      "reason": "Byte-identical copy of the same workbook without the Copy suffix."
+    },
+    {
+      "name": "08-13-2026 - Wexford_Cadillac_document_evidence_index-2.csv",
+      "reason": "Byte-identical copy of the evidence index without the -2 suffix."
+    },
+    {
+      "name": "Cadillac_WWTP_2010_2018_Master_Manifest.xlsx",
+      "reason": "Workbook content matches the dated 2010-07-28 to 2018-12-19 version."
+    },
+    {
+      "name": "Cadillac_WWTP_Documents.csv",
+      "reason": "Contains the same 1,203 records as the dated 2000-07-26 to 2026-08-05 export; row order differs only."
+    },
+    {
+      "name": "Documents (1).csv",
+      "reason": "Contains the same 1,178 records as Documents.csv; row order differs only."
+    }
+  ]
+}

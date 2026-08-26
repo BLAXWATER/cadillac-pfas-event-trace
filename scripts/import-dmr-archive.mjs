@@ -44,7 +44,6 @@ for (const [index, entry] of entries.entries()) {
     url: `/dmr-docs/${storedName}`,
     year: primaryYear,
     type,
-    duplicateLabel: entry.name.startsWith("Duplicates_"),
   });
 }
 

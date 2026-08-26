@@ -185,7 +185,6 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(40px, 6.6vw, 86px); line-heig
 .archive-card > a { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
 .archive-meta { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; color: #7d909c; font-family: var(--font-mono); font-size: 10px; }
 .archive-meta [data-slot="badge"] { border-color: #36505e; color: var(--primary); background: rgba(38, 230, 247, .04); }
-.duplicate-label { color: #ffbf47; }
 .document-empty { padding: 30px; border: 1px dashed #334651; color: #91a4b0; text-align: center; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 

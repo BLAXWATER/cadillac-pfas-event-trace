@@ -661,7 +661,7 @@ export default function Home() {
         <section className="document-library" aria-labelledby="document-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">DISCHARGE MONITORING ARCHIVE</p><h2 id="document-library-title">Search 264 DMR and QA records</h2></div>
-            <p>The complete supplied Cadillac WWTP collection is preserved here as downloadable source files. Records whose filenames identify them as duplicates remain labeled rather than silently discarded.</p>
+            <p>The complete supplied Cadillac WWTP collection is preserved here as downloadable source files. Original filenames are retained for provenance; the content audit found no true duplicates in this set.</p>
           </div>
           <div className="document-controls">
             <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search documents</span><input value={documentQuery} onChange={(event) => setDocumentQuery(event.target.value)} placeholder="Search filename, year or record type" /></label>
@@ -671,7 +671,7 @@ export default function Home() {
           <div className="document-grid">
             {filteredDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
-                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span>{document.duplicateLabel && <span className="duplicate-label">duplicate-labelled</span>}</div>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span></div>
                 <h3>{document.name}</h3>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>

@@ -1,0 +1,25 @@
+{
+  "methods": [
+    "SHA-256 byte comparison",
+    "Normalized PDF text comparison",
+    "Rendered-page comparison",
+    "Page-count and file-size comparison",
+    "Author, creator, producer and creation-date metadata comparison"
+  ],
+  "batches": [
+    {
+      "label": "Original collection",
+      "supplied": 264,
+      "added": 264,
+      "duplicates": 0,
+      "note": "No true duplicates were found; similarly named revisions were retained."
+    },
+    {
+      "label": "2011",
+      "supplied": 1,
+      "added": 1,
+      "duplicates": 0,
+      "note": "All supplied records were distinct from the published archive."
+    }
+  ]
+}

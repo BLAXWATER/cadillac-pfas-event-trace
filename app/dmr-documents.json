@@ -1,5 +1,145 @@
 [
   {
+    "id": "133-7b2f4d817d",
+    "name": "2011-08-05 - EPA DMR-QA Study 31 - NPDES Permittee Data Report & Lab Identification - Cadillac WWTP MI0020257.pdf",
+    "url": "/dmr-docs/133-7b2f4d817d.pdf",
+    "year": "2011",
+    "type": "DMR-QA"
+  },
+  {
+    "id": "2011-ec89fa125ec1",
+    "name": "Cadillac WWTP 0111.pdf",
+    "url": "/dmr-docs/2011-ec89fa125ec1.pdf",
+    "year": "2011",
+    "type": "Municipal wastewater survey"
+  },
+  {
+    "id": "134-b2e7bd081d",
+    "name": "2013-08-14__4611196213415728235__2013_0814_Cadillac WWTP_DMR QA-33.pdf.pdf",
+    "url": "/dmr-docs/134-b2e7bd081d.pdf",
+    "year": "2013",
+    "type": "DMR-QA"
+  },
+  {
+    "id": "135-3737662f87",
+    "name": "2014-08-14 - EPA DMR-QA Study 34 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail).pdf",
+    "url": "/dmr-docs/135-3737662f87.pdf",
+    "year": "2014",
+    "type": "DMR-QA"
+  },
+  {
+    "id": "136-9ac16990c0",
+    "name": "2015-07-31 - EPA DMR-QA Study 35 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; clean scan without annotation).pdf",
+    "url": "/dmr-docs/136-9ac16990c0.pdf",
+    "year": "2015",
+    "type": "DMR-QA"
+  },
+  {
+    "id": "127-5765e7946d",
+    "name": "10-31-2016 - DMR Daily - GW1010342 _10_01_2016_to_10_31_2016_V1 (copy 2).pdf",
+    "url": "/dmr-docs/127-5765e7946d.pdf",
+    "year": "2016",
+    "type": "DMR daily"
+  },
+  {
+    "id": "128-17e1fe012d",
+    "name": "10-31-2016 - DMR Summary - GW1010342 _10_01_2016_to_10_31_2016_V1 (copy 2).pdf",
+    "url": "/dmr-docs/128-17e1fe012d.pdf",
+    "year": "2016",
+    "type": "DMR summary"
+  },
+  {
+    "id": "129-6fa8fc7017",
+    "name": "11-30-2016 - DMR Daily - GW1010342 _11_01_2016_to_11_30_2016_V1 (copy 2).pdf",
+    "url": "/dmr-docs/129-6fa8fc7017.pdf",
+    "year": "2016",
+    "type": "DMR daily"
+  },
+  {
+    "id": "130-0a133ac12e",
+    "name": "11-30-2016 - DMR Summary - GW1010342 _11_01_2016_to_11_30_2016_V1 (copy 2).pdf",
+    "url": "/dmr-docs/130-0a133ac12e.pdf",
+    "year": "2016",
+    "type": "DMR summary"
+  },
+  {
+    "id": "131-4e17985e03",
+    "name": "12-31-2016 - DMR Daily - GW1010342 _12_01_2016_to_12_31_2016_V1 (copy 2).pdf",
+    "url": "/dmr-docs/131-4e17985e03.pdf",
+    "year": "2016",
+    "type": "DMR daily"
+  },
+  {
+    "id": "132-ed4add640e",
+    "name": "12-31-2016 - DMR Summary - GW1010342 _12_01_2016_to_12_31_2016_V1 (copy 2).pdf",
+    "url": "/dmr-docs/132-ed4add640e.pdf",
+    "year": "2016",
+    "type": "DMR summary"
+  },
+  {
+    "id": "137-16ed7e5fe9",
+    "name": "2016-08-01 - EPA DMR-QA Study 36 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; DEQ recd 2016-08-02).pdf",
+    "url": "/dmr-docs/137-16ed7e5fe9.pdf",
+    "year": "2016",
+    "type": "DMR-QA"
+  },
+  {
+    "id": "138-7a79660756",
+    "name": "2017-08-31 - EPA DMR-QA Study 37 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Cindy Tomaszewski).pdf",
+    "url": "/dmr-docs/138-7a79660756.pdf",
+    "year": "2017",
+    "type": "DMR-QA"
+  },
+  {
+    "id": "139-370a3298ae",
+    "name": "2018-08-31 - EPA DMR-QA Study 38 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Cindy Tomaszewski).pdf",
+    "url": "/dmr-docs/139-370a3298ae.pdf",
+    "year": "2018",
+    "type": "DMR-QA"
+  },
+  {
+    "id": "004-558694e5c1",
+    "name": "01 - DMRs (Discharge Monitoring Reports)_Cadillac WWTP 2023 SFS 061223.pdf",
+    "url": "/dmr-docs/004-558694e5c1.pdf",
+    "year": "2023",
+    "type": "DMR report"
+  },
+  {
+    "id": "140-caaa70af9e",
+    "name": "2024 - EPA DMR-QA Study 44 Final Report (ERA) - Cadillac WWTP MI0020257 - photographed hard copy.pdf",
+    "url": "/dmr-docs/140-caaa70af9e.pdf",
+    "year": "2024",
+    "type": "DMR-QA"
+  },
+  {
+    "id": "123-19c3de6822",
+    "name": "03-31-2026 - March 2026 DMR (copy 2).pdf",
+    "url": "/dmr-docs/123-19c3de6822.pdf",
+    "year": "2026",
+    "type": "DMR report"
+  },
+  {
+    "id": "124-a6f6af643d",
+    "name": "04-30-2026 - April 2026 DMR (copy 2).pdf",
+    "url": "/dmr-docs/124-a6f6af643d.pdf",
+    "year": "2026",
+    "type": "DMR report"
+  },
+  {
+    "id": "125-4e0dc5267a",
+    "name": "05-31-2026 - May 2026 DMR.pdf",
+    "url": "/dmr-docs/125-4e0dc5267a.pdf",
+    "year": "2026",
+    "type": "DMR report"
+  },
+  {
+    "id": "126-f48f03f397",
+    "name": "06-30-2026 - June 2026 DMR.pdf",
+    "url": "/dmr-docs/126-f48f03f397.pdf",
+    "year": "2026",
+    "type": "DMR report"
+  },
+  {
     "id": "001-be54ae7e2a",
     "name": "01 - DMRs (Discharge Monitoring Reports)_2025-01-15__4156681419211944636__HQ7-KAAW-2S9Y5_v2.pdf.pdf",
     "url": "/dmr-docs/001-be54ae7e2a.pdf",
@@ -18,13 +158,6 @@
     "name": "01 - DMRs (Discharge Monitoring Reports)_2026-06-18__1959483062303199837__MI0020257_2026-05-01_to_2026-05-31_DMR.pdf.pdf",
     "url": "/dmr-docs/003-52ff8b4b29.pdf",
     "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "004-558694e5c1",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_Cadillac WWTP 2023 SFS 061223.pdf",
-    "url": "/dmr-docs/004-558694e5c1.pdf",
-    "year": "2023",
     "type": "DMR report"
   },
   {
@@ -852,132 +985,6 @@
     "url": "/dmr-docs/122-bc2b6912fd.pdf",
     "year": "Undated",
     "type": "DMR report"
-  },
-  {
-    "id": "123-19c3de6822",
-    "name": "03-31-2026 - March 2026 DMR (copy 2).pdf",
-    "url": "/dmr-docs/123-19c3de6822.pdf",
-    "year": "2026",
-    "type": "DMR report"
-  },
-  {
-    "id": "124-a6f6af643d",
-    "name": "04-30-2026 - April 2026 DMR (copy 2).pdf",
-    "url": "/dmr-docs/124-a6f6af643d.pdf",
-    "year": "2026",
-    "type": "DMR report"
-  },
-  {
-    "id": "125-4e0dc5267a",
-    "name": "05-31-2026 - May 2026 DMR.pdf",
-    "url": "/dmr-docs/125-4e0dc5267a.pdf",
-    "year": "2026",
-    "type": "DMR report"
-  },
-  {
-    "id": "126-f48f03f397",
-    "name": "06-30-2026 - June 2026 DMR.pdf",
-    "url": "/dmr-docs/126-f48f03f397.pdf",
-    "year": "2026",
-    "type": "DMR report"
-  },
-  {
-    "id": "127-5765e7946d",
-    "name": "10-31-2016 - DMR Daily - GW1010342 _10_01_2016_to_10_31_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/127-5765e7946d.pdf",
-    "year": "2016",
-    "type": "DMR daily"
-  },
-  {
-    "id": "128-17e1fe012d",
-    "name": "10-31-2016 - DMR Summary - GW1010342 _10_01_2016_to_10_31_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/128-17e1fe012d.pdf",
-    "year": "2016",
-    "type": "DMR summary"
-  },
-  {
-    "id": "129-6fa8fc7017",
-    "name": "11-30-2016 - DMR Daily - GW1010342 _11_01_2016_to_11_30_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/129-6fa8fc7017.pdf",
-    "year": "2016",
-    "type": "DMR daily"
-  },
-  {
-    "id": "130-0a133ac12e",
-    "name": "11-30-2016 - DMR Summary - GW1010342 _11_01_2016_to_11_30_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/130-0a133ac12e.pdf",
-    "year": "2016",
-    "type": "DMR summary"
-  },
-  {
-    "id": "131-4e17985e03",
-    "name": "12-31-2016 - DMR Daily - GW1010342 _12_01_2016_to_12_31_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/131-4e17985e03.pdf",
-    "year": "2016",
-    "type": "DMR daily"
-  },
-  {
-    "id": "132-ed4add640e",
-    "name": "12-31-2016 - DMR Summary - GW1010342 _12_01_2016_to_12_31_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/132-ed4add640e.pdf",
-    "year": "2016",
-    "type": "DMR summary"
-  },
-  {
-    "id": "133-7b2f4d817d",
-    "name": "2011-08-05 - EPA DMR-QA Study 31 - NPDES Permittee Data Report & Lab Identification - Cadillac WWTP MI0020257.pdf",
-    "url": "/dmr-docs/133-7b2f4d817d.pdf",
-    "year": "2011",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "134-b2e7bd081d",
-    "name": "2013-08-14__4611196213415728235__2013_0814_Cadillac WWTP_DMR QA-33.pdf.pdf",
-    "url": "/dmr-docs/134-b2e7bd081d.pdf",
-    "year": "2013",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "135-3737662f87",
-    "name": "2014-08-14 - EPA DMR-QA Study 34 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail).pdf",
-    "url": "/dmr-docs/135-3737662f87.pdf",
-    "year": "2014",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "136-9ac16990c0",
-    "name": "2015-07-31 - EPA DMR-QA Study 35 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; clean scan without annotation).pdf",
-    "url": "/dmr-docs/136-9ac16990c0.pdf",
-    "year": "2015",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "137-16ed7e5fe9",
-    "name": "2016-08-01 - EPA DMR-QA Study 36 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; DEQ recd 2016-08-02).pdf",
-    "url": "/dmr-docs/137-16ed7e5fe9.pdf",
-    "year": "2016",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "138-7a79660756",
-    "name": "2017-08-31 - EPA DMR-QA Study 37 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Cindy Tomaszewski).pdf",
-    "url": "/dmr-docs/138-7a79660756.pdf",
-    "year": "2017",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "139-370a3298ae",
-    "name": "2018-08-31 - EPA DMR-QA Study 38 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Cindy Tomaszewski).pdf",
-    "url": "/dmr-docs/139-370a3298ae.pdf",
-    "year": "2018",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "140-caaa70af9e",
-    "name": "2024 - EPA DMR-QA Study 44 Final Report (ERA) - Cadillac WWTP MI0020257 - photographed hard copy.pdf",
-    "url": "/dmr-docs/140-caaa70af9e.pdf",
-    "year": "2024",
-    "type": "DMR-QA"
   },
   {
     "id": "141-dc3cbcd978",

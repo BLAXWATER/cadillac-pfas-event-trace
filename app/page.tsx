@@ -11,8 +11,10 @@ import {
   FileText,
   FlaskConical,
   Landmark,
+  Search,
   Waves,
 } from "lucide-react";
+import dmrDocuments from "./dmr-documents.json";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -566,6 +568,8 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
 
 export default function Home() {
   const [selected, setSelected] = useState<Source | null>(null);
+  const [documentQuery, setDocumentQuery] = useState("");
+  const [documentType, setDocumentType] = useState("All records");
   const groups = Array.from(events.reduce<Map<string, Event[]>>((acc, event) => {
     const group = acc.get(event.year) ?? [];
     group.push(event);
@@ -573,6 +577,13 @@ export default function Home() {
     return acc;
   }, new Map())).map(([year, items]) => ({ year, items }));
   const sourceCount = events.reduce((count, event) => count + event.sources.length, 0);
+  const documentTypes = ["All records", ...Array.from(new Set(dmrDocuments.map((document) => document.type)))];
+  const normalizedQuery = documentQuery.trim().toLowerCase();
+  const filteredDocuments = dmrDocuments.filter((document) => {
+    const matchesType = documentType === "All records" || document.type === documentType;
+    const matchesQuery = !normalizedQuery || `${document.name} ${document.year} ${document.type}`.toLowerCase().includes(normalizedQuery);
+    return matchesType && matchesQuery;
+  });
   return (
     <TooltipProvider delayDuration={120}>
       <main className="site-shell">
@@ -645,6 +656,28 @@ export default function Home() {
               })}
             </section>
           ))}
+        </section>
+
+        <section className="document-library" aria-labelledby="document-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">DISCHARGE MONITORING ARCHIVE</p><h2 id="document-library-title">Search 264 DMR and QA records</h2></div>
+            <p>The complete supplied Cadillac WWTP collection is preserved here as downloadable source files. Records whose filenames identify them as duplicates remain labeled rather than silently discarded.</p>
+          </div>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search documents</span><input value={documentQuery} onChange={(event) => setDocumentQuery(event.target.value)} placeholder="Search filename, year or record type" /></label>
+            <label className="document-filter"><span className="sr-only">Filter by record type</span><select value={documentType} onChange={(event) => setDocumentType(event.target.value)}>{documentTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span>{document.duplicateLabel && <span className="duplicate-label">duplicate-labelled</span>}</div>
+                <h3>{document.name}</h3>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredDocuments.length === 0 && <p className="document-empty">No documents match this search.</p>}
         </section>
 
         <section className="evidence-queue" aria-labelledby="evidence-title">

@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
+import npdesAudit from "./npdes-audit.json";
+import npdesDocuments from "./npdes-documents.json";
 import referenceAudit from "./reference-audit.json";
 import referenceDocuments from "./reference-documents.json";
 import { Badge } from "@/components/ui/badge";
@@ -581,6 +583,8 @@ export default function Home() {
   const [selected, setSelected] = useState<Source | null>(null);
   const [documentQuery, setDocumentQuery] = useState("");
   const [documentType, setDocumentType] = useState("All records");
+  const [permitQuery, setPermitQuery] = useState("");
+  const [permitType, setPermitType] = useState("All permit records");
   const [referenceQuery, setReferenceQuery] = useState("");
   const [referenceType, setReferenceType] = useState("All datasets");
   const groups = Array.from(events.reduce<Map<string, Event[]>>((acc, event) => {
@@ -595,6 +599,13 @@ export default function Home() {
   const filteredDocuments = dmrDocuments.filter((document) => {
     const matchesType = documentType === "All records" || document.type === documentType;
     const matchesQuery = !normalizedQuery || `${document.name} ${document.year} ${document.type}`.toLowerCase().includes(normalizedQuery);
+    return matchesType && matchesQuery;
+  });
+  const permitTypes = ["All permit records", ...Array.from(new Set(npdesDocuments.map((document) => document.type)))];
+  const normalizedPermitQuery = permitQuery.trim().toLowerCase();
+  const filteredPermitDocuments = npdesDocuments.filter((document) => {
+    const matchesType = permitType === "All permit records" || document.type === permitType;
+    const matchesQuery = !normalizedPermitQuery || `${document.name} ${document.year} ${document.type} ${document.format}`.toLowerCase().includes(normalizedPermitQuery);
     return matchesType && matchesQuery;
   });
   const referenceTypes = ["All datasets", ...Array.from(new Set(referenceDocuments.map((document) => document.type)))];
@@ -705,6 +716,42 @@ export default function Home() {
             ))}
           </div>
           {filteredDocuments.length === 0 && <p className="document-empty">No documents match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="permit-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 02 · NPDES PERMITS &amp; PERMIT ISSUANCE</p><h2 id="permit-library-title">Search {npdesDocuments.length} verified permit records</h2></div>
+            <p>Applications, draft and final permits, WQBEL reviews, public notices, certifications, correspondence and original email-message files are preserved here. Only records proven equivalent by content and rendering are suppressed.</p>
+          </div>
+          <div className="reference-summary" aria-label="NPDES permit archive audit summary">
+            <div><FileText /><span><strong>{npdesAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
+            <div><CheckCircle2 /><span><strong>{npdesAudit.stats.duplicateCopiesSuppressed}</strong> duplicate copies excluded</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(npdesAudit.stats.publishedBytes)}</strong> published</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 02 duplicate decisions</summary>
+            <div className="audit-panel">
+              <p>{npdesAudit.methods.join(" · ")}</p>
+              <ul>{npdesAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search NPDES permit records</span><input value={permitQuery} onChange={(event) => setPermitQuery(event.target.value)} placeholder="Search filename, year or permit record type" /></label>
+            <label className="document-filter"><span className="sr-only">Filter permit records by type</span><select value={permitType} onChange={(event) => setPermitType(event.target.value)}>{permitTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredPermitDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredPermitDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                {document.format === "PDF"
+                  ? <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                  : <Button asChild variant="outline" size="sm"><a href={document.url} download={document.name}>Download MSG<Download /></a></Button>}
+              </article>
+            ))}
+          </div>
+          {filteredPermitDocuments.length === 0 && <p className="document-empty">No permit records match this search.</p>}
         </section>
 
         <section className="document-library reference-library" aria-labelledby="reference-library-title">

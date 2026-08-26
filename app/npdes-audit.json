@@ -1,0 +1,35 @@
+{
+  "methods": [
+    "SHA-256 byte comparison",
+    "Normalized PDF text comparison",
+    "48-DPI rendered-page comparison",
+    "Page-count and file-size comparison",
+    "Author, creator, producer, creation-date and modification-date metadata comparison",
+    "ZIP-entry comparison against loose files"
+  ],
+  "stats": {
+    "loosePdfsReviewed": 211,
+    "looseMessagesReviewed": 3,
+    "zipArchivesReviewed": 1,
+    "zipEntriesReviewed": 202,
+    "duplicateCopiesSuppressed": 68,
+    "metadataOnlyEquivalentCopiesSuppressed": 1,
+    "closeRevisionsRetained": 4,
+    "finalDistinctRecords": 146,
+    "publishedBytes": 54323129
+  },
+  "decisions": [
+    {
+      "name": "#02-NPEDS.zip",
+      "reason": "All 202 supported entries exactly repeat loose source files; the container is excluded."
+    },
+    {
+      "name": "10-09-2024 - IU Permit notes_COPY.pdf",
+      "reason": "Different embedded creation/modification metadata, but identical normalized text and identical rendered pages; one canonical copy is retained."
+    },
+    {
+      "name": "4 close document pairs",
+      "reason": "High textual similarity but meaningful text or page-render differences; all are retained as distinct revisions."
+    }
+  ]
+}

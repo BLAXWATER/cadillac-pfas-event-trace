@@ -698,7 +698,7 @@ export default function Home() {
           <div className="document-grid">
             {filteredDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
-                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span></div>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3>{document.name}</h3>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>

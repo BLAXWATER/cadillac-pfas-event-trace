@@ -2,10 +2,20 @@
   "methods": [
     "SHA-256 byte comparison",
     "Normalized PDF text comparison",
-    "Rendered-page comparison",
+    "48-DPI rendered-page comparison",
     "Page-count and file-size comparison",
-    "Author, creator, producer and creation-date metadata comparison"
+    "Author, creator, producer, creation-date and modification-date metadata comparison",
+    "ZIP-entry comparison against loose files"
   ],
+  "stats": {
+    "loosePdfsReviewed": 504,
+    "zipArchivesReviewed": 2,
+    "zipPdfEntriesReviewed": 1008,
+    "repeatedLooseCopiesSuppressed": 234,
+    "metadataOnlyEquivalentCopiesSuppressed": 1,
+    "newDistinctRecords": 5,
+    "finalDistinctRecords": 270
+  },
   "batches": [
     {
       "label": "Original collection",
@@ -19,7 +29,14 @@
       "supplied": 1,
       "added": 1,
       "duplicates": 0,
-      "note": "All supplied records were distinct from the published archive."
+      "note": "The municipal wastewater survey was distinct from the original collection."
+    },
+    {
+      "label": "Full Category 01 reconciliation",
+      "supplied": 504,
+      "added": 5,
+      "duplicates": 234,
+      "note": "Consolidated root and year folders; both ZIP archives repeated all 504 loose PDFs. Clean source filenames now replace prior duplicate-labelled display names where content matched."
     }
   ]
 }

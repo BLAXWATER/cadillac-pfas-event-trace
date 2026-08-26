@@ -1,1857 +1,2702 @@
 [
   {
-    "id": "133-7b2f4d817d",
+    "id": "001-e12b255837e5",
+    "name": "2010-07-27 - EPA DMR-QA Study 30 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail).pdf",
+    "url": "/dmr-docs/001-e12b255837e5.pdf",
+    "year": "2010",
+    "type": "DMR-QA",
+    "pages": 39,
+    "size": 1646356,
+    "sha256": "e12b255837e5fe15b324b119531b533b5a4b070d98e6c995d96bdb6f92d0a704"
+  },
+  {
+    "id": "002-a5901abb04e2",
     "name": "2011-08-05 - EPA DMR-QA Study 31 - NPDES Permittee Data Report & Lab Identification - Cadillac WWTP MI0020257.pdf",
-    "url": "/dmr-docs/133-7b2f4d817d.pdf",
+    "url": "/dmr-docs/002-a5901abb04e2.pdf",
     "year": "2011",
-    "type": "DMR-QA"
+    "type": "DMR-QA",
+    "pages": 24,
+    "size": 1093260,
+    "sha256": "a5901abb04e2a765f74e83ec7ea53c7a3b391a8bf1dc0556da3f9c3f40039a60"
   },
   {
-    "id": "2011-ec89fa125ec1",
+    "id": "003-ec89fa125ec1",
     "name": "Cadillac WWTP 0111.pdf",
-    "url": "/dmr-docs/2011-ec89fa125ec1.pdf",
+    "url": "/dmr-docs/003-ec89fa125ec1.pdf",
     "year": "2011",
-    "type": "Municipal wastewater survey"
+    "type": "Municipal wastewater survey",
+    "pages": 9,
+    "size": 101025,
+    "sha256": "ec89fa125ec115fc6c834eb87f47a05c423d39e367fba01d1f20afb49bc2e04e"
   },
   {
-    "id": "134-b2e7bd081d",
-    "name": "2013-08-14__4611196213415728235__2013_0814_Cadillac WWTP_DMR QA-33.pdf.pdf",
-    "url": "/dmr-docs/134-b2e7bd081d.pdf",
+    "id": "004-080148d33550",
+    "name": "2012-07-30 - EPA DMR-QA Study 32 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail).pdf",
+    "url": "/dmr-docs/004-080148d33550.pdf",
+    "year": "2012",
+    "type": "DMR-QA",
+    "pages": 11,
+    "size": 486036,
+    "sha256": "080148d335509f04f7c17d3b300bde65d3337e936b63b3783ca47a2d3c4e5b16"
+  },
+  {
+    "id": "005-8c90a77c94c4",
+    "name": "2013-05-21__103605179192073784__Fact Sheet.doc.pdf",
+    "url": "/dmr-docs/005-8c90a77c94c4.pdf",
     "year": "2013",
-    "type": "DMR-QA"
+    "type": "Fact sheet",
+    "pages": 3,
+    "size": 148677,
+    "sha256": "8c90a77c94c4c47d904a0a76068fce14f071a6f27aaf4abb38476e6742711607"
   },
   {
-    "id": "135-3737662f87",
+    "id": "006-0020874aad97",
+    "name": "2013-08-09 - EPA DMR-QA Study 33 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail).pdf",
+    "url": "/dmr-docs/006-0020874aad97.pdf",
+    "year": "2013",
+    "type": "DMR-QA",
+    "pages": 33,
+    "size": 1370064,
+    "sha256": "0020874aad97bf0707f845b3fcbfff7ccdc5aa55971ad8bb5eeb3d624359666d"
+  },
+  {
+    "id": "007-32bc7f72220a",
     "name": "2014-08-14 - EPA DMR-QA Study 34 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail).pdf",
-    "url": "/dmr-docs/135-3737662f87.pdf",
+    "url": "/dmr-docs/007-32bc7f72220a.pdf",
     "year": "2014",
-    "type": "DMR-QA"
+    "type": "DMR-QA",
+    "pages": 26,
+    "size": 1059234,
+    "sha256": "32bc7f72220a9676e1cc2883346c6d97df624082d33fb1c61aae28f10feea949"
   },
   {
-    "id": "136-9ac16990c0",
-    "name": "2015-07-31 - EPA DMR-QA Study 35 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; clean scan without annotation).pdf",
-    "url": "/dmr-docs/136-9ac16990c0.pdf",
+    "id": "008-4208a010fbb2",
+    "name": "2015-07-08__-8459938767715139506__Fact Sheet.doc.pdf",
+    "url": "/dmr-docs/008-4208a010fbb2.pdf",
     "year": "2015",
-    "type": "DMR-QA"
+    "type": "Fact sheet",
+    "pages": 3,
+    "size": 149154,
+    "sha256": "4208a010fbb2ba933452c3c5fbc3a3ca11777d2ce6c45c37bbc398bf81eaa93c"
   },
   {
-    "id": "127-5765e7946d",
-    "name": "10-31-2016 - DMR Daily - GW1010342 _10_01_2016_to_10_31_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/127-5765e7946d.pdf",
-    "year": "2016",
-    "type": "DMR daily"
+    "id": "009-8593a5392d3c",
+    "name": "2015-07-31 - EPA DMR-QA Study 35 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; annotated Wexford Co municipal; DEQ recd 2015-08-05).pdf",
+    "url": "/dmr-docs/009-8593a5392d3c.pdf",
+    "year": "2015",
+    "type": "DMR-QA",
+    "pages": 21,
+    "size": 720193,
+    "sha256": "8593a5392d3c9f2a635cd3afcd985fdc92e636ab718757f46e6cfa487921abed"
   },
   {
-    "id": "128-17e1fe012d",
-    "name": "10-31-2016 - DMR Summary - GW1010342 _10_01_2016_to_10_31_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/128-17e1fe012d.pdf",
-    "year": "2016",
-    "type": "DMR summary"
+    "id": "010-ae2f198299bb",
+    "name": "2015-07-31 - EPA DMR-QA Study 35 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; clean scan without annotation).pdf",
+    "url": "/dmr-docs/010-ae2f198299bb.pdf",
+    "year": "2015",
+    "type": "DMR-QA",
+    "pages": 21,
+    "size": 1284984,
+    "sha256": "ae2f198299bb86cfbb0bf1e08756b3aab575a0d825e71677d8f70493ea8fc17b"
   },
   {
-    "id": "129-6fa8fc7017",
-    "name": "11-30-2016 - DMR Daily - GW1010342 _11_01_2016_to_11_30_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/129-6fa8fc7017.pdf",
-    "year": "2016",
-    "type": "DMR daily"
-  },
-  {
-    "id": "130-0a133ac12e",
-    "name": "11-30-2016 - DMR Summary - GW1010342 _11_01_2016_to_11_30_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/130-0a133ac12e.pdf",
-    "year": "2016",
-    "type": "DMR summary"
-  },
-  {
-    "id": "131-4e17985e03",
-    "name": "12-31-2016 - DMR Daily - GW1010342 _12_01_2016_to_12_31_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/131-4e17985e03.pdf",
-    "year": "2016",
-    "type": "DMR daily"
-  },
-  {
-    "id": "132-ed4add640e",
-    "name": "12-31-2016 - DMR Summary - GW1010342 _12_01_2016_to_12_31_2016_V1 (copy 2).pdf",
-    "url": "/dmr-docs/132-ed4add640e.pdf",
-    "year": "2016",
-    "type": "DMR summary"
-  },
-  {
-    "id": "137-16ed7e5fe9",
+    "id": "011-a8bb9467f51d",
     "name": "2016-08-01 - EPA DMR-QA Study 36 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; DEQ recd 2016-08-02).pdf",
-    "url": "/dmr-docs/137-16ed7e5fe9.pdf",
+    "url": "/dmr-docs/011-a8bb9467f51d.pdf",
     "year": "2016",
-    "type": "DMR-QA"
+    "type": "DMR-QA",
+    "pages": 31,
+    "size": 1290302,
+    "sha256": "a8bb9467f51dde7678fc1010fa2f79f3dee23ec414d965901ddd8bf80c5a799c"
   },
   {
-    "id": "138-7a79660756",
+    "id": "012-80f09f03f46a",
+    "name": "2016-08-01 - EPA DMR-QA Study 36 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail; second scan).pdf",
+    "url": "/dmr-docs/012-80f09f03f46a.pdf",
+    "year": "2016",
+    "type": "DMR-QA",
+    "pages": 31,
+    "size": 1449684,
+    "sha256": "80f09f03f46a92a716a45d644639b65aecb6ce5f6a0ec9cfc3449290ece26537"
+  },
+  {
+    "id": "013-9a9721237464",
+    "name": "2016-12-19__-4163788102925784663__DMR Daily - GW1010342 _11_01_2016_to_11_30_2016_V1.pdf",
+    "url": "/dmr-docs/013-9a9721237464.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 133812,
+    "sha256": "9a97212374642a444f5330dae253186c45c7ee4f01326a2d41393965da81638d"
+  },
+  {
+    "id": "014-38abcc29105c",
+    "name": "2016-12-19__-4512338794143814286__DMR Daily - GW1010342 _12_01_2016_to_12_31_2016_V1.pdf",
+    "url": "/dmr-docs/014-38abcc29105c.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 134146,
+    "sha256": "38abcc29105cfaab46f37fa4c4b6414d85b2010739f5094da02431741aab22bc"
+  },
+  {
+    "id": "015-e20050cc15eb",
+    "name": "2016-12-19__-6092188544089900918__DMR Summary - GW1010342 _10_01_2016_to_10_31_2016_V1.pdf",
+    "url": "/dmr-docs/015-e20050cc15eb.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 11,
+    "size": 139064,
+    "sha256": "e20050cc15eb297e9f3109911cff04f7136f8aa813d739b4caf10746e6dc1a3a"
+  },
+  {
+    "id": "016-36f3abe16dd1",
+    "name": "2016-12-19__-7520642319298188802__DMR Daily - GW1010342 _10_01_2016_to_10_31_2016_V1.pdf",
+    "url": "/dmr-docs/016-36f3abe16dd1.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 134258,
+    "sha256": "36f3abe16dd100e0681b2855d9b2c6c41dd8992edd3db7741f0a134e90780389"
+  },
+  {
+    "id": "017-ff2a91f0f3b9",
+    "name": "2016-12-19__1125990733901254352__DMR Summary - GW1010342 _12_01_2016_to_12_31_2016_V1.pdf",
+    "url": "/dmr-docs/017-ff2a91f0f3b9.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 11,
+    "size": 139240,
+    "sha256": "ff2a91f0f3b9893d3972fa6d8ed0cf305c02d792d97716423fcb7fad09c184ec"
+  },
+  {
+    "id": "018-6a73e78ae28d",
+    "name": "2016-12-19__9038182517801689559__DMR Summary - GW1010342 _11_01_2016_to_11_30_2016_V1.pdf",
+    "url": "/dmr-docs/018-6a73e78ae28d.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 11,
+    "size": 139135,
+    "sha256": "6a73e78ae28db7df8c9859302d2f302ffe2a97f5c64652c97432367c72bdcc52"
+  },
+  {
+    "id": "019-e6b4e59a36d5",
     "name": "2017-08-31 - EPA DMR-QA Study 37 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Cindy Tomaszewski).pdf",
-    "url": "/dmr-docs/138-7a79660756.pdf",
+    "url": "/dmr-docs/019-e6b4e59a36d5.pdf",
     "year": "2017",
-    "type": "DMR-QA"
+    "type": "DMR-QA",
+    "pages": 14,
+    "size": 861285,
+    "sha256": "e6b4e59a36d50114cc4f6850f9e825e6d161ad9cd94aa3e0eaa857ed26f02e9d"
   },
   {
-    "id": "139-370a3298ae",
-    "name": "2018-08-31 - EPA DMR-QA Study 38 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Cindy Tomaszewski).pdf",
-    "url": "/dmr-docs/139-370a3298ae.pdf",
+    "id": "020-aedf7a3b2f4c",
+    "name": "2018-06-12__-7282561946599079844__DMR Summary - MI0020257 _05_01_2018_to_05_31_2018_V1.docx.pdf",
+    "url": "/dmr-docs/020-aedf7a3b2f4c.pdf",
     "year": "2018",
-    "type": "DMR-QA"
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109899,
+    "sha256": "aedf7a3b2f4cef326dd4dafd902d38aa3e556bfcd78a66dcc091c55cadb0a1ff"
   },
   {
-    "id": "004-558694e5c1",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_Cadillac WWTP 2023 SFS 061223.pdf",
-    "url": "/dmr-docs/004-558694e5c1.pdf",
+    "id": "021-98fd1431acc1",
+    "name": "2018-08-31 - EPA DMR-QA Study 38 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Cindy Tomaszewski).pdf",
+    "url": "/dmr-docs/021-98fd1431acc1.pdf",
+    "year": "2018",
+    "type": "DMR-QA",
+    "pages": 15,
+    "size": 723932,
+    "sha256": "98fd1431acc18dbf9bb45bd7e7efc84f13fb4e51ef00ca3d56faee9a49154200"
+  },
+  {
+    "id": "022-24112d4d8c27",
+    "name": "Cadillac WWTP 2023 SFS 061223.pdf",
+    "url": "/dmr-docs/022-24112d4d8c27.pdf",
     "year": "2023",
-    "type": "DMR report"
+    "type": "Supporting record",
+    "pages": 1,
+    "size": 65670,
+    "sha256": "24112d4d8c27a3858b7212462bfb686a25f8fce657b48b0c7fe4a8be072fd3ea"
   },
   {
-    "id": "140-caaa70af9e",
+    "id": "023-48f8601a7614",
     "name": "2024 - EPA DMR-QA Study 44 Final Report (ERA) - Cadillac WWTP MI0020257 - photographed hard copy.pdf",
-    "url": "/dmr-docs/140-caaa70af9e.pdf",
+    "url": "/dmr-docs/023-48f8601a7614.pdf",
     "year": "2024",
-    "type": "DMR-QA"
+    "type": "DMR-QA",
+    "pages": 6,
+    "size": 22777562,
+    "sha256": "48f8601a76144a31e00149476d9767d5ef7e07514c2feaed878740ec1cee2db9"
   },
   {
-    "id": "123-19c3de6822",
-    "name": "03-31-2026 - March 2026 DMR (copy 2).pdf",
-    "url": "/dmr-docs/123-19c3de6822.pdf",
+    "id": "024-f4d138d37833",
+    "name": "2024-11-19__4861022496716362318__MI0020257_2024-10-01_to_2024-10-31_DMR.pdf.pdf",
+    "url": "/dmr-docs/024-f4d138d37833.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 351595,
+    "sha256": "f4d138d3783391245d3d5f318a21f1979565c3ef06fbdccf1a33d344ae920f61"
+  },
+  {
+    "id": "025-65e4d1841c64",
+    "name": "2024-12-19__7862861734108588722__MI0020257_2024-11-01_to_2024-11-30_DMR.pdf.pdf",
+    "url": "/dmr-docs/025-65e4d1841c64.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 18,
+    "size": 361577,
+    "sha256": "65e4d1841c64042c6cc6e7fa3f42dd1cfd4bcd9f2fc3a54cdad98c913f2b8881"
+  },
+  {
+    "id": "026-101ae4ce7dbe",
+    "name": "08-19-2025 - Compliance Communication.pdf",
+    "url": "/dmr-docs/026-101ae4ce7dbe.pdf",
+    "year": "2025",
+    "type": "Compliance record",
+    "pages": 3,
+    "size": 101057,
+    "sha256": "101ae4ce7dbef3ba558d9c9830fc2d6a2c382f35e89712ff62421285e9a65854"
+  },
+  {
+    "id": "027-14d4edfa1b48",
+    "name": "09-04-2025 - City of Cadillac CEI Response.pdf",
+    "url": "/dmr-docs/027-14d4edfa1b48.pdf",
+    "year": "2025",
+    "type": "Compliance record",
+    "pages": 3,
+    "size": 203761,
+    "sha256": "14d4edfa1b48de7f9c56ab60d6d6973bac6263735a82dfc9da98540949df8310"
+  },
+  {
+    "id": "028-fcd795a06bf2",
+    "name": "2025-01-15__4156681419211944636__HQ7-KAAW-2S9Y5_v2.pdf.pdf",
+    "url": "/dmr-docs/028-fcd795a06bf2.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 6,
+    "size": 331754,
+    "sha256": "fcd795a06bf2db98e78d426b50e604652044c44a6d9515919f6cee6012f90ade"
+  },
+  {
+    "id": "029-250158ca9c72",
+    "name": "2510354 FINAL EGLE Excel 24 Nov 25 1129.pdf",
+    "url": "/dmr-docs/029-250158ca9c72.pdf",
+    "year": "2025",
+    "type": "Supporting record",
+    "pages": 20,
+    "size": 39324,
+    "sha256": "250158ca9c7242cd876069c70d7ced1e34a76e01b6afc6573e1e58986dc3fdf8"
+  },
+  {
+    "id": "030-d7b3ccb2599e",
+    "name": "03-31-2026 - March 2026 DMR.pdf",
+    "url": "/dmr-docs/030-d7b3ccb2599e.pdf",
     "year": "2026",
-    "type": "DMR report"
+    "type": "DMR report",
+    "pages": 17,
+    "size": 515559,
+    "sha256": "d7b3ccb2599eab12b990d4c52bcc5ae97268dad4a26be23f0d83feeb902b6183"
   },
   {
-    "id": "124-a6f6af643d",
-    "name": "04-30-2026 - April 2026 DMR (copy 2).pdf",
-    "url": "/dmr-docs/124-a6f6af643d.pdf",
+    "id": "031-6ea6c095ddfd",
+    "name": "04-30-2026 - April 2026 DMR.pdf",
+    "url": "/dmr-docs/031-6ea6c095ddfd.pdf",
     "year": "2026",
-    "type": "DMR report"
+    "type": "DMR report",
+    "pages": 18,
+    "size": 530826,
+    "sha256": "6ea6c095ddfd90753688bd0e38068d469d88ec7ea0137c2e275d0e36bf2fba64"
   },
   {
-    "id": "125-4e0dc5267a",
+    "id": "032-a6838970d42f",
     "name": "05-31-2026 - May 2026 DMR.pdf",
-    "url": "/dmr-docs/125-4e0dc5267a.pdf",
+    "url": "/dmr-docs/032-a6838970d42f.pdf",
     "year": "2026",
-    "type": "DMR report"
+    "type": "DMR report",
+    "pages": 17,
+    "size": 516437,
+    "sha256": "a6838970d42ff91a8fc51500f515aa453db0796eaee32a34c189bcb372aa8985"
   },
   {
-    "id": "126-f48f03f397",
+    "id": "033-b1b7ccd992e6",
     "name": "06-30-2026 - June 2026 DMR.pdf",
-    "url": "/dmr-docs/126-f48f03f397.pdf",
+    "url": "/dmr-docs/033-b1b7ccd992e6.pdf",
     "year": "2026",
-    "type": "DMR report"
-  },
-  {
-    "id": "001-be54ae7e2a",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_2025-01-15__4156681419211944636__HQ7-KAAW-2S9Y5_v2.pdf.pdf",
-    "url": "/dmr-docs/001-be54ae7e2a.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "002-ccc2f700b4",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_2026-05-19__-609203971089774878__MI0020257_2026-04-01_to_2026-04-30_DMR.pdf.pdf",
-    "url": "/dmr-docs/002-ccc2f700b4.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "003-52ff8b4b29",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_2026-06-18__1959483062303199837__MI0020257_2026-05-01_to_2026-05-31_DMR.pdf.pdf",
-    "url": "/dmr-docs/003-52ff8b4b29.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "005-020fa9fdcd",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_City of Cadillac December DMR .pdf",
-    "url": "/dmr-docs/005-020fa9fdcd.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "006-f427d9bd79",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _01_01_2018_to_01_31_2018_V1.pdf",
-    "url": "/dmr-docs/006-f427d9bd79.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "007-8ee8937ce2",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _01_01_2020_to_01_31_2020_V1.pdf",
-    "url": "/dmr-docs/007-8ee8937ce2.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "008-75e7699f8a",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _02_01_2016_to_02_29_2016_V1.pdf",
-    "url": "/dmr-docs/008-75e7699f8a.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "009-bfb8a56a94",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _02_01_2019_to_02_28_2019_V1.pdf",
-    "url": "/dmr-docs/009-bfb8a56a94.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "010-cb1542861e",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _02_01_2020_to_02_29_2020_V1.pdf",
-    "url": "/dmr-docs/010-cb1542861e.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "011-f823a5f672",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _03_01_2020_to_03_31_2020_V1.pdf",
-    "url": "/dmr-docs/011-f823a5f672.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "012-d30edb2df4",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _04_01_2016_to_04_30_2016_V1.pdf",
-    "url": "/dmr-docs/012-d30edb2df4.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "013-f126528fb4",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _04_01_2017_to_04_30_2017_V1.pdf",
-    "url": "/dmr-docs/013-f126528fb4.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "014-c9ee974de1",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _04_01_2018_to_04_30_2018_V1.pdf",
-    "url": "/dmr-docs/014-c9ee974de1.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "015-086cc3fb35",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _04_01_2019_to_04_30_2019_V1.pdf",
-    "url": "/dmr-docs/015-086cc3fb35.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "016-9e7476c674",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _04_01_2020_to_04_30_2020_V1.pdf",
-    "url": "/dmr-docs/016-9e7476c674.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "017-4c8c5b43d2",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _05_01_2016_to_05_31_2016_V1.pdf",
-    "url": "/dmr-docs/017-4c8c5b43d2.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "018-f1cbb32fdf",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _05_01_2017_to_05_31_2017_V1.pdf",
-    "url": "/dmr-docs/018-f1cbb32fdf.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "019-2654af81c2",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _05_01_2019_to_05_31_2019_V1.pdf",
-    "url": "/dmr-docs/019-2654af81c2.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "020-cb3ac8064d",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _06_01_2016_to_06_30_2016_V1.pdf",
-    "url": "/dmr-docs/020-cb3ac8064d.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "021-55d25488cd",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _06_01_2017_to_06_30_2017_V1.pdf",
-    "url": "/dmr-docs/021-55d25488cd.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "022-21e5dab310",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _06_01_2018_to_06_30_2018_V1.pdf",
-    "url": "/dmr-docs/022-21e5dab310.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "023-6b7dd40be7",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _06_01_2019_to_06_30_2019_V1.pdf",
-    "url": "/dmr-docs/023-6b7dd40be7.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "024-1e97dcc624",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _07_01_2016_to_07_31_2016_V1.pdf",
-    "url": "/dmr-docs/024-1e97dcc624.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "025-c2f59ceae1",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _08_01_2015_to_08_31_2015_V1.pdf",
-    "url": "/dmr-docs/025-c2f59ceae1.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "026-666ec32674",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _08_01_2016_to_08_31_2016_V1.pdf",
-    "url": "/dmr-docs/026-666ec32674.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "027-9d50ee11ef",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _08_01_2017_to_08_31_2017_V1.pdf",
-    "url": "/dmr-docs/027-9d50ee11ef.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "028-bfca1dd29d",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _09_01_2015_to_09_30_2015_V1.pdf",
-    "url": "/dmr-docs/028-bfca1dd29d.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "029-1c406564e3",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _09_01_2016_to_09_30_2016_V1.pdf",
-    "url": "/dmr-docs/029-1c406564e3.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "030-0da7ff7b69",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _09_01_2017_to_09_30_2017_V1.pdf",
-    "url": "/dmr-docs/030-0da7ff7b69.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "031-fe234a4143",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _09_01_2018_to_09_30_2018_V1.pdf",
-    "url": "/dmr-docs/031-fe234a4143.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "032-6d924ee18d",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _09_01_2019_to_09_30_2019_V1.pdf",
-    "url": "/dmr-docs/032-6d924ee18d.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "033-7598a23f7d",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _10_01_2016_to_10_31_2016_V1.pdf",
-    "url": "/dmr-docs/033-7598a23f7d.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "034-29532c426e",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _10_01_2017_to_10_31_2017_V2.pdf",
-    "url": "/dmr-docs/034-29532c426e.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "035-df109cd7f4",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _10_01_2018_to_10_31_2018_V1.pdf",
-    "url": "/dmr-docs/035-df109cd7f4.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "036-02cba343b5",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _10_01_2019_to_10_31_2019_V1.pdf",
-    "url": "/dmr-docs/036-02cba343b5.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "037-1fd11e6a50",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _10_01_2020_to_10_31_2020_V1.pdf",
-    "url": "/dmr-docs/037-1fd11e6a50.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "038-e535746e66",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _11_01_2017_to_11_30_2017_V1.pdf",
-    "url": "/dmr-docs/038-e535746e66.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "039-3e2b66e1fd",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _11_01_2018_to_11_30_2018_V1.pdf",
-    "url": "/dmr-docs/039-3e2b66e1fd.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "040-a6174c0771",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _11_01_2019_to_11_30_2019_V1.pdf",
-    "url": "/dmr-docs/040-a6174c0771.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "041-ede7eecc79",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _11_01_2020_to_11_30_2020_V1.pdf",
-    "url": "/dmr-docs/041-ede7eecc79.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "042-fd812deb4d",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _12_01_2015_to_12_31_2015_V1.pdf",
-    "url": "/dmr-docs/042-fd812deb4d.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "043-364a875d52",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Daily - MI0020257 _12_01_2019_to_12_31_2019_V1.pdf",
-    "url": "/dmr-docs/043-364a875d52.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "044-e2d4e37d29",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _01_01_2016_to_01_31_2016_V1.pdf",
-    "url": "/dmr-docs/044-e2d4e37d29.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "045-7c0522a130",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _01_01_2018_to_01_31_2018_V1.pdf",
-    "url": "/dmr-docs/045-7c0522a130.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "046-0342796794",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _01_01_2020_to_01_31_2020_V1.pdf",
-    "url": "/dmr-docs/046-0342796794.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "047-a6b1f6e9fe",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _02_01_2016_to_02_29_2016_V1.pdf",
-    "url": "/dmr-docs/047-a6b1f6e9fe.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "048-3cdf7f7d70",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _03_01_2016_to_03_31_2016_V1.pdf",
-    "url": "/dmr-docs/048-3cdf7f7d70.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "049-07912cbc23",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _03_01_2018_to_03_31_2018_V1.pdf",
-    "url": "/dmr-docs/049-07912cbc23.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "050-6222aab773",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _03_01_2019_to_03_31_2019_V1.pdf",
-    "url": "/dmr-docs/050-6222aab773.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "051-ad5f3de91d",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _03_01_2020_to_03_31_2020_V1.pdf",
-    "url": "/dmr-docs/051-ad5f3de91d.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "052-72e4c172f3",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _04_01_2016_to_04_30_2016_V1.pdf",
-    "url": "/dmr-docs/052-72e4c172f3.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "053-b353051dad",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _04_01_2018_to_04_30_2018_V1.pdf",
-    "url": "/dmr-docs/053-b353051dad.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "054-723aedc75c",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _04_01_2019_to_04_30_2019_V1.pdf",
-    "url": "/dmr-docs/054-723aedc75c.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "055-416fd48de6",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _04_01_2020_to_04_30_2020_V1.pdf",
-    "url": "/dmr-docs/055-416fd48de6.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "056-88d2fb9793",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _05_01_2016_to_05_31_2016_V1.pdf",
-    "url": "/dmr-docs/056-88d2fb9793.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "057-e1c5177c89",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _05_01_2017_to_05_31_2017_V1.pdf",
-    "url": "/dmr-docs/057-e1c5177c89.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "058-5dc3165a05",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _05_01_2017_to_05_31_2017_V2.pdf",
-    "url": "/dmr-docs/058-5dc3165a05.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "059-ad5134908b",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _05_01_2019_to_05_31_2019_V1.pdf",
-    "url": "/dmr-docs/059-ad5134908b.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "060-4ee75c468e",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _05_01_2020_to_05_31_2020_V1.pdf",
-    "url": "/dmr-docs/060-4ee75c468e.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "061-0b59cd0855",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _06_01_2016_to_06_30_2016_V1.pdf",
-    "url": "/dmr-docs/061-0b59cd0855.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "062-e006ed9f12",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _06_01_2017_to_06_30_2017_V1.pdf",
-    "url": "/dmr-docs/062-e006ed9f12.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "063-8d05b1d042",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _06_01_2018_to_06_30_2018_V1.pdf",
-    "url": "/dmr-docs/063-8d05b1d042.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "064-c81fd4f7ae",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _06_01_2019_to_06_30_2019_V1.pdf",
-    "url": "/dmr-docs/064-c81fd4f7ae.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "065-0423383085",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _07_01_2015_to_07_31_2015_V1.pdf",
-    "url": "/dmr-docs/065-0423383085.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "066-969f74dee9",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _07_01_2016_to_07_31_2016_V1.pdf",
-    "url": "/dmr-docs/066-969f74dee9.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "067-bbb54c803b",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _07_01_2017_to_07_31_2017_V2.pdf",
-    "url": "/dmr-docs/067-bbb54c803b.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "068-a1681347da",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _07_01_2019_to_07_31_2019_V1.pdf",
-    "url": "/dmr-docs/068-a1681347da.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "069-27f4103fd9",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _08_01_2015_to_08_31_2015_V1.pdf",
-    "url": "/dmr-docs/069-27f4103fd9.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "070-85996ca7f0",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _08_01_2016_to_08_31_2016_V1.pdf",
-    "url": "/dmr-docs/070-85996ca7f0.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "071-5a86f00357",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _08_01_2018_to_08_31_2018_V1.pdf",
-    "url": "/dmr-docs/071-5a86f00357.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "072-5986488dad",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _09_01_2015_to_09_30_2015_V1.pdf",
-    "url": "/dmr-docs/072-5986488dad.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "073-130ae9f90c",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _09_01_2018_to_09_30_2018_V1.pdf",
-    "url": "/dmr-docs/073-130ae9f90c.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "074-f33839e2f3",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _09_01_2019_to_09_30_2019_V1.pdf",
-    "url": "/dmr-docs/074-f33839e2f3.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "075-996120e5af",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _10_01_2015_to_09_30_2016_V1.pdf",
-    "url": "/dmr-docs/075-996120e5af.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "076-014ce767e8",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _10_01_2016_to_09_30_2017_V1.pdf",
-    "url": "/dmr-docs/076-014ce767e8.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "077-fe9f8bb072",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _10_01_2016_to_10_31_2016_V1.pdf",
-    "url": "/dmr-docs/077-fe9f8bb072.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "078-7a9ecc523c",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _10_01_2017_to_09_30_2018_V1.pdf",
-    "url": "/dmr-docs/078-7a9ecc523c.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "079-ad6c942e41",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _10_01_2017_to_10_31_2017_V2.pdf",
-    "url": "/dmr-docs/079-ad6c942e41.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "080-46860c5a3a",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _10_01_2018_to_09_30_2019_V1.pdf",
-    "url": "/dmr-docs/080-46860c5a3a.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "081-0620b67d09",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _10_01_2019_to_10_31_2019_V1.pdf",
-    "url": "/dmr-docs/081-0620b67d09.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "082-bef53a0b7c",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _10_01_2020_to_10_31_2020_V1.pdf",
-    "url": "/dmr-docs/082-bef53a0b7c.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "083-8f2509a077",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _11_01_2018_to_11_30_2018_V1.pdf",
-    "url": "/dmr-docs/083-8f2509a077.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "084-ce18cde52a",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _11_01_2020_to_11_30_2020_V1.pdf",
-    "url": "/dmr-docs/084-ce18cde52a.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "085-dd05ca9f4e",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _12_01_2015_to_12_31_2015_V1.pdf",
-    "url": "/dmr-docs/085-dd05ca9f4e.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "086-5ad348e514",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_DMR Summary - MI0020257 _12_01_2019_to_12_31_2019_V1.pdf",
-    "url": "/dmr-docs/086-5ad348e514.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "087-8f0c7d1d28",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_Fact Sheet_Cadillac WWTP.pdf",
-    "url": "/dmr-docs/087-8f0c7d1d28.pdf",
-    "year": "Undated",
-    "type": "Fact sheet"
-  },
-  {
-    "id": "088-9fc499c298",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2021-04-01_to_2021-04-30_1_DMR.pdf",
-    "url": "/dmr-docs/088-9fc499c298.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "089-6a9140d4e7",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2021-07-01_to_2021-07-31_1_DMR.pdf",
-    "url": "/dmr-docs/089-6a9140d4e7.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "090-9dea851908",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2021-08-01_to_2021-08-31_DMR.pdf",
-    "url": "/dmr-docs/090-9dea851908.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "091-a047e74d1d",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2021-10-01_to_2021-10-31_DMR.pdf",
-    "url": "/dmr-docs/091-a047e74d1d.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "092-5a11d4a423",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2021-10-01_to_2022-09-30_DMR.pdf",
-    "url": "/dmr-docs/092-5a11d4a423.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "093-18132ce460",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2021-12-01_to_2021-12-31_DMR.pdf",
-    "url": "/dmr-docs/093-18132ce460.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "094-79fd86b2a5",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-01-01_to_2022-01-31_DMR.pdf",
-    "url": "/dmr-docs/094-79fd86b2a5.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "095-cb24afb20b",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-02-01_to_2022-02-28_DMR.pdf",
-    "url": "/dmr-docs/095-cb24afb20b.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "096-0470187cd7",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-03-01_to_2022-03-31_DMR.pdf",
-    "url": "/dmr-docs/096-0470187cd7.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "097-70d5d58e42",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-04-01_to_2022-04-30_2_DMR.pdf",
-    "url": "/dmr-docs/097-70d5d58e42.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "098-37cf95fcdf",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-04-01_to_2022-04-30_DMR.pdf",
-    "url": "/dmr-docs/098-37cf95fcdf.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "099-ae3b47b0bd",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-05-01_to_2022-05-31_2_DMR.pdf",
-    "url": "/dmr-docs/099-ae3b47b0bd.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "100-89f0582723",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-07-01_to_2022-07-31_DMR.pdf",
-    "url": "/dmr-docs/100-89f0582723.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "101-75f9685920",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-08-01_to_2022-08-31_DMR.pdf",
-    "url": "/dmr-docs/101-75f9685920.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "102-5ad899a543",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-09-01_to_2022-09-30_DMR.pdf",
-    "url": "/dmr-docs/102-5ad899a543.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "103-d3ce6a6e8c",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-11-01_to_2022-11-30_DMR.pdf",
-    "url": "/dmr-docs/103-d3ce6a6e8c.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "104-b8e9c580d9",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2022-12-01_to_2022-12-31_DMR.pdf",
-    "url": "/dmr-docs/104-b8e9c580d9.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "105-594199877f",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2023-01-01_to_2023-01-31_DMR.pdf",
-    "url": "/dmr-docs/105-594199877f.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "106-0e8bd9653d",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2023-02-01_to_2023-02-28_DMR.pdf",
-    "url": "/dmr-docs/106-0e8bd9653d.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "107-5d8f003cec",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2023-03-01_to_2023-03-31_DMR.pdf",
-    "url": "/dmr-docs/107-5d8f003cec.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "108-effe38004e",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2023-04-01_to_2023-04-30_DMR.pdf",
-    "url": "/dmr-docs/108-effe38004e.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "109-488e5af4bf",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2023-10-01_to_2023-10-31_DMR.pdf",
-    "url": "/dmr-docs/109-488e5af4bf.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "110-a70f40292a",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2023-10-01_to_2024-09-30_DMR.pdf",
-    "url": "/dmr-docs/110-a70f40292a.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "111-4e3df00c5a",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2023-11-01_to_2023-11-30_DMR.pdf",
-    "url": "/dmr-docs/111-4e3df00c5a.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "112-169e3bc8fc",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2023-12-01_to_2023-12-31_DMR.pdf",
-    "url": "/dmr-docs/112-169e3bc8fc.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "113-95e769a570",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2024-01-01_to_2024-01-31_DMR.pdf",
-    "url": "/dmr-docs/113-95e769a570.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "114-28eec81448",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2024-04-01_to_2024-04-30_DMR.pdf",
-    "url": "/dmr-docs/114-28eec81448.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "115-fc870b2ed0",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2024-05-01_to_2024-05-31_DMR.pdf",
-    "url": "/dmr-docs/115-fc870b2ed0.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "116-a51c5f4fdb",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2024-09-01_to_2024-09-30_DMR.pdf",
-    "url": "/dmr-docs/116-a51c5f4fdb.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "117-0e3f073ab1",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2024-10-01_to_2025-09-30_DMR.pdf",
-    "url": "/dmr-docs/117-0e3f073ab1.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "118-5034271f0e",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2024-12-01_to_2024-12-31_DMR.pdf",
-    "url": "/dmr-docs/118-5034271f0e.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "119-a66b3e9e4e",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2025-01-01_to_2025-01-31_DMR.pdf",
-    "url": "/dmr-docs/119-a66b3e9e4e.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "120-b370ecc1b0",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2025-02-01_to_2025-02-28_DMR.pdf",
-    "url": "/dmr-docs/120-b370ecc1b0.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "121-e34a851958",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_MI0020257_2025-03-01_to_2025-03-31_DMR.pdf",
-    "url": "/dmr-docs/121-e34a851958.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "122-bc2b6912fd",
-    "name": "01 - DMRs (Discharge Monitoring Reports)_QA QC Report_Cadillac WWTP.pdf",
-    "url": "/dmr-docs/122-bc2b6912fd.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "141-dc3cbcd978",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 502592,
+    "sha256": "b1b7ccd992e6075a4c8c06219c7cfc88e925747d0b925d5d0c11e9d4f9f918ef"
+  },
+  {
+    "id": "034-e2ce6bfd17cc",
+    "name": "2026-05-19__-609203971089774878__MI0020257_2026-04-01_to_2026-04-30_DMR.pdf.pdf",
+    "url": "/dmr-docs/034-e2ce6bfd17cc.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "pages": 18,
+    "size": 359068,
+    "sha256": "e2ce6bfd17cc11306d97e9b30e192509b31e909bb1cd654a059b0bfdf1d5c816"
+  },
+  {
+    "id": "035-03760162b77c",
+    "name": "2026-05-22__5461108364321894572__MI0020257_2026-04-01_to_2026-04-30_2_DMR.pdf.pdf",
+    "url": "/dmr-docs/035-03760162b77c.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "pages": 18,
+    "size": 359713,
+    "sha256": "03760162b77ccb24be36660bed0e48fb0ec82e2aac3665d808f2abf8c7fbeb35"
+  },
+  {
+    "id": "036-8f35d17c5298",
+    "name": "2026-06-18__1959483062303199837__MI0020257_2026-05-01_to_2026-05-31_DMR.pdf.pdf",
+    "url": "/dmr-docs/036-8f35d17c5298.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 1061101,
+    "sha256": "8f35d17c5298b50aa017cde8b2157001d82fb9e47f9df562ccf7babb7a0636d4"
+  },
+  {
+    "id": "037-f1501daa350b",
+    "name": "2026-07-20__-2130394822376927917__MI0020257_2026-06-01_to_2026-06-30_DMR.pdf.pdf",
+    "url": "/dmr-docs/037-f1501daa350b.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 982080,
+    "sha256": "f1501daa350b987bbd006e63dcf8e59e9ccd92ab835da327b786015af49d7ea9"
+  },
+  {
+    "id": "038-8c3156579628",
+    "name": "Cadillac WWTP 0257 DMRQA45.pdf",
+    "url": "/dmr-docs/038-8c3156579628.pdf",
+    "year": "Undated",
+    "type": "DMR-QA",
+    "pages": 18,
+    "size": 4260981,
+    "sha256": "8c31565796281b14c91a36f3866e27b153ed92b455813759a155baa25af33dda"
+  },
+  {
+    "id": "039-a0308d8f248b",
+    "name": "Cadillac WWTP1014.pdf",
+    "url": "/dmr-docs/039-a0308d8f248b.pdf",
+    "year": "2014",
+    "type": "Municipal wastewater survey",
+    "pages": 8,
+    "size": 101160,
+    "sha256": "a0308d8f248ba7986d4938166dcd211f024ab8a152333037b738b4c9b870fdac"
+  },
+  {
+    "id": "040-89ad99d824fb",
     "name": "cadillac_cyanide_investigation.md.pdf",
-    "url": "/dmr-docs/141-dc3cbcd978.pdf",
-    "year": "Undated",
-    "type": "Supporting record"
-  },
-  {
-    "id": "142-f279c8c294",
-    "name": "Duplicates_2010_0728_Cadillac WWTP_DMR QA-30.pdf",
-    "url": "/dmr-docs/142-f279c8c294.pdf",
-    "year": "Undated",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "143-8c65869d1c",
-    "name": "Duplicates_2012_0817_Cadillac WWTP_DMR QA-32.pdf",
-    "url": "/dmr-docs/143-8c65869d1c.pdf",
-    "year": "Undated",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "144-42ee384db8",
-    "name": "Duplicates_2015_0805_Cadillac WWTP_DMR QA-35.pdf",
-    "url": "/dmr-docs/144-42ee384db8.pdf",
-    "year": "Undated",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "145-3071c350be",
-    "name": "Duplicates_2018-06-12__-7282561946599079844__DMR Summary - MI0020257 _05_01_2018_to_05_31_2018_V1.docx.pdf",
-    "url": "/dmr-docs/145-3071c350be.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "146-75bbc77dc8",
-    "name": "Duplicates_2024-11-19__4861022496716362318__MI0020257_2024-10-01_to_2024-10-31_DMR.pdf.pdf",
-    "url": "/dmr-docs/146-75bbc77dc8.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "147-02c70cc6fa",
-    "name": "Duplicates_2024-12-19__7862861734108588722__MI0020257_2024-11-01_to_2024-11-30_DMR.pdf.pdf",
-    "url": "/dmr-docs/147-02c70cc6fa.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "148-5dec8e372e",
-    "name": "Duplicates_2026-05-22__5461108364321894572__MI0020257_2026-04-01_to_2026-04-30_2_DMR.pdf.pdf",
-    "url": "/dmr-docs/148-5dec8e372e.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "149-d839d78e50",
-    "name": "Duplicates_2026-07-20__-2130394822376927917__MI0020257_2026-06-01_to_2026-06-30_DMR.pdf.pdf",
-    "url": "/dmr-docs/149-d839d78e50.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "150-891ee9a971",
-    "name": "Duplicates_2510354 FINAL EGLE Excel 24 Nov 25 1129.pdf",
-    "url": "/dmr-docs/150-891ee9a971.pdf",
-    "year": "Undated",
-    "type": "Supporting record"
-  },
-  {
-    "id": "151-62c89a9cdd",
-    "name": "Duplicates_Cadillac WWTP 0257 DMRQA45.pdf",
-    "url": "/dmr-docs/151-62c89a9cdd.pdf",
-    "year": "Undated",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "152-d2d085e8f1",
-    "name": "Duplicates_cadillacdraftcomment.pdf",
-    "url": "/dmr-docs/152-d2d085e8f1.pdf",
-    "year": "Undated",
-    "type": "Supporting record"
-  },
-  {
-    "id": "153-43e73a50c2",
-    "name": "Duplicates_DMR Daily - MI0020257 _01_01_2016_to_01_31_2016_V1.pdf",
-    "url": "/dmr-docs/153-43e73a50c2.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "154-3e26ff8699",
-    "name": "Duplicates_DMR Daily - MI0020257 _01_01_2017_to_01_31_2017_V1.pdf",
-    "url": "/dmr-docs/154-3e26ff8699.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "155-b3dfa842d6",
-    "name": "Duplicates_DMR Daily - MI0020257 _01_01_2019_to_01_31_2019_V1.pdf",
-    "url": "/dmr-docs/155-b3dfa842d6.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "156-9bdbfd3428",
-    "name": "Duplicates_DMR Daily - MI0020257 _02_01_2017_to_02_28_2017_V1.pdf",
-    "url": "/dmr-docs/156-9bdbfd3428.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "157-c820721c1f",
-    "name": "Duplicates_DMR Daily - MI0020257 _02_01_2018_to_02_28_2018_V1.pdf",
-    "url": "/dmr-docs/157-c820721c1f.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "158-ce8bfd7b6f",
-    "name": "Duplicates_DMR Daily - MI0020257 _03_01_2016_to_03_31_2016_V1.pdf",
-    "url": "/dmr-docs/158-ce8bfd7b6f.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "159-5f6d6c280a",
-    "name": "Duplicates_DMR Daily - MI0020257 _03_01_2017_to_03_31_2017_V1.pdf",
-    "url": "/dmr-docs/159-5f6d6c280a.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "160-f781d54d61",
-    "name": "Duplicates_DMR Daily - MI0020257 _03_01_2018_to_03_31_2018_V1.pdf",
-    "url": "/dmr-docs/160-f781d54d61.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "161-279a53dfb0",
-    "name": "Duplicates_DMR Daily - MI0020257 _03_01_2019_to_03_31_2019_V1.pdf",
-    "url": "/dmr-docs/161-279a53dfb0.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "162-bf573b32a1",
-    "name": "Duplicates_DMR Daily - MI0020257 _05_01_2017_to_05_31_2017_V2.pdf",
-    "url": "/dmr-docs/162-bf573b32a1.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "163-2f170eabc8",
-    "name": "Duplicates_DMR Daily - MI0020257 _05_01_2017_to_05_31_2017_V3.pdf",
-    "url": "/dmr-docs/163-2f170eabc8.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "164-c8adf12e80",
-    "name": "Duplicates_DMR Daily - MI0020257 _05_01_2018_to_05_31_2018_V1.pdf",
-    "url": "/dmr-docs/164-c8adf12e80.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "165-0ca2be3929",
-    "name": "Duplicates_DMR Daily - MI0020257 _05_01_2020_to_05_31_2020_V1.pdf",
-    "url": "/dmr-docs/165-0ca2be3929.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "166-f3e7c1c1e5",
-    "name": "Duplicates_DMR Daily - MI0020257 _06_01_2020_to_06_30_2020_V1.pdf",
-    "url": "/dmr-docs/166-f3e7c1c1e5.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "167-87beb14d6f",
-    "name": "Duplicates_DMR Daily - MI0020257 _07_01_2015_to_07_31_2015_V1.pdf",
-    "url": "/dmr-docs/167-87beb14d6f.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "168-ca46bf5763",
-    "name": "Duplicates_DMR Daily - MI0020257 _07_01_2017_to_07_31_2017_V1.pdf",
-    "url": "/dmr-docs/168-ca46bf5763.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "169-54bc8f94df",
-    "name": "Duplicates_DMR Daily - MI0020257 _07_01_2017_to_07_31_2017_V2.pdf",
-    "url": "/dmr-docs/169-54bc8f94df.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "170-981030b1b1",
-    "name": "Duplicates_DMR Daily - MI0020257 _07_01_2018_to_07_31_2018_V1.pdf",
-    "url": "/dmr-docs/170-981030b1b1.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "171-c7ac101f7a",
-    "name": "Duplicates_DMR Daily - MI0020257 _07_01_2019_to_07_31_2019_V1.pdf",
-    "url": "/dmr-docs/171-c7ac101f7a.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "172-d57d5e3129",
-    "name": "Duplicates_DMR Daily - MI0020257 _07_01_2020_to_07_31_2020_V1.pdf",
-    "url": "/dmr-docs/172-d57d5e3129.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "173-d0fb0d899c",
-    "name": "Duplicates_DMR Daily - MI0020257 _08_01_2018_to_08_31_2018_V1.pdf",
-    "url": "/dmr-docs/173-d0fb0d899c.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "174-ef6fa97b23",
-    "name": "Duplicates_DMR Daily - MI0020257 _08_01_2019_to_08_31_2019_V1.pdf",
-    "url": "/dmr-docs/174-ef6fa97b23.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "175-189f809104",
-    "name": "Duplicates_DMR Daily - MI0020257 _08_01_2020_to_08_31_2020_V1.pdf",
-    "url": "/dmr-docs/175-189f809104.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "176-3fccf956f4",
-    "name": "Duplicates_DMR Daily - MI0020257 _09_01_2020_to_09_30_2020_V1.pdf",
-    "url": "/dmr-docs/176-3fccf956f4.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "177-824e5f0a34",
-    "name": "Duplicates_DMR Daily - MI0020257 _10_01_2015_to_10_31_2015_V1.pdf",
-    "url": "/dmr-docs/177-824e5f0a34.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "178-da78480c41",
-    "name": "Duplicates_DMR Daily - MI0020257 _10_01_2017_to_10_31_2017_V1.pdf",
-    "url": "/dmr-docs/178-da78480c41.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "179-18e0f1a0ab",
-    "name": "Duplicates_DMR Daily - MI0020257 _11_01_2015_to_11_30_2015_V1.pdf",
-    "url": "/dmr-docs/179-18e0f1a0ab.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "180-b99d175ae8",
-    "name": "Duplicates_DMR Daily - MI0020257 _11_01_2016_to_11_30_2016_V1.pdf",
-    "url": "/dmr-docs/180-b99d175ae8.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "181-0372a49b63",
-    "name": "Duplicates_DMR Daily - MI0020257 _12_01_2016_to_12_31_2016_V1.pdf",
-    "url": "/dmr-docs/181-0372a49b63.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "182-0b0c463d59",
-    "name": "Duplicates_DMR Daily - MI0020257 _12_01_2017_to_12_31_2017_V1.pdf",
-    "url": "/dmr-docs/182-0b0c463d59.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "183-49f800c3d1",
-    "name": "Duplicates_DMR Daily - MI0020257 _12_01_2018_to_12_31_2018_V1.pdf",
-    "url": "/dmr-docs/183-49f800c3d1.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "184-543f067355",
-    "name": "Duplicates_DMR Daily - MI0020257 _12_01_2020_to_12_31_2020_V1.pdf",
-    "url": "/dmr-docs/184-543f067355.pdf",
-    "year": "Undated",
-    "type": "DMR daily"
-  },
-  {
-    "id": "185-c7b9d1825f",
-    "name": "Duplicates_DMR Summary - MI0020257 _01_01_2017_to_01_31_2017_V1.pdf",
-    "url": "/dmr-docs/185-c7b9d1825f.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "186-0c04248283",
-    "name": "Duplicates_DMR Summary - MI0020257 _01_01_2019_to_01_31_2019_V1.pdf",
-    "url": "/dmr-docs/186-0c04248283.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "187-1f3455a81c",
-    "name": "Duplicates_DMR Summary - MI0020257 _02_01_2017_to_02_28_2017_V1.pdf",
-    "url": "/dmr-docs/187-1f3455a81c.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "188-4b5559ac98",
-    "name": "Duplicates_DMR Summary - MI0020257 _02_01_2018_to_02_28_2018_V1.pdf",
-    "url": "/dmr-docs/188-4b5559ac98.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "189-811c08ef87",
-    "name": "Duplicates_DMR Summary - MI0020257 _02_01_2019_to_02_28_2019_V1.pdf",
-    "url": "/dmr-docs/189-811c08ef87.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "190-3afb05a1d6",
-    "name": "Duplicates_DMR Summary - MI0020257 _02_01_2020_to_02_29_2020_V1.pdf",
-    "url": "/dmr-docs/190-3afb05a1d6.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "191-a9a43a2e86",
-    "name": "Duplicates_DMR Summary - MI0020257 _03_01_2017_to_03_31_2017_V1.pdf",
-    "url": "/dmr-docs/191-a9a43a2e86.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "192-9364137b1d",
-    "name": "Duplicates_DMR Summary - MI0020257 _04_01_2017_to_04_30_2017_V1.pdf",
-    "url": "/dmr-docs/192-9364137b1d.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "193-8ddf07315a",
-    "name": "Duplicates_DMR Summary - MI0020257 _05_01_2017_to_05_31_2017_V3.pdf",
-    "url": "/dmr-docs/193-8ddf07315a.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "194-7654c81d72",
-    "name": "Duplicates_DMR Summary - MI0020257 _06_01_2020_to_06_30_2020_V1.pdf",
-    "url": "/dmr-docs/194-7654c81d72.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "195-f8d8fe834d",
-    "name": "Duplicates_DMR Summary - MI0020257 _07_01_2017_to_07_31_2017_V1.pdf",
-    "url": "/dmr-docs/195-f8d8fe834d.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "196-72504b2799",
-    "name": "Duplicates_DMR Summary - MI0020257 _07_01_2018_to_07_31_2018_V1.pdf",
-    "url": "/dmr-docs/196-72504b2799.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "197-85f958aaf0",
-    "name": "Duplicates_DMR Summary - MI0020257 _07_01_2020_to_07_31_2020_V1.pdf",
-    "url": "/dmr-docs/197-85f958aaf0.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "198-d9fce7285a",
-    "name": "Duplicates_DMR Summary - MI0020257 _08_01_2017_to_08_31_2017_V1.pdf",
-    "url": "/dmr-docs/198-d9fce7285a.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "199-80a1759b58",
-    "name": "Duplicates_DMR Summary - MI0020257 _08_01_2019_to_08_31_2019_V1.pdf",
-    "url": "/dmr-docs/199-80a1759b58.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "200-6612925aff",
-    "name": "Duplicates_DMR Summary - MI0020257 _08_01_2020_to_08_31_2020_V1.pdf",
-    "url": "/dmr-docs/200-6612925aff.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "201-2adf31476b",
-    "name": "Duplicates_DMR Summary - MI0020257 _09_01_2016_to_09_30_2016_V1.pdf",
-    "url": "/dmr-docs/201-2adf31476b.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "202-ae848ba3cd",
-    "name": "Duplicates_DMR Summary - MI0020257 _09_01_2017_to_09_30_2017_V1.pdf",
-    "url": "/dmr-docs/202-ae848ba3cd.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "203-d388cc355a",
-    "name": "Duplicates_DMR Summary - MI0020257 _09_01_2020_to_09_30_2020_V1.pdf",
-    "url": "/dmr-docs/203-d388cc355a.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "204-fa161a78e2",
-    "name": "Duplicates_DMR Summary - MI0020257 _10_01_2014_to_09_30_2015_V1.pdf",
-    "url": "/dmr-docs/204-fa161a78e2.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "205-b2a592de17",
-    "name": "Duplicates_DMR Summary - MI0020257 _10_01_2015_to_10_31_2015_V1.pdf",
-    "url": "/dmr-docs/205-b2a592de17.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "206-4ce86a3926",
-    "name": "Duplicates_DMR Summary - MI0020257 _10_01_2017_to_10_31_2017_V1.pdf",
-    "url": "/dmr-docs/206-4ce86a3926.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "207-af8124c3bc",
-    "name": "Duplicates_DMR Summary - MI0020257 _10_01_2018_to_10_31_2018_V1.pdf",
-    "url": "/dmr-docs/207-af8124c3bc.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "208-7cdf42a5b4",
-    "name": "Duplicates_DMR Summary - MI0020257 _10_01_2019_to_09_30_2020_V1.pdf",
-    "url": "/dmr-docs/208-7cdf42a5b4.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "209-0af4c5daf7",
-    "name": "Duplicates_DMR Summary - MI0020257 _11_01_2015_to_11_30_2015_V1.pdf",
-    "url": "/dmr-docs/209-0af4c5daf7.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "210-5acd0fa359",
-    "name": "Duplicates_DMR Summary - MI0020257 _11_01_2016_to_11_30_2016_V1.pdf",
-    "url": "/dmr-docs/210-5acd0fa359.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "211-06c9c80fbd",
-    "name": "Duplicates_DMR Summary - MI0020257 _11_01_2017_to_11_30_2017_V1.pdf",
-    "url": "/dmr-docs/211-06c9c80fbd.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "212-a42cb3024e",
-    "name": "Duplicates_DMR Summary - MI0020257 _11_01_2019_to_11_30_2019_V1.pdf",
-    "url": "/dmr-docs/212-a42cb3024e.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "213-c1ddabd5f1",
-    "name": "Duplicates_DMR Summary - MI0020257 _12_01_2016_to_12_31_2016_V1.pdf",
-    "url": "/dmr-docs/213-c1ddabd5f1.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "214-438c3ac43e",
-    "name": "Duplicates_DMR Summary - MI0020257 _12_01_2017_to_12_31_2017_V1.pdf",
-    "url": "/dmr-docs/214-438c3ac43e.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "215-fdffe32fc0",
-    "name": "Duplicates_DMR Summary - MI0020257 _12_01_2018_to_12_31_2018_V1.pdf",
-    "url": "/dmr-docs/215-fdffe32fc0.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "216-ada8b61e3a",
-    "name": "Duplicates_DMR Summary - MI0020257 _12_01_2020_to_12_31_2020_V1.pdf",
-    "url": "/dmr-docs/216-ada8b61e3a.pdf",
-    "year": "Undated",
-    "type": "DMR summary"
-  },
-  {
-    "id": "217-cfd04a30cb",
-    "name": "Duplicates_DMRQA 36.Cadillac WWTP.pdf",
-    "url": "/dmr-docs/217-cfd04a30cb.pdf",
-    "year": "Undated",
-    "type": "DMR-QA"
-  },
-  {
-    "id": "218-dd7d2446b3",
-    "name": "Duplicates_Fact Sheet.pdf",
-    "url": "/dmr-docs/218-dd7d2446b3.pdf",
-    "year": "Undated",
-    "type": "Fact sheet"
-  },
-  {
-    "id": "219-036ee5d77c",
-    "name": "Duplicates_MI0020257_2020-10-01_to_2021-09-30_DMR.pdf",
-    "url": "/dmr-docs/219-036ee5d77c.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "220-2afde58269",
-    "name": "Duplicates_MI0020257_2021-01-01_to_2021-01-31_1_DMR.pdf",
-    "url": "/dmr-docs/220-2afde58269.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "221-15e50f8226",
-    "name": "Duplicates_MI0020257_2021-02-01_to_2021-02-28_1_DMR.pdf",
-    "url": "/dmr-docs/221-15e50f8226.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "222-1fd22cf368",
-    "name": "Duplicates_MI0020257_2021-03-01_to_2021-03-31_1_DMR.pdf",
-    "url": "/dmr-docs/222-1fd22cf368.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "223-f0c094072f",
-    "name": "Duplicates_MI0020257_2021-05-01_to_2021-05-31_1_DMR.pdf",
-    "url": "/dmr-docs/223-f0c094072f.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "224-78764f8117",
-    "name": "Duplicates_MI0020257_2021-06-01_to_2021-06-30_1_DMR.pdf",
-    "url": "/dmr-docs/224-78764f8117.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "225-954c5527e2",
-    "name": "Duplicates_MI0020257_2021-09-01_to_2021-09-30_DMR.pdf",
-    "url": "/dmr-docs/225-954c5527e2.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "226-6434322fe9",
-    "name": "Duplicates_MI0020257_2021-11-01_to_2021-11-30_DMR.pdf",
-    "url": "/dmr-docs/226-6434322fe9.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "227-5483db7b89",
-    "name": "Duplicates_MI0020257_2022-05-01_to_2022-05-31_DMR.pdf",
-    "url": "/dmr-docs/227-5483db7b89.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "228-40d8dd5528",
-    "name": "Duplicates_MI0020257_2022-06-01_to_2022-06-30_DMR.pdf",
-    "url": "/dmr-docs/228-40d8dd5528.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "229-c36512aa90",
-    "name": "Duplicates_MI0020257_2022-10-01_to_2022-10-31_DMR.pdf",
-    "url": "/dmr-docs/229-c36512aa90.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "230-da6defc387",
-    "name": "Duplicates_MI0020257_2022-10-01_to_2023-09-30_DMR.pdf",
-    "url": "/dmr-docs/230-da6defc387.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "231-7759a9c0a4",
-    "name": "Duplicates_MI0020257_2023-05-01_to_2023-05-31_DMR.pdf",
-    "url": "/dmr-docs/231-7759a9c0a4.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "232-6097f5ce3a",
-    "name": "Duplicates_MI0020257_2023-06-01_to_2023-06-30_DMR.pdf",
-    "url": "/dmr-docs/232-6097f5ce3a.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "233-b2e9dd505c",
-    "name": "Duplicates_MI0020257_2023-07-01_to_2023-07-31_DMR.pdf",
-    "url": "/dmr-docs/233-b2e9dd505c.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "234-a8b257d414",
-    "name": "Duplicates_MI0020257_2023-08-01_to_2023-08-31_DMR.pdf",
-    "url": "/dmr-docs/234-a8b257d414.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "235-feeeb1708b",
-    "name": "Duplicates_MI0020257_2023-09-01_to_2023-09-30_DMR.pdf",
-    "url": "/dmr-docs/235-feeeb1708b.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "236-e2ff65e01e",
-    "name": "Duplicates_MI0020257_2024-01-01_to_2024-01-31_2_DMR.pdf",
-    "url": "/dmr-docs/236-e2ff65e01e.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "237-404b3feaa5",
-    "name": "Duplicates_MI0020257_2024-01-01_to_2024-01-31_3_DMR.pdf",
-    "url": "/dmr-docs/237-404b3feaa5.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "238-1ad138844b",
-    "name": "Duplicates_MI0020257_2024-02-01_to_2024-02-29_DMR.pdf",
-    "url": "/dmr-docs/238-1ad138844b.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "239-f64da8a5ec",
-    "name": "Duplicates_MI0020257_2024-03-01_to_2024-03-31_DMR.pdf",
-    "url": "/dmr-docs/239-f64da8a5ec.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "240-648ccbf984",
-    "name": "Duplicates_MI0020257_2024-04-01_to_2024-04-30_2_DMR.pdf",
-    "url": "/dmr-docs/240-648ccbf984.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "241-d5421260f3",
-    "name": "Duplicates_MI0020257_2024-05-01_to_2024-05-31_2_DMR.pdf",
-    "url": "/dmr-docs/241-d5421260f3.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "242-8aecb0015d",
-    "name": "Duplicates_MI0020257_2024-06-01_to_2024-06-30_DMR.pdf",
-    "url": "/dmr-docs/242-8aecb0015d.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "243-cdb656bfef",
-    "name": "Duplicates_MI0020257_2024-07-01_to_2024-07-31_2_DMR.pdf",
-    "url": "/dmr-docs/243-cdb656bfef.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "244-a165ed2c5c",
-    "name": "Duplicates_MI0020257_2024-07-01_to_2024-07-31_DMR.pdf",
-    "url": "/dmr-docs/244-a165ed2c5c.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "245-f50be9bb08",
-    "name": "Duplicates_MI0020257_2024-08-01_to_2024-08-31_DMR.pdf",
-    "url": "/dmr-docs/245-f50be9bb08.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "246-057c50f5be",
-    "name": "Duplicates_MI0020257_2024-10-01_to_2024-10-31_2_DMR.pdf",
-    "url": "/dmr-docs/246-057c50f5be.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "247-277315be5f",
-    "name": "Duplicates_MI0020257_2025-01-01_to_2025-01-31_2_DMR.pdf",
-    "url": "/dmr-docs/247-277315be5f.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "248-4e0ef344b0",
-    "name": "Duplicates_MI0020257_2025-04-01_to_2025-04-30_2_DMR.pdf",
-    "url": "/dmr-docs/248-4e0ef344b0.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "249-1f360e7666",
-    "name": "Duplicates_MI0020257_2025-04-01_to_2025-04-30_DMR.pdf",
-    "url": "/dmr-docs/249-1f360e7666.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "250-5b2590581d",
-    "name": "Duplicates_MI0020257_2025-05-01_to_2025-05-31_DMR.pdf",
-    "url": "/dmr-docs/250-5b2590581d.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "251-7be8f6a3c0",
-    "name": "Duplicates_MI0020257_2025-06-01_to_2025-06-30_DMR.pdf",
-    "url": "/dmr-docs/251-7be8f6a3c0.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "252-62c9ac283a",
-    "name": "Duplicates_MI0020257_2025-07-01_to_2025-07-31_2_DMR.pdf",
-    "url": "/dmr-docs/252-62c9ac283a.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "253-0bcb952b32",
-    "name": "Duplicates_MI0020257_2025-07-01_to_2025-07-31_DMR.pdf",
-    "url": "/dmr-docs/253-0bcb952b32.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "254-e4317510b2",
-    "name": "Duplicates_MI0020257_2025-08-01_to_2025-08-31_DMR.pdf",
-    "url": "/dmr-docs/254-e4317510b2.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "255-8f150afc13",
-    "name": "Duplicates_MI0020257_2025-09-01_to_2025-09-30_DMR.pdf",
-    "url": "/dmr-docs/255-8f150afc13.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "256-3b33d0ac44",
-    "name": "Duplicates_MI0020257_2025-10-01_to_2025-10-31_2_DMR.pdf",
-    "url": "/dmr-docs/256-3b33d0ac44.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "257-e470a35829",
-    "name": "Duplicates_MI0020257_2025-10-01_to_2025-10-31_DMR.pdf",
-    "url": "/dmr-docs/257-e470a35829.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "258-e72c75f16f",
-    "name": "Duplicates_MI0020257_2025-11-01_to_2025-11-30_DMR.pdf",
-    "url": "/dmr-docs/258-e72c75f16f.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "259-02b64228e9",
-    "name": "Duplicates_MI0020257_2025-12-01_to_2025-12-31_DMR.pdf",
-    "url": "/dmr-docs/259-02b64228e9.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "260-e2107a7e93",
-    "name": "Duplicates_MI0020257_2026-01-01_to_2026-01-31_2_DMR.pdf",
-    "url": "/dmr-docs/260-e2107a7e93.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "261-40ca531454",
-    "name": "Duplicates_MI0020257_2026-01-01_to_2026-01-31_DMR.pdf",
-    "url": "/dmr-docs/261-40ca531454.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "262-dc9ff8c8f3",
-    "name": "Duplicates_MI0020257_2026-02-01_to_2026-02-28_DMR.pdf",
-    "url": "/dmr-docs/262-dc9ff8c8f3.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "263-46eb80c0ba",
-    "name": "Duplicates_MI0020257_2026-03-01_to_2026-03-31_DMR.pdf",
-    "url": "/dmr-docs/263-46eb80c0ba.pdf",
-    "year": "Undated",
-    "type": "DMR report"
-  },
-  {
-    "id": "264-f87721e4c5",
+    "url": "/dmr-docs/040-89ad99d824fb.pdf",
+    "year": "Undated",
+    "type": "Supporting record",
+    "pages": 15,
+    "size": 240426,
+    "sha256": "89ad99d824fbe944b72617adea5aa93606848af5e0a71ad6c162e4d0e6361d27"
+  },
+  {
+    "id": "041-670353ee9b11",
+    "name": "cadillacdraftcomment.pdf",
+    "url": "/dmr-docs/041-670353ee9b11.pdf",
+    "year": "Undated",
+    "type": "Supporting record",
+    "pages": 1,
+    "size": 8205,
+    "sha256": "670353ee9b11d9b4e3bad0a1ef56fdd58ebf7855d10396939db1ee24f0372f32"
+  },
+  {
+    "id": "042-d5bcc618b2da",
+    "name": "City of Cadillac December DMR .pdf",
+    "url": "/dmr-docs/042-d5bcc618b2da.pdf",
+    "year": "Undated",
+    "type": "DMR report",
+    "pages": 1,
+    "size": 42584,
+    "sha256": "d5bcc618b2dace779f524de4065d8441b306843a362e353c5ab82b2f965da103"
+  },
+  {
+    "id": "043-6fd37596745e",
+    "name": "DMR Daily - MI0020257 _01_01_2017_to_01_31_2017_V1.pdf",
+    "url": "/dmr-docs/043-6fd37596745e.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124485,
+    "sha256": "6fd37596745ef7831454820ab08f3c5711c6889c27f5746576e83185bf025497"
+  },
+  {
+    "id": "044-74bfdac75f6f",
+    "name": "DMR Daily - MI0020257 _01_01_2018_to_01_31_2018_V1.pdf",
+    "url": "/dmr-docs/044-74bfdac75f6f.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124617,
+    "sha256": "74bfdac75f6fd1d93e9cc4464ecb2d2d148ec43c17900e14fb9b9ebda8c7fd22"
+  },
+  {
+    "id": "045-159ec5b2ffc3",
+    "name": "DMR Daily - MI0020257 _01_01_2019_to_01_31_2019_V1.pdf",
+    "url": "/dmr-docs/045-159ec5b2ffc3.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124463,
+    "sha256": "159ec5b2ffc3614d1f4f6b5fe9053712b35cc4fcf05e964900564a2d4ecd6c4d"
+  },
+  {
+    "id": "046-1b0f8f177c84",
+    "name": "DMR Daily - MI0020257 _01_01_2020_to_01_31_2020_V1.pdf",
+    "url": "/dmr-docs/046-1b0f8f177c84.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 138109,
+    "sha256": "1b0f8f177c843414738384a940276c3143d4528950c16d1c7adce1515e9f9676"
+  },
+  {
+    "id": "047-713e2ae49158",
+    "name": "DMR Daily - MI0020257 _02_01_2016_to_02_29_2016_V1.pdf",
+    "url": "/dmr-docs/047-713e2ae49158.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122785,
+    "sha256": "713e2ae49158a0f8ec123508559b4c72869a1ea98f55840d9c592cfb59fa9ac8"
+  },
+  {
+    "id": "048-38cf7ae1289c",
+    "name": "DMR Daily - MI0020257 _02_01_2017_to_02_28_2017_V1.pdf",
+    "url": "/dmr-docs/048-38cf7ae1289c.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 5,
+    "size": 119862,
+    "sha256": "38cf7ae1289c5a4d612963edef73b1cac404e67500c4455f3851ec0751b7d8d9"
+  },
+  {
+    "id": "049-117946b26a43",
+    "name": "DMR Daily - MI0020257 _02_01_2018_to_02_28_2018_V1.pdf",
+    "url": "/dmr-docs/049-117946b26a43.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 5,
+    "size": 119743,
+    "sha256": "117946b26a438fdc96dc6cdb1ab7f66a1aa142d9708fd72d0abbcb7ca0a1f3d2"
+  },
+  {
+    "id": "050-0a3a19cffbd8",
+    "name": "DMR Daily - MI0020257 _02_01_2019_to_02_28_2019_V1.pdf",
+    "url": "/dmr-docs/050-0a3a19cffbd8.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 5,
+    "size": 119696,
+    "sha256": "0a3a19cffbd80bb21b407ab4d636cd3e82c87b0346878e794dfc10cbc2279db2"
+  },
+  {
+    "id": "051-24b3c43fe0e7",
+    "name": "DMR Daily - MI0020257 _02_01_2020_to_02_29_2020_V1.pdf",
+    "url": "/dmr-docs/051-24b3c43fe0e7.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 136462,
+    "sha256": "24b3c43fe0e71b522541a616e30475800405979f246a543d5834d3ada5b97922"
+  },
+  {
+    "id": "052-52861ed97ab0",
+    "name": "DMR Daily - MI0020257 _03_01_2016_to_03_31_2016_V1.pdf",
+    "url": "/dmr-docs/052-52861ed97ab0.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124372,
+    "sha256": "52861ed97ab03ce1cabf7f12018d30c64997ebcf15d066de1a86a5df1b9bd2de"
+  },
+  {
+    "id": "053-d15463e5d6df",
+    "name": "DMR Daily - MI0020257 _03_01_2017_to_03_31_2017_V1.pdf",
+    "url": "/dmr-docs/053-d15463e5d6df.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124640,
+    "sha256": "d15463e5d6dfb382684474a941a7f06be20025a90f32fde0ed4e7d9fba2946fd"
+  },
+  {
+    "id": "054-71e5111230fb",
+    "name": "DMR Daily - MI0020257 _03_01_2018_to_03_31_2018_V1.pdf",
+    "url": "/dmr-docs/054-71e5111230fb.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124335,
+    "sha256": "71e5111230fbadd68edcebd8af587bb42f0a9739d14031d215c2ac462aa0775f"
+  },
+  {
+    "id": "055-0c3b2eb77ab7",
+    "name": "DMR Daily - MI0020257 _03_01_2019_to_03_31_2019_V1.pdf",
+    "url": "/dmr-docs/055-0c3b2eb77ab7.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124290,
+    "sha256": "0c3b2eb77ab7e504550343a1226427bce90a5e9037bc98248ab27009b2d52eab"
+  },
+  {
+    "id": "056-bc923813ad89",
+    "name": "DMR Daily - MI0020257 _03_01_2020_to_03_31_2020_V1.pdf",
+    "url": "/dmr-docs/056-bc923813ad89.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 138093,
+    "sha256": "bc923813ad89d5af1c22c5d17f62b2bd50d3fc53819d7514f95ded4a9703b8ad"
+  },
+  {
+    "id": "057-e3784867b57a",
+    "name": "DMR Daily - MI0020257 _04_01_2016_to_04_30_2016_V1.pdf",
+    "url": "/dmr-docs/057-e3784867b57a.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124112,
+    "sha256": "e3784867b57af6318612531be20bbf9768bdaa007a66e281635a27c68353a8df"
+  },
+  {
+    "id": "058-266c82415f74",
+    "name": "DMR Daily - MI0020257 _04_01_2017_to_04_30_2017_V1.pdf",
+    "url": "/dmr-docs/058-266c82415f74.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123923,
+    "sha256": "266c82415f74eb345aae3f3fd83e18010723aa144a3bc6471bfaedad7cb40aae"
+  },
+  {
+    "id": "059-8099902b52a9",
+    "name": "DMR Daily - MI0020257 _04_01_2018_to_04_30_2018_V1.pdf",
+    "url": "/dmr-docs/059-8099902b52a9.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123817,
+    "sha256": "8099902b52a96e5c7cef060c939baef6dd273250a6360e91c60a11ab6aaca078"
+  },
+  {
+    "id": "060-70b69a12a19a",
+    "name": "DMR Daily - MI0020257 _04_01_2019_to_04_30_2019_V1.pdf",
+    "url": "/dmr-docs/060-70b69a12a19a.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123803,
+    "sha256": "70b69a12a19a826db777d37e0700dd575aadafeaf39755a96e99bbe2c29cf525"
+  },
+  {
+    "id": "061-c28e470f2e66",
+    "name": "DMR Daily - MI0020257 _04_01_2020_to_04_30_2020_V1.pdf",
+    "url": "/dmr-docs/061-c28e470f2e66.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 137844,
+    "sha256": "c28e470f2e66cc3182fb4ffbab9fb8191c3488c1d33a81a8f22d9cb926effbb3"
+  },
+  {
+    "id": "062-81b4755c8254",
+    "name": "DMR Daily - MI0020257 _05_01_2016_to_05_31_2016_V1.pdf",
+    "url": "/dmr-docs/062-81b4755c8254.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122472,
+    "sha256": "81b4755c8254f15069198deb7df9e956337fc3935d4041d1cd7c38e48ca775ef"
+  },
+  {
+    "id": "063-0843035da90c",
+    "name": "DMR Daily - MI0020257 _05_01_2017_to_05_31_2017_V1.pdf",
+    "url": "/dmr-docs/063-0843035da90c.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123241,
+    "sha256": "0843035da90c30119102e345d190e38265a0c2187a250bd7c2d796e6cacdc1ef"
+  },
+  {
+    "id": "064-fbd73501235b",
+    "name": "DMR Daily - MI0020257 _05_01_2017_to_05_31_2017_V2.pdf",
+    "url": "/dmr-docs/064-fbd73501235b.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123245,
+    "sha256": "fbd73501235b712b30656bb9cfad2222ea4c67e20f99f42163bf2dc735d46b49"
+  },
+  {
+    "id": "065-3f883748da9a",
+    "name": "DMR Daily - MI0020257 _05_01_2017_to_05_31_2017_V3.pdf",
+    "url": "/dmr-docs/065-3f883748da9a.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123245,
+    "sha256": "3f883748da9abcad5818af1db4e39876d3cea55525ea6828d0a8c22271aba01c"
+  },
+  {
+    "id": "066-c3f869604c62",
+    "name": "DMR Daily - MI0020257 _05_01_2018_to_05_31_2018_V1.pdf",
+    "url": "/dmr-docs/066-c3f869604c62.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122888,
+    "sha256": "c3f869604c6284399f2d39eb037eaceb0f48e0d2ccbb99f883d769f033e15df4"
+  },
+  {
+    "id": "067-6b6486527395",
+    "name": "DMR Daily - MI0020257 _05_01_2019_to_05_31_2019_V1.pdf",
+    "url": "/dmr-docs/067-6b6486527395.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122825,
+    "sha256": "6b6486527395f868de9889dc2e496d3a87b1c55f2e07d757ac633240ce6d4d0c"
+  },
+  {
+    "id": "068-65c04acb44f1",
+    "name": "DMR Daily - MI0020257 _05_01_2020_to_05_31_2020_V1.pdf",
+    "url": "/dmr-docs/068-65c04acb44f1.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 137971,
+    "sha256": "65c04acb44f1dbc53eafac9938c9353b2bcc3e2d5565011a4a2b6338ce487beb"
+  },
+  {
+    "id": "069-08edaee8590c",
+    "name": "DMR Daily - MI0020257 _06_01_2016_to_06_30_2016_V1.pdf",
+    "url": "/dmr-docs/069-08edaee8590c.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122336,
+    "sha256": "08edaee8590c5fa5578ccb41e26ee53037eb210266efa0ba068d00fb77fd9fe8"
+  },
+  {
+    "id": "070-f77f38fafe49",
+    "name": "DMR Daily - MI0020257 _06_01_2017_to_06_30_2017_V1.pdf",
+    "url": "/dmr-docs/070-f77f38fafe49.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122673,
+    "sha256": "f77f38fafe49f1f045cbce6d11c83027b82752716874573efa88d05ea1d62268"
+  },
+  {
+    "id": "071-df01c847f819",
+    "name": "DMR Daily - MI0020257 _06_01_2018_to_06_30_2018_V1.pdf",
+    "url": "/dmr-docs/071-df01c847f819.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122343,
+    "sha256": "df01c847f819c57c013456db0d69d25af5974cbd6dd88310fd52d0f3b3c3d4e2"
+  },
+  {
+    "id": "072-b62d5125d17d",
+    "name": "DMR Daily - MI0020257 _06_01_2019_to_06_30_2019_V1.pdf",
+    "url": "/dmr-docs/072-b62d5125d17d.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122561,
+    "sha256": "b62d5125d17db8493855cc3cde6e8ebb66b610b28b2cd3d4abc0d01a7ada533f"
+  },
+  {
+    "id": "073-9d7aa75dce4a",
+    "name": "DMR Daily - MI0020257 _06_01_2020_to_06_30_2020_V1.pdf",
+    "url": "/dmr-docs/073-9d7aa75dce4a.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 136704,
+    "sha256": "9d7aa75dce4aff90b55cd2b4b7a38d75473f3a1108ce644bde3ee9966d98db91"
+  },
+  {
+    "id": "074-b5b470e06797",
+    "name": "DMR Daily - MI0020257 _07_01_2015_to_07_31_2015_V1.pdf",
+    "url": "/dmr-docs/074-b5b470e06797.pdf",
+    "year": "2015",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 121874,
+    "sha256": "b5b470e06797e906d3556fb5ebd5b0a18477d36d5307f840f05bf28a70d6034d"
+  },
+  {
+    "id": "075-ca3cea0d6bb9",
+    "name": "DMR Daily - MI0020257 _07_01_2016_to_07_31_2016_V1.pdf",
+    "url": "/dmr-docs/075-ca3cea0d6bb9.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123035,
+    "sha256": "ca3cea0d6bb9d4a3613c4fb2c577754d0dd70faffca522671c47111ad0074a70"
+  },
+  {
+    "id": "076-2e7ed7684dd2",
+    "name": "DMR Daily - MI0020257 _07_01_2017_to_07_31_2017_V1.pdf",
+    "url": "/dmr-docs/076-2e7ed7684dd2.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123125,
+    "sha256": "2e7ed7684dd262d4a689f09af6e5020b8324f74b8d32dba3a4ce4a9f098672d8"
+  },
+  {
+    "id": "077-ece80562a024",
+    "name": "DMR Daily - MI0020257 _07_01_2017_to_07_31_2017_V2.pdf",
+    "url": "/dmr-docs/077-ece80562a024.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123135,
+    "sha256": "ece80562a0242fec4d9e6af484d3e048ebddfc518de4b33a9c9789beb7239e49"
+  },
+  {
+    "id": "078-9b8490fc70ca",
+    "name": "DMR Daily - MI0020257 _07_01_2018_to_07_31_2018_V1.pdf",
+    "url": "/dmr-docs/078-9b8490fc70ca.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122935,
+    "sha256": "9b8490fc70ca42c920ad279ebd725691d650033eed5f7c45a1756b1be58e418a"
+  },
+  {
+    "id": "079-3f83f9ae4bb0",
+    "name": "DMR Daily - MI0020257 _07_01_2019_to_07_31_2019_V1.pdf",
+    "url": "/dmr-docs/079-3f83f9ae4bb0.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122933,
+    "sha256": "3f83f9ae4bb0f8f49a14201d092ce837e2a18b9528ff4758916d3e0c04c79b3d"
+  },
+  {
+    "id": "080-d60d1eead4ad",
+    "name": "DMR Daily - MI0020257 _07_01_2020_to_07_31_2020_V1.pdf",
+    "url": "/dmr-docs/080-d60d1eead4ad.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 137064,
+    "sha256": "d60d1eead4ad2fb7029e65c0915aa7ec953f2047cc89934e3c4c4592906ec481"
+  },
+  {
+    "id": "081-fb4cd4a3e564",
+    "name": "DMR Daily - MI0020257 _08_01_2015_to_08_31_2015_V1.pdf",
+    "url": "/dmr-docs/081-fb4cd4a3e564.pdf",
+    "year": "2015",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 121743,
+    "sha256": "fb4cd4a3e56438fc39f3fd3d4582d8d6a6be1947918cadcefc1f3eb18ac21620"
+  },
+  {
+    "id": "082-0db5d511b9a4",
+    "name": "DMR Daily - MI0020257 _08_01_2016_to_08_31_2016_V1.pdf",
+    "url": "/dmr-docs/082-0db5d511b9a4.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122533,
+    "sha256": "0db5d511b9a4119a63b7af7290f2356daff13620bc88e3ceeef77b42d9fb6562"
+  },
+  {
+    "id": "083-e4a57bdac3fb",
+    "name": "DMR Daily - MI0020257 _08_01_2017_to_08_31_2017_V1.pdf",
+    "url": "/dmr-docs/083-e4a57bdac3fb.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122627,
+    "sha256": "e4a57bdac3fb59a14e4368be223ba18d38e39c9f52b5f9fa38e407dc804c29f0"
+  },
+  {
+    "id": "084-43ca95b8b2d5",
+    "name": "DMR Daily - MI0020257 _08_01_2018_to_08_31_2018_V1.pdf",
+    "url": "/dmr-docs/084-43ca95b8b2d5.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123003,
+    "sha256": "43ca95b8b2d5a19ce60fdfc1b6ebbc43d49e0fee7b321025ca02068b1f050a1a"
+  },
+  {
+    "id": "085-189829443240",
+    "name": "DMR Daily - MI0020257 _08_01_2019_to_08_31_2019_V1.pdf",
+    "url": "/dmr-docs/085-189829443240.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122684,
+    "sha256": "189829443240817032e639e4d893f5d318c26e81967b25bb23220769d64ce4ae"
+  },
+  {
+    "id": "086-875303b62f65",
+    "name": "DMR Daily - MI0020257 _08_01_2020_to_08_31_2020_V1.pdf",
+    "url": "/dmr-docs/086-875303b62f65.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 136953,
+    "sha256": "875303b62f65325606f2fb17823f3d12e11a47391bfc786baa30e699d0ed04ca"
+  },
+  {
+    "id": "087-f546130ef470",
+    "name": "DMR Daily - MI0020257 _09_01_2015_to_09_30_2015_V1.pdf",
+    "url": "/dmr-docs/087-f546130ef470.pdf",
+    "year": "2015",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122193,
+    "sha256": "f546130ef47035519cdb1f28f3838046427e8cacf0f2f9cdec6f84e376f8ca1b"
+  },
+  {
+    "id": "088-6f979a1fd6cd",
+    "name": "DMR Daily - MI0020257 _09_01_2016_to_09_30_2016_V1.pdf",
+    "url": "/dmr-docs/088-6f979a1fd6cd.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122282,
+    "sha256": "6f979a1fd6cd9e597f977f17a30e29a8811b10439a69cd9406faae9f3962ada7"
+  },
+  {
+    "id": "089-b57d489db2c6",
+    "name": "DMR Daily - MI0020257 _09_01_2017_to_09_30_2017_V1.pdf",
+    "url": "/dmr-docs/089-b57d489db2c6.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122348,
+    "sha256": "b57d489db2c6053569f09d214fd2928946b44ea5d16847ef35f494b611cc98af"
+  },
+  {
+    "id": "090-1de9031268c9",
+    "name": "DMR Daily - MI0020257 _09_01_2018_to_09_30_2018_V1.pdf",
+    "url": "/dmr-docs/090-1de9031268c9.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122147,
+    "sha256": "1de9031268c995504f323f0465091b870bd51087ef8d1a4b72a73c580209c55a"
+  },
+  {
+    "id": "091-d352f39438a0",
+    "name": "DMR Daily - MI0020257 _09_01_2019_to_09_30_2019_V1.pdf",
+    "url": "/dmr-docs/091-d352f39438a0.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 136485,
+    "sha256": "d352f39438a0c8f444b6f0661358bd95a20f63f5aa38eb9477eb085c5684579e"
+  },
+  {
+    "id": "092-68782e33214f",
+    "name": "DMR Daily - MI0020257 _09_01_2020_to_09_30_2020_V1.pdf",
+    "url": "/dmr-docs/092-68782e33214f.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 136464,
+    "sha256": "68782e33214f033006fec057c3b8d5db5e347876c905f781dd436be08ce314a5"
+  },
+  {
+    "id": "093-5d15a3aac042",
+    "name": "DMR Daily - MI0020257 _10_01_2015_to_10_31_2015_V1.pdf",
+    "url": "/dmr-docs/093-5d15a3aac042.pdf",
+    "year": "2015",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122768,
+    "sha256": "5d15a3aac0427ded0bab49817fab70f00e2c5ab49be6dd3fd3a76f8ca92913a5"
+  },
+  {
+    "id": "094-cfa2d139f7d1",
+    "name": "DMR Daily - MI0020257 _10_01_2016_to_10_31_2016_V1.pdf",
+    "url": "/dmr-docs/094-cfa2d139f7d1.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122755,
+    "sha256": "cfa2d139f7d1d098463c949eec7ccf63e9037b5b90e351df5fa76c14a943106f"
+  },
+  {
+    "id": "095-69e031bdedc2",
+    "name": "DMR Daily - MI0020257 _10_01_2017_to_10_31_2017_V1.pdf",
+    "url": "/dmr-docs/095-69e031bdedc2.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123466,
+    "sha256": "69e031bdedc2d8d11ed97e3ef3bfa9cb747a90b28ebe7fbadebd0d1f53de84ec"
+  },
+  {
+    "id": "096-ce6327449331",
+    "name": "DMR Daily - MI0020257 _10_01_2017_to_10_31_2017_V2.pdf",
+    "url": "/dmr-docs/096-ce6327449331.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 123484,
+    "sha256": "ce6327449331c6e84ac2795aa0b4f37828d306224942bda5674d9c95ef7f744a"
+  },
+  {
+    "id": "097-0c5a0a71c4b1",
+    "name": "DMR Daily - MI0020257 _10_01_2018_to_10_31_2018_V1.pdf",
+    "url": "/dmr-docs/097-0c5a0a71c4b1.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122963,
+    "sha256": "0c5a0a71c4b1dbf7a33f2e4b4b1b086b0dcc86f3aa6613150784be16a60945b5"
+  },
+  {
+    "id": "098-78a232e529b9",
+    "name": "DMR Daily - MI0020257 _10_01_2019_to_10_31_2019_V1.pdf",
+    "url": "/dmr-docs/098-78a232e529b9.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 137982,
+    "sha256": "78a232e529b994902385169af25f4a4dd0839ce330bfb305eb302675217d073f"
+  },
+  {
+    "id": "099-f4655e2feb69",
+    "name": "DMR Daily - MI0020257 _10_01_2020_to_10_31_2020_V1.pdf",
+    "url": "/dmr-docs/099-f4655e2feb69.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 9,
+    "size": 141016,
+    "sha256": "f4655e2feb69f479d87506560f69a8aec00b6c97537660c426752f30807b602b"
+  },
+  {
+    "id": "100-3d0895136655",
+    "name": "DMR Daily - MI0020257 _11_01_2015_to_11_30_2015_V1.pdf",
+    "url": "/dmr-docs/100-3d0895136655.pdf",
+    "year": "2015",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 121734,
+    "sha256": "3d0895136655025f050f79a91dfaa51cf5cc62d4d779ad4dc830807a4485c520"
+  },
+  {
+    "id": "101-d42bf2c847d4",
+    "name": "DMR Daily - MI0020257 _11_01_2016_to_11_30_2016_V1.pdf",
+    "url": "/dmr-docs/101-d42bf2c847d4.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 121867,
+    "sha256": "d42bf2c847d4300e1e1ce8a66ba1d2392dc8bd027a3d7868279317865a0c2f20"
+  },
+  {
+    "id": "102-ce3774ff9a4a",
+    "name": "DMR Daily - MI0020257 _11_01_2017_to_11_30_2017_V1.pdf",
+    "url": "/dmr-docs/102-ce3774ff9a4a.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122273,
+    "sha256": "ce3774ff9a4aeb0878d25fdaca6a2f9cb47d9c4863ae8bae65c11cb3a29d3852"
+  },
+  {
+    "id": "103-ae4d266428e6",
+    "name": "DMR Daily - MI0020257 _11_01_2018_to_11_30_2018_V1.pdf",
+    "url": "/dmr-docs/103-ae4d266428e6.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 122162,
+    "sha256": "ae4d266428e60573398e0852c790a0828d57cd79678a9794a6aa51ec46f14efd"
+  },
+  {
+    "id": "104-aea62c65bc64",
+    "name": "DMR Daily - MI0020257 _11_01_2019_to_11_30_2019_V1.pdf",
+    "url": "/dmr-docs/104-aea62c65bc64.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 137832,
+    "sha256": "aea62c65bc64dad8ed75c5c81d1b0a89673871b3bd9635c098419a1252a5cd81"
+  },
+  {
+    "id": "105-0cf30763e9ca",
+    "name": "DMR Daily - MI0020257 _11_01_2020_to_11_30_2020_V1.pdf",
+    "url": "/dmr-docs/105-0cf30763e9ca.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 137495,
+    "sha256": "0cf30763e9cac30ca85cf2f481d44b3360f45c9bd32a84c10544cf89b2ab30a5"
+  },
+  {
+    "id": "106-a899ea16e32a",
+    "name": "DMR Daily - MI0020257 _12_01_2015_to_12_31_2015_V1.pdf",
+    "url": "/dmr-docs/106-a899ea16e32a.pdf",
+    "year": "2015",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124126,
+    "sha256": "a899ea16e32a1964f36f21e544271676a5b3f162fdbcdd32460837aea9ad2703"
+  },
+  {
+    "id": "107-c2e3b3bf9305",
+    "name": "DMR Daily - MI0020257 _12_01_2016_to_12_31_2016_V1.pdf",
+    "url": "/dmr-docs/107-c2e3b3bf9305.pdf",
+    "year": "2016",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124593,
+    "sha256": "c2e3b3bf9305acc491d6ac873ed4732d1c520266914d91e3b42c78e7e0f6d139"
+  },
+  {
+    "id": "108-c7a65c3b3260",
+    "name": "DMR Daily - MI0020257 _12_01_2017_to_12_31_2017_V1.pdf",
+    "url": "/dmr-docs/108-c7a65c3b3260.pdf",
+    "year": "2017",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124341,
+    "sha256": "c7a65c3b3260ccbb43e44e98a6431b4cb38d5580215855d04731ceae8fc59de6"
+  },
+  {
+    "id": "109-83485b56c579",
+    "name": "DMR Daily - MI0020257 _12_01_2018_to_12_31_2018_V1.pdf",
+    "url": "/dmr-docs/109-83485b56c579.pdf",
+    "year": "2018",
+    "type": "DMR daily",
+    "pages": 6,
+    "size": 124255,
+    "sha256": "83485b56c579b959c0a0586433547b9496e17fc6dd2cb92cc36d4bd497283cdd"
+  },
+  {
+    "id": "110-60fe20a3f188",
+    "name": "DMR Daily - MI0020257 _12_01_2019_to_12_31_2019_V1.pdf",
+    "url": "/dmr-docs/110-60fe20a3f188.pdf",
+    "year": "2019",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 138014,
+    "sha256": "60fe20a3f18803affc800ce4236e3cd848949cad8bbd5de8c72421213510b8da"
+  },
+  {
+    "id": "111-eecd19973973",
+    "name": "DMR Daily - MI0020257 _12_01_2020_to_12_31_2020_V1.pdf",
+    "url": "/dmr-docs/111-eecd19973973.pdf",
+    "year": "2020",
+    "type": "DMR daily",
+    "pages": 8,
+    "size": 138457,
+    "sha256": "eecd199739736c673956bdc2b61f785e0031fc83c23971da09d41cb819889309"
+  },
+  {
+    "id": "112-9d58801b45c8",
+    "name": "DMR Summary - MI0020257 _01_01_2016_to_01_31_2016_V1.pdf",
+    "url": "/dmr-docs/112-9d58801b45c8.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105532,
+    "sha256": "9d58801b45c8dd649e5daf9367318381489ddca8c8073227f156bcaaadcd21d8"
+  },
+  {
+    "id": "113-6526ca7d21a1",
+    "name": "DMR Summary - MI0020257 _01_01_2017_to_01_31_2017_V1.pdf",
+    "url": "/dmr-docs/113-6526ca7d21a1.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105488,
+    "sha256": "6526ca7d21a1c90592c394dbd44157c18eca3da9090c3b08bca13b9c56f4cf64"
+  },
+  {
+    "id": "114-67a28d0beffb",
+    "name": "DMR Summary - MI0020257 _01_01_2018_to_01_31_2018_V1.pdf",
+    "url": "/dmr-docs/114-67a28d0beffb.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105496,
+    "sha256": "67a28d0beffb188d5c25dd041766d3c10e088c704582a0eef3646fafacf2c898"
+  },
+  {
+    "id": "115-4e85c114fc0d",
+    "name": "DMR Summary - MI0020257 _01_01_2019_to_01_31_2019_V1.pdf",
+    "url": "/dmr-docs/115-4e85c114fc0d.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105482,
+    "sha256": "4e85c114fc0d05ae7fb21a3fa63dc4117affab2857d1bb024d90f7f7413f6561"
+  },
+  {
+    "id": "116-13d823ec1cd2",
+    "name": "DMR Summary - MI0020257 _01_01_2020_to_01_31_2020_V1.pdf",
+    "url": "/dmr-docs/116-13d823ec1cd2.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 107240,
+    "sha256": "13d823ec1cd2c360bc03ae4983478f5f2b33ff5222e6a01dbcd7fbdbef6e2bbf"
+  },
+  {
+    "id": "117-23753e39b1e3",
+    "name": "DMR Summary - MI0020257 _02_01_2016_to_02_29_2016_V1.pdf",
+    "url": "/dmr-docs/117-23753e39b1e3.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105880,
+    "sha256": "23753e39b1e3bbd77544b2e5052ab6f3b001e9321c03e49ece0f51277168db53"
+  },
+  {
+    "id": "118-cd1ca591096f",
+    "name": "DMR Summary - MI0020257 _02_01_2017_to_02_28_2017_V1.pdf",
+    "url": "/dmr-docs/118-cd1ca591096f.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105749,
+    "sha256": "cd1ca591096f5bd40889806ae606e8c1250debbbe6d026d442375f541a475238"
+  },
+  {
+    "id": "119-0149c9028894",
+    "name": "DMR Summary - MI0020257 _02_01_2018_to_02_28_2018_V1.pdf",
+    "url": "/dmr-docs/119-0149c9028894.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105779,
+    "sha256": "0149c9028894bbcf2b870b7e09ed91a63e98cff94cc9a47f1cca2975767345c2"
+  },
+  {
+    "id": "120-ffc0a89f27f6",
+    "name": "DMR Summary - MI0020257 _02_01_2019_to_02_28_2019_V1.pdf",
+    "url": "/dmr-docs/120-ffc0a89f27f6.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105767,
+    "sha256": "ffc0a89f27f6cd3b2fcb3c2b00256c30477dad43edef391644361c3a104d9269"
+  },
+  {
+    "id": "121-91424fc8fad6",
+    "name": "DMR Summary - MI0020257 _02_01_2020_to_02_29_2020_V1.pdf",
+    "url": "/dmr-docs/121-91424fc8fad6.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 107170,
+    "sha256": "91424fc8fad6d5a09a454e526c6efdc971a4da88b2e34396757d5eb108c19929"
+  },
+  {
+    "id": "122-99c7c1ad795d",
+    "name": "DMR Summary - MI0020257 _03_01_2016_to_03_31_2016_V1.pdf",
+    "url": "/dmr-docs/122-99c7c1ad795d.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105558,
+    "sha256": "99c7c1ad795d36e413c12c8003e5b25e3c24ae930130d59874a7e1be40aa319b"
+  },
+  {
+    "id": "123-144e5303ac05",
+    "name": "DMR Summary - MI0020257 _03_01_2017_to_03_31_2017_V1.pdf",
+    "url": "/dmr-docs/123-144e5303ac05.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105497,
+    "sha256": "144e5303ac05e0e0c6bcf22d4f9bbe128d1315d4d945b346f256d9cba7b8715e"
+  },
+  {
+    "id": "124-42645afc46de",
+    "name": "DMR Summary - MI0020257 _03_01_2018_to_03_31_2018_V1.pdf",
+    "url": "/dmr-docs/124-42645afc46de.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105476,
+    "sha256": "42645afc46de5c5aa00ddc428763e1897d4c743c03227e6287e24155746e615c"
+  },
+  {
+    "id": "125-29bd1ad1c960",
+    "name": "DMR Summary - MI0020257 _03_01_2019_to_03_31_2019_V1.pdf",
+    "url": "/dmr-docs/125-29bd1ad1c960.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105475,
+    "sha256": "29bd1ad1c9602d278f4353c0dd2a28acf7f77ba434b2921ac18f7872c9840f23"
+  },
+  {
+    "id": "126-0564814c1b7d",
+    "name": "DMR Summary - MI0020257 _03_01_2020_to_03_31_2020_V1.pdf",
+    "url": "/dmr-docs/126-0564814c1b7d.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 107191,
+    "sha256": "0564814c1b7d962ff2c129b436d8aaf2b093be2543e0eea41873e78d5f4b0964"
+  },
+  {
+    "id": "127-4274d70b33b1",
+    "name": "DMR Summary - MI0020257 _04_01_2016_to_04_30_2016_V1.pdf",
+    "url": "/dmr-docs/127-4274d70b33b1.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 112438,
+    "sha256": "4274d70b33b1f283d1b6089c4b38f115fa383a4fa9cb66c7e38d1f835ab8a7df"
+  },
+  {
+    "id": "128-50af8ed40f4c",
+    "name": "DMR Summary - MI0020257 _04_01_2017_to_04_30_2017_V1.pdf",
+    "url": "/dmr-docs/128-50af8ed40f4c.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105455,
+    "sha256": "50af8ed40f4c23d1c957ff675ba9a63244f3040eee33f7707b91e8235aae9bae"
+  },
+  {
+    "id": "129-dc425881421b",
+    "name": "DMR Summary - MI0020257 _04_01_2018_to_04_30_2018_V1.pdf",
+    "url": "/dmr-docs/129-dc425881421b.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105467,
+    "sha256": "dc425881421bb1383e7eee8d5835463708efef0a0c9a01e8cdd38086eb6c6002"
+  },
+  {
+    "id": "130-45d528ff4172",
+    "name": "DMR Summary - MI0020257 _04_01_2019_to_04_30_2019_V1.pdf",
+    "url": "/dmr-docs/130-45d528ff4172.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105465,
+    "sha256": "45d528ff417212e41e513f40a2326d11a16576cdc672d249695717feafd6dde0"
+  },
+  {
+    "id": "131-aa3d569e7707",
+    "name": "DMR Summary - MI0020257 _04_01_2020_to_04_30_2020_V1.pdf",
+    "url": "/dmr-docs/131-aa3d569e7707.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 5,
+    "size": 116823,
+    "sha256": "aa3d569e7707da2c3272d0b8a15acd6cdb8849cdcd16f68141c4de269413ab67"
+  },
+  {
+    "id": "132-e5f901dcf686",
+    "name": "DMR Summary - MI0020257 _05_01_2016_to_05_31_2016_V1.pdf",
+    "url": "/dmr-docs/132-e5f901dcf686.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103193,
+    "sha256": "e5f901dcf686a7a9f12cb3ad7591fe4ad1282d9015f7aee32d291c1dcd1dc46d"
+  },
+  {
+    "id": "133-d3adfc78accc",
+    "name": "DMR Summary - MI0020257 _05_01_2017_to_05_31_2017_V1.pdf",
+    "url": "/dmr-docs/133-d3adfc78accc.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109964,
+    "sha256": "d3adfc78accc506db2bc4ba25b45b2b73b1c722ddb2e1f75c8364006a4080d2a"
+  },
+  {
+    "id": "134-4cc44f1c4954",
+    "name": "DMR Summary - MI0020257 _05_01_2017_to_05_31_2017_V2.pdf",
+    "url": "/dmr-docs/134-4cc44f1c4954.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109871,
+    "sha256": "4cc44f1c4954913ee46a4a6bf92b7c359d93a745f423ebf5bd231a9124c5679b"
+  },
+  {
+    "id": "135-a6179351660a",
+    "name": "DMR Summary - MI0020257 _05_01_2017_to_05_31_2017_V3.pdf",
+    "url": "/dmr-docs/135-a6179351660a.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109878,
+    "sha256": "a6179351660aa4c52bba80057ac512ebefeea46f33d3049381440413b638c2f3"
+  },
+  {
+    "id": "136-277ef62ecdfd",
+    "name": "DMR Summary - MI0020257 _05_01_2019_to_05_31_2019_V1.pdf",
+    "url": "/dmr-docs/136-277ef62ecdfd.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 110065,
+    "sha256": "277ef62ecdfdb7c75a70e9b5abc1b16bcdee855d761ac443b5826e52298b8077"
+  },
+  {
+    "id": "137-17654d95480a",
+    "name": "DMR Summary - MI0020257 _05_01_2020_to_05_31_2020_V1.pdf",
+    "url": "/dmr-docs/137-17654d95480a.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 113981,
+    "sha256": "17654d95480a9da279bad2f26805c04d2753176c001ff3e03516751cebd50e74"
+  },
+  {
+    "id": "138-21800141cc10",
+    "name": "DMR Summary - MI0020257 _06_01_2016_to_06_30_2016_V1.pdf",
+    "url": "/dmr-docs/138-21800141cc10.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102942,
+    "sha256": "21800141cc1057d10f67f263c85c0d1734524c78946b4616c908491687b399eb"
+  },
+  {
+    "id": "139-772dd317bdcd",
+    "name": "DMR Summary - MI0020257 _06_01_2017_to_06_30_2017_V1.pdf",
+    "url": "/dmr-docs/139-772dd317bdcd.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109710,
+    "sha256": "772dd317bdcdcde6d0f30b2fb26802127733e1aac4e14c27664fb1472b55b81a"
+  },
+  {
+    "id": "140-bd36ecb9b5bf",
+    "name": "DMR Summary - MI0020257 _06_01_2018_to_06_30_2018_V1.pdf",
+    "url": "/dmr-docs/140-bd36ecb9b5bf.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102879,
+    "sha256": "bd36ecb9b5bfa57037da44ead1a8bb2d95d5dc24e19cdd53202efd06887d6147"
+  },
+  {
+    "id": "141-05d054852661",
+    "name": "DMR Summary - MI0020257 _06_01_2019_to_06_30_2019_V1.pdf",
+    "url": "/dmr-docs/141-05d054852661.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109721,
+    "sha256": "05d05485266176378e28bfff39bb7546c1a5f6d8517cafca8c3e1ebd2284fea1"
+  },
+  {
+    "id": "142-7bd88ada1724",
+    "name": "DMR Summary - MI0020257 _06_01_2020_to_06_30_2020_V1.pdf",
+    "url": "/dmr-docs/142-7bd88ada1724.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 112546,
+    "sha256": "7bd88ada1724c8d74a865d4f012850ca4f150e7d2dfe9a666991f55cb76bc803"
+  },
+  {
+    "id": "143-947a21a4eb7c",
+    "name": "DMR Summary - MI0020257 _07_01_2015_to_07_31_2015_V1.pdf",
+    "url": "/dmr-docs/143-947a21a4eb7c.pdf",
+    "year": "2015",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102980,
+    "sha256": "947a21a4eb7c254d5a32b660e647f43f7f75006ab04eede030efcea056144faf"
+  },
+  {
+    "id": "144-11f5f6e5de01",
+    "name": "DMR Summary - MI0020257 _07_01_2016_to_07_31_2016_V1.pdf",
+    "url": "/dmr-docs/144-11f5f6e5de01.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109882,
+    "sha256": "11f5f6e5de0167f9c1afac6b25871b22d70d507ca230341b537d0845cbaca684"
+  },
+  {
+    "id": "145-250dca9c90c7",
+    "name": "DMR Summary - MI0020257 _07_01_2017_to_07_31_2017_V1.pdf",
+    "url": "/dmr-docs/145-250dca9c90c7.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109772,
+    "sha256": "250dca9c90c705897fe5fd21ac664bc4c609b655904e6924a2830e44e59abe4f"
+  },
+  {
+    "id": "146-517917a70f3d",
+    "name": "DMR Summary - MI0020257 _07_01_2017_to_07_31_2017_V2.pdf",
+    "url": "/dmr-docs/146-517917a70f3d.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109792,
+    "sha256": "517917a70f3db3940e7b93a6e9caffc3dfd7305daeeccc5011f0a1e7b03b2a97"
+  },
+  {
+    "id": "147-9aea7b5c5fed",
+    "name": "DMR Summary - MI0020257 _07_01_2018_to_07_31_2018_V1.pdf",
+    "url": "/dmr-docs/147-9aea7b5c5fed.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102873,
+    "sha256": "9aea7b5c5fedd297bd39e06b105fc7031a27d81cc12e7762a0a8f954b02d0f7a"
+  },
+  {
+    "id": "148-69eca5b55bd7",
+    "name": "DMR Summary - MI0020257 _07_01_2019_to_07_31_2019_V1.pdf",
+    "url": "/dmr-docs/148-69eca5b55bd7.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102838,
+    "sha256": "69eca5b55bd7913c90a471fd759dbcc2b6e14b61314f548928901120096ac9e0"
+  },
+  {
+    "id": "149-e24f42cd4ba0",
+    "name": "DMR Summary - MI0020257 _07_01_2020_to_07_31_2020_V1.pdf",
+    "url": "/dmr-docs/149-e24f42cd4ba0.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 112584,
+    "sha256": "e24f42cd4ba0d858b3ef61487b191570b11f3fd8d780c10ef8acf27b738ab051"
+  },
+  {
+    "id": "150-22c00fcd8d59",
+    "name": "DMR Summary - MI0020257 _08_01_2015_to_08_31_2015_V1.pdf",
+    "url": "/dmr-docs/150-22c00fcd8d59.pdf",
+    "year": "2015",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103176,
+    "sha256": "22c00fcd8d59688b4f4c91d754e7c02c373859ec4d826e97b4618aee3f95d525"
+  },
+  {
+    "id": "151-e7f9764dc9bf",
+    "name": "DMR Summary - MI0020257 _08_01_2016_to_08_31_2016_V1.pdf",
+    "url": "/dmr-docs/151-e7f9764dc9bf.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103176,
+    "sha256": "e7f9764dc9bfc77c561c3fad5eb7526e4ea19a5441b2176a88ff12f7f18fbe11"
+  },
+  {
+    "id": "152-fe1734387374",
+    "name": "DMR Summary - MI0020257 _08_01_2017_to_08_31_2017_V1.pdf",
+    "url": "/dmr-docs/152-fe1734387374.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103075,
+    "sha256": "fe1734387374e67b0a7f710649b8db63f178ff41ee497d0ed83f55d1d631a89f"
+  },
+  {
+    "id": "153-91739aa23908",
+    "name": "DMR Summary - MI0020257 _08_01_2018_to_08_31_2018_V1.pdf",
+    "url": "/dmr-docs/153-91739aa23908.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103093,
+    "sha256": "91739aa239087838f4c241baa3bad95d01aaf77fa65080fb68b957e014da20af"
+  },
+  {
+    "id": "154-c2c07334a2ab",
+    "name": "DMR Summary - MI0020257 _08_01_2019_to_08_31_2019_V1.pdf",
+    "url": "/dmr-docs/154-c2c07334a2ab.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109926,
+    "sha256": "c2c07334a2ab88eac752c9c46f2b563576d0a75e788c4df6541813b8fd51ad53"
+  },
+  {
+    "id": "155-48550c51ef22",
+    "name": "DMR Summary - MI0020257 _08_01_2020_to_08_31_2020_V1.pdf",
+    "url": "/dmr-docs/155-48550c51ef22.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 112537,
+    "sha256": "48550c51ef2203a0c7854371b5ecacc3347ebfddf299283961ae28183204d734"
+  },
+  {
+    "id": "156-2c0d57442e9a",
+    "name": "DMR Summary - MI0020257 _09_01_2015_to_09_30_2015_V1.pdf",
+    "url": "/dmr-docs/156-2c0d57442e9a.pdf",
+    "year": "2015",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102922,
+    "sha256": "2c0d57442e9a99dbba62e9073ae499f84e43089fd65253426ad9dbb92897033e"
+  },
+  {
+    "id": "157-466137bd194e",
+    "name": "DMR Summary - MI0020257 _09_01_2016_to_09_30_2016_V1.pdf",
+    "url": "/dmr-docs/157-466137bd194e.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102928,
+    "sha256": "466137bd194e2ed91e37e781ff20eaba7de16c84e29f3cb988bfd8747e1e2c83"
+  },
+  {
+    "id": "158-76ae45c57f6a",
+    "name": "DMR Summary - MI0020257 _09_01_2017_to_09_30_2017_V1.pdf",
+    "url": "/dmr-docs/158-76ae45c57f6a.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102853,
+    "sha256": "76ae45c57f6a4e1dc6c39e88d2fd9b74b69883d37e09917ea414709af1fe76aa"
+  },
+  {
+    "id": "159-90beef2be865",
+    "name": "DMR Summary - MI0020257 _09_01_2018_to_09_30_2018_V1.pdf",
+    "url": "/dmr-docs/159-90beef2be865.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102864,
+    "sha256": "90beef2be8655e194eae5235dc895d630d8da027544e9257ee64c1e2854d5c72"
+  },
+  {
+    "id": "160-e63f037893bf",
+    "name": "DMR Summary - MI0020257 _09_01_2019_to_09_30_2019_V1.pdf",
+    "url": "/dmr-docs/160-e63f037893bf.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 112504,
+    "sha256": "e63f037893bf2a07cb9960202788e0790bbbe6b3d4d318e58ce8bf8d7de3f177"
+  },
+  {
+    "id": "161-0dab5e994a71",
+    "name": "DMR Summary - MI0020257 _09_01_2020_to_09_30_2020_V1.pdf",
+    "url": "/dmr-docs/161-0dab5e994a71.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 112530,
+    "sha256": "0dab5e994a7188a5f190909d3fb79661d2f2916ce8741bfcbd9d834f7902608c"
+  },
+  {
+    "id": "162-beeb79d6ff49",
+    "name": "DMR Summary - MI0020257 _10_01_2014_to_09_30_2015_V1.pdf",
+    "url": "/dmr-docs/162-beeb79d6ff49.pdf",
+    "year": "2014",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103199,
+    "sha256": "beeb79d6ff4986620fdecd7a55ba7956c34b0de19109cea4116021afd52ca49b"
+  },
+  {
+    "id": "163-61ed848f2156",
+    "name": "DMR Summary - MI0020257 _10_01_2015_to_09_30_2016_V1.pdf",
+    "url": "/dmr-docs/163-61ed848f2156.pdf",
+    "year": "2015",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103056,
+    "sha256": "61ed848f21560b247e951ff0a5f5e312e13ab82fc540e3bddc717b1435537091"
+  },
+  {
+    "id": "164-4af32883eded",
+    "name": "DMR Summary - MI0020257 _10_01_2015_to_10_31_2015_V1.pdf",
+    "url": "/dmr-docs/164-4af32883eded.pdf",
+    "year": "2015",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102936,
+    "sha256": "4af32883ededdf7f5c25e19c25897d2f67ef205f265956ee38ac869dc7c63139"
+  },
+  {
+    "id": "165-2910ad9731cc",
+    "name": "DMR Summary - MI0020257 _10_01_2016_to_09_30_2017_V1.pdf",
+    "url": "/dmr-docs/165-2910ad9731cc.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103216,
+    "sha256": "2910ad9731cce7305a08354dbe6d41756e24b3e34574b9b93a8ecf2edf11d368"
+  },
+  {
+    "id": "166-ef8a18325f31",
+    "name": "DMR Summary - MI0020257 _10_01_2016_to_10_31_2016_V1.pdf",
+    "url": "/dmr-docs/166-ef8a18325f31.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102971,
+    "sha256": "ef8a18325f3126bdf098fb3f20d7add58323b7b1194f522d0e2d8fdbd3151026"
+  },
+  {
+    "id": "167-33aa71690558",
+    "name": "DMR Summary - MI0020257 _10_01_2017_to_09_30_2018_V1.pdf",
+    "url": "/dmr-docs/167-33aa71690558.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103193,
+    "sha256": "33aa7169055854696bd202b4250aac65ffd5be455759186399e03f595a70e9cf"
+  },
+  {
+    "id": "168-18459714c38b",
+    "name": "DMR Summary - MI0020257 _10_01_2017_to_10_31_2017_V1.pdf",
+    "url": "/dmr-docs/168-18459714c38b.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 110139,
+    "sha256": "18459714c38b961c41c964709b49b8b851984de3fd864842002ba0cdd6887925"
+  },
+  {
+    "id": "169-34955a20667a",
+    "name": "DMR Summary - MI0020257 _10_01_2017_to_10_31_2017_V2.pdf",
+    "url": "/dmr-docs/169-34955a20667a.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 110024,
+    "sha256": "34955a20667acea5ff45c8771a860490d76d51ad04c344ccae22c33468c77dbe"
+  },
+  {
+    "id": "170-e037b25d2f7b",
+    "name": "DMR Summary - MI0020257 _10_01_2018_to_09_30_2019_V1.pdf",
+    "url": "/dmr-docs/170-e037b25d2f7b.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103230,
+    "sha256": "e037b25d2f7b9930cc43492f904992eb71262fa929d2b20840a6cd6ac2992c37"
+  },
+  {
+    "id": "171-603d7b287597",
+    "name": "DMR Summary - MI0020257 _10_01_2018_to_10_31_2018_V1.pdf",
+    "url": "/dmr-docs/171-603d7b287597.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 102867,
+    "sha256": "603d7b287597364807b1168c9d69e179fbc08ce89eb68cb90169f57dee6205be"
+  },
+  {
+    "id": "172-873590d70611",
+    "name": "DMR Summary - MI0020257 _10_01_2019_to_09_30_2020_V1.pdf",
+    "url": "/dmr-docs/172-873590d70611.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103198,
+    "sha256": "873590d70611979085b1a132116a36d75bd3fee1dd1603119c6d846dab3a80c7"
+  },
+  {
+    "id": "173-e7c9e8168b48",
+    "name": "DMR Summary - MI0020257 _10_01_2019_to_10_31_2019_V1.pdf",
+    "url": "/dmr-docs/173-e7c9e8168b48.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 107236,
+    "sha256": "e7c9e8168b48390d9275627161260de7b411440cf6624c3e8b747bab5f6d317c"
+  },
+  {
+    "id": "174-eae1fcfb82dd",
+    "name": "DMR Summary - MI0020257 _10_01_2020_to_10_31_2020_V1.pdf",
+    "url": "/dmr-docs/174-eae1fcfb82dd.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 5,
+    "size": 117091,
+    "sha256": "eae1fcfb82dd6eb981cc5ae503d910948415df1745e41adfc9550a91596db16f"
+  },
+  {
+    "id": "175-f576a237fca5",
+    "name": "DMR Summary - MI0020257 _11_01_2015_to_11_30_2015_V1.pdf",
+    "url": "/dmr-docs/175-f576a237fca5.pdf",
+    "year": "2015",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103165,
+    "sha256": "f576a237fca57e6e35d1c6676616ce697a1413254ff654016b2f566c6e0712da"
+  },
+  {
+    "id": "176-3ec40507a276",
+    "name": "DMR Summary - MI0020257 _11_01_2016_to_11_30_2016_V1.pdf",
+    "url": "/dmr-docs/176-3ec40507a276.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 103233,
+    "sha256": "3ec40507a276fd3d08fecacffce92ea59382687fb2378a713ece67c53a84c134"
+  },
+  {
+    "id": "177-92520bc99aee",
+    "name": "DMR Summary - MI0020257 _11_01_2017_to_11_30_2017_V1.pdf",
+    "url": "/dmr-docs/177-92520bc99aee.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109897,
+    "sha256": "92520bc99aee87b514bd59c21968ad6a43a034fa049dcf4bef4a2d32fec7f643"
+  },
+  {
+    "id": "178-ff8c8fee23bf",
+    "name": "DMR Summary - MI0020257 _11_01_2018_to_11_30_2018_V1.pdf",
+    "url": "/dmr-docs/178-ff8c8fee23bf.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 109871,
+    "sha256": "ff8c8fee23bf4312c490f2f59e8de5fb50bf0cc1b72943d16b107e31dc40a924"
+  },
+  {
+    "id": "179-444dad112280",
+    "name": "DMR Summary - MI0020257 _11_01_2019_to_11_30_2019_V1.pdf",
+    "url": "/dmr-docs/179-444dad112280.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 5,
+    "size": 117127,
+    "sha256": "444dad112280dedb3e059145c191af1a65f6921401f926781cc8b5d3337dd76c"
+  },
+  {
+    "id": "180-28d08a7c9a6b",
+    "name": "DMR Summary - MI0020257 _11_01_2020_to_11_30_2020_V1.pdf",
+    "url": "/dmr-docs/180-28d08a7c9a6b.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 107195,
+    "sha256": "28d08a7c9a6bf65caf03ce42bbd7947b667fc0bc91c1e27ca26c8ee6e01230bd"
+  },
+  {
+    "id": "181-e10e94fae0df",
+    "name": "DMR Summary - MI0020257 _12_01_2015_to_12_31_2015_V1.pdf",
+    "url": "/dmr-docs/181-e10e94fae0df.pdf",
+    "year": "2015",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105393,
+    "sha256": "e10e94fae0dfecffd74c6b88e82a6943bc68909b1a948ab0090b45ede79b601d"
+  },
+  {
+    "id": "182-47acbe82eb06",
+    "name": "DMR Summary - MI0020257 _12_01_2016_to_12_31_2016_V1.pdf",
+    "url": "/dmr-docs/182-47acbe82eb06.pdf",
+    "year": "2016",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 112282,
+    "sha256": "47acbe82eb06dd2fef4f63adeffc2123953723710b2cbcae1559aa29a9962f4e"
+  },
+  {
+    "id": "183-2d5e33a648eb",
+    "name": "DMR Summary - MI0020257 _12_01_2017_to_12_31_2017_V1.pdf",
+    "url": "/dmr-docs/183-2d5e33a648eb.pdf",
+    "year": "2017",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105456,
+    "sha256": "2d5e33a648eb27ccac00095bd4f1975f6ddaa75c2f64ebc31040d184413404d0"
+  },
+  {
+    "id": "184-6467cf77fc14",
+    "name": "DMR Summary - MI0020257 _12_01_2018_to_12_31_2018_V1.pdf",
+    "url": "/dmr-docs/184-6467cf77fc14.pdf",
+    "year": "2018",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 105472,
+    "sha256": "6467cf77fc14f6b9faba2d564f1a901b98a1666819c1bf1c60a5ce2d0b149794"
+  },
+  {
+    "id": "185-7a7e73c4cfcb",
+    "name": "DMR Summary - MI0020257 _12_01_2019_to_12_31_2019_V1.pdf",
+    "url": "/dmr-docs/185-7a7e73c4cfcb.pdf",
+    "year": "2019",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 107179,
+    "sha256": "7a7e73c4cfcbcadae747596999aff2ba86daf2df5a18fd2579996e18d7ea06c6"
+  },
+  {
+    "id": "186-3e877de98959",
+    "name": "DMR Summary - MI0020257 _12_01_2020_to_12_31_2020_V1.pdf",
+    "url": "/dmr-docs/186-3e877de98959.pdf",
+    "year": "2020",
+    "type": "DMR summary",
+    "pages": 4,
+    "size": 113966,
+    "sha256": "3e877de989592b59f5600b2c64882b684b0858f04231099f8ad00c578a6c0565"
+  },
+  {
+    "id": "187-a0347eae1366",
     "name": "Fact Sheet-DRAFT_Cadillac WWTP.pdf",
-    "url": "/dmr-docs/264-f87721e4c5.pdf",
+    "url": "/dmr-docs/187-a0347eae1366.pdf",
     "year": "Undated",
-    "type": "Fact sheet"
+    "type": "Fact sheet",
+    "pages": 3,
+    "size": 263820,
+    "sha256": "a0347eae1366e621a4c9b8d250db86e6b9200b9d0517314155187c96a742a3d5"
+  },
+  {
+    "id": "188-62419d534e4a",
+    "name": "Fact Sheet.pdf",
+    "url": "/dmr-docs/188-62419d534e4a.pdf",
+    "year": "Undated",
+    "type": "Fact sheet",
+    "pages": 3,
+    "size": 167228,
+    "sha256": "62419d534e4a3b5e9c7ab23a87f74c28947d9c377e7030f3739474ce74d632da"
+  },
+  {
+    "id": "189-0b7e9c09363e",
+    "name": "Fact Sheet_Cadillac WWTP.pdf",
+    "url": "/dmr-docs/189-0b7e9c09363e.pdf",
+    "year": "Undated",
+    "type": "Fact sheet",
+    "pages": 3,
+    "size": 940617,
+    "sha256": "0b7e9c09363ef4b4e033aea714a6f28f067450885db25a15cb25fafbaaa3ac57"
+  },
+  {
+    "id": "190-144961b24ab4",
+    "name": "MI0020257_2020-10-01_to_2021-09-30_DMR.pdf",
+    "url": "/dmr-docs/190-144961b24ab4.pdf",
+    "year": "2020",
+    "type": "DMR report",
+    "pages": 4,
+    "size": 103030,
+    "sha256": "144961b24ab410b1c4b9d7b141635d4be172e637f26a83e34a204ce018ecbd67"
+  },
+  {
+    "id": "191-f2eca18e0757",
+    "name": "MI0020257_2021-01-01_to_2021-01-31_1_DMR.pdf",
+    "url": "/dmr-docs/191-f2eca18e0757.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 244336,
+    "sha256": "f2eca18e075779c8ad7a46e4e53295935516adf5fe169241d7972bc3caf7e01b"
+  },
+  {
+    "id": "192-7bacccd9b9f5",
+    "name": "MI0020257_2021-02-01_to_2021-02-28_1_DMR.pdf",
+    "url": "/dmr-docs/192-7bacccd9b9f5.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 242374,
+    "sha256": "7bacccd9b9f54f8324629ad3be32e53c15bdac5f057160758a6eceb15a40b671"
+  },
+  {
+    "id": "193-69d0721ad6d0",
+    "name": "MI0020257_2021-03-01_to_2021-03-31_1_DMR.pdf",
+    "url": "/dmr-docs/193-69d0721ad6d0.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 244305,
+    "sha256": "69d0721ad6d0c4ce472716dfb9ee2bb768ff7881778f1fa177d322287411cdce"
+  },
+  {
+    "id": "194-3f7c51c66dfd",
+    "name": "MI0020257_2021-04-01_to_2021-04-30_1_DMR.pdf",
+    "url": "/dmr-docs/194-3f7c51c66dfd.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 243574,
+    "sha256": "3f7c51c66dfd35d3b2ab584da3ce03d20efe72d3a3172008781d72b956b68fc7"
+  },
+  {
+    "id": "195-d5b5453e9a44",
+    "name": "MI0020257_2021-05-01_to_2021-05-31_1_DMR.pdf",
+    "url": "/dmr-docs/195-d5b5453e9a44.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 244145,
+    "sha256": "d5b5453e9a44dd065827245a886edc45e6d214ac3a1fa3c92819b3d3e0a8e635"
+  },
+  {
+    "id": "196-3666e8474115",
+    "name": "MI0020257_2021-06-01_to_2021-06-30_1_DMR.pdf",
+    "url": "/dmr-docs/196-3666e8474115.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 248398,
+    "sha256": "3666e8474115e70d1840c453e1d90cb79b9982f63877a9eee13dd3a75e31bfcb"
+  },
+  {
+    "id": "197-f8343c2cd667",
+    "name": "MI0020257_2021-07-01_to_2021-07-31_1_DMR.pdf",
+    "url": "/dmr-docs/197-f8343c2cd667.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 241548,
+    "sha256": "f8343c2cd667fc27c27833742a34901765768b1015f9ee8ee59ca878c95162e7"
+  },
+  {
+    "id": "198-a9e6807ee9a4",
+    "name": "MI0020257_2021-08-01_to_2021-08-31_DMR.pdf",
+    "url": "/dmr-docs/198-a9e6807ee9a4.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 249260,
+    "sha256": "a9e6807ee9a48870ddfac3eafb00d2a6298b3cd583dc5094daa7d2201e857445"
+  },
+  {
+    "id": "199-f1eeaf224045",
+    "name": "MI0020257_2021-09-01_to_2021-09-30_DMR.pdf",
+    "url": "/dmr-docs/199-f1eeaf224045.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 241362,
+    "sha256": "f1eeaf224045fcc6e8158966de179e2c7e2cb96e528dabf31054a758fedbc6da"
+  },
+  {
+    "id": "200-65b0751d0cab",
+    "name": "MI0020257_2021-10-01_to_2021-10-31_DMR.pdf",
+    "url": "/dmr-docs/200-65b0751d0cab.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 243942,
+    "sha256": "65b0751d0cab3b175e5471f4aa4f851adfa14bcf83cdb6b7dd92c01f9fabde15"
+  },
+  {
+    "id": "201-ffe7945a782b",
+    "name": "MI0020257_2021-10-01_to_2022-09-30_DMR.pdf",
+    "url": "/dmr-docs/201-ffe7945a782b.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 5,
+    "size": 166712,
+    "sha256": "ffe7945a782b5d130c91acbaef2ddbaa808616fc74949185b99524fd6ffd47f2"
+  },
+  {
+    "id": "202-25f644702d11",
+    "name": "MI0020257_2021-11-01_to_2021-11-30_DMR.pdf",
+    "url": "/dmr-docs/202-25f644702d11.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 253363,
+    "sha256": "25f644702d1119d7939dbaea27e01dee67304a919e0a739c26cfd6efe03a5c58"
+  },
+  {
+    "id": "203-aae19baa50f0",
+    "name": "MI0020257_2021-12-01_to_2021-12-31_DMR.pdf",
+    "url": "/dmr-docs/203-aae19baa50f0.pdf",
+    "year": "2021",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 267044,
+    "sha256": "aae19baa50f0c08090e1a5d106a33b0dbd33e77a14902e9456da8441040e17ea"
+  },
+  {
+    "id": "204-87dbf37b8e81",
+    "name": "MI0020257_2022-01-01_to_2022-01-31_DMR.pdf",
+    "url": "/dmr-docs/204-87dbf37b8e81.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 276585,
+    "sha256": "87dbf37b8e812a3fdb116cd8009ccca8216df9c71a2656cb4d1e8cfb043f85c4"
+  },
+  {
+    "id": "205-eaca9b66c020",
+    "name": "MI0020257_2022-02-01_to_2022-02-28_DMR.pdf",
+    "url": "/dmr-docs/205-eaca9b66c020.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 275432,
+    "sha256": "eaca9b66c020c38ac13848e0f7e99231d1187ea2b95bafb80de8071fa1df6894"
+  },
+  {
+    "id": "206-c2d8d5d50870",
+    "name": "MI0020257_2022-03-01_to_2022-03-31_DMR.pdf",
+    "url": "/dmr-docs/206-c2d8d5d50870.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 276906,
+    "sha256": "c2d8d5d5087065a01f0473673d71e6e5d34c345f2722a7a96fc433b17d65201c"
+  },
+  {
+    "id": "207-89f531ec31cc",
+    "name": "MI0020257_2022-04-01_to_2022-04-30_2_DMR.pdf",
+    "url": "/dmr-docs/207-89f531ec31cc.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 331186,
+    "sha256": "89f531ec31cc278858f45afce5fbd6dde04c41e5feeee841252145f63c813eb6"
+  },
+  {
+    "id": "208-4d6f124a1484",
+    "name": "MI0020257_2022-04-01_to_2022-04-30_DMR.pdf",
+    "url": "/dmr-docs/208-4d6f124a1484.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 275574,
+    "sha256": "4d6f124a1484d7de9037072f86f1c3fc7f304f2a55255c5bd2924097431059f6"
+  },
+  {
+    "id": "209-78ef5d00f6e3",
+    "name": "MI0020257_2022-05-01_to_2022-05-31_2_DMR.pdf",
+    "url": "/dmr-docs/209-78ef5d00f6e3.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 332207,
+    "sha256": "78ef5d00f6e32726d0eac8866fac94237e3a89b0c0c7f1ec168c7b2e5154cd82"
+  },
+  {
+    "id": "210-3426aa6e34f1",
+    "name": "MI0020257_2022-05-01_to_2022-05-31_DMR.pdf",
+    "url": "/dmr-docs/210-3426aa6e34f1.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 12,
+    "size": 276762,
+    "sha256": "3426aa6e34f1a2845b40df9317dae3d5762e3cd29d62d5a51faea2760f4d7ed1"
+  },
+  {
+    "id": "211-99bb72cf8411",
+    "name": "MI0020257_2022-06-01_to_2022-06-30_DMR.pdf",
+    "url": "/dmr-docs/211-99bb72cf8411.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 14,
+    "size": 322766,
+    "sha256": "99bb72cf84118171e332ac1c36897f5beb8054346af0a68b4c97097b68dd6404"
+  },
+  {
+    "id": "212-8a513903b633",
+    "name": "MI0020257_2022-07-01_to_2022-07-31_DMR.pdf",
+    "url": "/dmr-docs/212-8a513903b633.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 319899,
+    "sha256": "8a513903b633083728ce194e85365bfabea1dfc5234f52684b9e3f4b2ac354f2"
+  },
+  {
+    "id": "213-70f7d0e5e278",
+    "name": "MI0020257_2022-08-01_to_2022-08-31_DMR.pdf",
+    "url": "/dmr-docs/213-70f7d0e5e278.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 316150,
+    "sha256": "70f7d0e5e278957564467212b1aaa3529bfc722c1d3a59fc3ed80375f0374756"
+  },
+  {
+    "id": "214-e3984b32bfd8",
+    "name": "MI0020257_2022-09-01_to_2022-09-30_DMR.pdf",
+    "url": "/dmr-docs/214-e3984b32bfd8.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 315919,
+    "sha256": "e3984b32bfd80e46e3acf3a71f20fbe3e5437736871884be3e882339df68f85e"
+  },
+  {
+    "id": "215-69ec1d9512c6",
+    "name": "MI0020257_2022-10-01_to_2022-10-31_DMR.pdf",
+    "url": "/dmr-docs/215-69ec1d9512c6.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 332044,
+    "sha256": "69ec1d9512c6183c98e9848852478e8b78289d7f859375a955355bcfe1cb1530"
+  },
+  {
+    "id": "216-6669892adcd3",
+    "name": "MI0020257_2022-10-01_to_2023-09-30_DMR.pdf",
+    "url": "/dmr-docs/216-6669892adcd3.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 5,
+    "size": 178462,
+    "sha256": "6669892adcd32602628db5265c89bdbf584f84b78dab1a008255df0e3c70b374"
+  },
+  {
+    "id": "217-4fb0f74ff748",
+    "name": "MI0020257_2022-11-01_to_2022-11-30_DMR.pdf",
+    "url": "/dmr-docs/217-4fb0f74ff748.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 331742,
+    "sha256": "4fb0f74ff74837fc21fbb7bf7da9f5f4f4cde45289226ea85754577855fdae54"
+  },
+  {
+    "id": "218-28b2422a568e",
+    "name": "MI0020257_2022-12-01_to_2022-12-31_DMR.pdf",
+    "url": "/dmr-docs/218-28b2422a568e.pdf",
+    "year": "2022",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 329996,
+    "sha256": "28b2422a568e28f7fa24ac6c64ed91e3db6a2a5581bf84fa12e7d30ebf588708"
+  },
+  {
+    "id": "219-d42f4f834699",
+    "name": "MI0020257_2023-01-01_to_2023-01-31_DMR.pdf",
+    "url": "/dmr-docs/219-d42f4f834699.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 330123,
+    "sha256": "d42f4f83469997d56295cb414115110c8db86c2fa0eb3118af7532ba0d73e7d0"
+  },
+  {
+    "id": "220-8aafaee160ef",
+    "name": "MI0020257_2023-02-01_to_2023-02-28_DMR.pdf",
+    "url": "/dmr-docs/220-8aafaee160ef.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 328690,
+    "sha256": "8aafaee160efa7e9e27754cb359dc8cdfbae1b6bca2614ea7acbc92b65fdacd9"
+  },
+  {
+    "id": "221-6334398cee33",
+    "name": "MI0020257_2023-03-01_to_2023-03-31_DMR.pdf",
+    "url": "/dmr-docs/221-6334398cee33.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 337648,
+    "sha256": "6334398cee3314551d2bf830844276021c5d268aa9fc2feedb0deb5ed8a05df9"
+  },
+  {
+    "id": "222-f722da5aa592",
+    "name": "MI0020257_2023-04-01_to_2023-04-30_DMR.pdf",
+    "url": "/dmr-docs/222-f722da5aa592.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 329267,
+    "sha256": "f722da5aa592166e87a07a53d17c142269cb5f3d64e7840183c272061b68c181"
+  },
+  {
+    "id": "223-27de63882d69",
+    "name": "MI0020257_2023-05-01_to_2023-05-31_DMR.pdf",
+    "url": "/dmr-docs/223-27de63882d69.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 330556,
+    "sha256": "27de63882d690761fe216f6fb05dae83b3638d4e4fb06d25a5e378f3e4847672"
+  },
+  {
+    "id": "224-ba5dedef1fa3",
+    "name": "MI0020257_2023-06-01_to_2023-06-30_DMR.pdf",
+    "url": "/dmr-docs/224-ba5dedef1fa3.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 328076,
+    "sha256": "ba5dedef1fa3c094256858b949ce7fb4568f7ce19254d70a4b0876fde47670c2"
+  },
+  {
+    "id": "225-1b6e7dae6214",
+    "name": "MI0020257_2023-07-01_to_2023-07-31_DMR.pdf",
+    "url": "/dmr-docs/225-1b6e7dae6214.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 327441,
+    "sha256": "1b6e7dae62148ac0c2fa3870eea712338fefeb3345959c27b6680b71ed0d6faf"
+  },
+  {
+    "id": "226-246612eca93e",
+    "name": "MI0020257_2023-08-01_to_2023-08-31_DMR.pdf",
+    "url": "/dmr-docs/226-246612eca93e.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 326745,
+    "sha256": "246612eca93eebef3922411132b0a0a9c26dfd29117ca60d90529423a72b5e13"
+  },
+  {
+    "id": "227-7cfb6afd8d5a",
+    "name": "MI0020257_2023-09-01_to_2023-09-30_DMR.pdf",
+    "url": "/dmr-docs/227-7cfb6afd8d5a.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 332336,
+    "sha256": "7cfb6afd8d5a850c49b70412a1c0a7e5f1fa8525f12283fa9a37831bd6949c86"
+  },
+  {
+    "id": "228-fd86039bb763",
+    "name": "MI0020257_2023-10-01_to_2023-10-31_DMR.pdf",
+    "url": "/dmr-docs/228-fd86039bb763.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 329090,
+    "sha256": "fd86039bb763a8308214adb8885220a012b5074d66766bdb618f8e04a1b1a741"
+  },
+  {
+    "id": "229-868408835aa5",
+    "name": "MI0020257_2023-10-01_to_2024-09-30_DMR.pdf",
+    "url": "/dmr-docs/229-868408835aa5.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 5,
+    "size": 177586,
+    "sha256": "868408835aa5953efc8af511c148280594a7fd029309492e3ecd87b8e81c4c48"
+  },
+  {
+    "id": "230-bec6c7afc2a8",
+    "name": "MI0020257_2023-11-01_to_2023-11-30_DMR.pdf",
+    "url": "/dmr-docs/230-bec6c7afc2a8.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 329378,
+    "sha256": "bec6c7afc2a8f8ea1bd6b2ce354e07ea40a716936891f223b3ba6633bdfffabe"
+  },
+  {
+    "id": "231-393b292b7dfb",
+    "name": "MI0020257_2023-12-01_to_2023-12-31_DMR.pdf",
+    "url": "/dmr-docs/231-393b292b7dfb.pdf",
+    "year": "2023",
+    "type": "DMR report",
+    "pages": 13,
+    "size": 336655,
+    "sha256": "393b292b7dfbf21c8c347aa2a54be316f4445493d1880bd0586335e5d51b1de4"
+  },
+  {
+    "id": "232-6f04516c354a",
+    "name": "MI0020257_2024-01-01_to_2024-01-31_2_DMR.pdf",
+    "url": "/dmr-docs/232-6f04516c354a.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 352623,
+    "sha256": "6f04516c354ae8b82cbaf35ab8ed830e25655215ee20c32dc77d19991885c2c6"
+  },
+  {
+    "id": "233-173130947c73",
+    "name": "MI0020257_2024-01-01_to_2024-01-31_3_DMR.pdf",
+    "url": "/dmr-docs/233-173130947c73.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349741,
+    "sha256": "173130947c73b91d1b4fce2e82a9455cc9eccfdd8e36b290759b0cd1b3f616fa"
+  },
+  {
+    "id": "234-60e1e1841d99",
+    "name": "MI0020257_2024-01-01_to_2024-01-31_DMR.pdf",
+    "url": "/dmr-docs/234-60e1e1841d99.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 352912,
+    "sha256": "60e1e1841d997c3193fe6003369bd232e6e1e957f52d2cadbbc60d32f5e488f5"
+  },
+  {
+    "id": "235-0b5a1ecaa1e0",
+    "name": "MI0020257_2024-02-01_to_2024-02-29_DMR.pdf",
+    "url": "/dmr-docs/235-0b5a1ecaa1e0.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 347665,
+    "sha256": "0b5a1ecaa1e0bb55efd0326748ac03b8fdfc630c59934463ccffdd9dadf8310e"
+  },
+  {
+    "id": "236-05a9650e40f2",
+    "name": "MI0020257_2024-03-01_to_2024-03-31_DMR.pdf",
+    "url": "/dmr-docs/236-05a9650e40f2.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 351020,
+    "sha256": "05a9650e40f2d02d7f119f3e55e3d6933dca634087ac010932d09b9896ae2f93"
+  },
+  {
+    "id": "237-277bd0afbf7a",
+    "name": "MI0020257_2024-04-01_to_2024-04-30_2_DMR.pdf",
+    "url": "/dmr-docs/237-277bd0afbf7a.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 347433,
+    "sha256": "277bd0afbf7a364cc294da2b0476fe22ed88a32a92d4dee2d49de9a45b8e6780"
+  },
+  {
+    "id": "238-ca5d6c637f85",
+    "name": "MI0020257_2024-04-01_to_2024-04-30_DMR.pdf",
+    "url": "/dmr-docs/238-ca5d6c637f85.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 350604,
+    "sha256": "ca5d6c637f857693aee60f2db6c123f0074b34e3af14289363b81218c7116a12"
+  },
+  {
+    "id": "239-2c722e6bba0c",
+    "name": "MI0020257_2024-05-01_to_2024-05-31_2_DMR.pdf",
+    "url": "/dmr-docs/239-2c722e6bba0c.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 351321,
+    "sha256": "2c722e6bba0c1790b7d8180245c77b17db7ee864b70c602d90fad5b88998c822"
+  },
+  {
+    "id": "240-f6f7a57e762a",
+    "name": "MI0020257_2024-05-01_to_2024-05-31_DMR.pdf",
+    "url": "/dmr-docs/240-f6f7a57e762a.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 350852,
+    "sha256": "f6f7a57e762a9fca5a48e12bdc912b7df95c36a54df71c474b167992fe4e82bd"
+  },
+  {
+    "id": "241-df26bd57f5dc",
+    "name": "MI0020257_2024-06-01_to_2024-06-30_DMR.pdf",
+    "url": "/dmr-docs/241-df26bd57f5dc.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 345676,
+    "sha256": "df26bd57f5dc515c60f592ed4d532f59d3e0ca593736ec7c711b9bcf73a35929"
+  },
+  {
+    "id": "242-65e531d156b5",
+    "name": "MI0020257_2024-07-01_to_2024-07-31_2_DMR.pdf",
+    "url": "/dmr-docs/242-65e531d156b5.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 348301,
+    "sha256": "65e531d156b5ebc87911507f4010efede3ed125c37fde561fdc21f47033ff4fc"
+  },
+  {
+    "id": "243-fc86d0db12e8",
+    "name": "MI0020257_2024-07-01_to_2024-07-31_DMR.pdf",
+    "url": "/dmr-docs/243-fc86d0db12e8.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349478,
+    "sha256": "fc86d0db12e860202e5f650f41bbf9266cf97f637795a527d6f902a356d18c47"
+  },
+  {
+    "id": "244-f600afdf427d",
+    "name": "MI0020257_2024-08-01_to_2024-08-31_DMR.pdf",
+    "url": "/dmr-docs/244-f600afdf427d.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 357986,
+    "sha256": "f600afdf427de6be8dd203f49bd6671350fe5133db0ace037f4ab96bf8d1268c"
+  },
+  {
+    "id": "245-bca86c0c42ec",
+    "name": "MI0020257_2024-09-01_to_2024-09-30_DMR.pdf",
+    "url": "/dmr-docs/245-bca86c0c42ec.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 346217,
+    "sha256": "bca86c0c42ec9f7b5083842c0fedd72f13a43b61a56afd430685c13ccf9959fe"
+  },
+  {
+    "id": "246-4976d67e88d4",
+    "name": "MI0020257_2024-10-01_to_2024-10-31_2_DMR.pdf",
+    "url": "/dmr-docs/246-4976d67e88d4.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 350599,
+    "sha256": "4976d67e88d449143a7c089867360d27e628644ad0e25c02cec355044ff79851"
+  },
+  {
+    "id": "247-b78da9b952fc",
+    "name": "MI0020257_2024-10-01_to_2025-09-30_DMR.pdf",
+    "url": "/dmr-docs/247-b78da9b952fc.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 5,
+    "size": 176312,
+    "sha256": "b78da9b952fc69be5330d8a8b886302623a405cf861bdfbca14eeafe7d8e41fe"
+  },
+  {
+    "id": "248-d8401173e9db",
+    "name": "MI0020257_2024-12-01_to_2024-12-31_DMR.pdf",
+    "url": "/dmr-docs/248-d8401173e9db.pdf",
+    "year": "2024",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 351264,
+    "sha256": "d8401173e9db7047549ab13c050e6b0683588117c81d7dca3d0b97272c20abce"
+  },
+  {
+    "id": "249-723798253f99",
+    "name": "MI0020257_2025-01-01_to_2025-01-31_2_DMR.pdf",
+    "url": "/dmr-docs/249-723798253f99.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349805,
+    "sha256": "723798253f99172f7654473f42df725a5bee3e4d2933b29403b67211240dd52b"
+  },
+  {
+    "id": "250-f7b510a67a95",
+    "name": "MI0020257_2025-01-01_to_2025-01-31_DMR.pdf",
+    "url": "/dmr-docs/250-f7b510a67a95.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 351205,
+    "sha256": "f7b510a67a95ae6941eee21044f78c3f8eee763bea73cf76b58c5a160db6b6b2"
+  },
+  {
+    "id": "251-35822a40fad3",
+    "name": "MI0020257_2025-02-01_to_2025-02-28_DMR.pdf",
+    "url": "/dmr-docs/251-35822a40fad3.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 346375,
+    "sha256": "35822a40fad3cf9d4b674074a6333a353d39dc71482044f71d8ad56cd20232cb"
+  },
+  {
+    "id": "252-2f30be3493c8",
+    "name": "MI0020257_2025-03-01_to_2025-03-31_DMR.pdf",
+    "url": "/dmr-docs/252-2f30be3493c8.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 350421,
+    "sha256": "2f30be3493c8fd194269dd0a4b189f7d1ee450b91f6a1972ee5afcb65bd397ef"
+  },
+  {
+    "id": "253-f300503a1e9d",
+    "name": "MI0020257_2025-04-01_to_2025-04-30_2_DMR.pdf",
+    "url": "/dmr-docs/253-f300503a1e9d.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 346349,
+    "sha256": "f300503a1e9dbbb12fdb58ee93a52c493871e1e5545e6fbbd625b20f921114d3"
+  },
+  {
+    "id": "254-851f7d2e7fd4",
+    "name": "MI0020257_2025-04-01_to_2025-04-30_DMR.pdf",
+    "url": "/dmr-docs/254-851f7d2e7fd4.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 350456,
+    "sha256": "851f7d2e7fd4c13666be605d9e99b018fca77763d0cc7e071949050eebe14846"
+  },
+  {
+    "id": "255-e65dc47f9142",
+    "name": "MI0020257_2025-05-01_to_2025-05-31_DMR.pdf",
+    "url": "/dmr-docs/255-e65dc47f9142.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349923,
+    "sha256": "e65dc47f91424e97b514dc0c462fda71cb8ad6163668aec6bbb1bb175a945786"
+  },
+  {
+    "id": "256-02f056bdd5c3",
+    "name": "MI0020257_2025-06-01_to_2025-06-30_DMR.pdf",
+    "url": "/dmr-docs/256-02f056bdd5c3.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 355753,
+    "sha256": "02f056bdd5c399c1b17edfdb31838f30d5f0908421c91f7ff045ddfc1bcf460b"
+  },
+  {
+    "id": "257-b8323e66138b",
+    "name": "MI0020257_2025-07-01_to_2025-07-31_2_DMR.pdf",
+    "url": "/dmr-docs/257-b8323e66138b.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349201,
+    "sha256": "b8323e66138b7f66e7da600ae946dc56ad33cc76a8c3544d83dd91cd093b0d31"
+  },
+  {
+    "id": "258-62dd3510466a",
+    "name": "MI0020257_2025-07-01_to_2025-07-31_DMR.pdf",
+    "url": "/dmr-docs/258-62dd3510466a.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 350959,
+    "sha256": "62dd3510466af9868570c754da2b9c7c98466c3c8b3df5454c1a1fa9bc2889e0"
+  },
+  {
+    "id": "259-12ddad6d1a26",
+    "name": "MI0020257_2025-08-01_to_2025-08-31_DMR.pdf",
+    "url": "/dmr-docs/259-12ddad6d1a26.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 347964,
+    "sha256": "12ddad6d1a26b2050ce3f027b3b37e183cf065d1629081bec5b47b1daff72acc"
+  },
+  {
+    "id": "260-e1aaef2f7a54",
+    "name": "MI0020257_2025-09-01_to_2025-09-30_DMR.pdf",
+    "url": "/dmr-docs/260-e1aaef2f7a54.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 354706,
+    "sha256": "e1aaef2f7a5492ac315060abd09f90c95564a62ef1ffe0f1a5ecac76f5159219"
+  },
+  {
+    "id": "261-df47e792de82",
+    "name": "MI0020257_2025-10-01_to_2025-10-31_2_DMR.pdf",
+    "url": "/dmr-docs/261-df47e792de82.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349651,
+    "sha256": "df47e792de825353e0b43c0b1c0d09ee2af32188cbe1ab0d480d857ef56948af"
+  },
+  {
+    "id": "262-0dc79852a37a",
+    "name": "MI0020257_2025-10-01_to_2025-10-31_DMR.pdf",
+    "url": "/dmr-docs/262-0dc79852a37a.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 351044,
+    "sha256": "0dc79852a37ae74157e001ac3d33b3fd65ae2b1f2e652f20ae3d0fa8c2902082"
+  },
+  {
+    "id": "263-50dfe014f6fd",
+    "name": "MI0020257_2025-11-01_to_2025-11-30_DMR.pdf",
+    "url": "/dmr-docs/263-50dfe014f6fd.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 348402,
+    "sha256": "50dfe014f6fd8f133b38fc1336733cc9b28e79dff27b8113830f3cdc2831de5b"
+  },
+  {
+    "id": "264-f6cc7b6fa18a",
+    "name": "MI0020257_2025-12-01_to_2025-12-31_DMR.pdf",
+    "url": "/dmr-docs/264-f6cc7b6fa18a.pdf",
+    "year": "2025",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349979,
+    "sha256": "f6cc7b6fa18ac0f32e66483a47095da3431fa8981a389a3b105abd81515396d0"
+  },
+  {
+    "id": "265-2903e374abce",
+    "name": "MI0020257_2026-01-01_to_2026-01-31_2_DMR.pdf",
+    "url": "/dmr-docs/265-2903e374abce.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349870,
+    "sha256": "2903e374abcee4cafe5a9b0253b1105ea69e33a2c3b3efed7b61dd8efae1f4af"
+  },
+  {
+    "id": "266-98fcfa19dc3b",
+    "name": "MI0020257_2026-01-01_to_2026-01-31_DMR.pdf",
+    "url": "/dmr-docs/266-98fcfa19dc3b.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 350185,
+    "sha256": "98fcfa19dc3bbc5e67f64b1f63dc0d7530215418d4e1b2d7fb2bcc5855674a51"
+  },
+  {
+    "id": "267-771a6fc2b5a0",
+    "name": "MI0020257_2026-02-01_to_2026-02-28_DMR.pdf",
+    "url": "/dmr-docs/267-771a6fc2b5a0.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "pages": 16,
+    "size": 344619,
+    "sha256": "771a6fc2b5a02054b1c349d5af7f2e19a023e8698522a61f0d7c258444ae2c36"
+  },
+  {
+    "id": "268-a696aeacb3e1",
+    "name": "MI0020257_2026-03-01_to_2026-03-31_DMR.pdf",
+    "url": "/dmr-docs/268-a696aeacb3e1.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "pages": 17,
+    "size": 349621,
+    "sha256": "a696aeacb3e18f779b82dbd87a27a1defc147b57c097f8689dfdf35934b84b3a"
+  },
+  {
+    "id": "269-e2dbe3db29a7",
+    "name": "QA QC Report_Cadillac WWTP.pdf",
+    "url": "/dmr-docs/269-e2dbe3db29a7.pdf",
+    "year": "Undated",
+    "type": "QA/QC report",
+    "pages": 16,
+    "size": 102407,
+    "sha256": "e2dbe3db29a7938d6b9abeeec16fc44a7d4287f139033ccd00477c5338fabe95"
+  },
+  {
+    "id": "270-583b88829be7",
+    "name": "S2_DMR_Jan2016_V1.pdf",
+    "url": "/dmr-docs/270-583b88829be7.pdf",
+    "year": "2016",
+    "type": "DMR report",
+    "pages": 6,
+    "size": 124190,
+    "sha256": "583b88829be7849b306e263e11dcb1ff531863978d9af634a12f3f9e37314fbd"
   }
 ]

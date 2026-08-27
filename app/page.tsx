@@ -93,6 +93,22 @@ const pdf = (
   clock,
 });
 
+const ippSource = (
+  name: string,
+  url: string,
+  pages: number,
+  result: string,
+  clock: Source["clock"],
+): Source => ({
+  name,
+  url,
+  pages,
+  format: "PDF",
+  role: "Primary source",
+  result,
+  clock,
+});
+
 const noTime = "Time not stated";
 
 const formatBytes = (bytes: number) => {
@@ -260,6 +276,24 @@ const events: Event[] = [
       created: "2018-02-21 10:03:16 CST",
       modified: "2018-02-21 10:03:16 CST",
       note: "The scan timestamp is the next day and is not used as the directive date.",
+    })],
+  },
+  {
+    year: "2018",
+    date: "2018-03",
+    isoDate: "2018-03",
+    time: noTime,
+    timeBasis: "Publication month and reporting year printed in source",
+    phase: "Industrial significant noncompliance",
+    kind: "compliance",
+    category: "04 · Industrial pretreatment",
+    title: "Cadillac publishes 2017 industrial SNC notice",
+    finding: "The rendered newspaper notice identifies significant noncompliance (SNC) by Rec Boat divisions, Cadillac Castings and AAR Mobility Systems and lists the pollutants associated with the cited exceedances.",
+    significance: "Adds the annual public-notice record to the industrial-compliance history without treating same-template facility records as duplicates.",
+    sources: [ippSource("2018-03 Cadillac News IPP SNC notice.pdf", "/ipp-docs/040-99a3b1774a76.pdf", 1, "Image-only newspaper clipping publishing the 2017 industrial SNC notice.", {
+      eventStamp: "2018-03 · time not stated",
+      basis: "Publication month and reporting year printed in source",
+      note: "The clipping is image-only; the notice was verified from the rendered page.",
     })],
   },
   {
@@ -463,6 +497,42 @@ const events: Event[] = [
     })],
   },
   {
+    year: "2022",
+    date: "2022-05-23",
+    isoDate: "2022-05-23",
+    time: noTime,
+    timeBasis: "Letter date",
+    phase: "Pretreatment corrective action",
+    kind: "compliance",
+    category: "04 · Industrial pretreatment",
+    title: "EGLE responds to Cadillac's IPP corrective-action plan",
+    finding: "EGLE accepted the revised MAHL study plan with recommendations, extended the remaining categorical-determination response to November 4, 2022, and noted that Wexford County Landfill had ceased discharge to Cadillac and should be removed from the sampling plan if that status remained true.",
+    significance: "Connects the violation-notice response, MAHL/local-limit work, Cadillac Casting categorical review and Wexford discharge status in one agency record.",
+    sources: [ippSource("2022-05-23 Follow-up to VN-012230 and VN-011108 - Cadillac WWTP.pdf", "/ipp-docs/083-df40de58ffcc.pdf", 3, "EGLE follow-up letter addressing the CAP, MAHL study plan, CCI categorical review and Wexford sampling status.", {
+      eventStamp: "2022-05-23 · time not stated",
+      basis: "Letter date printed in source",
+      note: "No time of day is stated in the letter.",
+    })],
+  },
+  {
+    year: "2023",
+    date: "2023-08",
+    isoDate: "2023-08",
+    time: noTime,
+    timeBasis: "Month printed in source filename and letter",
+    phase: "Local-limits submission",
+    kind: "regulatory",
+    category: "04 · Industrial pretreatment",
+    title: "Cadillac submits proposed MAHLs and local limits",
+    finding: "The City asked EGLE to review and approve proposed maximum allowable headworks loadings and industrial local limits and included a table of proposed limits and compatible-pollutant MAHLs.",
+    significance: "Establishes the proposal stage that precedes the later EGLE review comments; it is not represented as final approval.",
+    sources: [ippSource("2023-08 City of Cadillac proposed MAHL and local limits.pdf", "/ipp-docs/100-20ef2ece7370.pdf", 2, "City transmittal requesting review and approval of proposed MAHLs and local limits.", {
+      eventStamp: "2023-08 · time not stated",
+      basis: "Month printed in source filename and letter",
+      note: "The available source establishes the month but not a reliable day or time.",
+    })],
+  },
+  {
     year: "2024",
     date: "2024-01-22",
     isoDate: "2024-01-22T10:08:23-05:00",
@@ -533,6 +603,24 @@ const events: Event[] = [
   },
   {
     year: "2025",
+    date: "2025-03-19",
+    isoDate: "2025-03-19",
+    time: noTime,
+    timeBasis: "Affidavit publication date",
+    phase: "Industrial significant noncompliance",
+    kind: "compliance",
+    category: "04 · Industrial pretreatment",
+    title: "Public notice documents 2024 industrial SNC",
+    finding: "The affidavit's published notice identifies local-limit exceedances during 2024 at Rec Boats Trailer, AAR Mobility Systems, ARVCO, Cadillac Castings, FIAMM, Hutchinson and Michigan Rubber, with pollutants and quarters stated for each facility.",
+    significance: "Preserves the annual SNC record while distinguishing industrial-user permit exceedances from violations by the Cadillac WWTP itself.",
+    sources: [ippSource("Cadillac News Affidavit of Publication 03-19-2025.pdf", "/ipp-docs/126-724054a11ecd.pdf", 1, "Affidavit and annexed public notice of 2024 industrial significant noncompliance.", {
+      eventStamp: "2025-03-19 · time not stated",
+      basis: "Affidavit publication date",
+      note: "The notice states there were no known Cadillac WWTP violations or known Clam River or Muskegon River watershed impacts from the listed industrial exceedances.",
+    })],
+  },
+  {
+    year: "2025",
     date: "2025-09-10",
     isoDate: "2025-09-10",
     time: noTime,
@@ -576,6 +664,24 @@ const events: Event[] = [
       created: "2026-04-29 11:35:18 CDT",
       modified: "2026-04-29 11:37:14 CDT",
       note: "The event uses the collection date; embedded timestamps date later report packaging.",
+    })],
+  },
+  {
+    year: "2026",
+    date: "2026-05-27",
+    isoDate: "2026-05-27T10:50:26",
+    time: "10:50:26 · zone not stated",
+    timeBasis: "Email sent timestamp",
+    phase: "Pretreatment enforcement authority",
+    kind: "regulatory",
+    category: "04 · Industrial pretreatment",
+    title: "EGLE directs penalty-authority revisions",
+    finding: "EGLE advised that POTWs must have authority to assess a civil penalty of at least $1,000 per day for each IPP violation and identified three Cadillac procedures-manual and enforcement-template sections requiring revision.",
+    significance: "Documents a specific 2026 change requested for Cadillac's enforcement authority; the email also says the current Sewer Use Ordinance language appeared to meet that minimum.",
+    sources: [ippSource("05-27-2026 - Cadillac WWTP IPP - Civil and criminal penalties.pdf", "/ipp-docs/134-ab2692869ee6.pdf", 1, "EGLE email identifying the minimum civil-penalty authority and sections requiring revision.", {
+      eventStamp: "2026-05-27 10:50:26 · zone not stated",
+      basis: "Email sent timestamp printed in source",
+      note: "The source does not print a time-zone abbreviation, so none is inferred.",
     })],
   },
 ];
@@ -867,7 +973,7 @@ export default function Home() {
         <section className="document-library permit-library" aria-labelledby="ipp-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 04 · INDUSTRIAL PRETREATMENT &amp; SIU RECORDS</p><h2 id="ipp-library-title">Search {ippDocuments.length} verified IPP records</h2></div>
-            <p>The retained batch covers Cadillac industrial-user forms, POTW oversight, SIU/CIU inventory data and a pretreatment compliance inspection. OCR was used only to locate text in scanned pages; reported fields were verified against the rendered originals.</p>
+            <p>The verified archive now spans annual IPP reports, SNC notices, industrial-user records, POTW monitoring and oversight tables, SIU/CIU inventories, MAHL/local-limit packages, corrective-action correspondence and program revisions. OCR was used only to locate text in scanned pages; reported fields were verified against rendered originals.</p>
           </div>
           <div className="reference-summary" aria-label="Industrial pretreatment archive audit summary">
             <div><FileText /><span><strong>{ippAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>

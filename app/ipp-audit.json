@@ -1,9 +1,14 @@
 {
   "stats": {
-    "sourceFilesReviewed": 8,
-    "finalDistinctRecords": 7,
-    "exactPublishedDuplicatesSuppressed": 1,
-    "publishedBytes": 17562303
+    "sourceFilesReviewed": 319,
+    "finalDistinctRecords": 156,
+    "exactPublishedDuplicatesSuppressed": 21,
+    "publishedBytes": 80805379,
+    "batchCopiesReviewed": 310,
+    "batchExactDuplicateCopiesCollapsed": 139,
+    "batchSameContentVariantsCollapsed": 2,
+    "semanticDatasetVariantsSuppressed": 1,
+    "embeddedAttachmentRelationshipsDisclosed": 33
   },
   "methods": [
     "SHA-256 comparison against every published source asset and matching master-file copies",
@@ -11,7 +16,10 @@
     "Archival OCR cross-check for scanned PDFs, followed by rendered-page visual verification",
     "Full-page review of every retained record, including split-page oversight tables",
     "Cross-document and within-document normalized page-text comparison to disclose reused appendices without treating materially distinct records as duplicates",
-    "Rendered review of image-only O&M manual excerpts and blank trailing pages in the MAHL packages"
+    "Rendered review of image-only O&M manual excerpts and blank trailing pages in the MAHL packages",
+    "Whole-document five-word shingle comparison to detect same-content PDFs whose pagination or export formatting changed",
+    "Row-by-row semantic comparison of the Submissions CSV after parsing dates and fields",
+    "Rendered side-by-side review of high-overlap revisions and same-template industrial-user forms"
   ],
   "decisions": [
     {
@@ -37,6 +45,30 @@
     {
       "name": "December 2024 MAHL report and March 2025 EGLE review package",
       "reason": "Retained as materially distinct records. The 204-page March package contains an agency-review email, a revised January 2025 report and supporting material; 122 of its normalized pages match pages in the standalone 131-page December report, and pages 101-148 repeat internally as pages 153-200. Exact master copies found under the Duplicates folder were not republished. Image-only O&M excerpts were visually verified; the March package's final four pages are blank."
+    },
+    {
+      "name": "Category 04 loose-file and ZIP batch",
+      "reason": "Reviewed 310 PDF copies representing 171 byte-distinct hashes. One hundred thirty-nine exact duplicate copies were collapsed, 20 hashes already published elsewhere were not republished, two additional byte-different PDFs with identical normalized text were collapsed, and 149 materially distinct PDFs were retained."
+    },
+    {
+      "name": "RE_ Cadillac MAHL revisions and Cadillac Casting Meeting resaves",
+      "reason": "One resaved copy in each pair had the same complete normalized text as its cleaner-named counterpart. Only the cleaner display record was retained."
+    },
+    {
+      "name": "Email, submittal and report attachment relationships",
+      "reason": "Thirty-three exact page-overlap relationships were documented. A report embedded in a later email or submittal package was not treated as a duplicate of the entire container; revisions with changed values or additional messages were also retained."
+    },
+    {
+      "name": "Image-only and low-text PDFs",
+      "reason": "Twenty image-only PDFs and nine additional PDFs with low-text pages were rendered and reviewed. Similar-looking affidavits and dental forms were different years, facilities or contents; none was suppressed as a scanned duplicate."
+    },
+    {
+      "name": "09-23-2025 - Submissions.csv",
+      "reason": "Not republished. Its 15 rows and seven fields match the existing Submissions.csv dataset; only the timestamp display format differs."
+    },
+    {
+      "name": "Copy-style filename labels",
+      "reason": "Retained records are displayed under clean provenance names. Copy-number labels were removed from display names when the underlying record proved distinct; revised/final labels were kept only when they describe substantive document status."
     }
   ]
 }

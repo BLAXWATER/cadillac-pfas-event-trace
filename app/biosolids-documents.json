@@ -482,16 +482,16 @@
   },
   {
     "id": "038-8fc0c2a99849",
-    "name": "Kar Lab Biosolids 9-12-2016.pdf",
+    "name": "2018-09-12 - KAR Laboratories Biosolids Analytical Report.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/038-8fc0c2a99849.pdf",
-    "year": "2016",
+    "year": "2018",
     "category": "Biosolids & land application",
     "type": "Laboratory report",
     "format": "PDF",
     "pages": 3,
     "size": 174285,
     "sha256": "8fc0c2a99849158b52044fb4f3eb4db0a4b69c5e36af00571c51e8c4760c94dd",
-    "description": "3-page laboratory package covering biosolids chemistry, pathogen, metals or related analytical results. Report and attachment packages remain separate when their analytical content differs."
+    "description": "3-page KAR Laboratories biosolids analytical package dated September 2018. A visually identical alternate export in Category 06 reuses this stable archive record."
   },
   {
     "id": "039-6a2084774b73",

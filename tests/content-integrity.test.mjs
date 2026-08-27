@@ -57,7 +57,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 525);
-  assert.equal(externalFiles, 471);
+  assert.equal(externalFiles, 561);
 });
 
 test("timeline source and preview assets are present", async () => {
@@ -113,4 +113,21 @@ test("biosolids archive audit preserves distinct records and suppresses only ver
   assert.equal(catalog.some((row) => /duplicate/i.test(row.name)), false);
   assert.equal(catalog.filter((row) => row.type === "Incident / spill note").length, 1);
   assert.equal(catalog.some((row) => /22,000 Gallons/i.test(row.name)), true);
+});
+
+test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));
+  assert.equal(catalog.length, audit.stats.newDistinctRecords);
+  assert.equal(audit.stats.suppliedFiles, 100);
+  assert.equal(audit.stats.suppliedPdfPages, 1401);
+  assert.equal(audit.stats.finalDistinctRecords, 98);
+  assert.equal(audit.stats.existingRecordsReused, 8);
+  assert.equal(audit.stats.duplicateCopiesSuppressed, 2);
+  assert.equal(audit.stats.ocrPagesAttempted, 75);
+  assert.equal(audit.stats.visuallyFingerprintedPages, 1401);
+  assert.equal(catalog.some((row) => /PENDING/.test(row.url)), false);
+  assert.equal(catalog.some((row) => /^Duplicates_| \(copy \d+\)|~\d+/i.test(row.name)), false);
+  assert.equal(catalog.filter((row) => /AMR\.Trace(?:\.rev)?\.pdf$/i.test(row.name)).length, 6);
+  assert.equal(catalog.some((row) => /Portfolio with Embedded Report/i.test(row.name)), false);
 });

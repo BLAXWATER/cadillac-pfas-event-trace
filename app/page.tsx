@@ -26,6 +26,8 @@ import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
 import ippAudit from "./ipp-audit.json";
 import ippDocuments from "./ipp-documents.json";
+import labAudit from "./lab-audit.json";
+import labDocuments from "./lab-documents.json";
 import npdesAudit from "./npdes-audit.json";
 import npdesDocuments from "./npdes-documents.json";
 import pfasAudit from "./pfas-audit.json";
@@ -1120,6 +1122,8 @@ export default function Home() {
   const [pfasType, setPfasType] = useState("All PFAS records");
   const [biosolidsQuery, setBiosolidsQuery] = useState("");
   const [biosolidsType, setBiosolidsType] = useState("All biosolids records");
+  const [labQuery, setLabQuery] = useState("");
+  const [labType, setLabType] = useState("All laboratory records");
   const [complianceQuery, setComplianceQuery] = useState("");
   const [complianceType, setComplianceType] = useState("All compliance records");
   const [wexfordQuery, setWexfordQuery] = useState("");
@@ -1170,6 +1174,13 @@ export default function Home() {
   const filteredBiosolidsDocuments = biosolidsDocuments.filter((document) => {
     const matchesType = biosolidsType === "All biosolids records" || document.type === biosolidsType;
     const matchesQuery = !normalizedBiosolidsQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedBiosolidsQuery);
+    return matchesType && matchesQuery;
+  });
+  const labTypes = ["All laboratory records", ...Array.from(new Set(labDocuments.map((document) => document.type)))];
+  const normalizedLabQuery = labQuery.trim().toLowerCase();
+  const filteredLabDocuments = labDocuments.filter((document) => {
+    const matchesType = labType === "All laboratory records" || document.type === labType;
+    const matchesQuery = !normalizedLabQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedLabQuery);
     return matchesType && matchesQuery;
   });
   const complianceTypes = ["All compliance records", ...Array.from(new Set(complianceDocuments.map((document) => document.type)))];
@@ -1442,6 +1453,41 @@ export default function Home() {
             ))}
           </div>
           {filteredBiosolidsDocuments.length === 0 && <p className="document-empty">No biosolids or land-application records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="lab-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 06 · LAB RESULTS &amp; SAMPLING · VERIFIED AUGUST 27, 2026</p><h2 id="lab-library-title">Search {labDocuments.length} newly verified laboratory records</h2></div>
+            <p>This category preserves analytical reports, whole-effluent-toxicity studies, chain-of-custody and field sheets, exceedance records, method reviews, mercury monitoring, and biosolids or pathogen results. Similar templates remain separate when the monitoring date, sample, analyte, method, revision or reported result differs.</p>
+          </div>
+          <div className="reference-summary" aria-label="Laboratory results and sampling archive audit summary">
+            <div><FileText /><span><strong>{labAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><CheckCircle2 /><span><strong>{labAudit.stats.existingRecordsReused}</strong> existing records reused</span></div>
+            <div><FileSearch /><span><strong>{labAudit.stats.duplicateCopiesSuppressed}</strong> actual duplicates suppressed</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 06 duplicate, metadata, OCR and revision decisions</summary>
+            <div className="audit-panel">
+              <p>{labAudit.methods.join(" · ")}</p>
+              <ul>{labAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search laboratory results and sampling records</span><input value={labQuery} onChange={(event) => setLabQuery(event.target.value)} placeholder="Search filename, year, analyte, laboratory, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter laboratory and sampling records by type</span><select value={labType} onChange={(event) => setLabType(event.target.value)}>{labTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredLabDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredLabDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredLabDocuments.length === 0 && <p className="document-empty">No laboratory or sampling records match this search.</p>}
         </section>
 
         <section className="document-library permit-library" aria-labelledby="wexford-library-title">

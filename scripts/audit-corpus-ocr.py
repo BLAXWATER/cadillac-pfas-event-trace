@@ -62,6 +62,27 @@ def load_catalogs() -> list[dict]:
     return rows
 
 
+def load_source_records(source_dir: Path) -> list[dict]:
+    rows: list[dict] = []
+    for index, source_path in enumerate(sorted(path for path in source_dir.rglob("*") if path.is_file()), 1):
+        payload = source_path.read_bytes()
+        digest = sha256_bytes(payload)
+        declared_format = source_path.suffix.lstrip(".").upper() or "UNKNOWN"
+        rows.append({
+            "catalog": "source-category",
+            "id": f"source-{index:03d}-{digest[:12]}",
+            "name": source_path.name,
+            "url": str(source_path),
+            "source_path": str(source_path),
+            "format": declared_format,
+            "format_inferred": declared_format,
+            "pages": None,
+            "size": len(payload),
+            "sha256": digest,
+        })
+    return rows
+
+
 def github_blob_spec(url: str) -> tuple[str, str] | None:
     parsed = urllib.parse.urlparse(url)
     if parsed.netloc.lower() != "github.com":
@@ -132,6 +153,10 @@ def commit_containing_blob(path: str, object_id: str) -> str:
 
 
 def read_record_bytes(record: dict) -> tuple[bytes, str]:
+    source_path = record.get("source_path")
+    if source_path:
+        path = Path(str(source_path))
+        return path.read_bytes(), str(path)
     url = str(record.get("url") or "")
     if url.startswith("/"):
         path = ROOT / "public" / Path(url.lstrip("/"))
@@ -195,12 +220,18 @@ def inventory_record(record: dict) -> dict:
         if fmt == "PDF":
             pdf = pdfium.PdfDocument(payload)
             lengths, _ = pdf_text_lengths(pdf)
+            metadata = {
+                str(key): str(value)
+                for key, value in (pdf.get_metadata_dict() or {}).items()
+                if value not in (None, "")
+            }
             row.update({
                 "actual_pages": len(pdf),
                 "page_count_valid": record.get("pages") in (None, len(pdf)),
                 "embedded_text_lengths": lengths,
                 "embedded_text_pages": sum(length >= 40 for length in lengths),
                 "ocr_required_pages": sum(length < 40 for length in lengths),
+                "pdf_metadata": metadata,
             })
             pdf.close()
         elif fmt in {"PNG", "JPG", "JPEG"}:
@@ -611,14 +642,27 @@ def run_full(records: list[dict], inventory_payload: dict, workers: int) -> dict
 
 
 def main() -> None:
+    global CACHE_ROOT, INVENTORY_PATH, DETAIL_PATH, SUMMARY_PATH
     parser = argparse.ArgumentParser(description="Audit every published corpus record and OCR image-only PDF pages.")
     parser.add_argument("--inventory-only", action="store_true")
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--refresh-inventory", action="store_true")
     parser.add_argument("--render-manual-review", action="store_true")
     parser.add_argument("--repair-stale-github-urls", action="store_true")
+    parser.add_argument("--source-dir", type=Path)
+    parser.add_argument("--cache-name", default="source-category")
     args = parser.parse_args()
-    records = load_catalogs()
+    if args.source_dir:
+        source_dir = args.source_dir.resolve()
+        if not source_dir.is_dir():
+            raise FileNotFoundError(source_dir)
+        CACHE_ROOT = WORK_ROOT / f"{args.cache_name}-ocr-cache"
+        INVENTORY_PATH = CACHE_ROOT / "inventory.json"
+        DETAIL_PATH = CACHE_ROOT / "ocr-detail.json"
+        SUMMARY_PATH = CACHE_ROOT / "ocr-audit.json"
+        records = load_source_records(source_dir)
+    else:
+        records = load_catalogs()
     if args.render_manual_review:
         render_manual_review(records)
         return

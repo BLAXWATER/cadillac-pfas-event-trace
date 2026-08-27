@@ -118,7 +118,7 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .year-marker small { grid-column: 3; color: #71838f; font-size: 12.1px; text-transform: uppercase; letter-spacing: .09em; }
 .trace-row { --trace-color: var(--primary); display: grid; grid-template-columns: 182px 54px minmax(0, 1fr); gap: 0 18px; align-items: stretch; }
 .trace-row[data-kind="regulatory"] { --trace-color: #62a9ff; }
-.trace-row[data-kind="sampling"] { --trace-color: #b582ff; }
+.trace-row[data-kind="sampling"] { --trace-color: #ffe45c; }
 .trace-row[data-kind="compliance"] { --trace-color: #ff6570; }
 .trace-row[data-kind="receptor"] { --trace-color: #ff8a3d; }
 .trace-row[data-kind="gap"] { --trace-color: #ffbf47; }

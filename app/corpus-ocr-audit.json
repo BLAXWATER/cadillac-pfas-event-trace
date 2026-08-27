@@ -1,0 +1,293 @@
+{
+  "method": [
+    "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
+    "Opened every PDF and verified its actual page count against the catalog.",
+    "Read embedded text from every PDF page; OCR was applied to every page with fewer than 40 normalized embedded characters.",
+    "Rendered every PDF page and image to create sequence-preserving visual fingerprints.",
+    "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
+  ],
+  "stats": {
+    "catalogRecords": 1086,
+    "pdfRecords": 971,
+    "pdfPages": 10872,
+    "imageRecords": 2,
+    "embeddedTextPages": 8891,
+    "ocrPages": 1983,
+    "ocrPagesWithText": 1723,
+    "manualReviewPages": 95,
+    "hashFailures": 0,
+    "unreadableRecords": 0,
+    "pageCountFailures": 0,
+    "exactHashDuplicateGroups": 0,
+    "renderIdenticalByteDifferentGroups": 0,
+    "normalizedTextCandidateGroups": 0
+  },
+  "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
+  "manualReviewResolution": {
+    "status": "visually-verified",
+    "pagesReviewed": 95,
+    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
+  },
+  "manualReview": [
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "089-3bbe404e48f4",
+      "name": "21n08w30-AB01 (2) ~2.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/089-3bbe404e48f4.pdf",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "108-aeb4f2d2de39",
+      "name": "220908.biosolids.HML.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/108-aeb4f2d2de39.pdf",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "125-9b7cfa8b1334",
+      "name": "Cadillac surface application 2014-2.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/125-9b7cfa8b1334.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "126-145ac35a8229",
+      "name": "Cadillac surface application 2014.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/126-145ac35a8229.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "175-c3457e14d4d0",
+      "name": "IMG951506.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/175-c3457e14d4d0.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "176-5d11e689db07",
+      "name": "IMG_0011-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/176-5d11e689db07.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "177-32a9d5883452",
+      "name": "IMG_0012-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/177-32a9d5883452.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "178-e0e5e6de55a6",
+      "name": "IMG_0016-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/178-e0e5e6de55a6.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "179-7ff390a44b10",
+      "name": "IMG_0017-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/179-7ff390a44b10.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "180-88b562bd4225",
+      "name": "IMG_0019-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/180-88b562bd4225.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "181-0effa35abae8",
+      "name": "IMG_0021-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/181-0effa35abae8.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "182-602c5ea5d799",
+      "name": "IMG_0022-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/182-602c5ea5d799.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "183-6c4973121529",
+      "name": "IMG_0024-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/183-6c4973121529.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "184-81f649f9dce1",
+      "name": "IMG_0025-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/184-81f649f9dce1.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "185-2905eba4031b",
+      "name": "IMG_0026-cas.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/185-2905eba4031b.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "biosolids-documents.json",
+      "id": "196-500a75e97b1b",
+      "name": "TVS Sludge data with June 2019 - CS.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/196-500a75e97b1b.pdf",
+      "pages": [
+        2,
+        4
+      ]
+    },
+    {
+      "catalog": "lab-documents.json",
+      "id": "lab-073-baec26cc8733",
+      "name": "Docs from WWTP.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/5be18df044489dcea83c7c3154f83ca047b6e5cb/public/lab-docs/073-baec26cc8733.pdf",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "catalog": "npdes-documents.json",
+      "id": "038-8191c7e18aac",
+      "name": "Cadillac WWTP IPP 2011.pdf",
+      "url": "/npdes-docs/038-8191c7e18aac.pdf",
+      "pages": [
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "001-d8496c7348a6",
+      "name": "Flood Plain Management Study — Clam River, Wexford County, Michigan.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/006-d8496c7348a6.pdf",
+      "pages": [
+        2,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        43,
+        44,
+        62,
+        64,
+        66,
+        68,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        82,
+        84,
+        86,
+        88,
+        90,
+        92,
+        94,
+        96,
+        98,
+        100,
+        101,
+        102,
+        104,
+        105,
+        106,
+        108,
+        110,
+        112,
+        113,
+        114,
+        116,
+        118,
+        120,
+        121,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        137,
+        138,
+        140,
+        142,
+        144,
+        145,
+        146,
+        148,
+        149
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "010-1aba682de0b8",
+      "name": "Council Packet 7-20-26.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/010-1aba682de0b8.pdf",
+      "pages": [
+        12
+      ]
+    }
+  ],
+  "duplicateCandidates": {
+    "exact_hash_groups": [],
+    "render_identical_byte_different_groups": [],
+    "normalized_text_candidate_groups": []
+  }
+}

@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
@@ -15,6 +16,15 @@ async function loadCatalogs() {
     name,
     rows: JSON.parse(await readFile(path.join(appDirectory, name), "utf8")),
   })));
+}
+
+async function walkFiles(directory) {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const nested = await Promise.all(entries.map(async (entry) => {
+    const target = path.join(directory, entry.name);
+    return entry.isDirectory() ? walkFiles(target) : [target];
+  }));
+  return nested.flat();
 }
 
 test("catalog records are unique and source metadata matches local files", async () => {
@@ -60,6 +70,30 @@ test("catalog records are unique and source metadata matches local files", async
   assert.equal(externalFiles, 561);
 });
 
+test("every pinned GitHub source resolves to its recorded repository blob", async () => {
+  const catalogs = await loadCatalogs();
+  const specs = catalogs.flatMap((catalog) => catalog.rows)
+    .filter((row) => row.url.startsWith("https://github.com/"))
+    .map((row) => {
+      const match = new URL(row.url).pathname.match(/^\/cazey43\/cadillac-pfas-event-trace\/blob\/([0-9a-f]{40})\/(.+)$/);
+      assert.ok(match, `malformed pinned GitHub source: ${row.url}`);
+      return `${match[1]}:${decodeURIComponent(match[2])}`;
+    });
+
+  const result = spawnSync("git", ["cat-file", "--batch-check"], {
+    cwd: root,
+    encoding: "utf8",
+    input: `${specs.join("\n")}\n`,
+  });
+  assert.equal(result.status, 0, result.stderr);
+  const lines = result.stdout.trim().split(/\r?\n/);
+  assert.equal(lines.length, specs.length);
+  for (const line of lines) {
+    assert.doesNotMatch(line, / missing$/, `unresolved archived source: ${line}`);
+    assert.match(line, / blob \d+$/, `archived source is not a blob: ${line}`);
+  }
+});
+
 test("timeline source and preview assets are present", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   assert.doesNotMatch(source, /Original file not loaded/);
@@ -78,6 +112,36 @@ test("timeline source and preview assets are present", async () => {
   }
 
   assert.equal(helperReferences.length, 17);
+});
+
+test("corpus OCR audit covers every record and leaves no verified duplicate", async () => {
+  const catalogs = await loadCatalogs();
+  const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
+
+  assert.equal(audit.stats.catalogRecords, recordCount);
+  assert.equal(audit.stats.pdfRecords, 971);
+  assert.equal(audit.stats.pdfPages, 10872);
+  assert.equal(audit.stats.imageRecords, 2);
+  assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.exactHashDuplicateGroups, 0);
+  assert.equal(audit.stats.renderIdenticalByteDifferentGroups, 0);
+  assert.equal(audit.manualReviewResolution.status, "visually-verified");
+  assert.equal(audit.manualReviewResolution.pagesReviewed, audit.stats.manualReviewPages);
+});
+
+test("local public assets contain no byte-identical redundant copies", async () => {
+  const files = await walkFiles(publicDirectory);
+  const byHash = new Map();
+  for (const file of files) {
+    const source = await readFile(file);
+    const hash = createHash("sha256").update(source).digest("hex");
+    assert.equal(byHash.has(hash), false, `duplicate local assets: ${byHash.get(hash)} and ${file}`);
+    byHash.set(hash, file);
+  }
 });
 
 test("PFAS archive audit and repaired J19915 source remain consistent", async () => {

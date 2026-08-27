@@ -31,5 +31,3 @@ for pdf in "$docs_dir"/*.pdf; do
   stem="$(basename "$pdf" .pdf)"
   pdftoppm -f 1 -singlefile -jpeg -jpegopt quality=78 -r 105 "$pdf" "$preview_dir/$stem" >/dev/null 2>&1
 done
-
-cp -a "$docs_dir/2025-egle-work-order-2509147-page.png" "$preview_dir/2025-egle-work-order-2509147-page.png"

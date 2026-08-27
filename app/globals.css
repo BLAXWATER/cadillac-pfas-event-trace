@@ -79,12 +79,30 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .integrity-note strong { font-size: 14.3px; text-transform: uppercase; letter-spacing: .08em; }
 .integrity-note span { color: #9eb0bd; font-size: 14.3px; line-height: 1.55; }
 
-.path-strip { display: grid; grid-template-columns: 1fr 32px 1fr 32px 1fr 32px 1fr; gap: 8px; align-items: center; margin: 28px 0 78px; padding: 18px; border: 1px solid var(--border); background: rgba(14, 20, 28, .82); }
+.path-strip { display: grid; grid-template-columns: 1fr 32px 1fr 32px 1fr 32px 1fr; gap: 8px; align-items: center; margin: 28px 0 28px; padding: 18px; border: 1px solid var(--border); background: rgba(14, 20, 28, .82); }
 .path-strip > div { min-width: 0; display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 2px 11px; align-items: center; }
 .path-strip > div svg { grid-row: 1 / span 2; color: var(--primary); }
 .path-strip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 650; }
 .path-strip small { color: var(--muted-foreground); }
 .path-strip > svg { justify-self: center; color: #526371; transform: rotate(-90deg); }
+
+.global-search-panel { margin: 0 0 78px; padding: 26px; border: 1px solid rgba(38, 230, 247, .42); background: linear-gradient(145deg, rgba(16, 34, 43, .96), rgba(8, 14, 20, .98)); box-shadow: inset 3px 0 0 var(--primary); scroll-margin-top: 18px; }
+.global-search-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr); gap: 34px; align-items: end; }
+.global-search-heading h2 { margin: 0; font-size: clamp(28.6px, 4vw, 44px); line-height: 1.05; letter-spacing: -.035em; }
+.global-search-heading > p { margin: 0; color: #98acb8; line-height: 1.6; }
+.global-search-input { min-height: 58px; display: flex; align-items: center; gap: 12px; margin-top: 22px; padding: 0 18px; border: 1px solid #3c6672; background: #071018; box-shadow: 0 0 0 1px rgba(38, 230, 247, .05); }
+.global-search-input:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(38, 230, 247, .12); }
+.global-search-input svg { flex: 0 0 auto; width: 21px; color: var(--primary); }
+.global-search-input input { width: 100%; min-height: 56px; border: 0; outline: 0; background: transparent; color: #f1fbfd; font-size: 17.6px; }
+.global-search-input input::placeholder { color: #6f8490; }
+.global-search-results { margin-top: 18px; }
+.global-search-summary { margin: 0 0 12px; color: #8fa3ae; font-family: var(--font-mono); font-size: 12.1px; }
+.global-search-summary strong { color: var(--primary); font-size: 17.6px; }
+.global-search-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-height: 640px; padding-right: 6px; overflow: auto; }
+.global-search-card { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px 16px; align-items: start; padding: 17px; border: 1px solid #29414c; background: linear-gradient(135deg, #101d26, #091118); }
+.global-search-card h3 { grid-column: 1; margin: 0; color: #d3e3e9; font-size: 14.3px; line-height: 1.45; overflow-wrap: anywhere; }
+.global-search-card > p { grid-column: 1; margin: 0; color: #91a5b0; font-size: 12.1px; line-height: 1.5; }
+.global-search-card > a { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
 
 .timeframe-model { margin: 0 0 78px; padding: 28px; border: 1px solid #263641; background: linear-gradient(145deg, rgba(18, 29, 39, .94), rgba(9, 14, 20, .98)); }
 .timeframe-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: end; }
@@ -240,9 +258,13 @@ footer p { margin: 0; }
 
 @media (max-width: 760px) {
   .site-shell { width: min(100% - 22px, 1180px); padding-top: 24px; }
-  .trace-header, .trace-intro, .timeframe-heading, .evidence-heading { grid-template-columns: 1fr; gap: 24px; }
-  .path-strip { grid-template-columns: 1fr; margin-bottom: 54px; }
+  .trace-header, .trace-intro, .timeframe-heading, .evidence-heading, .global-search-heading { grid-template-columns: 1fr; gap: 24px; }
+  .path-strip { grid-template-columns: 1fr; margin-bottom: 18px; }
   .path-strip > svg { transform: none; }
+  .global-search-panel { margin-bottom: 54px; padding: 22px 16px; }
+  .global-search-grid { grid-template-columns: 1fr; max-height: 680px; }
+  .global-search-card { grid-template-columns: 1fr; }
+  .global-search-card > a { grid-column: 1; grid-row: auto; justify-self: start; }
   .timeframe-model { padding: 20px 16px; margin-bottom: 54px; }
   .timeframe-counts { justify-content: flex-start; }
   .hierarchy-steps { grid-template-columns: 1fr; }

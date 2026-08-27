@@ -16,6 +16,8 @@ import {
   Search,
   Waves,
 } from "lucide-react";
+import complianceAudit from "./compliance-audit.json";
+import complianceDocuments from "./compliance-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
 import npdesAudit from "./npdes-audit.json";
@@ -44,6 +46,7 @@ type Source = {
   url?: string;
   preview?: string;
   pages?: number;
+  page?: number;
   format: "PDF" | "PNG";
   role: "Primary source" | "Source page" | "Referenced—file missing";
   result: string;
@@ -76,9 +79,10 @@ const pdf = (
   pages: number,
   result: string,
   clock: Source["clock"],
+  url?: string,
 ): Source => ({
   name,
-  url: `/docs/${slug}.pdf`,
+  url: url ?? `/docs/${slug}.pdf`,
   preview: `/previews/${slug}.jpg`,
   pages,
   format: "PDF",
@@ -138,19 +142,29 @@ const events: Event[] = [
     year: "2016",
     date: "2016-01-12",
     isoDate: "2016-01-12",
-    time: noTime,
-    timeBasis: "Date carried in the cited filename",
+    time: "09:22 · zone not stated",
+    timeBasis: "Notification-call time stated in the letter",
     phase: "Reported release",
-    kind: "gap",
-    category: "09 · Correspondence",
-    title: "Spill notification referenced; original file not loaded",
-    finding: "The compiled evidence set cites a leachate offloading spill at the WWTP yard. The exact filename is known, but the original is absent from the current 101-document source folder.",
-    significance: "Preserved as an acquisition target; no reconstructed document is substituted.",
-    sources: [{ name: "Spill notification 1-12-16.pdf", format: "PDF", role: "Referenced—file missing", result: "Exact cited filename retained; the original file is still required.", clock: {
-      eventStamp: "2016-01-12 · time not stated",
-      basis: "Date carried in cited filename",
-      note: "The original file is absent, so embedded creation and modification timestamps cannot be verified.",
-    } }],
+    kind: "operation",
+    category: "13 · Compliance & enforcement",
+    title: "Leachate spill reported during tanker offloading",
+    finding: "The City reported that a leachate hose pulled from the receiving point during offloading. The discharge had ended before staff arrived; leachate ran along the asphalt and ponded at a lower elevation. Snow berms, sandbags and packed snow protected the storm drains, and contaminated snow and soil were removed to the WWTP drying beds. The tanker capacity was 10,000 gallons, but the letter states only that less than that amount spilled and gives no measured volume.",
+    significance: "Provides the original occurrence time, response, cleanup and prevention record for the previously unresolved 2016 release event.",
+    sources: [{
+      name: "2016-01-12 spill-notification letter · chronological compilation PDF p. 36",
+      url: "/compliance-docs/001-32f575fe6fc6.pdf",
+      preview: "/compliance-previews/2016-01-12-spill-letter.png",
+      pages: 50,
+      page: 36,
+      format: "PDF",
+      role: "Source page",
+      result: "Signed City letter to Jamie Wade describing the leachate release, containment, cleanup and corrective action; received by the Cadillac District Office on January 19, 2016.",
+      clock: {
+        eventStamp: "2016-01-12 09:22 · zone not stated",
+        basis: "Notification-call time stated in the signed letter",
+        note: "The hosted source is a 2026 chronological compilation of 48 compliance-file source pages. The spill letter itself is PDF page 36 and retains its January 19, 2016 agency receipt stamp.",
+      },
+    }],
   },
   {
     year: "2017",
@@ -169,7 +183,7 @@ const events: Event[] = [
       basis: "Portal submission timestamp rendered on every page",
       created: "2017-04-03 14:40:49 CDT",
       note: "The rendered submission time and embedded PDF creation time differ by one hour; both are preserved without reconciliation.",
-    })],
+    }, "/npdes-docs/080-6a540cadcdc6.pdf")],
   },
   {
     year: "2018",
@@ -491,14 +505,6 @@ const meta: Record<Kind, { label: string; icon: typeof Factory }> = {
 
 const evidenceRequests = [
   {
-    priority: "Required original",
-    block: "2016 reported release",
-    category: "09 · Correspondence & letters",
-    missing: "Spill notification 1-12-16.pdf",
-    completes: "Confirms the reported occurrence time, release location, quantity, notifications, response and cleanup record.",
-    provide: "The exact original PDF; related incident report, photographs, cleanup log or email chain if maintained separately.",
-  },
-  {
     priority: "Complete package",
     block: "2025 receptor sampling",
     category: "04 / 06 / 13 · Monitoring, lab, wells",
@@ -585,6 +591,8 @@ export default function Home() {
   const [documentType, setDocumentType] = useState("All records");
   const [permitQuery, setPermitQuery] = useState("");
   const [permitType, setPermitType] = useState("All permit records");
+  const [complianceQuery, setComplianceQuery] = useState("");
+  const [complianceType, setComplianceType] = useState("All compliance records");
   const [referenceQuery, setReferenceQuery] = useState("");
   const [referenceType, setReferenceType] = useState("All datasets");
   const groups = Array.from(events.reduce<Map<string, Event[]>>((acc, event) => {
@@ -606,6 +614,13 @@ export default function Home() {
   const filteredPermitDocuments = npdesDocuments.filter((document) => {
     const matchesType = permitType === "All permit records" || document.type === permitType;
     const matchesQuery = !normalizedPermitQuery || `${document.name} ${document.year} ${document.type} ${document.format}`.toLowerCase().includes(normalizedPermitQuery);
+    return matchesType && matchesQuery;
+  });
+  const complianceTypes = ["All compliance records", ...Array.from(new Set(complianceDocuments.map((document) => document.type)))];
+  const normalizedComplianceQuery = complianceQuery.trim().toLowerCase();
+  const filteredComplianceDocuments = complianceDocuments.filter((document) => {
+    const matchesType = complianceType === "All compliance records" || document.type === complianceType;
+    const matchesQuery = !normalizedComplianceQuery || `${document.name} ${document.year} ${document.type}`.toLowerCase().includes(normalizedComplianceQuery);
     return matchesType && matchesQuery;
   });
   const referenceTypes = ["All datasets", ...Array.from(new Set(referenceDocuments.map((document) => document.type)))];
@@ -754,6 +769,40 @@ export default function Home() {
           {filteredPermitDocuments.length === 0 && <p className="document-empty">No permit records match this search.</p>}
         </section>
 
+        <section className="document-library permit-library" aria-labelledby="compliance-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 13 · COMPLIANCE &amp; ENFORCEMENT</p><h2 id="compliance-library-title">Search {complianceDocuments.length} verified compliance records</h2></div>
+            <p>The supplied compliance-file compilation and source-order extract are preserved as separate records. The collection includes inspection material, violation response records and significant noncompliance (SNC) documentation. Only the byte-identical second copy of the 16-page extract is suppressed.</p>
+          </div>
+          <div className="reference-summary" aria-label="Compliance and enforcement archive audit summary">
+            <div><FileText /><span><strong>{complianceAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
+            <div><CheckCircle2 /><span><strong>{complianceAudit.stats.exactDuplicateCopiesSuppressed}</strong> exact duplicate excluded</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(complianceAudit.stats.publishedBytes)}</strong> published</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 13 duplicate and overlap decisions</summary>
+            <div className="audit-panel">
+              <p>{complianceAudit.methods.join(" · ")}</p>
+              <ul>{complianceAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search compliance records</span><input value={complianceQuery} onChange={(event) => setComplianceQuery(event.target.value)} placeholder="Search filename, year or compliance record type" /></label>
+            <label className="document-filter"><span className="sr-only">Filter compliance records by type</span><select value={complianceType} onChange={(event) => setComplianceType(event.target.value)}>{complianceTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredComplianceDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredComplianceDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredComplianceDocuments.length === 0 && <p className="document-empty">No compliance records match this search.</p>}
+        </section>
+
         <section className="document-library reference-library" aria-labelledby="reference-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 00 · REFERENCE DATA</p><h2 id="reference-library-title">Search 106 verified datasets</h2></div>
@@ -824,7 +873,7 @@ export default function Home() {
                 <div><DialogTitle>{selected.name}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <Button asChild variant="outline" size="sm"><a href={selected.url} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
               </DialogHeader>
-              <div className="document-frame">{selected.format === "PDF" ? <iframe title={`Full document: ${selected.name}`} src={`${selected.url}#view=FitH&toolbar=1`} /> : <img src={selected.url} alt={`Full source page: ${selected.name}`} />}</div>
+              <div className="document-frame">{selected.format === "PDF" ? <iframe title={`Full document: ${selected.name}`} src={`${selected.url}#page=${selected.page ?? 1}&view=FitH&toolbar=1`} /> : <img src={selected.url} alt={`Full source page: ${selected.name}`} />}</div>
             </>}
           </DialogContent>
         </Dialog>

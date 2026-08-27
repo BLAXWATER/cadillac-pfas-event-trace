@@ -13,8 +13,9 @@
     "zipPdfEntriesReviewed": 1008,
     "repeatedLooseCopiesSuppressed": 234,
     "metadataOnlyEquivalentCopiesSuppressed": 1,
+    "crossCategoryExactCopiesSuppressed": 6,
     "newDistinctRecords": 5,
-    "finalDistinctRecords": 270
+    "finalDistinctRecords": 264
   },
   "batches": [
     {
@@ -37,6 +38,13 @@
       "added": 5,
       "duplicates": 234,
       "note": "Consolidated root and year folders; both ZIP archives repeated all 504 loose PDFs. Clean source filenames now replace prior duplicate-labelled display names where content matched."
+    },
+    {
+      "label": "Cross-category reconciliation",
+      "supplied": 6,
+      "added": 0,
+      "duplicates": 6,
+      "note": "Six exact PDF copies also present in Category 02 were removed from the Category 01 display; one canonical permit-record copy remains available for each."
     }
   ]
 }

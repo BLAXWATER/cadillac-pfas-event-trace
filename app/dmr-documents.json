@@ -40,16 +40,6 @@
     "sha256": "080148d335509f04f7c17d3b300bde65d3337e936b63b3783ca47a2d3c4e5b16"
   },
   {
-    "id": "005-8c90a77c94c4",
-    "name": "2013-05-21__103605179192073784__Fact Sheet.doc.pdf",
-    "url": "/dmr-docs/005-8c90a77c94c4.pdf",
-    "year": "2013",
-    "type": "Fact sheet",
-    "pages": 3,
-    "size": 148677,
-    "sha256": "8c90a77c94c4c47d904a0a76068fce14f071a6f27aaf4abb38476e6742711607"
-  },
-  {
     "id": "006-0020874aad97",
     "name": "2013-08-09 - EPA DMR-QA Study 33 - NPDES Permittee Data Report Form - Cadillac WWTP MI0020257 (Amy Vail).pdf",
     "url": "/dmr-docs/006-0020874aad97.pdf",
@@ -68,16 +58,6 @@
     "pages": 26,
     "size": 1059234,
     "sha256": "32bc7f72220a9676e1cc2883346c6d97df624082d33fb1c61aae28f10feea949"
-  },
-  {
-    "id": "008-4208a010fbb2",
-    "name": "2015-07-08__-8459938767715139506__Fact Sheet.doc.pdf",
-    "url": "/dmr-docs/008-4208a010fbb2.pdf",
-    "year": "2015",
-    "type": "Fact sheet",
-    "pages": 3,
-    "size": 149154,
-    "sha256": "4208a010fbb2ba933452c3c5fbc3a3ca11777d2ce6c45c37bbc398bf81eaa93c"
   },
   {
     "id": "009-8593a5392d3c",
@@ -1860,36 +1840,6 @@
     "sha256": "3e877de989592b59f5600b2c64882b684b0858f04231099f8ad00c578a6c0565"
   },
   {
-    "id": "187-a0347eae1366",
-    "name": "Fact Sheet-DRAFT_Cadillac WWTP.pdf",
-    "url": "/dmr-docs/187-a0347eae1366.pdf",
-    "year": "Undated",
-    "type": "Fact sheet",
-    "pages": 3,
-    "size": 263820,
-    "sha256": "a0347eae1366e621a4c9b8d250db86e6b9200b9d0517314155187c96a742a3d5"
-  },
-  {
-    "id": "188-62419d534e4a",
-    "name": "Fact Sheet.pdf",
-    "url": "/dmr-docs/188-62419d534e4a.pdf",
-    "year": "Undated",
-    "type": "Fact sheet",
-    "pages": 3,
-    "size": 167228,
-    "sha256": "62419d534e4a3b5e9c7ab23a87f74c28947d9c377e7030f3739474ce74d632da"
-  },
-  {
-    "id": "189-0b7e9c09363e",
-    "name": "Fact Sheet_Cadillac WWTP.pdf",
-    "url": "/dmr-docs/189-0b7e9c09363e.pdf",
-    "year": "Undated",
-    "type": "Fact sheet",
-    "pages": 3,
-    "size": 940617,
-    "sha256": "0b7e9c09363ef4b4e033aea714a6f28f067450885db25a15cb25fafbaaa3ac57"
-  },
-  {
     "id": "190-144961b24ab4",
     "name": "MI0020257_2020-10-01_to_2021-09-30_DMR.pdf",
     "url": "/dmr-docs/190-144961b24ab4.pdf",
@@ -2678,16 +2628,6 @@
     "pages": 17,
     "size": 349621,
     "sha256": "a696aeacb3e18f779b82dbd87a27a1defc147b57c097f8689dfdf35934b84b3a"
-  },
-  {
-    "id": "269-e2dbe3db29a7",
-    "name": "QA QC Report_Cadillac WWTP.pdf",
-    "url": "/dmr-docs/269-e2dbe3db29a7.pdf",
-    "year": "Undated",
-    "type": "QA/QC report",
-    "pages": 16,
-    "size": 102407,
-    "sha256": "e2dbe3db29a7938d6b9abeeec16fc44a7d4287f139033ccd00477c5338fabe95"
   },
   {
     "id": "270-583b88829be7",

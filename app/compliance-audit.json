@@ -1,0 +1,31 @@
+{
+  "methods": [
+    "SHA-256 byte comparison",
+    "PDF page-count and file-size comparison",
+    "Normalized searchable-text comparison",
+    "72-DPI grayscale rendered-page comparison",
+    "Document metadata comparison",
+    "Page-level cross-comparison against the chronological compilation"
+  ],
+  "stats": {
+    "sourceFilesReviewed": 3,
+    "exactDuplicateCopiesSuppressed": 1,
+    "overlappingDistinctRecordsRetained": 2,
+    "finalDistinctRecords": 2,
+    "publishedBytes": 7303212
+  },
+  "decisions": [
+    {
+      "name": "Compliance_File_Pages_025-040_searchable.pdf",
+      "reason": "Byte-for-byte identical to the dated 06-26-2015 copy; the undated duplicate filename is excluded."
+    },
+    {
+      "name": "Compliance_File_Pages_001-048_CHRONOLOGICAL.pdf",
+      "reason": "Retained as a distinct 50-page compilation with two index pages and 48 source pages arranged chronologically."
+    },
+    {
+      "name": "06-26-2015 - Compliance_File_Pages_025-040_searchable.pdf",
+      "reason": "Retained as a distinct 16-page source-order extract. Every page also appears in the larger compilation, but the excerpt is not a full-file duplicate and preserves the source-page grouping."
+    }
+  ]
+}

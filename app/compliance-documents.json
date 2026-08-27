@@ -1,0 +1,24 @@
+[
+  {
+    "id": "001-32f575fe6fc6",
+    "name": "Compliance_File_Pages_001-048_CHRONOLOGICAL.pdf",
+    "url": "/compliance-docs/001-32f575fe6fc6.pdf",
+    "year": "2014–2016",
+    "type": "Chronological compilation",
+    "format": "PDF",
+    "pages": 50,
+    "size": 5477481,
+    "sha256": "32f575fe6fc6e947c900d74adf9810149453afa99253271aa8fef7e8dd9dbc42"
+  },
+  {
+    "id": "002-d466c6f2beeb",
+    "name": "06-26-2015 - Compliance_File_Pages_025-040_searchable.pdf",
+    "url": "/compliance-docs/002-d466c6f2beeb.pdf",
+    "year": "2015",
+    "type": "Searchable source extract",
+    "format": "PDF",
+    "pages": 16,
+    "size": 1825731,
+    "sha256": "d466c6f2beeb7ac16aed7b5edcdf5c2f71a7bc09922b222c7341b8934c3bb307"
+  }
+]

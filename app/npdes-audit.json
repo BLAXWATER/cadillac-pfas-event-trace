@@ -30,6 +30,10 @@
     {
       "name": "4 close document pairs",
       "reason": "High textual similarity but meaningful text or page-render differences; all are retained as distinct revisions."
+    },
+    {
+      "name": "6 Category 01 / Category 02 exact matches",
+      "reason": "One canonical Category 02 copy is retained for each permit fact sheet or QA/QC record; the six byte-identical Category 01 copies are suppressed site-wide."
     }
   ]
 }

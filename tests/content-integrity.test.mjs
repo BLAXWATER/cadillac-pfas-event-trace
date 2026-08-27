@@ -114,6 +114,21 @@ test("timeline source and preview assets are present", async () => {
   assert.equal(helperReferences.length, 17);
 });
 
+test("site-wide search covers every evidence catalog", async () => {
+  const catalogs = await loadCatalogs();
+  const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+  const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
+
+  assert.equal(recordCount, 1133);
+  assert.match(source, /id="record-search"/);
+  assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
+  assert.match(source, /placeholder="Search all records/);
+  for (const catalog of catalogs) {
+    const variable = catalog.name.replace(/-documents\.json$/, "Documents");
+    assert.match(source, new RegExp(`documents: ${variable}\\b`), `${catalog.name} is missing from the site-wide search`);
+  }
+});
+
 test("corpus OCR audit covers every record and leaves no verified duplicate", async () => {
   const catalogs = await loadCatalogs();
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);

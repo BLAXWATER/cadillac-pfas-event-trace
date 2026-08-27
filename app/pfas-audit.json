@@ -1,0 +1,47 @@
+{
+  "stats": {
+    "suppliedFiles": 91,
+    "finalDistinctRecords": 87,
+    "newDistinctRecords": 80,
+    "existingRecordsReused": 6,
+    "existingRecordReplaced": 1,
+    "duplicateCopiesSuppressed": 4,
+    "ocrReviewedPdfs": 8,
+    "ocrReviewedPages": 30,
+    "publishedBytes": 97516096
+  },
+  "methods": [
+    "SHA-256 comparison within the 91-file category and against every catalog plus timeline source asset",
+    "Normalized extracted-text fingerprints compared against 473 published PDFs",
+    "PDF page counts and embedded creation/modification metadata",
+    "Outlook message body, sent-time and embedded-attachment SHA-256 comparison",
+    "OCR of all 30 pages in eight image-only PDFs, followed by rendered-page review",
+    "Full-page visual comparison of the two J19915 variants"
+  ],
+  "decisions": [
+    {
+      "name": "J19915-1 UDS Level 2 Report",
+      "reason": "The two 22-page files have identical normalized text and matching report metadata. The older copy has cropped and overlapping pages 15-16; the complete reconstructed version replaces it without carrying a duplicate label."
+    },
+    {
+      "name": "Cadillac WWTP - IPP PFAS Interim Report Review messages",
+      "reason": "Three MSG files share the same sent time, sender, recipients and five attachment hashes; two copies are suppressed and the cleanly named native message is retained."
+    },
+    {
+      "name": "FW: Biosolids PFAS - Cadillac",
+      "reason": "The native MSG and seven-page PDF export contain the same email chain and attachment. The original Outlook message is retained and the PDF export is suppressed."
+    },
+    {
+      "name": "Six already represented records",
+      "reason": "Five exact byte matches and one byte-different PDF with identical normalized text already have stable archive links; those links are reused rather than republishing copies."
+    },
+    {
+      "name": "Laboratory report, EDD and QA/QC packages",
+      "reason": "Related files remain separate when their hashes, page structures and content roles differ; report, electronic-data and quality-control records are not mislabeled as duplicates."
+    },
+    {
+      "name": "Context and secondary records",
+      "reason": "Ownership news, public statements, a scientific review and secondary water analysis are retained with explicit context labels so they are not presented as primary Cadillac PFAS measurements."
+    }
+  ]
+}

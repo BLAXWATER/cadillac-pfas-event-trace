@@ -57,7 +57,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 525);
-  assert.equal(externalFiles, 181);
+  assert.equal(externalFiles, 261);
 });
 
 test("timeline source and preview assets are present", async () => {
@@ -78,4 +78,22 @@ test("timeline source and preview assets are present", async () => {
   }
 
   assert.equal(helperReferences.length, 17);
+});
+
+test("PFAS archive audit and repaired J19915 source remain consistent", async () => {
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "pfas-documents.json"), "utf8"));
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "pfas-audit.json"), "utf8"));
+  assert.equal(catalog.length, audit.stats.newDistinctRecords);
+  assert.equal(audit.stats.suppliedFiles, 91);
+  assert.equal(audit.stats.finalDistinctRecords, 87);
+  assert.equal(audit.stats.duplicateCopiesSuppressed, 4);
+  assert.equal(audit.stats.ocrReviewedPages, 30);
+  assert.equal(catalog.some((row) => /PENDING/.test(row.url)), false);
+  assert.equal(catalog.some((row) => /SUPERSEDED|duplicate/i.test(row.name)), false);
+
+  const repairedSource = await readFile(path.join(publicDirectory, "docs", "2019-06-04-j19915-effluent.pdf"));
+  assert.equal(
+    createHash("sha256").update(repairedSource).digest("hex"),
+    "47929ba9f41a9dcd5f3d5d3b9a5d5f63dbb3fcbc5b00dc74e81a0d550e8666fd",
+  );
 });

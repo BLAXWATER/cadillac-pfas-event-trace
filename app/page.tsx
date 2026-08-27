@@ -26,6 +26,8 @@ import ippAudit from "./ipp-audit.json";
 import ippDocuments from "./ipp-documents.json";
 import npdesAudit from "./npdes-audit.json";
 import npdesDocuments from "./npdes-documents.json";
+import pfasAudit from "./pfas-audit.json";
+import pfasDocuments from "./pfas-documents.json";
 import referenceAudit from "./reference-audit.json";
 import referenceDocuments from "./reference-documents.json";
 import supplementalAudit from "./supplemental-audit.json";
@@ -1112,6 +1114,8 @@ export default function Home() {
   const [permitType, setPermitType] = useState("All permit records");
   const [ippQuery, setIppQuery] = useState("");
   const [ippType, setIppType] = useState("All IPP records");
+  const [pfasQuery, setPfasQuery] = useState("");
+  const [pfasType, setPfasType] = useState("All PFAS records");
   const [complianceQuery, setComplianceQuery] = useState("");
   const [complianceType, setComplianceType] = useState("All compliance records");
   const [wexfordQuery, setWexfordQuery] = useState("");
@@ -1148,6 +1152,13 @@ export default function Home() {
   const filteredIppDocuments = ippDocuments.filter((document) => {
     const matchesType = ippType === "All IPP records" || document.type === ippType;
     const matchesQuery = !normalizedIppQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedIppQuery);
+    return matchesType && matchesQuery;
+  });
+  const pfasTypes = ["All PFAS records", ...Array.from(new Set(pfasDocuments.map((document) => document.type)))];
+  const normalizedPfasQuery = pfasQuery.trim().toLowerCase();
+  const filteredPfasDocuments = pfasDocuments.filter((document) => {
+    const matchesType = pfasType === "All PFAS records" || document.type === pfasType;
+    const matchesQuery = !normalizedPfasQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedPfasQuery);
     return matchesType && matchesQuery;
   });
   const complianceTypes = ["All compliance records", ...Array.from(new Set(complianceDocuments.map((document) => document.type)))];
@@ -1350,6 +1361,41 @@ export default function Home() {
             ))}
           </div>
           {filteredIppDocuments.length === 0 && <p className="document-empty">No industrial pretreatment records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="pfas-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">PFAS MONITORING · VERIFIED AUGUST 27, 2026</p><h2 id="pfas-library-title">Search {pfasDocuments.length} verified PFAS records</h2></div>
+            <p>This category preserves effluent and biosolids laboratory reports, electronic data deliverables, QA/QC packages, agency submissions, source-control correspondence and clearly labeled contextual records. Related files remain separate when they carry distinct analytical or evidentiary content.</p>
+          </div>
+          <div className="reference-summary" aria-label="PFAS monitoring archive audit summary">
+            <div><FileText /><span><strong>{pfasAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><CheckCircle2 /><span><strong>{pfasAudit.stats.existingRecordsReused + pfasAudit.stats.existingRecordReplaced}</strong> archive records reused or repaired</span></div>
+            <div><FileSearch /><span><strong>{pfasAudit.stats.duplicateCopiesSuppressed}</strong> duplicate copies suppressed</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review PFAS duplicate, metadata and OCR decisions</summary>
+            <div className="audit-panel">
+              <p>{pfasAudit.methods.join(" · ")}</p>
+              <ul>{pfasAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search PFAS monitoring records</span><input value={pfasQuery} onChange={(event) => setPfasQuery(event.target.value)} placeholder="Search filename, year, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter PFAS monitoring records by type</span><select value={pfasType} onChange={(event) => setPfasType(event.target.value)}>{pfasTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredPfasDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredPfasDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : document.format === "PNG" ? "Open image" : "Download MSG"}{document.format === "MSG" ? <Download /> : <ExternalLink />}</a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredPfasDocuments.length === 0 && <p className="document-empty">No PFAS monitoring records match this search.</p>}
         </section>
 
         <section className="document-library permit-library" aria-labelledby="wexford-library-title">

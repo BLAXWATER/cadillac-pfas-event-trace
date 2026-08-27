@@ -1,0 +1,57 @@
+{
+  "stats": {
+    "suppliedFilesReviewed": 23,
+    "distinctOriginalFiles": 21,
+    "provenanceFiles": 2,
+    "newDistinctRecords": 19,
+    "exactExistingRecordsReused": 4,
+    "duplicateManifestRowsCollapsed": 1,
+    "publishedBytes": 10824849
+  },
+  "methods": [
+    "SHA-256 comparison across all 21 originals, the manifest, the retrieval log and every previously published site asset",
+    "MiEnviro metadata comparison using document IDs, titles, dates, byte counts, hashes, parent events and related-record notes",
+    "PDF magic-byte validation, page counts, metadata and normalized extracted-text comparison",
+    "Rendered visual review of every image-only compliance page, all six map sheets and all 30 lagoon analytical/QA pages",
+    "Draft-versus-final permit comparison by page structure, authorization dates, limits, conditions and attachments",
+    "Provenance separation: the retrieval log records acquisition status but does not substitute for an unavailable original record"
+  ],
+  "decisions": [
+    {
+      "name": "2015-2016_Wexford County Landfill_Leachate Request.pdf",
+      "reason": "Not republished because its SHA-256 hash exactly matches the three-page source already linked from the event trace. The existing source remains available."
+    },
+    {
+      "name": "completed public notice certification form.pdf",
+      "reason": "Not republished because it exactly matches Category 02 record 075. The distinct blank certification form was retained separately."
+    },
+    {
+      "name": "GW Public Notice Document.html",
+      "reason": "Not republished because it exactly matches Category 02 record 076. Magic-byte and PDF-parser checks show that the .html-named source actually contains a valid one-page PDF payload."
+    },
+    {
+      "name": "Construction Permit 4127 · Wexford-County-Landfill.pdf",
+      "reason": "Not republished because it exactly matches Category 02 record 039. The 2024 Operating License 9758 has the same base filename but a different hash, date, page count and legal purpose, so it was retained."
+    },
+    {
+      "name": "lagoon summary.pdf",
+      "reason": "Retained once. Two MiEnviro document IDs in the manifest resolve to the same relative path, byte count and SHA-256 hash; the disk set already contains only one copy."
+    },
+    {
+      "name": "Rule 2210 draft and final authorization",
+      "reason": "Both retained. The draft is 20 pages; the final is 26 pages and adds an issued/effective/expiration clock, final limits and attachments. They are not duplicates."
+    },
+    {
+      "name": "Misnamed .docx and .html sources",
+      "reason": "The two .docx-named records and the .html-named public notice begin with a PDF header and parse as PDFs. Original display names are preserved for provenance; delivery uses the correct .pdf media extension."
+    },
+    {
+      "name": "Scan-only records",
+      "reason": "The compliance scan, six map sheets and 30-page lagoon package were rendered and reviewed page by page. They contain distinct substantive content and were not suppressed."
+    },
+    {
+      "name": "Private preservation delivery",
+      "reason": "The 19 new records are preserved at immutable GitHub commit 1f44c9e90e718f6e130bdfc319be48098d2163e5 in the authorized private repository. Source files on F: were read only and were not renamed, moved or altered."
+    }
+  ]
+}

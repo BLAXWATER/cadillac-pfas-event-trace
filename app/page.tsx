@@ -26,6 +26,8 @@ import npdesAudit from "./npdes-audit.json";
 import npdesDocuments from "./npdes-documents.json";
 import referenceAudit from "./reference-audit.json";
 import referenceDocuments from "./reference-documents.json";
+import wexfordAudit from "./wexford-audit.json";
+import wexfordDocuments from "./wexford-documents.json";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -193,25 +195,6 @@ const events: Event[] = [
     })],
   },
   {
-    year: "2015–2016",
-    date: "2015–2016",
-    time: noTime,
-    timeBasis: "Documented interval; exact day unavailable",
-    phase: "Leachate management",
-    kind: "operation",
-    category: "12 · Landfill & leachate",
-    title: "Landfill leachate request enters the record",
-    finding: "Wexford County Landfill leachate management and disposal arrangements were documented during the continuing WWTP receiving period.",
-    significance: "Connects landfill-generated liquid waste to Cadillac receiving and treatment records.",
-    sources: [pdf("2015-2016_Wexford County Landfill_Leachate Request.pdf", "2015-2016-leachate-request", 3, "Recovered three-page landfill leachate request record.", {
-      eventStamp: "2015–2016 · exact day/time not stated",
-      basis: "Interval stated by source record",
-      created: "2025-03-06 08:29:43 CST",
-      modified: "2025-03-06 08:29:51 CST",
-      note: "These are later digitization timestamps and do not date the underlying leachate request.",
-    })],
-  },
-  {
     year: "2016",
     date: "2016-01-12",
     isoDate: "2016-01-12",
@@ -238,6 +221,83 @@ const events: Event[] = [
         note: "The hosted source is a 2026 chronological compilation of 48 compliance-file source pages. The spill letter itself is PDF page 36 and retains its January 19, 2016 agency receipt stamp.",
       },
     }],
+  },
+  {
+    year: "2016",
+    date: "2016-03-09",
+    isoDate: "2016-03-09",
+    time: noTime,
+    timeBasis: "Request date in the source package",
+    phase: "Leachate management",
+    kind: "operation",
+    category: "12 · Landfill & leachate",
+    title: "Landfill requests one-time groundwater discharge authorization",
+    finding: "The landfill's request package seeks Rule 2210(y) authorization to remove leachate-impacted precipitation from the evaporator lagoon. The package also preserves a November 2, 2015 agency approval letter associated with the earlier handling arrangement.",
+    significance: "Replaces the earlier broad 2015–2016 label with the dated original request and connects the lagoon-management record to the later formal application.",
+    sources: [pdf("2015-2016_Wexford County Landfill_Leachate Request.pdf", "2015-2016-leachate-request", 3, "Three-page scanned request package, retained once because the newly supplied copy exactly matches the source already on the site.", {
+      eventStamp: "2016-03-09 · time not stated",
+      basis: "Request date documented in the source package",
+      created: "2025-03-06 08:29:43 CST",
+      modified: "2025-03-06 08:29:51 CST",
+      note: "The PDF timestamps are later digitization metadata, not the date of the underlying request.",
+    })],
+  },
+  {
+    year: "2016",
+    date: "2016-03-16",
+    isoDate: "2016-03-16T15:31:00",
+    time: "15:31 · zone not stated",
+    timeBasis: "Portal submission timestamp",
+    phase: "Groundwater application",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "Rule 2210(y) application defines the proposed discharge",
+    finding: "Submission 2E2-C5H5-QVVF proposes up to 50,400 gallons per day and 2,000,000 gallons per year, during April through June, using dilution and overland flow to remove impacted water from the evaporator lagoon.",
+    significance: "Fixes the application clock, volume, seasonal window, treatment method and mapped discharge context in the primary portal record.",
+    sources: [pdf("Wexford Landfill Groundwater Discharge Permit Application 2210(y).docx", "2016-03-16-rule-2210-application", 11, "Submitted Rule 2210(y) application with attached map and analytical-record index.", {
+      eventStamp: "2016-03-16 15:31 · zone not stated",
+      basis: "Portal submission timestamp printed in the record",
+      created: "2016-07-12 15:53:11 EDT",
+      note: "Despite its .docx filename, the source contains a valid PDF payload; the later PDF creation date records export, not submission.",
+    }, "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/016-7ee1b2c9396c.pdf")],
+  },
+  {
+    year: "2016",
+    date: "2016-07-15",
+    isoDate: "2016-07-15",
+    time: noTime,
+    timeBasis: "Public-notice date",
+    phase: "Public notice",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "DEQ publishes the proposed groundwater authorization",
+    finding: "The public notice identifies proposed permit GW1010342 and the Rule 2210(y) authorization process for the Wexford County Landfill discharge to ground or groundwater.",
+    significance: "Documents the formal public-notice stage between application review and final issuance.",
+    sources: [pdf("GW Public Notice Document.html", "2016-07-15-gw-public-notice", 1, "One-page public notice; the newly supplied file exactly matches Category 02 record 076.", {
+      eventStamp: "2016-07-15 · time not stated",
+      basis: "Date printed in the public notice",
+      created: "2016-07-12 15:48:26 EDT",
+      note: "The .html-named source is a valid PDF payload. Its creation metadata reflects preparation three days before publication.",
+    }, "/npdes-docs/076-a611a75485cf.pdf")],
+  },
+  {
+    year: "2016",
+    date: "2016-09-06",
+    isoDate: "2016-09-06",
+    time: noTime,
+    timeBasis: "Issued date printed on permit",
+    phase: "Final authorization",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "Final permit authorizes a one-time diluted-leachate discharge",
+    finding: "Permit GW1010342 authorizes up to 50,400 gallons per day and 2,000,000 gallons per year from the evaporator lagoon by land application using overland flow and a spray bar. It takes effect October 1, 2016 and expires January 31, 2017.",
+    significance: "Separates the final legal authorization and its operating window from the earlier draft and application records.",
+    sources: [pdf("Rule 2210 Permit Template-Wexford Landfill.docx", "2016-09-06-rule-2210-final", 26, "Final permit with limits, monitoring conditions and attachments.", {
+      eventStamp: "2016-09-06 · time not stated",
+      basis: "Issued date printed on permit page 1",
+      created: "2016-09-16 13:43:08 EDT",
+      note: "The source filename says .docx but the payload is PDF. The export/cover-email date is ten days after the permit's printed issued date.",
+    }, "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/015-38c4dd289771.pdf")],
   },
   {
     year: "2017",
@@ -553,6 +613,24 @@ const events: Event[] = [
     })],
   },
   {
+    year: "2024",
+    date: "2024-11-19",
+    isoDate: "2024-11-19",
+    time: noTime,
+    timeBasis: "Operating-license issue date",
+    phase: "Solid-waste operating license",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "Operating License 9758 renews the landfill authorization",
+    finding: "EGLE issued License 9758 for the 196.4-acre Wexford County Landfill through November 19, 2029. The license incorporates Construction Permits 4100 and 4127, the March 2018 hydrogeologic monitoring plan, the leachate recirculation plan and later lagoon, cover and engineering documents.",
+    significance: "Provides the current official operating framework and identifies the historical plans incorporated by reference; it does not by itself prove the contents of those separately listed plans.",
+    sources: [pdf("Wexford-County-Landfill.PDF · Operating License 9758", "2024-11-19-operating-license-9758", 8, "Official operating license and Attachment A site map.", {
+      eventStamp: "2024-11-19 · time not stated",
+      basis: "Issue date printed on license page 1",
+      note: "This is distinct from the three-page 2012 Construction Permit 4127 despite the shared base filename.",
+    }, "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/017-4b475079a927.pdf")],
+  },
+  {
     year: "2025",
     date: "2025-03-04",
     isoDate: "2025-03-04",
@@ -790,6 +868,8 @@ export default function Home() {
   const [ippType, setIppType] = useState("All IPP records");
   const [complianceQuery, setComplianceQuery] = useState("");
   const [complianceType, setComplianceType] = useState("All compliance records");
+  const [wexfordQuery, setWexfordQuery] = useState("");
+  const [wexfordType, setWexfordType] = useState("All Wexford records");
   const [referenceQuery, setReferenceQuery] = useState("");
   const [referenceType, setReferenceType] = useState("All datasets");
   const groups = Array.from(events.reduce<Map<string, Event[]>>((acc, event) => {
@@ -825,6 +905,13 @@ export default function Home() {
   const filteredComplianceDocuments = complianceDocuments.filter((document) => {
     const matchesType = complianceType === "All compliance records" || document.type === complianceType;
     const matchesQuery = !normalizedComplianceQuery || `${document.name} ${document.year} ${document.type}`.toLowerCase().includes(normalizedComplianceQuery);
+    return matchesType && matchesQuery;
+  });
+  const wexfordTypes = ["All Wexford records", ...Array.from(new Set(wexfordDocuments.map((document) => document.type)))];
+  const normalizedWexfordQuery = wexfordQuery.trim().toLowerCase();
+  const filteredWexfordDocuments = wexfordDocuments.filter((document) => {
+    const matchesType = wexfordType === "All Wexford records" || document.type === wexfordType;
+    const matchesQuery = !normalizedWexfordQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedWexfordQuery);
     return matchesType && matchesQuery;
   });
   const referenceTypes = ["All datasets", ...Array.from(new Set(referenceDocuments.map((document) => document.type)))];
@@ -1006,6 +1093,41 @@ export default function Home() {
             ))}
           </div>
           {filteredIppDocuments.length === 0 && <p className="document-empty">No industrial pretreatment records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="wexford-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 12 · WEXFORD LANDFILL &amp; RULE 2210(y) RECORDS</p><h2 id="wexford-library-title">Search {wexfordDocuments.length} new verified records</h2></div>
+            <p>This source set preserves the groundwater-discharge application, maps, lagoon analytical package, draft and final authorization, correspondence, stormwater file, current operating license and acquisition provenance. Four exact matches already indexed elsewhere are reused instead of republished.</p>
+          </div>
+          <div className="reference-summary" aria-label="Wexford landfill archive audit summary">
+            <div><FileText /><span><strong>{wexfordAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><CheckCircle2 /><span><strong>{wexfordAudit.stats.exactExistingRecordsReused}</strong> exact records reused</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(wexfordAudit.stats.publishedBytes)}</strong> preserved</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 12 duplicate, metadata and scan decisions</summary>
+            <div className="audit-panel">
+              <p>{wexfordAudit.methods.join(" · ")}</p>
+              <ul>{wexfordAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search Wexford landfill records</span><input value={wexfordQuery} onChange={(event) => setWexfordQuery(event.target.value)} placeholder="Search filename, year, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter Wexford records by type</span><select value={wexfordType} onChange={(event) => setWexfordType(event.target.value)}>{wexfordTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredWexfordDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredWexfordDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open source"}<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredWexfordDocuments.length === 0 && <p className="document-empty">No Wexford landfill records match this search.</p>}
         </section>
 
         <section className="document-library permit-library" aria-labelledby="compliance-library-title">

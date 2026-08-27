@@ -69,6 +69,10 @@
     {
       "name": "Copy-style filename labels",
       "reason": "Retained records are displayed under clean provenance names. Copy-number labels were removed from display names when the underlying record proved distinct; revised/final labels were kept only when they describe substantive document status."
+    },
+    {
+      "name": "GitHub-backed document delivery",
+      "reason": "The 149 newly retained PDFs are preserved in the authorized private cazey43/cadillac-pfas-event-trace repository and open there from the Site. The original seven Category 04 PDFs remain bundled with Sites. This split avoids Sites' 256 MiB expanded-archive limit without dropping a record or changing a source file."
     }
   ]
 }

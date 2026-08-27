@@ -290,7 +290,7 @@ const events: Event[] = [
     title: "Cadillac publishes 2017 industrial SNC notice",
     finding: "The rendered newspaper notice identifies significant noncompliance (SNC) by Rec Boat divisions, Cadillac Castings and AAR Mobility Systems and lists the pollutants associated with the cited exceedances.",
     significance: "Adds the annual public-notice record to the industrial-compliance history without treating same-template facility records as duplicates.",
-    sources: [ippSource("2018-03 Cadillac News IPP SNC notice.pdf", "/ipp-docs/040-99a3b1774a76.pdf", 1, "Image-only newspaper clipping publishing the 2017 industrial SNC notice.", {
+    sources: [ippSource("2018-03 Cadillac News IPP SNC notice.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/040-99a3b1774a76.pdf", 1, "Image-only newspaper clipping publishing the 2017 industrial SNC notice.", {
       eventStamp: "2018-03 · time not stated",
       basis: "Publication month and reporting year printed in source",
       note: "The clipping is image-only; the notice was verified from the rendered page.",
@@ -508,7 +508,7 @@ const events: Event[] = [
     title: "EGLE responds to Cadillac's IPP corrective-action plan",
     finding: "EGLE accepted the revised MAHL study plan with recommendations, extended the remaining categorical-determination response to November 4, 2022, and noted that Wexford County Landfill had ceased discharge to Cadillac and should be removed from the sampling plan if that status remained true.",
     significance: "Connects the violation-notice response, MAHL/local-limit work, Cadillac Casting categorical review and Wexford discharge status in one agency record.",
-    sources: [ippSource("2022-05-23 Follow-up to VN-012230 and VN-011108 - Cadillac WWTP.pdf", "/ipp-docs/083-df40de58ffcc.pdf", 3, "EGLE follow-up letter addressing the CAP, MAHL study plan, CCI categorical review and Wexford sampling status.", {
+    sources: [ippSource("2022-05-23 Follow-up to VN-012230 and VN-011108 - Cadillac WWTP.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/083-df40de58ffcc.pdf", 3, "EGLE follow-up letter addressing the CAP, MAHL study plan, CCI categorical review and Wexford sampling status.", {
       eventStamp: "2022-05-23 · time not stated",
       basis: "Letter date printed in source",
       note: "No time of day is stated in the letter.",
@@ -526,7 +526,7 @@ const events: Event[] = [
     title: "Cadillac submits proposed MAHLs and local limits",
     finding: "The City asked EGLE to review and approve proposed maximum allowable headworks loadings and industrial local limits and included a table of proposed limits and compatible-pollutant MAHLs.",
     significance: "Establishes the proposal stage that precedes the later EGLE review comments; it is not represented as final approval.",
-    sources: [ippSource("2023-08 City of Cadillac proposed MAHL and local limits.pdf", "/ipp-docs/100-20ef2ece7370.pdf", 2, "City transmittal requesting review and approval of proposed MAHLs and local limits.", {
+    sources: [ippSource("2023-08 City of Cadillac proposed MAHL and local limits.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/100-20ef2ece7370.pdf", 2, "City transmittal requesting review and approval of proposed MAHLs and local limits.", {
       eventStamp: "2023-08 · time not stated",
       basis: "Month printed in source filename and letter",
       note: "The available source establishes the month but not a reliable day or time.",
@@ -613,7 +613,7 @@ const events: Event[] = [
     title: "Public notice documents 2024 industrial SNC",
     finding: "The affidavit's published notice identifies local-limit exceedances during 2024 at Rec Boats Trailer, AAR Mobility Systems, ARVCO, Cadillac Castings, FIAMM, Hutchinson and Michigan Rubber, with pollutants and quarters stated for each facility.",
     significance: "Preserves the annual SNC record while distinguishing industrial-user permit exceedances from violations by the Cadillac WWTP itself.",
-    sources: [ippSource("Cadillac News Affidavit of Publication 03-19-2025.pdf", "/ipp-docs/126-724054a11ecd.pdf", 1, "Affidavit and annexed public notice of 2024 industrial significant noncompliance.", {
+    sources: [ippSource("Cadillac News Affidavit of Publication 03-19-2025.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/126-724054a11ecd.pdf", 1, "Affidavit and annexed public notice of 2024 industrial significant noncompliance.", {
       eventStamp: "2025-03-19 · time not stated",
       basis: "Affidavit publication date",
       note: "The notice states there were no known Cadillac WWTP violations or known Clam River or Muskegon River watershed impacts from the listed industrial exceedances.",
@@ -678,7 +678,7 @@ const events: Event[] = [
     title: "EGLE directs penalty-authority revisions",
     finding: "EGLE advised that POTWs must have authority to assess a civil penalty of at least $1,000 per day for each IPP violation and identified three Cadillac procedures-manual and enforcement-template sections requiring revision.",
     significance: "Documents a specific 2026 change requested for Cadillac's enforcement authority; the email also says the current Sewer Use Ordinance language appeared to meet that minimum.",
-    sources: [ippSource("05-27-2026 - Cadillac WWTP IPP - Civil and criminal penalties.pdf", "/ipp-docs/134-ab2692869ee6.pdf", 1, "EGLE email identifying the minimum civil-penalty authority and sections requiring revision.", {
+    sources: [ippSource("05-27-2026 - Cadillac WWTP IPP - Civil and criminal penalties.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/134-ab2692869ee6.pdf", 1, "EGLE email identifying the minimum civil-penalty authority and sections requiring revision.", {
       eventStamp: "2026-05-27 10:50:26 · zone not stated",
       basis: "Email sent timestamp printed in source",
       note: "The source does not print a time-zone abbreviation, so none is inferred.",
@@ -748,14 +748,17 @@ const evidenceRequests = [
 
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
+  const external = Boolean(source.url?.startsWith("https://github.com/"));
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Button type="button" variant={linked ? "outline" : "secondary"} size="sm" className="source-button" aria-disabled={!linked} onClick={() => linked && open(source)}>
-          {linked ? <FileText /> : <AlertTriangle />}
-          <span>{source.name}</span>
-          {linked && <ExternalLink className="source-open-icon" />}
-        </Button>
+        {external
+          ? <Button asChild variant="outline" size="sm" className="source-button"><a href={source.url} target="_blank" rel="noreferrer"><FileText /><span>{source.name}</span><ExternalLink className="source-open-icon" /></a></Button>
+          : <Button type="button" variant={linked ? "outline" : "secondary"} size="sm" className="source-button" aria-disabled={!linked} onClick={() => linked && open(source)}>
+              {linked ? <FileText /> : <AlertTriangle />}
+              <span>{source.name}</span>
+              {linked && <ExternalLink className="source-open-icon" />}
+            </Button>}
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
         {source.preview ? <img src={source.preview} alt={`First-page preview of ${source.name}`} className="source-preview" /> : <div className="missing-preview"><AlertTriangle />Original file not loaded</div>}

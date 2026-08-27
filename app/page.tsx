@@ -906,6 +906,96 @@ const events: Event[] = [
       note: "The proposal anticipated an April draft and May 1, 2026 submission deadline; completion is not inferred from this source.",
     })],
   },
+  {
+    year: "1988",
+    date: "April 1988",
+    isoDate: "1988-04",
+    time: noTime,
+    timeBasis: "Study publication month",
+    phase: "Historical groundwater remediation",
+    kind: "receptor",
+    category: "14 · Hydrogeology & mapping",
+    title: "Feasibility study maps industrial-park VOC and chromium plumes",
+    finding: "The MDNR/E.C. Jordan interim study identifies five known or probable industrial-park source areas and seven groundwater plumes involving volatile organic compounds and hexavalent chromium. It evaluates cleanup levels and treated-groundwater discharge options, including possible discharge to the Cadillac POTW subject to pretreatment.",
+    significance: "Establishes the documented 1980s groundwater-remediation setting. The study predates the PFAS investigation and does not establish PFAS contamination, a modern flow path or current source attribution.",
+    sources: [archivedSource("Cadillac Area Groundwater Contamination Feasibility Study.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/011-05c2a0fb3666.pdf", 50, "April 1988 interim feasibility study; an OCR-fixed copy is retained after comparison with a byte-different scan of the same document.", {
+      eventStamp: "April 1988 · time not stated",
+      basis: "Publication month printed on the title page",
+      note: "This is historical VOC and chromium remediation evidence, not a PFAS analytical record.",
+    })],
+  },
+  {
+    year: "2009",
+    date: "2009-09-08",
+    isoDate: "2009-09-08",
+    time: noTime,
+    timeBasis: "Special-meeting date",
+    phase: "Leachate service agreement",
+    kind: "operation",
+    category: "12 · Landfill & leachate",
+    title: "Council approves Wexford landfill leachate treatment agreement",
+    finding: "The special-meeting minutes record unanimous approval of an agreement for Cadillac to accept and treat Wexford County Landfill leachate. The agreement was effective July 1, 2009 through June 30, 2011 and used a reduced sliding-scale rate based on pretreatment.",
+    significance: "Provides direct official evidence that the City formally approved the landfill-to-WWTP treatment relationship years before the PFAS source investigation.",
+    sources: [archivedSource("September 8 2009 Special Meeting Minutes.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/008-5b67e1ed1d5c.pdf", 6, "Motion 2009.216 approves miscellaneous file 842 on PDF page 2.", {
+      eventStamp: "2009-09-08 · time not stated",
+      basis: "Date of the official special-meeting minutes",
+      note: "Separate well-field planning in the same minutes is not characterized as PFAS evidence.",
+    })],
+  },
+  {
+    year: "2019",
+    date: "2019-06-30",
+    isoDate: "2019-06-30",
+    time: noTime,
+    timeBasis: "Fiscal-year end",
+    phase: "Audited financial reporting",
+    kind: "operation",
+    category: "10 / 12 · Process, landfill & leachate",
+    title: "Audited report corroborates landfill-leachate treatment revenue",
+    finding: "Cadillac's FY2019 comprehensive annual financial report states that revenue from treatment of Wexford County Landfill leachate exceeded budget by $44,691.",
+    significance: "Financially corroborates that leachate treatment was occurring in the fiscal year. The report does not provide gallons received, PFAS concentrations or treatment effectiveness.",
+    sources: [archivedSource("City of Cadillac FY2019 CAFR.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/013-f756ecea1687.pdf", 187, "Management's discussion and analysis on PDF page 25 reports the landfill-leachate treatment revenue variance.", {
+      eventStamp: "Fiscal year ended 2019-06-30 · time not stated",
+      basis: "Audited-report fiscal period",
+      note: "The dollar amount is a budget variance, not total leachate revenue or treatment volume.",
+    })],
+  },
+  {
+    year: "2022",
+    date: "2022-08-18",
+    isoDate: "2022-08-18",
+    time: noTime,
+    timeBasis: "EGLE evaluation-letter date",
+    phase: "Landfill fiscal and waste-origin review",
+    kind: "compliance",
+    category: "12 / 13 · Landfill, compliance & enforcement",
+    title: "EGLE evaluation identifies financial-assurance shortfall and import questions",
+    finding: "EGLE calculated a $131,920.40 perpetual-care fund shortfall for the Wexford County Landfill and asked for a deposit. Re-TRAC data also indicated 2,300 cubic yards from Clare County and 648 cubic yards from Oscoda County that may not have been authorized by the applicable county plans, prompting a written-response request.",
+    significance: "Preserves the agency's FY2021 evaluation and compliance questions. The letter requests a response and does not establish a final violation, penalty or adjudication.",
+    sources: [archivedSource("2022-09-13 Draft Executive Committee Packet.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/009-ef4cb426969a.pdf", 17, "EGLE's August 18, 2022 Wexford County Landfill evaluation appears on PDF pages 13–17.", {
+      eventStamp: "2022-08-18 · time not stated",
+      basis: "Date printed on the EGLE evaluation letter",
+      note: "The surrounding executive packet is dated September 13, 2022; the event date follows the underlying agency letter.",
+    })],
+  },
+  {
+    year: "2026",
+    date: "2026-07-20",
+    isoDate: "2026-07-20",
+    time: noTime,
+    timeBasis: "Council-packet meeting date",
+    phase: "PFAS response infrastructure planning",
+    kind: "receptor",
+    category: "13 · PFAS response & municipal water",
+    title: "Council packet schedules PFAS municipal-water project action",
+    finding: "The packet describes an $8.206 million Emerging Contaminants Grant designation and a project plan to extend municipal water service to private-well users in PFAS response areas. It also reports an anticipated federal PFAS grant of approximately $1.7 million.",
+    significance: "Documents the response project presented for council action. The included resolution is unsigned with blank vote and certification fields, so the packet alone does not prove adoption, receipt of funds or construction.",
+    sources: [archivedSource("Council Packet 7-20-26.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/010-1aba682de0b8.pdf", 62, "PFAS update appears on PDF page 7; project communication and unsigned draft resolution appear on pages 45–47.", {
+      eventStamp: "2026-07-20 · time not stated",
+      basis: "Meeting date printed on the council packet",
+      note: "This source records a proposed action and funding designations; it is not an executed resolution or expenditure record.",
+    })],
+  },
 ];
 
 const meta: Record<Kind, { label: string; icon: typeof Factory }> = {
@@ -1322,11 +1412,11 @@ export default function Home() {
         <section className="document-library permit-library" aria-labelledby="supplemental-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 27, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} newly added records</h2></div>
-            <p>This batch adds federal compliance rows, landfill air records, historic Clam River floodplain context and a WWTP capital-planning proposal. Related records remain separate unless their bytes and rendered content prove they are the same document.</p>
+            <p>These additions span federal compliance, landfill operations, civic actions, audited finances, historical groundwater context and response planning. Primary records, historical context and secondary research are explicitly distinguished; related records remain separate unless byte and rendered-content review proves they are the same document.</p>
           </div>
           <div className="reference-summary" aria-label="Cross-category additions audit summary">
             <div><FileText /><span><strong>{supplementalAudit.stats.newDistinctRecords}</strong> distinct additions</span></div>
-            <div><CheckCircle2 /><span><strong>{supplementalAudit.stats.exactExistingRecordsReused + supplementalAudit.stats.duplicateCopiesSuppressed}</strong> exact copies not republished</span></div>
+            <div><CheckCircle2 /><span><strong>{supplementalAudit.stats.exactExistingRecordsReused + supplementalAudit.stats.duplicateCopiesSuppressed}</strong> copies not republished</span></div>
             <div><FileSearch /><span><strong>{formatBytes(supplementalAudit.stats.publishedBytes)}</strong> preserved</span></div>
           </div>
           <details className="audit-details archive-audit">

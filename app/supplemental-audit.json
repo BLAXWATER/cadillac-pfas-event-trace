@@ -1,16 +1,17 @@
 {
   "stats": {
-    "suppliedFiles": 9,
-    "newDistinctRecords": 7,
-    "exactExistingRecordsReused": 1,
-    "duplicateCopiesSuppressed": 1,
-    "publishedBytes": 8995141
+    "suppliedFiles": 19,
+    "newDistinctRecords": 13,
+    "exactExistingRecordsReused": 3,
+    "duplicateCopiesSuppressed": 2,
+    "outOfScopeExcluded": 1,
+    "publishedBytes": 26197168
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
     "PDF page count and embedded metadata comparison",
     "Targeted text extraction plus OCR-aware review of scan-only pages",
-    "Rendered visual inspection of every retained page, including all 150 flood-study pages",
+    "Rendered visual inspection of every short and medium record, all council-packet pages and targeted evidentiary pages in long audited reports",
     "Cross-check against existing manifests and research indexes"
   ],
   "decisions": [
@@ -29,6 +30,22 @@
     {
       "name": "Flood Plain Management Study — Clam River",
       "reason": "Retained as historical watershed and flood-receptor context only; it is not characterized as PFAS source or migration proof."
+    },
+    {
+      "name": "Two Wexford County Landfill permit PDFs",
+      "reason": "The construction permit and operating license exactly match records already in the archive and are reused without republishing."
+    },
+    {
+      "name": "20250123_125751.pdf",
+      "reason": "Rendered pages and extracted content establish that it is a byte-different scan of the same 1988 feasibility study. The clearer OCR-fixed copy is retained without a duplicate label."
+    },
+    {
+      "name": "ORIGINAL CEA Contract 2008-2010.doc",
+      "reason": "Cadillac Education Association collective-bargaining agreement; excluded as unrelated to the WWTP, landfill, PFAS, groundwater or environmental compliance record."
+    },
+    {
+      "name": "Hydrogeologic Investigation — 1140 Plett Road",
+      "reason": "Retained as a secondary synthesis and records-request plan. Its hypotheses and unresolved data gaps are not promoted to primary-source findings."
     }
   ]
 }

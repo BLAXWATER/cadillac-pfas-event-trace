@@ -219,7 +219,7 @@ const events: Event[] = [
     timeBasis: "Notification-call time stated in the letter",
     phase: "Reported release",
     kind: "operation",
-    category: "13 · Compliance & enforcement",
+    category: "08 · Compliance & enforcement",
     title: "Leachate spill reported during tanker offloading",
     finding: "The City reported that a leachate hose pulled from the receiving point during offloading. The discharge had ended before staff arrived; leachate ran along the asphalt and ponded at a lower elevation. Snow berms, sandbags and packed snow protected the storm drains, and contaminated snow and soil were removed to the WWTP drying beds. The tanker capacity was 10,000 gallons, but the letter states only that less than that amount spilled and gives no measured volume.",
     significance: "Provides the original occurrence time, response, cleanup and prevention record for the previously unresolved 2016 release event.",
@@ -1007,16 +1007,16 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="compliance-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CATEGORY 13 · COMPLIANCE &amp; ENFORCEMENT</p><h2 id="compliance-library-title">Search {complianceDocuments.length} verified compliance records</h2></div>
-            <p>The supplied compliance-file compilation and source-order extract are preserved as separate records. The collection includes inspection material, violation response records and significant noncompliance (SNC) documentation. Only the byte-identical second copy of the 16-page extract is suppressed.</p>
+            <div><p className="eyebrow">CATEGORY 08 · COMPLIANCE &amp; ENFORCEMENT · VERIFIED AUGUST 27, 2026</p><h2 id="compliance-library-title">Search {complianceDocuments.length} verified compliance records</h2></div>
+            <p>This category preserves agency evaluations, violation notices, significant noncompliance (SNC) material, spill and bypass notifications, exceedance reports, correspondence, source-order extracts and photographed attachments. Every supplied page was read with embedded text or OCR; only records already preserved elsewhere and analyst-authored derivative reports are excluded.</p>
           </div>
           <div className="reference-summary" aria-label="Compliance and enforcement archive audit summary">
             <div><FileText /><span><strong>{complianceAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
-            <div><CheckCircle2 /><span><strong>{complianceAudit.stats.exactDuplicateCopiesSuppressed}</strong> exact duplicate excluded</span></div>
+            <div><CheckCircle2 /><span><strong>{complianceAudit.stats.ocrPages}</strong> OCR pages verified</span></div>
             <div><FileSearch /><span><strong>{formatBytes(complianceAudit.stats.publishedBytes)}</strong> published</span></div>
           </div>
           <details className="audit-details archive-audit">
-            <summary>Review Category 13 duplicate and overlap decisions</summary>
+            <summary>Review Category 08 duplicate, OCR and overlap decisions</summary>
             <div className="audit-panel">
               <p>{complianceAudit.methods.join(" · ")}</p>
               <ul>{complianceAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
@@ -1030,9 +1030,10 @@ export default function Home() {
           <div className="document-grid">
             {filteredComplianceDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
-                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3>{document.name}</h3>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
               </article>
             ))}
           </div>

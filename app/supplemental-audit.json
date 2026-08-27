@@ -1,0 +1,34 @@
+{
+  "stats": {
+    "suppliedFiles": 9,
+    "newDistinctRecords": 7,
+    "exactExistingRecordsReused": 1,
+    "duplicateCopiesSuppressed": 1,
+    "publishedBytes": 8995141
+  },
+  "methods": [
+    "SHA-256 byte comparison within the supplied batch and against the live archive",
+    "PDF page count and embedded metadata comparison",
+    "Targeted text extraction plus OCR-aware review of scan-only pages",
+    "Rendered visual inspection of every retained page, including all 150 flood-study pages",
+    "Cross-check against existing manifests and research indexes"
+  ],
+  "decisions": [
+    {
+      "name": "2015-2016_Wexford County Landfill_Leachate Request.pdf",
+      "reason": "Exact SHA-256 match to the three-page source already linked in the event trace; the existing record is reused."
+    },
+    {
+      "name": "N3862_SAR_20171106 (1).pdf",
+      "reason": "Byte-identical to N3862_SAR_20171106.pdf. One cleanly named copy is retained and no duplicate label is propagated."
+    },
+    {
+      "name": "Seven retained records",
+      "reason": "Each retained PDF has a distinct hash and materially distinct content or evidentiary role; related subjects were not treated as duplicates."
+    },
+    {
+      "name": "Flood Plain Management Study — Clam River",
+      "reason": "Retained as historical watershed and flood-receptor context only; it is not characterized as PFAS source or migration proof."
+    }
+  ]
+}

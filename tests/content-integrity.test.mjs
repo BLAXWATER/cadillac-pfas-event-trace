@@ -57,7 +57,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 525);
-  assert.equal(externalFiles, 261);
+  assert.equal(externalFiles, 471);
 });
 
 test("timeline source and preview assets are present", async () => {
@@ -96,4 +96,21 @@ test("PFAS archive audit and repaired J19915 source remain consistent", async ()
     createHash("sha256").update(repairedSource).digest("hex"),
     "47929ba9f41a9dcd5f3d5d3b9a5d5f63dbb3fcbc5b00dc74e81a0d550e8666fd",
   );
+});
+
+test("biosolids archive audit preserves distinct records and suppresses only verified copies", async () => {
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "biosolids-documents.json"), "utf8"));
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "biosolids-audit.json"), "utf8"));
+  assert.equal(catalog.length, audit.stats.newDistinctRecords);
+  assert.equal(audit.stats.suppliedFiles, 215);
+  assert.equal(audit.stats.suppliedPdfPages, 1624);
+  assert.equal(audit.stats.finalDistinctRecords, 213);
+  assert.equal(audit.stats.existingRecordsReused, 3);
+  assert.equal(audit.stats.duplicateCopiesSuppressed, 2);
+  assert.equal(audit.stats.ocrPagesAttempted, 263);
+  assert.equal(audit.stats.visuallyFingerprintedPages, 1624);
+  assert.equal(catalog.some((row) => /PENDING/.test(row.url)), false);
+  assert.equal(catalog.some((row) => /duplicate/i.test(row.name)), false);
+  assert.equal(catalog.filter((row) => row.type === "Incident / spill note").length, 1);
+  assert.equal(catalog.some((row) => /22,000 Gallons/i.test(row.name)), true);
 });

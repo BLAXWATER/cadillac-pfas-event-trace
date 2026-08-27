@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import complianceAudit from "./compliance-audit.json";
 import complianceDocuments from "./compliance-documents.json";
+import biosolidsAudit from "./biosolids-audit.json";
+import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
 import ippAudit from "./ipp-audit.json";
@@ -1116,6 +1118,8 @@ export default function Home() {
   const [ippType, setIppType] = useState("All IPP records");
   const [pfasQuery, setPfasQuery] = useState("");
   const [pfasType, setPfasType] = useState("All PFAS records");
+  const [biosolidsQuery, setBiosolidsQuery] = useState("");
+  const [biosolidsType, setBiosolidsType] = useState("All biosolids records");
   const [complianceQuery, setComplianceQuery] = useState("");
   const [complianceType, setComplianceType] = useState("All compliance records");
   const [wexfordQuery, setWexfordQuery] = useState("");
@@ -1159,6 +1163,13 @@ export default function Home() {
   const filteredPfasDocuments = pfasDocuments.filter((document) => {
     const matchesType = pfasType === "All PFAS records" || document.type === pfasType;
     const matchesQuery = !normalizedPfasQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedPfasQuery);
+    return matchesType && matchesQuery;
+  });
+  const biosolidsTypes = ["All biosolids records", ...Array.from(new Set(biosolidsDocuments.map((document) => document.type)))];
+  const normalizedBiosolidsQuery = biosolidsQuery.trim().toLowerCase();
+  const filteredBiosolidsDocuments = biosolidsDocuments.filter((document) => {
+    const matchesType = biosolidsType === "All biosolids records" || document.type === biosolidsType;
+    const matchesQuery = !normalizedBiosolidsQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedBiosolidsQuery);
     return matchesType && matchesQuery;
   });
   const complianceTypes = ["All compliance records", ...Array.from(new Set(complianceDocuments.map((document) => document.type)))];
@@ -1396,6 +1407,41 @@ export default function Home() {
             ))}
           </div>
           {filteredPfasDocuments.length === 0 && <p className="document-empty">No PFAS monitoring records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="biosolids-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 05 · BIOSOLIDS &amp; LAND APPLICATION · VERIFIED AUGUST 27, 2026</p><h2 id="biosolids-library-title">Search {biosolidsDocuments.length} newly verified biosolids records</h2></div>
+            <p>This category preserves laboratory packages, land-application sites, as-applied workbooks, certifications, residuals-management-plan records, operational calculations, audit correspondence and field photographs. It also indexes the photographed note reporting an approximately 22,000-gallon biosolids overflow, without inferring migration or impact beyond the source.</p>
+          </div>
+          <div className="reference-summary" aria-label="Biosolids and land-application archive audit summary">
+            <div><FileText /><span><strong>{biosolidsAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><CheckCircle2 /><span><strong>{biosolidsAudit.stats.existingRecordsReused}</strong> existing records reused</span></div>
+            <div><FileSearch /><span><strong>{biosolidsAudit.stats.duplicateCopiesSuppressed}</strong> actual duplicates suppressed</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 05 duplicate, metadata, OCR and spill-record decisions</summary>
+            <div className="audit-panel">
+              <p>{biosolidsAudit.methods.join(" · ")}</p>
+              <ul>{biosolidsAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search biosolids and land-application records</span><input value={biosolidsQuery} onChange={(event) => setBiosolidsQuery(event.target.value)} placeholder="Search filename, year, site, record type or spill note" /></label>
+            <label className="document-filter"><span className="sr-only">Filter biosolids records by type</span><select value={biosolidsType} onChange={(event) => setBiosolidsType(event.target.value)}>{biosolidsTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredBiosolidsDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredBiosolidsDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredBiosolidsDocuments.length === 0 && <p className="document-empty">No biosolids or land-application records match this search.</p>}
         </section>
 
         <section className="document-library permit-library" aria-labelledby="wexford-library-title">

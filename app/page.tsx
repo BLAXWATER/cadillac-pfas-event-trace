@@ -87,6 +87,44 @@ type Event = {
   sources: Source[];
 };
 
+type LibraryDocument = {
+  id: string;
+  name: string;
+  url: string;
+  type: string;
+  year?: string;
+  category?: string;
+  format?: string;
+  pages?: number | null;
+  description?: string;
+};
+
+type LibrarySearchRecord = LibraryDocument & {
+  archive: string;
+  archiveId: string;
+};
+
+const libraryArchives: { id: string; label: string; documents: readonly LibraryDocument[] }[] = [
+  { id: "dmr", label: "DMR & QA", documents: dmrDocuments },
+  { id: "npdes", label: "NPDES permits", documents: npdesDocuments },
+  { id: "ipp", label: "Industrial pretreatment", documents: ippDocuments },
+  { id: "pfas", label: "PFAS monitoring", documents: pfasDocuments },
+  { id: "biosolids", label: "Biosolids & land application", documents: biosolidsDocuments },
+  { id: "lab", label: "Lab results & sampling", documents: labDocuments },
+  { id: "wexford", label: "Wexford landfill", documents: wexfordDocuments },
+  { id: "compliance", label: "Compliance & enforcement", documents: complianceDocuments },
+  { id: "supplemental", label: "Added evidence", documents: supplementalDocuments },
+  { id: "reference", label: "Reference data", documents: referenceDocuments },
+];
+
+const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((archive) =>
+  archive.documents.map((document) => ({
+    ...document,
+    archive: archive.label,
+    archiveId: archive.id,
+  })),
+);
+
 const pdf = (
   name: string,
   slug: string,
@@ -1112,6 +1150,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
 
 export default function Home() {
   const [selected, setSelected] = useState<Source | null>(null);
+  const [globalQuery, setGlobalQuery] = useState("");
   const [documentQuery, setDocumentQuery] = useState("");
   const [documentType, setDocumentType] = useState("All records");
   const [permitQuery, setPermitQuery] = useState("");
@@ -1141,6 +1180,14 @@ export default function Home() {
     .map(([year, items]) => ({ year, items: [...items].sort((a, b) => (a.isoDate ?? a.date).localeCompare(b.isoDate ?? b.date)) }))
     .sort((a, b) => Number(a.year) - Number(b.year));
   const sourceCount = events.reduce((count, event) => count + event.sources.length, 0);
+  const globalSearchTerms = globalQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const globalSearchResults = globalSearchTerms.length === 0
+    ? []
+    : librarySearchRecords.filter((document) => {
+        const searchable = `${document.name} ${document.year ?? ""} ${document.category ?? ""} ${document.type} ${document.format ?? ""} ${document.description ?? ""} ${document.archive}`.toLowerCase();
+        return globalSearchTerms.every((term) => searchable.includes(term));
+      });
+  const visibleGlobalResults = globalSearchResults.slice(0, 100);
   const documentTypes = ["All records", ...Array.from(new Set(dmrDocuments.map((document) => document.type)))];
   const normalizedQuery = documentQuery.trim().toLowerCase();
   const filteredDocuments = dmrDocuments.filter((document) => {
@@ -1228,6 +1275,44 @@ export default function Home() {
           <div><Landmark /><span>Cadillac WWTP</span><small>Historical receiver</small></div><ArrowDown />
           <div><FlaskConical /><span>PFAS record</span><small>Sampling + controls</small></div><ArrowDown />
           <div><Waves /><span>Plett Road wells</span><small>Receptor results</small></div>
+        </section>
+
+        <section className="global-search-panel" id="record-search" aria-labelledby="record-search-title">
+          <div className="global-search-heading">
+            <div><p className="eyebrow">COMPLETE EVIDENCE LIBRARY</p><h2 id="record-search-title">Search all {librarySearchRecords.length.toLocaleString()} records</h2></div>
+            <p>Search every archive at once by filename, year, category, record type, format or finding.</p>
+          </div>
+          <label className="global-search-input">
+            <Search aria-hidden="true" />
+            <span className="sr-only">Search the complete evidence library</span>
+            <input
+              type="search"
+              value={globalQuery}
+              onChange={(event) => setGlobalQuery(event.target.value)}
+              placeholder="Search all records — try PFAS, spill, cyanide, 2024…"
+              autoComplete="off"
+            />
+          </label>
+          {globalSearchTerms.length > 0 && (
+            <div className="global-search-results" aria-live="polite">
+              <p className="global-search-summary">
+                <strong>{globalSearchResults.length.toLocaleString()}</strong> matching {globalSearchResults.length === 1 ? "record" : "records"}
+                {globalSearchResults.length > visibleGlobalResults.length && <span> · showing the first {visibleGlobalResults.length}</span>}
+              </p>
+              {visibleGlobalResults.length > 0 ? (
+                <div className="global-search-grid">
+                  {visibleGlobalResults.map((document) => (
+                    <article className="global-search-card" key={`${document.archiveId}-${document.id}`}>
+                      <div className="archive-meta"><Badge variant="outline">{document.archive}</Badge><span>{document.type}</span>{document.year && <span>{document.year}</span>}{document.format && <span>{document.format}</span>}</div>
+                      <h3>{document.name}</h3>
+                      {document.description && <p>{document.description}</p>}
+                      <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open record<ExternalLink /></a></Button>
+                    </article>
+                  ))}
+                </div>
+              ) : <p className="document-empty">No records match this search.</p>}
+            </div>
+          )}
         </section>
 
         <section className="timeframe-model" aria-labelledby="timeframe-title">

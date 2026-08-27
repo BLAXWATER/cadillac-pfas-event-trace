@@ -120,7 +120,7 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .trace-row[data-kind="regulatory"] { --trace-color: #62a9ff; }
 .trace-row[data-kind="sampling"] { --trace-color: #b582ff; }
 .trace-row[data-kind="compliance"] { --trace-color: #ff6570; }
-.trace-row[data-kind="receptor"] { --trace-color: #53df9d; }
+.trace-row[data-kind="receptor"] { --trace-color: #ff8a3d; }
 .trace-row[data-kind="gap"] { --trace-color: #ffbf47; }
 .trace-date { padding-top: 4px; text-align: right; }
 .trace-date time { display: block; color: var(--trace-color); font-family: var(--font-mono); font-size: 15.4px; font-weight: 700; }

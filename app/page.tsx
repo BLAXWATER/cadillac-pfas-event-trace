@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element -- document previews are local static evidence assets */
+
 import { useState } from "react";
 import {
   AlertTriangle,

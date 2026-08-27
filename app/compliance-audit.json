@@ -1,31 +1,72 @@
 {
   "methods": [
-    "SHA-256 byte comparison",
-    "PDF page-count and file-size comparison",
-    "Normalized searchable-text comparison",
-    "72-DPI grayscale rendered-page comparison",
-    "Document metadata comparison",
-    "Page-level cross-comparison against the chronological compilation"
+    "SHA-256 comparison within the category and against every published catalog",
+    "PDF page-count and document-metadata verification",
+    "Embedded-text extraction from every PDF page",
+    "OCR of every image and PDF page with fewer than 40 normalized embedded characters",
+    "Sequence-preserving rendered-page and normalized-text comparison",
+    "Manual visual review of low-confidence aerial-image and rotated-table pages"
   ],
   "stats": {
-    "sourceFilesReviewed": 3,
-    "exactDuplicateCopiesSuppressed": 1,
-    "overlappingDistinctRecordsRetained": 2,
-    "finalDistinctRecords": 2,
-    "publishedBytes": 7303212
+    "sourceFilesReviewed": 59,
+    "exactDuplicateGroupsWithinSource": 0,
+    "renderIdenticalByteDifferentGroupsWithinSource": 0,
+    "crossCategoryCopiesReferencedElsewhere": 6,
+    "analystAuthoredReportsExcluded": 4,
+    "existingComplianceRecordsRetained": 2,
+    "finalDistinctRecords": 49,
+    "reviewedPages": 500,
+    "ocrPages": 274,
+    "publishedBytes": 55028891
   },
   "decisions": [
     {
-      "name": "Compliance_File_Pages_025-040_searchable.pdf",
-      "reason": "Byte-for-byte identical to the dated 06-26-2015 copy; the undated duplicate filename is excluded."
+      "name": "Duplicate validation result",
+      "reason": "No byte-identical or page-for-page render-identical duplicates were found among the remaining compliance source records. Similar titles, source extracts, revisions, raw MSG files and rendered email PDFs were retained when their content or format differed."
     },
     {
-      "name": "Compliance_File_Pages_001-048_CHRONOLOGICAL.pdf",
-      "reason": "Retained as a distinct 50-page compilation with two index pages and 48 source pages arranged chronologically."
+      "name": "2022-05-23 Follow-up to VN-012230 and VN-011108 - Cadillac WWTP.pdf",
+      "reason": "Not republished in Category 08 because the same SHA-256 source is already preserved in ipp-documents.json."
     },
     {
-      "name": "06-26-2015 - Compliance_File_Pages_025-040_searchable.pdf",
-      "reason": "Retained as a distinct 16-page source-order extract. Every page also appears in the larger compilation, but the excerpt is not a full-file duplicate and preserves the source-page grouping."
+      "name": "Application Incomplete Ltr-Compliance_Cadillac WWTP_Final Narrative and Flow Diagram.pdf",
+      "reason": "Not republished in Category 08 because the same SHA-256 source is already preserved in npdes-documents.json."
+    },
+    {
+      "name": "2013-11-07 - Foster Swift (Barbieri) to MDEQ Office of Administrative Hearings - Petition for Contested Case Hearing - NPDES Permit MI0020257 - City of Cadillac.pdf",
+      "reason": "Not republished in Category 08 because the same SHA-256 source is already preserved in npdes-documents.json."
+    },
+    {
+      "name": "09-04-2025 - City of Cadillac CEI Response.pdf",
+      "reason": "Not republished in Category 08 because the same SHA-256 source is already preserved in dmr-documents.json."
+    },
+    {
+      "name": "08-19-2025 - Compliance Communication.pdf",
+      "reason": "Not republished in Category 08 because the same SHA-256 source is already preserved in dmr-documents.json."
+    },
+    {
+      "name": "Wexford-County-Landfill.PDF · Operating License 9758",
+      "reason": "Not republished in Category 08 because the same SHA-256 source is already preserved in wexford-documents.json."
+    },
+    {
+      "name": "05-21-2026 - Cadillac_Cyanide_Reporter_One_Page_Brief.pdf",
+      "reason": "Excluded from the primary-source library because file metadata and authorship identify it as an analyst-authored derivative report rather than an underlying agency record."
+    },
+    {
+      "name": "08-06-2026 - Cadillac_WWTP_TruthFirst_Final_Report.md",
+      "reason": "Excluded in accordance with the prior instruction to remove the Truth-First final report."
+    },
+    {
+      "name": "Cadillac_MI_Compliance_Investigation_2026-08-11.pdf",
+      "reason": "Excluded from the primary-source library because file metadata and authorship identify it as an analyst-authored derivative report rather than an underlying agency record."
+    },
+    {
+      "name": "Cadillac_MI_Compliance_Investigation_2026-08-11_v2.pdf",
+      "reason": "Excluded from the primary-source library because file metadata and authorship identify it as an analyst-authored derivative report rather than an underlying agency record."
+    },
+    {
+      "name": "Low-confidence OCR pages",
+      "reason": "District compliance-file pages 56, 228 and 230 were visually verified as a valid aerial image and two rotated dense tables; no source page is missing or corrupt."
     }
   ]
 }

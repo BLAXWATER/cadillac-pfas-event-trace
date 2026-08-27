@@ -7,25 +7,25 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1086,
-    "pdfRecords": 971,
-    "pdfPages": 10872,
-    "imageRecords": 2,
-    "embeddedTextPages": 8891,
-    "ocrPages": 1983,
-    "ocrPagesWithText": 1723,
-    "manualReviewPages": 95,
+    "catalogRecords": 1133,
+    "pdfRecords": 1010,
+    "pdfPages": 11300,
+    "imageRecords": 8,
+    "embeddedTextPages": 9052,
+    "ocrPages": 2256,
+    "ocrPagesWithText": 1992,
+    "manualReviewPages": 98,
     "hashFailures": 0,
     "unreadableRecords": 0,
     "pageCountFailures": 0,
     "exactHashDuplicateGroups": 0,
     "renderIdenticalByteDifferentGroups": 0,
-    "normalizedTextCandidateGroups": 0
+    "normalizedTextCandidateGroups": 1
   },
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 95,
+    "pagesReviewed": 98,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -175,6 +175,17 @@
       ]
     },
     {
+      "catalog": "compliance-documents.json",
+      "id": "020-9d6ad860baaf",
+      "name": "2010-2016_Cadillac WWTP_District Compliance File.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/020-9d6ad860baaf.pdf",
+      "pages": [
+        56,
+        228,
+        230
+      ]
+    },
+    {
       "catalog": "lab-documents.json",
       "id": "lab-073-baec26cc8733",
       "name": "Docs from WWTP.pdf",
@@ -288,6 +299,33 @@
   "duplicateCandidates": {
     "exact_hash_groups": [],
     "render_identical_byte_different_groups": [],
-    "normalized_text_candidate_groups": []
+    "normalized_text_candidate_groups": [
+      {
+        "fingerprint": "418dec9b29e13a61a188640334c303e3553739149ee37ac576cd2a6222054711",
+        "records": [
+          {
+            "catalog": "compliance-documents.json",
+            "id": "043-df3a021aae9b",
+            "name": "Violation Notice Attachment - Effluent Limitation and Reported Values Table (sheet 2 of 5).jpg",
+            "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/043-df3a021aae9b.jpg",
+            "sha256": "df3a021aae9bf6966d32f93799159e5da43317fef5f93516828597d2ddc072a5"
+          },
+          {
+            "catalog": "compliance-documents.json",
+            "id": "044-8aff38e6117f",
+            "name": "Violation Notice Attachment - Effluent Limitation and Reported Values Table (sheet 3 of 5).jpg",
+            "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/044-8aff38e6117f.jpg",
+            "sha256": "8aff38e6117f6794b7b74f8cd28ad0a370a82167cc99cf64495d1d66d8d48159"
+          },
+          {
+            "catalog": "compliance-documents.json",
+            "id": "045-73d18c275621",
+            "name": "Violation Notice Attachment - Effluent Limitation and Reported Values Table (sheet 4 of 5).jpg",
+            "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/045-73d18c275621.jpg",
+            "sha256": "73d18c275621f25d280d7f2186a530a8f6137e5b45e4887fbb6a671d0d12bd40"
+          }
+        ]
+      }
+    ]
   }
 }

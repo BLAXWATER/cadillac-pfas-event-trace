@@ -1,0 +1,62 @@
+[
+  {
+    "id": "001-4e9a0cdf0189",
+    "name": "Cadillac WWTP SIU Information.pdf",
+    "url": "/ipp-docs/001-4e9a0cdf0189.pdf",
+    "year": "2012",
+    "type": "SIU application information",
+    "format": "PDF",
+    "pages": 11,
+    "size": 498131,
+    "sha256": "4e9a0cdf01891e70d6ba197d3ed3a96d1949ca777ff58e7a0cd26818ff307846",
+    "description": "Eleven scanned SIU information sheets. Page 4 identifies Wexford County Landfill LLC, permit 590-13, with 33,600 gallons/day of intermittent process wastewater subject to local limits."
+  },
+  {
+    "id": "002-3da57e8018fb",
+    "name": "Pre-Inspection Report.pdf",
+    "url": "/ipp-docs/002-3da57e8018fb.pdf",
+    "year": "2015",
+    "type": "Pretreatment inspection",
+    "format": "PDF",
+    "pages": 7,
+    "size": 119143,
+    "sha256": "3da57e8018fbdeb2474b90c359352df532d2b0d46fbb00e591841182ae0b49e2",
+    "description": "Pretreatment Compliance Inspection 57515, completed May 13, 2015. The inspection history states that hauled waste accepted at the equalization tank was landfill leachate from the county landfill."
+  },
+  {
+    "id": "003-4d20ff2cea09",
+    "name": "2018_POTW_Oversight_Table.pdf",
+    "url": "/ipp-docs/003-4d20ff2cea09.pdf",
+    "year": "2018",
+    "type": "POTW oversight table",
+    "format": "PDF",
+    "pages": 14,
+    "size": 48518,
+    "sha256": "4d20ff2cea097b75992e4e5cb2a8ed159e482c0867ad1d5b93ba7d7749a34002",
+    "description": "Annual industrial-user oversight table covering permits, flow, inspections, sampling, monitoring, SNC fields, notices and enforcement. Wexford County Landfill LLC appears as an effective SIU."
+  },
+  {
+    "id": "004-e09cc490d763",
+    "name": "2019_POTW_Oversight_Table.pdf",
+    "url": "/ipp-docs/004-e09cc490d763.pdf",
+    "year": "2019",
+    "type": "POTW oversight table",
+    "format": "PDF",
+    "pages": 14,
+    "size": 48775,
+    "sha256": "e09cc490d763e734c7b8735143d937dca6f188a620956820ebe0c5e94258b2e7",
+    "description": "Distinct annual oversight table for the next reporting cycle. It carries Wexford County Landfill LLC as an effective SIU and reports the industrial-user monitoring and SNC fields separately from the 2018 table."
+  },
+  {
+    "id": "005-b1f62dff2c41",
+    "name": "2019_SIU-CIU_List.pdf",
+    "url": "/ipp-docs/005-b1f62dff2c41.pdf",
+    "year": "2019",
+    "type": "SIU/CIU inventory",
+    "format": "PDF",
+    "pages": 6,
+    "size": 48663,
+    "sha256": "b1f62dff2c41ae0e8d8e44deec46559e56518bb4c74a10237812493dbca44e03",
+    "description": "Industrial-user inventory with facility, address, legal-name, contact and regulatory fields. The Wexford entry lists the Manton site and American Waste as the legal name."
+  }
+]

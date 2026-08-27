@@ -1,0 +1,36 @@
+{
+  "stats": {
+    "sourceFilesReviewed": 6,
+    "finalDistinctRecords": 5,
+    "exactPublishedDuplicatesSuppressed": 1,
+    "publishedBytes": 763230
+  },
+  "methods": [
+    "SHA-256 comparison against every published source asset and matching master-file copies",
+    "PDF page counts, embedded metadata and normalized per-page text comparison",
+    "Archival OCR cross-check for scanned PDFs, followed by rendered-page visual verification",
+    "Full-page review of every retained record, including split-page oversight tables"
+  ],
+  "decisions": [
+    {
+      "name": "Cadillac WWTP IPP 2011.pdf",
+      "reason": "Suppressed from Category 04 because its SHA-256 hash exactly matches the 50-page source already published in Category 02. The existing source remains available and is linked from the event trace."
+    },
+    {
+      "name": "Cadillac WWTP SIU Information.pdf",
+      "reason": "Retained. It is a distinct 11-page scanned SIU packet; OCR was treated as an aid and the Wexford sheet was verified from the rendered page."
+    },
+    {
+      "name": "Pre-Inspection Report.pdf",
+      "reason": "Retained. This is the seven-page 2015 Pretreatment Compliance Inspection 57515, not the different 2014 pre-inspection report already used in the timeline."
+    },
+    {
+      "name": "2018_POTW_Oversight_Table.pdf and 2019_POTW_Oversight_Table.pdf",
+      "reason": "Retained as separate annual records. Their byte hashes, normalized text hashes, metadata dates and reporting-cycle contents differ."
+    },
+    {
+      "name": "2019_SIU-CIU_List.pdf",
+      "reason": "Retained as a distinct six-page facility and contact inventory, not a copy of either annual oversight table."
+    }
+  ]
+}

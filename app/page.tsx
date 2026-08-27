@@ -20,6 +20,8 @@ import complianceAudit from "./compliance-audit.json";
 import complianceDocuments from "./compliance-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
+import ippAudit from "./ipp-audit.json";
+import ippDocuments from "./ipp-documents.json";
 import npdesAudit from "./npdes-audit.json";
 import npdesDocuments from "./npdes-documents.json";
 import referenceAudit from "./reference-audit.json";
@@ -100,6 +102,61 @@ const formatBytes = (bytes: number) => {
 };
 
 const events: Event[] = [
+  {
+    year: "2011",
+    date: "2011 reporting year",
+    time: noTime,
+    timeBasis: "Annual IPP report",
+    phase: "Industrial pretreatment",
+    kind: "compliance",
+    category: "04 · Industrial pretreatment",
+    title: "Wexford landfill copper SNC and ownership change documented",
+    finding: "Cadillac's 2011 annual IPP report states that Wexford DPW Landfill was sold to American Waste and renamed Wexford County Landfill LLC. Its SNC attachments list the landfill for technical-review-criteria violations and identify copper as the violation, with phone calls, meetings and IPP reports recorded as enforcement actions throughout 2011.",
+    significance: "Establishes the landfill as a regulated Cadillac industrial user and documents significant noncompliance (SNC) years before the PFAS investigation.",
+    sources: [{
+      name: "Cadillac WWTP IPP 2011.pdf",
+      url: "/npdes-docs/038-8191c7e18aac.pdf",
+      pages: 50,
+      page: 25,
+      format: "PDF",
+      role: "Primary source",
+      result: "Scanned annual IPP report; pages 17, 24 and 25 document the ownership/name change, SNC criterion and copper enforcement entry.",
+      clock: {
+        eventStamp: "2011 reporting year · time not stated",
+        basis: "Annual IPP reporting period",
+        created: "2013-06-07",
+        note: "The PDF creation date is a later scan timestamp. The underlying record covers calendar year 2011.",
+      },
+    }],
+  },
+  {
+    year: "2012",
+    date: "2012-03-26",
+    isoDate: "2012-03-26",
+    time: noTime,
+    timeBasis: "Embedded PDF creation date; form page undated",
+    phase: "Industrial-user record",
+    kind: "regulatory",
+    category: "04 · Industrial pretreatment",
+    title: "Wexford County Landfill listed as a Cadillac SIU",
+    finding: "The Cadillac WWTP SIU packet identifies Wexford County Landfill LLC under permit 590-13 and records 33,600 gallons per day of intermittent process wastewater subject to local limits.",
+    significance: "Provides a permit-linked volume and pretreatment classification for the landfill-to-WWTP relationship.",
+    sources: [{
+      name: "Cadillac WWTP SIU Information.pdf · page 4",
+      url: "/ipp-docs/001-4e9a0cdf0189.pdf",
+      pages: 11,
+      page: 4,
+      format: "PDF",
+      role: "Source page",
+      result: "Rendered SIU form confirms the company, permit number, wastewater type, 33,600-gallon daily volume, intermittent discharge and local-limit designation.",
+      clock: {
+        eventStamp: "2012-03-26 · time not stated",
+        basis: "Embedded PDF creation date; source form itself is undated",
+        created: "2012-03-26",
+        note: "OCR was used to locate the scanned page; every reported field was checked against the rendered image.",
+      },
+    }],
+  },
   {
     year: "2014",
     date: "2014-10-10",
@@ -591,6 +648,8 @@ export default function Home() {
   const [documentType, setDocumentType] = useState("All records");
   const [permitQuery, setPermitQuery] = useState("");
   const [permitType, setPermitType] = useState("All permit records");
+  const [ippQuery, setIppQuery] = useState("");
+  const [ippType, setIppType] = useState("All IPP records");
   const [complianceQuery, setComplianceQuery] = useState("");
   const [complianceType, setComplianceType] = useState("All compliance records");
   const [referenceQuery, setReferenceQuery] = useState("");
@@ -614,6 +673,13 @@ export default function Home() {
   const filteredPermitDocuments = npdesDocuments.filter((document) => {
     const matchesType = permitType === "All permit records" || document.type === permitType;
     const matchesQuery = !normalizedPermitQuery || `${document.name} ${document.year} ${document.type} ${document.format}`.toLowerCase().includes(normalizedPermitQuery);
+    return matchesType && matchesQuery;
+  });
+  const ippTypes = ["All IPP records", ...Array.from(new Set(ippDocuments.map((document) => document.type)))];
+  const normalizedIppQuery = ippQuery.trim().toLowerCase();
+  const filteredIppDocuments = ippDocuments.filter((document) => {
+    const matchesType = ippType === "All IPP records" || document.type === ippType;
+    const matchesQuery = !normalizedIppQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedIppQuery);
     return matchesType && matchesQuery;
   });
   const complianceTypes = ["All compliance records", ...Array.from(new Set(complianceDocuments.map((document) => document.type)))];
@@ -767,6 +833,41 @@ export default function Home() {
             ))}
           </div>
           {filteredPermitDocuments.length === 0 && <p className="document-empty">No permit records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="ipp-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 04 · INDUSTRIAL PRETREATMENT &amp; SIU RECORDS</p><h2 id="ipp-library-title">Search {ippDocuments.length} verified IPP records</h2></div>
+            <p>The retained batch covers Cadillac industrial-user forms, POTW oversight, SIU/CIU inventory data and a pretreatment compliance inspection. OCR was used only to locate text in scanned pages; reported fields were verified against the rendered originals.</p>
+          </div>
+          <div className="reference-summary" aria-label="Industrial pretreatment archive audit summary">
+            <div><FileText /><span><strong>{ippAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
+            <div><CheckCircle2 /><span><strong>{ippAudit.stats.exactPublishedDuplicatesSuppressed}</strong> published duplicate excluded</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(ippAudit.stats.publishedBytes)}</strong> published</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 04 duplicate and OCR decisions</summary>
+            <div className="audit-panel">
+              <p>{ippAudit.methods.join(" · ")}</p>
+              <ul>{ippAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search industrial pretreatment records</span><input value={ippQuery} onChange={(event) => setIppQuery(event.target.value)} placeholder="Search filename, year, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter industrial pretreatment records by type</span><select value={ippType} onChange={(event) => setIppType(event.target.value)}>{ippTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredIppDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredIppDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredIppDocuments.length === 0 && <p className="document-empty">No industrial pretreatment records match this search.</p>}
         </section>
 
         <section className="document-library permit-library" aria-labelledby="compliance-library-title">

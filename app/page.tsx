@@ -97,6 +97,11 @@ const pdf = (
   clock,
 });
 
+const sourcePreviewFromUrl = (url: string) => {
+  const fileName = url.split("/").pop();
+  return fileName ? `/source-previews/${fileName.replace(/\.pdf$/i, ".jpg")}` : undefined;
+};
+
 const ippSource = (
   name: string,
   url: string,
@@ -106,6 +111,7 @@ const ippSource = (
 ): Source => ({
   name,
   url,
+  preview: sourcePreviewFromUrl(url),
   pages,
   format: "PDF",
   role: "Primary source",
@@ -122,6 +128,7 @@ const archivedSource = (
 ): Source => ({
   name,
   url,
+  preview: sourcePreviewFromUrl(url),
   pages,
   format: "PDF",
   role: "Primary source",
@@ -152,6 +159,7 @@ const events: Event[] = [
     sources: [{
       name: "Cadillac WWTP IPP 2011.pdf",
       url: "/npdes-docs/038-8191c7e18aac.pdf",
+      preview: "/source-previews/038-8191c7e18aac.jpg",
       pages: 50,
       page: 25,
       format: "PDF",
@@ -180,6 +188,7 @@ const events: Event[] = [
     sources: [{
       name: "Cadillac WWTP SIU Information.pdf · page 4",
       url: "/ipp-docs/001-4e9a0cdf0189.pdf",
+      preview: "/source-previews/001-4e9a0cdf0189.jpg",
       pages: 11,
       page: 4,
       format: "PDF",
@@ -683,6 +692,7 @@ const events: Event[] = [
     sources: [{
       name: "2025-03-05__3055689922791814885__Cadillac MAHL.msg.pdf · page 1",
       url: "/ipp-docs/007-9aecbfcf4abc.pdf",
+      preview: "/source-previews/007-9aecbfcf4abc.jpg",
       pages: 204,
       page: 1,
       format: "PDF",
@@ -1073,7 +1083,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
             </Button>}
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
-        {source.preview ? <img src={source.preview} alt={`First-page preview of ${source.name}`} className="source-preview" /> : <div className="missing-preview"><AlertTriangle />Original file not loaded</div>}
+        {source.preview ? <img src={source.preview} alt={`Source-page preview of ${source.name}`} className="source-preview" /> : <div className="missing-preview"><FileText /><span>Preview not available</span><small>Open the complete source below.</small></div>}
         <div className="source-tooltip-copy">
           <p className="source-role">{source.role}</p>
           <p className="source-full-name">{source.name}</p>
@@ -1085,7 +1095,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
             {source.clock.modified && <div><span>PDF modified</span><strong>{source.clock.modified}</strong></div>}
             <p>{source.clock.note}</p>
           </div>
-          <p className="source-hint">{linked ? "Click to open the complete source in this window." : "Exact filename preserved; source acquisition required."}</p>
+          <p className="source-hint">{linked ? external ? "Click to open the complete archived source in a new tab." : "Click to open the complete source in this window." : "Exact filename preserved; source acquisition required."}</p>
         </div>
       </TooltipContent>
     </Tooltip>
@@ -1175,7 +1185,7 @@ export default function Home() {
             <h1>Cadillac PFAS Event Trace</h1>
             <p className="header-copy">Follow the hierarchy from year to event timestamp to the exact source document, with separate clocks for the event, the issued record and embedded file metadata.</p>
           </div>
-          <div className="integrity-note"><CheckCircle2 /><div><strong>Original-source rule</strong><span>Hover a filename for its preview and result. Click to open the complete document without leaving the trace.</span></div></div>
+          <div className="integrity-note"><CheckCircle2 /><div><strong>Original-source rule</strong><span>Hover a filename for its source-page preview and result. Click to open the complete document.</span></div></div>
         </header>
 
         <section className="path-strip" aria-label="Investigative pathway">

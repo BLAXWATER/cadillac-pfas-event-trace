@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 525);
-  assert.equal(externalFiles, 561);
+  assert.equal(localFiles, 523);
+  assert.equal(externalFiles, 610);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -120,9 +120,9 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 971);
-  assert.equal(audit.stats.pdfPages, 10872);
-  assert.equal(audit.stats.imageRecords, 2);
+  assert.equal(audit.stats.pdfRecords, 1010);
+  assert.equal(audit.stats.pdfPages, 11300);
+  assert.equal(audit.stats.imageRecords, 8);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
   assert.equal(audit.stats.unreadableRecords, 0);
@@ -131,6 +131,23 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.renderIdenticalByteDifferentGroups, 0);
   assert.equal(audit.manualReviewResolution.status, "visually-verified");
   assert.equal(audit.manualReviewResolution.pagesReviewed, audit.stats.manualReviewPages);
+});
+
+test("compliance archive audit preserves distinct records and excludes verified overlaps", async () => {
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "compliance-audit.json"), "utf8"));
+
+  assert.equal(audit.stats.sourceFilesReviewed, 59);
+  assert.equal(audit.stats.finalDistinctRecords, 49);
+  assert.equal(catalog.length, audit.stats.finalDistinctRecords);
+  assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
+  assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
+  assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 6);
+  assert.equal(audit.stats.analystAuthoredReportsExcluded, 4);
+  assert.equal(audit.stats.reviewedPages, 500);
+  assert.equal(audit.stats.ocrPages, 274);
+  assert.equal(catalog.some((row) => /Truth-First|TruthFirst/i.test(row.name)), false);
+  assert.equal(catalog.some((row) => /^(?:duplicate|copy)[-_ ]/i.test(row.name)), false);
 });
 
 test("local public assets contain no byte-identical redundant copies", async () => {

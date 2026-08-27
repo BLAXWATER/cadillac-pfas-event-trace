@@ -549,6 +549,16 @@ def run_full(records: list[dict], inventory_payload: dict, workers: int) -> dict
         cache_path = cache_dir / f"{expected_hash}.json"
         if cache_path.exists():
             row = json.loads(cache_path.read_text(encoding="utf-8"))
+            # Audit evidence is content-addressed and reusable, but record identity
+            # belongs to the catalog being audited. A file may also appear in a
+            # source-folder audit under a different name or URL.
+            row.update({
+                "catalog": record["catalog"],
+                "id": record.get("id"),
+                "name": record.get("name"),
+                "url": record.get("url"),
+                "format": record["format_inferred"],
+            })
         else:
             pending.append((index, record, inventory, cache_path))
             continue

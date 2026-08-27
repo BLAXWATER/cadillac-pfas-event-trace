@@ -1,15 +1,17 @@
 {
   "stats": {
-    "sourceFilesReviewed": 6,
-    "finalDistinctRecords": 5,
+    "sourceFilesReviewed": 8,
+    "finalDistinctRecords": 7,
     "exactPublishedDuplicatesSuppressed": 1,
-    "publishedBytes": 763230
+    "publishedBytes": 17562303
   },
   "methods": [
     "SHA-256 comparison against every published source asset and matching master-file copies",
     "PDF page counts, embedded metadata and normalized per-page text comparison",
     "Archival OCR cross-check for scanned PDFs, followed by rendered-page visual verification",
-    "Full-page review of every retained record, including split-page oversight tables"
+    "Full-page review of every retained record, including split-page oversight tables",
+    "Cross-document and within-document normalized page-text comparison to disclose reused appendices without treating materially distinct records as duplicates",
+    "Rendered review of image-only O&M manual excerpts and blank trailing pages in the MAHL packages"
   ],
   "decisions": [
     {
@@ -31,6 +33,10 @@
     {
       "name": "2019_SIU-CIU_List.pdf",
       "reason": "Retained as a distinct six-page facility and contact inventory, not a copy of either annual oversight table."
+    },
+    {
+      "name": "December 2024 MAHL report and March 2025 EGLE review package",
+      "reason": "Retained as materially distinct records. The 204-page March package contains an agency-review email, a revised January 2025 report and supporting material; 122 of its normalized pages match pages in the standalone 131-page December report, and pages 101-148 repeat internally as pages 153-200. Exact master copies found under the Duplicates folder were not republished. Image-only O&M excerpts were visually verified; the March package's final four pages are blank."
     }
   ]
 }

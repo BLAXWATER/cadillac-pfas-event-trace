@@ -58,5 +58,29 @@
     "size": 48663,
     "sha256": "b1f62dff2c41ae0e8d8e44deec46559e56518bb4c74a10237812493dbca44e03",
     "description": "Industrial-user inventory with facility, address, legal-name, contact and regulatory fields. The Wexford entry lists the Manton site and American Waste as the legal name."
+  },
+  {
+    "id": "006-16b162c2357b",
+    "name": "2024-12-16__-7067429303309482327__854440 Cadillac MAHL Report Dec2024_Combined Final (2).pdf.pdf",
+    "url": "/ipp-docs/006-16b162c2357b.pdf",
+    "year": "2024",
+    "type": "MAHL/local limits report",
+    "format": "PDF",
+    "pages": 131,
+    "size": 6106949,
+    "sha256": "16b162c2357bb834139f58ffa91cf120c0c029bbca8c420b32d96b3107b3d846",
+    "description": "Standalone December 2024 MAHL/local-limits report evaluating Cadillac's maximum allowable headworks loadings and proposed industrial local limits, with calculations, sampling tables, laboratory data, the NPDES permit and WQBEL support."
+  },
+  {
+    "id": "007-9aecbfcf4abc",
+    "name": "2025-03-05__3055689922791814885__Cadillac MAHL.msg.pdf",
+    "url": "/ipp-docs/007-9aecbfcf4abc.pdf",
+    "year": "2025",
+    "type": "Agency review correspondence",
+    "format": "PDF",
+    "pages": 204,
+    "size": 10692124,
+    "sha256": "9aecbfcf4abc8de85cafd1c9a9287e683a62585771316b3ffcfb2cbd864d06f5",
+    "description": "EGLE review email and January 2025 MAHL revision package. Claire Lowe identifies remaining inconsistencies and typographical errors and says some proposed limits require clarification before approval; the package includes the revised report, calculations, laboratory, permit and WQBEL support."
   }
 ]

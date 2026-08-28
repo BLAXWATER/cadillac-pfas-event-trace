@@ -7,14 +7,14 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1336,
-    "pdfRecords": 1211,
-    "pdfPages": 13162,
+    "catalogRecords": 1390,
+    "pdfRecords": 1264,
+    "pdfPages": 16236,
     "imageRecords": 10,
-    "embeddedTextPages": 10560,
-    "ocrPages": 2612,
-    "ocrPagesWithText": 2326,
-    "manualReviewPages": 109,
+    "embeddedTextPages": 13209,
+    "ocrPages": 3037,
+    "ocrPagesWithText": 2725,
+    "manualReviewPages": 128,
     "hashFailures": 0,
     "unreadableRecords": 0,
     "pageCountFailures": 0,
@@ -25,7 +25,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 109,
+    "pagesReviewed": 128,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -312,6 +312,121 @@
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/010-1aba682de0b8.pdf",
       "pages": [
         12
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "014-cd6caa7bcb4d",
+      "name": "December 3 2018 City Council Packet [Item 1086].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/014-cd6caa7bcb4d.pdf",
+      "pages": [
+        21,
+        23
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "022-2ab7abed09c1",
+      "name": "October 21 2024 City Council Packet [Item 2614].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/022-2ab7abed09c1.pdf",
+      "pages": [
+        87
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "023-6f6cf52b6bd7",
+      "name": "November 18 2024 City Council Packet [Item 2637].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/023-6f6cf52b6bd7.pdf",
+      "pages": [
+        38,
+        40
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "024-caa8a43f577b",
+      "name": "December 2 2024 City Council Packet [Item 2640].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/024-caa8a43f577b.pdf",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "026-c28f41e8fa81",
+      "name": "February 18 2025 City Council Packet [Item 2706].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/026-c28f41e8fa81.pdf",
+      "pages": [
+        89
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "028-df900812de0e",
+      "name": "April 21 2025 City Council Packet [Item 2745].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/028-df900812de0e.pdf",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "030-03967a1eee7e",
+      "name": "June 2 2025 City Council Packet [Item 2772].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/030-03967a1eee7e.pdf",
+      "pages": [
+        83,
+        88
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "032-31976a4c871b",
+      "name": "August 4 2025 City Council Packet [Item 2791].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/032-31976a4c871b.pdf",
+      "pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "040-2297a973ba4b",
+      "name": "March 2 2026 City Council Packet [Item 2884].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/040-2297a973ba4b.pdf",
+      "pages": [
+        14,
+        19,
+        20
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "045-25d3c10b9ea8",
+      "name": "May 21 2018 City Council Packet [Item 1047].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/4535081d2398301cd01bb92501f2fc2e1a83e3ed/public/findings-docs/045-25d3c10b9ea8.pdf",
+      "pages": [
+        110
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "048-c3df2a52ffef",
+      "name": "March 17 2025 City Council Packet [Item 2731].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/4535081d2398301cd01bb92501f2fc2e1a83e3ed/public/findings-docs/048-c3df2a52ffef.pdf",
+      "pages": [
+        34,
+        68
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "051-d53c2d30bb89",
+      "name": "September 26 2025 City Council Special Meeting Packet [Item 2814].pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/4535081d2398301cd01bb92501f2fc2e1a83e3ed/public/findings-docs/051-d53c2d30bb89.pdf",
+      "pages": [
+        20
       ]
     },
     {

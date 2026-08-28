@@ -7,14 +7,14 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1398,
-    "pdfRecords": 1272,
-    "pdfPages": 16292,
+    "catalogRecords": 1419,
+    "pdfRecords": 1293,
+    "pdfPages": 16508,
     "imageRecords": 10,
-    "embeddedTextPages": 13263,
-    "ocrPages": 3039,
-    "ocrPagesWithText": 2727,
-    "manualReviewPages": 128,
+    "embeddedTextPages": 13341,
+    "ocrPages": 3177,
+    "ocrPagesWithText": 2864,
+    "manualReviewPages": 266,
     "hashFailures": 0,
     "unreadableRecords": 0,
     "pageCountFailures": 0,
@@ -25,8 +25,8 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 128,
-    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
+    "pagesReviewed": 266,
+    "finding": "Every low-confidence page was visually inspected. They are valid scan-only or sparse-content pages, including faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, safety-data sheets, public-body records, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
     {

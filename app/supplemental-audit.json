@@ -1,11 +1,11 @@
 {
   "stats": {
-    "suppliedFiles": 413,
-    "newDistinctRecords": 53,
-    "exactExistingRecordsReused": 4,
-    "duplicateCopiesSuppressed": 3,
+    "suppliedFiles": 436,
+    "newDistinctRecords": 74,
+    "exactExistingRecordsReused": 5,
+    "duplicateCopiesSuppressed": 4,
     "outOfScopeExcluded": 353,
-    "publishedBytes": 243772528
+    "publishedBytes": 263546039
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -14,7 +14,8 @@
     "Rendered visual inspection of every short and medium record, all council-packet pages and targeted evidentiary pages in long audited reports",
     "Cross-check against existing manifests and research indexes",
     "Full page-by-page audit of 390 archive PDFs totaling 13,526 pages, including OCR on 2,615 scan-required pages",
-    "Rendered inspection of all 88 visually sparse pages and native-text inspection of three DOCX containers"
+    "Rendered inspection of all 88 visually sparse pages and native-text inspection of three DOCX containers",
+    "Category 17-19 intake: all 240 supplied PDF pages rendered and reviewed, including 138 retained pages requiring image-based review; hashes, page counts and metadata were cross-checked before retention or suppression"
   ],
   "decisions": [
     {
@@ -68,6 +69,22 @@
     {
       "name": "September 8 2017 WWTP solids-analysis bench sheet photograph",
       "reason": "Retained once in its corrected upright orientation after page rendering and OCR. IMG_0033-cas.pdf is the same underlying photograph in a sideways container and is suppressed. The catalog describes only the visible solids-analysis sheet: its leachate column is blank, so filename references to gallons hauled or additional hidden sheets are not promoted as findings."
+    },
+    {
+      "name": "Category 17 SDS and chemical-product records",
+      "reason": "Eighteen distinct safety-data records were retained after hash, page, metadata and rendered-content review. Fluoropolymer and fluoroelastomer records are described as product-level source-screening evidence, not as proof of facility use or PFAS discharge; proprietary and nonfluorinated products remain contextual records."
+    },
+    {
+      "name": "01-15-2018 - c-scans-HIGH-CONTRAST.pdf",
+      "reason": "Exact SHA-256 match to the 20-page record already cataloged in the industrial-pretreatment library. The established source is reused and no second copy is published."
+    },
+    {
+      "name": "2019-11-06 Wexford County Board of Commissioners minutes",
+      "reason": "The supplied file is a later OCR/searchable derivative of the same four-page minutes already preserved as the canonical original. Metadata records the 2026 OCR conversion, and reference manifests confirm the same-content relationship. The derivative is suppressed and its duplicate label is not propagated."
+    },
+    {
+      "name": "Public-body and technical-context records",
+      "reason": "The 2025 MSP OMA report, 2022 Wexford County board packet and 2016 North Carolina dioxane report have distinct hashes and roles. The OMA report is procedural evidence rather than an adjudicated environmental finding; the board packet preserves landfill groundwater-monitoring budget context; the dioxane report is external methodology, not Cadillac data."
     }
   ]
 }

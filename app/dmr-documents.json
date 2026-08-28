@@ -2638,5 +2638,17 @@
     "pages": 6,
     "size": 124190,
     "sha256": "583b88829be7849b306e263e11dcb1ff531863978d9af634a12f3f9e37314fbd"
+  },
+  {
+    "id": "271-16ce608395de",
+    "name": "2026-04-02 - RE Cadillac WWTP - DMRQA Study 45.msg.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/c152ca117801b3ae5888efcaea2b4d354ed92298/public/dmr-docs/271-16ce608395de.pdf",
+    "year": "2026",
+    "type": "DMR-QA correspondence",
+    "format": "PDF",
+    "pages": 2,
+    "size": 325429,
+    "sha256": "16ce608395de7bc52a28a67b57d6a38a559d07dcf4074415b12d13820d03557a",
+    "description": "Browser-readable rendering of the April 2, 2026 DMR-QA Study 45 email thread. The original MSG is preserved in the same immutable source commit."
   }
 ]

@@ -1,19 +1,20 @@
 {
   "stats": {
-    "sourceFilesReviewed": 74,
-    "sourcePdfRecords": 74,
-    "reviewedPages": 236,
+    "sourceFilesReviewed": 78,
+    "sourcePdfRecords": 78,
+    "reviewedPages": 246,
     "sourceOcrPages": 5,
     "sourceOcrPagesWithText": 5,
-    "actualDuplicateGroupsRemoved": 2,
-    "actualDuplicateFilesRemoved": 2,
+    "actualDuplicateGroupsRemoved": 4,
+    "actualDuplicateFilesRemoved": 4,
     "crossCategoryCopiesReferencedElsewhere": 1,
     "retainedMultiVersionSubmissionGroups": 14,
-    "finalDistinctRecords": 72,
-    "publishedPages": 230,
-    "publishedOcrPages": 2,
-    "publishedOcrPagesWithText": 2,
-    "publishedBytes": 11714606,
+    "finalDistinctRecords": 73,
+    "publishedPages": 233,
+    "publishedOcrPages": 0,
+    "publishedOcrPagesWithText": 0,
+    "publishedBytes": 11720737,
+    "existingCanonicalRecordsReplaced": 1,
     "ambiguousFilenameLabelsRemoved": 30
   },
   "methods": [
@@ -21,7 +22,8 @@
     "Page-count, PDF metadata and embedded-text review for all 236 supplied pages",
     "OCR on all five scan-only pages, with a second page-sequence and content-integrity verification",
     "Rendered-page, perceptual hash, submission ID, version, attachment list and revision-history comparison",
-    "Conservative retention of every substantively changed portal revision"
+    "Conservative retention of every substantively changed portal revision",
+    "Born-digital versus scan-derivative comparison using submission ID, version, fields, page sequence, rendered pages and OCR text"
   ],
   "decisions": [
     {
@@ -42,7 +44,15 @@
     },
     {
       "name": "Five OCR pages",
-      "reason": "All five scan-only pages produced readable OCR. Three belonged to the excluded scan duplicate; the two retained OCR pages are the unique 2018 IPP PFAS summary report."
+      "reason": "All five scan-only pages produced readable OCR. Three belonged to the excluded HNQ scan duplicate; the remaining two were the HNJ scan derivative now replaced by the page-identical born-digital portal original."
+    },
+    {
+      "name": "HNF-P7H3-DCN87 interim report",
+      "reason": "The two supplied files are byte-identical exports of the same July 30, 2018 submission. One canonical born-digital copy is retained as a new record."
+    },
+    {
+      "name": "HNJ-P0ZX-8AVDS summary report",
+      "reason": "The two newly supplied files are byte-identical and reproduce the same submission, version, fields and pages as the existing scan. The searchable born-digital copy replaces that scan; no second record is created."
     }
   ],
   "removed": [
@@ -55,6 +65,21 @@
       "source": "HQB-6T2F-9M76H_v1 (1).pdf",
       "sha256": "eda79e4d4c2deac573bef3ac2f365be72790e370da31310eb4b1785662e94db8",
       "reason": "Second HQB-6T2F-9M76H v1 export created one second from the retained copy with the same pages and perceptual page hashes."
+    },
+    {
+      "source": "26_HNF_P7H3_DCN87_V1.pdf",
+      "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
+      "reason": "Byte-identical repeat of the retained HNF-P7H3-DCN87 version 1 portal export."
+    },
+    {
+      "source": "27_HNJ_P0ZX_8AVDS_V1.pdf",
+      "sha256": "7cac269c4207f212eae8b5587cda7a9c38ed8db720560a4b9c803041f383cc97",
+      "reason": "Byte-identical repeat of the retained born-digital HNJ-P0ZX-8AVDS version 1 portal export."
+    },
+    {
+      "source": "HNJ-P0ZX-8AVDS_Compatibility.pdf",
+      "sha256": "efa69c9137b1936e7a98798fe5998e245bd21fc31f2315b7525664a35942bbef",
+      "reason": "Page-identical scan derivative replaced by the searchable born-digital portal original. The older scan remains recoverable in repository history."
     }
   ],
   "reused": []

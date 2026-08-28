@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suppliedFiles": 107,
-    "finalDistinctRecords": 103,
-    "newDistinctRecords": 96,
+    "suppliedFiles": 108,
+    "finalDistinctRecords": 104,
+    "newDistinctRecords": 97,
     "existingRecordsReused": 6,
     "existingRecordReplaced": 1,
     "duplicateCopiesSuppressed": 4,
-    "ocrReviewedPdfs": 23,
-    "ocrReviewedPages": 190,
-    "publishedBytes": 109250631
+    "ocrReviewedPdfs": 24,
+    "ocrReviewedPages": 192,
+    "publishedBytes": 109393890
   },
   "methods": [
     "SHA-256 comparison within the 91-file category and against every catalog plus timeline source asset",
@@ -17,7 +17,8 @@
     "Outlook message body, sent-time and embedded-attachment SHA-256 comparison",
     "OCR of all 30 pages in eight image-only PDFs, followed by rendered-page review",
     "Full-page visual comparison of the two J19915 variants",
-    "Workbook inspection plus page-by-page text and visual review of the 16-record A12-A24 PFAS source set"
+    "Workbook inspection plus page-by-page text and visual review of the 16-record A12-A24 PFAS source set",
+    "Two-pass OCR and rendered-page verification of the image-only April 18, 2018 DEQ PFAS-source follow-up letter"
   ],
   "decisions": [
     {
@@ -47,6 +48,10 @@
     {
       "name": "A12-A24 PFAS data, maps and agency records",
       "reason": "All 16 source records have distinct SHA-256 hashes and distinct formats, dates or evidentiary roles. The workbook, complete printable compilation, analytical subsets, dated heat maps, MPART presentations, public notice, management plan and biosolids guidance are preserved without applying duplicate labels."
+    },
+    {
+      "name": "April 18, 2018 DEQ PFAS-source follow-up",
+      "reason": "The two-page agency letter is not a duplicate of the seven-page same-date Cadillac email package. It carries different sender, purpose and content: DEQ explains the landfill-leachate sampling initiative and the revised alternative-plan request deadline."
     }
   ]
 }

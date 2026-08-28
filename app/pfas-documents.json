@@ -1248,5 +1248,18 @@
     "size": 359976,
     "sha256": "032a2e728f83ff129eb97bf736da87db1d6e7e3ebcf5c9676743035f21ecfc38",
     "description": "May 2025 EGLE PFAS-and-biosolids information record. It is retained as agency guidance and regulatory context rather than as a Cadillac-specific laboratory result."
+  },
+  {
+    "id": "097-e13fc785334f",
+    "name": "2018-04-18 - DEQ PFAS Source Evaluation Follow Up - Cadillac WWTP.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/pfas-docs/097-e13fc785334f.pdf",
+    "year": "2018",
+    "category": "PFAS monitoring",
+    "type": "Agency PFAS correspondence",
+    "format": "PDF",
+    "pages": 2,
+    "size": 143259,
+    "sha256": "e13fc785334ff3ae00fd36ed88c23332dbd56238910a92ffa498814c00c15acc",
+    "description": "April 18, 2018 DEQ PFAS-source follow-up to Cadillac WWTP describing the landfill-leachate sampling initiative, encouraging coordination with landfill customers and moving the extension or alternative-monitoring-plan request deadline to May 8, 2018. Both scan-only pages were OCR-verified."
   }
 ]

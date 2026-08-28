@@ -1,0 +1,53 @@
+{
+  "batch": "2026-08-28 named Dump intake",
+  "stats": {
+    "namedPdfFiles": 49,
+    "pdfPages": 321,
+    "embeddedTextPages": 283,
+    "ocrPages": 38,
+    "ocrPagesWithText": 38,
+    "manualReviewPages": 0,
+    "exactCatalogMatches": 28,
+    "exactIntraBatchRepeatFiles": 6,
+    "renderIdenticalLibraryMatches": 2,
+    "exactTimelineOrRepositoryMatches": 6,
+    "newDistinctRecords": 5,
+    "existingCanonicalRecordsReplaced": 1,
+    "supersededDefectiveDerivativesSuppressed": 1,
+    "extraUnrequestedFilesIgnored": 1
+  },
+  "methods": [
+    "SHA-256 comparison across all 49 named PDFs, every evidence catalog, the deployed timeline assets and complete repository history",
+    "Page-count, normalized text, rendered-page sequence and perceptual-page comparison for every non-exact match",
+    "OCR on all 38 pages without sufficient embedded text; all 38 produced readable text and none required unresolved manual review",
+    "Metadata, submission ID, version, attachment-list and certification comparison for portal-report variants",
+    "Conservative retention of distinct inspections, agency correspondence and portal submissions while suppressing only verified copies or defective derivatives"
+  ],
+  "decisions": [
+    {
+      "name": "Five net-new records",
+      "reason": "The April 18, 2018 DEQ PFAS-source follow-up, July 30, 2018 HNF interim submission and the 2014, 2015 and 2017 N3862 on-site inspections were not present as complete records and were added."
+    },
+    {
+      "name": "HNJ-P0ZX-8AVDS version 1",
+      "reason": "The supplied born-digital file reproduces the same two pages, fields, submission ID and version as the existing scan derivative. The searchable born-digital original replaces the scan without creating a second record."
+    },
+    {
+      "name": "J19915-1 effluent report",
+      "reason": "The supplied 22-page copy is the previously verified derivative with cropped and overlapping pages 15-16. It remains suppressed in favor of the complete reconstructed copy already preserved by the timeline."
+    },
+    {
+      "name": "Companion N3862 inspections",
+      "reason": "The three multi-page on-site inspections are not duplicates of the one-page full-compliance evaluations for the same dates. They were retained as landfill air-quality and operating context, not as PFAS sampling results."
+    },
+    {
+      "name": "Unrequested ZIP",
+      "reason": "Wexford_Cadillac_1x1_Original_Document_Chain.zip was present in the folder but was not one of the 49 files named by the user, so it was not ingested."
+    }
+  ],
+  "preservation": {
+    "immutableCommit": "49922c706588f236e1edbad5fa8996e4c249e330",
+    "sourceFoldersModified": false,
+    "deploymentPolicy": "Large source PDFs are preserved at immutable GitHub paths and omitted from the current deployment after hash verification; lightweight first-page previews remain local."
+  }
+}

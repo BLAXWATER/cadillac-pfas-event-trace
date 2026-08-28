@@ -1,5 +1,18 @@
 [
   {
+    "id": "form-submission-073-c84ac8484363",
+    "name": "2018-07-30 - IPP PFAS interim report - Submission HNF-P7H3-DCN87 v1.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/form-submission-docs/form-submission-073-c84ac8484363.pdf",
+    "year": "2018",
+    "category": "Form submissions (online portal)",
+    "type": "IPP PFAS interim report",
+    "format": "PDF",
+    "pages": 3,
+    "size": 53376,
+    "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
+    "description": "July 2018 IPP PFAS interim submission identifying Wexford County Landfill as the only probable source among the screened facilities, recording source-sampling results as pending and attaching the monitoring plan and screening records."
+  },
+  {
     "id": "form-submission-001-bc95e1748847",
     "name": "2018-10-29 - Biosolids annual report - Submission HNH-M790-67ZPK v1.pdf",
     "url": "/form-submission-docs/form-submission-001-bc95e1748847.pdf",
@@ -26,17 +39,17 @@
     "description": "No Exposure Certification portal record HNH-YJTD-MY6A8, version 1, preserved with its submitted fields, attachment list, revision history and digital certification."
   },
   {
-    "id": "form-submission-030-efa69c9137b1",
+    "id": "form-submission-030-7cac269c4207",
     "name": "2018-11-29 - IPP PFAS summary report - Submission HNJ-P0ZX-8AVDS v1.pdf",
-    "url": "/form-submission-docs/form-submission-030-efa69c9137b1.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/form-submission-docs/form-submission-030-7cac269c4207.pdf",
     "year": "2018",
     "category": "Form submissions (online portal)",
     "type": "IPP PFAS report",
     "format": "PDF",
     "pages": 2,
-    "size": 99370,
-    "sha256": "efa69c9137b1936e7a98798fe5998e245bd21fc31f2315b7525664a35942bbef",
-    "description": "November 2018 IPP PFAS summary identifying Wexford County Landfill sampling and the attached J17646-1 leachate report. The two scan-only pages were OCR-verified."
+    "size": 52125,
+    "sha256": "7cac269c4207f212eae8b5587cda7a9c38ed8db720560a4b9c803041f383cc97",
+    "description": "Born-digital November 2018 IPP PFAS summary identifying Wexford County Landfill sampling, the attached J17646-1 leachate report and the updated monitoring plan. It replaces a page-identical scan derivative with searchable source text."
   },
   {
     "id": "form-submission-033-bffd8eec3c32",

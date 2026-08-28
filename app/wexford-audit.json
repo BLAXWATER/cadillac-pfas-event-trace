@@ -1,24 +1,24 @@
 {
   "stats": {
-    "sourceFilesReviewed": 111,
-    "sourcePdfFiles": 107,
+    "sourceFilesReviewed": 114,
+    "sourcePdfFiles": 110,
     "sourceImageFiles": 1,
-    "sourcePdfPages": 1677,
-    "sourcePagesAndImagesReviewed": 1678,
-    "sourceEmbeddedTextPages": 1277,
+    "sourcePdfPages": 1687,
+    "sourcePagesAndImagesReviewed": 1688,
+    "sourceEmbeddedTextPages": 1287,
     "sourceOcrPages": 401,
     "sourceOcrPagesWithText": 384,
     "sourceManualReviewPages": 8,
-    "finalDistinctRecords": 100,
+    "finalDistinctRecords": 103,
     "existingCatalogRecordsPreserved": 19,
-    "recordsAddedThisPass": 81,
+    "recordsAddedThisPass": 84,
     "exactExistingRecordsReused": 16,
     "actualDuplicateGroupsRemoved": 5,
     "actualDuplicateFilesRemoved": 5,
     "nonPrimaryRecordsExcluded": 9,
     "duplicateLikeLabelsRemoved": 12,
-    "publishedPages": 1581,
-    "publishedBytes": 156772533
+    "publishedPages": 1591,
+    "publishedBytes": 157060646
   },
   "methods": [
     "SHA-256 comparison across all 111 supplied files, all existing evidence catalogs and the previously linked timeline source",
@@ -27,7 +27,7 @@
     "Original-detail visual review of all eight pages left below the OCR confidence threshold, including divider sheets, a faint reverse-side form and large-format maps",
     "Read-only Word rendering of the 41-page authoring copy to verify that it was the excluded Truth-First analytical report rather than a primary agency record",
     "Revision-sensitive review: draft/final, versioned, corrected and differently scoped records were retained whenever their content or metadata was substantively distinct",
-    "Immutable GitHub preservation verification: all 81 new blobs were reread from commit b4705928d16ccaac9701ee43cba04369982c5ab6 and matched their recorded byte counts and SHA-256 hashes"
+    "Immutable GitHub preservation verification: the original 81 blobs were reread from commit b4705928d16ccaac9701ee43cba04369982c5ab6 and the three supplemental on-site inspections from commit 49922c706588f236e1edbad5fa8996e4c249e330, with recorded byte counts and SHA-256 hashes matched"
   ],
   "decisions": [
     {
@@ -60,7 +60,11 @@
     },
     {
       "name": "Source preservation",
-      "reason": "The F: source folder was read only and was not renamed, moved or altered. The 81 new primary records are preserved at immutable GitHub commit b4705928d16ccaac9701ee43cba04369982c5ab6."
+      "reason": "The source folders were read only and were not renamed, moved or altered. The original 81 primary records remain at immutable GitHub commit b4705928d16ccaac9701ee43cba04369982c5ab6, and the three supplemental inspection records are preserved at commit 49922c706588f236e1edbad5fa8996e4c249e330."
+    },
+    {
+      "name": "2014, 2015 and 2017 N3862 on-site inspections",
+      "reason": "Each multi-page Air Quality Division inspection is distinct from the one-page full-compliance evaluation for the same date. All three were retained as landfill operations and regulatory context, not as PFAS sampling evidence."
     }
   ]
 }

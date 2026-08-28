@@ -67,7 +67,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 645);
-  assert.equal(externalFiles, 610);
+  assert.equal(externalFiles, 691);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -119,7 +119,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1255);
+  assert.equal(recordCount, 1336);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -135,9 +135,9 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1131);
-  assert.equal(audit.stats.pdfPages, 11696);
-  assert.equal(audit.stats.imageRecords, 9);
+  assert.equal(audit.stats.pdfRecords, 1211);
+  assert.equal(audit.stats.pdfPages, 13162);
+  assert.equal(audit.stats.imageRecords, 10);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
   assert.equal(audit.stats.unreadableRecords, 0);
@@ -217,6 +217,30 @@ test("online form submissions retain real revisions and exclude only verified du
   assert.equal(new Set(catalog.map((row) => row.sha256)).size, catalog.length);
   assert.equal(catalog.some((row) => /\(1\)|11 - Form Submissions|^PD-MWSX/i.test(row.name)), false);
   assert.equal(catalog.some((row) => row.name.includes("HPD-MWSX-Y48BC")), true);
+});
+
+test("Wexford archive OCRs every page and excludes only verified copies or non-primary derivatives", async () => {
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "wexford-documents.json"), "utf8"));
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "wexford-audit.json"), "utf8"));
+
+  assert.equal(audit.stats.sourceFilesReviewed, 111);
+  assert.equal(audit.stats.sourcePagesAndImagesReviewed, 1678);
+  assert.equal(audit.stats.sourceEmbeddedTextPages + audit.stats.sourceOcrPages, audit.stats.sourcePagesAndImagesReviewed);
+  assert.equal(audit.stats.sourceOcrPagesWithText, 384);
+  assert.equal(audit.stats.sourceManualReviewPages, 8);
+  assert.equal(audit.stats.finalDistinctRecords, 100);
+  assert.equal(catalog.length, audit.stats.finalDistinctRecords);
+  assert.equal(audit.stats.recordsAddedThisPass, 81);
+  assert.equal(audit.stats.exactExistingRecordsReused, 16);
+  assert.equal(audit.stats.actualDuplicateGroupsRemoved, 5);
+  assert.equal(audit.stats.actualDuplicateFilesRemoved, 5);
+  assert.equal(audit.stats.nonPrimaryRecordsExcluded, 9);
+  assert.equal(audit.stats.duplicateLikeLabelsRemoved, 12);
+  assert.equal(audit.stats.publishedPages, 1581);
+  assert.equal(new Set(catalog.map((row) => row.sha256)).size, catalog.length);
+  assert.equal(catalog.some((row) => /Truth-First|TruthFirst/i.test(row.name)), false);
+  assert.equal(catalog.some((row) => /^(?:duplicates?|copy)[-_ ]|~\d+|\(copy\s*\d+\)/i.test(row.name)), false);
+  assert.equal(catalog.some((row) => /rev(?:ision)?\.?\s*1|_v2|version\s*2/i.test(row.name)), true);
 });
 
 test("local public assets contain no byte-identical redundant copies", async () => {

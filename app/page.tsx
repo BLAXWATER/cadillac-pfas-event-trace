@@ -1613,11 +1613,11 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="wexford-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CATEGORY 12 · WEXFORD LANDFILL &amp; RULE 2210(y) RECORDS</p><h2 id="wexford-library-title">Search {wexfordDocuments.length} new verified records</h2></div>
-            <p>This source set preserves the groundwater-discharge application, maps, lagoon analytical package, draft and final authorization, correspondence, stormwater file, current operating license and acquisition provenance. Four exact matches already indexed elsewhere are reused instead of republished.</p>
+            <div><p className="eyebrow">CATEGORY 12 · WEXFORD LANDFILL &amp; RULE 2210(y) RECORDS</p><h2 id="wexford-library-title">Search {wexfordDocuments.length} verified records</h2></div>
+            <p>This source set preserves the groundwater-discharge, landfill-gas, air-permit, compliance, county, leachate, stormwater and site-history record. Exact matches already indexed elsewhere are reused instead of republished, while substantive revisions remain available separately.</p>
           </div>
           <div className="reference-summary" aria-label="Wexford landfill archive audit summary">
-            <div><FileText /><span><strong>{wexfordAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><FileText /><span><strong>{wexfordAudit.stats.recordsAddedThisPass}</strong> added in this pass</span></div>
             <div><CheckCircle2 /><span><strong>{wexfordAudit.stats.exactExistingRecordsReused}</strong> exact records reused</span></div>
             <div><FileSearch /><span><strong>{formatBytes(wexfordAudit.stats.publishedBytes)}</strong> preserved</span></div>
           </div>

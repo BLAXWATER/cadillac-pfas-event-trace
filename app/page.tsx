@@ -1647,7 +1647,7 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="supplemental-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 27, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} newly added records</h2></div>
+            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 28, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} newly added records</h2></div>
             <p>These additions span federal compliance, landfill operations, civic actions, audited finances, historical groundwater context and response planning. Primary records, historical context and secondary research are explicitly distinguished; related records remain separate unless byte and rendered-content review proves they are the same document.</p>
           </div>
           <div className="reference-summary" aria-label="Cross-category additions audit summary">
@@ -1673,7 +1673,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3>{document.name}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
               </article>
             ))}
           </div>

@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 523);
+  assert.equal(localFiles, 524);
   assert.equal(externalFiles, 610);
 });
 
@@ -119,7 +119,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1133);
+  assert.equal(recordCount, 1134);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -137,7 +137,7 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.pdfRecords, 1010);
   assert.equal(audit.stats.pdfPages, 11300);
-  assert.equal(audit.stats.imageRecords, 8);
+  assert.equal(audit.stats.imageRecords, 9);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
   assert.equal(audit.stats.unreadableRecords, 0);

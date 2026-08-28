@@ -1198,5 +1198,41 @@
     "size": 95753,
     "sha256": "7bc1b5bbf6f24bb2d8119ba5e2ab1ed516327d8050fac960448d200f0f46b3cb",
     "description": "(% letter top certified %). Verified as a distinct stormwater record after file-hash, rendered-page, OCR-text and metadata comparison."
+  },
+  {
+    "id": "101-8716c8f5f6f1",
+    "name": "2014-09-16 - N3862 On-Site Inspection - Wexford County Landfill.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/wexford-docs/101-8716c8f5f6f1.pdf",
+    "year": "2014",
+    "type": "Air-quality inspection",
+    "format": "PDF",
+    "pages": 3,
+    "size": 85296,
+    "sha256": "8716c8f5f6f11ce39524717fb5ffac1117f3e03d7ab8383088752ec3bc33e3d0",
+    "description": "Air Quality Division on-site inspection record for Wexford County Landfill. It is preserved as distinct landfill-operations and regulatory context and is not characterized as a PFAS sampling result."
+  },
+  {
+    "id": "102-9011dd4b0fe6",
+    "name": "2015-11-18 - N3862 On-Site Inspection - Wexford County Landfill.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/wexford-docs/102-9011dd4b0fe6.pdf",
+    "year": "2015",
+    "type": "Air-quality inspection",
+    "format": "PDF",
+    "pages": 3,
+    "size": 100123,
+    "sha256": "9011dd4b0fe6edbea6b5e3e6b5792b0fa6359a9ddd5afa54e3cfb6f406537eb4",
+    "description": "Air Quality Division on-site inspection record for Wexford County Landfill. It is preserved as distinct landfill-operations and regulatory context and is not characterized as a PFAS sampling result."
+  },
+  {
+    "id": "103-5114323584bd",
+    "name": "2017-11-06 - N3862 On-Site Inspection - Wexford County Landfill.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/wexford-docs/103-5114323584bd.pdf",
+    "year": "2017",
+    "type": "Air-quality inspection",
+    "format": "PDF",
+    "pages": 4,
+    "size": 102694,
+    "sha256": "5114323584bd9f2b98c09145c4c1941ba7beb059abdc4b2f8a7b0f3f76e4e4b4",
+    "description": "Air Quality Division on-site inspection record for Wexford County Landfill, including gas-collection and leachate-evaporation operating context. It is distinct from the one-page compliance-evaluation record and is not characterized as a PFAS sampling result."
   }
 ]

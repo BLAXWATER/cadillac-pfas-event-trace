@@ -1,0 +1,54 @@
+{
+  "stats": {
+    "suppliedFiles": 215,
+    "suppliedPdfs": 214,
+    "suppliedImages": 1,
+    "suppliedPdfPages": 1624,
+    "finalDistinctRecords": 213,
+    "newDistinctRecords": 210,
+    "existingRecordsReused": 3,
+    "duplicateCopiesSuppressed": 2,
+    "ocrPagesAttempted": 263,
+    "ocrPagesWithText": 242,
+    "visuallyFingerprintedPages": 1624,
+    "publishedBytes": 181919153
+  },
+  "methods": [
+    "SHA-256 comparison across all 215 supplied files and every existing catalog record",
+    "Normalized extracted-text comparison against 607 previously published PDFs",
+    "PDF page counts plus embedded author, creator, creation and modification metadata",
+    "Visual fingerprints for all 1,624 PDF pages, including cross-archive comparison against 526 page-count-compatible published PDFs",
+    "OCR attempted on 263 representative image-only pages; 242 pages produced usable text",
+    "Rendered inspection of the highest-similarity certification, laboratory and field-photo candidates"
+  ],
+  "decisions": [
+    {
+      "name": "Biosolids audit transmittal",
+      "reason": "Two three-page files have identical normalized text and identical rendered pages. The clearly named Cadillac WWTP copy is retained; the alternate word-export copy is suppressed."
+    },
+    {
+      "name": "Field photographs IMG_0020 and IMG_0021",
+      "reason": "Both PDFs contain the same 640-by-480 field photograph with only border/crop differences. The version with the larger image area is retained and the alternate export is suppressed."
+    },
+    {
+      "name": "Three records already in the permit archive",
+      "reason": "Two permit/compliance records and one 2017 management-practices certification are exact byte matches to existing sources, so their stable links are reused rather than republishing copies."
+    },
+    {
+      "name": "2017 and 2018 certification forms",
+      "reason": "Near-identical templates carry different signed dates and reporting periods. They remain distinct records, and the supplied duplicate labels are not carried forward."
+    },
+    {
+      "name": "TVS logs, as-applied workbooks and site forms",
+      "reason": "Visual similarity reflects common templates. Different years, site IDs, monitoring values and application dates make these distinct evidence records."
+    },
+    {
+      "name": "Approximately 22,000-gallon biosolids overflow note",
+      "reason": "The photographed note is indexed as an incident/spill record. Its stated volume is preserved, while migration or environmental impact is not inferred from the note alone."
+    },
+    {
+      "name": "Former duplicate-labeled files",
+      "reason": "Every retained file was evaluated on content, metadata and page evidence. The word 'Duplicates_' was removed from all retained titles; a label alone was never treated as proof of duplicate content."
+    }
+  ]
+}

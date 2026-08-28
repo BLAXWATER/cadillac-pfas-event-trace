@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element -- document previews are local static evidence assets */
+
 import { useState } from "react";
 import {
   AlertTriangle,
@@ -18,14 +20,24 @@ import {
 } from "lucide-react";
 import complianceAudit from "./compliance-audit.json";
 import complianceDocuments from "./compliance-documents.json";
+import biosolidsAudit from "./biosolids-audit.json";
+import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
 import ippAudit from "./ipp-audit.json";
 import ippDocuments from "./ipp-documents.json";
+import labAudit from "./lab-audit.json";
+import labDocuments from "./lab-documents.json";
 import npdesAudit from "./npdes-audit.json";
 import npdesDocuments from "./npdes-documents.json";
+import pfasAudit from "./pfas-audit.json";
+import pfasDocuments from "./pfas-documents.json";
 import referenceAudit from "./reference-audit.json";
 import referenceDocuments from "./reference-documents.json";
+import supplementalAudit from "./supplemental-audit.json";
+import supplementalDocuments from "./supplemental-documents.json";
+import wexfordAudit from "./wexford-audit.json";
+import wexfordDocuments from "./wexford-documents.json";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -131,6 +143,11 @@ const pdf = (
   clock,
 });
 
+const sourcePreviewFromUrl = (url: string) => {
+  const fileName = url.split("/").pop();
+  return fileName ? `/source-previews/${fileName.replace(/\.pdf$/i, ".jpg")}` : undefined;
+};
+
 const ippSource = (
   name: string,
   url: string,
@@ -140,6 +157,24 @@ const ippSource = (
 ): Source => ({
   name,
   url,
+  preview: sourcePreviewFromUrl(url),
+  pages,
+  format: "PDF",
+  role: "Primary source",
+  result,
+  clock,
+});
+
+const archivedSource = (
+  name: string,
+  url: string,
+  pages: number,
+  result: string,
+  clock: Source["clock"],
+): Source => ({
+  name,
+  url,
+  preview: sourcePreviewFromUrl(url),
   pages,
   format: "PDF",
   role: "Primary source",
@@ -170,6 +205,7 @@ const events: Event[] = [
     sources: [{
       name: "Cadillac WWTP IPP 2011.pdf",
       url: "/npdes-docs/038-8191c7e18aac.pdf",
+      preview: "/source-previews/038-8191c7e18aac.jpg",
       pages: 50,
       page: 25,
       format: "PDF",
@@ -198,6 +234,7 @@ const events: Event[] = [
     sources: [{
       name: "Cadillac WWTP SIU Information.pdf · page 4",
       url: "/ipp-docs/001-4e9a0cdf0189.pdf",
+      preview: "/source-previews/001-4e9a0cdf0189.jpg",
       pages: 11,
       page: 4,
       format: "PDF",
@@ -231,25 +268,6 @@ const events: Event[] = [
     })],
   },
   {
-    year: "2015–2016",
-    date: "2015–2016",
-    time: noTime,
-    timeBasis: "Documented interval; exact day unavailable",
-    phase: "Leachate management",
-    kind: "operation",
-    category: "12 · Landfill & leachate",
-    title: "Landfill leachate request enters the record",
-    finding: "Wexford County Landfill leachate management and disposal arrangements were documented during the continuing WWTP receiving period.",
-    significance: "Connects landfill-generated liquid waste to Cadillac receiving and treatment records.",
-    sources: [pdf("2015-2016_Wexford County Landfill_Leachate Request.pdf", "2015-2016-leachate-request", 3, "Recovered three-page landfill leachate request record.", {
-      eventStamp: "2015–2016 · exact day/time not stated",
-      basis: "Interval stated by source record",
-      created: "2025-03-06 08:29:43 CST",
-      modified: "2025-03-06 08:29:51 CST",
-      note: "These are later digitization timestamps and do not date the underlying leachate request.",
-    })],
-  },
-  {
     year: "2016",
     date: "2016-01-12",
     isoDate: "2016-01-12",
@@ -263,7 +281,7 @@ const events: Event[] = [
     significance: "Provides the original occurrence time, response, cleanup and prevention record for the previously unresolved 2016 release event.",
     sources: [{
       name: "2016-01-12 spill-notification letter · chronological compilation PDF p. 36",
-      url: "/compliance-docs/001-32f575fe6fc6.pdf",
+      url: "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/001-32f575fe6fc6.pdf",
       preview: "/compliance-previews/2016-01-12-spill-letter.png",
       pages: 50,
       page: 36,
@@ -276,6 +294,83 @@ const events: Event[] = [
         note: "The hosted source is a 2026 chronological compilation of 48 compliance-file source pages. The spill letter itself is PDF page 36 and retains its January 19, 2016 agency receipt stamp.",
       },
     }],
+  },
+  {
+    year: "2016",
+    date: "2016-03-09",
+    isoDate: "2016-03-09",
+    time: noTime,
+    timeBasis: "Request date in the source package",
+    phase: "Leachate management",
+    kind: "operation",
+    category: "12 · Landfill & leachate",
+    title: "Landfill requests one-time groundwater discharge authorization",
+    finding: "The landfill's request package seeks Rule 2210(y) authorization to remove leachate-impacted precipitation from the evaporator lagoon. The package also preserves a November 2, 2015 agency approval letter associated with the earlier handling arrangement.",
+    significance: "Replaces the earlier broad 2015–2016 label with the dated original request and connects the lagoon-management record to the later formal application.",
+    sources: [pdf("2015-2016_Wexford County Landfill_Leachate Request.pdf", "2015-2016-leachate-request", 3, "Three-page scanned request package, retained once because the newly supplied copy exactly matches the source already on the site.", {
+      eventStamp: "2016-03-09 · time not stated",
+      basis: "Request date documented in the source package",
+      created: "2025-03-06 08:29:43 CST",
+      modified: "2025-03-06 08:29:51 CST",
+      note: "The PDF timestamps are later digitization metadata, not the date of the underlying request.",
+    })],
+  },
+  {
+    year: "2016",
+    date: "2016-03-16",
+    isoDate: "2016-03-16T15:31:00",
+    time: "15:31 · zone not stated",
+    timeBasis: "Portal submission timestamp",
+    phase: "Groundwater application",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "Rule 2210(y) application defines the proposed discharge",
+    finding: "Submission 2E2-C5H5-QVVF proposes up to 50,400 gallons per day and 2,000,000 gallons per year, during April through June, using dilution and overland flow to remove impacted water from the evaporator lagoon.",
+    significance: "Fixes the application clock, volume, seasonal window, treatment method and mapped discharge context in the primary portal record.",
+    sources: [pdf("Wexford Landfill Groundwater Discharge Permit Application 2210(y).docx", "2016-03-16-rule-2210-application", 11, "Submitted Rule 2210(y) application with attached map and analytical-record index.", {
+      eventStamp: "2016-03-16 15:31 · zone not stated",
+      basis: "Portal submission timestamp printed in the record",
+      created: "2016-07-12 15:53:11 EDT",
+      note: "Despite its .docx filename, the source contains a valid PDF payload; the later PDF creation date records export, not submission.",
+    }, "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/016-7ee1b2c9396c.pdf")],
+  },
+  {
+    year: "2016",
+    date: "2016-07-15",
+    isoDate: "2016-07-15",
+    time: noTime,
+    timeBasis: "Public-notice date",
+    phase: "Public notice",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "DEQ publishes the proposed groundwater authorization",
+    finding: "The public notice identifies proposed permit GW1010342 and the Rule 2210(y) authorization process for the Wexford County Landfill discharge to ground or groundwater.",
+    significance: "Documents the formal public-notice stage between application review and final issuance.",
+    sources: [pdf("GW Public Notice Document.html", "2016-07-15-gw-public-notice", 1, "One-page public notice; the newly supplied file exactly matches Category 02 record 076.", {
+      eventStamp: "2016-07-15 · time not stated",
+      basis: "Date printed in the public notice",
+      created: "2016-07-12 15:48:26 EDT",
+      note: "The .html-named source is a valid PDF payload. Its creation metadata reflects preparation three days before publication.",
+    }, "/npdes-docs/076-a611a75485cf.pdf")],
+  },
+  {
+    year: "2016",
+    date: "2016-09-06",
+    isoDate: "2016-09-06",
+    time: noTime,
+    timeBasis: "Issued date printed on permit",
+    phase: "Final authorization",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "Final permit authorizes a one-time diluted-leachate discharge",
+    finding: "Permit GW1010342 authorizes up to 50,400 gallons per day and 2,000,000 gallons per year from the evaporator lagoon by land application using overland flow and a spray bar. It takes effect October 1, 2016 and expires January 31, 2017.",
+    significance: "Separates the final legal authorization and its operating window from the earlier draft and application records.",
+    sources: [pdf("Rule 2210 Permit Template-Wexford Landfill.docx", "2016-09-06-rule-2210-final", 26, "Final permit with limits, monitoring conditions and attachments.", {
+      eventStamp: "2016-09-06 · time not stated",
+      basis: "Issued date printed on permit page 1",
+      created: "2016-09-16 13:43:08 EDT",
+      note: "The source filename says .docx but the payload is PDF. The export/cover-email date is ten days after the permit's printed issued date.",
+    }, "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/015-38c4dd289771.pdf")],
   },
   {
     year: "2017",
@@ -328,7 +423,7 @@ const events: Event[] = [
     title: "Cadillac publishes 2017 industrial SNC notice",
     finding: "The rendered newspaper notice identifies significant noncompliance (SNC) by Rec Boat divisions, Cadillac Castings and AAR Mobility Systems and lists the pollutants associated with the cited exceedances.",
     significance: "Adds the annual public-notice record to the industrial-compliance history without treating same-template facility records as duplicates.",
-    sources: [ippSource("2018-03 Cadillac News IPP SNC notice.pdf", "/ipp-docs/040-99a3b1774a76.pdf", 1, "Image-only newspaper clipping publishing the 2017 industrial SNC notice.", {
+    sources: [ippSource("2018-03 Cadillac News IPP SNC notice.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/040-99a3b1774a76.pdf", 1, "Image-only newspaper clipping publishing the 2017 industrial SNC notice.", {
       eventStamp: "2018-03 · time not stated",
       basis: "Publication month and reporting year printed in source",
       note: "The clipping is image-only; the notice was verified from the rendered page.",
@@ -546,7 +641,7 @@ const events: Event[] = [
     title: "EGLE responds to Cadillac's IPP corrective-action plan",
     finding: "EGLE accepted the revised MAHL study plan with recommendations, extended the remaining categorical-determination response to November 4, 2022, and noted that Wexford County Landfill had ceased discharge to Cadillac and should be removed from the sampling plan if that status remained true.",
     significance: "Connects the violation-notice response, MAHL/local-limit work, Cadillac Casting categorical review and Wexford discharge status in one agency record.",
-    sources: [ippSource("2022-05-23 Follow-up to VN-012230 and VN-011108 - Cadillac WWTP.pdf", "/ipp-docs/083-df40de58ffcc.pdf", 3, "EGLE follow-up letter addressing the CAP, MAHL study plan, CCI categorical review and Wexford sampling status.", {
+    sources: [ippSource("2022-05-23 Follow-up to VN-012230 and VN-011108 - Cadillac WWTP.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/083-df40de58ffcc.pdf", 3, "EGLE follow-up letter addressing the CAP, MAHL study plan, CCI categorical review and Wexford sampling status.", {
       eventStamp: "2022-05-23 · time not stated",
       basis: "Letter date printed in source",
       note: "No time of day is stated in the letter.",
@@ -564,7 +659,7 @@ const events: Event[] = [
     title: "Cadillac submits proposed MAHLs and local limits",
     finding: "The City asked EGLE to review and approve proposed maximum allowable headworks loadings and industrial local limits and included a table of proposed limits and compatible-pollutant MAHLs.",
     significance: "Establishes the proposal stage that precedes the later EGLE review comments; it is not represented as final approval.",
-    sources: [ippSource("2023-08 City of Cadillac proposed MAHL and local limits.pdf", "/ipp-docs/100-20ef2ece7370.pdf", 2, "City transmittal requesting review and approval of proposed MAHLs and local limits.", {
+    sources: [ippSource("2023-08 City of Cadillac proposed MAHL and local limits.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/100-20ef2ece7370.pdf", 2, "City transmittal requesting review and approval of proposed MAHLs and local limits.", {
       eventStamp: "2023-08 · time not stated",
       basis: "Month printed in source filename and letter",
       note: "The available source establishes the month but not a reliable day or time.",
@@ -589,6 +684,24 @@ const events: Event[] = [
       modified: "2024-01-22 09:08:25 CST",
       note: "The printed signature time and embedded modification time represent the same instant in adjacent U.S. time zones.",
     })],
+  },
+  {
+    year: "2024",
+    date: "2024-11-19",
+    isoDate: "2024-11-19",
+    time: noTime,
+    timeBasis: "Operating-license issue date",
+    phase: "Solid-waste operating license",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "Operating License 9758 renews the landfill authorization",
+    finding: "EGLE issued License 9758 for the 196.4-acre Wexford County Landfill through November 19, 2029. The license incorporates Construction Permits 4100 and 4127, the March 2018 hydrogeologic monitoring plan, the leachate recirculation plan and later lagoon, cover and engineering documents.",
+    significance: "Provides the current official operating framework and identifies the historical plans incorporated by reference; it does not by itself prove the contents of those separately listed plans.",
+    sources: [pdf("Wexford-County-Landfill.PDF · Operating License 9758", "2024-11-19-operating-license-9758", 8, "Official operating license and Attachment A site map.", {
+      eventStamp: "2024-11-19 · time not stated",
+      basis: "Issue date printed on license page 1",
+      note: "This is distinct from the three-page 2012 Construction Permit 4127 despite the shared base filename.",
+    }, "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/017-4b475079a927.pdf")],
   },
   {
     year: "2025",
@@ -625,6 +738,7 @@ const events: Event[] = [
     sources: [{
       name: "2025-03-05__3055689922791814885__Cadillac MAHL.msg.pdf · page 1",
       url: "/ipp-docs/007-9aecbfcf4abc.pdf",
+      preview: "/source-previews/007-9aecbfcf4abc.jpg",
       pages: 204,
       page: 1,
       format: "PDF",
@@ -651,7 +765,7 @@ const events: Event[] = [
     title: "Public notice documents 2024 industrial SNC",
     finding: "The affidavit's published notice identifies local-limit exceedances during 2024 at Rec Boats Trailer, AAR Mobility Systems, ARVCO, Cadillac Castings, FIAMM, Hutchinson and Michigan Rubber, with pollutants and quarters stated for each facility.",
     significance: "Preserves the annual SNC record while distinguishing industrial-user permit exceedances from violations by the Cadillac WWTP itself.",
-    sources: [ippSource("Cadillac News Affidavit of Publication 03-19-2025.pdf", "/ipp-docs/126-724054a11ecd.pdf", 1, "Affidavit and annexed public notice of 2024 industrial significant noncompliance.", {
+    sources: [ippSource("Cadillac News Affidavit of Publication 03-19-2025.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/126-724054a11ecd.pdf", 1, "Affidavit and annexed public notice of 2024 industrial significant noncompliance.", {
       eventStamp: "2025-03-19 · time not stated",
       basis: "Affidavit publication date",
       note: "The notice states there were no known Cadillac WWTP violations or known Clam River or Muskegon River watershed impacts from the listed industrial exceedances.",
@@ -716,10 +830,226 @@ const events: Event[] = [
     title: "EGLE directs penalty-authority revisions",
     finding: "EGLE advised that POTWs must have authority to assess a civil penalty of at least $1,000 per day for each IPP violation and identified three Cadillac procedures-manual and enforcement-template sections requiring revision.",
     significance: "Documents a specific 2026 change requested for Cadillac's enforcement authority; the email also says the current Sewer Use Ordinance language appeared to meet that minimum.",
-    sources: [ippSource("05-27-2026 - Cadillac WWTP IPP - Civil and criminal penalties.pdf", "/ipp-docs/134-ab2692869ee6.pdf", 1, "EGLE email identifying the minimum civil-penalty authority and sections requiring revision.", {
+    sources: [ippSource("05-27-2026 - Cadillac WWTP IPP - Civil and criminal penalties.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/134-ab2692869ee6.pdf", 1, "EGLE email identifying the minimum civil-penalty authority and sections requiring revision.", {
       eventStamp: "2026-05-27 10:50:26 · zone not stated",
       basis: "Email sent timestamp printed in source",
       note: "The source does not print a time-zone abbreviation, so none is inferred.",
+    })],
+  },
+  {
+    year: "1987",
+    date: "1987-07",
+    isoDate: "1987-07",
+    time: noTime,
+    timeBasis: "Study publication month",
+    phase: "Historical watershed baseline",
+    kind: "receptor",
+    category: "13 · Groundwater & wells",
+    title: "Clam River floodplain and hydraulic context mapped",
+    finding: "The Soil Conservation Service study maps flood-hazard areas along the Clam River, Lake Cadillac, Lake Mitchell and Pleasant Lake and supplies flood profiles plus 10-, 50-, 100- and 500-year discharge and elevation tables.",
+    significance: "Provides historical receptor and floodplain context for later site-specific work. It does not establish PFAS contamination, groundwater flow direction or source attribution.",
+    sources: [archivedSource("Flood Plain Management Study — Clam River, Wexford County, Michigan.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/006-d8496c7348a6.pdf", 150, "Complete July 1987 study with narrative, flood-hazard photomaps, profiles, tables and appendices.", {
+      eventStamp: "1987-07 · time not stated",
+      basis: "Publication month printed on the title page",
+      note: "Historic archive source; current conditions and PFAS conclusions cannot be inferred from this study alone.",
+    })],
+  },
+  {
+    year: "2010",
+    date: "2010-03-15",
+    isoDate: "2010-03-15",
+    time: noTime,
+    timeBasis: "EPA report date",
+    phase: "Federal noncompliance reporting",
+    kind: "compliance",
+    category: "13 · Compliance & enforcement",
+    title: "EPA QNCR carries Cadillac mercury noncompliance forward",
+    finding: "EPA Region 5's report for October–December 2009 lists Cadillac WWTP as noncompliant and identifies total mercury at outfall 001A with a July 31, 2005 violation date and status 'NC — continuing noncompliance.'",
+    significance: "Preserves the federal quarterly status entry as reported. The row does not supply a measured concentration, an enforcement action or a PFAS finding.",
+    sources: [archivedSource("EPA Region 5 Michigan First-Quarter 2010 QNCR.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/001-9863804c33e3.pdf", 63, "Cadillac-specific row appears on PDF page 6 / report page 5.", {
+      eventStamp: "2010-03-15 · time not stated",
+      basis: "Report date printed in the EPA QNCR header",
+      note: "The report period is October 1 through December 31, 2009; the underlying listed violation date is July 31, 2005.",
+    })],
+  },
+  {
+    year: "2014",
+    date: "2014-06-14",
+    isoDate: "2014-06-14",
+    time: noTime,
+    timeBasis: "EPA data-run date",
+    phase: "Federal noncompliance reporting",
+    kind: "compliance",
+    category: "13 · Compliance & enforcement",
+    title: "EPA ICIS report records overdue Cadillac DMR",
+    finding: "The January–March 2014 QNCR detail row records a Cadillac WWTP DMR overdue to EPA/State for outfall 001, violation date December 31, 2013, status date February 20, 2014 and code 2D reporting violation.",
+    significance: "Adds the primary federal status row and distinguishes a reporting violation from a pollutant-limit exceedance. The row states that no enforcement action or final order is linked.",
+    sources: [archivedSource("EPA ICIS Michigan Second-Quarter 2014 QNCR.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/002-2ee7fa5b072b.pdf", 50, "Cadillac-specific detail appears on PDF page 2.", {
+      eventStamp: "2014-06-14 · time not stated",
+      basis: "EPA ICIS data-run and refresh date",
+      note: "The underlying violation and status dates are December 31, 2013 and February 20, 2014, respectively.",
+    })],
+  },
+  {
+    year: "2017",
+    date: "2017-11-06",
+    isoDate: "2017-11-06",
+    time: noTime,
+    timeBasis: "AQD inspection date",
+    phase: "Landfill air-compliance inspection",
+    kind: "compliance",
+    category: "12 · Landfill & leachate",
+    title: "AQD inspection records landfill systems and compliance",
+    finding: "The scheduled N3862 inspection describes the 3.45-million-Mg landfill, active gas collection and flare, accepted waste streams, a post-closure groundwater-remediation aeration system and an exempt leachate evaporation system. The inspector recorded compliance and no odors, visible emissions or recent complaints.",
+    significance: "Supplies a dated operational snapshot and corroborates systems later discussed in the leachate and air-permit record. It is not a PFAS sampling result.",
+    sources: [archivedSource("N3862 Scheduled Inspection — Wexford County Landfill.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/003-e0a3523951f8.pdf", 3, "Complete three-page AQD activity report; the separately supplied '(1)' file was byte-identical and excluded.", {
+      eventStamp: "2017-11-06 · time not stated",
+      basis: "Inspection date and inspector signature date",
+      note: "One exact duplicate copy was suppressed after SHA-256 and visual comparison; no duplicate filename label is carried forward.",
+    })],
+  },
+  {
+    year: "2021",
+    date: "2021-03-10",
+    isoDate: "2021-03-10",
+    time: noTime,
+    timeBasis: "Tier 2 report date",
+    phase: "Landfill-gas testing",
+    kind: "sampling",
+    category: "12 · Landfill & leachate",
+    title: "Tier 2 testing models Wexford NMOC generation",
+    finding: "The report documents January 19–21 field sampling and models 2021 NMOC generation at 35.81 Mg/year average and 38.64 Mg/year maximum, below the 50-Mg/year NSPS threshold. Under its assumptions, the maximum projection crosses 50 in 2028 and the average projection crosses 50 in 2030.",
+    significance: "Preserves both the contemporaneous below-threshold conclusion and the report's later projected crossings. The model concerns landfill-gas NMOC, not PFAS.",
+    sources: [archivedSource("Wexford County Landfill Tier 2 NMOC Results.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/004-00a43fa54cad.pdf", 20, "Report, laboratory summary, field logs and sampling maps; scan-only pages were visually reviewed.", {
+      eventStamp: "2021-03-10 · time not stated",
+      basis: "Report date; field sampling occurred January 19–21, 2021",
+      note: "The report states retesting was required by January 19, 2026 to maintain the exemption.",
+    })],
+  },
+  {
+    year: "2022",
+    date: "2022-08-15",
+    isoDate: "2022-08-15",
+    time: noTime,
+    timeBasis: "ROP staff-report date",
+    phase: "Air-permit renewal",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "ROP staff report updates leachate and air-control history",
+    finding: "The N3862 staff report states that deep-well leachate injection began in early 2019, the former contaminated-groundwater aeration ponds had been dismantled and removed since 2017, and the active gas collection system routes gas to a flare. It also reports 2021 emissions and March 2022 Tier 2 NMOC calculations.",
+    significance: "Provides a later agency synthesis of facility systems and changes while distinguishing permit history from direct sampling evidence.",
+    sources: [archivedSource("N3862 Renewable Operating Permit Staff Report.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/005-0f46024ab583.pdf", 8, "August 15 staff report with September 15 addendum for MI-ROP-N3862-2022.", {
+      eventStamp: "2022-08-15 · time not stated",
+      basis: "Staff-report date printed on the title page",
+      note: "The September 15 addendum states no pertinent public comments were received and makes no changes to the draft ROP.",
+    })],
+  },
+  {
+    year: "2026",
+    date: "2026-02-02",
+    isoDate: "2026-02-02",
+    time: noTime,
+    timeBasis: "Council communication date",
+    phase: "WWTP capital planning",
+    kind: "operation",
+    category: "10 · Process & site",
+    title: "Cadillac advances a CWSRF WWTP planning package",
+    finding: "The Council communication recommends a $36,800 F&V project plan for potential FY2027 CWSRF funding. The proposal identifies candidate work at the headworks, blowers, UV system, solids handling, biogas facilities and aging site structures and requires alternatives analysis before selecting a project.",
+    significance: "Documents planned infrastructure evaluation and possible future improvements. It is a planning proposal, not proof that construction, funding or a final project scope was approved.",
+    sources: [archivedSource("Cadillac WWTP CWSRF Project Plan and Funding Proposal.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/007-238cf9655b70.pdf", 9, "Council communication, January 8 engineering proposal, project-plan outline and 2013 professional-services agreement.", {
+      eventStamp: "2026-02-02 · time not stated",
+      basis: "Council communication date",
+      note: "The proposal anticipated an April draft and May 1, 2026 submission deadline; completion is not inferred from this source.",
+    })],
+  },
+  {
+    year: "1988",
+    date: "April 1988",
+    isoDate: "1988-04",
+    time: noTime,
+    timeBasis: "Study publication month",
+    phase: "Historical groundwater remediation",
+    kind: "receptor",
+    category: "14 · Hydrogeology & mapping",
+    title: "Feasibility study maps industrial-park VOC and chromium plumes",
+    finding: "The MDNR/E.C. Jordan interim study identifies five known or probable industrial-park source areas and seven groundwater plumes involving volatile organic compounds and hexavalent chromium. It evaluates cleanup levels and treated-groundwater discharge options, including possible discharge to the Cadillac POTW subject to pretreatment.",
+    significance: "Establishes the documented 1980s groundwater-remediation setting. The study predates the PFAS investigation and does not establish PFAS contamination, a modern flow path or current source attribution.",
+    sources: [archivedSource("Cadillac Area Groundwater Contamination Feasibility Study.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/011-05c2a0fb3666.pdf", 50, "April 1988 interim feasibility study; an OCR-fixed copy is retained after comparison with a byte-different scan of the same document.", {
+      eventStamp: "April 1988 · time not stated",
+      basis: "Publication month printed on the title page",
+      note: "This is historical VOC and chromium remediation evidence, not a PFAS analytical record.",
+    })],
+  },
+  {
+    year: "2009",
+    date: "2009-09-08",
+    isoDate: "2009-09-08",
+    time: noTime,
+    timeBasis: "Special-meeting date",
+    phase: "Leachate service agreement",
+    kind: "operation",
+    category: "12 · Landfill & leachate",
+    title: "Council approves Wexford landfill leachate treatment agreement",
+    finding: "The special-meeting minutes record unanimous approval of an agreement for Cadillac to accept and treat Wexford County Landfill leachate. The agreement was effective July 1, 2009 through June 30, 2011 and used a reduced sliding-scale rate based on pretreatment.",
+    significance: "Provides direct official evidence that the City formally approved the landfill-to-WWTP treatment relationship years before the PFAS source investigation.",
+    sources: [archivedSource("September 8 2009 Special Meeting Minutes.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/008-5b67e1ed1d5c.pdf", 6, "Motion 2009.216 approves miscellaneous file 842 on PDF page 2.", {
+      eventStamp: "2009-09-08 · time not stated",
+      basis: "Date of the official special-meeting minutes",
+      note: "Separate well-field planning in the same minutes is not characterized as PFAS evidence.",
+    })],
+  },
+  {
+    year: "2019",
+    date: "2019-06-30",
+    isoDate: "2019-06-30",
+    time: noTime,
+    timeBasis: "Fiscal-year end",
+    phase: "Audited financial reporting",
+    kind: "operation",
+    category: "10 / 12 · Process, landfill & leachate",
+    title: "Audited report corroborates landfill-leachate treatment revenue",
+    finding: "Cadillac's FY2019 comprehensive annual financial report states that revenue from treatment of Wexford County Landfill leachate exceeded budget by $44,691.",
+    significance: "Financially corroborates that leachate treatment was occurring in the fiscal year. The report does not provide gallons received, PFAS concentrations or treatment effectiveness.",
+    sources: [archivedSource("City of Cadillac FY2019 CAFR.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/013-f756ecea1687.pdf", 187, "Management's discussion and analysis on PDF page 25 reports the landfill-leachate treatment revenue variance.", {
+      eventStamp: "Fiscal year ended 2019-06-30 · time not stated",
+      basis: "Audited-report fiscal period",
+      note: "The dollar amount is a budget variance, not total leachate revenue or treatment volume.",
+    })],
+  },
+  {
+    year: "2022",
+    date: "2022-08-18",
+    isoDate: "2022-08-18",
+    time: noTime,
+    timeBasis: "EGLE evaluation-letter date",
+    phase: "Landfill fiscal and waste-origin review",
+    kind: "compliance",
+    category: "12 / 13 · Landfill, compliance & enforcement",
+    title: "EGLE evaluation identifies financial-assurance shortfall and import questions",
+    finding: "EGLE calculated a $131,920.40 perpetual-care fund shortfall for the Wexford County Landfill and asked for a deposit. Re-TRAC data also indicated 2,300 cubic yards from Clare County and 648 cubic yards from Oscoda County that may not have been authorized by the applicable county plans, prompting a written-response request.",
+    significance: "Preserves the agency's FY2021 evaluation and compliance questions. The letter requests a response and does not establish a final violation, penalty or adjudication.",
+    sources: [archivedSource("2022-09-13 Draft Executive Committee Packet.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/009-ef4cb426969a.pdf", 17, "EGLE's August 18, 2022 Wexford County Landfill evaluation appears on PDF pages 13–17.", {
+      eventStamp: "2022-08-18 · time not stated",
+      basis: "Date printed on the EGLE evaluation letter",
+      note: "The surrounding executive packet is dated September 13, 2022; the event date follows the underlying agency letter.",
+    })],
+  },
+  {
+    year: "2026",
+    date: "2026-07-20",
+    isoDate: "2026-07-20",
+    time: noTime,
+    timeBasis: "Council-packet meeting date",
+    phase: "PFAS response infrastructure planning",
+    kind: "receptor",
+    category: "13 · PFAS response & municipal water",
+    title: "Council packet schedules PFAS municipal-water project action",
+    finding: "The packet describes an $8.206 million Emerging Contaminants Grant designation and a project plan to extend municipal water service to private-well users in PFAS response areas. It also reports an anticipated federal PFAS grant of approximately $1.7 million.",
+    significance: "Documents the response project presented for council action. The included resolution is unsigned with blank vote and certification fields, so the packet alone does not prove adoption, receipt of funds or construction.",
+    sources: [archivedSource("Council Packet 7-20-26.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/010-1aba682de0b8.pdf", 62, "PFAS update appears on PDF page 7; project communication and unsigned draft resolution appear on pages 45–47.", {
+      eventStamp: "2026-07-20 · time not stated",
+      basis: "Meeting date printed on the council packet",
+      note: "This source records a proposed action and funding designations; it is not an executed resolution or expenditure record.",
     })],
   },
 ];
@@ -786,17 +1116,20 @@ const evidenceRequests = [
 
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
+  const external = Boolean(source.url?.startsWith("https://github.com/"));
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Button type="button" variant={linked ? "outline" : "secondary"} size="sm" className="source-button" aria-disabled={!linked} onClick={() => linked && open(source)}>
-          {linked ? <FileText /> : <AlertTriangle />}
-          <span>{source.name}</span>
-          {linked && <ExternalLink className="source-open-icon" />}
-        </Button>
+        {external
+          ? <Button asChild variant="outline" size="sm" className="source-button"><a href={source.url} target="_blank" rel="noreferrer"><FileText /><span>{source.name}</span><ExternalLink className="source-open-icon" /></a></Button>
+          : <Button type="button" variant={linked ? "outline" : "secondary"} size="sm" className="source-button" aria-disabled={!linked} onClick={() => linked && open(source)}>
+              {linked ? <FileText /> : <AlertTriangle />}
+              <span>{source.name}</span>
+              {linked && <ExternalLink className="source-open-icon" />}
+            </Button>}
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
-        {source.preview ? <img src={source.preview} alt={`First-page preview of ${source.name}`} className="source-preview" /> : <div className="missing-preview"><AlertTriangle />Original file not loaded</div>}
+        {source.preview ? <img src={source.preview} alt={`Source-page preview of ${source.name}`} className="source-preview" /> : <div className="missing-preview"><FileText /><span>Preview not available</span><small>Open the complete source below.</small></div>}
         <div className="source-tooltip-copy">
           <p className="source-role">{source.role}</p>
           <p className="source-full-name">{source.name}</p>
@@ -808,7 +1141,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
             {source.clock.modified && <div><span>PDF modified</span><strong>{source.clock.modified}</strong></div>}
             <p>{source.clock.note}</p>
           </div>
-          <p className="source-hint">{linked ? "Click to open the complete source in this window." : "Exact filename preserved; source acquisition required."}</p>
+          <p className="source-hint">{linked ? external ? "Click to open the complete archived source in a new tab." : "Click to open the complete source in this window." : "Exact filename preserved; source acquisition required."}</p>
         </div>
       </TooltipContent>
     </Tooltip>
@@ -824,8 +1157,18 @@ export default function Home() {
   const [permitType, setPermitType] = useState("All permit records");
   const [ippQuery, setIppQuery] = useState("");
   const [ippType, setIppType] = useState("All IPP records");
+  const [pfasQuery, setPfasQuery] = useState("");
+  const [pfasType, setPfasType] = useState("All PFAS records");
+  const [biosolidsQuery, setBiosolidsQuery] = useState("");
+  const [biosolidsType, setBiosolidsType] = useState("All biosolids records");
+  const [labQuery, setLabQuery] = useState("");
+  const [labType, setLabType] = useState("All laboratory records");
   const [complianceQuery, setComplianceQuery] = useState("");
   const [complianceType, setComplianceType] = useState("All compliance records");
+  const [wexfordQuery, setWexfordQuery] = useState("");
+  const [wexfordType, setWexfordType] = useState("All Wexford records");
+  const [supplementalQuery, setSupplementalQuery] = useState("");
+  const [supplementalType, setSupplementalType] = useState("All added records");
   const [referenceQuery, setReferenceQuery] = useState("");
   const [referenceType, setReferenceType] = useState("All datasets");
   const groups = Array.from(events.reduce<Map<string, Event[]>>((acc, event) => {
@@ -833,7 +1176,9 @@ export default function Home() {
     group.push(event);
     acc.set(event.year, group);
     return acc;
-  }, new Map())).map(([year, items]) => ({ year, items }));
+  }, new Map()))
+    .map(([year, items]) => ({ year, items: [...items].sort((a, b) => (a.isoDate ?? a.date).localeCompare(b.isoDate ?? b.date)) }))
+    .sort((a, b) => Number(a.year) - Number(b.year));
   const sourceCount = events.reduce((count, event) => count + event.sources.length, 0);
   const globalSearchTerms = globalQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const globalSearchResults = globalSearchTerms.length === 0
@@ -864,11 +1209,46 @@ export default function Home() {
     const matchesQuery = !normalizedIppQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedIppQuery);
     return matchesType && matchesQuery;
   });
+  const pfasTypes = ["All PFAS records", ...Array.from(new Set(pfasDocuments.map((document) => document.type)))];
+  const normalizedPfasQuery = pfasQuery.trim().toLowerCase();
+  const filteredPfasDocuments = pfasDocuments.filter((document) => {
+    const matchesType = pfasType === "All PFAS records" || document.type === pfasType;
+    const matchesQuery = !normalizedPfasQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedPfasQuery);
+    return matchesType && matchesQuery;
+  });
+  const biosolidsTypes = ["All biosolids records", ...Array.from(new Set(biosolidsDocuments.map((document) => document.type)))];
+  const normalizedBiosolidsQuery = biosolidsQuery.trim().toLowerCase();
+  const filteredBiosolidsDocuments = biosolidsDocuments.filter((document) => {
+    const matchesType = biosolidsType === "All biosolids records" || document.type === biosolidsType;
+    const matchesQuery = !normalizedBiosolidsQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedBiosolidsQuery);
+    return matchesType && matchesQuery;
+  });
+  const labTypes = ["All laboratory records", ...Array.from(new Set(labDocuments.map((document) => document.type)))];
+  const normalizedLabQuery = labQuery.trim().toLowerCase();
+  const filteredLabDocuments = labDocuments.filter((document) => {
+    const matchesType = labType === "All laboratory records" || document.type === labType;
+    const matchesQuery = !normalizedLabQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedLabQuery);
+    return matchesType && matchesQuery;
+  });
   const complianceTypes = ["All compliance records", ...Array.from(new Set(complianceDocuments.map((document) => document.type)))];
   const normalizedComplianceQuery = complianceQuery.trim().toLowerCase();
   const filteredComplianceDocuments = complianceDocuments.filter((document) => {
     const matchesType = complianceType === "All compliance records" || document.type === complianceType;
     const matchesQuery = !normalizedComplianceQuery || `${document.name} ${document.year} ${document.type}`.toLowerCase().includes(normalizedComplianceQuery);
+    return matchesType && matchesQuery;
+  });
+  const wexfordTypes = ["All Wexford records", ...Array.from(new Set(wexfordDocuments.map((document) => document.type)))];
+  const normalizedWexfordQuery = wexfordQuery.trim().toLowerCase();
+  const filteredWexfordDocuments = wexfordDocuments.filter((document) => {
+    const matchesType = wexfordType === "All Wexford records" || document.type === wexfordType;
+    const matchesQuery = !normalizedWexfordQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedWexfordQuery);
+    return matchesType && matchesQuery;
+  });
+  const supplementalTypes = ["All added records", ...Array.from(new Set(supplementalDocuments.map((document) => document.type)))];
+  const normalizedSupplementalQuery = supplementalQuery.trim().toLowerCase();
+  const filteredSupplementalDocuments = supplementalDocuments.filter((document) => {
+    const matchesType = supplementalType === "All added records" || document.type === supplementalType;
+    const matchesQuery = !normalizedSupplementalQuery || `${document.name} ${document.year} ${document.category} ${document.type} ${document.description}`.toLowerCase().includes(normalizedSupplementalQuery);
     return matchesType && matchesQuery;
   });
   const referenceTypes = ["All datasets", ...Array.from(new Set(referenceDocuments.map((document) => document.type)))];
@@ -887,7 +1267,7 @@ export default function Home() {
             <h1>Cadillac PFAS Event Trace</h1>
             <p className="header-copy">Follow the hierarchy from year to event timestamp to the exact source document, with separate clocks for the event, the issued record and embedded file metadata.</p>
           </div>
-          <div className="integrity-note"><CheckCircle2 /><div><strong>Original-source rule</strong><span>Hover a filename for its preview and result. Click to open the complete document without leaving the trace.</span></div></div>
+          <div className="integrity-note"><CheckCircle2 /><div><strong>Original-source rule</strong><span>Hover a filename for its source-page preview and result. Click to open the complete document.</span></div></div>
         </header>
 
         <section className="path-strip" aria-label="Investigative pathway">
@@ -1090,6 +1470,146 @@ export default function Home() {
           {filteredIppDocuments.length === 0 && <p className="document-empty">No industrial pretreatment records match this search.</p>}
         </section>
 
+        <section className="document-library permit-library" aria-labelledby="pfas-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">PFAS MONITORING · VERIFIED AUGUST 27, 2026</p><h2 id="pfas-library-title">Search {pfasDocuments.length} verified PFAS records</h2></div>
+            <p>This category preserves effluent and biosolids laboratory reports, electronic data deliverables, QA/QC packages, agency submissions, source-control correspondence and clearly labeled contextual records. Related files remain separate when they carry distinct analytical or evidentiary content.</p>
+          </div>
+          <div className="reference-summary" aria-label="PFAS monitoring archive audit summary">
+            <div><FileText /><span><strong>{pfasAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><CheckCircle2 /><span><strong>{pfasAudit.stats.existingRecordsReused + pfasAudit.stats.existingRecordReplaced}</strong> archive records reused or repaired</span></div>
+            <div><FileSearch /><span><strong>{pfasAudit.stats.duplicateCopiesSuppressed}</strong> duplicate copies suppressed</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review PFAS duplicate, metadata and OCR decisions</summary>
+            <div className="audit-panel">
+              <p>{pfasAudit.methods.join(" · ")}</p>
+              <ul>{pfasAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search PFAS monitoring records</span><input value={pfasQuery} onChange={(event) => setPfasQuery(event.target.value)} placeholder="Search filename, year, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter PFAS monitoring records by type</span><select value={pfasType} onChange={(event) => setPfasType(event.target.value)}>{pfasTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredPfasDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredPfasDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : document.format === "PNG" ? "Open image" : "Download MSG"}{document.format === "MSG" ? <Download /> : <ExternalLink />}</a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredPfasDocuments.length === 0 && <p className="document-empty">No PFAS monitoring records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="biosolids-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 05 · BIOSOLIDS &amp; LAND APPLICATION · VERIFIED AUGUST 27, 2026</p><h2 id="biosolids-library-title">Search {biosolidsDocuments.length} newly verified biosolids records</h2></div>
+            <p>This category preserves laboratory packages, land-application sites, as-applied workbooks, certifications, residuals-management-plan records, operational calculations, audit correspondence and field photographs. It also indexes the photographed note reporting an approximately 22,000-gallon biosolids overflow, without inferring migration or impact beyond the source.</p>
+          </div>
+          <div className="reference-summary" aria-label="Biosolids and land-application archive audit summary">
+            <div><FileText /><span><strong>{biosolidsAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><CheckCircle2 /><span><strong>{biosolidsAudit.stats.existingRecordsReused}</strong> existing records reused</span></div>
+            <div><FileSearch /><span><strong>{biosolidsAudit.stats.duplicateCopiesSuppressed}</strong> actual duplicates suppressed</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 05 duplicate, metadata, OCR and spill-record decisions</summary>
+            <div className="audit-panel">
+              <p>{biosolidsAudit.methods.join(" · ")}</p>
+              <ul>{biosolidsAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search biosolids and land-application records</span><input value={biosolidsQuery} onChange={(event) => setBiosolidsQuery(event.target.value)} placeholder="Search filename, year, site, record type or spill note" /></label>
+            <label className="document-filter"><span className="sr-only">Filter biosolids records by type</span><select value={biosolidsType} onChange={(event) => setBiosolidsType(event.target.value)}>{biosolidsTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredBiosolidsDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredBiosolidsDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredBiosolidsDocuments.length === 0 && <p className="document-empty">No biosolids or land-application records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="lab-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 06 · LAB RESULTS &amp; SAMPLING · VERIFIED AUGUST 27, 2026</p><h2 id="lab-library-title">Search {labDocuments.length} newly verified laboratory records</h2></div>
+            <p>This category preserves analytical reports, whole-effluent-toxicity studies, chain-of-custody and field sheets, exceedance records, method reviews, mercury monitoring, and biosolids or pathogen results. Similar templates remain separate when the monitoring date, sample, analyte, method, revision or reported result differs.</p>
+          </div>
+          <div className="reference-summary" aria-label="Laboratory results and sampling archive audit summary">
+            <div><FileText /><span><strong>{labAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><CheckCircle2 /><span><strong>{labAudit.stats.existingRecordsReused}</strong> existing records reused</span></div>
+            <div><FileSearch /><span><strong>{labAudit.stats.duplicateCopiesSuppressed}</strong> actual duplicates suppressed</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 06 duplicate, metadata, OCR and revision decisions</summary>
+            <div className="audit-panel">
+              <p>{labAudit.methods.join(" · ")}</p>
+              <ul>{labAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search laboratory results and sampling records</span><input value={labQuery} onChange={(event) => setLabQuery(event.target.value)} placeholder="Search filename, year, analyte, laboratory, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter laboratory and sampling records by type</span><select value={labType} onChange={(event) => setLabType(event.target.value)}>{labTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredLabDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredLabDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredLabDocuments.length === 0 && <p className="document-empty">No laboratory or sampling records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="wexford-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 12 · WEXFORD LANDFILL &amp; RULE 2210(y) RECORDS</p><h2 id="wexford-library-title">Search {wexfordDocuments.length} new verified records</h2></div>
+            <p>This source set preserves the groundwater-discharge application, maps, lagoon analytical package, draft and final authorization, correspondence, stormwater file, current operating license and acquisition provenance. Four exact matches already indexed elsewhere are reused instead of republished.</p>
+          </div>
+          <div className="reference-summary" aria-label="Wexford landfill archive audit summary">
+            <div><FileText /><span><strong>{wexfordAudit.stats.newDistinctRecords}</strong> new records</span></div>
+            <div><CheckCircle2 /><span><strong>{wexfordAudit.stats.exactExistingRecordsReused}</strong> exact records reused</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(wexfordAudit.stats.publishedBytes)}</strong> preserved</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 12 duplicate, metadata and scan decisions</summary>
+            <div className="audit-panel">
+              <p>{wexfordAudit.methods.join(" · ")}</p>
+              <ul>{wexfordAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search Wexford landfill records</span><input value={wexfordQuery} onChange={(event) => setWexfordQuery(event.target.value)} placeholder="Search filename, year, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter Wexford records by type</span><select value={wexfordType} onChange={(event) => setWexfordType(event.target.value)}>{wexfordTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredWexfordDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredWexfordDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open source"}<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredWexfordDocuments.length === 0 && <p className="document-empty">No Wexford landfill records match this search.</p>}
+        </section>
+
         <section className="document-library permit-library" aria-labelledby="compliance-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 08 · COMPLIANCE &amp; ENFORCEMENT · VERIFIED AUGUST 27, 2026</p><h2 id="compliance-library-title">Search {complianceDocuments.length} verified compliance records</h2></div>
@@ -1123,6 +1643,41 @@ export default function Home() {
             ))}
           </div>
           {filteredComplianceDocuments.length === 0 && <p className="document-empty">No compliance records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="supplemental-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 28, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} newly added records</h2></div>
+            <p>These additions span federal compliance, landfill operations, civic actions, audited finances, historical groundwater context and response planning. Primary records, historical context and secondary research are explicitly distinguished; related records remain separate unless byte and rendered-content review proves they are the same document.</p>
+          </div>
+          <div className="reference-summary" aria-label="Cross-category additions audit summary">
+            <div><FileText /><span><strong>{supplementalAudit.stats.newDistinctRecords}</strong> distinct additions</span></div>
+            <div><CheckCircle2 /><span><strong>{supplementalAudit.stats.exactExistingRecordsReused + supplementalAudit.stats.duplicateCopiesSuppressed}</strong> copies not republished</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(supplementalAudit.stats.publishedBytes)}</strong> preserved</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review batch duplicate, metadata and OCR decisions</summary>
+            <div className="audit-panel">
+              <p>{supplementalAudit.methods.join(" · ")}</p>
+              <ul>{supplementalAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search newly added records</span><input value={supplementalQuery} onChange={(event) => setSupplementalQuery(event.target.value)} placeholder="Search filename, category, year, type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter newly added records by type</span><select value={supplementalType} onChange={(event) => setSupplementalType(event.target.value)}>{supplementalTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredSupplementalDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredSupplementalDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredSupplementalDocuments.length === 0 && <p className="document-empty">No added records match this search.</p>}
         </section>
 
         <section className="document-library reference-library" aria-labelledby="reference-library-title">

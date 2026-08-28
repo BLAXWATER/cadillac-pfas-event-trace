@@ -1,0 +1,55 @@
+{
+  "stats": {
+    "suppliedFiles": 100,
+    "suppliedPdfs": 100,
+    "suppliedPdfPages": 1401,
+    "finalDistinctRecords": 98,
+    "newDistinctRecords": 90,
+    "existingRecordsReused": 8,
+    "duplicateCopiesSuppressed": 2,
+    "ocrPagesAttempted": 75,
+    "ocrPagesWithText": 74,
+    "visuallyFingerprintedPages": 1401,
+    "existingPdfsTextCompared": 816,
+    "existingPdfsVisuallyCompared": 586,
+    "publishedBytes": 70658074
+  },
+  "methods": [
+    "SHA-256 comparison across all 100 supplied PDFs and every existing catalog record",
+    "Normalized extracted-text comparison against 816 previously published PDFs",
+    "PDF page counts plus embedded title, author, creator, creation and modification metadata",
+    "Visual fingerprints for all 1,401 supplied pages and 586 page-count-compatible published PDFs",
+    "OCR attempted on 75 representative scan-based pages; 74 pages produced usable text",
+    "Embedded-attachment extraction and SHA-256 verification for both PDF Portfolio wrappers"
+  ],
+  "decisions": [
+    {
+      "name": "Two PDF Portfolio wrappers",
+      "reason": "The Paragon-repeat portfolio and the EGLE available-cyanide portfolio each embed an exact byte-for-byte copy of a separately supplied, browser-readable report. The two wrappers are suppressed and the complete extracted reports are retained."
+    },
+    {
+      "name": "Eight records already published",
+      "reason": "Seven byte-identical records and one visually identical KAR biosolids analytical report reuse their stable archive sources. The KAR record title and year were corrected to match the report's September 2018 content."
+    },
+    {
+      "name": "Trace AMR originals and revisions",
+      "reason": "The 2024 and 2025 original and revised Trace packages have different page counts and rendered content. Each version remains independently searchable."
+    },
+    {
+      "name": "Paragon and ERM WET reports",
+      "reason": "Similar laboratory templates cover different test dates, projects, organisms and reported results. They are distinct monitoring events, not duplicate copies."
+    },
+    {
+      "name": "Compliance monitoring field sheets",
+      "reason": "Three visually related forms carry different dates, contacts, sampling parameters and location instructions. Each remains a separate record."
+    },
+    {
+      "name": "Former duplicate-labeled WET report",
+      "reason": "The February 2017 ERM WET report is distinct from all other WET packages. It is retained without the supplied 'Duplicates_' label."
+    },
+    {
+      "name": "Scan-based laboratory packages",
+      "reason": "OCR was used for image-only or extraction-resistant pages, including encrypted WET reports, Trace revisions, toxicity studies and photographed field records."
+    }
+  ]
+}

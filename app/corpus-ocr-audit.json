@@ -7,14 +7,14 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1255,
-    "pdfRecords": 1131,
-    "pdfPages": 11696,
-    "imageRecords": 9,
-    "embeddedTextPages": 9408,
-    "ocrPages": 2297,
-    "ocrPagesWithText": 2028,
-    "manualReviewPages": 101,
+    "catalogRecords": 1336,
+    "pdfRecords": 1211,
+    "pdfPages": 13162,
+    "imageRecords": 10,
+    "embeddedTextPages": 10560,
+    "ocrPages": 2612,
+    "ocrPagesWithText": 2326,
+    "manualReviewPages": 109,
     "hashFailures": 0,
     "unreadableRecords": 0,
     "pageCountFailures": 0,
@@ -25,7 +25,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 101,
+    "pagesReviewed": 109,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -312,6 +312,46 @@
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/010-1aba682de0b8.pdf",
       "pages": [
         12
+      ]
+    },
+    {
+      "catalog": "wexford-documents.json",
+      "id": "037-350723328729",
+      "name": "1993-07-21 - Michigan DNR Certified Letter to Wexford County DPW (Fuller) - WRC Exemption R323.2209 - Groundwater Remediation Discharge at Landfill - 1992 Permit Application Wi.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/037-350723328729.pdf",
+      "pages": [
+        27,
+        29,
+        34
+      ]
+    },
+    {
+      "catalog": "wexford-documents.json",
+      "id": "067-817da93478b1",
+      "name": "2025-07-30__-3596523027244658340__470336 Wexford Stamp - Approved Landfill Gas Monitoring and Management Plan.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/067-817da93478b1.pdf",
+      "pages": [
+        101,
+        109
+      ]
+    },
+    {
+      "catalog": "wexford-documents.json",
+      "id": "070-204dbb186ed2",
+      "name": "2025-07-30__-8681519640329881333__470336 Wexford County LF Stamp Approved Gas Migration Monitoring Plan 10-27-23.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/070-204dbb186ed2.pdf",
+      "pages": [
+        12,
+        14
+      ]
+    },
+    {
+      "catalog": "wexford-documents.json",
+      "id": "086-6500e6efe946",
+      "name": "2026-04-24__-4546656048692449661__Wexford County GCCS Design Plan Stamped 4-2-2025 Final.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/086-6500e6efe946.pdf",
+      "pages": [
+        128
       ]
     }
   ],

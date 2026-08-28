@@ -1,0 +1,61 @@
+{
+  "stats": {
+    "sourceFilesReviewed": 74,
+    "sourcePdfRecords": 74,
+    "reviewedPages": 236,
+    "sourceOcrPages": 5,
+    "sourceOcrPagesWithText": 5,
+    "actualDuplicateGroupsRemoved": 2,
+    "actualDuplicateFilesRemoved": 2,
+    "crossCategoryCopiesReferencedElsewhere": 1,
+    "retainedMultiVersionSubmissionGroups": 14,
+    "finalDistinctRecords": 72,
+    "publishedPages": 230,
+    "publishedOcrPages": 2,
+    "publishedOcrPagesWithText": 2,
+    "publishedBytes": 11714606,
+    "ambiguousFilenameLabelsRemoved": 30
+  },
+  "methods": [
+    "SHA-256 comparison within the supplied folder and against every published evidence catalog",
+    "Page-count, PDF metadata and embedded-text review for all 236 supplied pages",
+    "OCR on all five scan-only pages, with a second page-sequence and content-integrity verification",
+    "Rendered-page, perceptual hash, submission ID, version, attachment list and revision-history comparison",
+    "Conservative retention of every substantively changed portal revision"
+  ],
+  "decisions": [
+    {
+      "name": "HNQ-VZP8-TWNRX v1 scan derivative",
+      "reason": "The three scan-only pages reproduce the same submission, version, fields and page sequence as the born-digital portal export. The searchable born-digital copy is retained and the redundant scan is excluded."
+    },
+    {
+      "name": "HQB-6T2F-9M76H v1 repeated export",
+      "reason": "The two exports were generated one second apart and have the same page count, embedded-text lengths and perceptual page hashes. One canonical copy is retained."
+    },
+    {
+      "name": "Fourteen multi-version submission groups",
+      "reason": "Versions were compared by fields, attachment lists, revision history, dates and rendered pages. Changed or corrected versions remain separate records because they are not duplicates."
+    },
+    {
+      "name": "Submission-ID-only and prefixed filenames",
+      "reason": "Ambiguous storage prefixes, the '(1)' copy label and one missing leading H were removed from displayed names. Canonical names now show date, form title, submission ID and version."
+    },
+    {
+      "name": "Five OCR pages",
+      "reason": "All five scan-only pages produced readable OCR. Three belonged to the excluded scan duplicate; the two retained OCR pages are the unique 2018 IPP PFAS summary report."
+    }
+  ],
+  "removed": [
+    {
+      "source": "2019-06-28 - MiWaters Submission HNQ-VZP8-TWNRX - IPP PFAS Status Report - Wexford Confirmed as Source, Gone to Deep Well Injection - Effluent PFOS 7.1 PFOA 15 ng-L.pdf",
+      "sha256": "64b4ef9cd07ec8c4d8cd7e6ffe99bab63dfae8605751e9cc0e9be572dfaf4fb7",
+      "reason": "Scan-only derivative of HNQ-VZP8-TWNRX v1; the born-digital portal record is retained."
+    },
+    {
+      "source": "HQB-6T2F-9M76H_v1 (1).pdf",
+      "sha256": "eda79e4d4c2deac573bef3ac2f365be72790e370da31310eb4b1785662e94db8",
+      "reason": "Second HQB-6T2F-9M76H v1 export created one second from the retained copy with the same pages and perceptual page hashes."
+    }
+  ],
+  "reused": []
+}

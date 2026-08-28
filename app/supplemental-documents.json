@@ -167,5 +167,18 @@
     "size": 1870493,
     "sha256": "f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241",
     "description": "The audited report for the fiscal year ended June 30, 2019 states that revenue from treatment of Wexford County Landfill leachate exceeded budget by $44,691. It corroborates treatment activity but does not state total gallons, PFAS content or treatment performance."
+  },
+  {
+    "id": "014-1872d030ac1d",
+    "name": "Spill-at-1121-WWTP.jpg",
+    "url": "/findings-docs/014-1872d030ac1d.jpg",
+    "year": "2016",
+    "category": "Correspondence & letters",
+    "type": "Spill notification correspondence",
+    "format": "JPG",
+    "pages": 1,
+    "size": 288379,
+    "sha256": "1872d030ac1d32dcf078661a462fe2fdf5c064557ade0e7a8ac97e32f976be76",
+    "description": "Color as-received scan of the January 12, 2016 Cadillac WWTP letter to DEQ regarding an American Waste leachate spill during offloading. The letter records a spill of less than the truck's 10,000-gallon capacity, containment intended to keep leachate out of a storm drain and the river, removal of contaminated snow and soil to the WWTP drying beds, backfilling, and preventive hose-depth and driver procedures. It is retained separately from the black-and-white PDF because visible routing annotations and agency-receipt stamps differ."
   }
 ]

@@ -7,14 +7,14 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1168,
-    "pdfRecords": 1044,
-    "pdfPages": 11415,
+    "catalogRecords": 1183,
+    "pdfRecords": 1059,
+    "pdfPages": 11466,
     "imageRecords": 9,
-    "embeddedTextPages": 9154,
-    "ocrPages": 2270,
-    "ocrPagesWithText": 2004,
-    "manualReviewPages": 98,
+    "embeddedTextPages": 9180,
+    "ocrPages": 2295,
+    "ocrPagesWithText": 2026,
+    "manualReviewPages": 101,
     "hashFailures": 0,
     "unreadableRecords": 0,
     "pageCountFailures": 0,
@@ -25,7 +25,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 98,
+    "pagesReviewed": 101,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -203,6 +203,25 @@
         45,
         46,
         47
+      ]
+    },
+    {
+      "catalog": "process-site-documents.json",
+      "id": "process-site-010-297667409958",
+      "name": "2007 - Cadillac WWTP History Note, Topographic Map and Aerial Photograph.pdf",
+      "url": "/process-site-docs/process-site-010-297667409958.pdf",
+      "pages": [
+        2,
+        3
+      ]
+    },
+    {
+      "catalog": "process-site-documents.json",
+      "id": "process-site-011-54ae24b7e6c0",
+      "name": "2012 - Cadillac WWTP Maps and Flow Diagrams.pdf",
+      "url": "/process-site-docs/process-site-011-54ae24b7e6c0.pdf",
+      "pages": [
+        4
       ]
     },
     {

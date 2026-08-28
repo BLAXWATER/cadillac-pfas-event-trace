@@ -1,0 +1,65 @@
+{
+  "stats": {
+    "sourceFilesReviewed": 18,
+    "sourcePdfRecords": 18,
+    "reviewedPages": 62,
+    "sourceOcrPages": 28,
+    "sourceOcrPagesWithText": 25,
+    "manuallyVerifiedMapAndAerialPages": 3,
+    "exactDuplicateGroupsWithinSource": 0,
+    "renderIdenticalByteDifferentGroupsWithinSource": 0,
+    "crossCategoryCopiesReferencedElsewhere": 3,
+    "finalDistinctRecords": 15,
+    "publishedPages": 51,
+    "publishedOcrPages": 25,
+    "publishedOcrPagesWithText": 22,
+    "publishedBytes": 8981305,
+    "duplicateLikeLabelsRemoved": 3
+  },
+  "methods": [
+    "SHA-256 comparison within the supplied folder and against every published evidence catalog",
+    "Page-count, PDF metadata and embedded-text review for all 62 supplied pages",
+    "OCR on every scan-only or sparse-text page, with visual inspection of low-text map and aerial pages",
+    "Normalized extracted-text and rendered-page sequence comparison for byte-different candidates",
+    "Conservative retention of compiled map packages, civic minutes and distinct engineering sheets"
+  ],
+  "decisions": [
+    {
+      "name": "Three exact cross-category copies",
+      "reason": "The CWSRF funding proposal, Certified Operator Response Form and Wexford Landfill flow-rate worksheet exactly match records already preserved in other catalogs. They remain reachable through site-wide search and are not republished here."
+    },
+    {
+      "name": "Three filenames ending ~2",
+      "reason": "Content, rendering and hashes show these county-minute files are distinct records, not duplicate copies. The ambiguous source suffix is removed from their displayed names."
+    },
+    {
+      "name": "Process-flow drawing series and compiled map packages",
+      "reason": "Individual engineering sheets and compiled history/map packages have distinct page sequences and evidentiary roles, so each is retained once."
+    },
+    {
+      "name": "Three low-text map and aerial pages",
+      "reason": "Visual inspection confirmed that the pages are intact topographic maps and aerial imagery. They are not failed OCR or corrupt files."
+    },
+    {
+      "name": "Undated brochure",
+      "reason": "The PDF creation timestamp is preserved in the audit metadata but is not treated as the brochure's publication date because no issue date is printed in the record."
+    }
+  ],
+  "reused": [
+    {
+      "source": "02-02-2026 - upgrades-to-WWTP-7155.pdf",
+      "existing": "Cadillac WWTP CWSRF Project Plan and Funding Proposal.pdf",
+      "catalog": "supplemental-documents.json"
+    },
+    {
+      "source": "Certified Operator Response Form.pdf",
+      "existing": "Certified Operator Response Form.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "Flow Rate - Days.pdf",
+      "existing": "Flow Rate - Days.pdf",
+      "catalog": "wexford-documents.json"
+    }
+  ]
+}

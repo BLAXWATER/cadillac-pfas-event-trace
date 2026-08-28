@@ -7,11 +7,11 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1419,
-    "pdfRecords": 1293,
-    "pdfPages": 16508,
+    "catalogRecords": 1426,
+    "pdfRecords": 1300,
+    "pdfPages": 16582,
     "imageRecords": 10,
-    "embeddedTextPages": 13341,
+    "embeddedTextPages": 13415,
     "ocrPages": 3177,
     "ocrPagesWithText": 2864,
     "manualReviewPages": 266,

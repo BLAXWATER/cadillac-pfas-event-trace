@@ -1,0 +1,122 @@
+{
+  "stats": {
+    "sourceFilesReviewed": 49,
+    "sourcePdfRecords": 48,
+    "sourceImageRecords": 1,
+    "reviewedPages": 205,
+    "sourceOcrPages": 15,
+    "sourceOcrPagesWithText": 12,
+    "exactDuplicateGroupsWithinSource": 0,
+    "renderIdenticalByteDifferentGroupsWithinSource": 0,
+    "crossCategoryCopiesReferencedElsewhere": 14,
+    "existingRecordMovedIntoCategory": 1,
+    "newDistinctRecords": 34,
+    "finalDistinctRecords": 35,
+    "duplicateLabelsRemoved": 4,
+    "publishedPages": 116,
+    "publishedOcrPages": 14,
+    "publishedOcrPagesWithText": 12,
+    "publishedBytes": 6358928
+  },
+  "methods": [
+    "SHA-256 comparison within the entire supplied folder and against every published evidence catalog",
+    "Page-count, PDF metadata and embedded-text review for every file",
+    "OCR on every scan-only or sparse-text page, with page-level confidence and readability checks",
+    "Normalized extracted-text and rendered-page sequence comparison for byte-different candidates",
+    "Conservative retention of revisions, transmittal wrappers, handwritten notes, annotations and agency stamps when they carry distinct evidence"
+  ],
+  "decisions": [
+    {
+      "name": "Fourteen exact cross-category copies",
+      "reason": "The source bytes exactly match records already preserved in the NPDES or IPP libraries. Those canonical records are referenced through site-wide search and are not republished in Category 09."
+    },
+    {
+      "name": "Spill-at-1121-WWTP.jpg",
+      "reason": "The previously added color spill scan is moved into its proper Category 09 archive. Its asset is not duplicated, and its distinct visible annotations and receipt stamps remain preserved."
+    },
+    {
+      "name": "Four source filenames beginning Duplicates_",
+      "reason": "No identical content exists in the published library. The records are retained once, their misleading source prefix is removed, and the original source hash remains recorded."
+    },
+    {
+      "name": "Laboratory-report email wrapper",
+      "reason": "The wrapper includes routing correspondence plus the attached report. It is materially distinct from the standalone laboratory report and remains separately searchable."
+    },
+    {
+      "name": "Drafts, revisions and closely related email chains",
+      "reason": "Related subject matter alone was not treated as duplication. Distinct status, wording, attachments, annotations or correspondence context warranted retention."
+    }
+  ],
+  "reused": [
+    {
+      "source": "09 - Correspondence & Letters_Application Tranmittal Memo.pdf",
+      "existing": "Application Tranmittal Memo.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Basis for Decision Memo (2).pdf",
+      "existing": "2008 Basis for Decision Memo.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Basis for Decision Memo-FINAL_Cadillac WWTP.pdf",
+      "existing": "Basis for Decision Memo-FINAL_Cadillac WWTP.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Basis For Decision Memo.pdf",
+      "existing": "Basis For Decision Memo.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Biologist App Review Email_MI0020257_6-1-2022.pdf",
+      "existing": "Biologist App Review Email_MI0020257_6-1-2022.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Cadillac Mod Basis for Decision Memo.pdf",
+      "existing": "Cadillac Mod Basis for Decision Memo.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Categorical determination - Cadillac casting email chain discussing processes .pdf",
+      "existing": "Categorical determination - Cadillac casting email chain discussing processes .pdf",
+      "catalog": "ipp-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Decisionmaker Memo (1).pdf",
+      "existing": "Decisionmaker Memo (1).pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Decisionmaker Memo.pdf",
+      "existing": "Decisionmaker Memo.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_IP Issuance Letter_Cadillac WWTP.pdf",
+      "existing": "IP Issuance Letter_Cadillac WWTP.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Issuance Letter_Cadillac WWTP.pdf",
+      "existing": "Issuance Letter_Cadillac WWTP.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_PPN Correspondence_Cadillac WWTP.pdf",
+      "existing": "PPN Correspondence_Cadillac WWTP.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_Pre-Public Note Ltr_Cadillac WWTP.pdf",
+      "existing": "Pre-Public Note Ltr_Cadillac WWTP.pdf",
+      "catalog": "npdes-documents.json"
+    },
+    {
+      "source": "09 - Correspondence & Letters_RE_ Categorical determination _  CCI plant map with sewer drain lines.pdf",
+      "existing": "RE_ Categorical determination _  CCI plant map with sewer drain lines.pdf",
+      "catalog": "ipp-documents.json"
+    }
+  ]
+}

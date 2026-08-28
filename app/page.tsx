@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import complianceAudit from "./compliance-audit.json";
 import complianceDocuments from "./compliance-documents.json";
+import correspondenceAudit from "./correspondence-audit.json";
+import correspondenceDocuments from "./correspondence-documents.json";
 import biosolidsAudit from "./biosolids-audit.json";
 import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
@@ -113,6 +115,7 @@ const libraryArchives: { id: string; label: string; documents: readonly LibraryD
   { id: "lab", label: "Lab results & sampling", documents: labDocuments },
   { id: "wexford", label: "Wexford landfill", documents: wexfordDocuments },
   { id: "compliance", label: "Compliance & enforcement", documents: complianceDocuments },
+  { id: "correspondence", label: "Correspondence & letters", documents: correspondenceDocuments },
   { id: "supplemental", label: "Added evidence", documents: supplementalDocuments },
   { id: "reference", label: "Reference data", documents: referenceDocuments },
 ];
@@ -1165,6 +1168,8 @@ export default function Home() {
   const [labType, setLabType] = useState("All laboratory records");
   const [complianceQuery, setComplianceQuery] = useState("");
   const [complianceType, setComplianceType] = useState("All compliance records");
+  const [correspondenceQuery, setCorrespondenceQuery] = useState("");
+  const [correspondenceType, setCorrespondenceType] = useState("All correspondence records");
   const [wexfordQuery, setWexfordQuery] = useState("");
   const [wexfordType, setWexfordType] = useState("All Wexford records");
   const [supplementalQuery, setSupplementalQuery] = useState("");
@@ -1235,6 +1240,13 @@ export default function Home() {
   const filteredComplianceDocuments = complianceDocuments.filter((document) => {
     const matchesType = complianceType === "All compliance records" || document.type === complianceType;
     const matchesQuery = !normalizedComplianceQuery || `${document.name} ${document.year} ${document.type}`.toLowerCase().includes(normalizedComplianceQuery);
+    return matchesType && matchesQuery;
+  });
+  const correspondenceTypes = ["All correspondence records", ...Array.from(new Set(correspondenceDocuments.map((document) => document.type)))];
+  const normalizedCorrespondenceQuery = correspondenceQuery.trim().toLowerCase();
+  const filteredCorrespondenceDocuments = correspondenceDocuments.filter((document) => {
+    const matchesType = correspondenceType === "All correspondence records" || document.type === correspondenceType;
+    const matchesQuery = !normalizedCorrespondenceQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedCorrespondenceQuery);
     return matchesType && matchesQuery;
   });
   const wexfordTypes = ["All Wexford records", ...Array.from(new Set(wexfordDocuments.map((document) => document.type)))];
@@ -1643,6 +1655,41 @@ export default function Home() {
             ))}
           </div>
           {filteredComplianceDocuments.length === 0 && <p className="document-empty">No compliance records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="correspondence-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 09 · CORRESPONDENCE &amp; LETTERS · VERIFIED AUGUST 28, 2026</p><h2 id="correspondence-library-title">Search {correspondenceDocuments.length} verified correspondence records</h2></div>
+            <p>This category preserves regulatory email chains, transmittal letters, permit-development discussions, PFAS and biosolids correspondence, compliance notices, Wexford Landfill filings and the original spill scan. Every page was checked through its text layer or OCR; exact copies already indexed elsewhere are reused through site-wide search.</p>
+          </div>
+          <div className="reference-summary" aria-label="Correspondence and letters archive audit summary">
+            <div><FileText /><span><strong>{correspondenceAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
+            <div><CheckCircle2 /><span><strong>{correspondenceAudit.stats.publishedOcrPages}</strong> OCR pages verified</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(correspondenceAudit.stats.publishedBytes)}</strong> published</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 09 duplicate, OCR and cross-library decisions</summary>
+            <div className="audit-panel">
+              <p>{correspondenceAudit.methods.join(" · ")}</p>
+              <ul>{correspondenceAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search correspondence records</span><input value={correspondenceQuery} onChange={(event) => setCorrespondenceQuery(event.target.value)} placeholder="Search filename, year, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter correspondence records by type</span><select value={correspondenceType} onChange={(event) => setCorrespondenceType(event.target.value)}>{correspondenceTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredCorrespondenceDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredCorrespondenceDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredCorrespondenceDocuments.length === 0 && <p className="document-empty">No correspondence records match this search.</p>}
         </section>
 
         <section className="document-library permit-library" aria-labelledby="supplemental-library-title">

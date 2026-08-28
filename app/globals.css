@@ -172,7 +172,9 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .source-tooltip { width: min(410px, calc(100vw - 24px)) !important; max-height: min(760px, 88vh); padding: 0 !important; overflow: auto; border: 1px solid #324552 !important; background: #101821 !important; color: #e8eef5 !important; box-shadow: 0 22px 70px rgba(0, 0, 0, .55); }
 .source-tooltip > svg { fill: #101821 !important; color: #101821 !important; }
 .source-preview { display: block; width: 100%; height: 190px; object-fit: contain; background: #e8eaec; }
-.missing-preview { height: 120px; display: grid; place-items: center; gap: 8px; background: rgba(255, 191, 71, .08); color: #ffbf47; }
+.missing-preview { height: 120px; display: grid; place-items: center; align-content: center; gap: 6px; background: rgba(61, 219, 240, .06); color: #8be9f4; }
+.missing-preview span { color: #dce8ef; font-size: 13.2px; font-weight: 650; }
+.missing-preview small { color: #91a3af; font-size: 11px; }
 .source-tooltip-copy { display: grid; gap: 7px; padding: 14px 15px 15px; }
 .source-tooltip-copy p { margin: 0; }
 .source-role { color: var(--primary); font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }

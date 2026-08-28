@@ -18,7 +18,14 @@
     "nonPrimaryRecordsExcluded": 9,
     "duplicateLikeLabelsRemoved": 12,
     "publishedPages": 1591,
-    "publishedBytes": 157060646
+    "publishedBytes": 157060646,
+    "latestRepeatIntakeFilesReviewed": 42,
+    "latestRepeatIntakePagesReviewed": 230,
+    "latestRepeatIntakeDistinctContentHashes": 41,
+    "latestRepeatIntakeDistinctContentPages": 200,
+    "latestRepeatIntakeExactExistingFileMatches": 42,
+    "latestRepeatIntakeIntraBatchDuplicateFiles": 1,
+    "latestRepeatIntakeRecordsAdded": 0
   },
   "methods": [
     "SHA-256 comparison across all 111 supplied files, all existing evidence catalogs and the previously linked timeline source",
@@ -27,7 +34,8 @@
     "Original-detail visual review of all eight pages left below the OCR confidence threshold, including divider sheets, a faint reverse-side form and large-format maps",
     "Read-only Word rendering of the 41-page authoring copy to verify that it was the excluded Truth-First analytical report rather than a primary agency record",
     "Revision-sensitive review: draft/final, versioned, corrected and differently scoped records were retained whenever their content or metadata was substantively distinct",
-    "Immutable GitHub preservation verification: the original 81 blobs were reread from commit b4705928d16ccaac9701ee43cba04369982c5ab6 and the three supplemental on-site inspections from commit 49922c706588f236e1edbad5fa8996e4c249e330, with recorded byte counts and SHA-256 hashes matched"
+    "Immutable GitHub preservation verification: the original 81 blobs were reread from commit b4705928d16ccaac9701ee43cba04369982c5ab6 and the three supplemental on-site inspections from commit 49922c706588f236e1edbad5fa8996e4c249e330, with recorded byte counts and SHA-256 hashes matched",
+    "MiEnviro repeat-intake verification: all 42 supplied PDFs (230 pages) were SHA-256 checked against every evidence catalog and the timeline source; the 41 unique content hashes totaling 200 unique pages were already preserved. The image-only three-page leachate-request source was also rendered and visually rechecked against its existing timeline copy."
   ],
   "decisions": [
     {
@@ -65,6 +73,10 @@
     {
       "name": "2014, 2015 and 2017 N3862 on-site inspections",
       "reason": "Each multi-page Air Quality Division inspection is distinct from the one-page full-compliance evaluation for the same date. All three were retained as landfill operations and regulatory context, not as PFAS sampling evidence."
+    },
+    {
+      "name": "Forty-two repeat Wexford/MiEnviro exports",
+      "reason": "Every supplied PDF is byte-identical to an existing indexed or timeline source. The two portal exports named lagoon summary.pdf are also identical to each other, leaving 41 distinct hashes across 42 files. Existing clean display names and source links were reused; no duplicate copy or Duplicate label was added."
     }
   ]
 }

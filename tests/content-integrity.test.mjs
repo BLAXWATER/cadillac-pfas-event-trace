@@ -237,6 +237,13 @@ test("Wexford archive OCRs every page and excludes only verified copies or non-p
   assert.equal(audit.stats.nonPrimaryRecordsExcluded, 9);
   assert.equal(audit.stats.duplicateLikeLabelsRemoved, 12);
   assert.equal(audit.stats.publishedPages, 1591);
+  assert.equal(audit.stats.latestRepeatIntakeFilesReviewed, 42);
+  assert.equal(audit.stats.latestRepeatIntakePagesReviewed, 230);
+  assert.equal(audit.stats.latestRepeatIntakeDistinctContentHashes, 41);
+  assert.equal(audit.stats.latestRepeatIntakeDistinctContentPages, 200);
+  assert.equal(audit.stats.latestRepeatIntakeExactExistingFileMatches, 42);
+  assert.equal(audit.stats.latestRepeatIntakeIntraBatchDuplicateFiles, 1);
+  assert.equal(audit.stats.latestRepeatIntakeRecordsAdded, 0);
   assert.equal(new Set(catalog.map((row) => row.sha256)).size, catalog.length);
   assert.equal(catalog.some((row) => /Truth-First|TruthFirst/i.test(row.name)), false);
   assert.equal(catalog.some((row) => /^(?:duplicates?|copy)[-_ ]|~\d+|\(copy\s*\d+\)/i.test(row.name)), false);

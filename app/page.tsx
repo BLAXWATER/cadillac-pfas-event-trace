@@ -34,6 +34,8 @@ import npdesAudit from "./npdes-audit.json";
 import npdesDocuments from "./npdes-documents.json";
 import pfasAudit from "./pfas-audit.json";
 import pfasDocuments from "./pfas-documents.json";
+import processSiteAudit from "./process-site-audit.json";
+import processSiteDocuments from "./process-site-documents.json";
 import referenceAudit from "./reference-audit.json";
 import referenceDocuments from "./reference-documents.json";
 import supplementalAudit from "./supplemental-audit.json";
@@ -116,6 +118,7 @@ const libraryArchives: { id: string; label: string; documents: readonly LibraryD
   { id: "wexford", label: "Wexford landfill", documents: wexfordDocuments },
   { id: "compliance", label: "Compliance & enforcement", documents: complianceDocuments },
   { id: "correspondence", label: "Correspondence & letters", documents: correspondenceDocuments },
+  { id: "process-site", label: "Process & site documents", documents: processSiteDocuments },
   { id: "supplemental", label: "Added evidence", documents: supplementalDocuments },
   { id: "reference", label: "Reference data", documents: referenceDocuments },
 ];
@@ -1170,6 +1173,8 @@ export default function Home() {
   const [complianceType, setComplianceType] = useState("All compliance records");
   const [correspondenceQuery, setCorrespondenceQuery] = useState("");
   const [correspondenceType, setCorrespondenceType] = useState("All correspondence records");
+  const [processSiteQuery, setProcessSiteQuery] = useState("");
+  const [processSiteType, setProcessSiteType] = useState("All process and site records");
   const [wexfordQuery, setWexfordQuery] = useState("");
   const [wexfordType, setWexfordType] = useState("All Wexford records");
   const [supplementalQuery, setSupplementalQuery] = useState("");
@@ -1247,6 +1252,13 @@ export default function Home() {
   const filteredCorrespondenceDocuments = correspondenceDocuments.filter((document) => {
     const matchesType = correspondenceType === "All correspondence records" || document.type === correspondenceType;
     const matchesQuery = !normalizedCorrespondenceQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedCorrespondenceQuery);
+    return matchesType && matchesQuery;
+  });
+  const processSiteTypes = ["All process and site records", ...Array.from(new Set(processSiteDocuments.map((document) => document.type)))];
+  const normalizedProcessSiteQuery = processSiteQuery.trim().toLowerCase();
+  const filteredProcessSiteDocuments = processSiteDocuments.filter((document) => {
+    const matchesType = processSiteType === "All process and site records" || document.type === processSiteType;
+    const matchesQuery = !normalizedProcessSiteQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedProcessSiteQuery);
     return matchesType && matchesQuery;
   });
   const wexfordTypes = ["All Wexford records", ...Array.from(new Set(wexfordDocuments.map((document) => document.type)))];
@@ -1690,6 +1702,41 @@ export default function Home() {
             ))}
           </div>
           {filteredCorrespondenceDocuments.length === 0 && <p className="document-empty">No correspondence records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="process-site-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 10 · PROCESS &amp; SITE DOCUMENTS · VERIFIED AUGUST 28, 2026</p><h2 id="process-site-library-title">Search {processSiteDocuments.length} verified process and site records</h2></div>
+            <p>This category preserves plant process-flow drawings, site and sewer-line plans, operational digester and flow data, facility history and mapping, a historical plant brochure, classification material and county records concerning landfill infrastructure. Every supplied page was checked through its text layer or OCR; exact copies already indexed elsewhere are reused through site-wide search.</p>
+          </div>
+          <div className="reference-summary" aria-label="Process and site documents archive audit summary">
+            <div><FileText /><span><strong>{processSiteAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
+            <div><CheckCircle2 /><span><strong>{processSiteAudit.stats.publishedOcrPages}</strong> OCR pages verified</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(processSiteAudit.stats.publishedBytes)}</strong> published</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 10 duplicate, OCR and cross-library decisions</summary>
+            <div className="audit-panel">
+              <p>{processSiteAudit.methods.join(" · ")}</p>
+              <ul>{processSiteAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search process and site records</span><input value={processSiteQuery} onChange={(event) => setProcessSiteQuery(event.target.value)} placeholder="Search filename, year, record type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter process and site records by type</span><select value={processSiteType} onChange={(event) => setProcessSiteType(event.target.value)}>{processSiteTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredProcessSiteDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredProcessSiteDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredProcessSiteDocuments.length === 0 && <p className="document-empty">No process or site records match this search.</p>}
         </section>
 
         <section className="document-library permit-library" aria-labelledby="supplemental-library-title">

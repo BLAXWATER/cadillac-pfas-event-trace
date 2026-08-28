@@ -661,5 +661,18 @@
     "size": 5243384,
     "sha256": "d53c2d30bb899d4727f0b33a001dae062afb3a1f629a428323f1dfc959e25cde",
     "description": "The packet describes the planned three-laboratory PFAS comparability study using simultaneous samples from approximately 20 residences. It records the study design before the later findings."
+  },
+  {
+    "id": "052-8659ed67102c",
+    "name": "May 19 2025 City Council Meeting Minutes.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/acfdd5bb24b35545948a9b0078262cfacaf85510/public/findings-docs/052-8659ed67102c.pdf",
+    "year": "2025",
+    "category": "PFAS response & infrastructure",
+    "type": "City council minutes",
+    "format": "PDF",
+    "pages": 38,
+    "size": 820105,
+    "sha256": "8659ed67102c60eb9b887b6f5428fc799ffca1390fe1be81ed6ac57ff6d93845",
+    "description": "Official minutes preserve the May 19 PFAS update, including private-well test counts and retesting after possible sample contamination, attributed biosolids and municipal-water statements, planned mapping and infrastructure work, and the stated 2019 loss of landfill-leachate treatment revenue."
   }
 ]

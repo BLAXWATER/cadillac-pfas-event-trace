@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 573);
+  assert.equal(localFiles, 645);
   assert.equal(externalFiles, 610);
 });
 
@@ -119,7 +119,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1183);
+  assert.equal(recordCount, 1255);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -135,8 +135,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1059);
-  assert.equal(audit.stats.pdfPages, 11466);
+  assert.equal(audit.stats.pdfRecords, 1131);
+  assert.equal(audit.stats.pdfPages, 11696);
   assert.equal(audit.stats.imageRecords, 9);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
@@ -197,6 +197,26 @@ test("process and site archive audits every page and reuses only verified cross-
   assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
   assert.equal(audit.stats.duplicateLikeLabelsRemoved, 3);
   assert.equal(catalog.some((row) => /~\d+|^(?:duplicates?|copy)[-_ ]/i.test(row.name)), false);
+});
+
+test("online form submissions retain real revisions and exclude only verified duplicate exports", async () => {
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "form-submission-documents.json"), "utf8"));
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "form-submission-audit.json"), "utf8"));
+
+  assert.equal(audit.stats.sourceFilesReviewed, 74);
+  assert.equal(audit.stats.reviewedPages, 236);
+  assert.equal(audit.stats.sourceOcrPages, 5);
+  assert.equal(audit.stats.sourceOcrPagesWithText, 5);
+  assert.equal(audit.stats.finalDistinctRecords, 72);
+  assert.equal(catalog.length, audit.stats.finalDistinctRecords);
+  assert.equal(audit.stats.actualDuplicateGroupsRemoved, 2);
+  assert.equal(audit.stats.actualDuplicateFilesRemoved, 2);
+  assert.equal(audit.stats.retainedMultiVersionSubmissionGroups, 14);
+  assert.equal(audit.stats.publishedPages, 230);
+  assert.equal(audit.stats.publishedOcrPages, 2);
+  assert.equal(new Set(catalog.map((row) => row.sha256)).size, catalog.length);
+  assert.equal(catalog.some((row) => /\(1\)|11 - Form Submissions|^PD-MWSX/i.test(row.name)), false);
+  assert.equal(catalog.some((row) => row.name.includes("HPD-MWSX-Y48BC")), true);
 });
 
 test("local public assets contain no byte-identical redundant copies", async () => {

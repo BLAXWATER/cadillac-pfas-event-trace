@@ -26,6 +26,8 @@ import biosolidsAudit from "./biosolids-audit.json";
 import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
+import formSubmissionAudit from "./form-submission-audit.json";
+import formSubmissionDocuments from "./form-submission-documents.json";
 import ippAudit from "./ipp-audit.json";
 import ippDocuments from "./ipp-documents.json";
 import labAudit from "./lab-audit.json";
@@ -119,6 +121,7 @@ const libraryArchives: { id: string; label: string; documents: readonly LibraryD
   { id: "compliance", label: "Compliance & enforcement", documents: complianceDocuments },
   { id: "correspondence", label: "Correspondence & letters", documents: correspondenceDocuments },
   { id: "process-site", label: "Process & site documents", documents: processSiteDocuments },
+  { id: "form-submissions", label: "Online form submissions", documents: formSubmissionDocuments },
   { id: "supplemental", label: "Added evidence", documents: supplementalDocuments },
   { id: "reference", label: "Reference data", documents: referenceDocuments },
 ];
@@ -1175,6 +1178,8 @@ export default function Home() {
   const [correspondenceType, setCorrespondenceType] = useState("All correspondence records");
   const [processSiteQuery, setProcessSiteQuery] = useState("");
   const [processSiteType, setProcessSiteType] = useState("All process and site records");
+  const [formSubmissionQuery, setFormSubmissionQuery] = useState("");
+  const [formSubmissionType, setFormSubmissionType] = useState("All portal submissions");
   const [wexfordQuery, setWexfordQuery] = useState("");
   const [wexfordType, setWexfordType] = useState("All Wexford records");
   const [supplementalQuery, setSupplementalQuery] = useState("");
@@ -1259,6 +1264,13 @@ export default function Home() {
   const filteredProcessSiteDocuments = processSiteDocuments.filter((document) => {
     const matchesType = processSiteType === "All process and site records" || document.type === processSiteType;
     const matchesQuery = !normalizedProcessSiteQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedProcessSiteQuery);
+    return matchesType && matchesQuery;
+  });
+  const formSubmissionTypes = ["All portal submissions", ...Array.from(new Set(formSubmissionDocuments.map((document) => document.type)))];
+  const normalizedFormSubmissionQuery = formSubmissionQuery.trim().toLowerCase();
+  const filteredFormSubmissionDocuments = formSubmissionDocuments.filter((document) => {
+    const matchesType = formSubmissionType === "All portal submissions" || document.type === formSubmissionType;
+    const matchesQuery = !normalizedFormSubmissionQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedFormSubmissionQuery);
     return matchesType && matchesQuery;
   });
   const wexfordTypes = ["All Wexford records", ...Array.from(new Set(wexfordDocuments.map((document) => document.type)))];
@@ -1737,6 +1749,41 @@ export default function Home() {
             ))}
           </div>
           {filteredProcessSiteDocuments.length === 0 && <p className="document-empty">No process or site records match this search.</p>}
+        </section>
+
+        <section className="document-library permit-library" aria-labelledby="form-submission-library-title">
+          <div className="evidence-heading">
+            <div><p className="eyebrow">CATEGORY 11 · ONLINE FORM SUBMISSIONS · VERIFIED AUGUST 28, 2026</p><h2 id="form-submission-library-title">Search {formSubmissionDocuments.length} verified portal submissions</h2></div>
+            <p>MiWaters and MiEnviro copies of record are organized by submission date, form title, submission ID and version. The archive includes PFAS effluent and biosolids monitoring, IPP and biosolids annual reports, compliance responses, certifications, approvals, stormwater forms and a discharge report. Every supplied page was read through embedded text or OCR, and corrected versions remain separate from true duplicate exports.</p>
+          </div>
+          <div className="reference-summary" aria-label="Online form submissions archive audit summary">
+            <div><FileText /><span><strong>{formSubmissionAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
+            <div><CheckCircle2 /><span><strong>{formSubmissionAudit.stats.actualDuplicateFilesRemoved}</strong> actual duplicates excluded</span></div>
+            <div><FileSearch /><span><strong>{formatBytes(formSubmissionAudit.stats.publishedBytes)}</strong> published</span></div>
+          </div>
+          <details className="audit-details archive-audit">
+            <summary>Review Category 11 duplicate, revision and OCR decisions</summary>
+            <div className="audit-panel">
+              <p>{formSubmissionAudit.methods.join(" · ")}</p>
+              <ul>{formSubmissionAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <div className="document-controls">
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search online form submissions</span><input value={formSubmissionQuery} onChange={(event) => setFormSubmissionQuery(event.target.value)} placeholder="Search submission ID, form title, year, version or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter online form submissions by type</span><select value={formSubmissionType} onChange={(event) => setFormSubmissionType(event.target.value)}>{formSubmissionTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <span className="document-result-count"><strong>{filteredFormSubmissionDocuments.length}</strong> matching records</span>
+          </div>
+          <div className="document-grid">
+            {filteredFormSubmissionDocuments.map((document) => (
+              <article className="archive-card" key={document.id}>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <h3>{document.name}</h3>
+                <p className="archive-description">{document.description}</p>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+              </article>
+            ))}
+          </div>
+          {filteredFormSubmissionDocuments.length === 0 && <p className="document-empty">No online form submissions match this search.</p>}
         </section>
 
         <section className="document-library permit-library" aria-labelledby="supplemental-library-title">

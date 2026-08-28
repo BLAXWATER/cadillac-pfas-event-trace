@@ -1,0 +1,55 @@
+{
+  "batch": "Cadillac original-document archives received 2026-08-28",
+  "stats": {
+    "archives": 4,
+    "manifestFiles": 4,
+    "sourceRecords": 408,
+    "pdfs": 404,
+    "docxContainers": 3,
+    "workbooks": 1,
+    "pdfPages": 13685,
+    "ocrRequiredPages": 2615,
+    "ocrPagesWithText": 2553,
+    "renderedManualReviewPages": 88,
+    "fullTextTopicRecords": 117,
+    "fullTextPfasRecords": 62,
+    "fullTextLandfillLeachateRecords": 11,
+    "manifestHashMismatches": 0,
+    "newDistinctRecords": 54,
+    "exactExistingRecordsReused": 1,
+    "exactIntraBatchCopiesSuppressed": 1,
+    "outOfScopeIncidentalOrOverlappingExcluded": 352,
+    "publishedBytes": 228411526
+  },
+  "methods": [
+    "Verified every manifest SHA-256 value before classification",
+    "Extracted embedded text from every PDF page and applied OCR to every scan-required page",
+    "Rendered and manually inspected all visually sparse pages",
+    "Inspected the native DOCX XML in the three extensionless containers",
+    "Inspected the complete spreadsheet structure and all 11 worksheets in A12",
+    "Compared byte hashes, normalized text, rendered-page fingerprints and metadata against the full published corpus",
+    "Applied evidence relevance and material-new-information review independently from duplicate detection"
+  ],
+  "decisions": [
+    {
+      "name": "PFAS A12-A24 source set",
+      "result": "Sixteen distinct source records retained. Related tables and maps remain separate because their formats, dates and evidentiary roles differ."
+    },
+    {
+      "name": "Council packet archive",
+      "result": "Thirty-eight packets with specific landfill, PFAS, cleanup, testing, funding, public-response or infrastructure evidence retained. Non-identical exclusions are not labeled duplicates."
+    },
+    {
+      "name": "July 20, 2026 City Council packet",
+      "result": "Exact match to existing record 010-1aba682de0b8; the existing immutable source is reused."
+    },
+    {
+      "name": "October 5 and October 19, 2020 packet pair",
+      "result": "Exact byte and rendered-content match; one redundant copy suppressed."
+    },
+    {
+      "name": "Sparse-page review",
+      "result": "All 88 flagged pages were maps, photographs, slide graphics, signatures or blank separators; no missed text record was found."
+    }
+  ]
+}

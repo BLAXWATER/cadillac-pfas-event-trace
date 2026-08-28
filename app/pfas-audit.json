@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suppliedFiles": 91,
-    "finalDistinctRecords": 87,
-    "newDistinctRecords": 80,
+    "suppliedFiles": 107,
+    "finalDistinctRecords": 103,
+    "newDistinctRecords": 96,
     "existingRecordsReused": 6,
     "existingRecordReplaced": 1,
     "duplicateCopiesSuppressed": 4,
-    "ocrReviewedPdfs": 8,
-    "ocrReviewedPages": 30,
-    "publishedBytes": 97516096
+    "ocrReviewedPdfs": 23,
+    "ocrReviewedPages": 190,
+    "publishedBytes": 109250631
   },
   "methods": [
     "SHA-256 comparison within the 91-file category and against every catalog plus timeline source asset",
@@ -16,7 +16,8 @@
     "PDF page counts and embedded creation/modification metadata",
     "Outlook message body, sent-time and embedded-attachment SHA-256 comparison",
     "OCR of all 30 pages in eight image-only PDFs, followed by rendered-page review",
-    "Full-page visual comparison of the two J19915 variants"
+    "Full-page visual comparison of the two J19915 variants",
+    "Workbook inspection plus page-by-page text and visual review of the 16-record A12-A24 PFAS source set"
   ],
   "decisions": [
     {
@@ -42,6 +43,10 @@
     {
       "name": "Context and secondary records",
       "reason": "Ownership news, public statements, a scientific review and secondary water analysis are retained with explicit context labels so they are not presented as primary Cadillac PFAS measurements."
+    },
+    {
+      "name": "A12-A24 PFAS data, maps and agency records",
+      "reason": "All 16 source records have distinct SHA-256 hashes and distinct formats, dates or evidentiary roles. The workbook, complete printable compilation, analytical subsets, dated heat maps, MPART presentations, public notice, management plan and biosolids guidance are preserved without applying duplicate labels."
     }
   ]
 }

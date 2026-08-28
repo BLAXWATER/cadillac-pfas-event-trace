@@ -1,18 +1,20 @@
 {
   "stats": {
-    "suppliedFiles": 19,
-    "newDistinctRecords": 13,
-    "exactExistingRecordsReused": 3,
-    "duplicateCopiesSuppressed": 2,
-    "outOfScopeExcluded": 1,
-    "publishedBytes": 26197168
+    "suppliedFiles": 411,
+    "newDistinctRecords": 51,
+    "exactExistingRecordsReused": 4,
+    "duplicateCopiesSuppressed": 3,
+    "outOfScopeExcluded": 353,
+    "publishedBytes": 242874159
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
     "PDF page count and embedded metadata comparison",
     "Targeted text extraction plus OCR-aware review of scan-only pages",
     "Rendered visual inspection of every short and medium record, all council-packet pages and targeted evidentiary pages in long audited reports",
-    "Cross-check against existing manifests and research indexes"
+    "Cross-check against existing manifests and research indexes",
+    "Full page-by-page audit of 389 archive PDFs totaling 13,525 pages, including OCR on 2,614 scan-required pages",
+    "Rendered inspection of all 88 visually sparse pages and native-text inspection of three DOCX containers"
   ],
   "decisions": [
     {
@@ -46,6 +48,18 @@
     {
       "name": "Hydrogeologic Investigation — 1140 Plett Road",
       "reason": "Retained as a secondary synthesis and records-request plan. Its hypotheses and unresolved data gaps are not promoted to primary-source findings."
+    },
+    {
+      "name": "Cadillac council archive, 2008-2026",
+      "reason": "Thirty-eight packets with distinct hashes and specific landfill, PFAS, cleanup-system, testing, funding, public-response or infrastructure evidence are retained. Other non-identical packets are classified as out of scope, incidental or materially overlapping; they are not mislabeled as duplicates."
+    },
+    {
+      "name": "July 20, 2026 council packet",
+      "reason": "The archive copy is an exact SHA-256 match to the existing Council Packet 7-20-26 record, so the established source link is reused without publishing another copy."
+    },
+    {
+      "name": "October 2020 packet pair",
+      "reason": "The October 5 and October 19, 2020 files are byte-identical and visually identical. The second copy is suppressed; neither packet adds material Cadillac environmental evidence to the curated library."
     }
   ]
 }

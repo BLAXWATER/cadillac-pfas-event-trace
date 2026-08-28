@@ -1508,8 +1508,8 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="pfas-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">PFAS MONITORING · VERIFIED AUGUST 27, 2026</p><h2 id="pfas-library-title">Search {pfasDocuments.length} verified PFAS records</h2></div>
-            <p>This category preserves effluent and biosolids laboratory reports, electronic data deliverables, QA/QC packages, agency submissions, source-control correspondence and clearly labeled contextual records. Related files remain separate when they carry distinct analytical or evidentiary content.</p>
+            <div><p className="eyebrow">PFAS MONITORING · VERIFIED AUGUST 28, 2026</p><h2 id="pfas-library-title">Search {pfasDocuments.length} verified PFAS records</h2></div>
+            <p>This category preserves PFAS results workbooks and tables, effluent and biosolids laboratory reports, electronic data deliverables, QA/QC packages, dated maps, agency updates, response plans and clearly labeled contextual records. Related files remain separate when they carry distinct analytical or evidentiary content.</p>
           </div>
           <div className="reference-summary" aria-label="PFAS monitoring archive audit summary">
             <div><FileText /><span><strong>{pfasAudit.stats.newDistinctRecords}</strong> new records</span></div>
@@ -1534,7 +1534,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3>{document.name}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : document.format === "PNG" ? "Open image" : "Download MSG"}{document.format === "MSG" ? <Download /> : <ExternalLink />}</a></Button>
+                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : document.format === "PNG" ? "Open image" : document.format === "XLSX" ? "Open workbook" : "Download MSG"}{document.format === "MSG" ? <Download /> : <ExternalLink />}</a></Button>
               </article>
             ))}
           </div>

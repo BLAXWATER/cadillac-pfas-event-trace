@@ -14,8 +14,8 @@
     "repeatedLooseCopiesSuppressed": 234,
     "metadataOnlyEquivalentCopiesSuppressed": 1,
     "crossCategoryExactCopiesSuppressed": 6,
-    "newDistinctRecords": 5,
-    "finalDistinctRecords": 264
+    "newDistinctRecords": 6,
+    "finalDistinctRecords": 265
   },
   "batches": [
     {
@@ -45,6 +45,13 @@
       "added": 0,
       "duplicates": 6,
       "note": "Six exact PDF copies also present in Category 02 were removed from the Category 01 display; one canonical permit-record copy remains available for each."
+    },
+    {
+      "label": "DMR-QA Study 45 desktop verification",
+      "supplied": 3,
+      "added": 1,
+      "duplicates": 2,
+      "note": "The 2017 NPDES application was byte-identical to the published copy. The VN-019184 DOCX contained the same notice as the canonical PDF, with only renderer pagination differences. The April 2, 2026 DMR-QA reassessment email was distinct and retained with its original MSG."
     }
   ]
 }

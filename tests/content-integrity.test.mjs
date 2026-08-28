@@ -67,7 +67,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 645);
-  assert.equal(externalFiles, 745);
+  assert.equal(externalFiles, 746);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -119,7 +119,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1390);
+  assert.equal(recordCount, 1391);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -135,8 +135,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1264);
-  assert.equal(audit.stats.pdfPages, 16236);
+  assert.equal(audit.stats.pdfRecords, 1265);
+  assert.equal(audit.stats.pdfPages, 16238);
   assert.equal(audit.stats.imageRecords, 10);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);

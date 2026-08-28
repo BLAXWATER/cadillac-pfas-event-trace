@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 524);
+  assert.equal(localFiles, 558);
   assert.equal(externalFiles, 610);
 });
 
@@ -119,7 +119,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1134);
+  assert.equal(recordCount, 1168);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -135,8 +135,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1010);
-  assert.equal(audit.stats.pdfPages, 11300);
+  assert.equal(audit.stats.pdfRecords, 1044);
+  assert.equal(audit.stats.pdfPages, 11415);
   assert.equal(audit.stats.imageRecords, 9);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
@@ -163,6 +163,23 @@ test("compliance archive audit preserves distinct records and excludes verified 
   assert.equal(audit.stats.ocrPages, 274);
   assert.equal(catalog.some((row) => /Truth-First|TruthFirst/i.test(row.name)), false);
   assert.equal(catalog.some((row) => /^(?:duplicate|copy)[-_ ]/i.test(row.name)), false);
+});
+
+test("correspondence archive audit preserves distinct records and reuses exact cross-category copies", async () => {
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "correspondence-documents.json"), "utf8"));
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "correspondence-audit.json"), "utf8"));
+
+  assert.equal(audit.stats.sourceFilesReviewed, 49);
+  assert.equal(audit.stats.reviewedPages, 205);
+  assert.equal(audit.stats.sourceOcrPages, 15);
+  assert.equal(audit.stats.finalDistinctRecords, 35);
+  assert.equal(catalog.length, audit.stats.finalDistinctRecords);
+  assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 14);
+  assert.equal(audit.stats.existingRecordMovedIntoCategory, 1);
+  assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
+  assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
+  assert.equal(audit.stats.duplicateLabelsRemoved, 4);
+  assert.equal(catalog.some((row) => /^(?:duplicates?|copy)[-_ ]/i.test(row.name)), false);
 });
 
 test("local public assets contain no byte-identical redundant copies", async () => {

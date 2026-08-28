@@ -1,11 +1,11 @@
 {
   "stats": {
-    "suppliedFiles": 20,
-    "newDistinctRecords": 14,
+    "suppliedFiles": 19,
+    "newDistinctRecords": 13,
     "exactExistingRecordsReused": 3,
     "duplicateCopiesSuppressed": 2,
     "outOfScopeExcluded": 1,
-    "publishedBytes": 26485547
+    "publishedBytes": 26197168
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -46,10 +46,6 @@
     {
       "name": "Hydrogeologic Investigation — 1140 Plett Road",
       "reason": "Retained as a secondary synthesis and records-request plan. Its hypotheses and unresolved data gaps are not promoted to primary-source findings."
-    },
-    {
-      "name": "Spill-at-1121-WWTP.jpg",
-      "reason": "OCR and page-level comparison confirm the same January 12, 2016 spill-notification text as the existing black-and-white PDF, but this color as-received scan preserves different visible routing annotations and agency-receipt stamps. It is retained as a distinct Category 09 record and is not labeled a duplicate."
     }
   ]
 }

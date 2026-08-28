@@ -1,11 +1,11 @@
 {
   "stats": {
-    "suppliedFiles": 411,
-    "newDistinctRecords": 51,
+    "suppliedFiles": 412,
+    "newDistinctRecords": 52,
     "exactExistingRecordsReused": 4,
     "duplicateCopiesSuppressed": 3,
     "outOfScopeExcluded": 353,
-    "publishedBytes": 242874159
+    "publishedBytes": 243694264
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -60,6 +60,10 @@
     {
       "name": "October 2020 packet pair",
       "reason": "The October 5 and October 19, 2020 files are byte-identical and visually identical. The second copy is suppressed; neither packet adds material Cadillac environmental evidence to the curated library."
+    },
+    {
+      "name": "May 19 2025 City Council Meeting Minutes",
+      "reason": "Retained as a distinct 38-page adopted-minutes package. Its SHA-256 hash, page sequence and rendered pages differ from the existing 92-page May 19 council packet; three budget-attachment pages share normalized text, but no page renders identically. All 38 pages were read, with OCR applied to the one sparse page and no manual-review failures."
     }
   ]
 }

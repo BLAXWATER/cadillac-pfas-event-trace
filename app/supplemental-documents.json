@@ -674,5 +674,18 @@
     "size": 820105,
     "sha256": "8659ed67102c60eb9b887b6f5428fc799ffca1390fe1be81ed6ac57ff6d93845",
     "description": "Official minutes preserve the May 19 PFAS update, including private-well test counts and retesting after possible sample contamination, attributed biosolids and municipal-water statements, planned mapping and infrastructure work, and the stated 2019 loss of landfill-leachate treatment revenue."
+  },
+  {
+    "id": "053-891281ad5f1e",
+    "name": "September 8 2017 WWTP Solids Analysis Bench Sheet Photograph.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/36b069478222eedc3c0197ca9a7b9e2e58717af8/public/findings-docs/053-891281ad5f1e.pdf",
+    "year": "2017",
+    "category": "WWTP laboratory & process records",
+    "type": "Laboratory bench-sheet photograph",
+    "format": "PDF",
+    "pages": 1,
+    "size": 78264,
+    "sha256": "891281ad5f1e30f8e4d22a1ae50afc1d01fbc74a0691b5436730c337522cdde0",
+    "description": "Upright photograph of a September 8, 2017 Cadillac WWTP solids-analysis bench sheet. The visible page records total suspended and volatile suspended solids measurements across mixed liquor, return sludge, raw, primary, secondary, biological, tertiary, blank and tertiary-plus-chemical samples. A separate total-and-volatile-solids table includes a leachate column, but that column is blank in the photographed sheet; the image does not independently establish leachate gallons hauled, PFAS concentrations or biosolids PFAS results. The sideways IMG_0033-cas.pdf is the same photograph and is not separately carried forward."
   }
 ]

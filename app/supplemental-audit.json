@@ -1,11 +1,11 @@
 {
   "stats": {
-    "suppliedFiles": 412,
-    "newDistinctRecords": 52,
+    "suppliedFiles": 413,
+    "newDistinctRecords": 53,
     "exactExistingRecordsReused": 4,
     "duplicateCopiesSuppressed": 3,
     "outOfScopeExcluded": 353,
-    "publishedBytes": 243694264
+    "publishedBytes": 243772528
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -13,7 +13,7 @@
     "Targeted text extraction plus OCR-aware review of scan-only pages",
     "Rendered visual inspection of every short and medium record, all council-packet pages and targeted evidentiary pages in long audited reports",
     "Cross-check against existing manifests and research indexes",
-    "Full page-by-page audit of 389 archive PDFs totaling 13,525 pages, including OCR on 2,614 scan-required pages",
+    "Full page-by-page audit of 390 archive PDFs totaling 13,526 pages, including OCR on 2,615 scan-required pages",
     "Rendered inspection of all 88 visually sparse pages and native-text inspection of three DOCX containers"
   ],
   "decisions": [
@@ -64,6 +64,10 @@
     {
       "name": "May 19 2025 City Council Meeting Minutes",
       "reason": "Retained as a distinct 38-page adopted-minutes package. Its SHA-256 hash, page sequence and rendered pages differ from the existing 92-page May 19 council packet; three budget-attachment pages share normalized text, but no page renders identically. All 38 pages were read, with OCR applied to the one sparse page and no manual-review failures."
+    },
+    {
+      "name": "September 8 2017 WWTP solids-analysis bench sheet photograph",
+      "reason": "Retained once in its corrected upright orientation after page rendering and OCR. IMG_0033-cas.pdf is the same underlying photograph in a sideways container and is suppressed. The catalog describes only the visible solids-analysis sheet: its leachate column is blank, so filename references to gallons hauled or additional hidden sheets are not promoted as findings."
     }
   ]
 }

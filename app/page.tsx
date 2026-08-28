@@ -969,6 +969,31 @@ const events: Event[] = [
     ],
   },
   {
+    year: "2025",
+    date: "2025-10-22",
+    isoDate: "2025-10-22",
+    time: noTime,
+    timeBasis: "Effluent sample collection date",
+    phase: "WWTP effluent PFAS monitoring",
+    kind: "sampling",
+    category: "04 · PFAS monitoring",
+    title: "October effluent sample reports three PFAS detections",
+    finding: "EGLE Work Order 2510354 reports PFBS at 4.4 ng/L, PFHxA at 6.3 ng/L and PFPrA at 16.0 ng/L in Cadillac WWTP effluent collected October 22, 2025. PFOS, PFOA, PFNA and PFHxS were not detected at the 1.7 ng/L reporting limit; the associated trip blank was non-detect at its 1.9 ng/L reporting limit.",
+    significance: "Provides a late-2025 EPA Method 1633 effluent checkpoint and distinguishes the WWTP result from private-well and biosolids records. The combined 41-page email package is not duplicated in the app because its laboratory report and structured data export are already preserved as canonical sources.",
+    sources: [
+      archivedSource("2510354_1 ENVReport 11 24 2025 1129.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/5be18df044489dcea83c7c3154f83ca047b6e5cb/public/lab-docs/062-45b4b12f25d4.pdf", 18, "EGLE Environmental Laboratory Work Order 2510354 with effluent, trip-blank and QA/QC results.", {
+        eventStamp: "2025-10-22 · time not stated",
+        basis: "Sample collection date printed in the laboratory report",
+        note: "Reported November 24, 2025. The report date is not substituted for the sample-collection date.",
+      }),
+      archivedSource("2510354 FINAL EGLE Excel 24 Nov 25 1129.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/dd0e6a55db0e34b9c781ec8523eabd7f4af1370c/public/dmr-docs/029-250158ca9c72.pdf", 20, "Printable structured-data export for the same Work Order 2510354 analytical results.", {
+        eventStamp: "2025-10-22 · time not stated",
+        basis: "Sample collection date carried in the data export",
+        note: "This is a data export for the same sampling event, retained separately from the laboratory narrative package.",
+      }),
+    ],
+  },
+  {
     year: "2026",
     date: "2026-04-02",
     isoDate: "2026-04-02T11:31:22",

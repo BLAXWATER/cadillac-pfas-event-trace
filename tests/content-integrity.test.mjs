@@ -111,7 +111,7 @@ test("timeline source and preview assets are present", async () => {
     assert.ok((await stat(preview)).size > 0, `missing or empty source preview: ${fileName}`);
   }
 
-  assert.equal(helperReferences.length, 21);
+  assert.equal(helperReferences.length, 23);
 });
 
 test("site-wide search covers every evidence catalog", async () => {

@@ -7,14 +7,14 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1426,
-    "pdfRecords": 1300,
-    "pdfPages": 16582,
+    "catalogRecords": 1430,
+    "pdfRecords": 1304,
+    "pdfPages": 16711,
     "imageRecords": 10,
-    "embeddedTextPages": 13415,
-    "ocrPages": 3177,
-    "ocrPagesWithText": 2864,
-    "manualReviewPages": 266,
+    "embeddedTextPages": 13533,
+    "ocrPages": 3188,
+    "ocrPagesWithText": 2872,
+    "manualReviewPages": 129,
     "hashFailures": 0,
     "unreadableRecords": 0,
     "pageCountFailures": 0,
@@ -25,8 +25,8 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 266,
-    "finding": "Every low-confidence page was visually inspected. They are valid scan-only or sparse-content pages, including faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, safety-data sheets, public-body records, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
+    "pagesReviewed": 129,
+    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
     {
@@ -183,6 +183,15 @@
         56,
         228,
         230
+      ]
+    },
+    {
+      "catalog": "compliance-documents.json",
+      "id": "050-8681b59f46b5",
+      "name": "02-05-2019 - Cadillac WWTP 2018 CSI Transmittal and Violation Correspondence.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/fc85cac00de72c88cc7beaa4d56690f6761eae40/public/compliance-docs/050-8681b59f46b5.pdf",
+      "pages": [
+        40
       ]
     },
     {

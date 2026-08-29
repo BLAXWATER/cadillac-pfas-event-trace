@@ -1870,5 +1870,17 @@
     "size": 138936,
     "sha256": "14dea41b692a3f8656da0b79162c42f8375fe2bfd5c4ca098751d92b2efa681d",
     "description": "2-page agency correspondence record associated with undated. Retained as materially distinct after SHA-256, normalized-text, metadata and page-overlap comparison."
+  },
+  {
+    "id": "157-254ce9a19223",
+    "name": "08-26-2021 - Cadillac WWTP IPP Compliance Inspection Report.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/fc85cac00de72c88cc7beaa4d56690f6761eae40/public/ipp-docs/157-254ce9a19223.pdf",
+    "year": "2021",
+    "type": "IPP compliance inspection report",
+    "format": "PDF",
+    "pages": 19,
+    "size": 115290,
+    "sha256": "254ce9a192238ae8f2d1b45589bf6ab9220b4720b022b70fd7611a01626adab5",
+    "description": "Nineteen-page EGLE Industrial Pretreatment Compliance Inspection Checklist for Cadillac WWTP, inspected August 26, 2021 and covering January 1, 2020 through August 26, 2021. It is distinct from the seven-page 2015 pretreatment pre-inspection report already preserved in this library."
   }
 ]

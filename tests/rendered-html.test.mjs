@@ -45,8 +45,9 @@ test("renders stable site metadata and source policy", async () => {
   const html = await response.text();
   assert.match(html, /<title>Cadillac PFAS Event Trace<\/title>/i);
   assert.match(html, /Hierarchical, source-linked PFAS event trace/i);
-  assert.match(html, /<img[^>]+class="integrity-logo"[^>]+src="\/blax-water-logo\.png"[^>]+alt="BLAX Water"/i);
-  assert.ok(html.indexOf("/blax-water-logo.png") < html.indexOf("Original-source rule"));
+  const logoPath = html.match(/<img[^>]+class="integrity-logo"[^>]+src="(\/assets\/blax-water-logo-[^"]+\.png)"[^>]+alt="BLAX Water"/i)?.[1];
+  assert.ok(logoPath, "the bundled BLAX Water logo should render before the source policy");
+  assert.ok(html.indexOf(logoPath) < html.indexOf("Original-source rule"));
   assert.match(html, /Original-source rule/i);
   assert.match(html, /Year Over Year, Multiple Events, One source trail/i);
   assert.match(html, /2018: jump to 10 events/i);
@@ -56,6 +57,9 @@ test("renders stable site metadata and source policy", async () => {
   assert.doesNotMatch(html, /aria-expanded=/i);
   assert.doesNotMatch(html, /4 of 10 events shown/i);
   assert.equal((html.match(/class="trace-row"/gi) ?? []).length, 55);
+  assert.match(html, /class="source-thumbnail"/i);
+  assert.match(html, /src="\/assets\/008-5b67e1ed1d5c-[^"]+\.jpg"/i);
+  assert.doesNotMatch(html, /src="\/source-previews\//i);
   assert.match(html, /Hover a filename for its source-page preview and result/i);
   assert.doesNotMatch(html, /Original file not loaded/i);
 });

@@ -44,6 +44,7 @@ import supplementalAudit from "./supplemental-audit.json";
 import supplementalDocuments from "./supplemental-documents.json";
 import wexfordAudit from "./wexford-audit.json";
 import wexfordDocuments from "./wexford-documents.json";
+import { bundledPublicAsset } from "./bundled-public-assets";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -134,6 +135,9 @@ const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((arc
   })),
 );
 
+const repositoryAssetUrl = (path: string) =>
+  `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/6865900390beb6d9123ab515955a46f3b3cc585f/public/${path.replace(/^\//, "")}`;
+
 const pdf = (
   name: string,
   slug: string,
@@ -143,8 +147,8 @@ const pdf = (
   url?: string,
 ): Source => ({
   name,
-  url: url ?? `/docs/${slug}.pdf`,
-  preview: `/previews/${slug}.jpg`,
+  url: url ?? repositoryAssetUrl(`/docs/${slug}.pdf`),
+  preview: bundledPublicAsset(`/previews/${slug}.jpg`),
   pages,
   format: "PDF",
   role: "Primary source",
@@ -154,7 +158,9 @@ const pdf = (
 
 const sourcePreviewFromUrl = (url: string) => {
   const fileName = url.split("/").pop();
-  return fileName ? `/source-previews/${fileName.replace(/\.pdf$/i, ".jpg")}` : undefined;
+  return fileName
+    ? bundledPublicAsset(`/source-previews/${fileName.replace(/\.pdf$/i, ".jpg")}`)
+    : undefined;
 };
 
 const ippSource = (
@@ -242,8 +248,8 @@ const events: Event[] = [
     significance: "Establishes the landfill as a regulated Cadillac industrial user and documents significant noncompliance (SNC) years before the PFAS investigation.",
     sources: [{
       name: "Cadillac WWTP IPP 2011.pdf",
-      url: "/npdes-docs/038-8191c7e18aac.pdf",
-      preview: "/source-previews/038-8191c7e18aac.jpg",
+      url: repositoryAssetUrl("/npdes-docs/038-8191c7e18aac.pdf"),
+      preview: bundledPublicAsset("/source-previews/038-8191c7e18aac.jpg"),
       pages: 50,
       page: 25,
       format: "PDF",
@@ -271,8 +277,8 @@ const events: Event[] = [
     significance: "Provides a permit-linked volume and pretreatment classification for the landfill-to-WWTP relationship.",
     sources: [{
       name: "Cadillac WWTP SIU Information.pdf · page 4",
-      url: "/ipp-docs/001-4e9a0cdf0189.pdf",
-      preview: "/source-previews/001-4e9a0cdf0189.jpg",
+      url: repositoryAssetUrl("/ipp-docs/001-4e9a0cdf0189.pdf"),
+      preview: bundledPublicAsset("/source-previews/001-4e9a0cdf0189.jpg"),
       pages: 11,
       page: 4,
       format: "PDF",
@@ -374,7 +380,7 @@ const events: Event[] = [
     sources: [{
       name: "2016-01-12 spill-notification letter · chronological compilation PDF p. 36",
       url: "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/001-32f575fe6fc6.pdf",
-      preview: "/compliance-previews/2016-01-12-spill-letter.png",
+      preview: bundledPublicAsset("/compliance-previews/2016-01-12-spill-letter.png"),
       pages: 50,
       page: 36,
       format: "PDF",
@@ -945,8 +951,8 @@ const events: Event[] = [
     significance: "Documents active agency review of Cadillac's industrial local-limit update; it is not evidence of final approval.",
     sources: [{
       name: "2025-03-05__3055689922791814885__Cadillac MAHL.msg.pdf · page 1",
-      url: "/ipp-docs/007-9aecbfcf4abc.pdf",
-      preview: "/source-previews/007-9aecbfcf4abc.jpg",
+      url: repositoryAssetUrl("/ipp-docs/007-9aecbfcf4abc.pdf"),
+      preview: bundledPublicAsset("/source-previews/007-9aecbfcf4abc.jpg"),
       pages: 204,
       page: 1,
       format: "PDF",
@@ -1046,7 +1052,7 @@ const events: Event[] = [
         modified: "2026-04-29 09:37:39 CDT",
         note: "The embedded timestamp reflects later scanning and is not the sampling time.",
       }),
-      { name: "EGLE-TEST-2509147-LAB-WORK-ORDER.png", url: "/docs/2025-egle-work-order-2509147-page.png", preview: "/docs/2025-egle-work-order-2509147-page.png", pages: 1, format: "PNG", role: "Source page", result: "Available EGLE result page; the full 49-page Work Order remains an acquisition target.", clock: {
+      { name: "EGLE-TEST-2509147-LAB-WORK-ORDER.png", url: bundledPublicAsset("/docs/2025-egle-work-order-2509147-page.png"), preview: bundledPublicAsset("/docs/2025-egle-work-order-2509147-page.png"), pages: 1, format: "PNG", role: "Source page", result: "Available EGLE result page; the full 49-page Work Order remains an acquisition target.", clock: {
         eventStamp: "2025-09-10 · time not stated",
         basis: "Associated sampling-result date",
         note: "Original embedded source timestamp is unavailable for this extracted page; workspace export time is excluded from evidence.",
@@ -1424,19 +1430,33 @@ const evidenceRequests = [
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
   const external = Boolean(source.url?.startsWith("https://github.com/"));
+  const [previewFailed, setPreviewFailed] = useState(false);
+  const previewAvailable = Boolean(source.preview && !previewFailed);
+
+  const triggerContents = (
+    <>
+      <span className="source-thumbnail" aria-hidden="true">
+        {previewAvailable
+          ? <img src={source.preview} alt="" loading="lazy" decoding="async" onError={() => setPreviewFailed(true)} />
+          : <FileText />}
+      </span>
+      <span className="source-button-copy">
+        <strong>{source.name}</strong>
+        <small>{source.role}{source.page ? ` · page ${source.page}` : ""}</small>
+      </span>
+      {linked && <ExternalLink className="source-open-icon" />}
+    </>
+  );
+
   return (
     <Tooltip>
       <TooltipTrigger asChild>
         {external
-          ? <Button asChild variant="outline" size="sm" className="source-button"><a href={source.url} target="_blank" rel="noreferrer"><FileText /><span>{source.name}</span><ExternalLink className="source-open-icon" /></a></Button>
-          : <Button type="button" variant={linked ? "outline" : "secondary"} size="sm" className="source-button" aria-disabled={!linked} onClick={() => linked && open(source)}>
-              {linked ? <FileText /> : <AlertTriangle />}
-              <span>{source.name}</span>
-              {linked && <ExternalLink className="source-open-icon" />}
-            </Button>}
+          ? <a className="source-button" href={source.url} target="_blank" rel="noreferrer">{triggerContents}</a>
+          : <button type="button" className="source-button" aria-disabled={!linked} disabled={!linked} onClick={() => linked && open(source)}>{triggerContents}</button>}
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
-        {source.preview ? <img src={source.preview} alt={`Source-page preview of ${source.name}`} className="source-preview" /> : <div className="missing-preview"><FileText /><span>Preview not available</span><small>Open the complete source below.</small></div>}
+        {previewAvailable ? <img src={source.preview} alt={`Source-page preview of ${source.name}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className="missing-preview"><FileText /><span>Preview not available</span><small>Open the complete source below.</small></div>}
         <div className="source-tooltip-copy">
           <p className="source-role">{source.role}</p>
           <p className="source-full-name">{source.name}</p>
@@ -1602,7 +1622,7 @@ export default function Home() {
             <p className="header-copy">Follow the hierarchy from year to event timestamp to the exact source document, with separate clocks for the event, the issued record and embedded file metadata.</p>
           </div>
           <div className="integrity-note">
-            <img className="integrity-logo" src="/blax-water-logo.png" alt="BLAX Water" decoding="async" />
+            <img className="integrity-logo" src={bundledPublicAsset("/blax-water-logo.png")} alt="BLAX Water" decoding="async" />
             <div className="integrity-note-copy"><CheckCircle2 aria-hidden="true" /><div><strong>Original-source rule</strong><span>Hover a filename for its source-page preview and result. Click to open the complete document.</span></div></div>
           </div>
         </header>

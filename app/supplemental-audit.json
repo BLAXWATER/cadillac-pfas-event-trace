@@ -1,11 +1,11 @@
 {
   "stats": {
-    "suppliedFiles": 445,
-    "newDistinctRecords": 83,
-    "exactExistingRecordsReused": 5,
-    "duplicateCopiesSuppressed": 5,
-    "outOfScopeExcluded": 353,
-    "publishedBytes": 287215546,
+    "suppliedFiles": 539,
+    "newDistinctRecords": 131,
+    "exactExistingRecordsReused": 38,
+    "duplicateCopiesSuppressed": 8,
+    "outOfScopeExcluded": 363,
+    "publishedBytes": 375379390,
     "latestCategory1819RepeatFilesReviewed": 12,
     "latestCategory1819RepeatPagesReviewed": 179,
     "latestCategory1819RepeatDistinctInputHashes": 12,
@@ -17,7 +17,16 @@
     "latestGroundwaterFlowDistinctInputHashes": 2,
     "latestGroundwaterFlowCanonicalCopyMatches": 1,
     "latestGroundwaterFlowDistinctOfficialEditions": 2,
-    "latestGroundwaterFlowRecordsAdded": 2
+    "latestGroundwaterFlowRecordsAdded": 2,
+    "latestWWTPBatchFilesReviewed": 94,
+    "latestWWTPBatchPdfPagesReviewed": 3158,
+    "latestWWTPBatchImagesReviewed": 3,
+    "latestWWTPBatchOCRPages": 248,
+    "latestWWTPBatchOCRPagesWithText": 235,
+    "latestWWTPBatchExactExistingRecords": 33,
+    "latestWWTPBatchSameContentDerivatives": 3,
+    "latestWWTPBatchOutOfScopeRecords": 10,
+    "latestWWTPBatchRecordsAdded": 48
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -30,7 +39,9 @@
     "Category 17-19 intake: all 240 supplied PDF pages rendered and reviewed, including 138 retained pages requiring image-based review; hashes, page counts and metadata were cross-checked before retention or suppression",
     "Category 19 literature continuation: seven peer-reviewed PDFs totaling 74 pages were hash-checked, text-extracted and rendered page-by-page; article titles, publication dates, DOI identifiers and PDF metadata were cross-compared with the current and historical repository",
     "Category 18-19 repeat-intake verification: all 12 supplied PDFs totaling 179 pages were SHA-256 checked against every evidence catalog. Eleven are exact existing binaries; the four-page 2019 minutes were rechecked as the same-content OCR derivative already suppressed.",
-    "Groundwater-flow intake: two 24-page USGS PDFs were hash-checked, text-extracted and rendered in full. Their body-page alignment, official report-series metadata, citation pages and cover/end matter were cross-compared against the Category 13 manifest and canonical source files."
+    "Groundwater-flow intake: two 24-page USGS PDFs were hash-checked, text-extracted and rendered in full. Their body-page alignment, official report-series metadata, citation pages and cover/end matter were cross-compared against the Category 13 manifest and canonical source files.",
+    "August 29 WWTP intake: 94 supplied records were SHA-256 checked against every current catalog; all 3,158 PDF pages and three JPEGs rendered in sequence, and OCR was applied to all 248 pages with sparse embedded text.",
+    "August 29 duplicate review: byte hashes, normalized text, page counts, embedded metadata, rendered-page hashes and perceptual page sequences were cross-compared before exact-existing, same-report derivative, distinct-edition and out-of-scope decisions."
   ],
   "decisions": [
     {
@@ -116,6 +127,34 @@
     {
       "name": "WATER FLOW - PAGE 16 - F3540B07-10037.pdf",
       "reason": "The 24-page scan is not an actual duplicate of Scientific Investigations Report 2004-5175. It is the separate USGS Open-File Report 2005-1012 edition: most study-body pages correspond, but the cover, official report number, citation page and end matter differ. It is retained with its official series title and described as substantially overlapping rather than duplicate."
+    },
+    {
+      "name": "August 29, 2026 WWTP intake integrity pass",
+      "reason": "All 94 records opened successfully. The 91 PDFs total 3,158 pages; 248 sparse-text pages received OCR, 235 yielded readable text, and the three low-confidence pages were visually confirmed as valid sparse forms/tables rather than missing or corrupt content. All three JPEGs were also rendered and reviewed."
+    },
+    {
+      "name": "Thirty-three exact existing records",
+      "reason": "Each supplied binary exactly matches an immutable record already present in the library. Existing canonical links are reused; no duplicate-labelled name or second repository copy is carried forward."
+    },
+    {
+      "name": "July 20 and August 17, 2026 council packet derivatives",
+      "reason": "The supplied July packet has the same 62-page content sequence as the current canonical packet after compression/front-page differences. The supplied August packet is a 74-page derivative of the fuller 75-page canonical packet. The established, fuller records are retained and the derivatives are not republished."
+    },
+    {
+      "name": "Northernaire Third Five-Year Review scan pair",
+      "reason": "179118.pdf and 239675.pdf are alternate archive scans of the same September 2005 EPA Third Five-Year Review. The 85-page 239675 edition retains the fuller official front matter and is published once; the 80-page reduced scan is suppressed without a duplicate label."
+    },
+    {
+      "name": "Forty-eight distinct local and official records",
+      "reason": "The retained records have distinct hashes and material evidentiary roles across PFAS response, private-well mapping, Superfund cleanup, landfill governance, compliance, public finance and city/LDFA proceedings. Related table parts and official editions were not collapsed merely because their subjects overlap."
+    },
+    {
+      "name": "Three user-supplied annotated aerial maps",
+      "reason": "The Mockingbird Lane, Cecil Road and S 39/Boon Road images are retained as secondary orientation aids. Their colored points and labels are explicitly not treated as official coordinates, laboratory results or independent proof of an exceedance."
+    },
+    {
+      "name": "Ten incidental or generic records",
+      "reason": "A routine 2019 agenda, unrelated 2023 executive packet, opioid/legal binder, unrelated prosecutor packet, Lake County plan, blank generic inspection form, staff directory, national pretreatment report, unrelated October 2023 minutes and a low-relevance August 2021 packet were excluded as non-Cadillac evidence or merely incidental context. They were not mislabeled as duplicates."
     }
   ]
 }

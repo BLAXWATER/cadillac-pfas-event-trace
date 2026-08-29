@@ -7,14 +7,14 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1435,
-    "pdfRecords": 1309,
-    "pdfPages": 16820,
-    "imageRecords": 10,
-    "embeddedTextPages": 13641,
-    "ocrPages": 3189,
-    "ocrPagesWithText": 2872,
-    "manualReviewPages": 129,
+    "catalogRecords": 1483,
+    "pdfRecords": 1354,
+    "pdfPages": 18254,
+    "imageRecords": 13,
+    "embeddedTextPages": 15008,
+    "ocrPages": 3259,
+    "ocrPagesWithText": 2935,
+    "manualReviewPages": 130,
     "hashFailures": 0,
     "unreadableRecords": 0,
     "pageCountFailures": 0,
@@ -25,7 +25,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 129,
+    "pagesReviewed": 130,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -436,6 +436,15 @@
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/4535081d2398301cd01bb92501f2fc2e1a83e3ed/public/findings-docs/051-d53c2d30bb89.pdf",
       "pages": [
         20
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "132-d5dd57fe9c94",
+      "name": "Wexford County Audited Financial Statements — Year Ended December 31, 2024.pdf",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/9994ed932ee1600ea10fecb2b3ad80a9595bb3b5/public/findings-docs/132-d5dd57fe9c94.pdf",
+      "pages": [
+        85
       ]
     },
     {

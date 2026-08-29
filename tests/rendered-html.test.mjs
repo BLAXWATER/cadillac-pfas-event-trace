@@ -1,5 +1,22 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
+
+test("uses the core brand palette without recoloring the chronological trace", async () => {
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  for (const color of ["#050708", "#002b3b", "#00bceb", "#f5f6f6", "#8d969c"]) {
+    assert.match(css, new RegExp(color, "i"));
+  }
+
+  assert.match(css, /\.trace\s*\{[^}]*--primary:\s*#26e6f7[^}]*color:\s*#e8eef5/i);
+  assert.match(css, /\.trace-row\[data-kind="regulatory"\]\s*\{\s*--trace-color:\s*#62a9ff;\s*\}/i);
+  assert.match(css, /\.trace-row\[data-kind="sampling"\]\s*\{\s*--trace-color:\s*#ffe45c;\s*\}/i);
+  assert.match(css, /\.trace-row\[data-kind="compliance"\]\s*\{\s*--trace-color:\s*#ff6570;\s*\}/i);
+  assert.match(css, /\.trace-row\[data-kind="receptor"\]\s*\{\s*--trace-color:\s*#ff8a3d;\s*\}/i);
+  assert.match(css, /\.trace-row\[data-kind="gap"\]\s*\{\s*--trace-color:\s*#ffbf47;\s*\}/i);
+  assert.match(css, /\.event-card\s*\{[^}]*border:\s*1px solid #22303b[^}]*background:\s*linear-gradient\(135deg, rgba\(18, 26, 36, \.96\), rgba\(11, 16, 23, \.96\)\)/i);
+});
 
 test("renders stable site metadata and source policy", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);

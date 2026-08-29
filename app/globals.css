@@ -80,7 +80,7 @@ button, a { font: inherit; }
 h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-height: .94; letter-spacing: -.055em; font-weight: 650; }
 .header-copy { max-width: 780px; margin: 22px 0 0; color: var(--brand-gray); font-size: clamp(17.6px, 2.2vw, 22px); line-height: 1.6; }
 .integrity-note { display: grid; gap: 14px; padding: 18px; border: 1px solid rgba(0, 188, 235, .34); background: rgba(0, 43, 59, .62); }
-.integrity-logo { display: block; width: min(100%, 270px); height: auto; justify-self: center; background: #050708; }
+.integrity-logo { display: block; width: min(100%, 270px); height: auto; justify-self: center; background: transparent; mix-blend-mode: screen; }
 .integrity-note-copy { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 14px; align-items: start; }
 .integrity-note-copy > svg { width: 22px; color: var(--primary); }
 .integrity-note-copy > div { display: grid; gap: 6px; }

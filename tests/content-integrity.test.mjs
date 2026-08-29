@@ -291,6 +291,12 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   assert.equal(supplementalCatalog.length, 81);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
+  assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
+  assert.equal(supplementalAudit.stats.latestCategory1819RepeatPagesReviewed, 179);
+  assert.equal(supplementalAudit.stats.latestCategory1819RepeatDistinctInputHashes, 12);
+  assert.equal(supplementalAudit.stats.latestCategory1819RepeatExactExistingFileMatches, 11);
+  assert.equal(supplementalAudit.stats.latestCategory1819RepeatSameContentDerivatives, 1);
+  assert.equal(supplementalAudit.stats.latestCategory1819RepeatRecordsAdded, 0);
   assert.equal(intakeAudit.stats.sourceRecords, 408);
   assert.equal(intakeAudit.stats.pdfs, 404);
   assert.equal(intakeAudit.stats.pdfPages, 13685);

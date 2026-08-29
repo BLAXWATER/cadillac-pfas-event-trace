@@ -8,20 +8,24 @@
     "Manual visual review of low-confidence aerial-image and rotated-table pages"
   ],
   "stats": {
-    "sourceFilesReviewed": 59,
+    "sourceFilesReviewed": 109,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 6,
     "analystAuthoredReportsExcluded": 4,
     "existingComplianceRecordsRetained": 2,
-    "finalDistinctRecords": 52,
-    "reviewedPages": 610,
-    "ocrPages": 283,
-    "publishedBytes": 56016074,
+    "finalDistinctRecords": 55,
+    "reviewedPages": 671,
+    "ocrPages": 284,
+    "publishedBytes": 56721902,
     "latestAllDocsIntakeFiles": 23,
     "latestAllDocsExactExistingRecords": 18,
     "latestAllDocsActualDuplicateCopiesSuppressed": 1,
-    "latestAllDocsNewComplianceRecords": 3
+    "latestAllDocsNewComplianceRecords": 3,
+    "latestDropboxIntakeFiles": 50,
+    "latestDropboxExactExistingRecords": 47,
+    "latestDropboxActualDuplicateCopiesSuppressed": 47,
+    "latestDropboxNewComplianceRecords": 3
   },
   "decisions": [
     {
@@ -83,6 +87,18 @@
     {
       "name": "2022 CEI report and transmittal package",
       "reason": "Both records were retained. The 24-page transmittal contains the complete 21-page CEI report plus three pages of formal agency correspondence; the added correspondence makes the package a distinct evidentiary record, not an actual duplicate of the standalone report."
+    },
+    {
+      "name": "August 29 Dropbox mixed-category intake",
+      "reason": "Fifty supplied PDFs totaling 1,406 pages were checked by SHA-256, page count, PDF metadata, embedded text and cross-catalog comparison. Forty-seven are byte-for-byte matches to records already preserved in the app. The three unmatched compliance PDFs were then rendered page-by-page, and OCR was applied to the only sparse page; all three passed readability and page-integrity checks."
+    },
+    {
+      "name": "2023 standalone inspection form and transmittal package",
+      "reason": "Both records were retained. Pages 4 through 19 of the 29-page September 29 transmittal render identically to the complete 16-page July 10 inspection form, but the transmittal also has 13 distinct email, cover and final-sampling-report pages. It is therefore a wrapper package with additional evidence, not an actual duplicate."
+    },
+    {
+      "name": "2025 NPDES compliance evaluation inspection report",
+      "reason": "The 16-page June 10, 2025 facility site-review report has a distinct SHA-256, normalized-text fingerprint and rendered-page sequence not found in the published corpus. It is retained alongside the already preserved August 19 compliance communication because the report supplies the detailed inspection record while the communication states the formal findings and corrective-action request."
     }
   ]
 }

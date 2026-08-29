@@ -1601,7 +1601,10 @@ export default function Home() {
             <h1>Cadillac PFAS Event Trace</h1>
             <p className="header-copy">Follow the hierarchy from year to event timestamp to the exact source document, with separate clocks for the event, the issued record and embedded file metadata.</p>
           </div>
-          <div className="integrity-note"><CheckCircle2 /><div><strong>Original-source rule</strong><span>Hover a filename for its source-page preview and result. Click to open the complete document.</span></div></div>
+          <div className="integrity-note">
+            <img className="integrity-logo" src="/blax-water-logo.png" alt="BLAX Water" decoding="async" />
+            <div className="integrity-note-copy"><CheckCircle2 aria-hidden="true" /><div><strong>Original-source rule</strong><span>Hover a filename for its source-page preview and result. Click to open the complete document.</span></div></div>
+          </div>
         </header>
 
         <section className="path-strip" aria-label="Investigative pathway">

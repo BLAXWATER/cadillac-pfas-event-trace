@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 644);
-  assert.equal(externalFiles, 786);
+  assert.equal(localFiles, 648);
+  assert.equal(externalFiles, 785);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -106,12 +106,12 @@ test("timeline source and preview assets are present", async () => {
 
   const helperReferences = [...source.matchAll(/(?:ippSource|archivedSource)\(\s*"[^"]+"\s*,\s*"([^"]+\.pdf)"/gs)].map((match) => match[1]);
   for (const reference of helperReferences) {
-    const fileName = new URL(reference).pathname.split("/").pop().replace(/\.pdf$/i, ".jpg");
+    const fileName = new URL(reference, "https://local.invalid").pathname.split("/").pop().replace(/\.pdf$/i, ".jpg");
     const preview = path.join(publicDirectory, "source-previews", fileName);
     assert.ok((await stat(preview)).size > 0, `missing or empty source preview: ${fileName}`);
   }
 
-  assert.equal(helperReferences.length, 23);
+  assert.equal(helperReferences.length, 27);
 });
 
 test("site-wide search covers every evidence catalog", async () => {
@@ -119,7 +119,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1430);
+  assert.equal(recordCount, 1433);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -135,8 +135,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1304);
-  assert.equal(audit.stats.pdfPages, 16711);
+  assert.equal(audit.stats.pdfRecords, 1307);
+  assert.equal(audit.stats.pdfPages, 16772);
   assert.equal(audit.stats.imageRecords, 10);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
@@ -152,17 +152,21 @@ test("compliance archive audit preserves distinct records and excludes verified 
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "compliance-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 59);
-  assert.equal(audit.stats.finalDistinctRecords, 52);
+  assert.equal(audit.stats.sourceFilesReviewed, 109);
+  assert.equal(audit.stats.finalDistinctRecords, 55);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
   assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 6);
   assert.equal(audit.stats.analystAuthoredReportsExcluded, 4);
-  assert.equal(audit.stats.reviewedPages, 610);
-  assert.equal(audit.stats.ocrPages, 283);
+  assert.equal(audit.stats.reviewedPages, 671);
+  assert.equal(audit.stats.ocrPages, 284);
   assert.equal(audit.stats.latestAllDocsIntakeFiles, 23);
   assert.equal(audit.stats.latestAllDocsActualDuplicateCopiesSuppressed, 1);
+  assert.equal(audit.stats.latestDropboxIntakeFiles, 50);
+  assert.equal(audit.stats.latestDropboxExactExistingRecords, 47);
+  assert.equal(audit.stats.latestDropboxActualDuplicateCopiesSuppressed, 47);
+  assert.equal(audit.stats.latestDropboxNewComplianceRecords, 3);
   assert.equal(catalog.some((row) => /Truth-First|TruthFirst/i.test(row.name)), false);
   assert.equal(catalog.some((row) => /^(?:duplicate|copy)[-_ ]/i.test(row.name)), false);
 });

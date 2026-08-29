@@ -492,7 +492,7 @@
   {
     "id": "037-6434f255c127",
     "name": "EGLE FILE CC No_ Cadillac Wastewater Treatment Plant (WWTP) CC-006510.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/037-6434f255c127.pdf",
+    "url": "/compliance-docs/037-6434f255c127.pdf",
     "year": "2025",
     "type": "Compliance correspondence",
     "format": "PDF",
@@ -620,5 +620,41 @@
     "size": 124808,
     "sha256": "4ddd3e00bf14c42cdd5043ff58e69a97190ab80b2caecc8e683b2af04ea84692",
     "description": "EGLE facility site-review report for the September 27, 2022 Cadillac WWTP compliance evaluation inspection under NPDES Permit MI0020257. Preserved as the standalone inspection report in addition to the longer formal transmittal package."
+  },
+  {
+    "id": "053-366393f7752d",
+    "name": "07-10-2023 - Cadillac WWTP WRD CSI Inspection Form.pdf",
+    "url": "/compliance-docs/053-366393f7752d.pdf",
+    "year": "2023",
+    "type": "Compliance sampling inspection report",
+    "format": "PDF",
+    "pages": 16,
+    "size": 186706,
+    "sha256": "366393f7752d5caa4c5b164d8f383e6c120b6068e62cd857067c0e32b0f6a112",
+    "description": "EGLE's July 10, 2023 facility site-review and laboratory inspection form for Cadillac WWTP under NPDES Permit MI0020257. The report records DMR spot-check discrepancies, DMR-QA follow-up items, and corrective laboratory-procedure work."
+  },
+  {
+    "id": "054-f9bc1e000199",
+    "name": "09-29-2023 - Cadillac WWTP July 2023 Inspection Transmittal and Sampling Report.pdf",
+    "url": "/compliance-docs/054-f9bc1e000199.pdf",
+    "year": "2023",
+    "type": "Inspection transmittal and sampling package",
+    "format": "PDF",
+    "pages": 29,
+    "size": 413675,
+    "sha256": "f9bc1e000199b94c61cf9831a65a6ea1a616b7620581df621ed212f298408809",
+    "description": "Formal September 29, 2023 EGLE transmittal package for the July 10 compliance sampling inspection. It contains the complete 16-page inspection form plus 13 distinct pages of email, cover material and the final sampling report, so it is retained separately from the standalone form."
+  },
+  {
+    "id": "055-b7cfc87f596b",
+    "name": "06-10-2025 - Cadillac WWTP NPDES Compliance Evaluation Inspection Report.pdf",
+    "url": "/compliance-docs/055-b7cfc87f596b.pdf",
+    "year": "2025",
+    "type": "Compliance evaluation inspection report",
+    "format": "PDF",
+    "pages": 16,
+    "size": 105447,
+    "sha256": "b7cfc87f596b021eb08e74a59cf83f9602b1ad2f043867589d63d50737e27e3c",
+    "description": "EGLE facility site-review, self-monitoring, sampling-procedure and analytical-methodology report for the June 10, 2025 Cadillac WWTP compliance evaluation inspection. The report documents the sampling-preservation issue addressed in the associated compliance communication."
   }
 ]

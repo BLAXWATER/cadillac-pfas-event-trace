@@ -129,7 +129,6 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .year-nav a:hover, .year-nav a:focus-visible { border-color: var(--primary); background: #002b3b; outline: none; }
 .year-nav strong { font-family: var(--font-mono); color: var(--brand-white); }
 .year-nav span { color: var(--brand-gray); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
-.year-nav-overflow { justify-self: start; margin-top: 5px; padding: 3px 6px; border: 1px solid var(--primary); background: rgba(0, 188, 235, .09); color: var(--primary); font-family: var(--font-mono); font-size: 10px; font-style: normal; font-weight: 800; letter-spacing: .055em; line-height: 1.2; text-transform: uppercase; }
 .clock-rule { display: flex; gap: 10px; align-items: flex-start; margin: 18px 0 0; color: var(--brand-gray); font-size: 13.2px; line-height: 1.55; }
 .clock-rule svg { flex: 0 0 auto; width: 16px; color: var(--brand-cyan); }
 
@@ -159,11 +158,6 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .trace-node { position: relative; z-index: 2; width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--trace-color) 62%, transparent); background: color-mix(in srgb, var(--trace-color) 11%, #0b1017); color: var(--trace-color); transform: rotate(45deg); }
 .trace-node svg { width: 19px; transform: rotate(-45deg); }
 .trace-line { position: absolute; top: 42px; bottom: 0; width: 1px; background: linear-gradient(var(--trace-color), #26343f 45%, #26343f); opacity: .62; }
-.year-overflow-toggle { flex: 0 0 auto; min-width: 112px; min-height: 48px; display: grid; place-content: center; gap: 2px; padding: 8px 13px; border: 1px solid #2b3b47; background: linear-gradient(135deg, rgba(18, 26, 36, .96), rgba(11, 16, 23, .96)); color: #e8eef5; text-align: center; cursor: pointer; transition: border-color .18s ease, background .18s ease, transform .18s ease; }
-.year-overflow-toggle:hover { border-color: #26e6f7; background: linear-gradient(135deg, rgba(20, 35, 43, .98), rgba(11, 16, 23, .98)); transform: translateY(-1px); }
-.year-overflow-toggle:focus-visible { border-color: #26e6f7; outline: 2px solid rgba(38, 230, 247, .32); outline-offset: 3px; }
-.year-overflow-toggle strong { color: #26e6f7; font-family: var(--font-mono); font-size: 12.1px; letter-spacing: .035em; white-space: nowrap; }
-.year-overflow-toggle span { grid-column: auto; color: #91a3af; font-family: inherit; font-size: 9.9px; line-height: 1.2; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
 .event-card { position: relative; margin: 0 0 24px; padding: 25px 26px 24px; border: 1px solid #22303b; background: linear-gradient(135deg, rgba(18, 26, 36, .96), rgba(11, 16, 23, .96)); overflow: hidden; }
 .event-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--trace-color); }
 .event-topline { display: flex; justify-content: space-between; gap: 18px; align-items: center; }
@@ -292,7 +286,6 @@ footer p { margin: 0; }
   .year-marker > span { display: none; }
   .year-marker-main { grid-column: 2; gap: 10px; }
   .year-marker-copy { gap: 5px; }
-  .year-overflow-toggle { min-width: 98px; min-height: 44px; padding: 7px 9px; }
   .trace-row { grid-template-columns: 38px minmax(0, 1fr); gap: 0 10px; }
   .trace-date { grid-column: 2; grid-row: 1; padding: 0 0 9px; text-align: left; }
   .trace-date time, .trace-date span { display: inline; }

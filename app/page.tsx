@@ -1457,7 +1457,6 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
 
 export default function Home() {
   const [selected, setSelected] = useState<Source | null>(null);
-  const [expandedYears, setExpandedYears] = useState<Set<string>>(() => new Set());
   const [globalQuery, setGlobalQuery] = useState("");
   const [documentQuery, setDocumentQuery] = useState("");
   const [documentType, setDocumentType] = useState("All records");
@@ -1667,28 +1666,16 @@ export default function Home() {
           </div>
           <nav className="year-nav" aria-label="Jump to year band">
             {groups.map((group) => {
-              const overflowCount = Math.max(0, group.items.length - 4);
               const yearTarget = `#year-${group.year.replace(/[^0-9]+/g, "-")}`;
 
               return (
                 <a
                   key={group.year}
                   href={yearTarget}
-                  aria-label={overflowCount > 0
-                    ? `${group.year}: show all ${group.items.length} events, including ${overflowCount} additional ${overflowCount === 1 ? "event" : "events"}`
-                    : `${group.year}: jump to ${group.items.length} ${group.items.length === 1 ? "event" : "events"}`}
-                  onClick={() => {
-                    if (overflowCount === 0) return;
-                    setExpandedYears((current) => {
-                      const next = new Set(current);
-                      next.add(group.year);
-                      return next;
-                    });
-                  }}
+                  aria-label={`${group.year}: jump to ${group.items.length} ${group.items.length === 1 ? "event" : "events"}`}
                 >
                   <strong>{group.year}</strong>
-                  <span>{Math.min(group.items.length, 4)} {group.items.length === 1 ? "event" : "events"} shown</span>
-                  {overflowCount > 0 && <em className="year-nav-overflow">+{overflowCount} {overflowCount === 1 ? "event" : "events"}</em>}
+                  <span>{group.items.length} {group.items.length === 1 ? "event" : "events"}</span>
                 </a>
               );
             })}
@@ -1704,9 +1691,6 @@ export default function Home() {
         <section className="trace" aria-label="Source-linked event timeline">
           {groups.map((group) => {
             const yearSlug = group.year.replace(/[^0-9]+/g, "-");
-            const expanded = expandedYears.has(group.year);
-            const overflowCount = Math.max(0, group.items.length - 4);
-            const visibleItems = expanded ? group.items : group.items.slice(0, 4);
 
             return (
               <section className="year-group" id={`year-${yearSlug}`} key={group.year} aria-labelledby={`label-${yearSlug}`}>
@@ -1715,32 +1699,11 @@ export default function Home() {
                   <div className="year-marker-main">
                     <div className="year-marker-copy">
                       <strong id={`label-${yearSlug}`}>{group.year}</strong>
-                      <small aria-live="polite">
-                        {overflowCount > 0
-                          ? `${expanded ? group.items.length : 4} of ${group.items.length} events shown`
-                          : `${group.items.length} ${group.items.length === 1 ? "event" : "events"}`}
-                      </small>
+                      <small>{group.items.length} {group.items.length === 1 ? "event" : "events"}</small>
                     </div>
-                    {overflowCount > 0 && (
-                      <button
-                        type="button"
-                        className="year-overflow-toggle"
-                        aria-expanded={expanded}
-                        aria-label={expanded ? `Show only the first four events from ${group.year}` : `Show all ${group.items.length} events from ${group.year}`}
-                        onClick={() => setExpandedYears((current) => {
-                          const next = new Set(current);
-                          if (next.has(group.year)) next.delete(group.year);
-                          else next.add(group.year);
-                          return next;
-                        })}
-                      >
-                        <strong>{expanded ? "Show first 4" : `+${overflowCount} ${overflowCount === 1 ? "event" : "events"}`}</strong>
-                        <span>{expanded ? "Collapse year" : "View all"}</span>
-                      </button>
-                    )}
                   </div>
                 </header>
-                {visibleItems.map((event) => {
+                {group.items.map((event) => {
                   const item = meta[event.kind];
                   const Icon = item.icon;
                   const index = events.indexOf(event);

@@ -1,17 +1,23 @@
 {
   "stats": {
-    "suppliedFiles": 443,
-    "newDistinctRecords": 81,
+    "suppliedFiles": 445,
+    "newDistinctRecords": 83,
     "exactExistingRecordsReused": 5,
-    "duplicateCopiesSuppressed": 4,
+    "duplicateCopiesSuppressed": 5,
     "outOfScopeExcluded": 353,
-    "publishedBytes": 274774709,
+    "publishedBytes": 287215546,
     "latestCategory1819RepeatFilesReviewed": 12,
     "latestCategory1819RepeatPagesReviewed": 179,
     "latestCategory1819RepeatDistinctInputHashes": 12,
     "latestCategory1819RepeatExactExistingFileMatches": 11,
     "latestCategory1819RepeatSameContentDerivatives": 1,
-    "latestCategory1819RepeatRecordsAdded": 0
+    "latestCategory1819RepeatRecordsAdded": 0,
+    "latestGroundwaterFlowFilesReviewed": 2,
+    "latestGroundwaterFlowPagesReviewed": 48,
+    "latestGroundwaterFlowDistinctInputHashes": 2,
+    "latestGroundwaterFlowCanonicalCopyMatches": 1,
+    "latestGroundwaterFlowDistinctOfficialEditions": 2,
+    "latestGroundwaterFlowRecordsAdded": 2
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -23,7 +29,8 @@
     "Rendered inspection of all 88 visually sparse pages and native-text inspection of three DOCX containers",
     "Category 17-19 intake: all 240 supplied PDF pages rendered and reviewed, including 138 retained pages requiring image-based review; hashes, page counts and metadata were cross-checked before retention or suppression",
     "Category 19 literature continuation: seven peer-reviewed PDFs totaling 74 pages were hash-checked, text-extracted and rendered page-by-page; article titles, publication dates, DOI identifiers and PDF metadata were cross-compared with the current and historical repository",
-    "Category 18-19 repeat-intake verification: all 12 supplied PDFs totaling 179 pages were SHA-256 checked against every evidence catalog. Eleven are exact existing binaries; the four-page 2019 minutes were rechecked as the same-content OCR derivative already suppressed."
+    "Category 18-19 repeat-intake verification: all 12 supplied PDFs totaling 179 pages were SHA-256 checked against every evidence catalog. Eleven are exact existing binaries; the four-page 2019 minutes were rechecked as the same-content OCR derivative already suppressed.",
+    "Groundwater-flow intake: two 24-page USGS PDFs were hash-checked, text-extracted and rendered in full. Their body-page alignment, official report-series metadata, citation pages and cover/end matter were cross-compared against the Category 13 manifest and canonical source files."
   ],
   "decisions": [
     {
@@ -101,6 +108,14 @@
     {
       "name": "Twelve repeat category 18-19 records",
       "reason": "Eleven supplied PDFs exactly match clean published records. The remaining Duplicates_2019-11-06 file is the 2026 OCR/searchable derivative of the four-page 2019 original already preserved at its immutable source. No duplicate copy or Duplicate label was added, and the research papers remain labeled as non-Cadillac technical context."
+    },
+    {
+      "name": "PAGE 16 - Simulation of ground water flow and Areas contributing ground water to production wells, Cadillac Mi204958.pdf",
+      "reason": "The supplied 24-page PDF is byte-identical to the Category 13 canonical copy already named MIsir2004-5175_report.pdf in the classification manifest. One copy is published under its clean USGS Scientific Investigations Report 2004-5175 title; the duplicate filename is not propagated."
+    },
+    {
+      "name": "WATER FLOW - PAGE 16 - F3540B07-10037.pdf",
+      "reason": "The 24-page scan is not an actual duplicate of Scientific Investigations Report 2004-5175. It is the separate USGS Open-File Report 2005-1012 edition: most study-body pages correspond, but the cover, official report number, citation page and end matter differ. It is retained with its official series title and described as substantially overlapping rather than duplicate."
     }
   ]
 }

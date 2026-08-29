@@ -201,6 +201,35 @@ const formatBytes = (bytes: number) => {
 
 const events: Event[] = [
   {
+    year: "2005",
+    date: "2005",
+    isoDate: "2005",
+    time: noTime,
+    timeBasis: "Publication year printed in the reports",
+    phase: "Municipal well-field modeling",
+    kind: "receptor",
+    category: "13 · Groundwater & wells",
+    title: "USGS models groundwater flow and Cadillac well contributing areas",
+    finding: "USGS regional modeling for the Clam River watershed describes deep-system groundwater flow as generally southeast to northwest and identifies land immediately south and southeast of Cadillac's production-well field as contributing water under the modeled ten-year scenarios.",
+    significance: "Supplies historical regional hydrogeologic context for the municipal wells. The reports also state that more detailed aquifer characterization would be needed to represent heterogeneous glacial deposits, so the model is not treated as proof of a modern PFAS migration route or source.",
+    sources: [
+      archivedSource("USGS Scientific Investigations Report 2004-5175 — Simulation of Ground-Water Flow and Areas Contributing to Cadillac Production Wells.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/677a74cff6d4945b60295221ecfac72bc5c42f4e/public/findings-docs/082-1a5758abbd59.pdf", 24, "Final Scientific Investigations Report edition, including model figures, optimized and alternate contributing-area scenarios, limitations and references.", {
+        eventStamp: "2005 · time not stated",
+        basis: "Publication year in the suggested citation",
+        created: "2005-01-28",
+        modified: "2005-03-07",
+        note: "The report prints no publication month. Embedded PDF dates describe file production and are not used to infer a more precise event date.",
+      }),
+      archivedSource("USGS Open-File Report 2005-1012 — Simulation of Ground-Water Flow and Areas Contributing to Cadillac Production Wells.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/677a74cff6d4945b60295221ecfac72bc5c42f4e/public/findings-docs/084-2b78292aa0e0.pdf", 24, "Distinct official Open-File Report edition with a different cover, report number, citation page and end matter; the study body substantially overlaps the Scientific Investigations Report.", {
+        eventStamp: "2005 · time not stated",
+        basis: "Publication year and report number printed in the source",
+        created: "2024-06-14 08:11:59 EDT (archive OCR derivative)",
+        modified: "2024-06-14 08:13:46 EDT (archive OCR derivative)",
+        note: "The 2024 timestamps record OmniPage OCR processing, not the 2005 report event. Related official editions are retained because they are not page-for-page duplicate records.",
+      }),
+    ],
+  },
+  {
     year: "2011",
     date: "2011 reporting year",
     time: noTime,
@@ -2057,8 +2086,8 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="supplemental-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 28, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} newly added records</h2></div>
-            <p>These additions span federal compliance, landfill operations, civic actions, audited finances, historical groundwater context and response planning. Primary records, historical context and secondary research are explicitly distinguished; related records remain separate unless byte and rendered-content review proves they are the same document.</p>
+            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 29, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} newly added records</h2></div>
+            <p>These additions span federal compliance, landfill operations, civic actions, audited finances, historical groundwater context and response planning. Primary records, historical context and secondary research are explicitly distinguished; related records remain separate when their official edition, content or evidentiary role differs.</p>
           </div>
           <div className="reference-summary" aria-label="Cross-category additions audit summary">
             <div><FileText /><span><strong>{supplementalAudit.stats.newDistinctRecords}</strong> distinct additions</span></div>

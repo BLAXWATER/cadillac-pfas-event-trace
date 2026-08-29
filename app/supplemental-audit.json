@@ -5,7 +5,13 @@
     "exactExistingRecordsReused": 5,
     "duplicateCopiesSuppressed": 4,
     "outOfScopeExcluded": 353,
-    "publishedBytes": 274774709
+    "publishedBytes": 274774709,
+    "latestCategory1819RepeatFilesReviewed": 12,
+    "latestCategory1819RepeatPagesReviewed": 179,
+    "latestCategory1819RepeatDistinctInputHashes": 12,
+    "latestCategory1819RepeatExactExistingFileMatches": 11,
+    "latestCategory1819RepeatSameContentDerivatives": 1,
+    "latestCategory1819RepeatRecordsAdded": 0
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -16,7 +22,8 @@
     "Full page-by-page audit of 390 archive PDFs totaling 13,526 pages, including OCR on 2,615 scan-required pages",
     "Rendered inspection of all 88 visually sparse pages and native-text inspection of three DOCX containers",
     "Category 17-19 intake: all 240 supplied PDF pages rendered and reviewed, including 138 retained pages requiring image-based review; hashes, page counts and metadata were cross-checked before retention or suppression",
-    "Category 19 literature continuation: seven peer-reviewed PDFs totaling 74 pages were hash-checked, text-extracted and rendered page-by-page; article titles, publication dates, DOI identifiers and PDF metadata were cross-compared with the current and historical repository"
+    "Category 19 literature continuation: seven peer-reviewed PDFs totaling 74 pages were hash-checked, text-extracted and rendered page-by-page; article titles, publication dates, DOI identifiers and PDF metadata were cross-compared with the current and historical repository",
+    "Category 18-19 repeat-intake verification: all 12 supplied PDFs totaling 179 pages were SHA-256 checked against every evidence catalog. Eleven are exact existing binaries; the four-page 2019 minutes were rechecked as the same-content OCR derivative already suppressed."
   ],
   "decisions": [
     {
@@ -90,6 +97,10 @@
     {
       "name": "Seven wastewater-indicator and emerging-contaminant research papers",
       "reason": "All seven papers have distinct SHA-256 hashes, DOI identifiers, page sequences and subject matter, with no matching DOI or binary in the current or historical repository. All 74 pages contain intact embedded text and were visually reviewed. They are retained as external analytical and source-identification context; none is characterized as Cadillac-specific sampling or proof of a local source."
+    },
+    {
+      "name": "Twelve repeat category 18-19 records",
+      "reason": "Eleven supplied PDFs exactly match clean published records. The remaining Duplicates_2019-11-06 file is the 2026 OCR/searchable derivative of the four-page 2019 original already preserved at its immutable source. No duplicate copy or Duplicate label was added, and the research papers remain labeled as non-Cadillac technical context."
     }
   ]
 }

@@ -1671,7 +1671,7 @@ export default function Home() {
         </section>
 
         <section className="trace-intro">
-          <div><p className="eyebrow">CHRONOLOGICAL EVENT TRACE</p><h2>One year, one event stamp, one source trail</h2></div>
+          <div><p className="eyebrow">CHRONOLOGICAL EVENT TRACE</p><h2>Year Over Year, Multiple Events, One source trail</h2></div>
           <p>Regulatory documents provide context; they do not independently prove contaminant migration. Groundwater attribution remains subject to hydrogeologic confirmation.</p>
         </section>
 

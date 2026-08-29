@@ -48,6 +48,7 @@ test("renders stable site metadata and source policy", async () => {
   assert.match(html, /<img[^>]+class="integrity-logo"[^>]+src="\/blax-water-logo\.png"[^>]+alt="BLAX Water"/i);
   assert.ok(html.indexOf("/blax-water-logo.png") < html.indexOf("Original-source rule"));
   assert.match(html, /Original-source rule/i);
+  assert.match(html, /Year Over Year, Multiple Events, One source trail/i);
   assert.match(html, /Hover a filename for its source-page preview and result/i);
   assert.doesNotMatch(html, /Original file not loaded/i);
 });

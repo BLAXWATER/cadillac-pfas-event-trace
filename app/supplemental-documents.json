@@ -1051,5 +1051,31 @@
     "size": 1871815,
     "sha256": "b4e8186e3e7ca90a3d1310db66a93565317b9aa510644b811741b650cffd1a09",
     "description": "External method paper (DOI 10.1039/c5ew00080g) prioritizing trace-organic wastewater indicators and validating rapid direct-injection LC-MS/MS. Its discussion of indicator selection, including the limits of using industry-specific PFCs as generic tracers, is methodological context and does not establish any Cadillac result."
+  },
+  {
+    "id": "082-1a5758abbd59",
+    "name": "USGS Scientific Investigations Report 2004-5175 — Simulation of Ground-Water Flow and Areas Contributing to Cadillac Production Wells.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/677a74cff6d4945b60295221ecfac72bc5c42f4e/public/findings-docs/082-1a5758abbd59.pdf",
+    "year": "2005",
+    "category": "Historical groundwater context",
+    "type": "USGS groundwater-flow study",
+    "format": "PDF",
+    "pages": 24,
+    "size": 3825136,
+    "sha256": "1a5758abbd591b44fe1b547aadded48616988118525ca480a6a83d94192fc0a1",
+    "description": "Final USGS Scientific Investigations Report 2004-5175 modeling regional groundwater flow in the Clam River watershed and ten-year contributing areas for Cadillac's production wells. The report says the deep-system regional flow is generally southeast to northwest and that land immediately south and southeast of the well field contributes water under the modeled scenarios. These are historical regional-model results with stated heterogeneity and model limitations, not proof of a modern PFAS pathway or source."
+  },
+  {
+    "id": "084-2b78292aa0e0",
+    "name": "USGS Open-File Report 2005-1012 — Simulation of Ground-Water Flow and Areas Contributing to Cadillac Production Wells.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/677a74cff6d4945b60295221ecfac72bc5c42f4e/public/findings-docs/084-2b78292aa0e0.pdf",
+    "year": "2005",
+    "category": "Historical groundwater context",
+    "type": "USGS groundwater-flow study",
+    "format": "PDF",
+    "pages": 24,
+    "size": 8615701,
+    "sha256": "2b78292aa0e0d1d2d660f8f30a13273f73207e45932dd9cd5f9025a5b04d91ac",
+    "description": "Scanned USGS Open-File Report 2005-1012 for the same Cadillac groundwater-flow study. It substantially reuses the later Scientific Investigations Report body but is retained as a distinct official edition because its cover, report number, citation page and end matter differ. The archive scan has embedded OmniPage OCR; all 24 rendered pages were reviewed."
   }
 ]

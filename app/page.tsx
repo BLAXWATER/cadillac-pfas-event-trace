@@ -1685,7 +1685,36 @@ export default function Home() {
 
             return (
               <section className="year-group" id={`year-${yearSlug}`} key={group.year} aria-labelledby={`label-${yearSlug}`}>
-                <header className="year-marker"><span>YEAR BAND</span><strong id={`label-${yearSlug}`}>{group.year}</strong><small>{group.items.length} {group.items.length === 1 ? "event" : "events"}</small></header>
+                <header className="year-marker">
+                  <span>YEAR BAND</span>
+                  <div className="year-marker-main">
+                    <div className="year-marker-copy">
+                      <strong id={`label-${yearSlug}`}>{group.year}</strong>
+                      <small aria-live="polite">
+                        {overflowCount > 0
+                          ? `${expanded ? group.items.length : 4} of ${group.items.length} events shown`
+                          : `${group.items.length} ${group.items.length === 1 ? "event" : "events"}`}
+                      </small>
+                    </div>
+                    {overflowCount > 0 && (
+                      <button
+                        type="button"
+                        className="year-overflow-toggle"
+                        aria-expanded={expanded}
+                        aria-label={expanded ? `Show only the first four events from ${group.year}` : `Show all ${group.items.length} events from ${group.year}`}
+                        onClick={() => setExpandedYears((current) => {
+                          const next = new Set(current);
+                          if (next.has(group.year)) next.delete(group.year);
+                          else next.add(group.year);
+                          return next;
+                        })}
+                      >
+                        <strong>{expanded ? "Show first 4" : `+${overflowCount} ${overflowCount === 1 ? "event" : "events"}`}</strong>
+                        <span>{expanded ? "Collapse year" : "View all"}</span>
+                      </button>
+                    )}
+                  </div>
+                </header>
                 {visibleItems.map((event) => {
                   const item = meta[event.kind];
                   const Icon = item.icon;
@@ -1710,26 +1739,6 @@ export default function Home() {
                     </article>
                   );
                 })}
-                {overflowCount > 0 && (
-                  <div className="year-overflow-row">
-                    <span className="year-overflow-spine" aria-hidden="true" />
-                    <button
-                      type="button"
-                      className="year-overflow-toggle"
-                      aria-expanded={expanded}
-                      aria-label={expanded ? `Show only the first four events from ${group.year}` : `Show all ${group.items.length} events from ${group.year}`}
-                      onClick={() => setExpandedYears((current) => {
-                        const next = new Set(current);
-                        if (next.has(group.year)) next.delete(group.year);
-                        else next.add(group.year);
-                        return next;
-                      })}
-                    >
-                      <strong>{expanded ? "Show fewer" : `+${overflowCount} ${overflowCount === 1 ? "event" : "events"}`}</strong>
-                      <span>{expanded ? "Collapse this year to its first four events" : `View every event recorded in ${group.year}`}</span>
-                    </button>
-                  </div>
-                )}
               </section>
             );
           })}

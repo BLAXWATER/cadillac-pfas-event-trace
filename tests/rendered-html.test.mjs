@@ -52,6 +52,8 @@ test("renders stable site metadata and source policy", async () => {
   assert.match(html, /class="year-overflow-toggle"/i);
   assert.match(html, /aria-expanded="false"/i);
   assert.match(html, /\+\d+ (?:event|events)/i);
+  assert.match(html, /4 of 10 events shown/i);
+  assert.ok(html.indexOf('class="year-overflow-toggle"') < html.indexOf('EGLE directs PFAS source evaluation and reduction'));
   assert.match(html, /Hover a filename for its source-page preview and result/i);
   assert.doesNotMatch(html, /Original file not loaded/i);
 });

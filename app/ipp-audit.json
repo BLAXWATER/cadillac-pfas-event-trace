@@ -1,14 +1,18 @@
 {
   "stats": {
     "sourceFilesReviewed": 319,
-    "finalDistinctRecords": 156,
+    "finalDistinctRecords": 157,
     "exactPublishedDuplicatesSuppressed": 21,
-    "publishedBytes": 80805379,
+    "publishedBytes": 80920669,
     "batchCopiesReviewed": 310,
     "batchExactDuplicateCopiesCollapsed": 139,
     "batchSameContentVariantsCollapsed": 2,
     "semanticDatasetVariantsSuppressed": 1,
-    "embeddedAttachmentRelationshipsDisclosed": 33
+    "embeddedAttachmentRelationshipsDisclosed": 33,
+    "latestAllDocsIntakeFiles": 23,
+    "latestAllDocsExactExistingRecords": 18,
+    "latestAllDocsActualDuplicateCopiesSuppressed": 1,
+    "latestAllDocsNewIppRecords": 1
   },
   "methods": [
     "SHA-256 comparison against every published source asset and matching master-file copies",
@@ -73,6 +77,10 @@
     {
       "name": "GitHub-backed document delivery",
       "reason": "The 149 newly retained PDFs are preserved in the authorized private cazey43/cadillac-pfas-event-trace repository and open there from the Site. The original seven Category 04 PDFs remain bundled with Sites. This split avoids Sites' 256 MiB expanded-archive limit without dropping a record or changing a source file."
+    },
+    {
+      "name": "08-26-2021 Cadillac WWTP IPP Compliance Inspection Report.pdf",
+      "reason": "Retained as a distinct 19-page EGLE IPP inspection record. Its date, inspection period, page count, normalized text and content differ from the seven-page 2015 pretreatment pre-inspection report already in the library."
     }
   ]
 }

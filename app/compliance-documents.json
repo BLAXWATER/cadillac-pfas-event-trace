@@ -584,5 +584,41 @@
     "size": 291361,
     "sha256": "d034c13b29fe1bc1fdb1232048794b15806e36f6df9c11cda115baa6a2cdc2d1",
     "description": "Formal notice or supporting record concerning an identified compliance violation."
+  },
+  {
+    "id": "050-8681b59f46b5",
+    "name": "02-05-2019 - Cadillac WWTP 2018 CSI Transmittal and Violation Correspondence.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/fc85cac00de72c88cc7beaa4d56690f6761eae40/public/compliance-docs/050-8681b59f46b5.pdf",
+    "year": "2019",
+    "type": "Inspection and compliance correspondence",
+    "format": "PDF",
+    "pages": 65,
+    "size": 674293,
+    "sha256": "8681b59f46b5197decd00b49b0d31127fe0e6d9898970c84b8a86aebbda270ed",
+    "description": "Complete 2018 Cadillac WWTP compliance sampling inspection transmittal and violation-correspondence package sent by DEQ on February 5, 2019. Retained after all 65 pages were verified; the separately supplied copy marked “(1)” rendered identically page-for-page and was suppressed."
+  },
+  {
+    "id": "051-5a24762f3cd8",
+    "name": "09-30-2022 - Cadillac WWTP MI0020257 CEI Transmittal and CC004335.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/fc85cac00de72c88cc7beaa4d56690f6761eae40/public/compliance-docs/051-5a24762f3cd8.pdf",
+    "year": "2022",
+    "type": "Inspection transmittal and compliance communication",
+    "format": "PDF",
+    "pages": 24,
+    "size": 188082,
+    "sha256": "5a24762f3cd88192d18d35ae1beefd54d1214ff20aaba8a80e0b25f93e9f71ac",
+    "description": "Formal EGLE transmittal for the September 27, 2022 compliance evaluation inspection and Compliance Communication CC004335. The package contains the 21-page CEI report plus three pages of distinct transmittal correspondence, so it is not classified as a duplicate of the standalone report."
+  },
+  {
+    "id": "052-4ddd3e00bf14",
+    "name": "09-27-2022 - Cadillac WWTP MI0020257 CEI Report.pdf",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/fc85cac00de72c88cc7beaa4d56690f6761eae40/public/compliance-docs/052-4ddd3e00bf14.pdf",
+    "year": "2022",
+    "type": "Compliance evaluation inspection report",
+    "format": "PDF",
+    "pages": 21,
+    "size": 124808,
+    "sha256": "4ddd3e00bf14c42cdd5043ff58e69a97190ab80b2caecc8e683b2af04ea84692",
+    "description": "EGLE facility site-review report for the September 27, 2022 Cadillac WWTP compliance evaluation inspection under NPDES Permit MI0020257. Preserved as the standalone inspection report in addition to the longer formal transmittal package."
   }
 ]

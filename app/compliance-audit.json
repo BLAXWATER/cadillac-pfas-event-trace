@@ -14,10 +14,14 @@
     "crossCategoryCopiesReferencedElsewhere": 6,
     "analystAuthoredReportsExcluded": 4,
     "existingComplianceRecordsRetained": 2,
-    "finalDistinctRecords": 49,
-    "reviewedPages": 500,
-    "ocrPages": 274,
-    "publishedBytes": 55028891
+    "finalDistinctRecords": 52,
+    "reviewedPages": 610,
+    "ocrPages": 283,
+    "publishedBytes": 56016074,
+    "latestAllDocsIntakeFiles": 23,
+    "latestAllDocsExactExistingRecords": 18,
+    "latestAllDocsActualDuplicateCopiesSuppressed": 1,
+    "latestAllDocsNewComplianceRecords": 3
   },
   "decisions": [
     {
@@ -67,6 +71,18 @@
     {
       "name": "Low-confidence OCR pages",
       "reason": "District compliance-file pages 56, 228 and 230 were visually verified as a valid aerial image and two rotated dense tables; no source page is missing or corrupt."
+    },
+    {
+      "name": "August 29 All Docs compliance intake",
+      "reason": "Twenty-three supplied PDFs totaling 716 pages were checked by SHA-256, page count, PDF metadata, embedded text, OCR threshold and cross-catalog comparison. Eighteen were already accounted for, one same-content copy was suppressed and four distinct records were retained across the compliance and IPP libraries."
+    },
+    {
+      "name": "Cadillac WWTP 2018 CSI Trnsmt & VN Crrspnd 020519 copies",
+      "reason": "The two 65-page PDFs have identical normalized text and identical rendered pixels on all 65 pages. Their byte hashes differ only because the PDF metadata timestamps differ by four seconds. The clean filename was retained and the copy-number filename was suppressed as an actual duplicate."
+    },
+    {
+      "name": "2022 CEI report and transmittal package",
+      "reason": "Both records were retained. The 24-page transmittal contains the complete 21-page CEI report plus three pages of formal agency correspondence; the added correspondence makes the package a distinct evidentiary record, not an actual duplicate of the standalone report."
     }
   ]
 }

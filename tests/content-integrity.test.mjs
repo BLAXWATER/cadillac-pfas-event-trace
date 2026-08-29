@@ -67,7 +67,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 644);
-  assert.equal(externalFiles, 782);
+  assert.equal(externalFiles, 786);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -119,7 +119,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1426);
+  assert.equal(recordCount, 1430);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -135,8 +135,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1300);
-  assert.equal(audit.stats.pdfPages, 16582);
+  assert.equal(audit.stats.pdfRecords, 1304);
+  assert.equal(audit.stats.pdfPages, 16711);
   assert.equal(audit.stats.imageRecords, 10);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
@@ -153,14 +153,16 @@ test("compliance archive audit preserves distinct records and excludes verified 
   const audit = JSON.parse(await readFile(path.join(appDirectory, "compliance-audit.json"), "utf8"));
 
   assert.equal(audit.stats.sourceFilesReviewed, 59);
-  assert.equal(audit.stats.finalDistinctRecords, 49);
+  assert.equal(audit.stats.finalDistinctRecords, 52);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
   assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 6);
   assert.equal(audit.stats.analystAuthoredReportsExcluded, 4);
-  assert.equal(audit.stats.reviewedPages, 500);
-  assert.equal(audit.stats.ocrPages, 274);
+  assert.equal(audit.stats.reviewedPages, 610);
+  assert.equal(audit.stats.ocrPages, 283);
+  assert.equal(audit.stats.latestAllDocsIntakeFiles, 23);
+  assert.equal(audit.stats.latestAllDocsActualDuplicateCopiesSuppressed, 1);
   assert.equal(catalog.some((row) => /Truth-First|TruthFirst/i.test(row.name)), false);
   assert.equal(catalog.some((row) => /^(?:duplicate|copy)[-_ ]/i.test(row.name)), false);
 });

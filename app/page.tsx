@@ -1457,6 +1457,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
 
 export default function Home() {
   const [selected, setSelected] = useState<Source | null>(null);
+  const [expandedYears, setExpandedYears] = useState<Set<string>>(() => new Set());
   const [globalQuery, setGlobalQuery] = useState("");
   const [documentQuery, setDocumentQuery] = useState("");
   const [documentType, setDocumentType] = useState("All records");
@@ -1676,35 +1677,62 @@ export default function Home() {
         </section>
 
         <section className="trace" aria-label="Source-linked event timeline">
-          {groups.map((group) => (
-            <section className="year-group" id={`year-${group.year.replace(/[^0-9]+/g, "-")}`} key={group.year} aria-labelledby={`label-${group.year.replace(/[^0-9]+/g, "-")}`}>
-              <header className="year-marker"><span>YEAR BAND</span><strong id={`label-${group.year.replace(/[^0-9]+/g, "-")}`}>{group.year}</strong><small>{group.items.length} {group.items.length === 1 ? "event" : "events"}</small></header>
-              {group.items.map((event) => {
-                const item = meta[event.kind];
-                const Icon = item.icon;
-                const index = events.indexOf(event);
-                return (
-                  <article className="trace-row" data-kind={event.kind} key={`${event.date}-${event.title}`}>
-                    <div className="trace-date">
-                      <time dateTime={event.isoDate}>{event.date}</time>
-                      <span className="event-time">{event.time}</span>
-                      <span>{event.timeBasis}</span>
-                      <span>{event.phase}</span>
-                    </div>
-                    <div className="trace-spine" aria-hidden="true"><div className="trace-node"><Icon /></div>{index < events.length - 1 && <div className="trace-line" />}</div>
-                    <div className="event-card">
-                      <div className="event-topline"><Badge variant="outline" className="kind-badge">{item.label}</Badge><span className="category-code">{event.category}</span></div>
-                      <div className="timestamp-ribbon"><span>DATE</span><strong>{event.date}</strong><i>TIME</i><strong>{event.time}</strong></div>
-                      <h3>{event.title}</h3>
-                      <p className="event-finding">{event.finding}</p>
-                      <div className="consequence"><ArrowDown /><p><strong>Trace significance</strong>{event.significance}</p></div>
-                      <div className="source-list">{event.sources.map((source) => <SourceButton key={source.name} source={source} open={setSelected} />)}</div>
-                    </div>
-                  </article>
-                );
-              })}
-            </section>
-          ))}
+          {groups.map((group) => {
+            const yearSlug = group.year.replace(/[^0-9]+/g, "-");
+            const expanded = expandedYears.has(group.year);
+            const overflowCount = Math.max(0, group.items.length - 4);
+            const visibleItems = expanded ? group.items : group.items.slice(0, 4);
+
+            return (
+              <section className="year-group" id={`year-${yearSlug}`} key={group.year} aria-labelledby={`label-${yearSlug}`}>
+                <header className="year-marker"><span>YEAR BAND</span><strong id={`label-${yearSlug}`}>{group.year}</strong><small>{group.items.length} {group.items.length === 1 ? "event" : "events"}</small></header>
+                {visibleItems.map((event) => {
+                  const item = meta[event.kind];
+                  const Icon = item.icon;
+                  const index = events.indexOf(event);
+                  return (
+                    <article className="trace-row" data-kind={event.kind} key={`${event.date}-${event.title}`}>
+                      <div className="trace-date">
+                        <time dateTime={event.isoDate}>{event.date}</time>
+                        <span className="event-time">{event.time}</span>
+                        <span>{event.timeBasis}</span>
+                        <span>{event.phase}</span>
+                      </div>
+                      <div className="trace-spine" aria-hidden="true"><div className="trace-node"><Icon /></div>{index < events.length - 1 && <div className="trace-line" />}</div>
+                      <div className="event-card">
+                        <div className="event-topline"><Badge variant="outline" className="kind-badge">{item.label}</Badge><span className="category-code">{event.category}</span></div>
+                        <div className="timestamp-ribbon"><span>DATE</span><strong>{event.date}</strong><i>TIME</i><strong>{event.time}</strong></div>
+                        <h3>{event.title}</h3>
+                        <p className="event-finding">{event.finding}</p>
+                        <div className="consequence"><ArrowDown /><p><strong>Trace significance</strong>{event.significance}</p></div>
+                        <div className="source-list">{event.sources.map((source) => <SourceButton key={source.name} source={source} open={setSelected} />)}</div>
+                      </div>
+                    </article>
+                  );
+                })}
+                {overflowCount > 0 && (
+                  <div className="year-overflow-row">
+                    <span className="year-overflow-spine" aria-hidden="true" />
+                    <button
+                      type="button"
+                      className="year-overflow-toggle"
+                      aria-expanded={expanded}
+                      aria-label={expanded ? `Show only the first four events from ${group.year}` : `Show all ${group.items.length} events from ${group.year}`}
+                      onClick={() => setExpandedYears((current) => {
+                        const next = new Set(current);
+                        if (next.has(group.year)) next.delete(group.year);
+                        else next.add(group.year);
+                        return next;
+                      })}
+                    >
+                      <strong>{expanded ? "Show fewer" : `+${overflowCount} ${overflowCount === 1 ? "event" : "events"}`}</strong>
+                      <span>{expanded ? "Collapse this year to its first four events" : `View every event recorded in ${group.year}`}</span>
+                    </button>
+                  </div>
+                )}
+              </section>
+            );
+          })}
         </section>
 
         <section className="document-library" aria-labelledby="document-library-title">

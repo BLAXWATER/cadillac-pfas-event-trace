@@ -1666,7 +1666,32 @@ export default function Home() {
             <div><b>03</b><span>Source clock</span><small>Created + modified metadata</small></div>
           </div>
           <nav className="year-nav" aria-label="Jump to year band">
-            {groups.map((group) => <a key={group.year} href={`#year-${group.year.replace(/[^0-9]+/g, "-")}`}><strong>{group.year}</strong><span>{group.items.length} {group.items.length === 1 ? "event" : "events"}</span></a>)}
+            {groups.map((group) => {
+              const overflowCount = Math.max(0, group.items.length - 4);
+              const yearTarget = `#year-${group.year.replace(/[^0-9]+/g, "-")}`;
+
+              return (
+                <a
+                  key={group.year}
+                  href={yearTarget}
+                  aria-label={overflowCount > 0
+                    ? `${group.year}: show all ${group.items.length} events, including ${overflowCount} additional ${overflowCount === 1 ? "event" : "events"}`
+                    : `${group.year}: jump to ${group.items.length} ${group.items.length === 1 ? "event" : "events"}`}
+                  onClick={() => {
+                    if (overflowCount === 0) return;
+                    setExpandedYears((current) => {
+                      const next = new Set(current);
+                      next.add(group.year);
+                      return next;
+                    });
+                  }}
+                >
+                  <strong>{group.year}</strong>
+                  <span>{Math.min(group.items.length, 4)} {group.items.length === 1 ? "event" : "events"} shown</span>
+                  {overflowCount > 0 && <em className="year-nav-overflow">+{overflowCount} {overflowCount === 1 ? "event" : "events"}</em>}
+                </a>
+              );
+            })}
           </nav>
           <p className="clock-rule"><AlertTriangle />File metadata is evidentiary file history, not automatically the event time. Where a source states no time of day, the model says “time not stated.”</p>
         </section>

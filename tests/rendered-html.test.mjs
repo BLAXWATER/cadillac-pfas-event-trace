@@ -49,6 +49,9 @@ test("renders stable site metadata and source policy", async () => {
   assert.ok(html.indexOf("/blax-water-logo.png") < html.indexOf("Original-source rule"));
   assert.match(html, /Original-source rule/i);
   assert.match(html, /Year Over Year, Multiple Events, One source trail/i);
+  assert.match(html, /class="year-nav-overflow"/i);
+  assert.match(html, /2018: show all 10 events, including 6 additional events/i);
+  assert.ok(html.indexOf('class="year-nav-overflow"') < html.indexOf('class="trace-intro"'));
   assert.match(html, /class="year-overflow-toggle"/i);
   assert.match(html, /aria-expanded="false"/i);
   assert.match(html, /\+\d+ (?:event|events)/i);

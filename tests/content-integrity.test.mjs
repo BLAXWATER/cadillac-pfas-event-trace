@@ -67,7 +67,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 648);
-  assert.equal(externalFiles, 787);
+  assert.equal(externalFiles, 835);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -119,7 +119,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1435);
+  assert.equal(recordCount, 1483);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -135,9 +135,9 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1309);
-  assert.equal(audit.stats.pdfPages, 16820);
-  assert.equal(audit.stats.imageRecords, 10);
+  assert.equal(audit.stats.pdfRecords, 1354);
+  assert.equal(audit.stats.pdfPages, 18254);
+  assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
   assert.equal(audit.stats.unreadableRecords, 0);
@@ -294,7 +294,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 97);
-  assert.equal(supplementalCatalog.length, 83);
+  assert.equal(supplementalCatalog.length, 131);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -309,6 +309,15 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   assert.equal(supplementalAudit.stats.latestGroundwaterFlowCanonicalCopyMatches, 1);
   assert.equal(supplementalAudit.stats.latestGroundwaterFlowDistinctOfficialEditions, 2);
   assert.equal(supplementalAudit.stats.latestGroundwaterFlowRecordsAdded, 2);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchFilesReviewed, 94);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchPdfPagesReviewed, 3158);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchImagesReviewed, 3);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchOCRPages, 248);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchOCRPagesWithText, 235);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchExactExistingRecords, 33);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchSameContentDerivatives, 3);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchOutOfScopeRecords, 10);
+  assert.equal(supplementalAudit.stats.latestWWTPBatchRecordsAdded, 48);
   assert.equal(intakeAudit.stats.sourceRecords, 408);
   assert.equal(intakeAudit.stats.pdfs, 404);
   assert.equal(intakeAudit.stats.pdfPages, 13685);

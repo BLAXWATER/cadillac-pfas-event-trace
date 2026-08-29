@@ -125,10 +125,11 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .hierarchy-steps small { color: var(--brand-gray); }
 .hierarchy-steps > svg { justify-self: center; color: var(--brand-gray); transform: rotate(-90deg); }
 .year-nav { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
-.year-nav a { display: grid; padding: 11px 12px; border: 1px solid var(--border); background: rgba(5, 7, 8, .78); color: var(--brand-white); text-decoration: none; transition: border-color .16s ease, background .16s ease; }
+.year-nav a { display: grid; align-content: start; gap: 2px; min-height: 78px; padding: 11px 12px; border: 1px solid var(--border); background: rgba(5, 7, 8, .78); color: var(--brand-white); text-decoration: none; transition: border-color .16s ease, background .16s ease; }
 .year-nav a:hover, .year-nav a:focus-visible { border-color: var(--primary); background: #002b3b; outline: none; }
 .year-nav strong { font-family: var(--font-mono); color: var(--brand-white); }
 .year-nav span { color: var(--brand-gray); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.year-nav-overflow { justify-self: start; margin-top: 5px; padding: 3px 6px; border: 1px solid var(--primary); background: rgba(0, 188, 235, .09); color: var(--primary); font-family: var(--font-mono); font-size: 10px; font-style: normal; font-weight: 800; letter-spacing: .055em; line-height: 1.2; text-transform: uppercase; }
 .clock-rule { display: flex; gap: 10px; align-items: flex-start; margin: 18px 0 0; color: var(--brand-gray); font-size: 13.2px; line-height: 1.55; }
 .clock-rule svg { flex: 0 0 auto; width: 16px; color: var(--brand-cyan); }
 

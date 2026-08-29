@@ -173,11 +173,18 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .consequence svg { width: 17px; color: var(--trace-color); }
 .consequence p { margin: 0; color: #91a3af; font-size: 14.3px; line-height: 1.55; }
 .consequence strong { display: block; margin-bottom: 3px; color: #dce8ef; font-size: 12.1px; letter-spacing: .09em; text-transform: uppercase; }
-.source-list { display: flex; flex-wrap: wrap; gap: 9px; }
-.source-button { max-width: min(100%, 520px); justify-content: flex-start !important; border-color: #2b3b47 !important; background: #101822 !important; color: #cfe0e9 !important; }
-.source-button:hover { border-color: var(--primary) !important; background: #14232b !important; }
-.source-button span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
-.source-open-icon { margin-left: auto; color: var(--primary); }
+.source-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 10px; }
+.source-button { min-width: 0; min-height: 88px; display: grid; grid-template-columns: 58px minmax(0, 1fr) 18px; gap: 12px; align-items: center; padding: 7px; border: 1px solid #2b3b47; border-radius: 4px; background: #101822; color: #cfe0e9; font: inherit; text-align: left; text-decoration: none; cursor: pointer; transition: border-color .16s ease, background-color .16s ease, transform .16s ease; }
+.source-button:hover { border-color: var(--primary); background: #14232b; transform: translateY(-1px); }
+.source-button:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+.source-button:disabled { cursor: not-allowed; opacity: .68; }
+.source-thumbnail { width: 58px; height: 72px; display: grid; place-items: center; overflow: hidden; border: 1px solid #314550; border-radius: 2px; background: #e8eaec; color: #58717e; }
+.source-thumbnail img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.source-thumbnail svg { width: 22px; }
+.source-button-copy { min-width: 0; display: grid; gap: 5px; }
+.source-button-copy strong { min-width: 0; overflow: hidden; color: #dce8ef; font-size: 13.2px; font-weight: 650; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
+.source-button-copy small { overflow: hidden; color: #8195a1; font-family: var(--font-mono); font-size: 9.9px; letter-spacing: .05em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.source-open-icon { width: 17px; margin-left: auto; color: var(--primary); }
 
 .source-tooltip { width: min(410px, calc(100vw - 24px)) !important; max-height: min(760px, 88vh); padding: 0 !important; overflow: auto; border: 1px solid #324552 !important; background: #101821 !important; color: #e8eef5 !important; box-shadow: 0 22px 70px rgba(0, 0, 0, .55); }
 .source-tooltip > svg { fill: #101821 !important; color: #101821 !important; }

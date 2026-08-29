@@ -44,6 +44,10 @@ export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    // Sites deploys Vite-manifest assets. Bundle the small UI images explicitly
+    // instead of relying on root-level public files that the production asset
+    // uploader does not publish.
+    publicDir: false,
     server: {
       host: "0.0.0.0",
       allowedHosts: ["terminal.local"],

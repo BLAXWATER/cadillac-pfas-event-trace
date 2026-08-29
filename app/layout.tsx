@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { bundledPublicAsset } from "./bundled-public-assets";
 
 export const metadata: Metadata = {
   title: "Cadillac PFAS Event Trace",
   description: "Hierarchical, source-linked PFAS event trace with event timestamps, embedded file metadata and an evidence request queue.",
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: {
+    icon: bundledPublicAsset("/favicon.svg"),
+    shortcut: bundledPublicAsset("/favicon.svg"),
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

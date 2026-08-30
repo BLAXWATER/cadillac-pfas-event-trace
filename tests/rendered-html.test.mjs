@@ -43,7 +43,7 @@ test("renders stable site metadata and source policy", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Cadillac PFAS Event Trace<\/title>/i);
+  assert.match(html, /<title>Cadillac PFAS Event Tracer<\/title>/i);
   assert.match(html, /Hierarchical, source-linked PFAS event trace/i);
   const logoPath = html.match(/<img[^>]+class="integrity-logo"[^>]+src="(\/assets\/blax-water-logo-optimized-[^"]+\.webp)"[^>]+alt="BLAX Water"/i)?.[1];
   assert.ok(logoPath, "the bundled BLAX Water logo should render before the source policy");

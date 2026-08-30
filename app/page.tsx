@@ -1668,7 +1668,7 @@ export default function Home() {
                   {visibleGlobalResults.map((document) => (
                     <article className="global-search-card" key={`${document.archiveId}-${document.id}`}>
                       <div className="archive-meta"><Badge variant="outline">{document.archive}</Badge><span>{document.type}</span>{document.year && <span>{document.year}</span>}{document.format && <span>{document.format}</span>}</div>
-                      <h3>{document.name}</h3>
+                      <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                       {document.description && <p>{document.description}</p>}
                       <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open record<ExternalLink /></a></Button>
                     </article>
@@ -1787,7 +1787,7 @@ export default function Home() {
             {filteredDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
             ))}
@@ -1809,7 +1809,7 @@ export default function Home() {
             <summary>Review Category 02 duplicate decisions</summary>
             <div className="audit-panel">
               <p>{npdesAudit.methods.join(" · ")}</p>
-              <ul>{npdesAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{npdesAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -1821,7 +1821,7 @@ export default function Home() {
             {filteredPermitDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 {document.format === "PDF"
                   ? <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
                   : <Button asChild variant="outline" size="sm"><a href={document.url} download={document.name}>Download MSG<Download /></a></Button>}
@@ -1845,7 +1845,7 @@ export default function Home() {
             <summary>Review Category 04 duplicate and OCR decisions</summary>
             <div className="audit-panel">
               <p>{ippAudit.methods.join(" · ")}</p>
-              <ul>{ippAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{ippAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -1857,7 +1857,7 @@ export default function Home() {
             {filteredIppDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
@@ -1880,7 +1880,7 @@ export default function Home() {
             <summary>Review PFAS duplicate, metadata and OCR decisions</summary>
             <div className="audit-panel">
               <p>{pfasAudit.methods.join(" · ")}</p>
-              <ul>{pfasAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{pfasAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -1892,7 +1892,7 @@ export default function Home() {
             {filteredPfasDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : document.format === "PNG" ? "Open image" : document.format === "XLSX" ? "Open workbook" : "Download MSG"}{document.format === "MSG" ? <Download /> : <ExternalLink />}</a></Button>
               </article>
@@ -1915,7 +1915,7 @@ export default function Home() {
             <summary>Review Category 05 duplicate, metadata, OCR and spill-record decisions</summary>
             <div className="audit-panel">
               <p>{biosolidsAudit.methods.join(" · ")}</p>
-              <ul>{biosolidsAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{biosolidsAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -1927,7 +1927,7 @@ export default function Home() {
             {filteredBiosolidsDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
               </article>
@@ -1950,7 +1950,7 @@ export default function Home() {
             <summary>Review Category 06 duplicate, metadata, OCR and revision decisions</summary>
             <div className="audit-panel">
               <p>{labAudit.methods.join(" · ")}</p>
-              <ul>{labAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{labAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -1962,7 +1962,7 @@ export default function Home() {
             {filteredLabDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
@@ -1985,7 +1985,7 @@ export default function Home() {
             <summary>Review Category 12 duplicate, metadata and scan decisions</summary>
             <div className="audit-panel">
               <p>{wexfordAudit.methods.join(" · ")}</p>
-              <ul>{wexfordAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{wexfordAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -1997,7 +1997,7 @@ export default function Home() {
             {filteredWexfordDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open source"}<ExternalLink /></a></Button>
               </article>
@@ -2020,7 +2020,7 @@ export default function Home() {
             <summary>Review Category 08 duplicate, OCR and overlap decisions</summary>
             <div className="audit-panel">
               <p>{complianceAudit.methods.join(" · ")}</p>
-              <ul>{complianceAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{complianceAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -2032,7 +2032,7 @@ export default function Home() {
             {filteredComplianceDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
               </article>
@@ -2055,7 +2055,7 @@ export default function Home() {
             <summary>Review Category 09 duplicate, OCR and cross-library decisions</summary>
             <div className="audit-panel">
               <p>{correspondenceAudit.methods.join(" · ")}</p>
-              <ul>{correspondenceAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{correspondenceAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -2067,7 +2067,7 @@ export default function Home() {
             {filteredCorrespondenceDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
               </article>
@@ -2090,7 +2090,7 @@ export default function Home() {
             <summary>Review Category 10 duplicate, OCR and cross-library decisions</summary>
             <div className="audit-panel">
               <p>{processSiteAudit.methods.join(" · ")}</p>
-              <ul>{processSiteAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{processSiteAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -2102,7 +2102,7 @@ export default function Home() {
             {filteredProcessSiteDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
@@ -2125,7 +2125,7 @@ export default function Home() {
             <summary>Review Category 11 duplicate, revision and OCR decisions</summary>
             <div className="audit-panel">
               <p>{formSubmissionAudit.methods.join(" · ")}</p>
-              <ul>{formSubmissionAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{formSubmissionAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -2137,7 +2137,7 @@ export default function Home() {
             {filteredFormSubmissionDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
@@ -2160,7 +2160,7 @@ export default function Home() {
             <summary>Review batch duplicate, metadata and OCR decisions</summary>
             <div className="audit-panel">
               <p>{supplementalAudit.methods.join(" · ")}</p>
-              <ul>{supplementalAudit.decisions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{supplementalAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -2172,7 +2172,7 @@ export default function Home() {
             {filteredSupplementalDocuments.map((document) => (
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
                 <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
               </article>
@@ -2195,7 +2195,7 @@ export default function Home() {
             <summary>Review duplicate decisions and comparison methods</summary>
             <div className="audit-panel">
               <p>{referenceAudit.methods.join(" · ")}</p>
-              <ul>{referenceAudit.exclusions.map((item) => <li key={item.name}><strong>{item.name}</strong><span>{item.reason}</span></li>)}</ul>
+              <ul>{referenceAudit.exclusions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">
@@ -2207,7 +2207,7 @@ export default function Home() {
             {filteredReferenceDocuments.map((document) => (
               <article className="archive-card reference-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{formatBytes(document.size)}</span></div>
-                <h3>{document.name}</h3>
+                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <div className="dataset-shape">
                   {document.rows !== null && <span>{document.rows.toLocaleString()} rows</span>}
                   {document.columns > 0 && <span>{document.columns} columns</span>}

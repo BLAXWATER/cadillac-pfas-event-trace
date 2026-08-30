@@ -45,6 +45,7 @@ import supplementalDocuments from "./supplemental-documents.json";
 import wexfordAudit from "./wexford-audit.json";
 import wexfordDocuments from "./wexford-documents.json";
 import { bundledPublicAsset } from "./bundled-public-assets";
+import { formatSourceDisplayName } from "./source-display-name";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -1436,6 +1437,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
   const external = Boolean(source.url?.startsWith("https://github.com/"));
   const [previewFailed, setPreviewFailed] = useState(false);
   const previewAvailable = Boolean(source.preview && !previewFailed);
+  const displayName = formatSourceDisplayName(source.name);
 
   const triggerContents = (
     <>
@@ -1445,7 +1447,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
           : <FileText />}
       </span>
       <span className="source-button-copy">
-        <strong>{source.name}</strong>
+        <strong title={source.name}>{displayName}</strong>
         <small>{source.role}{source.page ? ` · page ${source.page}` : ""}</small>
       </span>
       {linked && <ExternalLink className="source-open-icon" />}
@@ -1460,10 +1462,10 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
           : <button type="button" className="source-button" aria-disabled={!linked} disabled={!linked} onClick={() => linked && open(source)}>{triggerContents}</button>}
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
-        {previewAvailable ? <img src={source.preview} alt={`Source-page preview of ${source.name}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className="missing-preview"><FileText /><span>Preview not available</span><small>Open the complete source below.</small></div>}
+        {previewAvailable ? <img src={source.preview} alt={`Source-page preview of ${displayName}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className="missing-preview"><FileText /><span>Preview not available</span><small>Open the complete source below.</small></div>}
         <div className="source-tooltip-copy">
           <p className="source-role">{source.role}</p>
-          <p className="source-full-name">{source.name}</p>
+          <p className="source-full-name" title={source.name}>{displayName}</p>
           <p className="source-result">{source.result}</p>
           <div className="source-clock">
             <div><span>Event stamp</span><strong>{source.clock.eventStamp}</strong></div>
@@ -2245,7 +2247,7 @@ export default function Home() {
           <DialogContent className="document-dialog" showCloseButton>
             {selected && <>
               <DialogHeader className="document-dialog-header">
-                <div><DialogTitle>{selected.name}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
+                <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.name)}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <Button asChild variant="outline" size="sm"><a href={selected.url} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
               </DialogHeader>
               <div className={`document-frame${selected.renderedPages ? " rendered-document-frame" : ""}`}>

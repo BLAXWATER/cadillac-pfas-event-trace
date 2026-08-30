@@ -45,6 +45,7 @@ import supplementalDocuments from "./supplemental-documents.json";
 import wexfordAudit from "./wexford-audit.json";
 import wexfordDocuments from "./wexford-documents.json";
 import { bundledPublicAsset } from "./bundled-public-assets";
+import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -1436,6 +1437,7 @@ const evidenceRequests = [
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
   const external = Boolean(source.url?.startsWith("https://github.com/"));
+  const sourceUrl = source.url ? withPdfStartPage(source.url, source.page) : undefined;
   const [previewFailed, setPreviewFailed] = useState(false);
   const previewAvailable = Boolean(source.preview && !previewFailed);
   const displayName = formatSourceDisplayName(source.displayName ?? source.name, source.format, linked);
@@ -1459,7 +1461,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
     <Tooltip>
       <TooltipTrigger asChild>
         {external
-          ? <a className="source-button" href={source.url} target="_blank" rel="noreferrer">{triggerContents}</a>
+          ? <a className="source-button" href={sourceUrl} target="_blank" rel="noreferrer">{triggerContents}</a>
           : <button type="button" className="source-button" aria-disabled={!linked} disabled={!linked} onClick={() => linked && open(source)}>{triggerContents}</button>}
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
@@ -1670,7 +1672,7 @@ export default function Home() {
                       <div className="archive-meta"><Badge variant="outline">{document.archive}</Badge><span>{document.type}</span>{document.year && <span>{document.year}</span>}{document.format && <span>{document.format}</span>}</div>
                       <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                       {document.description && <p>{document.description}</p>}
-                      <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open record<ExternalLink /></a></Button>
+                      <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open record<ExternalLink /></a></Button>
                     </article>
                   ))}
                 </div>
@@ -1788,7 +1790,7 @@ export default function Home() {
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -1823,7 +1825,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 {document.format === "PDF"
-                  ? <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                  ? <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
                   : <Button asChild variant="outline" size="sm"><a href={document.url} download={document.name}>Download MSG<Download /></a></Button>}
               </article>
             ))}
@@ -1859,7 +1861,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -1894,7 +1896,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : document.format === "PNG" ? "Open image" : document.format === "XLSX" ? "Open workbook" : "Download MSG"}{document.format === "MSG" ? <Download /> : <ExternalLink />}</a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : document.format === "PNG" ? "Open image" : document.format === "XLSX" ? "Open workbook" : "Download MSG"}{document.format === "MSG" ? <Download /> : <ExternalLink />}</a></Button>
               </article>
             ))}
           </div>
@@ -1929,7 +1931,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -1964,7 +1966,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -1999,7 +2001,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open source"}<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open source"}<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -2034,7 +2036,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -2069,7 +2071,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -2104,7 +2106,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -2139,7 +2141,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -2174,7 +2176,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={document.url} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
               </article>
             ))}
           </div>
@@ -2249,7 +2251,7 @@ export default function Home() {
             {selected && <>
               <DialogHeader className="document-dialog-header">
                 <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
-                <Button asChild variant="outline" size="sm"><a href={selected.url} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(selected.url, selected.page)} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
               </DialogHeader>
               <div className={`document-frame${selected.renderedPages ? " rendered-document-frame" : ""}`}>
                 {selected.renderedPages ? (
@@ -2261,7 +2263,7 @@ export default function Home() {
                       </figure>
                     ))}
                   </div>
-                ) : selected.format === "PDF" ? <iframe title={`Full document: ${selected.name}`} src={`${selected.url}#page=${selected.page ?? 1}&view=FitH&toolbar=1`} /> : <img src={selected.url} alt={`Full source page: ${selected.name}`} />}
+                ) : selected.format === "PDF" ? <iframe title={`Full document: ${selected.name}`} src={withPdfStartPage(selected.url, selected.page, true)} /> : <img src={selected.url} alt={`Full source page: ${selected.name}`} />}
               </div>
             </>}
           </DialogContent>

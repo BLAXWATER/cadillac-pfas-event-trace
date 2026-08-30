@@ -24,3 +24,5 @@ timeout \
   --kill-after="${SITES_BUILD_KILL_AFTER:-10s}" \
   "${SITES_BUILD_TIMEOUT:-3m}" \
   "${vinext}" build
+
+"${script_dir}/prune-worker-assets.sh" "${SITES_PROJECT_ROOT}/dist"

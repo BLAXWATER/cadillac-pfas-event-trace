@@ -1,11 +1,19 @@
 {
   "stats": {
-    "suppliedFiles": 539,
-    "newDistinctRecords": 131,
-    "exactExistingRecordsReused": 38,
-    "duplicateCopiesSuppressed": 8,
+    "suppliedFiles": 564,
+    "newDistinctRecords": 132,
+    "exactExistingRecordsReused": 51,
+    "duplicateCopiesSuppressed": 18,
     "outOfScopeExcluded": 363,
-    "publishedBytes": 375379390,
+    "publishedBytes": 376060671,
+    "latestWexfordLeachateBatchFilesReviewed": 25,
+    "latestWexfordLeachateBatchPagesReviewed": 207,
+    "latestWexfordLeachateBatchOCRPages": 74,
+    "latestWexfordLeachateBatchManualReviewPages": 0,
+    "latestWexfordLeachateBatchExactExistingRecords": 13,
+    "latestWexfordLeachateBatchSameContentDerivatives": 10,
+    "latestWexfordLeachateBatchCanonicalSourceUpgrades": 1,
+    "latestWexfordLeachateBatchRecordsAdded": 1,
     "latestCategory1819RepeatFilesReviewed": 12,
     "latestCategory1819RepeatPagesReviewed": 179,
     "latestCategory1819RepeatDistinctInputHashes": 12,
@@ -41,7 +49,8 @@
     "Category 18-19 repeat-intake verification: all 12 supplied PDFs totaling 179 pages were SHA-256 checked against every evidence catalog. Eleven are exact existing binaries; the four-page 2019 minutes were rechecked as the same-content OCR derivative already suppressed.",
     "Groundwater-flow intake: two 24-page USGS PDFs were hash-checked, text-extracted and rendered in full. Their body-page alignment, official report-series metadata, citation pages and cover/end matter were cross-compared against the Category 13 manifest and canonical source files.",
     "August 29 WWTP intake: 94 supplied records were SHA-256 checked against every current catalog; all 3,158 PDF pages and three JPEGs rendered in sequence, and OCR was applied to all 248 pages with sparse embedded text.",
-    "August 29 duplicate review: byte hashes, normalized text, page counts, embedded metadata, rendered-page hashes and perceptual page sequences were cross-compared before exact-existing, same-report derivative, distinct-edition and out-of-scope decisions."
+    "August 29 duplicate review: byte hashes, normalized text, page counts, embedded metadata, rendered-page hashes and perceptual page sequences were cross-compared before exact-existing, same-report derivative, distinct-edition and out-of-scope decisions.",
+    "August 30 Wexford landfill and leachate intake: all 25 supplied PDFs and 207 pages opened successfully; OCR was applied to 74 image-only pages, and no page required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against the published corpus before one distinct audit was retained and one incomplete derivative was upgraded to the complete source scan."
   ],
   "decisions": [
     {
@@ -155,6 +164,10 @@
     {
       "name": "Ten incidental or generic records",
       "reason": "A routine 2019 agenda, unrelated 2023 executive packet, opioid/legal binder, unrelated prosecutor packet, Lake County plan, blank generic inspection form, staff directory, national pretreatment report, unrelated October 2023 minutes and a low-relevance August 2021 packet were excluded as non-Cadillac evidence or merely incidental context. They were not mislabeled as duplicates."
+    },
+    {
+      "name": "August 30 Wexford landfill and leachate intake",
+      "reason": "All 25 PDFs and 207 pages passed the integrity audit. Thirteen files exactly match retained sources and ten are same-content derivatives, so no redundant copies were added. The 2014 pre-inspection source was upgraded from a seven-page text derivative to the complete eight-page scan with its signed completion page. The 2018 county audit is distinct and was retained because it documents the continuing groundwater-remediation obligation, 30-year action period, $819,916 liability and restricted investments."
     }
   ]
 }

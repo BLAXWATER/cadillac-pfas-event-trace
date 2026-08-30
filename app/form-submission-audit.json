@@ -1,19 +1,19 @@
 {
   "stats": {
-    "sourceFilesReviewed": 78,
-    "sourcePdfRecords": 78,
-    "reviewedPages": 246,
+    "sourceFilesReviewed": 80,
+    "sourcePdfRecords": 80,
+    "reviewedPages": 250,
     "sourceOcrPages": 5,
     "sourceOcrPagesWithText": 5,
     "actualDuplicateGroupsRemoved": 4,
     "actualDuplicateFilesRemoved": 4,
     "crossCategoryCopiesReferencedElsewhere": 1,
     "retainedMultiVersionSubmissionGroups": 14,
-    "finalDistinctRecords": 73,
-    "publishedPages": 233,
+    "finalDistinctRecords": 75,
+    "publishedPages": 237,
     "publishedOcrPages": 0,
     "publishedOcrPagesWithText": 0,
-    "publishedBytes": 11720737,
+    "publishedBytes": 12070201,
     "existingCanonicalRecordsReplaced": 1,
     "ambiguousFilenameLabelsRemoved": 30
   },
@@ -53,6 +53,10 @@
     {
       "name": "HNJ-P0ZX-8AVDS summary report",
       "reason": "The two supplied files are byte-identical and reproduce the same submission, version, fields and pages as the existing scan. The searchable born-digital copy replaces that scan; no second record is created."
+    },
+    {
+      "name": "HNB-J69X-W1FHA v1 and HQQ-9FG9-RCPF3 v1",
+      "reason": "The two born-digital portal exports have distinct submission IDs, reporting roles, dates, attachment lists and hashes. The 2018 IPP annual report and July 2026 Asset Management Annual Report submission are retained separately and were not collapsed with their underlying attachments."
     }
   ],
   "removed": [

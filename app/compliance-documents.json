@@ -656,5 +656,17 @@
     "size": 105447,
     "sha256": "b7cfc87f596b021eb08e74a59cf83f9602b1ad2f043867589d63d50737e27e3c",
     "description": "EGLE facility site-review, self-monitoring, sampling-procedure and analytical-methodology report for the June 10, 2025 Cadillac WWTP compliance evaluation inspection. The report documents the sampling-preservation issue addressed in the associated compliance communication."
+  },
+  {
+    "id": "056-7c7c68a98555",
+    "name": "2026-02-27 to 2026-07-07 - Cadillac Cyanide Messages Chronological Sequence.pdf",
+    "url": "/compliance-docs/056-7c7c68a98555.pdf",
+    "year": "2026",
+    "type": "Compliance correspondence and laboratory sequence",
+    "format": "PDF",
+    "pages": 24,
+    "size": 2723238,
+    "sha256": "7c7c68a985555f26920fb675cf398f72a73b1e71e9456c7be89489092903a363",
+    "description": "Twenty-four-page chronological agency, municipal, laboratory and industrial-user correspondence package concerning 2026 cyanide results. It records Cadillac's exceedance notifications and resampling, the City's identification of Cadillac Casting as the suspected contributing industrial user, a reported plant-weir result of 3.5 mg/L compared with the City's stated 4 µg/L local limit, and issuance and receipt of a notice of violation. Statements are attributed to their source messages; the compilation is not treated as an independent adjudication."
   }
 ]

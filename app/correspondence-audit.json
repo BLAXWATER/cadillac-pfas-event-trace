@@ -1,22 +1,22 @@
 {
   "stats": {
-    "sourceFilesReviewed": 49,
-    "sourcePdfRecords": 48,
+    "sourceFilesReviewed": 50,
+    "sourcePdfRecords": 49,
     "sourceImageRecords": 1,
-    "reviewedPages": 205,
-    "sourceOcrPages": 15,
-    "sourceOcrPagesWithText": 12,
+    "reviewedPages": 206,
+    "sourceOcrPages": 16,
+    "sourceOcrPagesWithText": 13,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 14,
     "existingRecordMovedIntoCategory": 1,
-    "newDistinctRecords": 34,
-    "finalDistinctRecords": 35,
+    "newDistinctRecords": 35,
+    "finalDistinctRecords": 36,
     "duplicateLabelsRemoved": 4,
-    "publishedPages": 116,
-    "publishedOcrPages": 14,
-    "publishedOcrPagesWithText": 12,
-    "publishedBytes": 6358928
+    "publishedPages": 117,
+    "publishedOcrPages": 15,
+    "publishedOcrPagesWithText": 13,
+    "publishedBytes": 6469937
   },
   "methods": [
     "SHA-256 comparison within the entire supplied folder and against every published evidence catalog",
@@ -45,6 +45,10 @@
     {
       "name": "Drafts, revisions and closely related email chains",
       "reason": "Related subject matter alone was not treated as duplication. Distinct status, wording, attachments, annotations or correspondence context warranted retention."
+    },
+    {
+      "name": "August 20, 2026 local-limits approval request",
+      "reason": "The one-page image-based letter received OCR and visual verification. It is retained as a distinct City request for EGLE approval and is not described as an agency approval determination."
     }
   ],
   "reused": [

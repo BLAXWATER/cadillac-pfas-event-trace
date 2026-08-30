@@ -193,5 +193,18 @@
     "size": 4285743,
     "sha256": "12b51b03de98c50698094c994f87140091cd5ee88d7c660891dd3d41de8957dc",
     "description": "Nine-page historical Cadillac WWTP brochure with an aerial-photograph cover. It describes treatment performance and illustrates screw pumping, equalization, grit removal, primary and secondary treatment, rotating biological contactors, sand filtration, chlorination and solids handling."
+  },
+  {
+    "id": "process-site-016-5d332dd173ef",
+    "name": "2026-07 - Cadillac Wastewater Asset Management Report — 2025–2026 Activities.pdf",
+    "url": "/process-site-docs/process-site-016-5d332dd173ef.pdf",
+    "year": "2026",
+    "category": "Process & site documents",
+    "type": "Wastewater asset management annual report",
+    "format": "PDF",
+    "pages": 3,
+    "size": 81886,
+    "sha256": "5d332dd173eff7dda2a05bf67f26a2cf3d61ee1ee584d53c546087741d64de7f",
+    "description": "July 2026 asset-management report covering Cadillac wastewater activities during 2025–2026. It records a 3.2 MGD design flow, 1.8 MGD average flow, 13 lift stations and 60.3 miles of gravity sewer; it also lists completed, planned and anticipated work and compares $5,635,500 in anticipated annual activities with $5,639,000 in wastewater revenue."
   }
 ]

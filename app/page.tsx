@@ -345,11 +345,11 @@ const events: Event[] = [
     title: "Hauled landfill leachate documented at the WWTP",
     finding: "The inspection record states that the equalization tank accepted hauled waste described as landfill leachate from the County Landfill and notes no screen or flow meter in that receiving area.",
     significance: "Establishes the physical receiving point later examined by the PFAS source investigation.",
-    sources: [pdf("2014-10-10_Cadillac_Pre-Inspection_Report_56545.pdf", "2014-preinspection", 7, "Equalization tank identified as the receiving point for County Landfill leachate.", {
+    sources: [pdf("2014-10-10 Cadillac Pre-Inspection Report 56545.pdf", "2014-preinspection", 8, "Equalization tank identified as the receiving point for County Landfill leachate.", {
       eventStamp: "2014-10-10 · time not stated",
       basis: "Inspection-record date",
       created: "2015-11-26 20:48:28 CST",
-      note: "The embedded creation timestamp is later than the inspection; it is retained as file history, not event time.",
+      note: "The complete scan includes the signed completion page. The embedded creation timestamp is later than the inspection; it is retained as file history, not event time.",
     })],
   },
   {
@@ -731,6 +731,27 @@ const events: Event[] = [
       modified: "2018-11-28 11:03:14 CST",
       note: "Embedded file generation precedes the stated update date; the two clocks remain separate.",
     })],
+  },
+  {
+    year: "2018",
+    date: "2018-12-31",
+    isoDate: "2018-12-31",
+    time: noTime,
+    timeBasis: "Audited fiscal-year end",
+    phase: "Landfill remediation accounting",
+    kind: "regulatory",
+    category: "12 · Landfill & leachate",
+    title: "County audit carries the landfill groundwater-remediation obligation",
+    finding: "Wexford County's audited financial statements say the 2011 landfill purchaser did not assume the County's groundwater-contamination cleanup duty. The audit describes a 2007 MDEQ agreement requiring 30 years of remedial action and operation and maintenance, reports an $819,916 liability, and identifies restricted investments reserved for that obligation.",
+    significance: "Confirms that the County retained a funded, long-term groundwater-remediation responsibility after the landfill sale. It is financial and governance evidence, not PFAS sampling data or proof of a contaminant source.",
+    sources: [{
+      ...archivedSource("Wexford County Audited Financial Statements — Year Ended December 31, 2018.pdf", "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b34a99be7592d7423df0db300f0bd3b100ee3d0e/public/findings-docs/133-b131111d7828.pdf", 112, "Note 9 on PDF page 65 describes the 2007 MDEQ agreement, 30-year remedial-action and operation-and-maintenance period, $819,916 liability, and restricted investments.", {
+        eventStamp: "Fiscal year ended 2018-12-31 · time not stated",
+        basis: "Audited-report fiscal period",
+        note: "The liability documents a groundwater-remediation obligation. It does not identify PFAS, quantify leachate treatment or attribute a PFAS source.",
+      }),
+      page: 65,
+    }],
   },
   {
     year: "2019",

@@ -60,14 +60,14 @@ test("catalog records are unique and source metadata matches local files", async
         const url = new URL(row.url);
         assert.equal(url.protocol, "https:", `${catalog.name}:${row.id} is not HTTPS`);
         assert.equal(url.hostname, "github.com", `${catalog.name}:${row.id} uses an unexpected archive host`);
-        assert.match(url.pathname, /^\/cazey43\/cadillac-pfas-event-trace\/blob\/[0-9a-f]{40}\//, `${catalog.name}:${row.id} is not pinned to a source commit`);
+        assert.match(url.pathname, /^\/(?:cazey43|BLAXWATER)\/cadillac-pfas-event-trace\/blob\/[0-9a-f]{40}\//, `${catalog.name}:${row.id} is not pinned to a source commit`);
         externalFiles += 1;
       }
     }
   }
 
   assert.equal(localFiles, 648);
-  assert.equal(externalFiles, 835);
+  assert.equal(externalFiles, 836);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -75,7 +75,7 @@ test("every pinned GitHub source resolves to its recorded repository blob", asyn
   const specs = catalogs.flatMap((catalog) => catalog.rows)
     .filter((row) => row.url.startsWith("https://github.com/"))
     .map((row) => {
-      const match = new URL(row.url).pathname.match(/^\/cazey43\/cadillac-pfas-event-trace\/blob\/([0-9a-f]{40})\/(.+)$/);
+      const match = new URL(row.url).pathname.match(/^\/(?:cazey43|BLAXWATER)\/cadillac-pfas-event-trace\/blob\/([0-9a-f]{40})\/(.+)$/);
       assert.ok(match, `malformed pinned GitHub source: ${row.url}`);
       return `${match[1]}:${decodeURIComponent(match[2])}`;
     });
@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 29);
+  assert.equal(helperReferences.length, 30);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1483);
+  assert.equal(recordCount, 1484);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -156,8 +156,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1354);
-  assert.equal(audit.stats.pdfPages, 18254);
+  assert.equal(audit.stats.pdfRecords, 1355);
+  assert.equal(audit.stats.pdfPages, 18366);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
@@ -315,7 +315,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 97);
-  assert.equal(supplementalCatalog.length, 131);
+  assert.equal(supplementalCatalog.length, 132);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -339,6 +339,14 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   assert.equal(supplementalAudit.stats.latestWWTPBatchSameContentDerivatives, 3);
   assert.equal(supplementalAudit.stats.latestWWTPBatchOutOfScopeRecords, 10);
   assert.equal(supplementalAudit.stats.latestWWTPBatchRecordsAdded, 48);
+  assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchFilesReviewed, 25);
+  assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchPagesReviewed, 207);
+  assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchOCRPages, 74);
+  assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchManualReviewPages, 0);
+  assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchExactExistingRecords, 13);
+  assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchSameContentDerivatives, 10);
+  assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchCanonicalSourceUpgrades, 1);
+  assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchRecordsAdded, 1);
   assert.equal(intakeAudit.stats.sourceRecords, 408);
   assert.equal(intakeAudit.stats.pdfs, 404);
   assert.equal(intakeAudit.stats.pdfPages, 13685);
@@ -371,6 +379,15 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   assert.equal(
     supplementalCatalog.some((row) => row.sha256 === "1362c773fc5ea8067730a5c6084705e2ac52ddc4ca70ce14994a96f9675e39a2" && row.type === "County board packet"),
     true,
+  );
+  assert.equal(
+    supplementalCatalog.some((row) => row.sha256 === "b131111d78281ba07986361cb6e16ea8d4e41418e275f07f1fda815f3537ed55" && row.type === "County financial audit"),
+    true,
+  );
+  const completePreinspection = await readFile(path.join(publicDirectory, "docs", "2014-preinspection.pdf"));
+  assert.equal(
+    createHash("sha256").update(completePreinspection).digest("hex"),
+    "f496a616cd2a5ceef1019ce1b08c4aa1aa2f840387e20a78c7f5d9bd6a395cba",
   );
   assert.equal(
     supplementalCatalog.filter((row) => row.category === "Research & technical literature" && row.type === "Peer-reviewed research article").length,

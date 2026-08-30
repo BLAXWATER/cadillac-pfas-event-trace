@@ -1701,5 +1701,18 @@
     "size": 1715236,
     "sha256": "d5dd57fe9c940b47c205c9e2d623c339fc2b8048f77b0b12799f924f4199226e",
     "description": "County audited financial statements containing landfill, water/wastewater and environmental-obligation context. Financial disclosures are retained for governance and funding traceability, not as contaminant measurements."
+  },
+  {
+    "id": "133-b131111d7828",
+    "name": "Wexford County Audited Financial Statements — Year Ended December 31, 2018.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b34a99be7592d7423df0db300f0bd3b100ee3d0e/public/findings-docs/133-b131111d7828.pdf",
+    "year": "2018",
+    "category": "Wexford landfill & leachate",
+    "type": "County financial audit",
+    "format": "PDF",
+    "pages": 112,
+    "size": 681281,
+    "sha256": "b131111d78281ba07986361cb6e16ea8d4e41418e275f07f1fda815f3537ed55",
+    "description": "Audited county financial statements recording the continuing Wexford County Landfill groundwater-remediation obligation after the 2011 sale. Note 9 describes a 2007 MDEQ agreement requiring 30 years of remedial action and operation and maintenance, an $819,916 liability and restricted investments for the obligation. This is financial and governance evidence, not PFAS sampling data or source attribution."
   }
 ]

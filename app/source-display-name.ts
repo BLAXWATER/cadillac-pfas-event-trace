@@ -1,15 +1,38 @@
-const finalFileExtension = /(\.(?:pdf|png|jpe?g|docx?|xlsx?|csv|html?|msg))(?=(?:\s*·.*)?$)/i;
+const finalFileExtension = /\.(pdf|png|jpe?g|docx?|xlsx?|csv|html?|msg)$/i;
 
-export function formatSourceDisplayName(name: string): string {
-  const extension = name.match(finalFileExtension);
-  const extensionIndex = extension?.index;
+function cleanText(value: string): string {
+  return value
+    .replace(/_+/g, " ")
+    .replace(/\./g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,)])/g, "$1")
+    .replace(/([(])\s+/g, "$1")
+    .trim();
+}
 
-  if (extensionIndex === undefined) {
-    return name.replace(/\./g, " ").replace(/\s+/g, " ").trim();
-  }
+function cleanSuffix(value: string): string {
+  return cleanText(value)
+    .replace(/\bPDF\s+p\s+(\d+)\b/i, "page $1")
+    .replace(/\bp\s+(\d+)\b/i, "page $1")
+    .replace(/\s*·\s*/g, " · ");
+}
 
-  const title = name.slice(0, extensionIndex).replace(/\./g, " ");
-  const preservedExtensionAndSuffix = name.slice(extensionIndex);
+export function formatSourceDisplayName(
+  name: string,
+  format?: "PDF" | "PNG",
+  linked = false,
+): string {
+  const separatorIndex = name.indexOf("·");
+  const primaryName = separatorIndex >= 0 ? name.slice(0, separatorIndex).trim() : name.trim();
+  const suffix = separatorIndex >= 0 ? cleanSuffix(name.slice(separatorIndex + 1)) : "";
+  const extensionMatch = primaryName.match(finalFileExtension);
+  const extension = extensionMatch?.[1]?.toLowerCase();
+  const titleWithoutExtension = extension
+    ? primaryName.slice(0, primaryName.length - extensionMatch[0].length)
+    : primaryName;
+  const cleanedTitle = cleanText(titleWithoutExtension);
+  const displayedExtension = extension ?? (linked && format ? format.toLowerCase() : "");
+  const primaryDisplay = `${cleanedTitle}${displayedExtension ? `.${displayedExtension}` : ""}`;
 
-  return `${title}${preservedExtensionAndSuffix}`.replace(/\s+/g, " ").trim();
+  return suffix ? `${primaryDisplay} · ${suffix}` : primaryDisplay;
 }

@@ -150,7 +150,7 @@ const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((arc
 );
 
 const repositoryAssetUrl = (path: string) =>
-  `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/6865900390beb6d9123ab515955a46f3b3cc585f/public/${path.replace(/^\//, "")}`;
+  `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/98dbe7dc13459ed087b46a00e9c799e12436576d/public/${path.replace(/^\//, "")}`;
 
 const pdf = (
   name: string,

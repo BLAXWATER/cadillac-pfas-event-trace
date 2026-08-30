@@ -1489,10 +1489,10 @@ const evidenceRequests = [
 
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
-  const external = Boolean(source.url?.startsWith("https://github.com/"));
   const sourceUrl = source.url
     ? sourceDocumentUrl(source.url, source.format, (url) => withPdfStartPage(url, source.page))
     : undefined;
+  const external = Boolean(sourceUrl?.startsWith("https://github.com/"));
   const [previewFailed, setPreviewFailed] = useState(false);
   const previewUrl = sourcePreviewUrl(source);
   const previewAvailable = Boolean(previewUrl && !previewFailed);
@@ -2331,11 +2331,11 @@ export default function Home() {
                     ))}
                   </div>
                 ) : sourceMediaKind(selected.format) === "pdf" ? (
-                  <iframe title={`Full document: ${selected.name}`} src={withPdfStartPage(selected.url, selected.page, true)} />
+                  <iframe title={`Full document: ${selected.name}`} src={sourceDocumentUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page, true))} />
                 ) : sourceMediaKind(selected.format) === "html" ? (
-                  <iframe title={`Full HTML document: ${selected.name}`} src={selected.url} />
+                  <iframe title={`Full HTML document: ${selected.name}`} src={sourceDocumentUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))} />
                 ) : sourceMediaKind(selected.format) === "image" ? (
-                  <img src={selected.url} alt={`Full source image: ${selected.name}`} />
+                  <img src={sourceDocumentUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))} alt={`Full source image: ${selected.name}`} />
                 ) : (
                   <div className="unsupported-document">
                     <FileText />

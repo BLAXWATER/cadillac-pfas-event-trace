@@ -2209,7 +2209,7 @@ export default function Home() {
 
         <section className="evidence-queue" aria-labelledby="evidence-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">EVIDENCE REQUEST QUEUE</p><h2 id="evidence-title">What is still needed to complete each block</h2></div>
+            <div><p className="eyebrow">EVIDENCE REQUEST QUEUE</p><h2 id="evidence-title">Potentially missing or hidden documents</h2></div>
             <p>Upload these records in this chat using the filenames shown. Each new source can be inserted under its year, event timestamp and pathway block without changing the underlying event record.</p>
           </div>
           <div className="request-grid">

@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element -- document previews are local static evidence assets */
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import {
   AlertTriangle,
   ArrowDown,
@@ -1743,7 +1743,14 @@ export default function Home() {
                       <div className="event-card">
                         <div className="event-topline"><Badge variant="outline" className="kind-badge">{item.label}</Badge><span className="category-code">{event.category}</span></div>
                         <div className="timestamp-ribbon"><span>DATE</span><strong>{event.date}</strong><i>TIME</i><strong>{event.time}</strong></div>
-                        <h3>{event.title}</h3>
+                        <h3
+                          title={event.title}
+                          style={{
+                            "--event-title-fit": `${((100 / Math.max(event.title.length, 1)) * 1.7).toFixed(3)}cqw`,
+                          } as CSSProperties}
+                        >
+                          {event.title}
+                        </h3>
                         <p className="event-finding">{event.finding}</p>
                         <div className="consequence"><ArrowDown /><p><strong>Trace significance</strong>{event.significance}</p></div>
                         <div className="source-list">{event.sources.map((source) => <SourceButton key={source.name} source={source} open={setSelected} />)}</div>

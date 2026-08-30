@@ -1,19 +1,19 @@
 {
   "stats": {
-    "sourceFilesReviewed": 19,
-    "sourcePdfRecords": 19,
-    "reviewedPages": 65,
+    "sourceFilesReviewed": 20,
+    "sourcePdfRecords": 20,
+    "reviewedPages": 66,
     "sourceOcrPages": 28,
     "sourceOcrPagesWithText": 25,
-    "manuallyVerifiedMapAndAerialPages": 3,
+    "manuallyVerifiedMapAndAerialPages": 4,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 3,
-    "finalDistinctRecords": 16,
-    "publishedPages": 54,
+    "finalDistinctRecords": 17,
+    "publishedPages": 55,
     "publishedOcrPages": 25,
     "publishedOcrPagesWithText": 22,
-    "publishedBytes": 9063191,
+    "publishedBytes": 16698160,
     "duplicateLikeLabelsRemoved": 3
   },
   "methods": [

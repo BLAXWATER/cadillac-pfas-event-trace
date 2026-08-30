@@ -2650,5 +2650,17 @@
     "size": 325429,
     "sha256": "16ce608395de7bc52a28a67b57d6a38a559d07dcf4074415b12d13820d03557a",
     "description": "Browser-readable rendering of the April 2, 2026 DMR-QA Study 45 email thread. The original MSG is preserved in the same immutable source commit."
+  },
+  {
+    "id": "272-6251fd5c146e",
+    "name": "MI0020257-2026-07-01-to-2026-07-31-DMR.pdf",
+    "url": "/dmr-docs/272-6251fd5c146e.pdf",
+    "year": "2026",
+    "type": "DMR report",
+    "format": "PDF",
+    "pages": 17,
+    "size": 986810,
+    "sha256": "6251fd5c146e3e1d2ec51171dfc6c1ebbab05729a8752ae4b04a3699278ac11b",
+    "description": "Cadillac WWTP daily and summary DMR for July 2026, generated August 19, 2026. The report records no DMR comments and reports zero exceedances in the summary tables; it is retained as a monthly compliance record rather than evidence of a violation."
   }
 ]

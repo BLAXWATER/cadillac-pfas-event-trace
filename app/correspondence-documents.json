@@ -466,5 +466,18 @@
     "size": 111009,
     "sha256": "139ab8b49931ec12daa88758b1e82e37d9a4d658f2c9afd3c7813250bebda579",
     "description": "August 20, 2026 City of Cadillac letter to EGLE requesting approval of the maximum allowable headworks loading limits in Table 11 of the City's report. The letter refers to a May 21, 2026 request and seeks agency approval; it is not itself an approval determination."
+  },
+  {
+    "id": "corr-037-1a12e67c31b1",
+    "name": "2025-11-26 - October 2025 PFAS Sample Results Transmittal.pdf",
+    "url": "/correspondence-docs/corr-037-1a12e67c31b1.pdf",
+    "year": "2025",
+    "category": "Correspondence & letters",
+    "type": "PFAS results transmittal and analytical package",
+    "format": "PDF",
+    "pages": 41,
+    "size": 801044,
+    "sha256": "1a12e67c31b1eff85285ea1fc577c09640fbd9d2fbd0bf43f86b6be06d7e89a6",
+    "description": "EGLE email transmittal dated November 26, 2025 for the October 22 Cadillac WWTP effluent sample, followed by the laboratory report and structured-data export. The analytical attachments overlap the canonical lab and DMR records already preserved, but the cover communication is distinct and states that the results complied with the five PFAS having Water Quality Values."
   }
 ]

@@ -1,22 +1,22 @@
 {
   "stats": {
-    "sourceFilesReviewed": 50,
-    "sourcePdfRecords": 49,
+    "sourceFilesReviewed": 51,
+    "sourcePdfRecords": 50,
     "sourceImageRecords": 1,
-    "reviewedPages": 206,
-    "sourceOcrPages": 16,
-    "sourceOcrPagesWithText": 13,
+    "reviewedPages": 247,
+    "sourceOcrPages": 23,
+    "sourceOcrPagesWithText": 14,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 14,
     "existingRecordMovedIntoCategory": 1,
-    "newDistinctRecords": 35,
-    "finalDistinctRecords": 36,
+    "newDistinctRecords": 36,
+    "finalDistinctRecords": 37,
     "duplicateLabelsRemoved": 4,
-    "publishedPages": 117,
-    "publishedOcrPages": 15,
-    "publishedOcrPagesWithText": 13,
-    "publishedBytes": 6469937
+    "publishedPages": 158,
+    "publishedOcrPages": 22,
+    "publishedOcrPagesWithText": 14,
+    "publishedBytes": 7270981
   },
   "methods": [
     "SHA-256 comparison within the entire supplied folder and against every published evidence catalog",

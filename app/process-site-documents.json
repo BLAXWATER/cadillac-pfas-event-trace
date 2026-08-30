@@ -206,5 +206,18 @@
     "size": 81886,
     "sha256": "5d332dd173eff7dda2a05bf67f26a2cf3d61ee1ee584d53c546087741d64de7f",
     "description": "July 2026 asset-management report covering Cadillac wastewater activities during 2025–2026. It records a 3.2 MGD design flow, 1.8 MGD average flow, 13 lift stations and 60.3 miles of gravity sewer; it also lists completed, planned and anticipated work and compares $5,635,500 in anticipated annual activities with $5,639,000 in wastewater revenue."
+  },
+  {
+    "id": "process-site-017-7eb2900b520d",
+    "name": "Sanitary AMP Map 11x17.pdf",
+    "url": "/process-site-docs/process-site-017-7eb2900b520d.pdf",
+    "year": "Undated",
+    "category": "Process & site documents",
+    "type": "Sanitary utility system map",
+    "format": "PDF",
+    "pages": 1,
+    "size": 7634969,
+    "sha256": "7eb2900b520dbfc0e83d0d63d66fd49038e70fd1e49124b4d6b3219b0bf69b0d",
+    "description": "One-sheet 11×17 aerial map of Cadillac's sanitary utility network with pipe-material symbology. The source does not state a reliable preparation or revision date, so it is retained as undated infrastructure context rather than assigned to a chronology event."
   }
 ]

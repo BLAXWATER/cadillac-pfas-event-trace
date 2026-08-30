@@ -1,0 +1,96 @@
+{
+  "batch": "2026-08-30 Wexford landfill and Cadillac WWTP intake 05",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Leachate wexford landfill",
+  "preservedSourceFolder": "work/intake-2026-08-30-batch05-source",
+  "method": [
+    "Copied all supplied files into a read-only intake working set before analysis.",
+    "Verified every file with SHA-256 and, for PDFs, opened every page and checked the page count.",
+    "Extracted embedded text and applied OCR to every page with fewer than 40 normalized embedded characters.",
+    "Compared byte hashes, rendered-page sequences, selected text, perceptual page hashes, page counts and document identity against the preserved corpus and prior intakes.",
+    "Compared DOCX text directly with its PDF companion before classifying either format as a duplicate representation.",
+    "Rendered and visually checked the only low-text manual-review page; it was a valid technical image in a duplicate council packet."
+  ],
+  "stats": {
+    "receivedFiles": 31,
+    "pdfFiles": 29,
+    "docxFiles": 2,
+    "pdfPages": 798,
+    "embeddedTextPages": 712,
+    "ocrPages": 86,
+    "ocrPagesWithText": 76,
+    "manualReviewPages": 1,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctFiles": 6,
+    "excludedDuplicateFiles": 25
+  },
+  "retained": [
+    {
+      "name": "MI0020257-2026-07-01-to-2026-07-31-DMR.pdf",
+      "sha256": "6251fd5c146e3e1d2ec51171dfc6c1ebbab05729a8752ae4b04a3699278ac11b",
+      "pages": 17,
+      "reason": "Distinct certified July 2026 DMR; no equivalent report was present in the catalog."
+    },
+    {
+      "name": "N0358-SAR-20161103.pdf",
+      "sha256": "9c1d000fd0afddf6f6046ecd71d5647e45fd06309b76499e6f19c6f76edf1152",
+      "pages": 1,
+      "reason": "Distinct AQD industrial-site closure activity report."
+    },
+    {
+      "name": "N3862-SAR-20220629.pdf",
+      "sha256": "5b4f4183c1fcd732b0141499e6cd7e5a26c794cb41fbf2d96c1e41d1b2adc755",
+      "pages": 4,
+      "reason": "Distinct June 2022 AQD inspection record containing a leachate-management statement."
+    },
+    {
+      "name": "October-2025-PFAS-sample-results.pdf",
+      "sha256": "1a12e67c31b1eff85285ea1fc577c09640fbd9d2fbd0bf43f86b6be06d7e89a6",
+      "pages": 41,
+      "reason": "Retained for its distinct EGLE cover email and portal-disposition statement; repeated analytical attachments are identified in the catalog description."
+    },
+    {
+      "name": "Sanitary-AMP-map-11x17.pdf",
+      "sha256": "7eb2900b520dbfc0e83d0d63d66fd49038e70fd1e49124b4d6b3219b0bf69b0d",
+      "pages": 1,
+      "reason": "Distinct Cadillac sanitary utility-system map retained as library context."
+    },
+    {
+      "name": "Sources-By-SRN.pdf",
+      "sha256": "5581a63a708a5fc230c56245a007ce71903477f9305e33b55caadaf452b08cd1",
+      "pages": 277,
+      "reason": "Distinct December 2024 Michigan air-source registry snapshot retained as reference data."
+    }
+  ],
+  "excludedDuplicates": [
+    "J17993-1-UDS-Level-2-Report-Final-Report.pdf",
+    "J18036-1-UDS-Level-2-Report-Final-Report.pdf",
+    "J19915-1-UDS-Level-2-Report-Final-Report.pdf",
+    "May-21-2018-City-Council-Packet-Item-1047.pdf",
+    "November-20-2017-City-Council-Packet-Item-992.pdf",
+    "N3862-Final-11-01-22.docx",
+    "N3862-Final-11-01-22.pdf",
+    "N3862-Staff-Report-11-01-22.docx",
+    "N3862-Staff-Report-11-01-22.pdf",
+    "N3862-TEST-20210119.pdf",
+    "N3862-TEST-20220307.pdf",
+    "N3862-FCE-20140916.pdf",
+    "N3862-FCE-20151118.pdf",
+    "N3862-FCE-20171106.pdf",
+    "N3862-FCE-20200304.pdf",
+    "N3862-FCE-20220805.pdf",
+    "N3862-FCE-20240604.pdf",
+    "N3862-SAR-20140916.pdf",
+    "N3862-SAR-20151118.pdf",
+    "N3862-SAR-20171106.pdf",
+    "N3862-SAR-20200305.pdf",
+    "N3862-SAR-20240604.pdf",
+    "Pre-Inspection-Report.pdf",
+    "Rate-Info-2026.pdf",
+    "Wexford-2020-10-13-Executive-Minutes-PFAS-Disposal-Decision.pdf"
+  ],
+  "duplicateResolution": "The excluded files were verified as exact copies, page-for-page same-content renderings, alternate generated copies of the same signed inspection record, or DOCX/PDF representations of the same record. No distinct revision, annotation, signature, cover communication or page was discarded.",
+  "immutableCommit": null
+}

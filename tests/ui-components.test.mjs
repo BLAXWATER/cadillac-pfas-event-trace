@@ -47,6 +47,7 @@ test("emits the trace's critical layout and preview styles", async () => {
   assert.match(css, /\.document-grid\{/);
   assert.match(css, /\.event-card h3\{[^}]*white-space:nowrap/);
   assert.match(css, /font-size:clamp\(12px,\s*var\(--event-title-fit,\s*22px\),\s*33px\)/);
+  assert.match(css, /\.event-card\{[^}]*border:3px solid var\(--trace-color\)/);
   assert.match(css, /@media\s*\(width<=760px\)/);
 });
 

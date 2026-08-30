@@ -15,7 +15,7 @@ test("uses the core brand palette without recoloring the chronological trace", a
   assert.match(css, /\.trace-row\[data-kind="compliance"\]\s*\{\s*--trace-color:\s*#ff6570;\s*\}/i);
   assert.match(css, /\.trace-row\[data-kind="receptor"\]\s*\{\s*--trace-color:\s*#ff8a3d;\s*\}/i);
   assert.match(css, /\.trace-row\[data-kind="gap"\]\s*\{\s*--trace-color:\s*#ffbf47;\s*\}/i);
-  assert.match(css, /\.event-card\s*\{[^}]*border:\s*1px solid #22303b[^}]*background:\s*linear-gradient\(135deg, rgba\(18, 26, 36, \.96\), rgba\(11, 16, 23, \.96\)\)/i);
+  assert.match(css, /\.event-card\s*\{[^}]*border:\s*3px solid var\(--trace-color\)[^}]*background:\s*linear-gradient\(135deg, rgba\(18, 26, 36, \.96\), rgba\(11, 16, 23, \.96\)\)/i);
   assert.match(css, /\.integrity-logo\s*\{[^}]*background:\s*transparent[^}]*mix-blend-mode:\s*screen/i);
 });
 

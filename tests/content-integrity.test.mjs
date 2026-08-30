@@ -125,6 +125,14 @@ test("timeline source and preview assets are present", async () => {
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
   assert.equal(helperReferences.length, 29);
+
+  const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
+  for (const slug of timelinePdfSlugs) {
+    const preview = path.join(publicDirectory, "previews", `${slug}.jpg`);
+    const optimizedPreview = path.join(publicDirectory, "optimized-previews", `${slug}.webp`);
+    assert.ok((await stat(preview)).size > 0, `missing or empty timeline PDF preview: ${slug}.jpg`);
+    assert.ok((await stat(optimizedPreview)).size > 0, `missing or empty optimized timeline PDF preview: ${slug}.webp`);
+  }
 });
 
 test("site-wide search covers every evidence catalog", async () => {

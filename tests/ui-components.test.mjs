@@ -103,6 +103,21 @@ test("normalizes every malformed pattern found in chronological source titles", 
   );
 });
 
+test("uses independent media handlers for document and image formats", async () => {
+  const { sourceDocumentUrl, sourceMediaKind, sourcePreviewUrl } = await vite.ssrLoadModule("/app/source-media.ts");
+
+  assert.equal(sourceMediaKind("PDF"), "pdf");
+  assert.equal(sourceMediaKind("HTML"), "html");
+  assert.equal(sourceMediaKind("JPG"), "image");
+  assert.equal(sourceMediaKind("PNG"), "image");
+  assert.equal(sourceMediaKind("CSV"), "spreadsheet");
+  assert.equal(sourceMediaKind("DOCX"), "office");
+  assert.equal(sourcePreviewUrl({ format: "PNG", url: "/evidence/page.png" }), "/evidence/page.png");
+  assert.equal(sourcePreviewUrl({ format: "PDF", url: "/evidence/report.pdf" }), undefined);
+  assert.equal(sourceDocumentUrl("/evidence/page.html", "HTML", () => "wrong"), "/evidence/page.html");
+  assert.equal(sourceDocumentUrl("/evidence/report.pdf", "PDF", (url) => `${url}#page=2`), "/evidence/report.pdf#page=2");
+});
+
 test("removes exactly the first period from every multi-period library filename", async () => {
   const { formatSourceDisplayName } = await vite.ssrLoadModule("/app/source-display-name.ts");
   const documentFiles = (await readdir(path.join(root, "app")))

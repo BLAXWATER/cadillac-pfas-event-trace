@@ -10,8 +10,12 @@ import {
   Database,
   Download,
   ExternalLink,
+  FileArchive,
+  FileCode2,
+  FileImage,
   Factory,
   FileSearch,
+  FileSpreadsheet,
   FileText,
   FlaskConical,
   Landmark,
@@ -47,6 +51,12 @@ import wexfordDocuments from "./wexford-documents.json";
 import { bundledPublicAsset } from "./bundled-public-assets";
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
+import {
+  sourceDocumentUrl,
+  sourceMediaKind,
+  sourcePreviewUrl,
+  type SourceFormat,
+} from "./source-media";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -72,7 +82,7 @@ type Source = {
   renderedPages?: string[];
   pages?: number;
   page?: number;
-  format: "PDF" | "PNG";
+  format: SourceFormat;
   role: "Primary source" | "Source page" | "Referenced—file missing";
   result: string;
   clock: {
@@ -1438,17 +1448,31 @@ const evidenceRequests = [
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
   const external = Boolean(source.url?.startsWith("https://github.com/"));
-  const sourceUrl = source.url ? withPdfStartPage(source.url, source.page) : undefined;
+  const sourceUrl = source.url
+    ? sourceDocumentUrl(source.url, source.format, (url) => withPdfStartPage(url, source.page))
+    : undefined;
   const [previewFailed, setPreviewFailed] = useState(false);
-  const previewAvailable = Boolean(source.preview && !previewFailed);
+  const previewUrl = sourcePreviewUrl(source);
+  const previewAvailable = Boolean(previewUrl && !previewFailed);
   const displayName = formatSourceDisplayName(source.displayName ?? source.name, source.format, linked);
+  const mediaKind = sourceMediaKind(source.format);
+
+  const formatIcon = mediaKind === "html"
+    ? <FileCode2 />
+    : mediaKind === "image"
+      ? <FileImage />
+      : mediaKind === "spreadsheet"
+        ? <FileSpreadsheet />
+        : mediaKind === "archive"
+          ? <FileArchive />
+          : <FileText />;
 
   const triggerContents = (
     <>
-      <span className="source-thumbnail" aria-hidden="true">
+      <span className={`source-thumbnail source-thumbnail--${mediaKind}`} aria-hidden="true">
         {previewAvailable
-          ? <img src={source.preview} alt="" loading="lazy" decoding="async" onError={() => setPreviewFailed(true)} />
-          : <FileText />}
+          ? <img src={previewUrl} alt="" loading="lazy" decoding="async" onError={() => setPreviewFailed(true)} />
+          : <span className="source-format-fallback">{formatIcon}<b>{source.format}</b></span>}
       </span>
       <span className="source-button-copy">
         <strong title={source.name}>{displayName}</strong>
@@ -1466,7 +1490,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
           : <button type="button" className="source-button" aria-disabled={!linked} disabled={!linked} onClick={() => linked && open(source)}>{triggerContents}</button>}
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
-        {previewAvailable ? <img src={source.preview} alt={`Source-page preview of ${displayName}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className="missing-preview"><FileText /><span>Preview not available</span><small>Open the complete source below.</small></div>}
+        {previewAvailable ? <img src={previewUrl} alt={`Source-page preview of ${displayName}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className={`missing-preview missing-preview--${mediaKind}`}>{formatIcon}<span>{source.format} preview not available</span><small>The complete source can still be opened below.</small></div>}
         <div className="source-tooltip-copy">
           <p className="source-role">{source.role}</p>
           <p className="source-full-name" title={source.name}>{displayName}</p>
@@ -1474,8 +1498,8 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
           <div className="source-clock">
             <div><span>Event stamp</span><strong>{source.clock.eventStamp}</strong></div>
             <div><span>Date basis</span><strong>{source.clock.basis}</strong></div>
-            <div><span>PDF created</span><strong>{source.clock.created ?? "Unavailable"}</strong></div>
-            {source.clock.modified && <div><span>PDF modified</span><strong>{source.clock.modified}</strong></div>}
+            <div><span>{source.format} created</span><strong>{source.clock.created ?? "Unavailable"}</strong></div>
+            {source.clock.modified && <div><span>{source.format} modified</span><strong>{source.clock.modified}</strong></div>}
             <p>{source.clock.note}</p>
           </div>
           <p className="source-hint">{linked ? external ? "Click to open the complete archived source in a new tab." : "Click to open the complete source in this window." : "Exact filename preserved; source acquisition required."}</p>
@@ -2252,7 +2276,7 @@ export default function Home() {
             {selected && <>
               <DialogHeader className="document-dialog-header">
                 <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(selected.url, selected.page)} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={sourceDocumentUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
               </DialogHeader>
               <div className={`document-frame${selected.renderedPages ? " rendered-document-frame" : ""}`}>
                 {selected.renderedPages ? (
@@ -2264,7 +2288,19 @@ export default function Home() {
                       </figure>
                     ))}
                   </div>
-                ) : selected.format === "PDF" ? <iframe title={`Full document: ${selected.name}`} src={withPdfStartPage(selected.url, selected.page, true)} /> : <img src={selected.url} alt={`Full source page: ${selected.name}`} />}
+                ) : sourceMediaKind(selected.format) === "pdf" ? (
+                  <iframe title={`Full document: ${selected.name}`} src={withPdfStartPage(selected.url, selected.page, true)} />
+                ) : sourceMediaKind(selected.format) === "html" ? (
+                  <iframe title={`Full HTML document: ${selected.name}`} src={selected.url} />
+                ) : sourceMediaKind(selected.format) === "image" ? (
+                  <img src={selected.url} alt={`Full source image: ${selected.name}`} />
+                ) : (
+                  <div className="unsupported-document">
+                    <FileText />
+                    <strong>{selected.format} files open in a separate viewer.</strong>
+                    <p>Use the Open separately button to view or download the complete source.</p>
+                  </div>
+                )}
               </div>
             </>}
           </DialogContent>

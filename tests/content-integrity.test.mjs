@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 649);
+  assert.equal(localFiles, 655);
   assert.equal(externalFiles, 836);
 });
 
@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 31);
+  assert.equal(helperReferences.length, 40);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1485);
+  assert.equal(recordCount, 1491);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -156,8 +156,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1356);
-  assert.equal(audit.stats.pdfPages, 18375);
+  assert.equal(audit.stats.pdfRecords, 1362);
+  assert.equal(audit.stats.pdfPages, 18551);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
@@ -173,15 +173,15 @@ test("compliance archive audit preserves distinct records and excludes verified 
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "compliance-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 109);
-  assert.equal(audit.stats.finalDistinctRecords, 55);
+  assert.equal(audit.stats.sourceFilesReviewed, 110);
+  assert.equal(audit.stats.finalDistinctRecords, 56);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
   assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 6);
   assert.equal(audit.stats.analystAuthoredReportsExcluded, 4);
-  assert.equal(audit.stats.reviewedPages, 671);
-  assert.equal(audit.stats.ocrPages, 284);
+  assert.equal(audit.stats.reviewedPages, 695);
+  assert.equal(audit.stats.ocrPages, 308);
   assert.equal(audit.stats.latestAllDocsIntakeFiles, 23);
   assert.equal(audit.stats.latestAllDocsActualDuplicateCopiesSuppressed, 1);
   assert.equal(audit.stats.latestDropboxIntakeFiles, 50);
@@ -196,10 +196,10 @@ test("correspondence archive audit preserves distinct records and reuses exact c
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "correspondence-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "correspondence-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 49);
-  assert.equal(audit.stats.reviewedPages, 205);
-  assert.equal(audit.stats.sourceOcrPages, 15);
-  assert.equal(audit.stats.finalDistinctRecords, 35);
+  assert.equal(audit.stats.sourceFilesReviewed, 50);
+  assert.equal(audit.stats.reviewedPages, 206);
+  assert.equal(audit.stats.sourceOcrPages, 16);
+  assert.equal(audit.stats.finalDistinctRecords, 36);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 14);
   assert.equal(audit.stats.existingRecordMovedIntoCategory, 1);
@@ -213,11 +213,11 @@ test("process and site archive audits every page and reuses only verified cross-
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "process-site-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "process-site-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 18);
-  assert.equal(audit.stats.reviewedPages, 62);
+  assert.equal(audit.stats.sourceFilesReviewed, 19);
+  assert.equal(audit.stats.reviewedPages, 65);
   assert.equal(audit.stats.sourceOcrPages, 28);
   assert.equal(audit.stats.manuallyVerifiedMapAndAerialPages, 3);
-  assert.equal(audit.stats.finalDistinctRecords, 15);
+  assert.equal(audit.stats.finalDistinctRecords, 16);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 3);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
@@ -230,16 +230,16 @@ test("online form submissions retain real revisions and exclude only verified du
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "form-submission-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "form-submission-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 78);
-  assert.equal(audit.stats.reviewedPages, 246);
+  assert.equal(audit.stats.sourceFilesReviewed, 80);
+  assert.equal(audit.stats.reviewedPages, 250);
   assert.equal(audit.stats.sourceOcrPages, 5);
   assert.equal(audit.stats.sourceOcrPagesWithText, 5);
-  assert.equal(audit.stats.finalDistinctRecords, 73);
+  assert.equal(audit.stats.finalDistinctRecords, 75);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.actualDuplicateGroupsRemoved, 4);
   assert.equal(audit.stats.actualDuplicateFilesRemoved, 4);
   assert.equal(audit.stats.retainedMultiVersionSubmissionGroups, 14);
-  assert.equal(audit.stats.publishedPages, 233);
+  assert.equal(audit.stats.publishedPages, 237);
   assert.equal(audit.stats.publishedOcrPages, 0);
   assert.equal(new Set(catalog.map((row) => row.sha256)).size, catalog.length);
   assert.equal(catalog.some((row) => /\(1\)|11 - Form Submissions|^PD-MWSX/i.test(row.name)), false);
@@ -315,7 +315,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 97);
-  assert.equal(supplementalCatalog.length, 133);
+  assert.equal(supplementalCatalog.length, 134);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);

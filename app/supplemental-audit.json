@@ -1,11 +1,21 @@
 {
   "stats": {
-    "suppliedFiles": 626,
-    "newDistinctRecords": 133,
-    "exactExistingRecordsReused": 101,
-    "duplicateCopiesSuppressed": 29,
-    "outOfScopeExcluded": 363,
-    "publishedBytes": 376329334,
+    "suppliedFiles": 651,
+    "newDistinctRecords": 134,
+    "exactExistingRecordsReused": 116,
+    "duplicateCopiesSuppressed": 31,
+    "outOfScopeExcluded": 365,
+    "publishedBytes": 384286753,
+    "latestWexfordExpandedBatchFilesReviewed": 25,
+    "latestWexfordExpandedBatchPagesReviewed": 368,
+    "latestWexfordExpandedBatchEmbeddedTextPages": 261,
+    "latestWexfordExpandedBatchOCRPages": 107,
+    "latestWexfordExpandedBatchOCRPagesWithText": 106,
+    "latestWexfordExpandedBatchManualReviewPages": 1,
+    "latestWexfordExpandedBatchExactExistingRecords": 15,
+    "latestWexfordExpandedBatchSameContentDerivatives": 2,
+    "latestWexfordExpandedBatchOutOfScopeRecords": 2,
+    "latestWexfordExpandedBatchRecordsAdded": 6,
     "latestWexfordLeachateBatchFilesReviewed": 25,
     "latestWexfordLeachateBatchPagesReviewed": 207,
     "latestWexfordLeachateBatchOCRPages": 74,
@@ -68,7 +78,8 @@
     "August 29 duplicate review: byte hashes, normalized text, page counts, embedded metadata, rendered-page hashes and perceptual page sequences were cross-compared before exact-existing, same-report derivative, distinct-edition and out-of-scope decisions.",
     "August 30 Wexford landfill and leachate intake: all 25 supplied PDFs and 207 pages opened successfully; OCR was applied to 74 image-only pages, and no page required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against the published corpus before one distinct audit was retained and one incomplete derivative was upgraded to the complete source scan.",
     "August 30 Wexford authorization continuation: all 31 supplied PDFs and 257 pages opened successfully. Fifty-two image-only pages received OCR, 48 yielded readable text and none required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against all 1,484 published records before retention or suppression.",
-    "August 30 Wexford PFAS and IPP continuation: all 31 supplied PDFs and 174 pages opened successfully. OCR was applied to 41 sparse-text pages, 37 yielded readable text and none required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against 1,483 cataloged records and the standalone timeline sources."
+    "August 30 Wexford PFAS and IPP continuation: all 31 supplied PDFs and 174 pages opened successfully. OCR was applied to 41 sparse-text pages, 37 yielded readable text and none required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against 1,483 cataloged records and the standalone timeline sources.",
+    "August 30 expanded Wexford intake: all 25 supplied PDFs and 368 pages passed file-hash, page-count and extraction checks. OCR was applied to all 107 sparse-text pages, 106 yielded readable text and the remaining rotated table was visually verified as complete. Byte hashes, normalized text and rendered-page sequences were cross-compared against the catalogs, published assets, standalone timeline sources and prior audited intake caches."
   ],
   "decisions": [
     {
@@ -194,6 +205,10 @@
     {
       "name": "August 30 Wexford PFAS, IPP and governance continuation",
       "reason": "All 31 PDFs and 174 pages passed the integrity audit. Twenty-three files exactly match established source binaries and eight are page-render-identical or normalized-content-identical derivatives. No distinct record was added, no established source was replaced and every supplied original remains untouched."
+    },
+    {
+      "name": "August 30 expanded Wexford landfill, compliance and infrastructure intake",
+      "reason": "All 25 PDFs and 368 pages passed the integrity audit. Fifteen records exactly match established library or standalone timeline sources, including the December 2019 PFAS status record. Two additional files are same-content derivatives of retained records, and two are unrelated to the Cadillac environmental record. Six distinct records were retained: the 2026–2031 initial capital-program draft, the 2026 cyanide correspondence sequence, the 2025–2026 wastewater asset report, the August 20 local-limits approval request, the 2017 IPP annual-report portal submission and the July 2026 asset-report portal submission. The one OCR-manual-review page is a complete rotated table, not a missing or corrupt page."
     }
   ]
 }

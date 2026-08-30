@@ -1,19 +1,19 @@
 {
   "stats": {
-    "sourceFilesReviewed": 18,
-    "sourcePdfRecords": 18,
-    "reviewedPages": 62,
+    "sourceFilesReviewed": 19,
+    "sourcePdfRecords": 19,
+    "reviewedPages": 65,
     "sourceOcrPages": 28,
     "sourceOcrPagesWithText": 25,
     "manuallyVerifiedMapAndAerialPages": 3,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 3,
-    "finalDistinctRecords": 15,
-    "publishedPages": 51,
+    "finalDistinctRecords": 16,
+    "publishedPages": 54,
     "publishedOcrPages": 25,
     "publishedOcrPagesWithText": 22,
-    "publishedBytes": 8981305,
+    "publishedBytes": 9063191,
     "duplicateLikeLabelsRemoved": 3
   },
   "methods": [
@@ -43,6 +43,10 @@
     {
       "name": "Undated brochure",
       "reason": "The PDF creation timestamp is preserved in the audit metadata but is not treated as the brochure's publication date because no issue date is printed in the record."
+    },
+    {
+      "name": "2025–2026 wastewater asset-management report",
+      "reason": "The three-page July 2026 report has a distinct hash and content sequence. It is retained separately from the July 24 MiWaters submission because the report contains the underlying activity, inventory and financial figures while the portal record preserves submission history and attachment context."
     }
   ],
   "reused": [

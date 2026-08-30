@@ -8,16 +8,16 @@
     "Manual visual review of low-confidence aerial-image and rotated-table pages"
   ],
   "stats": {
-    "sourceFilesReviewed": 109,
+    "sourceFilesReviewed": 110,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 6,
     "analystAuthoredReportsExcluded": 4,
     "existingComplianceRecordsRetained": 2,
-    "finalDistinctRecords": 55,
-    "reviewedPages": 671,
-    "ocrPages": 284,
-    "publishedBytes": 56721902,
+    "finalDistinctRecords": 56,
+    "reviewedPages": 695,
+    "ocrPages": 308,
+    "publishedBytes": 59445140,
     "latestAllDocsIntakeFiles": 23,
     "latestAllDocsExactExistingRecords": 18,
     "latestAllDocsActualDuplicateCopiesSuppressed": 1,
@@ -99,6 +99,10 @@
     {
       "name": "2025 NPDES compliance evaluation inspection report",
       "reason": "The 16-page June 10, 2025 facility site-review report has a distinct SHA-256, normalized-text fingerprint and rendered-page sequence not found in the published corpus. It is retained alongside the already preserved August 19 compliance communication because the report supplies the detailed inspection record while the communication states the formal findings and corrective-action request."
+    },
+    {
+      "name": "2026 Cadillac cyanide correspondence sequence",
+      "reason": "All 24 image-based pages received OCR and were checked in rendered sequence. The package is distinct from every published compliance record and preserves dated municipal, agency, laboratory and industrial-user messages from February 27 through July 7, 2026. Statements remain attributed to their authors and are not promoted into an independent adjudication."
     }
   ]
 }

@@ -947,5 +947,31 @@
     "size": 66740,
     "sha256": "8757e8c268309a3bc78cb376bf4060926640b28163b023355b3fa3bbbc0d5df5",
     "description": "IPP unscheduled submission for approval portal record HQQ-0ZQQ-VCZ9T, version 1, preserved with its submitted fields, attachment list, revision history and digital certification."
+  },
+  {
+    "id": "form-submission-074-120dbeb59d52",
+    "name": "2018-03-28 - IPP Annual Report Submission HNB-J69X-W1FHA v1.pdf",
+    "url": "/form-submission-docs/form-submission-074-120dbeb59d52.pdf",
+    "year": "2018",
+    "category": "Form submissions (online portal)",
+    "type": "Annual IPP report submission",
+    "format": "PDF",
+    "pages": 2,
+    "size": 288966,
+    "sha256": "120dbeb59d521dfe4b204dc7473c6d58b6c250fe77a1c0925ce1475cdc2ebbee",
+    "description": "MiWaters annual Industrial Pretreatment Program report submission HNB-J69X-W1FHA, version 1, for reporting year 2017. The submission states that no local-limits evaluation or changes occurred and reports no POTW or biosolids problems; it lists the SIU/CIU list, oversight table, significant-noncompliance notice and monitoring summary as attachments."
+  },
+  {
+    "id": "form-submission-075-6f3e801807fe",
+    "name": "2026-07-24 - Asset Management Annual Report Submission HQQ-9FG9-RCPF3 v1.pdf",
+    "url": "/form-submission-docs/form-submission-075-6f3e801807fe.pdf",
+    "year": "2026",
+    "category": "Form submissions (online portal)",
+    "type": "Asset management annual report submission",
+    "format": "PDF",
+    "pages": 2,
+    "size": 60498,
+    "sha256": "6f3e801807fe89d6227d606425ded684bb57a3c63e93109213baaa40a6d920cc",
+    "description": "MiWaters Asset Management Annual Report submission HQQ-9FG9-RCPF3, version 1, submitted July 24, 2026. Its attachment list identifies the 2025–2026 asset-management report, rate information, sewer map, sewer rates and the 2026–2031 capital improvement program."
   }
 ]

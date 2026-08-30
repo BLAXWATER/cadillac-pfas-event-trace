@@ -535,6 +535,27 @@ const events: Event[] = [
     }, "/npdes-docs/080-6a540cadcdc6.pdf")],
   },
   {
+    year: "2017",
+    date: "2017-04-05",
+    isoDate: "2017-04-05",
+    time: noTime,
+    timeBasis: "Meeting date printed in the adopted minutes",
+    phase: "Public governance",
+    kind: "gap",
+    category: "12 · Landfill & leachate",
+    title: "Cedar Creek reports missing landfill updates",
+    finding: "During public comment, the Cedar Creek Township treasurer told the Wexford County Board that the township was not receiving updates or documents from Infrastructure, referred to RAP-area discussion and asked that Cedar Creek be included in the American Waste discussion concerning the County's yearly fee. The minutes state that the matter would be looked into.",
+    significance: "Preserves a contemporaneous public communication concern without converting the statement into a finding that a legally required notice was missed or that a response was completed.",
+    sources: [{
+      ...archivedSource("Wexford County Board Minutes — Cedar Creek Updates and American Waste Discussion.pdf", "/findings-docs/134-3dc615cfcf9c.pdf", 9, "Nine-page adopted minutes; the relevant public-comment entry appears on PDF page 8.", {
+        eventStamp: "2017-04-05 · time not stated",
+        basis: "Meeting date printed in the adopted minutes",
+        note: "The source records the public statement and the Board's notation that the matter would be looked into. It does not establish a legal-notice violation or preserve a later response.",
+      }),
+      page: 8,
+    }],
+  },
+  {
     year: "2018",
     date: "2018-02-20",
     isoDate: "2018-02-20",

@@ -1714,5 +1714,18 @@
     "size": 681281,
     "sha256": "b131111d78281ba07986361cb6e16ea8d4e41418e275f07f1fda815f3537ed55",
     "description": "Audited county financial statements recording the continuing Wexford County Landfill groundwater-remediation obligation after the 2011 sale. Note 9 describes a 2007 MDEQ agreement requiring 30 years of remedial action and operation and maintenance, an $819,916 liability and restricted investments for the obligation. This is financial and governance evidence, not PFAS sampling data or source attribution."
+  },
+  {
+    "id": "134-3dc615cfcf9c",
+    "name": "Wexford County Board Minutes — Cedar Creek Updates and American Waste Discussion.pdf",
+    "url": "/findings-docs/134-3dc615cfcf9c.pdf",
+    "year": "2017",
+    "category": "Wexford landfill & leachate",
+    "type": "County board minutes",
+    "format": "PDF",
+    "pages": 9,
+    "size": 268663,
+    "sha256": "3dc615cfcf9ce5e8252c0d536a755cb548ed6c290ebed1f773ca5bb9356f72a0",
+    "description": "April 5, 2017 Wexford County Board minutes. In public comment, the Cedar Creek Township treasurer stated that the township was not receiving updates or documents from Infrastructure, referred to RAP-area discussion and asked that Cedar Creek be included in the American Waste discussion concerning the County's yearly fee. The minutes say the matter would be looked into; they do not establish that a legal notice was missed or document a completed response."
   }
 ]

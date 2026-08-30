@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 648);
+  assert.equal(localFiles, 649);
   assert.equal(externalFiles, 836);
 });
 
@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 30);
+  assert.equal(helperReferences.length, 31);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1484);
+  assert.equal(recordCount, 1485);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -156,8 +156,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
 
   assert.equal(audit.stats.catalogRecords, recordCount);
-  assert.equal(audit.stats.pdfRecords, 1355);
-  assert.equal(audit.stats.pdfPages, 18366);
+  assert.equal(audit.stats.pdfRecords, 1356);
+  assert.equal(audit.stats.pdfPages, 18375);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.hashFailures, 0);
@@ -315,7 +315,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 97);
-  assert.equal(supplementalCatalog.length, 132);
+  assert.equal(supplementalCatalog.length, 133);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -347,6 +347,14 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchSameContentDerivatives, 10);
   assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchCanonicalSourceUpgrades, 1);
   assert.equal(supplementalAudit.stats.latestWexfordLeachateBatchRecordsAdded, 1);
+  assert.equal(supplementalAudit.stats.latestWexfordAuthorizationBatchFilesReviewed, 31);
+  assert.equal(supplementalAudit.stats.latestWexfordAuthorizationBatchPagesReviewed, 257);
+  assert.equal(supplementalAudit.stats.latestWexfordAuthorizationBatchOCRPages, 52);
+  assert.equal(supplementalAudit.stats.latestWexfordAuthorizationBatchOCRPagesWithText, 48);
+  assert.equal(supplementalAudit.stats.latestWexfordAuthorizationBatchManualReviewPages, 0);
+  assert.equal(supplementalAudit.stats.latestWexfordAuthorizationBatchExactExistingRecords, 27);
+  assert.equal(supplementalAudit.stats.latestWexfordAuthorizationBatchSameContentDerivatives, 3);
+  assert.equal(supplementalAudit.stats.latestWexfordAuthorizationBatchRecordsAdded, 1);
   assert.equal(intakeAudit.stats.sourceRecords, 408);
   assert.equal(intakeAudit.stats.pdfs, 404);
   assert.equal(intakeAudit.stats.pdfPages, 13685);
@@ -382,6 +390,10 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   );
   assert.equal(
     supplementalCatalog.some((row) => row.sha256 === "b131111d78281ba07986361cb6e16ea8d4e41418e275f07f1fda815f3537ed55" && row.type === "County financial audit"),
+    true,
+  );
+  assert.equal(
+    supplementalCatalog.some((row) => row.sha256 === "3dc615cfcf9ce5e8252c0d536a755cb548ed6c290ebed1f773ca5bb9356f72a0" && row.type === "County board minutes"),
     true,
   );
   const completePreinspection = await readFile(path.join(publicDirectory, "docs", "2014-preinspection.pdf"));

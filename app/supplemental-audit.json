@@ -1,11 +1,11 @@
 {
   "stats": {
-    "suppliedFiles": 564,
-    "newDistinctRecords": 132,
-    "exactExistingRecordsReused": 51,
-    "duplicateCopiesSuppressed": 18,
+    "suppliedFiles": 595,
+    "newDistinctRecords": 133,
+    "exactExistingRecordsReused": 78,
+    "duplicateCopiesSuppressed": 21,
     "outOfScopeExcluded": 363,
-    "publishedBytes": 376060671,
+    "publishedBytes": 376329334,
     "latestWexfordLeachateBatchFilesReviewed": 25,
     "latestWexfordLeachateBatchPagesReviewed": 207,
     "latestWexfordLeachateBatchOCRPages": 74,
@@ -14,6 +14,14 @@
     "latestWexfordLeachateBatchSameContentDerivatives": 10,
     "latestWexfordLeachateBatchCanonicalSourceUpgrades": 1,
     "latestWexfordLeachateBatchRecordsAdded": 1,
+    "latestWexfordAuthorizationBatchFilesReviewed": 31,
+    "latestWexfordAuthorizationBatchPagesReviewed": 257,
+    "latestWexfordAuthorizationBatchOCRPages": 52,
+    "latestWexfordAuthorizationBatchOCRPagesWithText": 48,
+    "latestWexfordAuthorizationBatchManualReviewPages": 0,
+    "latestWexfordAuthorizationBatchExactExistingRecords": 27,
+    "latestWexfordAuthorizationBatchSameContentDerivatives": 3,
+    "latestWexfordAuthorizationBatchRecordsAdded": 1,
     "latestCategory1819RepeatFilesReviewed": 12,
     "latestCategory1819RepeatPagesReviewed": 179,
     "latestCategory1819RepeatDistinctInputHashes": 12,
@@ -50,7 +58,8 @@
     "Groundwater-flow intake: two 24-page USGS PDFs were hash-checked, text-extracted and rendered in full. Their body-page alignment, official report-series metadata, citation pages and cover/end matter were cross-compared against the Category 13 manifest and canonical source files.",
     "August 29 WWTP intake: 94 supplied records were SHA-256 checked against every current catalog; all 3,158 PDF pages and three JPEGs rendered in sequence, and OCR was applied to all 248 pages with sparse embedded text.",
     "August 29 duplicate review: byte hashes, normalized text, page counts, embedded metadata, rendered-page hashes and perceptual page sequences were cross-compared before exact-existing, same-report derivative, distinct-edition and out-of-scope decisions.",
-    "August 30 Wexford landfill and leachate intake: all 25 supplied PDFs and 207 pages opened successfully; OCR was applied to 74 image-only pages, and no page required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against the published corpus before one distinct audit was retained and one incomplete derivative was upgraded to the complete source scan."
+    "August 30 Wexford landfill and leachate intake: all 25 supplied PDFs and 207 pages opened successfully; OCR was applied to 74 image-only pages, and no page required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against the published corpus before one distinct audit was retained and one incomplete derivative was upgraded to the complete source scan.",
+    "August 30 Wexford authorization continuation: all 31 supplied PDFs and 257 pages opened successfully. Fifty-two image-only pages received OCR, 48 yielded readable text and none required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against all 1,484 published records before retention or suppression."
   ],
   "decisions": [
     {
@@ -168,6 +177,10 @@
     {
       "name": "August 30 Wexford landfill and leachate intake",
       "reason": "All 25 PDFs and 207 pages passed the integrity audit. Thirteen files exactly match retained sources and ten are same-content derivatives, so no redundant copies were added. The 2014 pre-inspection source was upgraded from a seven-page text derivative to the complete eight-page scan with its signed completion page. The 2018 county audit is distinct and was retained because it documents the continuing groundwater-remediation obligation, 30-year action period, $819,916 liability and restricted investments."
+    },
+    {
+      "name": "August 30 Wexford authorization continuation",
+      "reason": "All 31 PDFs and 257 pages passed the integrity audit. Twenty-seven files exactly match published binaries and three are render-identical or normalized-text-identical derivatives, so those 30 records were not republished. The April 5, 2017 Wexford County Board minutes are distinct and were retained because they preserve Cedar Creek Township's public statement about missing updates and its request to participate in the American Waste discussion; the statement is not presented as a proven notice violation."
     }
   ]
 }

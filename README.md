@@ -1,4 +1,4 @@
-# Cadillac PFAS Event Trace
+# Cadillac PFAS Event Tracer
 
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and

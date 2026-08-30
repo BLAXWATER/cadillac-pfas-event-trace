@@ -1,0 +1,11 @@
+{
+  "verifiedAt": "2026-08-30",
+  "rule": "Only visually verified blank first pages are assigned a later first-content page.",
+  "audit": {
+    "currentLibraryPdfs": 635,
+    "historicalSnapshotPdfs": 1027,
+    "exactLinkedRevisions": 817,
+    "verifiedBlankFirstPages": 0
+  },
+  "firstContentPages": {}
+}

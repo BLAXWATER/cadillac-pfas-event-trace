@@ -668,5 +668,29 @@
     "size": 2723238,
     "sha256": "7c7c68a985555f26920fb675cf398f72a73b1e71e9456c7be89489092903a363",
     "description": "Twenty-four-page chronological agency, municipal, laboratory and industrial-user correspondence package concerning 2026 cyanide results. It records Cadillac's exceedance notifications and resampling, the City's identification of Cadillac Casting as the suspected contributing industrial user, a reported plant-weir result of 3.5 mg/L compared with the City's stated 4 µg/L local limit, and issuance and receipt of a notice of violation. Statements are attributed to their source messages; the compilation is not treated as an independent adjudication."
+  },
+  {
+    "id": "057-9c1d000fd0af",
+    "name": "2016-11-03 - N0358 Western Concrete On-Site Inspection.pdf",
+    "url": "/compliance-docs/057-9c1d000fd0af.pdf",
+    "year": "2016",
+    "type": "Air-source on-site inspection",
+    "format": "PDF",
+    "pages": 1,
+    "size": 44277,
+    "sha256": "9c1d000fd0afddf6f6046ecd71d5647e45fd06309b76499e6f19c6f76edf1152",
+    "description": "November 3, 2016 AQD inspection of the former Western Concrete site at 510 5th Street in Cadillac. The inspector records that the concrete operation had closed, its equipment was removed, the building was being used by AAR Mobility for pallet storage, and the air permits were to be voided. This is industrial-site history and does not by itself establish PFAS use or release."
+  },
+  {
+    "id": "058-5b4f4183c1fc",
+    "name": "2022-06-29 - N3862 Wexford County Landfill On-Site Inspection.pdf",
+    "url": "/compliance-docs/058-5b4f4183c1fc.pdf",
+    "year": "2022",
+    "type": "Air-quality on-site inspection",
+    "format": "PDF",
+    "pages": 4,
+    "size": 588472,
+    "sha256": "5b4f4183c1fcd732b0141499e6cd7e5a26c794cb41fbf2d96c1e41d1b2adc755",
+    "description": "June 29, 2022 AQD inspection report for Wexford County Landfill. It documents the active landfill-gas collection and flare system, March 2022 NMOC testing at 32.33 Mg/year, continued compliance, and the inspector's statement that the 2018 deep-injection well ended leachate trucking and evaporation."
   }
 ]

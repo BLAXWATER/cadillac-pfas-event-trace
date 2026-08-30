@@ -8,14 +8,14 @@
     "ZIP-entry comparison against loose files"
   ],
   "stats": {
-    "loosePdfsReviewed": 504,
+    "loosePdfsReviewed": 505,
     "zipArchivesReviewed": 2,
     "zipPdfEntriesReviewed": 1008,
     "repeatedLooseCopiesSuppressed": 234,
     "metadataOnlyEquivalentCopiesSuppressed": 1,
     "crossCategoryExactCopiesSuppressed": 6,
-    "newDistinctRecords": 6,
-    "finalDistinctRecords": 265
+    "newDistinctRecords": 7,
+    "finalDistinctRecords": 266
   },
   "batches": [
     {
@@ -52,6 +52,13 @@
       "added": 1,
       "duplicates": 2,
       "note": "The 2017 NPDES application was byte-identical to the published copy. The VN-019184 DOCX contained the same notice as the canonical PDF, with only renderer pagination differences. The April 2, 2026 DMR-QA reassessment email was distinct and retained with its original MSG."
+    },
+    {
+      "label": "July 2026 DMR verification",
+      "supplied": 1,
+      "added": 1,
+      "duplicates": 0,
+      "note": "The 17-page certified July 2026 daily and summary DMR was hash-, page- and text-verified and retained as a distinct monthly record."
     }
   ]
 }

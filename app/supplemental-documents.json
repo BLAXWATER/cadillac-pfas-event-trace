@@ -1740,5 +1740,18 @@
     "size": 7957419,
     "sha256": "05cbb25795512273a8cf445c755b3d373b80d9f95ea2cd1aec1dea1824182329",
     "description": "Initial draft of Cadillac's 2026–2031 Capital Improvement Program. The water and wastewater section identifies proposed work involving sewer lining, lift stations, anaerobic-digester cleaning, laboratory fume hoods, headworks, ultraviolet disinfection, screening, grit removal, filters, sewer inspection equipment and related infrastructure. The document is planning evidence; it does not by itself establish approval, funding, procurement or completed construction."
+  },
+  {
+    "id": "136-5581a63a708a",
+    "name": "2024-12-08 - Michigan Source Master List Sorted by Source ID.pdf",
+    "url": "/findings-docs/136-5581a63a708a.pdf",
+    "year": "2024",
+    "category": "Regulatory reference data",
+    "type": "Air-source registry snapshot",
+    "format": "PDF",
+    "pages": 277,
+    "size": 3701838,
+    "sha256": "5581a63a708a5fc230c56245a007ce71903477f9305e33b55caadaf452b08cd1",
+    "description": "Michigan air-source master list revised December 8, 2024. Cadillac-area entries include Western Concrete (N0358), Wexford County Landfill (N3862), AAR Mobility Systems and Hutchinson facilities. It is retained as a registry snapshot and locator, not evidence that any listed facility used or released PFAS."
   }
 ]

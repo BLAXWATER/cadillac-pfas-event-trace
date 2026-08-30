@@ -1,9 +1,9 @@
 {
   "stats": {
-    "suppliedFiles": 595,
+    "suppliedFiles": 626,
     "newDistinctRecords": 133,
-    "exactExistingRecordsReused": 78,
-    "duplicateCopiesSuppressed": 21,
+    "exactExistingRecordsReused": 101,
+    "duplicateCopiesSuppressed": 29,
     "outOfScopeExcluded": 363,
     "publishedBytes": 376329334,
     "latestWexfordLeachateBatchFilesReviewed": 25,
@@ -22,6 +22,14 @@
     "latestWexfordAuthorizationBatchExactExistingRecords": 27,
     "latestWexfordAuthorizationBatchSameContentDerivatives": 3,
     "latestWexfordAuthorizationBatchRecordsAdded": 1,
+    "latestWexfordPFASContinuationFilesReviewed": 31,
+    "latestWexfordPFASContinuationPagesReviewed": 174,
+    "latestWexfordPFASContinuationOCRPages": 41,
+    "latestWexfordPFASContinuationOCRPagesWithText": 37,
+    "latestWexfordPFASContinuationManualReviewPages": 0,
+    "latestWexfordPFASContinuationExactExistingRecords": 23,
+    "latestWexfordPFASContinuationSameContentDerivatives": 8,
+    "latestWexfordPFASContinuationRecordsAdded": 0,
     "latestCategory1819RepeatFilesReviewed": 12,
     "latestCategory1819RepeatPagesReviewed": 179,
     "latestCategory1819RepeatDistinctInputHashes": 12,
@@ -59,7 +67,8 @@
     "August 29 WWTP intake: 94 supplied records were SHA-256 checked against every current catalog; all 3,158 PDF pages and three JPEGs rendered in sequence, and OCR was applied to all 248 pages with sparse embedded text.",
     "August 29 duplicate review: byte hashes, normalized text, page counts, embedded metadata, rendered-page hashes and perceptual page sequences were cross-compared before exact-existing, same-report derivative, distinct-edition and out-of-scope decisions.",
     "August 30 Wexford landfill and leachate intake: all 25 supplied PDFs and 207 pages opened successfully; OCR was applied to 74 image-only pages, and no page required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against the published corpus before one distinct audit was retained and one incomplete derivative was upgraded to the complete source scan.",
-    "August 30 Wexford authorization continuation: all 31 supplied PDFs and 257 pages opened successfully. Fifty-two image-only pages received OCR, 48 yielded readable text and none required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against all 1,484 published records before retention or suppression."
+    "August 30 Wexford authorization continuation: all 31 supplied PDFs and 257 pages opened successfully. Fifty-two image-only pages received OCR, 48 yielded readable text and none required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against all 1,484 published records before retention or suppression.",
+    "August 30 Wexford PFAS and IPP continuation: all 31 supplied PDFs and 174 pages opened successfully. OCR was applied to 41 sparse-text pages, 37 yielded readable text and none required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against 1,483 cataloged records and the standalone timeline sources."
   ],
   "decisions": [
     {
@@ -181,6 +190,10 @@
     {
       "name": "August 30 Wexford authorization continuation",
       "reason": "All 31 PDFs and 257 pages passed the integrity audit. Twenty-seven files exactly match published binaries and three are render-identical or normalized-text-identical derivatives, so those 30 records were not republished. The April 5, 2017 Wexford County Board minutes are distinct and were retained because they preserve Cedar Creek Township's public statement about missing updates and its request to participate in the American Waste discussion; the statement is not presented as a proven notice violation."
+    },
+    {
+      "name": "August 30 Wexford PFAS, IPP and governance continuation",
+      "reason": "All 31 PDFs and 174 pages passed the integrity audit. Twenty-three files exactly match established source binaries and eight are page-render-identical or normalized-content-identical derivatives. No distinct record was added, no established source was replaced and every supplied original remains untouched."
     }
   ]
 }

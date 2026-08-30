@@ -57,8 +57,9 @@ test("renders stable site metadata and source policy", async () => {
   assert.doesNotMatch(html, /aria-expanded=/i);
   assert.doesNotMatch(html, /4 of 10 events shown/i);
   assert.equal((html.match(/class="trace-row"/gi) ?? []).length, 55);
-  assert.match(html, /class="source-thumbnail"/i);
+  assert.match(html, /class="source-thumbnail\s+source-thumbnail--(?:pdf|html|image|spreadsheet|office|archive|other)"/i);
   assert.match(html, /src="\/assets\/008-5b67e1ed1d5c-[^"]+\.webp"/i);
+  assert.match(html, /src="\/assets\/2016-07-15-gw-public-notice-[^"]+\.webp"/i);
   assert.doesNotMatch(html, /src="\/source-previews\//i);
   assert.match(html, /Hover a filename for its source-page preview and result/i);
   assert.doesNotMatch(html, /Original file not loaded/i);

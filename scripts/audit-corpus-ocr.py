@@ -29,7 +29,8 @@ SUMMARY_PATH = ROOT / "app" / "corpus-ocr-audit.json"
 _GIT_OBJECTS_BY_HASH_PREFIX: dict[str, list[tuple[str, str]]] | None = None
 _OCR_ENGINE: RapidOCR | None = None
 
-sys.path.insert(0, str(WORK_ROOT / ".ocr-tools"))
+ocr_tools_dir = WORK_ROOT / (".ocr-tools-314" if sys.version_info >= (3, 14) else ".ocr-tools")
+sys.path.insert(0, str(ocr_tools_dir))
 from rapidocr_onnxruntime import RapidOCR  # noqa: E402
 
 

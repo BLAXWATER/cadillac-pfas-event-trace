@@ -121,6 +121,8 @@ test("timeline source and preview assets are present", async () => {
   }
   const restoredPermit = await readFile(path.join(publicDirectory, restoredPermitPaths[0]));
   assert.equal(createHash("sha256").update(restoredPermit).digest("hex"), "38c4dd289771ab2109af0cf4a8ac198c69e58432d076683732ba20c68a9618be");
+  const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
+  assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
   assert.equal(helperReferences.length, 29);
 });

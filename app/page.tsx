@@ -66,6 +66,7 @@ type Source = {
   name: string;
   url?: string;
   preview?: string;
+  renderedPages?: string[];
   pages?: number;
   page?: number;
   format: "PDF" | "PNG";
@@ -490,12 +491,15 @@ const events: Event[] = [
     title: "Final permit authorizes a one-time diluted-leachate discharge",
     finding: "Permit GW1010342 authorizes up to 50,400 gallons per day and 2,000,000 gallons per year from the evaporator lagoon by land application using overland flow and a spray bar. It takes effect October 1, 2016 and expires January 31, 2017.",
     significance: "Separates the final legal authorization and its operating window from the earlier draft and application records.",
-    sources: [pdf("Rule 2210 Permit Template-Wexford Landfill.docx", "2016-09-06-rule-2210-final", 26, "Final permit with limits, monitoring conditions and attachments.", {
+    sources: [{
+      ...pdf("Rule 2210 Permit Template-Wexford Landfill.docx", "2016-09-06-rule-2210-final", 26, "Final permit with limits, monitoring conditions and attachments.", {
       eventStamp: "2016-09-06 · time not stated",
       basis: "Issued date printed on permit page 1",
       created: "2016-09-16 13:43:08 EDT",
       note: "The source filename says .docx but the payload is PDF. The export/cover-email date is ten days after the permit's printed issued date.",
-    }, "/docs/2016-09-06-rule-2210-final.pdf")],
+      }, "/docs/2016-09-06-rule-2210-final.pdf"),
+      renderedPages: Array.from({ length: 26 }, (_, index) => bundledPublicAsset(`/document-pages/2016-09-06-rule-2210-final/${String(index + 1).padStart(2, "0")}.webp`)),
+    }],
   },
   {
     year: "2017",
@@ -2237,7 +2241,18 @@ export default function Home() {
                 <div><DialogTitle>{selected.name}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <Button asChild variant="outline" size="sm"><a href={selected.url} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
               </DialogHeader>
-              <div className="document-frame">{selected.format === "PDF" ? <iframe title={`Full document: ${selected.name}`} src={`${selected.url}#page=${selected.page ?? 1}&view=FitH&toolbar=1`} /> : <img src={selected.url} alt={`Full source page: ${selected.name}`} />}</div>
+              <div className={`document-frame${selected.renderedPages ? " rendered-document-frame" : ""}`}>
+                {selected.renderedPages ? (
+                  <div className="document-pages" aria-label={`Rendered pages of ${selected.name}`}>
+                    {selected.renderedPages.map((page, index) => (
+                      <figure key={page} className="document-page">
+                        <img src={page} alt={`${selected.name}, page ${index + 1} of ${selected.renderedPages?.length}`} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+                        <figcaption>Page {index + 1} of {selected.renderedPages.length}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                ) : selected.format === "PDF" ? <iframe title={`Full document: ${selected.name}`} src={`${selected.url}#page=${selected.page ?? 1}&view=FitH&toolbar=1`} /> : <img src={selected.url} alt={`Full source page: ${selected.name}`} />}
+              </div>
             </>}
           </DialogContent>
         </Dialog>

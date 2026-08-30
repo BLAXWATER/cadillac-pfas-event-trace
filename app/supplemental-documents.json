@@ -1743,7 +1743,7 @@
   },
   {
     "id": "136-5581a63a708a",
-    "name": "2024-12-08 - Michigan Source Master List Sorted by Source ID.pdf",
+    "name": "Sources By SRN.pdf",
     "url": "/findings-docs/136-5581a63a708a.pdf",
     "year": "2024",
     "category": "Regulatory reference data",
@@ -1752,6 +1752,6 @@
     "pages": 277,
     "size": 3701838,
     "sha256": "5581a63a708a5fc230c56245a007ce71903477f9305e33b55caadaf452b08cd1",
-    "description": "Michigan air-source master list revised December 8, 2024. Cadillac-area entries include Western Concrete (N0358), Wexford County Landfill (N3862), AAR Mobility Systems and Hutchinson facilities. It is retained as a registry snapshot and locator, not evidence that any listed facility used or released PFAS."
+    "description": "Michigan air-source master list revised December 8, 2024 and sorted by source registration number (SRN). Cadillac-area entries include Western Concrete (N0358), Wexford County Landfill (N3862), AAR Mobility Systems and Hutchinson facilities. It is retained as a registry snapshot and locator, not evidence that any listed facility used or released PFAS."
   }
 ]

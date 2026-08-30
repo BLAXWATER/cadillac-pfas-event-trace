@@ -46,9 +46,24 @@ test("emits the trace's critical layout and preview styles", async () => {
   assert.match(css, /\.missing-preview\{/);
   assert.match(css, /\.document-grid\{/);
   assert.match(css, /\.event-card h3\{[^}]*white-space:nowrap/);
-  assert.match(css, /font-size:clamp\(12px,\s*var\(--event-title-fit,\s*22px\),\s*33px\)/);
+  assert.match(css, /--font-11pt:\s*14\.667px/);
+  assert.match(css, /--font-12pt:\s*16px/);
+  assert.match(css, /--font-14pt:\s*18\.667px/);
+  assert.match(css, /font-size:clamp\(var\(--font-11pt\),\s*var\(--event-title-fit,\s*22px\),\s*33px\)/);
   assert.match(css, /\.event-card\{[^}]*border:3px solid var\(--trace-color\)/);
   assert.match(css, /@media\s*\(width<=760px\)/);
+});
+
+test("keeps explicit application text at or above the 11pt minimum", async () => {
+  const css = await readFile(path.join(root, "app", "globals.css"), "utf8");
+  const undersized = [...css.matchAll(/font-size:\s*([0-9]+(?:\.[0-9]+)?)px/g)]
+    .map((match) => Number(match[1]))
+    .filter((size) => size < 14.667);
+
+  assert.deepEqual(undersized, []);
+  assert.match(css, /\.kind-badge\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
+  assert.match(css, /\.site-shell small\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
+  assert.match(css, /\.site-shell \[data-slot="badge"\]\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
 });
 
 test("forwards progress semantics to the primitive", async () => {

@@ -495,7 +495,7 @@ const events: Event[] = [
       basis: "Issued date printed on permit page 1",
       created: "2016-09-16 13:43:08 EDT",
       note: "The source filename says .docx but the payload is PDF. The export/cover-email date is ten days after the permit's printed issued date.",
-    }, "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/015-38c4dd289771.pdf")],
+    }, "/docs/2016-09-06-rule-2210-final.pdf")],
   },
   {
     year: "2017",

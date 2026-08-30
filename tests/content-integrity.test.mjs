@@ -111,6 +111,17 @@ test("timeline source and preview assets are present", async () => {
     assert.ok((await stat(preview)).size > 0, `missing or empty source preview: ${fileName}`);
   }
 
+  const restoredPermitPaths = [
+    "docs/2016-09-06-rule-2210-final.pdf",
+    "previews/2016-09-06-rule-2210-final.jpg",
+    "optimized-previews/2016-09-06-rule-2210-final.webp",
+  ];
+  for (const reference of restoredPermitPaths) {
+    assert.ok((await stat(path.join(publicDirectory, reference))).size > 0, `missing or empty restored permit asset: ${reference}`);
+  }
+  const restoredPermit = await readFile(path.join(publicDirectory, restoredPermitPaths[0]));
+  assert.equal(createHash("sha256").update(restoredPermit).digest("hex"), "38c4dd289771ab2109af0cf4a8ac198c69e58432d076683732ba20c68a9618be");
+
   assert.equal(helperReferences.length, 29);
 });
 

@@ -19,6 +19,11 @@ const bundledAssets = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/document-pages/**/*.webp", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/blax-water-logo-optimized.webp", {
     eager: true,
     import: "default",

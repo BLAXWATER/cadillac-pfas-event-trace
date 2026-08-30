@@ -66,6 +66,23 @@ test("keeps explicit application text at or above the 11pt minimum", async () =>
   assert.match(css, /\.site-shell \[data-slot="badge"\]\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
 });
 
+test("removes internal filename periods from chronological source titles", async () => {
+  const { formatSourceDisplayName } = await vite.ssrLoadModule("/app/source-display-name.ts");
+
+  assert.equal(
+    formatSourceDisplayName("VN response from City.Feb 29 2016.pdf"),
+    "VN response from City Feb 29 2016.pdf",
+  );
+  assert.equal(
+    formatSourceDisplayName("2018 IPP Screening - Monitoring Plan.180627modif.pdf"),
+    "2018 IPP Screening - Monitoring Plan 180627modif.pdf",
+  );
+  assert.equal(
+    formatSourceDisplayName("2025-03-05__Cadillac MAHL.msg.pdf · page 1"),
+    "2025-03-05__Cadillac MAHL msg.pdf · page 1",
+  );
+});
+
 test("forwards progress semantics to the primitive", async () => {
   const { Progress } = await vite.ssrLoadModule("/components/ui/progress.tsx");
   const html = renderToStaticMarkup(React.createElement(Progress, { value: 37 }));

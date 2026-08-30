@@ -410,8 +410,9 @@ const events: Event[] = [
     finding: "The City's response identifies two violation periods—October 21 through November 27, 2014 and January 9 through June 23, 2015—and describes floating sludge, clarifier bulking, cloth-filter bypass, reduced UV dose and solids reaching the river. It lists repeated TSS, CBOD5, fecal-coliform, ammonia, phosphorus and pH violations and states that the prior supervisor did not provide the written notices required for each occurrence.",
     significance: "Adds the City's own causal and reporting account to the exceedance tables: operational instability and inadequate communication/supervision were expressly acknowledged, while the precise initiating material remained unresolved.",
     sources: [{
-      name: "VN response from City.Feb 29 2016.pdf",
-      url: "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/040-e1b7446e4226.pdf",
+      name: "VN response from City Feb 29 2016.pdf",
+      url: "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/040-e1b7446e4226.pdf",
+      preview: bundledPublicAsset("/source-previews/040-e1b7446e4226.jpg"),
       pages: 5,
       page: 1,
       format: "PDF",

@@ -66,7 +66,7 @@ test("keeps explicit application text at or above the 11pt minimum", async () =>
   assert.match(css, /\.site-shell \[data-slot="badge"\]\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
 });
 
-test("removes internal filename periods from chronological source titles", async () => {
+test("normalizes every malformed pattern found in chronological source titles", async () => {
   const { formatSourceDisplayName } = await vite.ssrLoadModule("/app/source-display-name.ts");
 
   assert.equal(
@@ -78,8 +78,24 @@ test("removes internal filename periods from chronological source titles", async
     "2018 IPP Screening - Monitoring Plan 180627modif.pdf",
   );
   assert.equal(
-    formatSourceDisplayName("2025-03-05__Cadillac MAHL.msg.pdf · page 1"),
-    "2025-03-05__Cadillac MAHL msg.pdf · page 1",
+    formatSourceDisplayName("2025-03-05__Cadillac MAHL.msg.pdf · page 1", "PDF", true),
+    "2025-03-05 Cadillac MAHL msg.pdf · page 1",
+  );
+  assert.equal(
+    formatSourceDisplayName("2010-2016_Cadillac WWTP_District Compliance File.pdf · pages 93–94", "PDF", true),
+    "2010-2016 Cadillac WWTP District Compliance File.pdf · pages 93–94",
+  );
+  assert.equal(
+    formatSourceDisplayName("2015-12-21 City incident notification — Grease B Gone discharge", "PDF", true),
+    "2015-12-21 City incident notification — Grease B Gone discharge.pdf",
+  );
+  assert.equal(
+    formatSourceDisplayName("2016-01-12 spill-notification letter · chronological compilation PDF p. 36", "PDF", true),
+    "2016-01-12 spill-notification letter.pdf · chronological compilation page 36",
+  );
+  assert.equal(
+    formatSourceDisplayName("Rule 2210 Permit Template-Wexford Landfill.docx", "PDF", false),
+    "Rule 2210 Permit Template-Wexford Landfill.docx",
   );
 });
 

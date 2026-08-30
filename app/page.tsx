@@ -65,6 +65,7 @@ import {
 type Kind = "operation" | "regulatory" | "sampling" | "compliance" | "receptor" | "gap";
 type Source = {
   name: string;
+  displayName?: string;
   url?: string;
   preview?: string;
   renderedPages?: string[];
@@ -434,7 +435,7 @@ const events: Event[] = [
     title: "Landfill requests one-time groundwater discharge authorization",
     finding: "The landfill's request package seeks Rule 2210(y) authorization to remove leachate-impacted precipitation from the evaporator lagoon. The package also preserves a November 2, 2015 agency approval letter associated with the earlier handling arrangement.",
     significance: "Replaces the earlier broad 2015–2016 label with the dated original request and connects the lagoon-management record to the later formal application.",
-    sources: [pdf("2015-2016_Wexford County Landfill_Leachate Request.pdf", "2015-2016-leachate-request", 3, "Three-page scanned request package, retained once because the newly supplied copy exactly matches the source already on the site.", {
+    sources: [pdf("2015-2016_Wexford County Landfill_Leachate Request.pdf", "2015-2016-leachate-request", 3, "Three-page scanned request package, retained once because the supplied copy exactly matches the source already on the site.", {
       eventStamp: "2016-03-09 · time not stated",
       basis: "Request date documented in the source package",
       created: "2025-03-06 08:29:43 CST",
@@ -473,7 +474,7 @@ const events: Event[] = [
     title: "DEQ publishes the proposed groundwater authorization",
     finding: "The public notice identifies proposed permit GW1010342 and the Rule 2210(y) authorization process for the Wexford County Landfill discharge to ground or groundwater.",
     significance: "Documents the formal public-notice stage between application review and final issuance.",
-    sources: [pdf("GW Public Notice Document.html", "2016-07-15-gw-public-notice", 1, "One-page public notice; the newly supplied file exactly matches Category 02 record 076.", {
+    sources: [pdf("GW Public Notice Document.html", "2016-07-15-gw-public-notice", 1, "One-page public notice; the supplied file exactly matches Category 02 record 076.", {
       eventStamp: "2016-07-15 · time not stated",
       basis: "Date printed in the public notice",
       created: "2016-07-12 15:48:26 EDT",
@@ -1050,13 +1051,13 @@ const events: Event[] = [
     finding: "The Cyclopure result and available EGLE Work Order 2509147 laboratory page document repeat testing associated with 1140 Plett Road.",
     significance: "Adds another sampling interval and a state-laboratory record to the receptor evidence.",
     sources: [
-      pdf("09102025_Analyte Original Cyclopure Test Kit Results (collected .pdf", "2025-09-cyclopure-property", 1, "Original one-page Cyclopure result for September 10, 2025.", {
+      { ...pdf("09102025_Analyte Original Cyclopure Test Kit Results (collected .pdf", "2025-09-cyclopure-property", 1, "Original one-page Cyclopure result for September 10, 2025.", {
         eventStamp: "2025-09-10 · time not stated",
         basis: "Collection date carried in source result",
         created: "2026-04-29 09:37:39 CDT",
         modified: "2026-04-29 09:37:39 CDT",
         note: "The embedded timestamp reflects later scanning and is not the sampling time.",
-      }),
+      }), displayName: "Cyclopure Test Kit Results — September 10, 2025.pdf" },
       { name: "EGLE-TEST-2509147-LAB-WORK-ORDER.png", url: repositoryAssetUrl("/docs/2025-egle-work-order-2509147-page.png"), preview: bundledPublicAsset("/docs/2025-egle-work-order-2509147-page.png"), pages: 1, format: "PNG", role: "Source page", result: "Available EGLE result page; the full 49-page Work Order remains an acquisition target.", clock: {
         eventStamp: "2025-09-10 · time not stated",
         basis: "Associated sampling-result date",
@@ -1437,7 +1438,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
   const external = Boolean(source.url?.startsWith("https://github.com/"));
   const [previewFailed, setPreviewFailed] = useState(false);
   const previewAvailable = Boolean(source.preview && !previewFailed);
-  const displayName = formatSourceDisplayName(source.name);
+  const displayName = formatSourceDisplayName(source.displayName ?? source.name, source.format, linked);
 
   const triggerContents = (
     <>
@@ -1902,7 +1903,7 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="biosolids-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CATEGORY 05 · BIOSOLIDS &amp; LAND APPLICATION · VERIFIED AUGUST 27, 2026</p><h2 id="biosolids-library-title">Search {biosolidsDocuments.length} newly verified biosolids records</h2></div>
+            <div><p className="eyebrow">CATEGORY 05 · BIOSOLIDS &amp; LAND APPLICATION · VERIFIED AUGUST 27, 2026</p><h2 id="biosolids-library-title">Search {biosolidsDocuments.length} verified biosolids records</h2></div>
             <p>This category preserves laboratory packages, land-application sites, as-applied workbooks, certifications, residuals-management-plan records, operational calculations, audit correspondence and field photographs. It also indexes the photographed note reporting an approximately 22,000-gallon biosolids overflow, without inferring migration or impact beyond the source.</p>
           </div>
           <div className="reference-summary" aria-label="Biosolids and land-application archive audit summary">
@@ -1937,7 +1938,7 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="lab-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CATEGORY 06 · LAB RESULTS &amp; SAMPLING · VERIFIED AUGUST 27, 2026</p><h2 id="lab-library-title">Search {labDocuments.length} newly verified laboratory records</h2></div>
+            <div><p className="eyebrow">CATEGORY 06 · LAB RESULTS &amp; SAMPLING · VERIFIED AUGUST 27, 2026</p><h2 id="lab-library-title">Search {labDocuments.length} verified laboratory records</h2></div>
             <p>This category preserves analytical reports, whole-effluent-toxicity studies, chain-of-custody and field sheets, exceedance records, method reviews, mercury monitoring, and biosolids or pathogen results. Similar templates remain separate when the monitoring date, sample, analyte, method, revision or reported result differs.</p>
           </div>
           <div className="reference-summary" aria-label="Laboratory results and sampling archive audit summary">
@@ -2147,7 +2148,7 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="supplemental-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 29, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} newly added records</h2></div>
+            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 29, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} added records</h2></div>
             <p>These additions span federal compliance, landfill operations, civic actions, audited finances, historical groundwater context and response planning. Primary records, historical context and secondary research are explicitly distinguished; related records remain separate when their official edition, content or evidentiary role differs.</p>
           </div>
           <div className="reference-summary" aria-label="Cross-category additions audit summary">
@@ -2163,8 +2164,8 @@ export default function Home() {
             </div>
           </details>
           <div className="document-controls">
-            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search newly added records</span><input value={supplementalQuery} onChange={(event) => setSupplementalQuery(event.target.value)} placeholder="Search filename, category, year, type or finding" /></label>
-            <label className="document-filter"><span className="sr-only">Filter newly added records by type</span><select value={supplementalType} onChange={(event) => setSupplementalType(event.target.value)}>{supplementalTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
+            <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search added records</span><input value={supplementalQuery} onChange={(event) => setSupplementalQuery(event.target.value)} placeholder="Search filename, category, year, type or finding" /></label>
+            <label className="document-filter"><span className="sr-only">Filter added records by type</span><select value={supplementalType} onChange={(event) => setSupplementalType(event.target.value)}>{supplementalTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
             <span className="document-result-count"><strong>{filteredSupplementalDocuments.length}</strong> matching records</span>
           </div>
           <div className="document-grid">
@@ -2223,7 +2224,7 @@ export default function Home() {
         <section className="evidence-queue" aria-labelledby="evidence-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">EVIDENCE REQUEST QUEUE</p><h2 id="evidence-title">Potentially missing or hidden documents</h2></div>
-            <p>Upload these records in this chat using the filenames shown. Each new source can be inserted under its year, event timestamp and pathway block without changing the underlying event record.</p>
+            <p>Upload these records in this chat using the filenames shown. Each source can be inserted under its year, event timestamp and pathway block without changing the underlying event record.</p>
           </div>
           <div className="request-grid">
             {evidenceRequests.map((request, index) => (
@@ -2247,7 +2248,7 @@ export default function Home() {
           <DialogContent className="document-dialog" showCloseButton>
             {selected && <>
               <DialogHeader className="document-dialog-header">
-                <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.name)}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
+                <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <Button asChild variant="outline" size="sm"><a href={selected.url} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
               </DialogHeader>
               <div className={`document-frame${selected.renderedPages ? " rendered-document-frame" : ""}`}>

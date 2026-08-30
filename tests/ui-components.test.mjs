@@ -105,6 +105,7 @@ test("normalizes every malformed pattern found in chronological source titles", 
 
 test("uses independent media handlers for document and image formats", async () => {
   const { sourceDocumentUrl, sourceMediaKind, sourcePreviewUrl } = await vite.ssrLoadModule("/app/source-media.ts");
+  const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1f4b5e00faa1a2083105ed86535c2f6d0f6a9d4b/public";
 
   assert.equal(sourceMediaKind("PDF"), "pdf");
   assert.equal(sourceMediaKind("HTML"), "html");
@@ -114,8 +115,11 @@ test("uses independent media handlers for document and image formats", async () 
   assert.equal(sourceMediaKind("DOCX"), "office");
   assert.equal(sourcePreviewUrl({ format: "PNG", url: "/evidence/page.png" }), "/evidence/page.png");
   assert.equal(sourcePreviewUrl({ format: "PDF", url: "/evidence/report.pdf" }), undefined);
-  assert.equal(sourceDocumentUrl("/evidence/page.html", "HTML", () => "wrong"), "/evidence/page.html");
+  assert.equal(sourceDocumentUrl("/evidence/page.html", "HTML", () => "wrong"), `${repositoryAssetBase}/evidence/page.html`);
+  assert.equal(sourceDocumentUrl("/evidence/photo.jpg", "JPG", () => "wrong"), `${repositoryAssetBase}/evidence/photo.jpg`);
+  assert.equal(sourceDocumentUrl("/evidence/report.docx", "DOCX", () => "wrong"), `${repositoryAssetBase}/evidence/report.docx`);
   assert.equal(sourceDocumentUrl("/evidence/report.pdf", "PDF", (url) => `${url}#page=2`), "/evidence/report.pdf#page=2");
+  assert.equal(sourceDocumentUrl("https://example.org/page.html", "HTML", () => "wrong"), "https://example.org/page.html");
 });
 
 test("removes exactly the first period from every multi-period library filename", async () => {

@@ -1,3 +1,5 @@
+import { repositorySourceUrl } from "./source-url";
+
 export type SourceFormat =
   | "PDF"
   | "HTML"
@@ -46,5 +48,5 @@ export function sourceDocumentUrl(
   format: SourceFormat,
   withPdfPage: (url: string) => string,
 ): string {
-  return format === "PDF" ? withPdfPage(url) : url;
+  return format === "PDF" ? withPdfPage(url) : repositorySourceUrl(url);
 }

@@ -1,4 +1,5 @@
 import firstContentPageAudit from "./pdf-first-content-pages.json";
+import { repositorySourceUrl } from "./source-url";
 
 type FirstContentPageRegistry = Readonly<Record<string, number>>;
 
@@ -57,13 +58,14 @@ export function withPdfStartPage(
   const key = pdfSourceKey(url);
   if (!key) return url;
 
-  const base = url.split("#", 1)[0];
+  const resolvedUrl = repositorySourceUrl(url);
+  const base = resolvedUrl.split("#", 1)[0];
   const fragment = url.includes("#") ? url.slice(url.indexOf("#") + 1) : "";
   const parameters = new URLSearchParams(fragment);
   const verifiedPage = positiveInteger(registry[key]);
   const hasPageTarget = parameters.has("page") || requestedPage !== undefined || Boolean(verifiedPage);
 
-  if (!viewerOptions && !hasPageTarget) return url;
+  if (!viewerOptions && !hasPageTarget) return resolvedUrl;
 
   parameters.set("page", String(resolvePdfStartPage(url, requestedPage, registry)));
   if (viewerOptions) {

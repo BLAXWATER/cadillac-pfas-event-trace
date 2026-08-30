@@ -18,6 +18,7 @@ after(async () => {
 });
 
 const complianceUrl = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/020-9d6ad860baaf.pdf";
+const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1f4b5e00faa1a2083105ed86535c2f6d0f6a9d4b/public";
 
 test("verified blank first pages start on page 2", async () => {
   const { pdfSourceKey, resolvePdfStartPage, withPdfStartPage } = await vite.ssrLoadModule("/app/pdf-source-url.ts");
@@ -43,8 +44,8 @@ test("viewer parameters use one fragment and normal PDFs remain on page 1", asyn
   const localPdf = "/lab-docs/example.pdf";
   const viewerUrl = withPdfStartPage(localPdf, undefined, true);
 
-  assert.equal(viewerUrl, "/lab-docs/example.pdf#page=1&view=FitH&toolbar=1");
+  assert.equal(viewerUrl, `${repositoryAssetBase}/lab-docs/example.pdf#page=1&view=FitH&toolbar=1`);
   assert.equal((viewerUrl.match(/#/g) ?? []).length, 1);
-  assert.equal(withPdfStartPage(localPdf), localPdf);
+  assert.equal(withPdfStartPage(localPdf), `${repositoryAssetBase}/lab-docs/example.pdf`);
   assert.equal(withPdfStartPage("/maps/example.png"), "/maps/example.png");
 });

@@ -83,7 +83,7 @@ test("normalizes every malformed pattern found in chronological source titles", 
   );
   assert.equal(
     formatSourceDisplayName("2010-2016_Cadillac WWTP_District Compliance File.pdf · pages 93–94", "PDF", true),
-    "2010-2016 Cadillac WWTP District Compliance File.pdf · pages 93–94",
+    "2010-2016 Cadillac WWTP District Compliance File pdf · pages 93–94",
   );
   assert.equal(
     formatSourceDisplayName("2015-12-21 City incident notification — Grease B Gone discharge", "PDF", true),
@@ -91,12 +91,39 @@ test("normalizes every malformed pattern found in chronological source titles", 
   );
   assert.equal(
     formatSourceDisplayName("2016-01-12 spill-notification letter · chronological compilation PDF p. 36", "PDF", true),
-    "2016-01-12 spill-notification letter.pdf · chronological compilation page 36",
+    "2016-01-12 spill-notification letter pdf · chronological compilation page 36",
   );
   assert.equal(
     formatSourceDisplayName("Rule 2210 Permit Template-Wexford Landfill.docx", "PDF", false),
     "Rule 2210 Permit Template-Wexford Landfill.docx",
   );
+  assert.equal(
+    formatSourceDisplayName("210303.biosolids.PACE.pdf", "PDF", true),
+    "210303 biosolids.PACE.pdf",
+  );
+});
+
+test("removes exactly the first period from every multi-period library filename", async () => {
+  const { formatSourceDisplayName } = await vite.ssrLoadModule("/app/source-display-name.ts");
+  const documentFiles = (await readdir(path.join(root, "app")))
+    .filter((name) => name.endsWith("-documents.json"));
+  const records = (await Promise.all(documentFiles.map(async (name) =>
+    JSON.parse(await readFile(path.join(root, "app", name), "utf8")),
+  ))).flat();
+  const multiPeriodRecords = records.filter((record) =>
+    typeof record.name === "string" && (record.name.match(/\./g) ?? []).length > 1,
+  );
+
+  assert.equal(records.length, 1483);
+  assert.equal(multiPeriodRecords.length, 192);
+
+  for (const record of multiPeriodRecords) {
+    const displayName = formatSourceDisplayName(record.name, record.format, true);
+    const rawPeriods = (record.name.match(/\./g) ?? []).length;
+    const displayPeriods = (displayName.match(/\./g) ?? []).length;
+
+    assert.equal(displayPeriods, rawPeriods - 1, record.name);
+  }
 });
 
 test("forwards progress semantics to the primitive", async () => {

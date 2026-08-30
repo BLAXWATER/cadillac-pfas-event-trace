@@ -1052,7 +1052,7 @@ const events: Event[] = [
         modified: "2026-04-29 09:37:39 CDT",
         note: "The embedded timestamp reflects later scanning and is not the sampling time.",
       }),
-      { name: "EGLE-TEST-2509147-LAB-WORK-ORDER.png", url: bundledPublicAsset("/docs/2025-egle-work-order-2509147-page.png"), preview: bundledPublicAsset("/docs/2025-egle-work-order-2509147-page.png"), pages: 1, format: "PNG", role: "Source page", result: "Available EGLE result page; the full 49-page Work Order remains an acquisition target.", clock: {
+      { name: "EGLE-TEST-2509147-LAB-WORK-ORDER.png", url: repositoryAssetUrl("/docs/2025-egle-work-order-2509147-page.png"), preview: bundledPublicAsset("/docs/2025-egle-work-order-2509147-page.png"), pages: 1, format: "PNG", role: "Source page", result: "Available EGLE result page; the full 49-page Work Order remains an acquisition target.", clock: {
         eventStamp: "2025-09-10 · time not stated",
         basis: "Associated sampling-result date",
         note: "Original embedded source timestamp is unavailable for this extracted page; workspace export time is excluded from evidence.",

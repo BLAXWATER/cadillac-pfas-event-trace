@@ -2104,7 +2104,7 @@ export default function Home() {
           </div>
           <div className="reference-summary" aria-label="Online form submissions archive audit summary">
             <div><FileText /><span><strong>{formSubmissionAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
-            <div><CheckCircle2 /><span><strong>{formSubmissionAudit.stats.actualDuplicateFilesRemoved}</strong> actual duplicates excluded</span></div>
+            <div><Database /><span><strong>Early-stage uploads</strong> pending catalog review</span></div>
             <div><FileSearch /><span><strong>{formatBytes(formSubmissionAudit.stats.publishedBytes)}</strong> published</span></div>
           </div>
           <details className="audit-details archive-audit">

@@ -1,11 +1,11 @@
 {
   "stats": {
-    "suppliedFiles": 668,
-    "newDistinctRecords": 143,
-    "exactExistingRecordsReused": 122,
+    "suppliedFiles": 687,
+    "newDistinctRecords": 144,
+    "exactExistingRecordsReused": 140,
     "duplicateCopiesSuppressed": 33,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 439053545,
+    "publishedBytes": 440174647,
     "latestBatch09FilesReviewed": 31,
     "latestBatch09PdfPagesReviewed": 164,
     "latestBatch09DistinctInputHashes": 21,
@@ -121,7 +121,16 @@
     "latestBatch13ManualReviewPages": 41,
     "latestBatch13BlankFirstPages": 0,
     "latestBatch13RecordsAdded": 0,
-    "latestBatch13TimelineEventsAdded": 0
+    "latestBatch13TimelineEventsAdded": 0,
+    "latestBatch14FilesReviewed": 19,
+    "latestBatch14PdfPagesReviewed": 690,
+    "latestBatch14DistinctInputHashes": 19,
+    "latestBatch14ExactExistingHashes": 18,
+    "latestBatch14PublishedAssetHashMatches": 19,
+    "latestBatch14ManualReviewPages": 690,
+    "latestBatch14BlankFirstPages": 0,
+    "latestBatch14RecordsAdded": 1,
+    "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -146,9 +155,14 @@
     "August 31 leftovers intake 10: all 27 supplied PDFs and 154 pages passed file-hash, byte-size, page-count and readability checks. Twenty-two distinct hashes exactly match published records. The two unmatched Wexford Landfill SIU sheets were text-extracted, rendered at 72 and 144 DPI and matched the established one-page IPP record at both resolutions.",
     "August 31 leftovers intake 11: all 62 supplied PDFs and 371 pages passed file-hash, byte-size, page-count and readability checks. Forty-four distinct hashes exactly match published records; three additional TVS hashes reuse prior page-identical findings. The four remaining hashes were text-extracted and rendered in full, all 12 sparse-text pages received OCR, and the two 46-page voicemail packages matched page-for-page at both 72 and 144 DPI.",
     "August 31 leftovers intake 12: all 13 supplied PDFs and 199 pages passed hash, byte-size, page-count and readability checks. Ten exact matches were reused; one sampling-guidance export matched an established record page-for-page at 72 and 144 DPI; the two remaining correspondence threads were rendered and inspected in full.",
-    "August 31 leftovers intake 13: all 11 supplied PDFs and 41 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Every file exactly matches an established IPP, NPDES, biosolids or laboratory record, and no document begins with a blank page."
+    "August 31 leftovers intake 13: all 11 supplied PDFs and 41 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Every file exactly matches an established IPP, NPDES, biosolids or laboratory record, and no document begins with a blank page.",
+    "August 31 leftovers intake 14: all 19 supplied PDFs and 690 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Eighteen files exactly match established NPDES records. The one image-only unmatched file was cross-checked against the archive classification indexes and retained once as secondary 1140 Plett Road property-measurement context. No document begins with a blank page."
   ],
   "decisions": [
+    {
+      "name": "August 31 leftovers intake 14",
+      "reason": "Nineteen supplied files resolve to eighteen exact published NPDES hashes and one distinct property-measurement photo set associated by the archive classification index with 1140 Plett Road. The photo set is retained once in the groundwater and wells library without a timeline event because it is secondary imagery rather than a survey, licensed well record or dated official action; every supplied source remains unchanged."
+    },
     {
       "name": "August 31 leftovers intake 13",
       "reason": "Eleven supplied files resolve to eleven exact published hashes. Existing records and source binaries are reused without another asset, catalog card or timeline event; the source PDFs remain unchanged."

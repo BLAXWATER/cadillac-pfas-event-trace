@@ -1857,5 +1857,18 @@
     "size": 114433,
     "sha256": "346ad8ed5ebc0850d8f278a46670a9d7b29ff47c0cb533873bce43b69e5f93ec",
     "description": "Owner-provided May 6, 2026 compilation for the private well at 1140 Plett Road. It records a reported 70-foot casing depth, 68.5-foot below-ground depth and 10-foot static-water level, with a construction sketch and historical-source notes. The page expressly states that it is not a driller-certified well-completion log or an official agency record; it is retained as secondary well context, not as a licensed-professional determination."
+  },
+  {
+    "id": "145-a85c4e499dec",
+    "name": "Property Measurement Photo Set — 1140 Plett Road.pdf",
+    "url": "/findings-docs/145-a85c4e499dec.pdf",
+    "year": "2026",
+    "category": "Groundwater & wells",
+    "type": "Property-measurement photo set",
+    "format": "PDF",
+    "pages": 1,
+    "size": 1121102,
+    "sha256": "a85c4e499dece2ddef8125fa7117fc64e483c15c61ca6f0e92c4321cf87061e7",
+    "description": "One-page image-only collage of six owner-provided photographs associated by the archive classification index with driveway and well-head measurement context at 1140 Plett Road. The PDF metadata identifies the file as driveway_collage_8.5x11 and records a May 6, 2026 creation date. The photographs are preserved as secondary property context; they are not treated as a survey, a licensed well record, measured coordinates or proof of environmental conditions."
   }
 ]

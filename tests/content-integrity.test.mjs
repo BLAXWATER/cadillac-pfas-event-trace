@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 668);
+  assert.equal(localFiles, 669);
   assert.equal(externalFiles, 842);
 });
 
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1510);
+  assert.equal(recordCount, 1511);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -167,8 +167,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1381);
-  assert.equal(audit.stats.pdfPages, 19481);
+  assert.equal(audit.stats.pdfRecords, 1382);
+  assert.equal(audit.stats.pdfPages, 19482);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -344,7 +344,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 97);
-  assert.equal(supplementalCatalog.length, 143);
+  assert.equal(supplementalCatalog.length, 144);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -734,6 +734,47 @@ test("batch 13 reuses all eleven exact IPP, NPDES, biosolids and laboratory reco
 
   assert.match(audit.resolution, /No redundant asset, catalog record or timeline event was added/i);
   assert.match(audit.resolution, /no source PDF was modified/i);
+});
+
+test("batch 14 reuses eighteen exact NPDES records and retains one Plett Road photo set", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch14-leftovers-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+
+  assert.equal(audit.stats.receivedFiles, 19);
+  assert.equal(audit.stats.pdfPages, 690);
+  assert.equal(audit.stats.distinctInputHashes, 19);
+  assert.equal(audit.stats.exactDuplicateFilenameCopies, 0);
+  assert.equal(audit.stats.exactExistingHashes, 18);
+  assert.equal(audit.stats.exactExistingFileInstances, 18);
+  assert.equal(audit.stats.publishedAssetHashMatches, 19);
+  assert.equal(audit.stats.manualReviewPages, 690);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.retainedDistinctRecords, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.exactExistingRecords.length, 18);
+  assert.equal(audit.retainedRecords.length, 1);
+  assert.equal(
+    audit.stats.exactExistingFileInstances + audit.stats.retainedDistinctRecords,
+    audit.stats.receivedFiles,
+  );
+
+  for (const exact of audit.exactExistingRecords) {
+    const record = catalogRows.find((row) => row.sha256 === exact.sha256);
+    assert.ok(record, exact.sha256);
+    assert.match(exact.match, new RegExp(record.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"));
+  }
+
+  const retained = audit.retainedRecords[0];
+  const retainedRecord = catalogRows.find((row) => row.id === retained.id);
+  assert.ok(retainedRecord, retained.id);
+  assert.equal(retainedRecord.sha256, retained.sha256);
+  assert.equal(retainedRecord.pages, retained.pages);
+  assert.equal(retainedRecord.size, retained.size);
+  assert.match(retainedRecord.description, /not treated as a survey/i);
+  const source = await readFile(path.join(publicDirectory, retained.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(source).digest("hex"), retained.sha256);
+  assert.match(audit.resolution, /without adding a timeline event/i);
+  assert.match(audit.resolution, /No source PDF was modified/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

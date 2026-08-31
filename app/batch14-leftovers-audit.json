@@ -1,0 +1,134 @@
+{
+  "batch": "2026-08-31 leftovers intake 14",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 19 supplied files and all 690 pages.",
+    "Compared every input hash against every published evidence catalog before making a retention decision.",
+    "Re-hashed all 18 current-tree assets matching established records and the one retained source asset; every published binary matches its catalog SHA-256 value and the supplied file.",
+    "Rendered all 690 pages at 72 DPI and visually inspected the complete page sequence. No document begins with a blank page; sparse and blank internal attachment-export pages in the established 318-page response package remain part of its exact canonical binary.",
+    "Cross-checked the one unmatched image-only file against the archive classification indexes, which identify it as a 2026 property-measurement photo set associated with 1140 Plett Road."
+  ],
+  "stats": {
+    "receivedFiles": 19,
+    "pdfFiles": 19,
+    "pdfPages": 690,
+    "distinctInputHashes": 19,
+    "exactDuplicateFilenameCopies": 0,
+    "exactExistingHashes": 18,
+    "exactExistingFileInstances": 18,
+    "publishedAssetHashMatches": 19,
+    "manualReviewPages": 690,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 1,
+    "timelineEventsAdded": 0
+  },
+  "exactExistingRecords": [
+    {
+      "sha256": "585873427aee531f78321911e68910b8f125f78af157c99dd4e8698ec325a808",
+      "match": "NPDES record 102-585873427aee",
+      "files": ["Pre-Public Note Ltr_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "43b0d46b8c3967b7a37242407acd4b79a8a685b41324c9e712874718ea4257fe",
+      "match": "NPDES record 134-43b0d46b8c39",
+      "files": ["Pre-Public Notice Comments and Response-First Round_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "eec1004c2025aa8477f7b0bfb2b5e9b4e57d12f167c9966c785c97d617f13e20",
+      "match": "NPDES record 135-eec1004c2025",
+      "files": ["Pre-Public Notice Comments and Response-Fourth Round_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "18b9ce257aab44892ed60a361e16bb18726b13df635a3b53ed39dd3bfc8bc869",
+      "match": "NPDES record 136-18b9ce257aab",
+      "files": ["Pre-Public Notice Comments and Response-Second Round_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "59e18d1aa2246d8d25f7cdad22352afd5ab9fcd7e6fc2e97e18b272c01a28640",
+      "match": "NPDES record 137-59e18d1aa224",
+      "files": ["Pre-Public Notice Comments and Response-Third Round_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "469457d23239b976b700a14dd58338c7e3d7ec7e3a4896eead36057c3343cc9d",
+      "match": "NPDES record 028-469457d23239",
+      "files": ["Pre-Public Notice Letter (1).pdf"]
+    },
+    {
+      "sha256": "fb21b621420c347113c279bd2b783f080187ab43c4a97d3c4c91d3c139a1e0e2",
+      "match": "NPDES record 048-fb21b621420c",
+      "files": ["Pre-Public Notice Letter (2).pdf"]
+    },
+    {
+      "sha256": "20597b017ab10fb4376e9f623f4e48d9556a4860b2820b9bc2de3f1976a76572",
+      "match": "NPDES record 011-20597b017ab1",
+      "files": ["Pre-Public Notice Letter.pdf"]
+    },
+    {
+      "sha256": "0ec8dfe0f0215b6e846132e612e50d27ea0abe5033347ad4b15689bca3888c9d",
+      "match": "NPDES record 138-0ec8dfe0f021",
+      "files": ["Pre-Public Notice Letter_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "6caae018379a50bdefbd2465e8e1742ae59144d101899e5d0dbd2d897b6ba32d",
+      "match": "NPDES record 103-6caae018379a",
+      "files": ["Proof Of Publication.pdf"]
+    },
+    {
+      "sha256": "886fac258ff62ded33e755412ee9a3535f3428b571fe02941b98c7cedbba476d",
+      "match": "NPDES record 012-886fac258ff6",
+      "files": ["Public Notice Document.pdf"]
+    },
+    {
+      "sha256": "987cffc548fab237bce8fdc70ffeb501a206e9025503c6e3be05e6c599fcd007",
+      "match": "NPDES record 105-987cffc548fa",
+      "files": ["Public Notice Document_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "1d14569db39873755f134498faf359659e6fe64336b82cfae4e683166dfd256a",
+      "match": "NPDES record 030-1d14569db398",
+      "files": ["Public Notice Letter.pdf"]
+    },
+    {
+      "sha256": "83a8d9e5440ee7e825916cc34190e8ce009e320bb0067e186aba9894d07e4f1e",
+      "match": "NPDES record 139-83a8d9e5440e",
+      "files": ["Public Notice Letter_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "8b191c79623d7685308cef9207619ccc7336c692ecb7acbcac925770a569786d",
+      "match": "NPDES record 106-8b191c79623d",
+      "files": ["Public Notice Ltr_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "9ff5d07320d696955656c5b96d3b9ee0a80d0c94dd00e0eff6d79f2b283ae803",
+      "match": "NPDES record 031-9ff5d07320d6",
+      "files": ["Public Notice Notification.pdf"]
+    },
+    {
+      "sha256": "30c98a6d59444570a12ecc50838a4948c86c790549800e4f47ba92ea4b289951",
+      "match": "NPDES record 107-30c98a6d5944",
+      "files": ["Public Notice Notification_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "99c277be8a5ed5b60f016722ba7359ea8762971d1459f7296cd87c8afc870b9a",
+      "match": "NPDES record 110-99c277be8a5e",
+      "files": ["PUBLIC NOTICE OF INDUSTRIAL SIGNIFICANT NON-COMPLIANCE EXCEEDANCES.pdf"]
+    }
+  ],
+  "retainedRecords": [
+    {
+      "id": "145-a85c4e499dec",
+      "sourceName": "Proof of measure.pdf",
+      "displayName": "Property Measurement Photo Set — 1140 Plett Road.pdf",
+      "sha256": "a85c4e499dece2ddef8125fa7117fc64e483c15c61ca6f0e92c4321cf87061e7",
+      "pages": 1,
+      "size": 1121102,
+      "catalog": "supplemental-documents.json",
+      "asset": "/findings-docs/145-a85c4e499dec.pdf",
+      "reason": "Distinct image-only property-measurement photo set routed by the archive classification index to 1140 Plett Road groundwater and well context. It is retained as secondary imagery and not treated as a survey, licensed well record, measured coordinates or proof of environmental conditions."
+    }
+  ],
+  "resolution": "Eighteen supplied files are exact SHA-256 matches to established NPDES records and their published source binaries. The one distinct photo set is retained once in the groundwater and wells library without adding a timeline event. No source PDF was modified."
+}

@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "9b1056e5b5679c17b0f3c6380d7e3dbb5129fe1844e8f5c985a2f160246d83fa",
+  "catalogFingerprint": "d1f6c6ba8939f58f7a8a310a6d12e3cc2e0019a8d8876ebfa45b8bb4ae172ec2",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1497,
-    "verifiedRecords": 1497,
-    "pdfRecords": 1368,
-    "pdfPages": 18892,
+    "catalogRecords": 1504,
+    "verifiedRecords": 1504,
+    "pdfRecords": 1375,
+    "pdfPages": 19407,
     "imageRecords": 13,
-    "embeddedTextPages": 15601,
-    "ocrPages": 3304,
-    "ocrPagesWithText": 2974,
-    "manualReviewPages": 130,
+    "embeddedTextPages": 15703,
+    "ocrPages": 3717,
+    "ocrPagesWithText": 3380,
+    "manualReviewPages": 133,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,7 +29,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 130,
+    "pagesReviewed": 133,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -449,6 +449,17 @@
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/9994ed932ee1600ea10fecb2b3ad80a9595bb3b5/public/findings-docs/132-d5dd57fe9c94.pdf",
       "pages": [
         85
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "143-be8756e643c5",
+      "name": "Michigan FY2018 State Revolving Fund Annual Report.pdf",
+      "url": "/findings-docs/143-be8756e643c5.pdf",
+      "pages": [
+        14,
+        18,
+        20
       ]
     },
     {

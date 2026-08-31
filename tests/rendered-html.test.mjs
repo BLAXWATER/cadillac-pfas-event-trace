@@ -56,7 +56,7 @@ test("renders stable site metadata and source policy", async () => {
   assert.doesNotMatch(html, /class="year-overflow-toggle"/i);
   assert.doesNotMatch(html, /aria-expanded=/i);
   assert.doesNotMatch(html, /4 of 10 events shown/i);
-  assert.equal((html.match(/class="trace-row"/gi) ?? []).length, 70);
+  assert.equal((html.match(/class="trace-row"/gi) ?? []).length, 78);
   assert.match(html, /class="source-thumbnail\s+source-thumbnail--(?:pdf|html|image|spreadsheet|office|archive|other)"/i);
   assert.match(html, /src="\/assets\/008-5b67e1ed1d5c-[^"]+\.webp"/i);
   assert.match(html, /src="\/assets\/2016-07-15-gw-public-notice-[^"]+\.webp"/i);

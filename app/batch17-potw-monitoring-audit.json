@@ -1,0 +1,98 @@
+{
+  "batch": "2026-08-31 POTW monitoring and post-inspection intake 17",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 10 supplied files and all 37 pages.",
+    "Read embedded text from every page; every page exceeded the text threshold, so OCR and GPU fallback were not required for this batch.",
+    "Rendered and visually inspected the complete 37-page sequence in two contact sheets; every document begins with substantive content and no corrupt, truncated or unintended blank page was found.",
+    "Compared every supplied hash against every published evidence catalog and identified nine exact matches to established IPP records, including both distinct 2024 versions.",
+    "Retained the byte-distinct four-page 2009 post-inspection export as one compliance record and one dated event without modifying any supplied PDF."
+  ],
+  "stats": {
+    "receivedFiles": 10,
+    "pdfFiles": 10,
+    "pdfPages": 37,
+    "distinctInputHashes": 10,
+    "exactDuplicateFilenameCopies": 0,
+    "exactExistingHashes": 9,
+    "exactExistingFileInstances": 9,
+    "establishedRecordsReused": 9,
+    "ocrPages": 0,
+    "manualReviewPages": 37,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 1,
+    "timelineEventsAdded": 1,
+    "timelineSourcesAdded": 1
+  },
+  "establishedRecords": [
+    {
+      "match": "ipp record 111-64ff456e8ea9",
+      "canonicalSha256": "64ff456e8ea9eddde3716c92925d0766090a441c8efed3151324c9fbcc97dd51",
+      "canonicalPages": 4,
+      "files": [{ "name": "POTW Monitoring Data Summary 2023.pdf", "sha256": "64ff456e8ea9eddde3716c92925d0766090a441c8efed3151324c9fbcc97dd51", "classification": "exact SHA-256 match" }]
+    },
+    {
+      "match": "ipp record 117-16ecfc6f1d5d",
+      "canonicalSha256": "16ecfc6f1d5df6414de0f4ecaed4eca0835a930f017abbf00e17f01d6a6d3732",
+      "canonicalPages": 3,
+      "files": [{ "name": "POTW Monitoring Data Summary 2024 (Revised).pdf", "sha256": "16ecfc6f1d5df6414de0f4ecaed4eca0835a930f017abbf00e17f01d6a6d3732", "classification": "exact SHA-256 match; distinct revised version remains preserved" }]
+    },
+    {
+      "match": "ipp record 118-46832c3eeb75",
+      "canonicalSha256": "46832c3eeb75c602036501b7b79aeac21a3a12e969032b1a10419dcc9dc7da2f",
+      "canonicalPages": 3,
+      "files": [{ "name": "POTW Monitoring Data Summary 2024.pdf", "sha256": "46832c3eeb75c602036501b7b79aeac21a3a12e969032b1a10419dcc9dc7da2f", "classification": "exact SHA-256 match; distinct original version remains preserved" }]
+    },
+    {
+      "match": "ipp record 131-accaf4d64927",
+      "canonicalSha256": "accaf4d649279fed4dbbc09d64a811254028cf0dd1ebd801a041cb6fb4bc3426",
+      "canonicalPages": 3,
+      "files": [{ "name": "POTW Monitoring Data Summary 2025.pdf", "sha256": "accaf4d649279fed4dbbc09d64a811254028cf0dd1ebd801a041cb6fb4bc3426", "classification": "exact SHA-256 match" }]
+    },
+    {
+      "match": "ipp record 045-8c39a23ed761",
+      "canonicalSha256": "8c39a23ed761315f8944fee1afe17ae0d69e9912daf0dce8d10a2b3e6a6f74a2",
+      "canonicalPages": 4,
+      "files": [{ "name": "POTW_Monitoring_Data_Summary 2018.pdf", "sha256": "8c39a23ed761315f8944fee1afe17ae0d69e9912daf0dce8d10a2b3e6a6f74a2", "classification": "exact SHA-256 match" }]
+    },
+    {
+      "match": "ipp record 047-c25f5edc1e6c",
+      "canonicalSha256": "c25f5edc1e6c12560fc22bb1651749d506a2838491b173037e4d9104de8fb910",
+      "canonicalPages": 4,
+      "files": [{ "name": "POTW_Monitoring_Data_Summary 2019.pdf", "sha256": "c25f5edc1e6c12560fc22bb1651749d506a2838491b173037e4d9104de8fb910", "classification": "exact SHA-256 match" }]
+    },
+    {
+      "match": "ipp record 055-5c7bf8df2a58",
+      "canonicalSha256": "5c7bf8df2a580fec5704f31443a1c7c86bbe0bd53deb60b7e9d0ad4107e59983",
+      "canonicalPages": 4,
+      "files": [{ "name": "POTW_Monitoring_Data_Summary 2020.pdf", "sha256": "5c7bf8df2a580fec5704f31443a1c7c86bbe0bd53deb60b7e9d0ad4107e59983", "classification": "exact SHA-256 match" }]
+    },
+    {
+      "match": "ipp record 061-e34c601fff3a",
+      "canonicalSha256": "e34c601fff3a5c944056bab5814a204466ed11a4a0c9f290858295dec3d2d7fa",
+      "canonicalPages": 4,
+      "files": [{ "name": "POTW_Monitoring_Data_Summary 2021.pdf", "sha256": "e34c601fff3a5c944056bab5814a204466ed11a4a0c9f290858295dec3d2d7fa", "classification": "exact SHA-256 match" }]
+    },
+    {
+      "match": "ipp record 089-4f8babf855df",
+      "canonicalSha256": "4f8babf855df1b339da5f37d854cadb1de3c5df30f2a02d37cb461843bd96eed",
+      "canonicalPages": 4,
+      "files": [{ "name": "POTW_Monitoring_Data_Summary 2022.pdf", "sha256": "4f8babf855df1b339da5f37d854cadb1de3c5df30f2a02d37cb461843bd96eed", "classification": "exact SHA-256 match" }]
+    }
+  ],
+  "retainedRecords": [
+    {
+      "id": "061-87297e8f6401",
+      "name": "Post-Inspection Report.pdf",
+      "asset": "/compliance-docs/061-87297e8f6401.pdf",
+      "pages": 4,
+      "size": 130818,
+      "sha256": "87297e8f640150641461dd031827934abd99e1fdfbf5f659dfae6e0c5ef7d832",
+      "classification": "distinct November 19, 2009 IPP reconnaissance post-inspection export"
+    }
+  ],
+  "resolution": "All 10 supplied files are accounted for. Nine files exactly reuse nine established IPP records, with the original and revised 2024 summaries retained as distinct records. The four-page 2009 post-inspection report was retained once and supports one dated timeline event. No source PDF was modified."
+}

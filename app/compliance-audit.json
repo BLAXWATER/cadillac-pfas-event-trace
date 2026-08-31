@@ -8,16 +8,16 @@
     "Manual visual review of low-confidence aerial-image and rotated-table pages"
   ],
   "stats": {
-    "sourceFilesReviewed": 114,
+    "sourceFilesReviewed": 115,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 6,
     "analystAuthoredReportsExcluded": 4,
-    "existingComplianceRecordsRetained": 2,
-    "finalDistinctRecords": 60,
-    "reviewedPages": 717,
+    "existingComplianceRecordsRetained": 3,
+    "finalDistinctRecords": 61,
+    "reviewedPages": 721,
     "ocrPages": 308,
-    "publishedBytes": 60312402,
+    "publishedBytes": 60443220,
     "latestAllDocsIntakeFiles": 23,
     "latestAllDocsExactExistingRecords": 18,
     "latestAllDocsActualDuplicateCopiesSuppressed": 1,
@@ -28,7 +28,10 @@
     "latestDropboxNewComplianceRecords": 3,
     "latestPOTWOversightIntakeFiles": 11,
     "latestPOTWOversightExactExistingFileInstances": 9,
-    "latestPOTWOversightNewComplianceRecords": 2
+    "latestPOTWOversightNewComplianceRecords": 2,
+    "latestPOTWMonitoringIntakeFiles": 10,
+    "latestPOTWMonitoringExactExistingRecords": 9,
+    "latestPOTWMonitoringNewComplianceRecords": 1
   },
   "decisions": [
     {
@@ -106,6 +109,10 @@
     {
       "name": "2026 Cadillac cyanide correspondence sequence",
       "reason": "All 24 image-based pages received OCR and were checked in rendered sequence. The package is distinct from every published compliance record and preserves dated municipal, agency, laboratory and industrial-user messages from February 27 through July 7, 2026. Statements remain attributed to their authors and are not promoted into an independent adjudication."
+    },
+    {
+      "name": "August 31 POTW monitoring and post-inspection intake",
+      "reason": "Ten supplied PDFs totaling 37 pages were checked by SHA-256, page count, embedded text, rendered-page sequence and full visual review. Nine annual monitoring summaries exactly match established IPP records. The distinct four-page November 19, 2009 post-inspection export was retained once in the compliance library and linked to one dated event."
     }
   ]
 }

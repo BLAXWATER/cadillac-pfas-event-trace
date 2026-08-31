@@ -162,7 +162,7 @@ const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((arc
 );
 
 const repositoryAssetUrl = (path: string) =>
-  `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/583d2cd70b96ee4d7aca34a8e3c3650490a33077/public/${path.replace(/^\//, "")}`;
+  `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/be4c2d5dadbb16835a539e8509ac065d560bb055/public/${path.replace(/^\//, "")}`;
 
 const pdf = (
   name: string,
@@ -1442,6 +1442,24 @@ const events: Event[] = [
       eventStamp: "2009-09-08 · time not stated",
       basis: "Date of the official special-meeting minutes",
       note: "Separate well-field planning in the same minutes is not characterized as PFAS evidence.",
+    })],
+  },
+  {
+    year: "2009",
+    date: "2009-11-19",
+    isoDate: "2009-11-19",
+    time: noTime,
+    timeBasis: "Inspection date",
+    phase: "Industrial pretreatment reconnaissance",
+    kind: "compliance",
+    category: "08 · Compliance & enforcement",
+    title: "Inspection traces elevated biosolids zinc to Cadillac Castings",
+    finding: "MDEQ's post-inspection report says a September 2009 point-source survey found elevated zinc in biosolids and records the plant superintendent's identification of Cadillac Castings as the source. The report calls for a January 15, 2010 compliance submission and stronger permit monitoring for zinc discharge.",
+    significance: "Preserves the agency's contemporaneous source-control account and required follow-up. This is zinc and industrial-pretreatment evidence; it does not establish PFAS use, release or attribution.",
+    sources: [archivedSource("2009-11-19 - Cadillac WWTP IPP Reconnaissance Post-Inspection Report.pdf", "/compliance-docs/061-87297e8f6401.pdf", 4, "MDEQ post-inspection report for the November 19, 2009 IPP reconnaissance evaluation.", {
+      eventStamp: "2009-11-19 · time not stated",
+      basis: "Inspection start and end date printed on the report",
+      note: "The report records the plant superintendent's source identification; it is not treated as a PFAS finding or independent chemical-source adjudication.",
     })],
   },
   {

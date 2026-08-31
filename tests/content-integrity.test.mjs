@@ -773,6 +773,14 @@ test("batch 14 reuses eighteen exact NPDES records and retains one Plett Road ph
   assert.match(retainedRecord.description, /not treated as a survey/i);
   const source = await readFile(path.join(publicDirectory, retained.asset.replace(/^\//, "")));
   assert.equal(createHash("sha256").update(source).digest("hex"), retained.sha256);
+  const sourceUrlModule = await readFile(path.join(appDirectory, "source-url.ts"), "utf8");
+  const repositoryCommit = sourceUrlModule.match(/repositoryAssetCommit = "([0-9a-f]{40})"/)?.[1];
+  assert.ok(repositoryCommit, "source URL module has no immutable repository commit");
+  const publishedBlob = spawnSync("git", ["cat-file", "-e", `${repositoryCommit}:public${retained.asset}`], {
+    cwd: root,
+    encoding: "utf8",
+  });
+  assert.equal(publishedBlob.status, 0, `retained source is absent from repository commit ${repositoryCommit}`);
   assert.match(audit.resolution, /without adding a timeline event/i);
   assert.match(audit.resolution, /No source PDF was modified/i);
 });

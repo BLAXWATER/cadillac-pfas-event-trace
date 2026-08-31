@@ -1,4 +1,4 @@
-const repositoryAssetCommit = "c4e7af2605084ac48bbf8ecabf59d2b6115ac0d8";
+const repositoryAssetCommit = "8950d7e1bbf3b154bec5d9247c125fdeea7f9174";
 const repositoryAssetBase =
   `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/${repositoryAssetCommit}/public`;
 

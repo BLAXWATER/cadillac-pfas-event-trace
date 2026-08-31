@@ -716,5 +716,17 @@
     "size": 118617,
     "sha256": "dd5fb72d29bdd405b91cc9d69f4ecdbaedcb454afebd0968618bda7ba0078691",
     "description": "Standalone NPDES CSI-Toxics pre-inspection database export completed October 10, 2014. It independently preserves the equalization-basin and hauled County Landfill leachate history documented in the related eight-page inspection package, and is retained because its file structure and page set are distinct."
+  },
+  {
+    "id": "061-87297e8f6401",
+    "name": "2009-11-19 - Cadillac WWTP IPP Reconnaissance Post-Inspection Report.pdf",
+    "url": "/compliance-docs/061-87297e8f6401.pdf",
+    "year": "2009",
+    "type": "Industrial pretreatment post-inspection report",
+    "format": "PDF",
+    "pages": 4,
+    "size": 130818,
+    "sha256": "87297e8f640150641461dd031827934abd99e1fdfbf5f659dfae6e0c5ef7d832",
+    "description": "MDEQ post-inspection database export for the November 19, 2009 Cadillac WWTP Industrial Pretreatment Program reconnaissance inspection. The inspector records elevated zinc in biosolids found during September 2009 point-source sampling, identifies Cadillac Castings as the source reported by the plant superintendent, and calls for a compliance report and permit-monitoring revisions."
   }
 ]

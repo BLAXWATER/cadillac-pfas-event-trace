@@ -664,16 +664,16 @@
   },
   {
     "id": "052-760656b79f1f",
-    "name": "2017 - NPDES Application EQP4659-C Section II-D p14 - Nondomestic Wastewater incl Landfill Leachate 33600 GPD - No Septage - IPP Element Approval Dates.pdf",
+    "name": "Cadillac WWTP Septage Information.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/a9c12b415f3f909c1a3ef46405fea0ee82b78175/public/biosolids-docs/052-760656b79f1f.pdf",
-    "year": "2017",
-    "category": "Biosolids & land application",
-    "type": "RMP / permit record",
+    "year": "2012",
+    "category": "Industrial pretreatment / NPDES application",
+    "type": "Septage and nondomestic wastewater information",
     "format": "PDF",
     "pages": 16,
     "size": 948370,
     "sha256": "760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51",
-    "description": "16-page residuals-management-plan, permit or application record associated with Cadillac biosolids handling and land application."
+    "description": "Sixteen-page Cadillac WWTP application attachment addressing septage and nondomestic wastewater. The record identifies 33,600 gallons per day of landfill leachate and documents the plant's industrial pretreatment framework. The supplied 'original' PDF is byte-different but renders identically on every page."
   },
   {
     "id": "053-a42a24d25774",

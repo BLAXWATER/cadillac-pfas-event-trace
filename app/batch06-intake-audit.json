@@ -1,0 +1,66 @@
+{
+  "batch": "2026-08-31 Wexford landfill and Cadillac WWTP intake 06",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Leachate wexford landfill",
+  "preservedSourceFolder": "work/intake-2026-08-31-batch06-source",
+  "method": [
+    "Copied all four supplied PDFs into a preserved intake working set before analysis.",
+    "Verified every supplied file with SHA-256, opened every PDF, and checked all 141 pages against the prior page-level audit.",
+    "Reused OCR only after the current file hashes matched the previously audited intake bytes; 40 image pages had already been OCR-verified and the remaining 101 pages contained usable embedded text.",
+    "Compared byte hashes, rendered-page sequences, selected text, perceptual page hashes, page counts and document identity against the preserved corpus and prior intakes.",
+    "Classified a file as duplicate only after confirming an exact byte match or an identical page-by-page rendering with no distinct annotation, signature, cover communication or page."
+  ],
+  "stats": {
+    "receivedFiles": 4,
+    "pdfFiles": 4,
+    "pdfPages": 141,
+    "embeddedTextPages": 101,
+    "ocrPages": 40,
+    "ocrPagesWithText": 40,
+    "manualReviewPages": 0,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctFiles": 0,
+    "excludedDuplicateFiles": 4,
+    "exactByteDuplicates": 2,
+    "renderIdenticalByteDifferentDuplicates": 2,
+    "timelineEventsAdded": 0
+  },
+  "excludedDuplicates": [
+    {
+      "name": "15-Wexford-County-2018-Audited-Financial-Statements.pdf",
+      "sha256": "b131111d78289b588bf5b2a7d616e51f3d62ab8f31faeb2979729f32b70c03c3",
+      "pages": 112,
+      "match": "supplemental record 133-b131111d7828",
+      "basis": "Exact byte-for-byte SHA-256 match."
+    },
+    {
+      "name": "2011-09-19-N3862-On-Site-Inspection.pdf",
+      "sha256": "e1643f04ae91145f8e132d10ad3704aadfc64c73ed51f81d18d97fb135b1d9e2",
+      "pages": 2,
+      "match": "Wexford record 029-e1643f04ae91",
+      "basis": "Exact byte-for-byte SHA-256 match."
+    },
+    {
+      "name": "2012-03-26-Cadillac-WWTP-Septage-Information-original.pdf",
+      "sha256": "a5b25a8ea359812b8becef7a3e27284a9b354651133af2bf832353cc84a34505",
+      "pages": 16,
+      "match": "biosolids record 052-760656b79f1f",
+      "basis": "Byte-different PDF container with the same page count and identical rendered pixels on all 16 pages."
+    },
+    {
+      "name": "2012-03-26-Cadillac-WWTP-SIU-Information-original.pdf",
+      "sha256": "340d31b5eafd98b037c13a56be0402057a6457db0315fa020c6c952515e684a4",
+      "pages": 11,
+      "match": "IPP record 001-4e9a0cdf0189",
+      "basis": "Byte-different PDF container with the same page count and identical rendered pixels on all 11 pages."
+    }
+  ],
+  "catalogCorrections": [
+    "Corrected the stored SHA-256 for the retained 2018 Wexford County audited financial statements to the verified asset hash.",
+    "Corrected the 16-page Septage Information record's title, year, category, type and description without adding a second copy."
+  ],
+  "duplicateResolution": "All four supplied files were verified as existing evidence. No distinct document, revision, annotation, signature, cover communication or page was discarded, and no duplicate timeline event was created.",
+  "immutableCommit": "pending"
+}

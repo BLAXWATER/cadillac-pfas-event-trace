@@ -28,10 +28,68 @@ DETAIL_PATH = CACHE_ROOT / "corpus-ocr-detail.json"
 SUMMARY_PATH = ROOT / "app" / "corpus-ocr-audit.json"
 _GIT_OBJECTS_BY_HASH_PREFIX: dict[str, list[tuple[str, str]]] | None = None
 _OCR_ENGINE: RapidOCR | None = None
+_OCR_DEVICE = "cpu"
 
-ocr_tools_dir = WORK_ROOT / (".ocr-tools-314" if sys.version_info >= (3, 14) else ".ocr-tools")
-sys.path.insert(0, str(ocr_tools_dir))
+cpu_ocr_tools_dir = WORK_ROOT / (".ocr-tools-314" if sys.version_info >= (3, 14) else ".ocr-tools")
+gpu_ocr_tools_dir = WORK_ROOT / ".ocr-gpu-tools"
+sys.path.insert(0, str(cpu_ocr_tools_dir))
+if gpu_ocr_tools_dir.is_dir():
+    # Keep the OCR models and RapidOCR package in the established tools folder,
+    # while allowing the isolated CUDA build of ONNX Runtime to take precedence.
+    sys.path.insert(0, str(gpu_ocr_tools_dir))
 from rapidocr_onnxruntime import RapidOCR  # noqa: E402
+import onnxruntime as ort  # noqa: E402
+
+
+_GPU_RUNTIME_ERROR: str | None = None
+if gpu_ocr_tools_dir.is_dir() and hasattr(ort, "preload_dlls"):
+    try:
+        # CUDA and cuDNN are installed as Python packages in .ocr-gpu-tools.
+        # Preloading them avoids machine-wide CUDA PATH changes.
+        ort.preload_dlls(directory="")
+    except Exception as exc:  # the explicit GPU mode reports this as a hard failure
+        _GPU_RUNTIME_ERROR = f"{type(exc).__name__}: {exc}"
+
+
+def gpu_runtime_available() -> bool:
+    return (
+        _GPU_RUNTIME_ERROR is None
+        and gpu_ocr_tools_dir.is_dir()
+        and ort.get_device() == "GPU"
+        and "CUDAExecutionProvider" in ort.get_available_providers()
+    )
+
+
+def resolve_ocr_device(requested: str) -> str:
+    if requested == "cpu":
+        return "cpu"
+    if gpu_runtime_available():
+        return "gpu"
+    if requested == "gpu":
+        detail = _GPU_RUNTIME_ERROR or f"available providers: {ort.get_available_providers()}"
+        raise RuntimeError(f"CUDA OCR was requested but is unavailable ({detail})")
+    return "cpu"
+
+
+def create_ocr_engine(device: str) -> RapidOCR:
+    use_cuda = device == "gpu"
+    engine = RapidOCR(
+        intra_op_num_threads=2,
+        inter_op_num_threads=1,
+        det_use_cuda=use_cuda,
+        cls_use_cuda=use_cuda,
+        rec_use_cuda=use_cuda,
+    )
+    if use_cuda:
+        sessions = [
+            engine.text_det.infer.session,
+            engine.text_cls.infer.session,
+            engine.text_rec.session.session,
+        ]
+        providers = [session.get_providers()[0] for session in sessions]
+        if any(provider != "CUDAExecutionProvider" for provider in providers):
+            raise RuntimeError(f"CUDA OCR initialization fell back to {providers}")
+    return engine
 
 
 def normalize_text(value: str) -> str:
@@ -394,15 +452,16 @@ def audit_image(record: dict, inventory: dict, engine: RapidOCR) -> dict:
     }
 
 
-def initialize_worker() -> None:
-    global _OCR_ENGINE
-    _OCR_ENGINE = RapidOCR(intra_op_num_threads=2, inter_op_num_threads=1)
+def initialize_worker(device: str) -> None:
+    global _OCR_ENGINE, _OCR_DEVICE
+    _OCR_DEVICE = device
+    _OCR_ENGINE = create_ocr_engine(device)
 
 
 def audit_record_worker(record: dict, inventory: dict) -> dict:
     global _OCR_ENGINE
     if _OCR_ENGINE is None:
-        _OCR_ENGINE = RapidOCR(intra_op_num_threads=2, inter_op_num_threads=1)
+        _OCR_ENGINE = create_ocr_engine(_OCR_DEVICE)
     if record["format_inferred"] == "PDF":
         return audit_pdf(record, inventory, _OCR_ENGINE)
     if record["format_inferred"] in {"PNG", "JPG", "JPEG"}:
@@ -549,7 +608,7 @@ def run_inventory(records: list[dict]) -> dict:
     return result
 
 
-def run_full(records: list[dict], inventory_payload: dict, workers: int) -> dict:
+def run_full(records: list[dict], inventory_payload: dict, workers: int, ocr_device: str) -> dict:
     inventory_by_hash = {row["sha256"]: row for row in inventory_payload["records"]}
     started = time.time()
     rows_by_index: dict[int, dict] = {}
@@ -595,7 +654,14 @@ def run_full(records: list[dict], inventory_payload: dict, workers: int) -> dict
     if completed:
         report_progress()
 
-    with concurrent.futures.ProcessPoolExecutor(max_workers=max(1, workers), initializer=initialize_worker) as executor:
+    # Each CUDA worker owns three inference sessions. Two workers keep the GPU
+    # busy without multiplying CUDA contexts across every CPU core.
+    effective_workers = min(max(1, workers), 2) if ocr_device == "gpu" else max(1, workers)
+    with concurrent.futures.ProcessPoolExecutor(
+        max_workers=effective_workers,
+        initializer=initialize_worker,
+        initargs=(ocr_device,),
+    ) as executor:
         futures = {
             executor.submit(audit_record_worker, record, inventory): (index, cache_path)
             for index, record, inventory, cache_path in pending
@@ -681,12 +747,24 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Audit every published corpus record and OCR image-only PDF pages.")
     parser.add_argument("--inventory-only", action="store_true")
     parser.add_argument("--workers", type=int, default=3)
+    parser.add_argument(
+        "--ocr-device",
+        choices=("auto", "cpu", "gpu"),
+        default="auto",
+        help="Run ONNX OCR on CUDA when available, require CUDA, or force the CPU fallback.",
+    )
     parser.add_argument("--refresh-inventory", action="store_true")
     parser.add_argument("--render-manual-review", action="store_true")
     parser.add_argument("--repair-stale-github-urls", action="store_true")
     parser.add_argument("--source-dir", type=Path)
     parser.add_argument("--cache-name", default="source-category")
     args = parser.parse_args()
+    ocr_device = resolve_ocr_device(args.ocr_device)
+    print(
+        f"OCR device: {ocr_device}; ONNX Runtime {ort.__version__}; "
+        f"providers: {', '.join(ort.get_available_providers())}",
+        flush=True,
+    )
     if args.source_dir:
         source_dir = args.source_dir.resolve()
         if not source_dir.is_dir():
@@ -712,7 +790,7 @@ def main() -> None:
     if inventory is None:
         inventory = run_inventory(records)
     if not args.inventory_only:
-        run_full(records, inventory, args.workers)
+        run_full(records, inventory, args.workers, ocr_device)
 
 
 if __name__ == "__main__":

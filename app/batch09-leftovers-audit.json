@@ -1,0 +1,80 @@
+{
+  "batch": "2026-08-31 leftovers intake 09",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 31 supplied files and all 164 pages.",
+    "Compared every distinct input hash against every published evidence catalog before any retention decision.",
+    "Grouped ten byte-identical filename copies within the intake so spelling substitutions and numbered copies could not create extra records.",
+    "Text-extracted and rendered all pages of the three unmatched TVS worksheet hashes at 72 and 144 DPI; each page matched its established catalog counterpart at both resolutions.",
+    "Text-extracted and visually inspected the one remaining unmatched page before retaining it with its source limitations stated in the catalog."
+  ],
+  "stats": {
+    "receivedFiles": 31,
+    "pdfFiles": 31,
+    "pdfPages": 164,
+    "distinctInputHashes": 21,
+    "exactDuplicateFilenameCopies": 10,
+    "exactExistingHashes": 17,
+    "exactExistingFileInstances": 24,
+    "renderIdenticalExistingVariants": 3,
+    "renderIdenticalFileInstances": 6,
+    "manualReviewPages": 1,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 1,
+    "timelineEventsAdded": 0
+  },
+  "exactExistingRecords": [
+    { "sha256": "0137d9e5adffc343c97b1efdb4394eecb79bca78a0da0248618af6f0055678f7", "match": "IPP record 039-0137d9e5adff", "files": ["UpdatedPELSheet_MI0020257_4-11-2019.pdf"] },
+    { "sha256": "150723045b864da0daa7735f0272c168dd4b864c0d0b38959e509ef3c889ea2d", "match": "biosolids record 041-150723045b86", "files": ["TVS & 38% Reduction 2022.pdf", "TVS & 38_ Reduction 2022.pdf"] },
+    { "sha256": "26c53bf4d612672c00158e06756eca6284cab31c1980e134743e4eef77bdcfed", "match": "biosolids record 197-26c53bf4d612", "files": ["TVS Sludge data with June 2019 (1).pdf", "TVS Sludge data with June 2019.pdf"] },
+    { "sha256": "37ac85d03cbbe59e1302a27d68055f905cdb0053f7b18f1fdc9ebaa61a575483", "match": "compliance record 041-37ac85d03cbb", "files": ["Violation Letter.Cadillac WWTP-Dietlin.pdf"] },
+    { "sha256": "500a75e97b1b2429ff3ef1682dc4fcd2883f6f50a8256aaf058b604399c024f3", "match": "biosolids record 196-500a75e97b1b", "files": ["TVS Sludge data with June 2019 - CS (1).pdf", "TVS Sludge data with June 2019 - CS.pdf"] },
+    { "sha256": "568e24cc8c72831fd899a635fc0a2110e86de4a84f7e8f2aef07c77791285429", "match": "biosolids record 199-568e24cc8c72", "files": ["Vector Attraction Reduction.pdf"] },
+    { "sha256": "5836ad2c594c511f822183e97fa5dcc0936f701b6aa652e8ec47b6a1890760d2", "match": "NPDES record 109-5836ad2c594c", "files": ["UpdatedWQBELBiologistReview_MI0020257_4-11-2019.pdf"] },
+    { "sha256": "5d004d4d0088082561b77377167b8fb53d41f494e5873370acbf5bf0643efa95", "match": "biosolids record 193-5d004d4d0088", "files": ["T22NR11W-RBL02.pdf"] },
+    { "sha256": "6119563771ec586624ae00947dbfb1975b8ccf2800d35ee3ef20b370ba8ebaf8", "match": "biosolids record 198-6119563771ec", "files": ["TVS Sludge-Temp data for 2018 and 2019.pdf"] },
+    { "sha256": "75753898d44020b5984a3930f5c444be766b3b4da424f74d79662c2582b54973", "match": "biosolids record 194-75753898d440", "files": ["TVS & 38% Reduction 2024.pdf", "TVS & 38_ Reduction 2024.pdf"] },
+    { "sha256": "8f53497385f70ca468f858019b5139fd3f1bbad5f2bfe746e08280b696d60735", "match": "biosolids record 045-8f53497385f7", "files": ["TVS Sludge-Temp data for 2018 and 2019 - CS.pdf"] },
+    { "sha256": "95687bfacb2cb3419d102e0f53b612e4ae4ab157349f3256a453c9e8292b4ec9", "match": "biosolids record 044-95687bfacb2c", "files": ["TVS 38 percent Reduction Formula-Example.pdf"] },
+    { "sha256": "acb224077b8acc87bdfee60ea3213421ac0f1aed98042c1a802a9ae7b143717f", "match": "biosolids record 195-acb224077b8a", "files": ["TVS & 38% Reduction 2025.pdf", "TVS & 38_ Reduction 2025.pdf"] },
+    { "sha256": "c5c1110892f2ead9cd24d3a5720a1953907bc579069fd57b066339907ec305ee", "match": "biosolids record 042-c5c1110892f2", "files": ["TVS & 38% Reduction 2023.pdf", "TVS & 38_ Reduction 2023.pdf"] },
+    { "sha256": "d98d6ceb12ae6346e7ac74857684defb81ea031d1df58b34724535da154ddc05", "match": "biosolids record 043-d98d6ceb12ae", "files": ["TVS & 38% Reduction.pdf", "TVS & 38_ Reduction.pdf"] },
+    { "sha256": "dae13ed709cbdf35a3281c31348e1bf01f8247fdf92d3eced8ed9b5e8e6b6968", "match": "NPDES record 112-dae13ed709cb", "files": ["UPDATED Cadillac Waste Water AMP - NPDES permit report document 2020.pdf"] },
+    { "sha256": "e1b7446e4226eca442de365224878a4232a6798f99a9887f488387322a23b3e4", "match": "compliance record 040-e1b7446e4226", "files": ["VN response from City.Feb 29 2016.pdf"] }
+  ],
+  "renderIdenticalVariants": [
+    {
+      "sha256": "ca03fa73714c4f9de34dae210dd2618fa334d6cd719daa9164e4bc80d81b1aaa",
+      "files": ["TVS & 38% Reduction 2023 (1).pdf", "TVS & 38_ Reduction 2023 (1).pdf"],
+      "match": "biosolids record 042-c5c1110892f2",
+      "pages": 6,
+      "basis": "Normalized text and every page render are identical at both 72 and 144 DPI; the byte difference is confined to PDF creation metadata."
+    },
+    {
+      "sha256": "817d242d43d2a2cd3450dfa664b4b4ca2a7c2a45fcfe019a638cc47de4882aee",
+      "files": ["TVS & 38% Reduction 2024 (1).pdf", "TVS & 38_ Reduction 2024 (1).pdf"],
+      "match": "biosolids record 194-75753898d440",
+      "pages": 6,
+      "basis": "Normalized text and every page render are identical at both 72 and 144 DPI; the byte difference is confined to PDF creation metadata."
+    },
+    {
+      "sha256": "17c0ebe76fe0928afa5b373898616dc4a8f810e3afda2afd794634abbf533dc5",
+      "files": ["TVS Sludge-Temp data Mar-Apr-June 2019 (1).pdf", "TVS Sludge-Temp data Mar-Apr-June 2019.pdf"],
+      "match": "biosolids record 197-26c53bf4d612",
+      "pages": 2,
+      "basis": "Normalized text and both worksheet page renders are identical at 72 and 144 DPI; the byte difference is confined to PDF creation metadata."
+    }
+  ],
+  "retainedRecord": {
+    "id": "144-346ad8ed5ebc",
+    "sourceName": "Updated-well_record_1140_plett.pdf",
+    "displayName": "Updated Well Record — 1140 Plett Road.pdf",
+    "sha256": "346ad8ed5ebc0850d8f278a46670a9d7b29ff47c0cb533873bce43b69e5f93ec",
+    "pages": 1,
+    "size": 114433,
+    "reason": "Distinct owner-provided compiled well summary with measurements and a construction sketch. The catalog preserves its disclaimer that it is not a driller-certified well-completion log or official agency record."
+  },
+  "resolution": "All 31 supplied files are accounted for. Thirty files reuse exact or page-render-identical established evidence, one distinct record is retained once, no source file was modified, and no timeline event was added because the retained document is secondary property-well context rather than an official dated action."
+}

@@ -1844,5 +1844,18 @@
     "size": 31466544,
     "sha256": "be8756e643c5c0932e603e7910e058c4970573f6f3caa999d41fc755a5743115",
     "description": "Michigan's FY2018 State Revolving Fund annual report. The funded-project tables record Cadillac project 5277-01, described as WWTP/pump-station improvements in Wexford County, with an August 30, 2007 binding commitment of $3,870,000. It is official funding context and not a contaminant result."
+  },
+  {
+    "id": "144-346ad8ed5ebc",
+    "name": "Updated Well Record — 1140 Plett Road.pdf",
+    "url": "/findings-docs/144-346ad8ed5ebc.pdf",
+    "year": "2026",
+    "category": "Groundwater & wells",
+    "type": "Compiled property well summary",
+    "format": "PDF",
+    "pages": 1,
+    "size": 114433,
+    "sha256": "346ad8ed5ebc0850d8f278a46670a9d7b29ff47c0cb533873bce43b69e5f93ec",
+    "description": "Owner-provided May 6, 2026 compilation for the private well at 1140 Plett Road. It records a reported 70-foot casing depth, 68.5-foot below-ground depth and 10-foot static-water level, with a construction sketch and historical-source notes. The page expressly states that it is not a driller-certified well-completion log or an official agency record; it is retained as secondary well context, not as a licensed-professional determination."
   }
 ]

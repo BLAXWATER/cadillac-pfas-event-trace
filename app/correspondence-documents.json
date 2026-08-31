@@ -479,5 +479,44 @@
     "size": 801044,
     "sha256": "1a12e67c31b1eff85285ea1fc577c09640fbd9d2fbd0bf43f86b6be06d7e89a6",
     "description": "EGLE email transmittal dated November 26, 2025 for the October 22 Cadillac WWTP effluent sample, followed by the laboratory report and structured-data export. The analytical attachments overlap the canonical lab and DMR records already preserved, but the cover communication is distinct and states that the results complied with the five PFAS having Water Quality Values."
+  },
+  {
+    "id": "corr-038-60eb9cdca3e6",
+    "name": "2018-12-19 - IPP PFAS Sampling Guidance and Suggested Analytes.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/284a689d5da53877bcdf24656f4a1eae17c05478/public/correspondence-docs/corr-038-60eb9cdca3e6.pdf",
+    "year": "2018",
+    "category": "Correspondence & letters",
+    "type": "PFAS sampling guidance correspondence",
+    "format": "PDF",
+    "pages": 6,
+    "size": 171884,
+    "sha256": "60eb9cdca3e6d24e3c428cbe06d4af4f3cb9d7434c093ab72ba4bba094232d2e",
+    "description": "Six-page City/DEQ email thread from June through December 2018 concerning IPP PFAS source sampling. DEQ states that only PFOS and PFOA were required for probable-source monitoring while the broader analyte list was recommended, discusses modified Method 537 and ASTM D7979, and advises including percent solids for biosolids reporting. City staff identify landfill leachate as their IPP probable source in the correspondence."
+  },
+  {
+    "id": "corr-039-ae0709a82af7",
+    "name": "2018-04-19 - PFAS Extension and Landfill Sampling Correspondence.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/284a689d5da53877bcdf24656f4a1eae17c05478/public/correspondence-docs/corr-039-ae0709a82af7.pdf",
+    "year": "2018",
+    "category": "Correspondence & letters",
+    "type": "PFAS program coordination correspondence",
+    "format": "PDF",
+    "pages": 11,
+    "size": 407089,
+    "sha256": "ae0709a82af7ca67f21653258b859828b03c71fc4d06c207a2d91a24639bcf8e",
+    "description": "April 18-19, 2018 City/DEQ email exchange and embedded follow-up package. The correspondence clarifies that a May 8 extension request could accommodate landfill participation in DEQ's sampling program and that probable-source results were otherwise due June 29. The embedded agency letter overlaps the established April 18 timeline source; the direct clarification exchange is retained as distinct correspondence."
+  },
+  {
+    "id": "corr-040-57ed2d4d18eb",
+    "name": "2018-12-12 - PFAS Results Transmittal with Avon and WWTP Reports.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/284a689d5da53877bcdf24656f4a1eae17c05478/public/correspondence-docs/corr-040-57ed2d4d18eb.pdf",
+    "year": "2018",
+    "category": "Correspondence & letters",
+    "type": "PFAS laboratory-results transmittal",
+    "format": "PDF",
+    "pages": 46,
+    "size": 5263974,
+    "sha256": "57ed2d4d18ebeaef0ee37dfc002131f82e0343b32f3a8c240b6a1642fd1ccd23",
+    "description": "December 12, 2018 City-to-DEQ email transmittal following a voicemail exchange, with the 22-page Avon-source report and 21-page Cadillac WWTP effluent report attached. The laboratory attachments overlap the canonical J18036-1 and J17993-1 records already preserved; this package is retained once for its delivery correspondence and attachment context."
   }
 ]

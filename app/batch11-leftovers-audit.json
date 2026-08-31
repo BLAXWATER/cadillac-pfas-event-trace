@@ -1,0 +1,420 @@
+{
+  "batch": "2026-08-31 leftovers intake 11",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 62 supplied files and all 371 pages.",
+    "Compared every distinct input hash against every published evidence catalog and the two prior leftovers audits before any retention decision.",
+    "Grouped eleven byte-identical filename copies within the intake and reused 52 file instances whose hashes already exist in the published catalogs.",
+    "Reused six file instances belonging to three previously verified page-identical TVS worksheet variants.",
+    "Text-extracted and rendered all 109 pages of the four unmatched PDFs at 72 DPI; the two 46-page voicemail exports had identical normalized text and identical page renders, and were confirmed again at 144 DPI.",
+    "Applied OCR to all 12 sparse-text pages in the three retained records; every page produced readable text. Visually inspected every page of the three retained records, including attachment separators, laboratory tables, chain-of-custody forms and the duplicate agency-letter pages embedded in the correspondence packages."
+  ],
+  "stats": {
+    "receivedFiles": 62,
+    "pdfFiles": 62,
+    "pdfPages": 371,
+    "distinctInputHashes": 51,
+    "exactDuplicateFilenameCopies": 11,
+    "exactExistingHashes": 44,
+    "exactExistingFileInstances": 52,
+    "renderIdenticalExistingVariants": 4,
+    "renderIdenticalFileInstances": 7,
+    "ocrPages": 12,
+    "ocrPagesWithText": 12,
+    "manualReviewPages": 63,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 3,
+    "timelineEventsAdded": 0
+  },
+  "exactExistingRecords": [
+    {
+      "sha256": "0137d9e5adffc343c97b1efdb4394eecb79bca78a0da0248618af6f0055678f7",
+      "match": "ipp record 039-0137d9e5adff",
+      "files": [
+        "UpdatedPELSheet_MI0020257_4-11-2019.pdf"
+      ]
+    },
+    {
+      "sha256": "14dea41b692a3f8656da0b79162c42f8375fe2bfd5c4ca098751d92b2efa681d",
+      "match": "ipp record 156-14dea41b692a",
+      "files": [
+        "RE_ Time delay for IPP information.pdf"
+      ]
+    },
+    {
+      "sha256": "150723045b864da0daa7735f0272c168dd4b864c0d0b38959e509ef3c889ea2d",
+      "match": "biosolids record 041-150723045b86",
+      "files": [
+        "TVS & 38% Reduction 2022.pdf",
+        "TVS & 38_ Reduction 2022.pdf"
+      ]
+    },
+    {
+      "sha256": "26c53bf4d612672c00158e06756eca6284cab31c1980e134743e4eef77bdcfed",
+      "match": "biosolids record 197-26c53bf4d612",
+      "files": [
+        "TVS Sludge data with June 2019 (1).pdf",
+        "TVS Sludge data with June 2019.pdf"
+      ]
+    },
+    {
+      "sha256": "275ac0a81837ef7ad2e56cde42e13c5f7385c0929daf1b4dd41b675d5164ff53",
+      "match": "ipp record 154-275ac0a81837",
+      "files": [
+        "RE_ IPP Program Manual.pdf"
+      ]
+    },
+    {
+      "sha256": "27d769b51ffef15353834d68905a865a2074e63c12b3b50ca0c6ea41f9ceeef9",
+      "match": "ipp record 098-27d769b51ffe",
+      "files": [
+        "SIU-CIU_List 2022 (1).pdf"
+      ]
+    },
+    {
+      "sha256": "346ad8ed5ebc0850d8f278a46670a9d7b29ff47c0cb533873bce43b69e5f93ec",
+      "match": "supplemental record 144-346ad8ed5ebc",
+      "files": [
+        "Updated-well_record_1140_plett.pdf"
+      ]
+    },
+    {
+      "sha256": "37ac85d03cbbe59e1302a27d68055f905cdb0053f7b18f1fdc9ebaa61a575483",
+      "match": "compliance record 041-37ac85d03cbb",
+      "files": [
+        "Violation Letter.Cadillac WWTP-Dietlin.pdf"
+      ]
+    },
+    {
+      "sha256": "3d9d97e96292f2210df2d8c463ac035252ecb88af70b8800c37d0c2622ffd691",
+      "match": "ipp record 153-3d9d97e96292",
+      "files": [
+        "RE_ IPP Annual report.pdf"
+      ]
+    },
+    {
+      "sha256": "48468578c80f9576997f27bc36f916d44ae65360c972effcd79ca7f06ab5adbb",
+      "match": "ipp record 062-48468578c80f",
+      "files": [
+        "SIU-CIU_List (5).pdf"
+      ]
+    },
+    {
+      "sha256": "4ac1081f51af800182680c7d02c97c5293d9dee2d4ca2484c0b5180a21e33b5b",
+      "match": "ipp record 121-4ac1081f51af",
+      "files": [
+        "SIU CIU List 2024.pdf"
+      ]
+    },
+    {
+      "sha256": "4da73ed2e7f99b4edeaaba4b0fce554bc0ef1b5a5cf1e5da2e66e5b9cca369d7",
+      "match": "correspondence record corr-032-4da73ed2e7f9",
+      "files": [
+        "RE_ PLEASE look at this - FW_ info on % solids & % moisture - Update.pdf",
+        "RE_ PLEASE look at this - FW_ info on _ solids & _ moisture - Update.pdf"
+      ]
+    },
+    {
+      "sha256": "4de381e803372b3424ac13dcb62ed94af10af0f2b8dc5f5bb2100c331936d56a",
+      "match": "ipp record 057-4de381e80337",
+      "files": [
+        "SIU-CIU_List (4).pdf"
+      ]
+    },
+    {
+      "sha256": "500a75e97b1b2429ff3ef1682dc4fcd2883f6f50a8256aaf058b604399c024f3",
+      "match": "biosolids record 196-500a75e97b1b",
+      "files": [
+        "TVS Sludge data with June 2019 - CS (1).pdf",
+        "TVS Sludge data with June 2019 - CS.pdf"
+      ]
+    },
+    {
+      "sha256": "51c664eecf27df078e1808b621b75855886cb788d10c00a53d293f631d6e30ff",
+      "match": "biosolids record 188-51c664eecf27",
+      "files": [
+        "RMP Approval Letter-2002.pdf"
+      ]
+    },
+    {
+      "sha256": "568e24cc8c72831fd899a635fc0a2110e86de4a84f7e8f2aef07c77791285429",
+      "match": "biosolids record 199-568e24cc8c72",
+      "files": [
+        "Vector Attraction Reduction.pdf"
+      ]
+    },
+    {
+      "sha256": "5836ad2c594c511f822183e97fa5dcc0936f701b6aa652e8ec47b6a1890760d2",
+      "match": "npdes record 109-5836ad2c594c",
+      "files": [
+        "UpdatedWQBELBiologistReview_MI0020257_4-11-2019.pdf"
+      ]
+    },
+    {
+      "sha256": "58726d5ded983e4c121620db2bebe9dcd5e155f67f0c6ba44043052bce693bee",
+      "match": "biosolids record 051-58726d5ded98",
+      "files": [
+        "RMP Modification Approval Letter-2014.pdf"
+      ]
+    },
+    {
+      "sha256": "5d004d4d0088082561b77377167b8fb53d41f494e5873370acbf5bf0643efa95",
+      "match": "biosolids record 193-5d004d4d0088",
+      "files": [
+        "T22NR11W-RBL02.pdf"
+      ]
+    },
+    {
+      "sha256": "6119563771ec586624ae00947dbfb1975b8ccf2800d35ee3ef20b370ba8ebaf8",
+      "match": "biosolids record 198-6119563771ec",
+      "files": [
+        "TVS Sludge-Temp data for 2018 and 2019.pdf"
+      ]
+    },
+    {
+      "sha256": "6122ca0b2070135cea0f075ef0297ef9c01433c357c277654ede57e099fbcad0",
+      "match": "biosolids record 190-6122ca0b2070",
+      "files": [
+        "RMP Modification Request-July 2014.pdf"
+      ]
+    },
+    {
+      "sha256": "7145708d1eb9ddf695057f3d4dd5673865e8cd3a9721b5b9fd6e5fef2f9b1f1a",
+      "match": "correspondence record corr-019-7145708d1eb9",
+      "files": [
+        "RE_ TestAmerica invoice and report files from 190-17646-1 City of Cadillac.pdf"
+      ]
+    },
+    {
+      "sha256": "7336c11c3d9941c664068422cd9e93951ab3723f3b054b6a5f7d7bfb7640c132",
+      "match": "lab record lab-028-7336c11c3d99",
+      "files": [
+        "Sampling Field Sheet.pdf"
+      ]
+    },
+    {
+      "sha256": "75753898d44020b5984a3930f5c444be766b3b4da424f74d79662c2582b54973",
+      "match": "biosolids record 194-75753898d440",
+      "files": [
+        "TVS & 38% Reduction 2024.pdf",
+        "TVS & 38_ Reduction 2024.pdf"
+      ]
+    },
+    {
+      "sha256": "76515687a823612d0211554e3ae707073ffbd8209272adf1f806d3130c4d1bd2",
+      "match": "biosolids record 081-76515687a823",
+      "files": [
+        "Spring 21 Lab Data.pdf"
+      ]
+    },
+    {
+      "sha256": "84214c916cb4f029fe8b1f3ebef596244a6b9dc0a83067b476f1c25d48cbe79a",
+      "match": "biosolids record 049-84214c916cb4",
+      "files": [
+        "RMP-Class A EQ-DEQ letter.pdf"
+      ]
+    },
+    {
+      "sha256": "853c7fadab96e4134310ef0bb8e1bb4aced55d9b27785a4252bb13a02ea11630",
+      "match": "biosolids record 192-853c7fadab96",
+      "files": [
+        "Soil Test Reports - Spring 2022.pdf"
+      ]
+    },
+    {
+      "sha256": "8998590ccc857dfb1c91e343e22a1028dcc71773115557a47d9a1e8b44814ab7",
+      "match": "biosolids record 058-8998590ccc85",
+      "files": [
+        "Spring Biosolids HML 2017.pdf"
+      ]
+    },
+    {
+      "sha256": "8cdb49c5653ea6e9e4ef6a711232068ad794d2e394956791f0f7a9b09ff9a33f",
+      "match": "pfas record 045-8cdb49c5653e",
+      "files": [
+        "RE_ EGLE WRD Notification of 2024 Biosolids Containing PFAS Interim Strategy - Important Update.pdf"
+      ]
+    },
+    {
+      "sha256": "8f53497385f70ca468f858019b5139fd3f1bbad5f2bfe746e08280b696d60735",
+      "match": "biosolids record 045-8f53497385f7",
+      "files": [
+        "TVS Sludge-Temp data for 2018 and 2019 - CS.pdf"
+      ]
+    },
+    {
+      "sha256": "95687bfacb2cb3419d102e0f53b612e4ae4ab157349f3256a453c9e8292b4ec9",
+      "match": "biosolids record 044-95687bfacb2c",
+      "files": [
+        "TVS 38 percent Reduction Formula-Example.pdf"
+      ]
+    },
+    {
+      "sha256": "95a00ade695b98a74eb499dcb17d4e44dba27f6634d6099f145a18eb314c639c",
+      "match": "ipp record 056-95a00ade695b",
+      "files": [
+        "SIU-CIU_List.pdf"
+      ]
+    },
+    {
+      "sha256": "9a466377e0071a6ecca100286aaedb633e79385f73cb975153092a53af71e887",
+      "match": "compliance record 015-9a466377e007",
+      "files": [
+        "Read Receipt for VN-012230.pdf"
+      ]
+    },
+    {
+      "sha256": "9b30b77ed746c84e493e9120a4d08f17e22ccb64cb7ed689986d167360356194",
+      "match": "ipp record 132-9b30b77ed746",
+      "files": [
+        "SIU CIU List 2025.pdf"
+      ]
+    },
+    {
+      "sha256": "9f74e8114d60042bedf6f16c931ecf2ac97e1426b858619365e116f062771794",
+      "match": "ipp record 155-9f74e8114d60",
+      "files": [
+        "RE_ IPP Revision extension.pdf"
+      ]
+    },
+    {
+      "sha256": "acb224077b8acc87bdfee60ea3213421ac0f1aed98042c1a802a9ae7b143717f",
+      "match": "biosolids record 195-acb224077b8a",
+      "files": [
+        "TVS & 38% Reduction 2025.pdf",
+        "TVS & 38_ Reduction 2025.pdf"
+      ]
+    },
+    {
+      "sha256": "b9f457f69fc376a5c0008342c3cdc159497d18be469ada89efa846c1809d0d8f",
+      "match": "compliance record 038-b9f457f69fc3",
+      "files": [
+        "Read Receipt of VN-012230.pdf"
+      ]
+    },
+    {
+      "sha256": "bebc795f410571a3ff5be8e0fce4a46eb0f8cce9473e536224b4560ee628dc6b",
+      "match": "ipp record 113-bebc795f4105",
+      "files": [
+        "SIU CIU List 2023.pdf"
+      ]
+    },
+    {
+      "sha256": "c5c1110892f2ead9cd24d3a5720a1953907bc579069fd57b066339907ec305ee",
+      "match": "biosolids record 042-c5c1110892f2",
+      "files": [
+        "TVS & 38% Reduction 2023.pdf",
+        "TVS & 38_ Reduction 2023.pdf"
+      ]
+    },
+    {
+      "sha256": "c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d",
+      "match": "compliance record 039-c677de7c10e6",
+      "files": [
+        "Spill notification 1-12-16.pdf"
+      ]
+    },
+    {
+      "sha256": "cb4bdb5ff6aa40744ac7c08197e2d8d8aa08b4d4bbbae82482bdba5a4645a23f",
+      "match": "lab record lab-090-cb4bdb5ff6aa",
+      "files": [
+        "Spring 2018-Pathogen results.pdf"
+      ]
+    },
+    {
+      "sha256": "d98d6ceb12ae6346e7ac74857684defb81ea031d1df58b34724535da154ddc05",
+      "match": "biosolids record 043-d98d6ceb12ae",
+      "files": [
+        "TVS & 38% Reduction.pdf",
+        "TVS & 38_ Reduction.pdf"
+      ]
+    },
+    {
+      "sha256": "dae13ed709cbdf35a3281c31348e1bf01f8247fdf92d3eced8ed9b5e8e6b6968",
+      "match": "npdes record 112-dae13ed709cb",
+      "files": [
+        "UPDATED Cadillac Waste Water AMP - NPDES permit report document 2020.pdf"
+      ]
+    },
+    {
+      "sha256": "fe9a9418bd47f26fa20667fef140a46c2cd613a03c2fc05dfc095162853aad9b",
+      "match": "ipp record 091-fe9a9418bd47",
+      "files": [
+        "SIU-CIU_List 2022.pdf"
+      ]
+    }
+  ],
+  "renderIdenticalVariants": [
+    {
+      "sha256": "17c0ebe76fe0928afa5b373898616dc4a8f810e3afda2afd794634abbf533dc5",
+      "files": [
+        "TVS Sludge-Temp data Mar-Apr-June 2019 (1).pdf",
+        "TVS Sludge-Temp data Mar-Apr-June 2019.pdf"
+      ],
+      "match": "biosolids record 197-26c53bf4d612",
+      "pages": 2,
+      "basis": "Normalized text and both worksheet page renders are identical at 72 and 144 DPI; the byte difference is confined to PDF creation metadata."
+    },
+    {
+      "sha256": "817d242d43d2a2cd3450dfa664b4b4ca2a7c2a45fcfe019a638cc47de4882aee",
+      "files": [
+        "TVS & 38% Reduction 2024 (1).pdf",
+        "TVS & 38_ Reduction 2024 (1).pdf"
+      ],
+      "match": "biosolids record 194-75753898d440",
+      "pages": 6,
+      "basis": "Normalized text and every page render are identical at both 72 and 144 DPI; the byte difference is confined to PDF creation metadata."
+    },
+    {
+      "sha256": "ca03fa73714c4f9de34dae210dd2618fa334d6cd719daa9164e4bc80d81b1aaa",
+      "files": [
+        "TVS & 38% Reduction 2023 (1).pdf",
+        "TVS & 38_ Reduction 2023 (1).pdf"
+      ],
+      "match": "biosolids record 042-c5c1110892f2",
+      "pages": 6,
+      "basis": "Normalized text and every page render are identical at both 72 and 144 DPI; the byte difference is confined to PDF creation metadata."
+    },
+    {
+      "sha256": "50e47e8f1d9da05215ff046112c41f4aa1449c550ea6c53260919de577793b58",
+      "files": [
+        "RE_ Voicemail Message (1).pdf"
+      ],
+      "match": "correspondence record corr-040-57ed2d4d18eb",
+      "pages": 46,
+      "basis": "Normalized text and every page render are identical at both 72 and 144 DPI. The PDFs have the same byte size; only their later PDF creation and modification timestamps differ."
+    }
+  ],
+  "retainedRecords": [
+    {
+      "id": "corr-038-60eb9cdca3e6",
+      "sourceName": "RE_ IPP PFAS Initiative Sampling Guidance_ Suggested Analytes.pdf",
+      "displayName": "2018-12-19 - IPP PFAS Sampling Guidance and Suggested Analytes.pdf",
+      "sha256": "60eb9cdca3e6d24e3c428cbe06d4af4f3cb9d7434c093ab72ba4bba094232d2e",
+      "pages": 6,
+      "size": 171884,
+      "reason": "Distinct official City/DEQ correspondence preserving the analytical-method, analyte-list and biosolids-reporting guidance that is not contained in the standalone monitoring records."
+    },
+    {
+      "id": "corr-039-ae0709a82af7",
+      "sourceName": "RE_ PFAS.pdf",
+      "displayName": "2018-04-19 - PFAS Extension and Landfill Sampling Correspondence.pdf",
+      "sha256": "ae0709a82af7ca67f21653258b859828b03c71fc4d06c207a2d91a24639bcf8e",
+      "pages": 11,
+      "size": 407089,
+      "reason": "Distinct correspondence wrapper with substantive City questions and DEQ scheduling clarification; repeated embedded letter pages were identified and were not treated as a separate analytical record."
+    },
+    {
+      "id": "corr-040-57ed2d4d18eb",
+      "sourceName": "RE_ Voicemail Message.pdf",
+      "displayName": "2018-12-12 - PFAS Results Transmittal with Avon and WWTP Reports.pdf",
+      "sha256": "57ed2d4d18ebeaef0ee37dfc002131f82e0343b32f3a8c240b6a1642fd1ccd23",
+      "pages": 46,
+      "size": 5263974,
+      "reason": "Distinct transmittal record documenting delivery of the two PFAS result packages to DEQ; the clean filename copy is retained and the page-identical numbered copy is suppressed."
+    }
+  ],
+  "resolution": "All 62 supplied files are accounted for. Fifty-two exact catalog matches and seven page-identical variants reuse established evidence, three materially distinct correspondence packages are retained once, no source file was modified, and no timeline event was added because the underlying agency letter and laboratory sampling results are already represented in the chronological trace."
+}

@@ -23,6 +23,16 @@
     "pages": 1,
     "size": 352858,
     "sha256": "d5e68ea065b63b3fb073c3878a98e5b46c4784737f7fe533e9437a92884f7c4c",
+    "matchingSources": [
+      {
+        "name": "0P1-01_Process_Flow_2017.pdf",
+        "url": "/process-site-docs/matching-sources/0P1-01_Process_Flow_2017.pdf",
+        "pages": 1,
+        "size": 373652,
+        "sha256": "8721a72f2a3d3080bdcc623ef6580120071357ec2f7baa8abd65b58e9270d4c7",
+        "relationship": "The supplied PDF has a different container hash but an identical 144-DPI page rendering. Its drawing title block identifies Process Flow Diagram I for the Cadillac WWTP 2007 Improvements."
+      }
+    ],
     "description": "Stantec process-flow drawing 0P1.01 for the 2007 Cadillac WWTP improvements. The scanned drawing traces tertiary filtration, bypass, backwash, drain and related process-service connections."
   },
   {
@@ -36,6 +46,16 @@
     "pages": 1,
     "size": 364177,
     "sha256": "be54bb8561dd68cf47006de2a66328221b9b336175346937239970f778792ef1",
+    "matchingSources": [
+      {
+        "name": "0P1-02_Process_Flow_2017.pdf",
+        "url": "/process-site-docs/matching-sources/0P1-02_Process_Flow_2017.pdf",
+        "pages": 1,
+        "size": 384971,
+        "sha256": "bf088add129b0835b39d5ccab36c81d2067c8b4ba51814c912832932e2a9a014",
+        "relationship": "The supplied PDF has a different container hash but an identical 144-DPI page rendering. Its drawing title block identifies Process Flow Diagram II for the Cadillac WWTP 2007 Improvements."
+      }
+    ],
     "description": "Stantec process-flow drawing 0P1.02 for the 2007 Cadillac WWTP improvements. It maps return and waste activated sludge, equalization-basin drainage, ferric-chloride feed and aeration-tank connections."
   },
   {
@@ -49,6 +69,16 @@
     "pages": 1,
     "size": 399431,
     "sha256": "39a4c7e03888aafe0d9d887a066e5996f155e30280d13737cd17776a1366c70a",
+    "matchingSources": [
+      {
+        "name": "0P1-03_Process_Flow_2017.pdf",
+        "url": "/process-site-docs/matching-sources/0P1-03_Process_Flow_2017.pdf",
+        "pages": 1,
+        "size": 420227,
+        "sha256": "5d94ff48267a89d9d96d0e334d0d4a56c74e9bf7dbb3b6db1de3db4d36a506e3",
+        "relationship": "The supplied PDF has a different container hash but an identical 144-DPI page rendering. Its drawing title block identifies Process Flow Diagram III for the Cadillac WWTP 2007 Improvements."
+      }
+    ],
     "description": "Stantec process-flow drawing 0P1.03 for the 2007 Cadillac WWTP improvements. It documents process-service, sludge, air, chlorine-contact, sand-filter and influent-sewer connections."
   },
   {
@@ -192,6 +222,16 @@
     "pages": 9,
     "size": 4285743,
     "sha256": "12b51b03de98c50698094c994f87140091cd5ee88d7c660891dd3d41de8957dc",
+    "matchingSources": [
+      {
+        "name": "Plant_Brochure_2017.pdf",
+        "url": "/process-site-docs/matching-sources/Plant_Brochure_2017.pdf",
+        "pages": 9,
+        "size": 4307987,
+        "sha256": "7d23f992812fcd6c47753f9666093f99325c1dc5021743edae9abda37c0f027c",
+        "relationship": "All nine supplied pages render identically to this brochure at 144 DPI. The brochure does not print a 2017 issue date; its PDF metadata reports a 2013 creation date, so the supplied filename is retained without converting it into a 2017 event."
+      }
+    ],
     "description": "Nine-page historical Cadillac WWTP brochure with an aerial-photograph cover. It describes treatment performance and illustrates screw pumping, equalization, grit removal, primary and secondary treatment, rotating biological contactors, sand filtration, chlorination and solids handling."
   },
   {

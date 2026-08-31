@@ -108,6 +108,15 @@ type Event = {
   sources: Source[];
 };
 
+type MatchingSource = {
+  name: string;
+  url: string;
+  pages: number;
+  size: number;
+  sha256: string;
+  relationship: string;
+};
+
 type LibraryDocument = {
   id: string;
   name: string;
@@ -118,12 +127,15 @@ type LibraryDocument = {
   format?: string;
   pages?: number | null;
   description?: string;
+  matchingSources?: readonly MatchingSource[];
 };
 
 type LibrarySearchRecord = LibraryDocument & {
   archive: string;
   archiveId: string;
 };
+
+const processSiteRecords = processSiteDocuments as readonly (LibraryDocument & { size: number })[];
 
 const libraryArchives: { id: string; label: string; documents: readonly LibraryDocument[] }[] = [
   { id: "dmr", label: "DMR & QA", documents: dmrDocuments },
@@ -1987,7 +1999,8 @@ export default function Home() {
   const globalSearchResults = globalSearchTerms.length === 0
     ? []
     : librarySearchRecords.filter((document) => {
-        const searchable = `${document.name} ${document.year ?? ""} ${document.category ?? ""} ${document.type} ${document.format ?? ""} ${document.description ?? ""} ${document.archive}`.toLowerCase();
+        const matchingSourceNames = document.matchingSources?.map((source) => source.name).join(" ") ?? "";
+        const searchable = `${document.name} ${matchingSourceNames} ${document.year ?? ""} ${document.category ?? ""} ${document.type} ${document.format ?? ""} ${document.description ?? ""} ${document.archive}`.toLowerCase();
         return globalSearchTerms.every((term) => searchable.includes(term));
       });
   const visibleGlobalResults = globalSearchResults.slice(0, 100);
@@ -2047,11 +2060,12 @@ export default function Home() {
     const matchesQuery = !normalizedCorrespondenceQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedCorrespondenceQuery);
     return matchesType && matchesQuery;
   });
-  const processSiteTypes = ["All process and site records", ...Array.from(new Set(processSiteDocuments.map((document) => document.type)))];
+  const processSiteTypes = ["All process and site records", ...Array.from(new Set(processSiteRecords.map((document) => document.type)))];
   const normalizedProcessSiteQuery = processSiteQuery.trim().toLowerCase();
-  const filteredProcessSiteDocuments = processSiteDocuments.filter((document) => {
+  const filteredProcessSiteDocuments = processSiteRecords.filter((document) => {
     const matchesType = processSiteType === "All process and site records" || document.type === processSiteType;
-    const matchesQuery = !normalizedProcessSiteQuery || `${document.name} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedProcessSiteQuery);
+    const matchingSourceNames = document.matchingSources?.map((source) => source.name).join(" ") ?? "";
+    const matchesQuery = !normalizedProcessSiteQuery || `${document.name} ${matchingSourceNames} ${document.year} ${document.type} ${document.description}`.toLowerCase().includes(normalizedProcessSiteQuery);
     return matchesType && matchesQuery;
   });
   const formSubmissionTypes = ["All portal submissions", ...Array.from(new Set(formSubmissionDocuments.map((document) => document.type)))];
@@ -2541,7 +2555,7 @@ export default function Home() {
 
         <section className="document-library permit-library" aria-labelledby="process-site-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CATEGORY 10 · PROCESS &amp; SITE DOCUMENTS · VERIFIED AUGUST 28, 2026</p><h2 id="process-site-library-title">Search {processSiteDocuments.length} verified process and site records</h2></div>
+            <div><p className="eyebrow">CATEGORY 10 · PROCESS &amp; SITE DOCUMENTS · VERIFIED AUGUST 31, 2026</p><h2 id="process-site-library-title">Search {processSiteRecords.length} verified process and site records</h2></div>
             <p>This category preserves plant process-flow drawings, site and sewer-line plans, operational digester and flow data, facility history and mapping, a historical plant brochure, classification material and county records concerning landfill infrastructure. Every supplied page was checked through its text layer or OCR; exact copies already indexed elsewhere are reused through site-wide search.</p>
           </div>
           <div className="reference-summary" aria-label="Process and site documents archive audit summary">
@@ -2567,6 +2581,21 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
+                {document.matchingSources?.length ? (
+                  <div className="archive-matching-sources">
+                    <strong>{document.matchingSources.length === 1 ? "Matching supplied source" : "Matching supplied sources"}</strong>
+                    {document.matchingSources.map((source) => (
+                      <div className="archive-matching-source" key={source.sha256}>
+                        <div>
+                          <span title={source.name}>{formatSourceDisplayName(source.name, "PDF", true)}</span>
+                          <small>{source.pages} {source.pages === 1 ? "page" : "pages"} · {formatBytes(source.size)} · independently hashed</small>
+                          <p>{source.relationship}</p>
+                        </div>
+                        <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(source.url)} target="_blank" rel="noreferrer">Open supplied file<ExternalLink /></a></Button>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
                 <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
               </article>
             ))}

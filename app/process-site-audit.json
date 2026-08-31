@@ -1,25 +1,29 @@
 {
   "stats": {
-    "sourceFilesReviewed": 20,
-    "sourcePdfRecords": 20,
-    "reviewedPages": 66,
+    "sourceFilesReviewed": 24,
+    "sourcePdfRecords": 24,
+    "reviewedPages": 78,
     "sourceOcrPages": 28,
     "sourceOcrPagesWithText": 25,
     "manuallyVerifiedMapAndAerialPages": 4,
     "exactDuplicateGroupsWithinSource": 0,
-    "renderIdenticalByteDifferentGroupsWithinSource": 0,
+    "renderIdenticalByteDifferentGroupsWithinSource": 4,
     "crossCategoryCopiesReferencedElsewhere": 3,
     "finalDistinctRecords": 17,
-    "publishedPages": 55,
+    "matchingSourceFilesPreserved": 4,
+    "matchingSourcePagesPreserved": 12,
+    "sourceRenderMatchedPages": 12,
+    "publishedPages": 67,
     "publishedOcrPages": 25,
     "publishedOcrPagesWithText": 22,
-    "publishedBytes": 16698160,
+    "publishedBytes": 22184997,
     "duplicateLikeLabelsRemoved": 3
   },
   "methods": [
-    "SHA-256 comparison within the supplied folder and against every published evidence catalog",
-    "Page-count, PDF metadata and embedded-text review for all 62 supplied pages",
+    "SHA-256 comparison within the supplied folders and against every published evidence catalog",
+    "Page-count, PDF metadata and embedded-text review for all 78 supplied pages",
     "OCR on every scan-only or sparse-text page, with visual inspection of low-text map and aerial pages",
+    "Page-by-page 72-DPI and 144-DPI rendered-pixel comparison for the four August 31 matching-source files",
     "Normalized extracted-text and rendered-page sequence comparison for byte-different candidates",
     "Conservative retention of compiled map packages, civic minutes and distinct engineering sheets"
   ],
@@ -41,12 +45,46 @@
       "reason": "Visual inspection confirmed that the pages are intact topographic maps and aerial imagery. They are not failed OCR or corrupt files."
     },
     {
+      "name": "Four August 31 matching-source files",
+      "reason": "The supplied brochure and three process-flow PDFs have different container hashes but pixel-identical page sequences to four established records at both 72 and 144 DPI. Their exact supplied bytes and filenames are preserved as searchable matching-source links on the canonical cards. The drawings identify the 2007 improvements in their title blocks, and the brochure does not state a 2017 issue date, so no second evidence record or 2017 chronology event was created."
+    },
+    {
       "name": "Undated brochure",
       "reason": "The PDF creation timestamp is preserved in the audit metadata but is not treated as the brochure's publication date because no issue date is printed in the record."
     },
     {
       "name": "2025–2026 wastewater asset-management report",
       "reason": "The three-page July 2026 report has a distinct hash and content sequence. It is retained separately from the July 24 MiWaters submission because the report contains the underlying activity, inventory and financial figures while the portal record preserves submission history and attachment context."
+    }
+  ],
+  "matchingSources": [
+    {
+      "source": "Plant_Brochure_2017.pdf",
+      "sha256": "7d23f992812fcd6c47753f9666093f99325c1dc5021743edae9abda37c0f027c",
+      "pages": 9,
+      "canonical": "process-site-009-12b51b03de98",
+      "basis": "All nine pages have identical 72-DPI and 144-DPI rendered pixels."
+    },
+    {
+      "source": "0P1-01_Process_Flow_2017.pdf",
+      "sha256": "8721a72f2a3d3080bdcc623ef6580120071357ec2f7baa8abd65b58e9270d4c7",
+      "pages": 1,
+      "canonical": "process-site-001-d5e68ea065b6",
+      "basis": "The page has identical 72-DPI and 144-DPI rendered pixels."
+    },
+    {
+      "source": "0P1-02_Process_Flow_2017.pdf",
+      "sha256": "bf088add129b0835b39d5ccab36c81d2067c8b4ba51814c912832932e2a9a014",
+      "pages": 1,
+      "canonical": "process-site-003-be54bb8561dd",
+      "basis": "The page has identical 72-DPI and 144-DPI rendered pixels."
+    },
+    {
+      "source": "0P1-03_Process_Flow_2017.pdf",
+      "sha256": "5d94ff48267a89d9d96d0e334d0d4a56c74e9bf7dbb3b6db1de3db4d36a506e3",
+      "pages": 1,
+      "canonical": "process-site-004-39a4c7e03888",
+      "basis": "The page has identical 72-DPI and 144-DPI rendered pixels."
     }
   ],
   "reused": [

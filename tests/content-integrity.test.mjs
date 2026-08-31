@@ -226,17 +226,29 @@ test("process and site archive audits every page and reuses only verified cross-
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "process-site-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "process-site-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 20);
-  assert.equal(audit.stats.reviewedPages, 66);
+  assert.equal(audit.stats.sourceFilesReviewed, 24);
+  assert.equal(audit.stats.reviewedPages, 78);
   assert.equal(audit.stats.sourceOcrPages, 28);
   assert.equal(audit.stats.manuallyVerifiedMapAndAerialPages, 4);
   assert.equal(audit.stats.finalDistinctRecords, 17);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 3);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
-  assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
+  assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 4);
+  assert.equal(audit.stats.matchingSourceFilesPreserved, 4);
+  assert.equal(audit.stats.matchingSourcePagesPreserved, 12);
   assert.equal(audit.stats.duplicateLikeLabelsRemoved, 3);
   assert.equal(catalog.some((row) => /~\d+|^(?:duplicates?|copy)[-_ ]/i.test(row.name)), false);
+
+  const matchingSources = catalog.flatMap((row) => row.matchingSources ?? []);
+  assert.equal(matchingSources.length, 4);
+  for (const source of matchingSources) {
+    const sourcePath = path.join(publicDirectory, ...source.url.slice(1).split("/"));
+    const sourceStat = await stat(sourcePath);
+    const sourceBytes = await readFile(sourcePath);
+    assert.equal(sourceStat.size, source.size, `${source.name} size mismatch`);
+    assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), source.sha256, `${source.name} hash mismatch`);
+  }
 });
 
 test("online form submissions retain real revisions and exclude only verified duplicate exports", async () => {

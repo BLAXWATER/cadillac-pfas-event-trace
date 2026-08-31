@@ -709,6 +709,33 @@ test("batch 12 reuses established records and retains the two distinct PFAS revi
   assert.match(audit.resolution, /two dated events/i);
 });
 
+test("batch 13 reuses all eleven exact IPP, NPDES, biosolids and laboratory records", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch13-leftovers-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+
+  assert.equal(audit.stats.receivedFiles, 11);
+  assert.equal(audit.stats.pdfPages, 41);
+  assert.equal(audit.stats.distinctInputHashes, 11);
+  assert.equal(audit.stats.exactDuplicateFilenameCopies, 0);
+  assert.equal(audit.stats.exactExistingHashes, 11);
+  assert.equal(audit.stats.exactExistingFileInstances, 11);
+  assert.equal(audit.stats.publishedAssetHashMatches, 11);
+  assert.equal(audit.stats.manualReviewPages, 41);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.retainedDistinctRecords, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.exactExistingRecords.length, 11);
+
+  for (const exact of audit.exactExistingRecords) {
+    const record = catalogRows.find((row) => row.sha256 === exact.sha256);
+    assert.ok(record, exact.sha256);
+    assert.match(exact.match, new RegExp(record.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"));
+  }
+
+  assert.match(audit.resolution, /No redundant asset, catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /no source PDF was modified/i);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

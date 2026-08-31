@@ -112,7 +112,16 @@
     "latestBatch12RenderIdenticalExistingVariants": 1,
     "latestBatch12ManualReviewPages": 16,
     "latestBatch12RecordsAdded": 2,
-    "latestBatch12TimelineEventsAdded": 2
+    "latestBatch12TimelineEventsAdded": 2,
+    "latestBatch13FilesReviewed": 11,
+    "latestBatch13PdfPagesReviewed": 41,
+    "latestBatch13DistinctInputHashes": 11,
+    "latestBatch13ExactExistingHashes": 11,
+    "latestBatch13PublishedAssetHashMatches": 11,
+    "latestBatch13ManualReviewPages": 41,
+    "latestBatch13BlankFirstPages": 0,
+    "latestBatch13RecordsAdded": 0,
+    "latestBatch13TimelineEventsAdded": 0
   },
   "methods": [
     "SHA-256 byte comparison within the supplied batch and against the live archive",
@@ -136,9 +145,14 @@
     "August 31 leftovers intake 09: all 31 supplied PDFs and 164 pages passed file-hash, byte-size, page-count and readability checks. Seventeen distinct hashes exactly match published records. Three byte-different TVS worksheet variants were rendered at 72 and 144 DPI and matched the established records page-for-page. The one remaining page was text-extracted and visually inspected before retention as secondary well context.",
     "August 31 leftovers intake 10: all 27 supplied PDFs and 154 pages passed file-hash, byte-size, page-count and readability checks. Twenty-two distinct hashes exactly match published records. The two unmatched Wexford Landfill SIU sheets were text-extracted, rendered at 72 and 144 DPI and matched the established one-page IPP record at both resolutions.",
     "August 31 leftovers intake 11: all 62 supplied PDFs and 371 pages passed file-hash, byte-size, page-count and readability checks. Forty-four distinct hashes exactly match published records; three additional TVS hashes reuse prior page-identical findings. The four remaining hashes were text-extracted and rendered in full, all 12 sparse-text pages received OCR, and the two 46-page voicemail packages matched page-for-page at both 72 and 144 DPI.",
-    "August 31 leftovers intake 12: all 13 supplied PDFs and 199 pages passed hash, byte-size, page-count and readability checks. Ten exact matches were reused; one sampling-guidance export matched an established record page-for-page at 72 and 144 DPI; the two remaining correspondence threads were rendered and inspected in full."
+    "August 31 leftovers intake 12: all 13 supplied PDFs and 199 pages passed hash, byte-size, page-count and readability checks. Ten exact matches were reused; one sampling-guidance export matched an established record page-for-page at 72 and 144 DPI; the two remaining correspondence threads were rendered and inspected in full.",
+    "August 31 leftovers intake 13: all 11 supplied PDFs and 41 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Every file exactly matches an established IPP, NPDES, biosolids or laboratory record, and no document begins with a blank page."
   ],
   "decisions": [
+    {
+      "name": "August 31 leftovers intake 13",
+      "reason": "Eleven supplied files resolve to eleven exact published hashes. Existing records and source binaries are reused without another asset, catalog card or timeline event; the source PDFs remain unchanged."
+    },
     {
       "name": "August 31 leftovers intake 12",
       "reason": "Thirteen files resolved to ten exact published records, one page-identical export and two distinct PFAS interim-review correspondence records. The distinct September and November records are retained with dated events; no source document was altered."

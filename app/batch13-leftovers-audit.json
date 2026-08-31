@@ -1,0 +1,85 @@
+{
+  "batch": "2026-08-31 leftovers intake 13",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 11 supplied files and all 41 pages.",
+    "Compared every input hash against every published evidence catalog before making a retention decision.",
+    "Re-hashed six current-tree assets and five immutable repository-history blobs; every published source binary matches its catalog SHA-256 value and the supplied file.",
+    "Rendered all 41 pages at 72 DPI and visually inspected the complete page sequence. No document begins with a blank page; the blank third page in the three-page 2023 public-notice verification export remains part of the established canonical binary."
+  ],
+  "stats": {
+    "receivedFiles": 11,
+    "pdfFiles": 11,
+    "pdfPages": 41,
+    "distinctInputHashes": 11,
+    "exactDuplicateFilenameCopies": 0,
+    "exactExistingHashes": 11,
+    "exactExistingFileInstances": 11,
+    "publishedAssetHashMatches": 11,
+    "manualReviewPages": 41,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 0,
+    "timelineEventsAdded": 0
+  },
+  "exactExistingRecords": [
+    {
+      "sha256": "46a9f809acfac89106b3a90a5b8a896e9848398434475fd41388287d601add05",
+      "match": "IPP record 112-46a9f809acfa",
+      "files": ["Public Notice of IPP Violation 2023.pdf"]
+    },
+    {
+      "sha256": "ce602598cbb51a963077c39418b7356757b9fd222f5397afe5934a015149fdfc",
+      "match": "IPP record 119-ce602598cbb5",
+      "files": ["Public Notice of IPP Violation 2024.pdf"]
+    },
+    {
+      "sha256": "b3595be5b94f7e9b7ba498f30f63c508fc8208d6838478e1c4f1e2f8006ae6bd",
+      "match": "NPDES record 128-b3595be5b94f",
+      "files": ["Public Notice Verification_Cadillac WWTP (1).pdf"]
+    },
+    {
+      "sha256": "8cb545bb27e33f11de14575bd8520f1cd9979566fa2b793841eb5211add7d94f",
+      "match": "NPDES record 108-8cb545bb27e3",
+      "files": ["Public Notice Verification_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "11a983d1f2ae7e7e8a4ae6955c466189010e2568ec762b14c5d226da57a20d7a",
+      "match": "NPDES record 057-11a983d1f2ae",
+      "files": ["QA QC Report - Individual Permit (1).pdf"]
+    },
+    {
+      "sha256": "662d72a03110f1b2d8c0647cbb3421547c8dca1d09231c787ca34ac3919ced9a",
+      "match": "NPDES record 032-662d72a03110",
+      "files": ["QA QC Report - Individual Permit.pdf"]
+    },
+    {
+      "sha256": "e2dbe3db29a7938d6b9abeeec16fc44a7d4287f139033ccd00477c5338fabe95",
+      "match": "NPDES record 143-e2dbe3db29a7",
+      "files": ["QA QC Report_Cadillac WWTP.pdf"]
+    },
+    {
+      "sha256": "7ed0e8623910facc4448720abab532f21c966ba2cd707f238e31ff5e58c9cf7c",
+      "match": "NPDES record 140-7ed0e8623910",
+      "files": ["RE Cadillac WWTP - Asset Management.pdf"]
+    },
+    {
+      "sha256": "6a2084774b73318fc31a4ed8ce89c1a9d81578a5b5d100fde8cde45cb8d28df7",
+      "match": "biosolids record 039-6a2084774b73",
+      "files": ["RE Cadillac WWTP - Facility Upgrade History.pdf"]
+    },
+    {
+      "sha256": "327868723b487bc87f6438e90c3e4cac092d966f77f2e54f57d9bb0767e04810",
+      "match": "IPP record 149-327868723b48",
+      "files": ["RE Cadillac WWTP Application Review - IPP.pdf"]
+    },
+    {
+      "sha256": "87163b17b978ef3ad9aeb3f2cfdd78552d84cb4ecba867f34737e36ca797fe3d",
+      "match": "lab record lab-027-87163b17b978",
+      "files": ["RE Cadillac WWTP NH4 Treatment Capacity.pdf"]
+    }
+  ],
+  "resolution": "All 11 supplied files are exact SHA-256 matches to established evidence records and their published source binaries. No redundant asset, catalog record or timeline event was added, and no source PDF was modified."
+}

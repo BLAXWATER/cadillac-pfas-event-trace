@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "0c5a67fa3a6315ffa869a35239a0bddb5a3b743ae3c187565ef970bd2d13b816",
+  "catalogFingerprint": "c3eb474bd19310760f3f35361bec46448c6331edf736cc1fe8593b0f50c15d55",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1510,
-    "verifiedRecords": 1510,
-    "pdfRecords": 1381,
-    "pdfPages": 19481,
+    "catalogRecords": 1511,
+    "verifiedRecords": 1511,
+    "pdfRecords": 1382,
+    "pdfPages": 19482,
     "imageRecords": 13,
     "embeddedTextPages": 15765,
-    "ocrPages": 3729,
+    "ocrPages": 3730,
     "ocrPagesWithText": 3392,
-    "manualReviewPages": 133,
+    "manualReviewPages": 134,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,7 +29,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 133,
+    "pagesReviewed": 134,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -460,6 +460,15 @@
         14,
         18,
         20
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "145-a85c4e499dec",
+      "name": "Property Measurement Photo Set — 1140 Plett Road.pdf",
+      "url": "/findings-docs/145-a85c4e499dec.pdf",
+      "pages": [
+        1
       ]
     },
     {

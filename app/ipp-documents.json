@@ -1882,5 +1882,29 @@
     "size": 115290,
     "sha256": "254ce9a192238ae8f2d1b45589bf6ab9220b4720b022b70fd7611a01626adab5",
     "description": "Nineteen-page EGLE Industrial Pretreatment Compliance Inspection Checklist for Cadillac WWTP, inspected August 26, 2021 and covering January 1, 2020 through August 26, 2021. It is distinct from the seven-page 2015 pretreatment pre-inspection report already preserved in this library."
+  },
+  {
+    "id": "158-05788837212e",
+    "name": "2015-05-14 - Pretreatment Compliance Inspection Interview Notes - Jill Edelbrock.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/eb9cd4c0506afd72d73a4d4ebd4ab1ffe97ab7f5/public/ipp-docs/158-05788837212e.pdf",
+    "year": "2015",
+    "type": "IPP compliance inspection interview notes",
+    "format": "PDF",
+    "pages": 6,
+    "size": 1117808,
+    "sha256": "05788837212e56136be5c723b97e92f59ee2494f034b363061655996c6260f5f",
+    "description": "Six-page handwritten DEQ Pretreatment Compliance Inspection interview form dated May 14, 2015. The record identifies inspectors Jill Edelbrock and Julie Lowe, the Cadillac WWTP representative, industrial-user issues, inspection and sampling practices, resources, procedures and the summary evaluation."
+  },
+  {
+    "id": "159-4158539aa924",
+    "name": "2015-05-14 - Pretreatment Compliance Inspection Interview Notes - Julie Lowe.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/eb9cd4c0506afd72d73a4d4ebd4ab1ffe97ab7f5/public/ipp-docs/159-4158539aa924.pdf",
+    "year": "2015",
+    "type": "IPP compliance inspection interview notes",
+    "format": "PDF",
+    "pages": 8,
+    "size": 1123127,
+    "sha256": "4158539aa92412ec1ebb75366253f80237c97c4dc63909aff32617f9ef0a242c",
+    "description": "Eight-page handwritten DEQ Pretreatment Compliance Inspection interview and worksheet set dated May 14, 2015. It documents industrial-user concerns, POTW impacts, inspection and sampling practices, file-review selections, the summary evaluation and monitoring and reporting worksheets."
   }
 ]

@@ -1,0 +1,115 @@
+{
+  "batch": "2026-08-31 laboratory and industrial pretreatment intake 21",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 32 supplied files and all 255 pages.",
+    "Rendered every page and visually inspected the complete 255-page sequence in eleven contact sheets; no corrupt, truncated or visually blank page was found.",
+    "Applied CUDA-accelerated OCR to all 49 scan-heavy pages. Every attempted page produced text and the mean OCR confidence was 0.9212.",
+    "Compared every supplied hash against every published evidence catalog and the established timeline assets.",
+    "Compared the alternate J17646 export with both established J17646 files page-by-page. All 23 normalized-text pages and all 23 rendered pages matched exactly, including identical dimensions and zero pixel-channel difference.",
+    "Retained only the two absent May 14, 2015 pretreatment inspection interview records. No source PDF was modified."
+  ],
+  "stats": {
+    "receivedFiles": 32,
+    "pdfFiles": 32,
+    "pdfPages": 255,
+    "distinctInputHashes": 30,
+    "exactDuplicateFilenameCopies": 2,
+    "exactExistingHashes": 27,
+    "exactExistingFileInstances": 29,
+    "renderIdenticalFileInstances": 1,
+    "establishedRecordsReused": 27,
+    "ocrPages": 49,
+    "ocrPagesWithText": 49,
+    "gpuOcrPages": 49,
+    "manualReviewPages": 255,
+    "verifiedBlankPages": 0,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 2,
+    "timelineEventsAdded": 1,
+    "timelineSourcesAdded": 2
+  },
+  "catalogMatches": [
+    { "name": "IP Issuance Letter_Cadillac WWTP.pdf", "recordId": "133-fa999dc2dbff", "sha256": "fa999dc2dbff654f82e19e07df24468a6d589833ba9a38f0d5c95a3ac8a2bd2f", "pages": 1, "size": 94406 },
+    { "name": "IPP 2022 News.pdf", "recordId": "096-9b10cbdd4dd3", "sha256": "9b10cbdd4dd32ea253b6da10c023d84a858bf27ebc15e72e951ab05562e284cd", "pages": 1, "size": 641163 },
+    { "name": "IPP Annual Report.pdf", "recordId": "146-84ec83b46691", "sha256": "84ec83b4669189f81579816f9a5dca8dc1e107c2894f2b5b0a3e1c5e95f1b86a", "pages": 1, "size": 57637 },
+    { "name": "IPP Local Limits PEL_MI0020257_9-30-2025.pdf", "recordId": "130-172fea22068c", "sha256": "172fea22068c04ccf7ade298d18bf326f5acaced2b90e156e4bf35d2df895c80", "pages": 25, "size": 249741 },
+    { "name": "IPP Local Limits Review.pdf", "recordId": "014-ac6f04ce7950", "sha256": "ac6f04ce7950dbf132c932ebeac1d0d5f6c4c5ed5fb317f32363f424fead4f94", "pages": 1, "size": 59080 },
+    { "name": "IPP modification 812023.pdf", "recordId": "100-20ef2ece7370", "sha256": "20ef2ece7370680cf4610028ed783d7f2f68c17fe65dd968fab9a0298bf0ec82", "pages": 2, "size": 462479 },
+    { "name": "IPP News Affidavit 2023.pdf", "recordId": "097-7026af6ab2e9", "sha256": "7026af6ab2e97eff836f2000c14b6d1ee3c2d1fb4117978f950eb757515a6e4a", "pages": 1, "size": 21403 },
+    { "name": "IPP Profile.pdf", "recordId": "013-3d6cd5e0a57b", "sha256": "3d6cd5e0a57bed064fbc15d56f0f82fe356b49671b70358a5222484ac0803013", "pages": 4, "size": 893152 },
+    { "name": "IPP Revision extension.pdf", "recordId": "147-b312f62b8aec", "sha256": "b312f62b8aecc9afef75feb9ecd41b7c7ebbcaebf46a1c6f1f51f94c8198af4b", "pages": 1, "size": 95752 },
+    { "name": "Issuance Letter_Cadillac WWTP.pdf", "recordId": "098-f70e63291723", "sha256": "f70e63291723e96231531c8de1e5298502a3fdd17784445c60e95eef1e35ad8a", "pages": 1, "size": 47593 },
+    { "name": "Issued Letter - Individual Permit.pdf", "recordId": "009-9f752432d74c", "sha256": "9f752432d74c976d301d4371effa65c0ed6b1e86a61a2b69a033745babe7d22e", "pages": 1, "size": 47992 },
+    { "name": "IU Form 1.pdf", "recordId": "012-4ef102885030", "sha256": "4ef1028850304c56dccfc0621482b4c0c62372f1e7dec26bdcd555fc21a7e027", "pages": 5, "size": 454914 },
+    { "name": "IU Form 2.pdf", "recordId": "011-9f84067f8dd2", "sha256": "9f84067f8dd2aa93d43e6e0c0777c3008e0d7df1cf37e8e0798c83c0d72e8612", "pages": 6, "size": 1233526 },
+    { "name": "IU Permit notes.pdf", "recordId": "142-8c68c6581b39", "sha256": "8c68c6581b39046203396e777370131f185943e00d298e923d929f291b823589", "pages": 6, "size": 142234 },
+    { "name": "J18036-1 UDS Level 2 Report Final Report.pdf", "recordId": "044-c1b8c7e5c6e0", "sha256": "c1b8c7e5c6e09b0163825967f7da96f8c3886424a77757774844f2178ac87a27", "pages": 22, "size": 2609068 },
+    { "name": "Kar Lab Biosolids 3-14-2016.pdf", "recordId": "037-bd137883a668", "sha256": "bd137883a668c306604973b5ed859ccbb37849737d9521c00566180dd10a5a7b", "pages": 8, "size": 205482 },
+    { "name": "Kar Lab Biosolids 9-12-2016.pdf", "recordId": "038-8fc0c2a99849", "sha256": "8fc0c2a99849158b52044fb4f3eb4db0a4b69c5e36af00571c51e8c4760c94dd", "pages": 3, "size": 174285 },
+    { "name": "Lab Data Fall 2020.pdf", "recordId": "076-549a6bfbc8f7", "sha256": "549a6bfbc8f77f8e47b3cc8ec2d92261f6e14ac6445b683616c532eb570f4264", "pages": 1, "size": 143619 },
+    { "name": "Lab&Hauling Data Spring 2023.pdf", "recordId": "086-9c34487aaf38", "sha256": "9c34487aaf38ce25ce770b72228e148137084ec9c2bbbbc5e5a0feda3590dff0", "pages": 1, "size": 223307 },
+    { "name": "List of Potential Mercury Sources 2022.pdf", "recordId": "lab-083-af3a3e92e3af", "sha256": "af3a3e92e3afac71f6fffbb6f041527bc439839a4fd638096f4481d2334b58e2", "pages": 1, "size": 38780 },
+    { "name": "LocalLimitsReview_Cadillac WWTP_4-19-2022 (1).pdf", "recordId": "081-5b8fd48b8b83", "sha256": "5b8fd48b8b832e7d8bfd06647a8929f6aa0620b73299665b5224b33ae2078bc2", "pages": 8, "size": 71086 },
+    { "name": "LocalLimitsReview_Cadillac WWTP_4-19-2022.pdf", "recordId": "087-1b7c809dc7c5", "sha256": "1b7c809dc7c5ebcfdb34422ff54631f5f8638f718a53b245f7f4c22b589611e6", "pages": 2, "size": 58251 },
+    { "name": "Low Ph notice by City May 16 2016.pdf", "recordId": "023-79f44c921f97", "sha256": "79f44c921f974e46edbe3d32a876051cd9b9e8702431aef7537df689affc4525", "pages": 1, "size": 47161 },
+    { "name": "Map of WWTP-plus....pdf", "recordId": "lab-073-baec26cc8733", "sha256": "baec26cc87331a0de5493b2b214b89dde07a912d5d88e97f1589adbf670d4c64", "pages": 3, "size": 1140282 }
+  ],
+  "timelineReportMatches": [
+    {
+      "canonical": "/docs/2018-10-03-j17646-leachate.pdf",
+      "canonicalSha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6",
+      "pages": 23,
+      "files": [
+        { "name": "J17646-1 UDS Level 2 Report Final Report (Leachate) (1).pdf", "sha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6", "classification": "exact SHA-256 match" },
+        { "name": "J17646-1 UDS Level 2 Report Final Report (Leachate).pdf", "sha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6", "classification": "exact SHA-256 match" },
+        { "name": "J17646-1 UDS Level 2 Report Final Report.pdf", "sha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6", "classification": "exact SHA-256 match" },
+        { "name": "J17646-1 UDS Level 2 Report Final Report- TestAmerica analytical report on leachate samples collected 10-3-2018-This is the report that confirmed Wexford as the City's PFAS source.pdf", "sha256": "b95f6b9b609f75943f1cb988aa64e83109a9dd109050380a9d21534af49138ba", "classification": "all 23 normalized-text and rendered pages match the established report exactly" }
+      ]
+    },
+    {
+      "canonical": "/docs/2018-11-05-j17993-effluent.pdf",
+      "canonicalSha256": "49ac94be99a95ad5ba68ded294499ff934ffefbafc6a2fa6429f4554e60e39ff",
+      "pages": 21,
+      "files": [
+        { "name": "J17993-1 UDS Level 2 Report Final Report.pdf", "sha256": "49ac94be99a95ad5ba68ded294499ff934ffefbafc6a2fa6429f4554e60e39ff", "classification": "exact SHA-256 match" }
+      ]
+    },
+    {
+      "canonical": "/docs/2019-06-04-j19915-effluent.pdf",
+      "canonicalSha256": "47929ba9f41a9dcd5f3d5d3b9a5d5f63dbb3fcbc5b00dc74e81a0d550e8666fd",
+      "pages": 22,
+      "files": [
+        { "name": "J19915-1 UDS Level 2 Report Final Report.pdf", "sha256": "47929ba9f41a9dcd5f3d5d3b9a5d5f63dbb3fcbc5b00dc74e81a0d550e8666fd", "classification": "exact SHA-256 match" }
+      ]
+    }
+  ],
+  "retainedRecords": [
+    {
+      "id": "158-05788837212e",
+      "sourceName": "Interview Jill Notes.pdf",
+      "sha256": "05788837212e56136be5c723b97e92f59ee2494f034b363061655996c6260f5f",
+      "pages": 6,
+      "size": 1117808,
+      "asset": "/ipp-docs/158-05788837212e.pdf",
+      "preview": "/source-previews/158-05788837212e.jpg",
+      "gpuOcrPages": 6,
+      "meanOcrConfidence": 0.9096
+    },
+    {
+      "id": "159-4158539aa924",
+      "sourceName": "Interview Julie Notes.pdf",
+      "sha256": "4158539aa92412ec1ebb75366253f80237c97c4dc63909aff32617f9ef0a242c",
+      "pages": 8,
+      "size": 1123127,
+      "asset": "/ipp-docs/159-4158539aa924.pdf",
+      "preview": "/source-previews/159-4158539aa924.jpg",
+      "gpuOcrPages": 8,
+      "meanOcrConfidence": 0.9025
+    }
+  ],
+  "resolution": "All 32 supplied files and all 255 pages are accounted for. Twenty-nine file instances are exact established sources, the alternate J17646 export is a page-identical re-export, and the two distinct May 14, 2015 interview records are retained in the IPP library and chronological event trace. No redundant report copy was added, and no source PDF was modified."
+}

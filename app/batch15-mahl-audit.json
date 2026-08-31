@@ -1,0 +1,172 @@
+{
+  "batch": "2026-08-31 MAHL and SVN-01952 intake 15",
+  "sourceFolder": "C:/Users/casey/AppData/Local/Temp",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 15 supplied files and all 897 pages.",
+    "Read embedded text from every page and applied OCR to the 53 pages with fewer than 40 normalized embedded characters; all 897 pages completed without a manual-review failure.",
+    "Compared every input hash against every published evidence catalog, then compared normalized selected text and sequence-preserving rendered-page fingerprints for every byte-different candidate.",
+    "Rendered and visually inspected the complete 897-page sequence in 36 contact sheets; every document begins with a substantive first page and no missing, corrupt or truncated page was found.",
+    "Reused nine established evidence records because every supplied file is either an exact SHA-256 match or a byte-different export that renders identically page-for-page to its established record."
+  ],
+  "stats": {
+    "receivedFiles": 15,
+    "pdfFiles": 15,
+    "pdfPages": 897,
+    "distinctInputHashes": 14,
+    "exactDuplicateFilenameCopies": 1,
+    "exactExistingHashes": 3,
+    "exactExistingFileInstances": 4,
+    "renderIdenticalExistingVariants": 11,
+    "renderIdenticalFileInstances": 11,
+    "establishedRecordsReused": 9,
+    "ocrPages": 53,
+    "manualReviewPages": 897,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 0,
+    "timelineEventsAdded": 0
+  },
+  "establishedRecords": [
+    {
+      "match": "compliance record 028-b0b93d67059d",
+      "canonicalSha256": "b0b93d67059dee138acc7035d49c32af3c59864f084741f5ad9eab9a84b32687",
+      "canonicalPages": 3,
+      "files": [
+        {
+          "name": "2025-10-13 Follow-up to VN-012230.pdf",
+          "sha256": "81c9d85c08b00d3c4dce3a1265f3a500b437365a793052c7f0ac7341e0af2bdc",
+          "classification": "render-identical export"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 125-9e67bc822d9c",
+      "canonicalSha256": "9e67bc822d9c4d1cb10b5dc98baa5e04010274e897af5555c18b3be1268a9133",
+      "canonicalPages": 132,
+      "files": [
+        {
+          "name": "854440 Cadillac MAHL Report April 2025 - Final Combined.pdf",
+          "sha256": "aefce325d1bf1f4c09d214fbeeeca45148f2bd9e06e495d00b009febab433e5e",
+          "classification": "render-identical export"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 140-3db93feeaf81",
+      "canonicalSha256": "3db93feeaf816931a89a2ee36526651eafa9d4de1dad6aef63f8cc3cc106f94c",
+      "canonicalPages": 135,
+      "files": [
+        {
+          "name": "Cadillac MAHL Correspondence - 2025-04-16.pdf",
+          "sha256": "3db93feeaf816931a89a2ee36526651eafa9d4de1dad6aef63f8cc3cc106f94c",
+          "classification": "exact SHA-256 match"
+        },
+        {
+          "name": "RE_ Cadillac MAHL.pdf",
+          "sha256": "8a6c2414da19c0d9f06a9daa949fb6bacd017c1fc366ab611542d12cf0dc3f2f",
+          "classification": "render-identical export"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 007-9aecbfcf4abc",
+      "canonicalSha256": "9aecbfcf4abc8de85cafd1c9a9287e683a62585771316b3ffcfb2cbd864d06f5",
+      "canonicalPages": 204,
+      "files": [
+        {
+          "name": "Cadillac MAHL.pdf",
+          "sha256": "78b309028003e6bc9badf9f74ed4e79b801923eff1d5a980bc1079f3dc3c2a79",
+          "classification": "render-identical export"
+        },
+        {
+          "name": "EGLE MAHL Comments - 2025-03-05.pdf",
+          "sha256": "9aecbfcf4abc8de85cafd1c9a9287e683a62585771316b3ffcfb2cbd864d06f5",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 138-391f5d6263f7",
+      "canonicalSha256": "391f5d6263f706bdf4068d8f0d8f374d45bf3d8d235b8007ce8c8510379df0c9",
+      "canonicalPages": 5,
+      "files": [
+        {
+          "name": "Cadillac WWTP - MAHL 2026.pdf",
+          "sha256": "204b1c07cc2e3eae8359f370efa41b4a0404674d3e87f8af8c158b0606da2d50",
+          "classification": "render-identical export"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 133-7cdb38eef808",
+      "canonicalSha256": "7cdb38eef808c8bde030130a9e25691bdd2bb5715dc7d756ed3eea311b4b446e",
+      "canonicalPages": 1,
+      "files": [
+        {
+          "name": "Cadillac WWTP MAHL 2026 vers 2 comments 5-13-26_COPY.pdf",
+          "sha256": "3699eb2fb907973953aaaef3a55717fe52ebe6fd7d813119ab5cd0d08e1c4b4f",
+          "classification": "render-identical export"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 151-774fbfdfab32",
+      "canonicalSha256": "774fbfdfab32e0b3f346b9093d6c9420471c82daca8a5146bc0233d088b38249",
+      "canonicalPages": 3,
+      "files": [
+        {
+          "name": "EGLE MAHL Comments - 2025-01-21.pdf",
+          "sha256": "91e1ee74ccaaddabd1ad6c16f00b8f12de876252b749e18eb5d3824e88b7d242",
+          "classification": "render-identical export"
+        },
+        {
+          "name": "RE_ Cadillac MAHL revisions.pdf",
+          "sha256": "5710579ac3677f5609d878f2fb90200d245234a967dd240d6bbf36b2e473c1de",
+          "classification": "render-identical export"
+        }
+      ]
+    },
+    {
+      "match": "compliance record 012-16dae2e386d4",
+      "canonicalSha256": "16dae2e386d4a6ca3242cda43d4dd4b5abe27dfd2178b0dcd5bd0767eb34941d",
+      "canonicalPages": 16,
+      "files": [
+        {
+          "name": "EGLE WRD Correspondence_  SVN-01952_Cadillac WWTP.pdf",
+          "sha256": "16dae2e386d4a6ca3242cda43d4dd4b5abe27dfd2178b0dcd5bd0767eb34941d",
+          "classification": "exact SHA-256 match"
+        },
+        {
+          "name": "EGLE WRD Correspondence_  SVN-01952_Cadillac WWTP_COPY.pdf",
+          "sha256": "04d596bd363f978f2e834fe5b63c769fd436c8a0a7efdd6f023530cb7ca4fbe2",
+          "classification": "render-identical export"
+        },
+        {
+          "name": "SVN-01952 EGLE Correspondence and Attachment - 2026-05-21-22 - MiEnviro primary.pdf",
+          "sha256": "7db46990afdd8f02211b43fa025ca1e4f91d580c8e8e1331f86c0bca6a335d31",
+          "classification": "render-identical export"
+        },
+        {
+          "name": "SVN-01952 EGLE Correspondence and Attachment - 2026-05-21-22 - Site 15637 copy.pdf",
+          "sha256": "16dae2e386d4a6ca3242cda43d4dd4b5abe27dfd2178b0dcd5bd0767eb34941d",
+          "classification": "exact SHA-256 match and intra-batch duplicate"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 120-f1e208e42d04",
+      "canonicalSha256": "f1e208e42d04fd6dafd9241d7be4cf01cc653fa7439366445c06d4676ac52225",
+      "canonicalPages": 8,
+      "files": [
+        {
+          "name": "RE_ Cadillac MAHL - December 2024.pdf",
+          "sha256": "b3580cc2bdd44dc6339285702b837febd955a09148994981e60db4e1cb71c16d",
+          "classification": "render-identical export"
+        }
+      ]
+    }
+  ],
+  "resolution": "All 15 supplied files are accounted for by nine established evidence records. Four file instances are exact SHA-256 matches and eleven are byte-different exports with identical normalized text and page-for-page renders. No redundant asset, catalog record or timeline event was added, and no source PDF was modified."
+}

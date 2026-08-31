@@ -785,6 +785,44 @@ test("batch 14 reuses eighteen exact NPDES records and retains one Plett Road ph
   assert.match(audit.resolution, /No source PDF was modified/i);
 });
 
+test("batch 15 reuses nine established MAHL and SVN-01952 records", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch15-mahl-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+
+  assert.equal(audit.stats.receivedFiles, 15);
+  assert.equal(audit.stats.pdfPages, 897);
+  assert.equal(audit.stats.distinctInputHashes, 14);
+  assert.equal(audit.stats.exactDuplicateFilenameCopies, 1);
+  assert.equal(audit.stats.exactExistingHashes, 3);
+  assert.equal(audit.stats.exactExistingFileInstances, 4);
+  assert.equal(audit.stats.renderIdenticalFileInstances, 11);
+  assert.equal(audit.stats.establishedRecordsReused, 9);
+  assert.equal(audit.stats.ocrPages, 53);
+  assert.equal(audit.stats.manualReviewPages, 897);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.retainedDistinctRecords, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.establishedRecords.length, 9);
+  assert.equal(
+    audit.stats.exactExistingFileInstances + audit.stats.renderIdenticalFileInstances,
+    audit.stats.receivedFiles,
+  );
+
+  const suppliedFiles = audit.establishedRecords.flatMap((group) => group.files);
+  assert.equal(suppliedFiles.length, audit.stats.receivedFiles);
+  assert.equal(new Set(suppliedFiles.map((file) => file.sha256)).size, audit.stats.distinctInputHashes);
+
+  for (const group of audit.establishedRecords) {
+    const record = catalogRows.find((row) => row.sha256 === group.canonicalSha256);
+    assert.ok(record, group.canonicalSha256);
+    assert.equal(record.pages, group.canonicalPages);
+    assert.match(group.match, new RegExp(record.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"));
+  }
+
+  assert.match(audit.resolution, /No redundant asset, catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /no source PDF was modified/i);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

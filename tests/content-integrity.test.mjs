@@ -389,7 +389,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
     true,
   );
   assert.equal(
-    supplementalCatalog.some((row) => row.sha256 === "b131111d78281ba07986361cb6e16ea8d4e41418e275f07f1fda815f3537ed55" && row.type === "County financial audit"),
+    supplementalCatalog.some((row) => row.sha256 === "b131111d78289b588bf5b2a7d616e51f3d62ab8f31faeb2979729f32b70c03c3" && row.type === "County financial audit"),
     true,
   );
   assert.equal(
@@ -434,6 +434,35 @@ test("biosolids archive audit preserves distinct records and suppresses only ver
   assert.equal(catalog.some((row) => /duplicate/i.test(row.name)), false);
   assert.equal(catalog.filter((row) => row.type === "Incident / spill note").length, 1);
   assert.equal(catalog.some((row) => /22,000 Gallons/i.test(row.name)), true);
+});
+
+test("batch 06 replay excludes only verified existing evidence and repairs catalog metadata", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch06-intake-audit.json"), "utf8"));
+  const biosolidsCatalog = JSON.parse(await readFile(path.join(appDirectory, "biosolids-documents.json"), "utf8"));
+  const supplementalCatalog = JSON.parse(await readFile(path.join(appDirectory, "supplemental-documents.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 4);
+  assert.equal(audit.stats.pdfPages, 141);
+  assert.equal(audit.stats.retainedDistinctFiles, 0);
+  assert.equal(audit.stats.excludedDuplicateFiles, 4);
+  assert.equal(audit.stats.exactByteDuplicates, 2);
+  assert.equal(audit.stats.renderIdenticalByteDifferentDuplicates, 2);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.deepEqual(
+    audit.excludedDuplicates.map((row) => row.pages),
+    [112, 2, 16, 11],
+  );
+  assert.equal(
+    biosolidsCatalog.some((row) => row.id === "052-760656b79f1f"
+      && row.name === "Cadillac WWTP Septage Information.pdf"
+      && row.year === "2012"),
+    true,
+  );
+  assert.equal(
+    supplementalCatalog.some((row) => row.id === "133-b131111d7828"
+      && row.sha256 === "b131111d78289b588bf5b2a7d616e51f3d62ab8f31faeb2979729f32b70c03c3"),
+    true,
+  );
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

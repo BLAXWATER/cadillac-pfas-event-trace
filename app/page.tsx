@@ -697,7 +697,7 @@ const events: Event[] = [
     title: "DEQ opens a six-facility PFAS source review",
     finding: "DEQ asks Cadillac to verify possible PFAS pathways at AAR, Rec Boat, Michigan Rubber Products, Avon Automotive, ARVCO and Hutchinson. The preserved thread includes Cadillac's September responses and DEQ's September 20 acknowledgement that review would continue.",
     significance: "Documents the agency's detailed follow-up between the interim source-screening submission and the later sampling direction without treating a survey or SDS review as an analytical result.",
-    sources: [archivedSource("2018-09-20 - PFAS Interim Report Follow-Up Questions and City Response.pdf", "/correspondence-docs/corr-041-7797237d5b67.pdf", 4, "Four-page City/DEQ thread preserving the August 27 questions, September responses and September 20 acknowledgement.", {
+    sources: [archivedSource("2018-09-20 - PFAS Interim Report Follow-Up Questions and City Response.pdf", "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/623d9abbdd9aa2dd388da68e3e95c23e59c31387/public/correspondence-docs/corr-041-7797237d5b67.pdf", 4, "Four-page City/DEQ thread preserving the August 27 questions, September responses and September 20 acknowledgement.", {
       eventStamp: "2018-08-27 16:04 · zone not stated",
       basis: "Sent time printed on the initiating DEQ email",
       note: "The event uses the initiating review request. The same record preserves subsequent replies through September 20; the PDF provides no reliable embedded creation timestamp.",
@@ -735,7 +735,7 @@ const events: Event[] = [
     title: "DEQ directs Avon PFAS sampling and landfill follow-up",
     finding: "DEQ states that Avon Automotive should be sampled as a probable source based on the reviewed Dyneon information, asks Cadillac for the sampling schedule and seeks clarification about Rec Boat process wastewater. The same exchange records continued landfill evaluation; Cadillac's inline response says bottles were ordered and reports that the landfill had not yet provided a treatment plan.",
     significance: "Provides the agency's dated rationale and requested next steps between the leachate result and the November sampling and summary-report records.",
-    sources: [archivedSource("2018-11-01 - Avon PFAS Sampling Direction and Landfill Follow-Up.pdf", "/correspondence-docs/corr-042-c73c0b45e14a.pdf", 6, "Six-page City/DEQ thread containing the November 1 sampling direction, schedule request and contemporaneous inline response.", {
+    sources: [archivedSource("2018-11-01 - Avon PFAS Sampling Direction and Landfill Follow-Up.pdf", "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/623d9abbdd9aa2dd388da68e3e95c23e59c31387/public/correspondence-docs/corr-042-c73c0b45e14a.pdf", 6, "Six-page City/DEQ thread containing the November 1 sampling direction, schedule request and contemporaneous inline response.", {
       eventStamp: "2018-11-01 15:06 · zone not stated",
       basis: "Sent time printed on the DEQ direction email",
       note: "The event uses the agency's 15:06 message. Cadillac's inline reply is timestamped 15:27:23; the PDF provides no reliable embedded creation timestamp.",

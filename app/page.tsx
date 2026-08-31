@@ -391,6 +391,31 @@ const events: Event[] = [
   },
   {
     year: "2015",
+    date: "2015-05-14",
+    isoDate: "2015-05-14",
+    time: noTime,
+    timeBasis: "Inspection date written on both interview records",
+    phase: "Pretreatment compliance inspection",
+    kind: "compliance",
+    category: "04 · Industrial pretreatment",
+    title: "DEQ interview records document Cadillac's pretreatment program",
+    finding: "Two handwritten inspection records document the May 14, 2015 pretreatment compliance interview. They identify industrial-user concerns, POTW impacts, permit oversight, inspection and sampling practices, staffing and training, file-review selections, enforcement procedures and summary evaluations.",
+    significance: "Preserves both inspectors' contemporaneous working records as separate evidence and distinguishes the May inspection date from the June 15 MiEnviro indexing date.",
+    sources: [
+      ippSource("Pretreatment Compliance Inspection Interview Notes — Jill Edelbrock.pdf", "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/eb9cd4c0506afd72d73a4d4ebd4ab1ffe97ab7f5/public/ipp-docs/158-05788837212e.pdf", 6, "Six-page DEQ interview form documenting facility contacts, industrial-user issues, program implementation and the summary evaluation.", {
+        eventStamp: "2015-05-14 · time not stated",
+        basis: "Inspection date written on the record",
+        note: "MiEnviro indexes the file on June 15, 2015; that repository date is retained as file history rather than substituted for the written inspection date.",
+      }),
+      ippSource("Pretreatment Compliance Inspection Interview Notes — Julie Lowe.pdf", "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/eb9cd4c0506afd72d73a4d4ebd4ab1ffe97ab7f5/public/ipp-docs/159-4158539aa924.pdf", 8, "Eight-page DEQ interview and worksheet set documenting industrial-user issues, program procedures, the summary evaluation and monitoring and reporting worksheets.", {
+        eventStamp: "2015-05-14 · time not stated",
+        basis: "Inspection date written on the record",
+        note: "MiEnviro indexes the file on June 15, 2015; that repository date is retained as file history rather than substituted for the written inspection date.",
+      }),
+    ],
+  },
+  {
+    year: "2015",
     date: "2015-12-18",
     isoDate: "2015-12-18",
     time: "12:30–13:30 · zone not stated",

@@ -1,0 +1,154 @@
+{
+  "batch": "2026-08-31 POTW oversight and pre-inspection intake 16",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 11 supplied files and all 171 pages.",
+    "Read embedded text from every page and applied OCR to the 13 pages without sufficient embedded text; the CUDA provider was unavailable on device 0, so OCR completed on the CPU fallback.",
+    "Rendered and visually inspected the complete 171-page sequence in seven contact sheets; all documents begin with substantive first pages and no corrupt, truncated or unintended blank page was found.",
+    "Compared every supplied hash against every published evidence catalog and identified nine file instances covered by eight established records, including one exact duplicate pair within the supplied batch.",
+    "Retained the two byte-distinct pre-inspection exports as separate compliance records, added one dated 2013 inspection event, and linked the 2014 export to the existing October 2014 event without modifying any source PDF."
+  ],
+  "stats": {
+    "receivedFiles": 11,
+    "pdfFiles": 11,
+    "pdfPages": 171,
+    "distinctInputHashes": 10,
+    "exactDuplicateFilenameCopies": 1,
+    "exactExistingHashes": 8,
+    "exactExistingFileInstances": 9,
+    "establishedRecordsReused": 8,
+    "ocrPages": 13,
+    "manualReviewPages": 171,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 2,
+    "timelineEventsAdded": 1,
+    "timelineSourcesAdded": 2
+  },
+  "establishedRecords": [
+    {
+      "match": "ipp record 004-e09cc490d763",
+      "canonicalSha256": "e09cc490d763e734c7b8735143d937dca6f188a620956820ebe0c5e94258b2e7",
+      "canonicalPages": 14,
+      "files": [
+        {
+          "name": "POTW_Oversight_Table (1).pdf",
+          "sha256": "e09cc490d763e734c7b8735143d937dca6f188a620956820ebe0c5e94258b2e7",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 059-5483e17d4cf8",
+      "canonicalSha256": "5483e17d4cf833ec76e7425c53ff55e6a8f04ed3b89468f797294ae7954b0967",
+      "canonicalPages": 7,
+      "files": [
+        {
+          "name": "POTW_Oversight_Table (2).pdf",
+          "sha256": "5483e17d4cf833ec76e7425c53ff55e6a8f04ed3b89468f797294ae7954b0967",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 064-1eda023f995f",
+      "canonicalSha256": "1eda023f995f2a768766f782a86976fb724d5946f098c1744c1d69e821836517",
+      "canonicalPages": 7,
+      "files": [
+        {
+          "name": "POTW_Oversight_Table (3).pdf",
+          "sha256": "1eda023f995f2a768766f782a86976fb724d5946f098c1744c1d69e821836517",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 048-2d39658b0266",
+      "canonicalSha256": "2d39658b026635458487db3d32f647e10b5c47d95e112ef57106aa2986ec8dd9",
+      "canonicalPages": 14,
+      "files": [
+        {
+          "name": "POTW_Oversight_Table 2019 (1).pdf",
+          "sha256": "2d39658b026635458487db3d32f647e10b5c47d95e112ef57106aa2986ec8dd9",
+          "classification": "exact SHA-256 match and intra-batch duplicate"
+        },
+        {
+          "name": "POTW_Oversight_Table 2019.pdf",
+          "sha256": "2d39658b026635458487db3d32f647e10b5c47d95e112ef57106aa2986ec8dd9",
+          "classification": "exact SHA-256 match and intra-batch duplicate"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 003-4d20ff2cea09",
+      "canonicalSha256": "4d20ff2cea097b75992e4e5cb2a8ed159e482c0867ad1d5b93ba7d7749a34002",
+      "canonicalPages": 14,
+      "files": [
+        {
+          "name": "POTW_Oversight_Table.pdf",
+          "sha256": "4d20ff2cea097b75992e4e5cb2a8ed159e482c0867ad1d5b93ba7d7749a34002",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "npdes record 101-f368ee6ddbb6",
+      "canonicalSha256": "f368ee6ddbb67e64f612c0344e62abba5a5d75f4178c8166fd6768ff2074daf5",
+      "canonicalPages": 7,
+      "files": [
+        {
+          "name": "PPN Correspondence_Cadillac WWTP.pdf",
+          "sha256": "f368ee6ddbb67e64f612c0344e62abba5a5d75f4178c8166fd6768ff2074daf5",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 002-3da57e8018fb",
+      "canonicalSha256": "3da57e8018fbdeb2474b90c359352df532d2b0d46fbb00e591841182ae0b49e2",
+      "canonicalPages": 7,
+      "files": [
+        {
+          "name": "Pre-Inspection Report (1).pdf",
+          "sha256": "3da57e8018fbdeb2474b90c359352df532d2b0d46fbb00e591841182ae0b49e2",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "pfas record 037-033678be7f9c",
+      "canonicalSha256": "033678be7f9c97b74016442a95a0389578b8d85c9df4049f289e9fe0f3efca71",
+      "canonicalPages": 70,
+      "files": [
+        {
+          "name": "Preliminary Effluent Limits (PEL)_MI0020257_Outfall 001_PFAS_08-01-2023.pdf",
+          "sha256": "033678be7f9c97b74016442a95a0389578b8d85c9df4049f289e9fe0f3efca71",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    }
+  ],
+  "retainedRecords": [
+    {
+      "id": "059-72e0d17a78ae",
+      "name": "Pre-Inspection ReportLS.pdf",
+      "asset": "/compliance-docs/059-72e0d17a78ae.pdf",
+      "pages": 10,
+      "size": 115896,
+      "sha256": "72e0d17a78aecc8973b70cded4666fbb4c7ba1a4df1d7f56a72f1b9ece7b5b67",
+      "classification": "distinct 2013 compliance evaluation pre-inspection record"
+    },
+    {
+      "id": "060-dd5fb72d29bd",
+      "name": "Pre-Inspection Report.pdf",
+      "asset": "/compliance-docs/060-dd5fb72d29bd.pdf",
+      "pages": 7,
+      "size": 118617,
+      "sha256": "dd5fb72d29bdd405b91cc9d69f4ecdbaedcb454afebd0968618bda7ba0078691",
+      "classification": "distinct 2014 compliance sampling pre-inspection export"
+    }
+  ],
+  "resolution": "All 11 supplied file instances are accounted for. Nine instances reuse eight established exact-hash records, including one intra-batch duplicate pair. Two distinct inspection exports were retained without changing their bytes: the 2013 report supports one dated timeline event, and the 2014 report is a second source for the existing October 2014 event. No source PDF was modified."
+}

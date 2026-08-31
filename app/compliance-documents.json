@@ -692,5 +692,29 @@
     "size": 588472,
     "sha256": "5b4f4183c1fcd732b0141499e6cd7e5a26c794cb41fbf2d96c1e41d1b2adc755",
     "description": "June 29, 2022 AQD inspection report for Wexford County Landfill. It documents the active landfill-gas collection and flare system, March 2022 NMOC testing at 32.33 Mg/year, continued compliance, and the inspector's statement that the 2018 deep-injection well ended leachate trucking and evaporation."
+  },
+  {
+    "id": "059-72e0d17a78ae",
+    "name": "2013-09-30 - Cadillac WWTP NPDES CEI Pre-Inspection Report.pdf",
+    "url": "/compliance-docs/059-72e0d17a78ae.pdf",
+    "year": "2013",
+    "type": "Compliance evaluation pre-inspection report",
+    "format": "PDF",
+    "pages": 10,
+    "size": 115896,
+    "sha256": "72e0d17a78aecc8973b70cded4666fbb4c7ba1a4df1d7f56a72f1b9ece7b5b67",
+    "description": "NPDES compliance evaluation pre-inspection record for the Cadillac WWTP inspection begun September 30 and completed October 4, 2013. It describes a generally well-operated plant while documenting aging infrastructure, deteriorated septage and equalization facilities, and the earlier use of the equalization basin for hauled County Landfill leachate."
+  },
+  {
+    "id": "060-dd5fb72d29bd",
+    "name": "2014-10-10 - Cadillac WWTP NPDES CSI-Toxics Pre-Inspection Report.pdf",
+    "url": "/compliance-docs/060-dd5fb72d29bd.pdf",
+    "year": "2014",
+    "type": "Compliance sampling pre-inspection report",
+    "format": "PDF",
+    "pages": 7,
+    "size": 118617,
+    "sha256": "dd5fb72d29bdd405b91cc9d69f4ecdbaedcb454afebd0968618bda7ba0078691",
+    "description": "Standalone NPDES CSI-Toxics pre-inspection database export completed October 10, 2014. It independently preserves the equalization-basin and hauled County Landfill leachate history documented in the related eight-page inspection package, and is retained because its file structure and page set are distinct."
   }
 ]

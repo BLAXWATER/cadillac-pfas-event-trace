@@ -8,16 +8,16 @@
     "Manual visual review of low-confidence aerial-image and rotated-table pages"
   ],
   "stats": {
-    "sourceFilesReviewed": 112,
+    "sourceFilesReviewed": 114,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 6,
     "analystAuthoredReportsExcluded": 4,
     "existingComplianceRecordsRetained": 2,
-    "finalDistinctRecords": 58,
-    "reviewedPages": 700,
+    "finalDistinctRecords": 60,
+    "reviewedPages": 717,
     "ocrPages": 308,
-    "publishedBytes": 60077889,
+    "publishedBytes": 60312402,
     "latestAllDocsIntakeFiles": 23,
     "latestAllDocsExactExistingRecords": 18,
     "latestAllDocsActualDuplicateCopiesSuppressed": 1,
@@ -25,7 +25,10 @@
     "latestDropboxIntakeFiles": 50,
     "latestDropboxExactExistingRecords": 47,
     "latestDropboxActualDuplicateCopiesSuppressed": 47,
-    "latestDropboxNewComplianceRecords": 3
+    "latestDropboxNewComplianceRecords": 3,
+    "latestPOTWOversightIntakeFiles": 11,
+    "latestPOTWOversightExactExistingFileInstances": 9,
+    "latestPOTWOversightNewComplianceRecords": 2
   },
   "decisions": [
     {

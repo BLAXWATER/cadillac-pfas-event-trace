@@ -1,0 +1,129 @@
+{
+  "batch": "2026-08-31 Cadillac and wastewater evidence intake 08",
+  "requestedSourceFolder": "C:/Users/casey/OneDrive/Desktop/8-30-26",
+  "analyzedSourceFolder": "C:/Users/casey/OneDrive/Desktop/Already in portal",
+  "preservedSourceFolder": "work/intake-2026-08-31-batch08-source",
+  "method": [
+    "Located all 17 supplied PDFs after the requested desktop folder was no longer present and copied them into a preserved intake working set before analysis.",
+    "Verified SHA-256, byte size, PDF readability and actual page count for every file and every page.",
+    "Read embedded text from every page, OCR-processed all 700 sparse-text pages, and rendered all 1,280 pages into sequence-preserving visual fingerprints.",
+    "Visually inspected the five pages that remained sparse after extraction: three legitimate SRF attachment dividers, one City of Novi site map and one Cadillac council-packet aerial image.",
+    "Compared byte hashes, normalized text, page counts, rendered-page sequences and perceptual page fingerprints against 2,593 prior audited records before duplicate or scope classification."
+  ],
+  "stats": {
+    "receivedFiles": 17,
+    "pdfFiles": 17,
+    "pdfPages": 1280,
+    "distinctInputHashes": 16,
+    "embeddedTextPages": 580,
+    "ocrPages": 700,
+    "ocrPagesWithText": 691,
+    "manualReviewPages": 5,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "exactExistingRecords": 6,
+    "duplicateDMRFilenames": 2,
+    "retainedDistinctRecords": 7,
+    "outOfScopeRecords": 2,
+    "timelineEventsAdded": 8
+  },
+  "exactExistingRecords": [
+    {
+      "name": "7155.pdf",
+      "match": "supplemental record 007-238cf9655b70",
+      "basis": "Exact SHA-256 and identical 9-page rendering."
+    },
+    {
+      "name": "421579.pdf",
+      "match": "Wexford record 027-b6b5e1c0bddb",
+      "basis": "Exact SHA-256 and identical 4-page rendering."
+    },
+    {
+      "name": "854440_Cadillac_Additional_Limits_June_2026.pdf",
+      "match": "PFAS record 080-d1b0ee101fc9",
+      "basis": "Exact SHA-256 and identical 346-page rendering."
+    },
+    {
+      "name": "Cadillac-Water-Supply-and-Waste-Water-Treatment-Systems-Fact-Sheet.pdf",
+      "match": "PFAS record 054-cd7547ee9370",
+      "basis": "Exact SHA-256 and identical 4-page rendering."
+    },
+    {
+      "name": "Council Packet 7-20-26.pdf",
+      "match": "supplemental record 010-1aba682de0b8",
+      "basis": "Exact SHA-256 and identical 62-page rendering."
+    },
+    {
+      "name": "Effluent.pdf",
+      "match": "PFAS record 084-e7eec959f10a",
+      "basis": "Exact SHA-256 and identical one-page rendering."
+    }
+  ],
+  "duplicateResolution": {
+    "files": [
+      "MI0020257_2026-06_DMR_original.pdf",
+      "Tert. Filter Fail. Notified Aaron Kline.-MI0020257_2026-06-01_to_2026-06-30_DMR.pdf"
+    ],
+    "sha256": "c17f13fe276c9d51422f3bca0835e14af15400fb26185dce2496452b39ace663",
+    "match": "DMR record 037-f1501daa350b",
+    "basis": "The two supplied filenames are byte-identical to each other. Their normalized text and all 16 rendered pages are identical to the existing byte-different June 2026 DMR, so the established record is reused. PDF page 15 was visually rechecked and preserves the cyanide and CBOD value comments."
+  },
+  "retainedRecords": [
+    {
+      "id": "137-ecd87ef13168",
+      "name": "Michigan Court of Appeals — County of Wexford v City of Cadillac, No. 205933.pdf",
+      "pages": 3,
+      "reason": "Distinct official opinion defining the 1977 wastewater agreement's service-area scope."
+    },
+    {
+      "id": "138-5c29ab75dc0e",
+      "name": "Michigan Court of Appeals — Haring, Selma and Clam Lake v City of Cadillac, Nos. 292122 and 292164.pdf",
+      "pages": 14,
+      "reason": "Distinct published opinion defining the contracts' May 2017 expiration."
+    },
+    {
+      "id": "139-b8fc380e3939",
+      "name": "Michigan Court of Appeals — Haring Charter Township v City of Cadillac, No. 299683.pdf",
+      "pages": 7,
+      "reason": "Distinct opinion affirming the 0.121 MGD capacity order and service-area boundary."
+    },
+    {
+      "id": "140-e190873ad45d",
+      "name": "EPA April 1977 Wastewater Treatment Construction Grant Awards.pdf",
+      "pages": 138,
+      "reason": "PDF page 68 contains the contemporaneous Cadillac grant award record."
+    },
+    {
+      "id": "141-ffb3658949f7",
+      "name": "EPA Operation and Maintenance of Publicly Owned Treatment Works Conference Proceedings.pdf",
+      "pages": 268,
+      "reason": "Paper 16 contains Cadillac-specific plant configuration, energy and 1976–1978 operating context."
+    },
+    {
+      "id": "142-e631ea6ceff8",
+      "name": "Cadillac WWTP Tertiary Filter Pipe Replacement.pdf",
+      "pages": 3,
+      "reason": "Distinct 2025 council communication and contractor proposal documenting filter failure points and a recommended repair."
+    },
+    {
+      "id": "143-be8756e643c5",
+      "name": "Michigan FY2018 State Revolving Fund Annual Report.pdf",
+      "pages": 82,
+      "reason": "Official state report preserving Cadillac project 5277-01's 2007 binding commitment."
+    }
+  ],
+  "outOfScopeRecords": [
+    {
+      "name": "9100CM00.pdf",
+      "pages": 259,
+      "reason": "EPA February 1976 nationwide construction-grant register; full-page OCR found no Cadillac or Wexford record."
+    },
+    {
+      "name": "Agenda Item G.pdf",
+      "pages": 48,
+      "reason": "City of Novi sanitary-sewer SCADA procurement packet. Incidental Cadillac references appear only in consultant project lists and do not make it Cadillac evidence."
+    }
+  ],
+  "manualReviewResolution": "All five sparse pages are complete and readable for their intended content. The three SRF pages are attachment divider sheets, Agenda Item G page 48 is a City of Novi site map, and Council Packet page 12 is an aerial project rendering already preserved in an exact existing record."
+}

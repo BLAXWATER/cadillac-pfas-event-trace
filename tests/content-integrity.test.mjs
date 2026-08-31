@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 661);
+  assert.equal(localFiles, 668);
   assert.equal(externalFiles, 836);
 });
 
@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 44);
+  assert.equal(helperReferences.length, 52);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1497);
+  assert.equal(recordCount, 1504);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -167,8 +167,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1368);
-  assert.equal(audit.stats.pdfPages, 18892);
+  assert.equal(audit.stats.pdfRecords, 1375);
+  assert.equal(audit.stats.pdfPages, 19407);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -328,7 +328,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 97);
-  assert.equal(supplementalCatalog.length, 135);
+  assert.equal(supplementalCatalog.length, 142);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -493,6 +493,46 @@ test("batch 07 integrity follow-up records the alternate 2015 FCE without duplic
   assert.equal(audit.corpusIntegrity.pageCountFailures, 0);
   assert.equal(audit.corpusIntegrity.unreadableRecords, 0);
   assert.match(audit.resolution, /no timeline event was added/i);
+});
+
+test("batch 08 preserves distinct Cadillac evidence and reuses verified copies", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch08-intake-audit.json"), "utf8"));
+  const supplementalCatalog = JSON.parse(await readFile(path.join(appDirectory, "supplemental-documents.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 17);
+  assert.equal(audit.stats.pdfPages, 1280);
+  assert.equal(audit.stats.distinctInputHashes, 16);
+  assert.equal(audit.stats.ocrPages, 700);
+  assert.equal(audit.stats.manualReviewPages, 5);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableFiles, 0);
+  assert.equal(audit.stats.exactExistingRecords, 6);
+  assert.equal(audit.stats.duplicateDMRFilenames, 2);
+  assert.equal(audit.stats.retainedDistinctRecords, 7);
+  assert.equal(audit.stats.outOfScopeRecords, 2);
+  assert.equal(audit.stats.timelineEventsAdded, 8);
+  assert.equal(audit.duplicateResolution.match, "DMR record 037-f1501daa350b");
+  assert.match(audit.duplicateResolution.basis, /all 16 rendered pages are identical/i);
+  assert.deepEqual(
+    audit.retainedRecords.map((row) => row.id),
+    [
+      "137-ecd87ef13168",
+      "138-5c29ab75dc0e",
+      "139-b8fc380e3939",
+      "140-e190873ad45d",
+      "141-ffb3658949f7",
+      "142-e631ea6ceff8",
+      "143-be8756e643c5",
+    ],
+  );
+  assert.equal(
+    audit.outOfScopeRecords.some((row) => row.name === "Agenda Item G.pdf" && /City of Novi/i.test(row.reason)),
+    true,
+  );
+  for (const row of audit.retainedRecords) {
+    assert.equal(supplementalCatalog.some((record) => record.id === row.id), true, row.id);
+  }
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

@@ -133,8 +133,8 @@ test("removes exactly the first period from every multi-period library filename"
     typeof record.name === "string" && (record.name.match(/\./g) ?? []).length > 1,
   );
 
-  assert.equal(records.length, 1497);
-  assert.equal(multiPeriodRecords.length, 192);
+  assert.equal(records.length, 1504);
+  assert.equal(multiPeriodRecords.length, 195);
 
   for (const record of multiPeriodRecords) {
     const displayName = formatSourceDisplayName(record.name, record.format, true);

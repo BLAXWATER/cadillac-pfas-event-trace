@@ -42,6 +42,20 @@ def sha256_bytes(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
 
 
+def catalog_fingerprint(records: list[dict]) -> str:
+    rows = sorted(
+        "\t".join([
+            str(record.get("catalog") or ""),
+            str(record.get("id") or ""),
+            str(record.get("url") or ""),
+            str(record.get("size") or ""),
+            str(record.get("sha256") or "").lower(),
+        ])
+        for record in records
+    )
+    return sha256_bytes("\n".join(rows).encode("utf-8"))
+
+
 def infer_format(record: dict) -> str:
     declared = str(record.get("format") or "").strip().upper()
     if declared:
@@ -606,6 +620,7 @@ def run_full(records: list[dict], inventory_payload: dict, workers: int) -> dict
     }
     write_json(DETAIL_PATH, result)
     summary = {
+        "catalogFingerprint": catalog_fingerprint(records),
         "method": [
             "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
             "Opened every PDF and verified its actual page count against the catalog.",
@@ -615,6 +630,13 @@ def run_full(records: list[dict], inventory_payload: dict, workers: int) -> dict
         ],
         "stats": {
             "catalogRecords": len(records),
+            "verifiedRecords": sum(
+                row.get("hash_valid")
+                and row.get("size_valid")
+                and row.get("readable")
+                and row.get("page_count_valid", True)
+                for row in inventory_payload["records"]
+            ),
             "pdfRecords": sum(row["format"] == "PDF" for row in rows),
             "pdfPages": sum(row.get("pages") or 0 for row in rows if row["format"] == "PDF"),
             "imageRecords": sum(row["format"] in {"PNG", "JPG", "JPEG"} for row in rows),
@@ -622,7 +644,9 @@ def run_full(records: list[dict], inventory_payload: dict, workers: int) -> dict
             "ocrPages": sum(row.get("ocr_pages") or 0 for row in rows),
             "ocrPagesWithText": sum(row.get("ocr_pages_with_text") or 0 for row in rows),
             "manualReviewPages": sum(row.get("manual_review_pages") or 0 for row in rows),
+            "missingHashes": sum(not str(record.get("sha256") or "").strip() for record in records),
             "hashFailures": sum(not row.get("hash_valid") for row in inventory_payload["records"]),
+            "sizeFailures": sum(not row.get("size_valid") for row in inventory_payload["records"]),
             "unreadableRecords": sum(not row.get("readable") for row in inventory_payload["records"]),
             "pageCountFailures": sum(not row.get("page_count_valid", True) for row in inventory_payload["records"]),
             "exactHashDuplicateGroups": len(duplicate_groups["exact_hash_groups"]),

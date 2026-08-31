@@ -959,6 +959,47 @@ test("batch 18 reuses eight exact records and one content-identical Pace re-expo
   assert.match(audit.resolution, /no source PDF was modified/i);
 });
 
+test("batch 19 reuses seven established records for eight NPDES and biosolids files", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch19-npdes-permit-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+
+  assert.equal(audit.stats.receivedFiles, 8);
+  assert.equal(audit.stats.pdfPages, 177);
+  assert.equal(audit.stats.distinctInputHashes, 7);
+  assert.equal(audit.stats.exactDuplicateFilenameCopies, 1);
+  assert.equal(audit.stats.exactExistingHashes, 7);
+  assert.equal(audit.stats.exactExistingFileInstances, 8);
+  assert.equal(audit.stats.establishedRecordsReused, 7);
+  assert.equal(audit.stats.ocrPages, 5);
+  assert.equal(audit.stats.ocrPagesWithText, 5);
+  assert.equal(audit.stats.gpuOcrPages, 5);
+  assert.equal(audit.stats.manualReviewPages, 177);
+  assert.equal(audit.stats.verifiedBlankPages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.retainedDistinctRecords, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.establishedRecords.length, 7);
+
+  const suppliedFiles = audit.establishedRecords.flatMap((group) => group.files);
+  assert.equal(suppliedFiles.length, audit.stats.receivedFiles);
+  assert.equal(new Set(suppliedFiles.map((file) => file.sha256)).size, audit.stats.distinctInputHashes);
+
+  for (const group of audit.establishedRecords) {
+    const record = catalogRows.find((row) => row.sha256 === group.canonicalSha256);
+    assert.ok(record, group.canonicalSha256);
+    assert.equal(record.pages, group.canonicalPages);
+    assert.match(group.match, new RegExp(record.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"));
+  }
+
+  const mapGroup = audit.establishedRecords.find((group) => group.match.includes("010-f809ae7f23d8"));
+  assert.ok(mapGroup);
+  assert.equal(mapGroup.files.length, 2);
+  assert.equal(mapGroup.files[0].sha256, mapGroup.files[1].sha256);
+  assert.match(audit.resolution, /four similarly named draft\/final permit files remain separate/i);
+  assert.match(audit.resolution, /No redundant asset, catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /no source PDF was modified/i);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

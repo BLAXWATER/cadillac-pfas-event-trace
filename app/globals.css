@@ -239,6 +239,13 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .archive-description { grid-column: 1; margin: 0; color: var(--brand-gray); font-size: var(--font-12pt); line-height: 1.55; }
 .archive-meta { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; color: var(--brand-gray); font-family: var(--font-mono); font-size: var(--font-11pt); }
 .archive-meta [data-slot="badge"] { border-color: rgba(0, 188, 235, .58); color: var(--brand-cyan); background: rgba(0, 188, 235, .07); }
+.archive-matching-sources { grid-column: 1 / -1; display: grid; gap: 9px; margin-top: 2px; padding-top: 12px; border-top: 1px solid rgba(141, 150, 156, .26); }
+.archive-matching-sources > strong { color: var(--brand-cyan); font-family: var(--font-mono); font-size: var(--font-11pt); letter-spacing: .05em; text-transform: uppercase; }
+.archive-matching-source { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 11px 12px; border: 1px solid rgba(0, 188, 235, .34); background: rgba(0, 43, 59, .42); }
+.archive-matching-source > div { min-width: 0; display: grid; gap: 4px; }
+.archive-matching-source span { color: var(--brand-white); font-size: var(--font-12pt); line-height: 1.35; overflow-wrap: anywhere; }
+.archive-matching-source small { color: var(--brand-gray); font-family: var(--font-mono); font-size: var(--font-11pt); line-height: 1.4; }
+.archive-matching-source p { margin: 0; color: var(--brand-gray); font-size: var(--font-11pt); line-height: 1.5; }
 .document-empty { padding: 30px; border: 1px dashed rgba(141, 150, 156, .45); color: var(--brand-gray); text-align: center; }
 .reference-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
 .reference-summary > div { display: flex; gap: 12px; align-items: center; min-height: 64px; padding: 14px 16px; border: 1px solid var(--border); background: linear-gradient(135deg, #002b3b, #050708); }
@@ -337,6 +344,8 @@ footer p { margin: 0; }
   .document-grid { grid-template-columns: 1fr; max-height: 680px; }
   .archive-card { grid-template-columns: 1fr; }
   .archive-card > a { grid-column: 1; grid-row: auto; justify-self: start; }
+  .archive-matching-source { grid-template-columns: 1fr; }
+  .archive-matching-source > a { justify-self: start; }
   .reference-summary { grid-template-columns: 1fr; }
   .audit-panel li { grid-template-columns: 1fr; gap: 3px; }
   .reference-card > a { grid-column: 1; grid-row: auto; }

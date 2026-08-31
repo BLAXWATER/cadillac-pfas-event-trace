@@ -1,0 +1,134 @@
+{
+  "batch": "2026-08-31 NPDES permit and PFAS biosolids intake 19",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 8 supplied files and all 177 pages.",
+    "Read embedded text from every page and applied CUDA-accelerated OCR to the 5 scan-only pages; all five produced readable text.",
+    "Rendered and visually inspected the complete 177-page sequence in eight contact sheets; every document begins with substantive content and no corrupt, truncated or visually blank page was found.",
+    "Compared every supplied hash against every published evidence catalog and identified seven established records covering all eight file instances.",
+    "Confirmed that the two NPDES Map filenames are exact byte-for-byte copies of the established three-page NPDES fact sheet record.",
+    "Kept both 43-page and 38-page draft permits and both 43-page and 38-page final permits associated with their separate established records because their hashes, page counts and document contents are distinct; no supplied PDF was modified."
+  ],
+  "stats": {
+    "receivedFiles": 8,
+    "pdfFiles": 8,
+    "pdfPages": 177,
+    "distinctInputHashes": 7,
+    "exactDuplicateFilenameCopies": 1,
+    "exactExistingHashes": 7,
+    "exactExistingFileInstances": 8,
+    "establishedRecordsReused": 7,
+    "ocrPages": 5,
+    "ocrPagesWithText": 5,
+    "gpuOcrPages": 5,
+    "manualReviewPages": 177,
+    "verifiedBlankPages": 0,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 0,
+    "timelineEventsAdded": 0,
+    "timelineSourcesAdded": 0
+  },
+  "establishedRecords": [
+    {
+      "match": "PFAS record 018-c7eebd851ba2",
+      "canonicalSha256": "c7eebd851ba273d02bff176a3695e3af0b9aaea3670e789936665b3e6bf9e4c1",
+      "canonicalPages": 7,
+      "files": [
+        {
+          "name": "Notification of WRDs approach to PFAS in Biosolids _ an Interim Strategy.pdf",
+          "size": 297239,
+          "sha256": "c7eebd851ba273d02bff176a3695e3af0b9aaea3670e789936665b3e6bf9e4c1",
+          "classification": "exact SHA-256 match; pages 3-7 verified with CUDA OCR"
+        }
+      ]
+    },
+    {
+      "match": "NPDES record 019-1c4716b1b9fd",
+      "canonicalSha256": "1c4716b1b9fd61eeff6f4fcc49314a05e732e97cc6ec9f598f358bbae535b4c1",
+      "canonicalPages": 2,
+      "files": [
+        {
+          "name": "NPDES Application Scheduling Sheet.pdf",
+          "size": 105719,
+          "sha256": "1c4716b1b9fd61eeff6f4fcc49314a05e732e97cc6ec9f598f358bbae535b4c1",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "NPDES record 010-f809ae7f23d8",
+      "canonicalSha256": "f809ae7f23d8bb9fcb21aed5b0c1c9fdadf217b707960b09bfe12c7d1a67f689",
+      "canonicalPages": 3,
+      "files": [
+        {
+          "name": "NPDES Map (1).pdf",
+          "size": 60529,
+          "sha256": "f809ae7f23d8bb9fcb21aed5b0c1c9fdadf217b707960b09bfe12c7d1a67f689",
+          "classification": "exact SHA-256 match and duplicate file instance"
+        },
+        {
+          "name": "NPDES Map.pdf",
+          "size": 60529,
+          "sha256": "f809ae7f23d8bb9fcb21aed5b0c1c9fdadf217b707960b09bfe12c7d1a67f689",
+          "classification": "exact SHA-256 match and duplicate file instance"
+        }
+      ]
+    },
+    {
+      "match": "NPDES record 125-b8988c4201ab",
+      "canonicalSha256": "b8988c4201ab429e43d4878aef0a5cb06d154048510fe048ee744ff7a5c54b8f",
+      "canonicalPages": 43,
+      "files": [
+        {
+          "name": "NPDES Permit-DRAFT for Public Notice_Cadillac WWTP (1).pdf",
+          "size": 920467,
+          "sha256": "b8988c4201ab429e43d4878aef0a5cb06d154048510fe048ee744ff7a5c54b8f",
+          "classification": "exact SHA-256 match; distinct 43-page draft permit"
+        }
+      ]
+    },
+    {
+      "match": "NPDES record 099-93cb43659965",
+      "canonicalSha256": "93cb43659965b5140f75dc1a26ab8c16baa9dec79df76c0a90e5a3ef20c5731f",
+      "canonicalPages": 38,
+      "files": [
+        {
+          "name": "NPDES Permit-DRAFT for Public Notice_Cadillac WWTP.pdf",
+          "size": 470261,
+          "sha256": "93cb43659965b5140f75dc1a26ab8c16baa9dec79df76c0a90e5a3ef20c5731f",
+          "classification": "exact SHA-256 match; distinct 38-page draft permit"
+        }
+      ]
+    },
+    {
+      "match": "NPDES record 123-a7071afe8cf5",
+      "canonicalSha256": "a7071afe8cf5286a232094ee6c42e47c3c83c920bce89772b5759588af6db6d8",
+      "canonicalPages": 43,
+      "files": [
+        {
+          "name": "NPDES Permit-FINAL_Cadillac WWTP (1).pdf",
+          "size": 256010,
+          "sha256": "a7071afe8cf5286a232094ee6c42e47c3c83c920bce89772b5759588af6db6d8",
+          "classification": "exact SHA-256 match; distinct 43-page final permit"
+        }
+      ]
+    },
+    {
+      "match": "NPDES record 082-9f01fe21418a",
+      "canonicalSha256": "9f01fe21418ab3c840b003f2834560b3fbc45edff80eb7baaf73b4fd7a921401",
+      "canonicalPages": 38,
+      "files": [
+        {
+          "name": "NPDES Permit-FINAL_Cadillac WWTP.pdf",
+          "size": 242034,
+          "sha256": "9f01fe21418ab3c840b003f2834560b3fbc45edff80eb7baaf73b4fd7a921401",
+          "classification": "exact SHA-256 match; distinct 38-page final permit"
+        }
+      ]
+    }
+  ],
+  "resolution": "All 8 supplied files and all 177 pages are accounted for by 7 established records. The two NPDES Map filenames are exact duplicate copies of the established NPDES fact sheet, while the four similarly named draft/final permit files remain separate established revisions. No redundant asset, catalog record or timeline event was added, and no source PDF was modified."
+}

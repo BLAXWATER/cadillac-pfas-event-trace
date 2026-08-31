@@ -3,6 +3,7 @@
   "requestedSourceFolder": "C:/Users/casey/OneDrive/Desktop/8-30-26",
   "analyzedSourceFolder": "C:/Users/casey/OneDrive/Desktop/Already in portal",
   "preservedSourceFolder": "work/intake-2026-08-31-batch08-source",
+  "immutableAssetCommit": "c4e7af2605084ac48bbf8ecabf59d2b6115ac0d8",
   "method": [
     "Located all 17 supplied PDFs after the requested desktop folder was no longer present and copied them into a preserved intake working set before analysis.",
     "Verified SHA-256, byte size, PDF readability and actual page count for every file and every page.",

@@ -26,7 +26,7 @@
     "matchingSources": [
       {
         "name": "0P1-01_Process_Flow_2017.pdf",
-        "url": "/process-site-docs/matching-sources/0P1-01_Process_Flow_2017.pdf",
+        "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/34b7ecc25d4a2ae50f36d70574eb5cc7700421c8/public/process-site-docs/matching-sources/0P1-01_Process_Flow_2017.pdf",
         "pages": 1,
         "size": 373652,
         "sha256": "8721a72f2a3d3080bdcc623ef6580120071357ec2f7baa8abd65b58e9270d4c7",
@@ -49,7 +49,7 @@
     "matchingSources": [
       {
         "name": "0P1-02_Process_Flow_2017.pdf",
-        "url": "/process-site-docs/matching-sources/0P1-02_Process_Flow_2017.pdf",
+        "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/34b7ecc25d4a2ae50f36d70574eb5cc7700421c8/public/process-site-docs/matching-sources/0P1-02_Process_Flow_2017.pdf",
         "pages": 1,
         "size": 384971,
         "sha256": "bf088add129b0835b39d5ccab36c81d2067c8b4ba51814c912832932e2a9a014",
@@ -72,7 +72,7 @@
     "matchingSources": [
       {
         "name": "0P1-03_Process_Flow_2017.pdf",
-        "url": "/process-site-docs/matching-sources/0P1-03_Process_Flow_2017.pdf",
+        "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/34b7ecc25d4a2ae50f36d70574eb5cc7700421c8/public/process-site-docs/matching-sources/0P1-03_Process_Flow_2017.pdf",
         "pages": 1,
         "size": 420227,
         "sha256": "5d94ff48267a89d9d96d0e334d0d4a56c74e9bf7dbb3b6db1de3db4d36a506e3",
@@ -225,7 +225,7 @@
     "matchingSources": [
       {
         "name": "Plant_Brochure_2017.pdf",
-        "url": "/process-site-docs/matching-sources/Plant_Brochure_2017.pdf",
+        "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/34b7ecc25d4a2ae50f36d70574eb5cc7700421c8/public/process-site-docs/matching-sources/Plant_Brochure_2017.pdf",
         "pages": 9,
         "size": 4307987,
         "sha256": "7d23f992812fcd6c47753f9666093f99325c1dc5021743edae9abda37c0f027c",

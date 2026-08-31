@@ -243,7 +243,11 @@ test("process and site archive audits every page and reuses only verified cross-
   const matchingSources = catalog.flatMap((row) => row.matchingSources ?? []);
   assert.equal(matchingSources.length, 4);
   for (const source of matchingSources) {
-    const sourcePath = path.join(publicDirectory, ...source.url.slice(1).split("/"));
+    const relativeSourcePath = source.url.startsWith("/")
+      ? source.url.slice(1)
+      : decodeURIComponent(new URL(source.url).pathname.split("/public/")[1] ?? "");
+    assert.ok(relativeSourcePath, `${source.name} must resolve inside the repository public directory`);
+    const sourcePath = path.join(publicDirectory, ...relativeSourcePath.split("/"));
     const sourceStat = await stat(sourcePath);
     const sourceBytes = await readFile(sourcePath);
     assert.equal(sourceStat.size, source.size, `${source.name} size mismatch`);

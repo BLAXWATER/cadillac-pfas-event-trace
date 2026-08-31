@@ -1,0 +1,155 @@
+{
+  "batch": "2026-08-31 permit, laboratory and plant-site intake 18",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 9 supplied files and all 158 pages.",
+    "Read embedded text from every page and applied CUDA-accelerated OCR to all 11 pages below the text threshold; five sparse scanned pages produced readable OCR and six trailing spreadsheet-export pages were verified as visually blank.",
+    "Rendered and visually inspected the complete 158-page sequence in seven contact sheets; every document begins with substantive content, no first page is blank and no corrupt or truncated page was found.",
+    "Compared every supplied hash against every published evidence catalog and identified eight exact SHA-256 matches.",
+    "Compared the byte-distinct September 2025 Pace report against established PFAS record 063-95e40af937e2 at the page-image and extracted-text levels; all 16 page renders and all 16 text streams are exact matches, so the supplied file is a content-identical re-export rather than a distinct revision.",
+    "Kept both Plant Sewer Lines files associated with their separate established records because their hashes and published record roles are distinct; no supplied PDF was modified."
+  ],
+  "stats": {
+    "receivedFiles": 9,
+    "pdfFiles": 9,
+    "pdfPages": 158,
+    "distinctInputHashes": 9,
+    "exactDuplicateFilenameCopies": 0,
+    "exactExistingHashes": 8,
+    "exactExistingFileInstances": 8,
+    "renderIdenticalFileInstances": 1,
+    "establishedRecordsReused": 9,
+    "ocrPages": 11,
+    "ocrPagesWithText": 5,
+    "gpuOcrPages": 11,
+    "manualReviewPages": 158,
+    "verifiedBlankPages": 6,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 0,
+    "timelineEventsAdded": 0,
+    "timelineSourcesAdded": 0
+  },
+  "establishedRecords": [
+    {
+      "match": "npdes record 010-f809ae7f23d8",
+      "canonicalSha256": "f809ae7f23d8bb9fcb21aed5b0c1c9fdadf217b707960b09bfe12c7d1a67f689",
+      "canonicalPages": 3,
+      "files": [
+        {
+          "name": "NPDES.pdf",
+          "size": 60529,
+          "sha256": "f809ae7f23d8bb9fcb21aed5b0c1c9fdadf217b707960b09bfe12c7d1a67f689",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "correspondence record corr-037-1a12e67c31b1",
+      "canonicalSha256": "1a12e67c31b1eff85285ea1fc577c09640fbd9d2fbd0bf43f86b6be06d7e89a6",
+      "canonicalPages": 41,
+      "files": [
+        {
+          "name": "October 2025 PFAS sample results.pdf",
+          "size": 801044,
+          "sha256": "1a12e67c31b1eff85285ea1fc577c09640fbd9d2fbd0bf43f86b6be06d7e89a6",
+          "classification": "exact SHA-256 match; pages 36-41 are verified blank trailing spreadsheet-export pages"
+        }
+      ]
+    },
+    {
+      "match": "laboratory record lab-086-bb9d5bc3d13f",
+      "canonicalSha256": "bb9d5bc3d13f0fb497e06dcb9eea1522ff918be4a955f81dd3847066e4661415",
+      "canonicalPages": 44,
+      "files": [
+        {
+          "name": "Pace Biosolids 3-28-2018 Sampling results.pdf",
+          "size": 986609,
+          "sha256": "bb9d5bc3d13f0fb497e06dcb9eea1522ff918be4a955f81dd3847066e4661415",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "PFAS record 063-95e40af937e2",
+      "canonicalSha256": "95e40af937e205e92f5690a58a4433a4ae6dabedeb46f37afc2c96a85b00016e",
+      "canonicalPages": 16,
+      "files": [
+        {
+          "name": "Pace-25-09-PFAS-Pace-REPORT.pdf",
+          "size": 2539607,
+          "sha256": "12d86d5b20b2e6794727e9d5aa9c6a0432ecc91965ee947ada96b3c6ec5377fd",
+          "classification": "byte-distinct, page-render-identical and text-identical re-export; all 16 pages match"
+        }
+      ]
+    },
+    {
+      "match": "laboratory record lab-026-b0d1331c6778",
+      "canonicalSha256": "b0d1331c677838ec9c7b73fb0176fc7f38c1bd1a5a1e0a86dee88f7a435258bb",
+      "canonicalPages": 22,
+      "files": [
+        {
+          "name": "Paragon Wet Test.pdf",
+          "size": 557471,
+          "sha256": "b0d1331c677838ec9c7b73fb0176fc7f38c1bd1a5a1e0a86dee88f7a435258bb",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "npdes record 074-911f53cea4af",
+      "canonicalSha256": "911f53cea4af3a6a2951e7b790260004bcf7c9069e60366ff04ea9d3dc477153",
+      "canonicalPages": 1,
+      "files": [
+        {
+          "name": "Permit Processing Checklist.pdf",
+          "size": 62563,
+          "sha256": "911f53cea4af3a6a2951e7b790260004bcf7c9069e60366ff04ea9d3dc477153",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "npdes record 004-2560e882a953",
+      "canonicalSha256": "2560e882a95374b76fd2da5201b405bc0bcb0c8b86f236b16419c3716f2ab9e0",
+      "canonicalPages": 29,
+      "files": [
+        {
+          "name": "Permit Template - Municipal.pdf",
+          "size": 238422,
+          "sha256": "2560e882a95374b76fd2da5201b405bc0bcb0c8b86f236b16419c3716f2ab9e0",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "process-site record process-site-014-06659cf5a1f7",
+      "canonicalSha256": "06659cf5a1f70f4ea3745f6e8cbf3eca37e6a70c749d7c17b5c79a4f4203ec44",
+      "canonicalPages": 1,
+      "files": [
+        {
+          "name": "PLANT SEWER LINES (1).pdf",
+          "size": 1263693,
+          "sha256": "06659cf5a1f70f4ea3745f6e8cbf3eca37e6a70c749d7c17b5c79a4f4203ec44",
+          "classification": "exact SHA-256 match to the dated plant-site record"
+        }
+      ]
+    },
+    {
+      "match": "ipp record 088-17515c83ecba",
+      "canonicalSha256": "17515c83ecba40f24134c9ff3a68a7d51d9b7ef2678b8b53ed024eeaa6a64e44",
+      "canonicalPages": 1,
+      "files": [
+        {
+          "name": "PLANT SEWER LINES.pdf",
+          "size": 1194308,
+          "sha256": "17515c83ecba40f24134c9ff3a68a7d51d9b7ef2678b8b53ed024eeaa6a64e44",
+          "classification": "exact SHA-256 match to the established IPP record"
+        }
+      ]
+    }
+  ],
+  "resolution": "All 9 supplied files and all 158 pages are accounted for. Eight files exactly reuse eight established records. The byte-distinct September 2025 Pace report exactly reuses established PFAS record 063-95e40af937e2 at both page-render and text-stream levels. No redundant asset, catalog record or timeline event was added, and no source PDF was modified."
+}

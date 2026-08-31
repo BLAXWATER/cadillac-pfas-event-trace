@@ -588,6 +588,34 @@ test("batch 09 accounts for every leftovers file without publishing redundant wo
   assert.match(audit.resolution, /no timeline event was added/i);
 });
 
+test("batch 10 reuses verified WET, WQBEL, exceedance and landfill evidence", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch10-leftovers-audit.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 27);
+  assert.equal(audit.stats.pdfPages, 154);
+  assert.equal(audit.stats.distinctInputHashes, 24);
+  assert.equal(audit.stats.exactDuplicateFilenameCopies, 3);
+  assert.equal(audit.stats.exactExistingHashes, 22);
+  assert.equal(audit.stats.exactExistingFileInstances, 25);
+  assert.equal(audit.stats.renderIdenticalExistingVariants, 2);
+  assert.equal(audit.stats.renderIdenticalFileInstances, 2);
+  assert.equal(audit.stats.retainedDistinctRecords, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(
+    audit.stats.exactExistingFileInstances + audit.stats.renderIdenticalFileInstances,
+    audit.stats.receivedFiles,
+  );
+  assert.deepEqual(
+    audit.renderIdenticalVariants.map((row) => row.match),
+    ["IPP record 037-1f7e70d66b30", "IPP record 037-1f7e70d66b30"],
+  );
+  for (const row of audit.renderIdenticalVariants) {
+    assert.equal(row.pages, 1);
+    assert.match(row.basis, /identical at both 72 and 144 DPI/i);
+  }
+  assert.match(audit.resolution, /No redundant asset, catalog record or timeline event was added/i);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

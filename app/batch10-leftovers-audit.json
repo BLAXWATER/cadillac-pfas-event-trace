@@ -1,0 +1,69 @@
+{
+  "batch": "2026-08-31 leftovers intake 10",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 27 supplied files and all 154 pages.",
+    "Compared every distinct input hash against every published evidence catalog before any retention decision.",
+    "Grouped three byte-identical filename copies within the intake: two additional WETQuestion filenames and one additional WQBEL toxics filename.",
+    "Text-extracted and rendered both unmatched Wexford Landfill SIU sheets at 72 and 144 DPI, then compared them with the established one-page IPP record.",
+    "Visually inspected the complete SIU page and confirmed that all fields, the 33,000-gpd intermittent process-wastewater entry and the local-limits selection are intact."
+  ],
+  "stats": {
+    "receivedFiles": 27,
+    "pdfFiles": 27,
+    "pdfPages": 154,
+    "distinctInputHashes": 24,
+    "exactDuplicateFilenameCopies": 3,
+    "exactExistingHashes": 22,
+    "exactExistingFileInstances": 25,
+    "renderIdenticalExistingVariants": 2,
+    "renderIdenticalFileInstances": 2,
+    "manualReviewPages": 1,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 0,
+    "timelineEventsAdded": 0
+  },
+  "exactExistingRecords": [
+    { "sha256": "06a1ae10eae6c0bc6f2e4599e01deef54ef93c3b506bb4269ae233062f87b0c8", "match": "correspondence record corr-020-06a1ae10eae6", "files": ["WET Email_MI0020257_August 2019 WET Report_9-10-2019.pdf"] },
+    { "sha256": "e0740917193bb863a4148df6bff8f19390b369e889fa34879642f0b8ef24654e", "match": "lab record lab-074-e0740917193b", "files": ["Wet Test ERM 2-2-2017.pdf"] },
+    { "sha256": "a2a583c0a7f716a1e00fd9e562574b4d39bfd3a079e55ca04d6e7b17ee01841b", "match": "lab record lab-029-a2a583c0a7f7", "files": ["WETQuestion_MI0020257_11-22-2019 (1).pdf", "WETQuestion_MI0020257_11-22-2019 (2).pdf", "WETQuestion_MI0020257_11-22-2019.pdf"] },
+    { "sha256": "1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3", "match": "IPP record 037-1f7e70d66b30", "files": ["WEXFORD LANDFILL.pdf"] },
+    { "sha256": "e7ae0c663b886141f447a7758f7a8959641b999e315c0b6a9a719fc0e369786d", "match": "NPDES record 016-e7ae0c663b88", "files": ["WQBEL Cadillac WWTP 6-7-07.pdf"] },
+    { "sha256": "010e59bfec55326f2ba3a17123f954670730ab3332af3d09eee153951c6e5aa3", "match": "NPDES record 043-010e59bfec55", "files": ["WQBEL Memo - Conventionals (1).pdf"] },
+    { "sha256": "cf9fd2af33d7efd9edd3870ce8bad4b7a239aec59f4768eb5370f5a9e6cd4ed5", "match": "NPDES record 091-cf9fd2af33d7", "files": ["WQBEL Memo - Conventionals (WORD).pdf"] },
+    { "sha256": "ab81fe72149fb9771a82a2ef8937f5eaaa1027111c26767c0c489db6cd874b71", "match": "NPDES record 033-ab81fe72149f", "files": ["WQBEL Memo - Conventionals.pdf"] },
+    { "sha256": "f1065d0f7c8bc0d8ca4d8b7523e27a2c38e0a4115f6ef6619459d437610deeb5", "match": "NPDES record 021-f1065d0f7c8b", "files": ["WQBEL Memo - Toxics (1).pdf"] },
+    { "sha256": "2b0126ecff7a2c1c97c609baa1d7344905ae4ea6dd4b298a9b6c6f7d1e891ebd", "match": "NPDES record 046-2b0126ecff7a", "files": ["WQBEL Memo - Toxics (2).pdf", "WQBEL Memo - Toxics (3).pdf"] },
+    { "sha256": "61b3b379b96a9c870f5bd65fe8ae45bcf7c34e74d2750ed132760a18d5fa3959", "match": "NPDES record 034-61b3b379b96a", "files": ["WQBEL Memo - Toxics.pdf"] },
+    { "sha256": "49e091247101fd2685e47cf3f31e45318d68939df2a399f9d57dc9264cfc1538", "match": "NPDES record 045-49e091247101", "files": ["WQBELBiologistFactSheet_MI0020257_1-30-2018.pdf"] },
+    { "sha256": "fc05b90f5730fa5d987e2982730b2f01bd7465968b0fa52714046adb7929d4c0", "match": "NPDES record 121-fc05b90f5730", "files": ["WQBELBiologistFactSheet_MI0020257_10-17-2022.pdf"] },
+    { "sha256": "d2bc7a084ec717cdaff36c9b09cfdc21f83e324d3358ec919e63fd9e449e0305", "match": "PFAS record 038-d2bc7a084ec7", "files": ["WQBELBiologistFactSheet_MI0020257_PFOS_08-01-2023.pdf"] },
+    { "sha256": "c041f2300a6d1b1509a8a4ed2de55c387c5bf561e4703844dd0232429d5adbc0", "match": "NPDES record 092-c041f2300a6d", "files": ["WQBELBiologistReview_MI0020257_1-30-2018.pdf"] },
+    { "sha256": "419ae91b5fdf6d3e619e0277d71469db9507bc8ff1642782b7648f65b73eef23", "match": "NPDES record 122-419ae91b5fdf", "files": ["WQBELBiologistReview_MI0020257_10-17-2022.pdf"] },
+    { "sha256": "fc9a1b35a2d972895b529cde9ea80ab84b7b1b780573ca5c72a082ff94dbcf6a", "match": "biosolids record 046-fc9a1b35a2d9", "files": ["wrd-biosolids-land-application-Fall 2022.pdf"] },
+    { "sha256": "2b2ae333b9f697f91281a9b2136c732fdcf34e236949671c8ead0bd23d37f3d0", "match": "lab record lab-030-2b2ae333b9f6", "files": ["written report BOD exceedance #2 052417.pdf"] },
+    { "sha256": "629b356c353b8e6c09133c53edc52df8fb9fe2c054e35e6279c46835b9f29c3d", "match": "lab record lab-031-629b356c353b", "files": ["written report BOD exceedance 061517.pdf"] },
+    { "sha256": "44c31611dbbda8f4d9acff799b62ec3218b53d44dd616f52a3abdb8ceae26a50", "match": "lab record lab-032-44c31611dbbd", "files": ["written report BOD exceedance 071217.pdf"] },
+    { "sha256": "8fa379846f886256c218d005eb035cb8ce2bbbc2f2949ecfac85503b9da24d2c", "match": "NPDES record 083-8fa379846f88", "files": ["written rpt ammonia NPDES exceedance 051917.pdf"] },
+    { "sha256": "262a9fb8460c6f373ddb201f771d2c1c1560d87552484789c6d1c674ff08c14f", "match": "compliance record 049-262a9fb8460c", "files": ["written rpt BOD exceed 051217 ul MiW.pdf"] }
+  ],
+  "renderIdenticalVariants": [
+    {
+      "sha256": "f6cb3a9cd37045311ea94d7fa4aceb0bca99971d3b7167ab850aa473352036cb",
+      "file": "WEXFORD LANDFILL -  Wexford County Landfill.pdf",
+      "match": "IPP record 037-1f7e70d66b30",
+      "pages": 1,
+      "basis": "Normalized text and the complete page render are identical at both 72 and 144 DPI; the byte difference is confined to the later PDF modification timestamp."
+    },
+    {
+      "sha256": "8d7811f50b09f8c50a100c558b3e2c32a39532babbb686cfaaad3c3ff3b3d3bc",
+      "file": "WEXFORD LANDFILL SIU-info sheet from City NPDES application Wexford County Landfill LLC Permit #590-13 Mixed Cells.pdf",
+      "match": "IPP record 037-1f7e70d66b30",
+      "pages": 1,
+      "basis": "Normalized text and the complete page render are identical at both 72 and 144 DPI; the byte difference is confined to the later PDF modification timestamp."
+    }
+  ],
+  "resolution": "All 27 supplied files are accounted for by exact or page-render-identical established evidence. No redundant asset, catalog record or timeline event was added, and no source file was modified."
+}

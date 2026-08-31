@@ -15,6 +15,15 @@
     "latestBatch09ManualReviewPages": 1,
     "latestBatch09RecordsAdded": 1,
     "latestBatch09TimelineEventsAdded": 0,
+    "latestBatch10FilesReviewed": 27,
+    "latestBatch10PdfPagesReviewed": 154,
+    "latestBatch10DistinctInputHashes": 24,
+    "latestBatch10ExactDuplicateFilenameCopies": 3,
+    "latestBatch10ExactExistingHashes": 22,
+    "latestBatch10RenderIdenticalExistingVariants": 2,
+    "latestBatch10ManualReviewPages": 1,
+    "latestBatch10RecordsAdded": 0,
+    "latestBatch10TimelineEventsAdded": 0,
     "latestBatch08FilesReviewed": 17,
     "latestBatch08PdfPagesReviewed": 1280,
     "latestBatch08OCRPages": 700,
@@ -106,9 +115,14 @@
     "August 30 Wexford PFAS and IPP continuation: all 31 supplied PDFs and 174 pages opened successfully. OCR was applied to 41 sparse-text pages, 37 yielded readable text and none required manual integrity review. Byte hashes, normalized text and rendered-page fingerprints were compared against 1,483 cataloged records and the standalone timeline sources.",
     "August 30 expanded Wexford intake: all 25 supplied PDFs and 368 pages passed file-hash, page-count and extraction checks. OCR was applied to all 107 sparse-text pages, 106 yielded readable text and the remaining rotated table was visually verified as complete. Byte hashes, normalized text and rendered-page sequences were cross-compared against the catalogs, published assets, standalone timeline sources and prior audited intake caches.",
     "August 31 intake 08: all 17 supplied PDFs and 1,280 pages passed file-hash, byte-size, page-count, extraction and rendering checks. OCR was applied to 700 sparse-text pages, and all five remaining sparse pages were visually verified as complete divider, map or aerial-image pages. The batch was cross-compared against 2,593 prior audited records before seven distinct Cadillac/Wexford sources were retained.",
-    "August 31 leftovers intake 09: all 31 supplied PDFs and 164 pages passed file-hash, byte-size, page-count and readability checks. Seventeen distinct hashes exactly match published records. Three byte-different TVS worksheet variants were rendered at 72 and 144 DPI and matched the established records page-for-page. The one remaining page was text-extracted and visually inspected before retention as secondary well context."
+    "August 31 leftovers intake 09: all 31 supplied PDFs and 164 pages passed file-hash, byte-size, page-count and readability checks. Seventeen distinct hashes exactly match published records. Three byte-different TVS worksheet variants were rendered at 72 and 144 DPI and matched the established records page-for-page. The one remaining page was text-extracted and visually inspected before retention as secondary well context.",
+    "August 31 leftovers intake 10: all 27 supplied PDFs and 154 pages passed file-hash, byte-size, page-count and readability checks. Twenty-two distinct hashes exactly match published records. The two unmatched Wexford Landfill SIU sheets were text-extracted, rendered at 72 and 144 DPI and matched the established one-page IPP record at both resolutions."
   ],
   "decisions": [
+    {
+      "name": "August 31 leftovers intake 10",
+      "reason": "Twenty-seven supplied files resolved to 24 distinct input hashes: 22 exact published hashes and two byte-different but text- and render-identical copies of the established Wexford Landfill SIU page. Three extra filename copies were suppressed, no record was added and no timeline event was duplicated."
+    },
     {
       "name": "August 31 leftovers intake 09",
       "reason": "Thirty-one files resolved to 21 distinct input hashes: 17 exact published hashes, three byte-different but text- and render-identical worksheet hashes and one distinct one-page well summary. Ten extra filename copies were suppressed, the one distinct record was retained once, and no timeline event was added because the retained page is an owner-provided secondary compilation rather than an official dated agency action."

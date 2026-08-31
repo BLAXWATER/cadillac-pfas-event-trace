@@ -319,6 +319,24 @@ const events: Event[] = [
     }],
   },
   {
+    year: "2013",
+    date: "2013-09-30",
+    isoDate: "2013-09-30",
+    time: noTime,
+    timeBasis: "Inspection start date stated in the report",
+    phase: "Regulatory inspection",
+    kind: "regulatory",
+    category: "08 · Compliance & enforcement",
+    title: "DEQ inspection documents aging infrastructure at the WWTP",
+    finding: "The compliance evaluation inspection began September 30 and was completed October 4, 2013. The report describes the plant as generally well operated and maintained while documenting aging infrastructure and deteriorated septage and equalization facilities. It also preserves the earlier inspection statement that the equalization basin accepted hauled County Landfill leachate.",
+    significance: "Establishes a pre-2014 regulatory and operational baseline while distinguishing the 2013 inspection dates from later file metadata.",
+    sources: [archivedSource("2013-09-30 - Cadillac WWTP NPDES CEI Pre-Inspection Report.pdf", "/compliance-docs/059-72e0d17a78ae.pdf", 10, "Complete ten-page pre-inspection record with facility history, inspection narrative, compliance history and completion details.", {
+      eventStamp: "2013-09-30 · time not stated",
+      basis: "Inspection start date stated in the report",
+      note: "The report states that the inspection began September 30 and was completed October 4, 2013.",
+    })],
+  },
+  {
     year: "2014",
     date: "2014-02-03",
     isoDate: "2014-02-03",
@@ -357,12 +375,19 @@ const events: Event[] = [
     title: "Hauled landfill leachate documented at the WWTP",
     finding: "The inspection record states that the equalization tank accepted hauled waste described as landfill leachate from the County Landfill and notes no screen or flow meter in that receiving area.",
     significance: "Establishes the physical receiving point later examined by the PFAS source investigation.",
-    sources: [pdf("2014-10-10 Cadillac Pre-Inspection Report 56545.pdf", "2014-preinspection", 8, "Equalization tank identified as the receiving point for County Landfill leachate.", {
-      eventStamp: "2014-10-10 · time not stated",
-      basis: "Inspection-record date",
-      created: "2015-11-26 20:48:28 CST",
-      note: "The complete scan includes the signed completion page. The embedded creation timestamp is later than the inspection; it is retained as file history, not event time.",
-    })],
+    sources: [
+      pdf("2014-10-10 Cadillac Pre-Inspection Report 56545.pdf", "2014-preinspection", 8, "Equalization tank identified as the receiving point for County Landfill leachate.", {
+        eventStamp: "2014-10-10 · time not stated",
+        basis: "Inspection-record date",
+        created: "2015-11-26 20:48:28 CST",
+        note: "The complete scan includes the signed completion page. The embedded creation timestamp is later than the inspection; it is retained as file history, not event time.",
+      }),
+      archivedSource("2014-10-10 - Cadillac WWTP NPDES CSI-Toxics Pre-Inspection Report.pdf", "/compliance-docs/060-dd5fb72d29bd.pdf", 7, "Standalone database export independently preserving the facility history and hauled-leachate receiving description.", {
+        eventStamp: "2014-10-10 · time not stated",
+        basis: "Inspection completion date stated in the report",
+        note: "Retained separately from the related eight-page inspection package because this seven-page export has a distinct structure and page set.",
+      }),
+    ],
   },
   {
     year: "2015",

@@ -1,0 +1,40 @@
+{
+  "batch": "2026-08-31 N3862 FCE integrity follow-up",
+  "requestedSourcePath": "C:/Users/casey/OneDrive/Desktop/N3862_FCE_20151118.pdf",
+  "analyzedSourcePath": "C:/Users/casey/OneDrive/Desktop/Already in portal/N3862_FCE_20151118.pdf",
+  "matchingIntakeCopy": "C:/Users/casey/OneDrive/Desktop/Leachate wexford landfill/N3862-FCE-20151118.pdf",
+  "method": [
+    "Located the supplied file after the stated desktop-root path was no longer present.",
+    "Verified both located copies byte-for-byte with SHA-256 and confirmed that each PDF opens as one readable page.",
+    "Compared extracted text and 144 DPI page renderings with the cataloged November 18, 2015 N3862 Full Compliance Evaluation.",
+    "Regenerated the complete corpus inventory from the actual local assets and immutable GitHub blobs before recording the integrity result."
+  ],
+  "sourceFile": {
+    "name": "N3862_FCE_20151118.pdf",
+    "sha256": "ce9e484eae03dd60d2d29b2e50b7d3f1521be131c8c9648a062d3332c8333456",
+    "size": 29948,
+    "pages": 1,
+    "readable": true
+  },
+  "catalogMatch": {
+    "catalog": "compliance-documents.json",
+    "id": "019-038472a6ae4c",
+    "name": "11-18-2015 - N3862_Full Compliance Evaluation_11-18-2015.pdf",
+    "sha256": "038472a6ae4cece464f3840f72b19b4404aa2e757a0c2290165e25c3ff4eadcf",
+    "size": 33098,
+    "pages": 1,
+    "relationship": "Same signed one-page inspection scan in a byte-different PDF container; the cataloged rendering adds an EGLE footer at the lower-right edge."
+  },
+  "corpusIntegrity": {
+    "catalogRecords": 1497,
+    "verifiedRecords": 1497,
+    "pdfRecords": 1368,
+    "pdfPages": 18892,
+    "missingHashes": 0,
+    "hashFailures": 0,
+    "sizeFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "resolution": "The supplied file remains preserved in the earlier intake set and is not published as a second evidence card because it is the previously reviewed alternate representation of the cataloged 2015 FCE. No catalog hash required correction and no timeline event was added."
+}

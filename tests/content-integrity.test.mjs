@@ -154,13 +154,26 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   const catalogs = await loadCatalogs();
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
+  const catalogFingerprint = createHash("sha256").update(
+    catalogs.flatMap((catalog) => catalog.rows.map((row) => [
+      catalog.name,
+      row.id ?? "",
+      row.url ?? "",
+      row.size ?? "",
+      (row.sha256 ?? "").toLowerCase(),
+    ].join("\t"))).sort().join("\n"),
+  ).digest("hex");
 
   assert.equal(audit.stats.catalogRecords, recordCount);
+  assert.equal(audit.stats.verifiedRecords, recordCount);
+  assert.equal(audit.catalogFingerprint, catalogFingerprint);
   assert.equal(audit.stats.pdfRecords, 1368);
   assert.equal(audit.stats.pdfPages, 18892);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
+  assert.equal(audit.stats.missingHashes, 0);
   assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.sizeFailures, 0);
   assert.equal(audit.stats.unreadableRecords, 0);
   assert.equal(audit.stats.pageCountFailures, 0);
   assert.equal(audit.stats.exactHashDuplicateGroups, 0);
@@ -463,6 +476,23 @@ test("batch 06 replay excludes only verified existing evidence and repairs catal
       && row.sha256 === "b131111d78289b588bf5b2a7d616e51f3d62ab8f31faeb2979729f32b70c03c3"),
     true,
   );
+});
+
+test("batch 07 integrity follow-up records the alternate 2015 FCE without duplicating it", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch07-intake-audit.json"), "utf8"));
+
+  assert.equal(audit.sourceFile.sha256, "ce9e484eae03dd60d2d29b2e50b7d3f1521be131c8c9648a062d3332c8333456");
+  assert.equal(audit.sourceFile.pages, 1);
+  assert.equal(audit.catalogMatch.id, "019-038472a6ae4c");
+  assert.match(audit.catalogMatch.relationship, /same signed one-page inspection scan/i);
+  assert.equal(audit.corpusIntegrity.catalogRecords, 1497);
+  assert.equal(audit.corpusIntegrity.verifiedRecords, 1497);
+  assert.equal(audit.corpusIntegrity.missingHashes, 0);
+  assert.equal(audit.corpusIntegrity.hashFailures, 0);
+  assert.equal(audit.corpusIntegrity.sizeFailures, 0);
+  assert.equal(audit.corpusIntegrity.pageCountFailures, 0);
+  assert.equal(audit.corpusIntegrity.unreadableRecords, 0);
+  assert.match(audit.resolution, /no timeline event was added/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

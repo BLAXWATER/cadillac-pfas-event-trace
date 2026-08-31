@@ -914,6 +914,51 @@ test("batch 17 reuses nine monitoring summaries and retains one post-inspection 
   assert.match(audit.resolution, /No source PDF was modified/i);
 });
 
+test("batch 18 reuses eight exact records and one content-identical Pace re-export", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch18-permit-lab-site-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+
+  assert.equal(audit.stats.receivedFiles, 9);
+  assert.equal(audit.stats.pdfPages, 158);
+  assert.equal(audit.stats.distinctInputHashes, 9);
+  assert.equal(audit.stats.exactDuplicateFilenameCopies, 0);
+  assert.equal(audit.stats.exactExistingHashes, 8);
+  assert.equal(audit.stats.exactExistingFileInstances, 8);
+  assert.equal(audit.stats.renderIdenticalFileInstances, 1);
+  assert.equal(audit.stats.establishedRecordsReused, 9);
+  assert.equal(audit.stats.ocrPages, 11);
+  assert.equal(audit.stats.ocrPagesWithText, 5);
+  assert.equal(audit.stats.gpuOcrPages, 11);
+  assert.equal(audit.stats.manualReviewPages, 158);
+  assert.equal(audit.stats.verifiedBlankPages, 6);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.retainedDistinctRecords, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.establishedRecords.length, 9);
+  assert.equal(
+    audit.stats.exactExistingFileInstances + audit.stats.renderIdenticalFileInstances,
+    audit.stats.receivedFiles,
+  );
+
+  const suppliedFiles = audit.establishedRecords.flatMap((group) => group.files);
+  assert.equal(suppliedFiles.length, audit.stats.receivedFiles);
+  assert.equal(new Set(suppliedFiles.map((file) => file.sha256)).size, audit.stats.distinctInputHashes);
+
+  for (const group of audit.establishedRecords) {
+    const record = catalogRows.find((row) => row.sha256 === group.canonicalSha256);
+    assert.ok(record, group.canonicalSha256);
+    assert.equal(record.pages, group.canonicalPages);
+    assert.match(group.match, new RegExp(record.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"));
+  }
+
+  const pace = audit.establishedRecords.find((group) => group.match.includes("063-95e40af937e2"));
+  assert.ok(pace);
+  assert.notEqual(pace.files[0].sha256, pace.canonicalSha256);
+  assert.match(pace.files[0].classification, /all 16 pages match/i);
+  assert.match(audit.resolution, /No redundant asset, catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /no source PDF was modified/i);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

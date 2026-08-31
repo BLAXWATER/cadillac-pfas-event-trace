@@ -1,0 +1,96 @@
+{
+  "batch": "2026-08-31 biosolids, Munson SIU and SNC intake 20",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 4 supplied files and all 4 pages.",
+    "Read embedded text from every page and applied CUDA-accelerated OCR to the scan-only SNC notice; the page produced readable text with a mean OCR confidence of 0.9724.",
+    "Rendered and visually inspected all four pages; every document begins with substantive content and no corrupt, truncated or visually blank page was found.",
+    "Compared every supplied hash against every published evidence catalog and identified four exact established records.",
+    "Compared the two Munson SIU pages at the rendered-image and extracted-text levels; they are distinct records because the reported process wastewater flow changes from 21,907 gallons per day to 21,000 gallons per day and their rendered pixels differ.",
+    "No supplied PDF was modified."
+  ],
+  "stats": {
+    "receivedFiles": 4,
+    "pdfFiles": 4,
+    "pdfPages": 4,
+    "distinctInputHashes": 4,
+    "exactDuplicateFilenameCopies": 0,
+    "exactExistingHashes": 4,
+    "exactExistingFileInstances": 4,
+    "establishedRecordsReused": 4,
+    "ocrPages": 1,
+    "ocrPagesWithText": 1,
+    "gpuOcrPages": 1,
+    "manualReviewPages": 4,
+    "verifiedBlankPages": 0,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 0,
+    "timelineEventsAdded": 0,
+    "timelineSourcesAdded": 0
+  },
+  "establishedRecords": [
+    {
+      "match": "biosolids record 187-05b220622b31",
+      "canonicalSha256": "05b220622b31649b19c85e2486d1ebd78e62b3d351ec43b78550181492689bce",
+      "canonicalPages": 1,
+      "files": [
+        {
+          "name": "MII Letter to Cadillac WWTP - Biosolids Incorporation.pdf",
+          "size": 483153,
+          "sha256": "05b220622b31649b19c85e2486d1ebd78e62b3d351ec43b78550181492689bce",
+          "classification": "exact SHA-256 match"
+        }
+      ]
+    },
+    {
+      "match": "IPP record 073-27cb487516fc",
+      "canonicalSha256": "27cb487516fcd402d97dc8dcc702efc2df8d38f378322b8f83fa6d5718f7085b",
+      "canonicalPages": 1,
+      "files": [
+        {
+          "name": "Munson (1).pdf",
+          "size": 60314,
+          "sha256": "27cb487516fcd402d97dc8dcc702efc2df8d38f378322b8f83fa6d5718f7085b",
+          "classification": "exact SHA-256 match; distinct 21,907-gpd SIU record"
+        }
+      ]
+    },
+    {
+      "match": "IPP record 030-a69594bc30d3",
+      "canonicalSha256": "a69594bc30d33cd3b0d42389c14f529b358844b3bd7333966757542e48c60275",
+      "canonicalPages": 1,
+      "files": [
+        {
+          "name": "Munson.pdf",
+          "size": 55566,
+          "sha256": "a69594bc30d33cd3b0d42389c14f529b358844b3bd7333966757542e48c60275",
+          "classification": "exact SHA-256 match; distinct 21,000-gpd SIU record"
+        }
+      ]
+    },
+    {
+      "match": "IPP record 040-99a3b1774a76",
+      "canonicalSha256": "99a3b1774a761b68a37c5536c0f304f3711c8fdc2792d22d6a50fd845becfefb",
+      "canonicalPages": 1,
+      "files": [
+        {
+          "name": "Notice of SNC.pdf",
+          "size": 90896,
+          "sha256": "99a3b1774a761b68a37c5536c0f304f3711c8fdc2792d22d6a50fd845becfefb",
+          "classification": "exact SHA-256 match; scan-only page verified with CUDA OCR"
+        }
+      ]
+    }
+  ],
+  "munsonComparison": {
+    "sameRenderedPageSize": true,
+    "exactRender": false,
+    "differentPixelChannelRatio": 0.02223419,
+    "exactExtractedText": false,
+    "materialDifference": "Process Wastewater volume is 21,907 gpd in Munson (1).pdf and 21,000 gpd in Munson.pdf."
+  },
+  "resolution": "All 4 supplied files and all 4 pages are accounted for by 4 established records. The two Munson documents remain separate because their recorded process wastewater flows materially differ. No redundant asset, catalog record or timeline event was added, and no source PDF was modified."
+}

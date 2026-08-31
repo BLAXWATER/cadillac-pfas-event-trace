@@ -1000,6 +1000,46 @@ test("batch 19 reuses seven established records for eight NPDES and biosolids fi
   assert.match(audit.resolution, /no source PDF was modified/i);
 });
 
+test("batch 20 reuses four exact records and preserves the distinct Munson flow values", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch20-biosolids-ipp-snc-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+
+  assert.equal(audit.stats.receivedFiles, 4);
+  assert.equal(audit.stats.pdfPages, 4);
+  assert.equal(audit.stats.distinctInputHashes, 4);
+  assert.equal(audit.stats.exactDuplicateFilenameCopies, 0);
+  assert.equal(audit.stats.exactExistingHashes, 4);
+  assert.equal(audit.stats.exactExistingFileInstances, 4);
+  assert.equal(audit.stats.establishedRecordsReused, 4);
+  assert.equal(audit.stats.ocrPages, 1);
+  assert.equal(audit.stats.ocrPagesWithText, 1);
+  assert.equal(audit.stats.gpuOcrPages, 1);
+  assert.equal(audit.stats.manualReviewPages, 4);
+  assert.equal(audit.stats.verifiedBlankPages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.retainedDistinctRecords, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.establishedRecords.length, 4);
+
+  const suppliedFiles = audit.establishedRecords.flatMap((group) => group.files);
+  assert.equal(suppliedFiles.length, audit.stats.receivedFiles);
+  assert.equal(new Set(suppliedFiles.map((file) => file.sha256)).size, audit.stats.distinctInputHashes);
+
+  for (const group of audit.establishedRecords) {
+    const record = catalogRows.find((row) => row.sha256 === group.canonicalSha256);
+    assert.ok(record, group.canonicalSha256);
+    assert.equal(record.pages, group.canonicalPages);
+    assert.match(group.match, new RegExp(record.id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"));
+  }
+
+  assert.equal(audit.munsonComparison.exactRender, false);
+  assert.equal(audit.munsonComparison.exactExtractedText, false);
+  assert.match(audit.munsonComparison.materialDifference, /21,907 gpd.*21,000 gpd/i);
+  assert.match(audit.resolution, /two Munson documents remain separate/i);
+  assert.match(audit.resolution, /No redundant asset, catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /no source PDF was modified/i);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

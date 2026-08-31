@@ -518,5 +518,31 @@
     "size": 5263974,
     "sha256": "57ed2d4d18ebeaef0ee37dfc002131f82e0343b32f3a8c240b6a1642fd1ccd23",
     "description": "December 12, 2018 City-to-DEQ email transmittal following a voicemail exchange, with the 22-page Avon-source report and 21-page Cadillac WWTP effluent report attached. The laboratory attachments overlap the canonical J18036-1 and J17993-1 records already preserved; this package is retained once for its delivery correspondence and attachment context."
+  },
+  {
+    "id": "corr-041-7797237d5b67",
+    "name": "2018-09-20 - PFAS Interim Report Follow-Up Questions and City Response.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/623d9abbdd9aa2dd388da68e3e95c23e59c31387/public/correspondence-docs/corr-041-7797237d5b67.pdf",
+    "year": "2018",
+    "category": "Correspondence & letters",
+    "type": "PFAS interim-report review correspondence",
+    "format": "PDF",
+    "pages": 4,
+    "size": 95451,
+    "sha256": "7797237d5b67735ffd7e012ec867baa489e1e2c0fe581b03779be7cea17b9e71",
+    "description": "August 27 through September 20, 2018 City/DEQ review thread. DEQ asks Cadillac to verify potential PFAS pathways at AAR, Rec Boat, Michigan Rubber Products, Avon Automotive, ARVCO and Hutchinson; Cadillac answers the six questions and provides supporting material, and DEQ acknowledges receipt for continued review."
+  },
+  {
+    "id": "corr-042-c73c0b45e14a",
+    "name": "2018-11-01 - Avon PFAS Sampling Direction and Landfill Follow-Up.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/623d9abbdd9aa2dd388da68e3e95c23e59c31387/public/correspondence-docs/corr-042-c73c0b45e14a.pdf",
+    "year": "2018",
+    "category": "Correspondence & letters",
+    "type": "PFAS source-sampling direction correspondence",
+    "format": "PDF",
+    "pages": 6,
+    "size": 111787,
+    "sha256": "c73c0b45e14a47e6b989cce89a4f50a85fa6790addae092cd28e1cddefcd8049",
+    "description": "November 1, 2018 City/DEQ follow-up extending the interim-review thread. DEQ directs PFAS sampling at Avon Automotive based on the reviewed Dyneon information, asks for the sampling schedule, seeks clarification on Rec Boat process wastewater and records continued landfill evaluation. Cadillac's inline response says bottles were ordered and describes the Rec Boat and landfill status."
   }
 ]

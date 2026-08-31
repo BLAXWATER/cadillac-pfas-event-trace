@@ -67,7 +67,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 668);
-  assert.equal(externalFiles, 840);
+  assert.equal(externalFiles, 842);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 52);
+  assert.equal(helperReferences.length, 54);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1508);
+  assert.equal(recordCount, 1510);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -167,8 +167,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1379);
-  assert.equal(audit.stats.pdfPages, 19471);
+  assert.equal(audit.stats.pdfRecords, 1381);
+  assert.equal(audit.stats.pdfPages, 19481);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -212,7 +212,7 @@ test("correspondence archive audit preserves distinct records and reuses exact c
   assert.equal(audit.stats.sourceFilesReviewed, 51);
   assert.equal(audit.stats.reviewedPages, 247);
   assert.equal(audit.stats.sourceOcrPages, 23);
-  assert.equal(audit.stats.finalDistinctRecords, 40);
+  assert.equal(audit.stats.finalDistinctRecords, 42);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 14);
   assert.equal(audit.stats.existingRecordMovedIntoCategory, 1);
@@ -662,6 +662,51 @@ test("batch 11 accounts for repeated leftovers and retains only distinct corresp
     assert.equal(createHash("sha256").update(source).digest("hex"), retained.sha256);
   }
   assert.match(audit.resolution, /no timeline event was added/i);
+});
+
+test("batch 12 reuses established records and retains the two distinct PFAS review threads", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch12-leftovers-audit.json"), "utf8"));
+  const correspondenceCatalog = JSON.parse(await readFile(path.join(appDirectory, "correspondence-documents.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 13);
+  assert.equal(audit.stats.pdfPages, 199);
+  assert.equal(audit.stats.distinctInputHashes, 13);
+  assert.equal(audit.stats.exactExistingHashes, 10);
+  assert.equal(audit.stats.exactExistingFileInstances, 10);
+  assert.equal(audit.stats.renderIdenticalExistingVariants, 1);
+  assert.equal(audit.stats.renderIdenticalFileInstances, 1);
+  assert.equal(audit.stats.manualReviewPages, 16);
+  assert.equal(audit.stats.retainedDistinctRecords, 2);
+  assert.equal(audit.stats.timelineEventsAdded, 2);
+  assert.equal(
+    audit.stats.exactExistingFileInstances
+      + audit.stats.renderIdenticalFileInstances
+      + audit.stats.retainedDistinctRecords,
+    audit.stats.receivedFiles,
+  );
+  assert.equal(audit.exactExistingRecords.length, 10);
+  assert.equal(audit.renderIdenticalVariants.length, 1);
+  assert.deepEqual(
+    audit.retainedRecords.map((row) => row.id),
+    ["corr-041-7797237d5b67", "corr-042-c73c0b45e14a"],
+  );
+  assert.equal(
+    audit.renderIdenticalVariants.some((row) =>
+      row.sha256 === "8715db9170efddc157de7a9c4635312a1622a8a92f530af85583825311aa76e6"
+        && row.match === "correspondence record corr-038-60eb9cdca3e6"
+        && /72 and 144 DPI/i.test(row.basis)),
+    true,
+  );
+
+  for (const retained of audit.retainedRecords) {
+    const record = correspondenceCatalog.find((row) => row.id === retained.id);
+    assert.ok(record, retained.id);
+    assert.equal(record.pages, retained.pages);
+    assert.equal(record.size, retained.size);
+    const source = await readFile(path.join(publicDirectory, "correspondence-docs", `${retained.id}.pdf`));
+    assert.equal(createHash("sha256").update(source).digest("hex"), retained.sha256);
+  }
+  assert.match(audit.resolution, /two dated events/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

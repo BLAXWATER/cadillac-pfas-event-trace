@@ -10,17 +10,23 @@
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 14,
     "existingRecordMovedIntoCategory": 1,
-    "newDistinctRecords": 39,
-    "finalDistinctRecords": 40,
+    "newDistinctRecords": 41,
+    "finalDistinctRecords": 42,
     "duplicateLabelsRemoved": 4,
-    "publishedPages": 221,
+    "publishedPages": 231,
     "publishedOcrPages": 34,
     "publishedOcrPagesWithText": 26,
-    "publishedBytes": 13113928,
+    "publishedBytes": 13321166,
     "latestBatch11FilesReviewed": 62,
     "latestBatch11PdfPagesReviewed": 371,
     "latestBatch11DistinctCorrespondenceRecords": 3,
-    "latestBatch11RenderIdenticalVoicemailCopiesSuppressed": 1
+    "latestBatch11RenderIdenticalVoicemailCopiesSuppressed": 1,
+    "latestBatch12FilesReviewed": 13,
+    "latestBatch12PdfPagesReviewed": 199,
+    "latestBatch12ExactExistingRecords": 10,
+    "latestBatch12RenderIdenticalExistingVariants": 1,
+    "latestBatch12RecordsAdded": 2,
+    "latestBatch12TimelineEventsAdded": 2
   },
   "methods": [
     "SHA-256 comparison within the entire supplied folder and against every published evidence catalog",
@@ -28,9 +34,14 @@
     "OCR on every scan-only or sparse-text page, with page-level confidence and readability checks",
     "Normalized extracted-text and rendered-page sequence comparison for byte-different candidates",
     "Conservative retention of revisions, transmittal wrappers, handwritten notes, annotations and agency stamps when they carry distinct evidence",
-    "August 31 leftovers intake 11 compared all supplied hashes against every evidence catalog, rendered the four unmatched PDFs in full, OCR-checked all 12 sparse-text pages and retained three distinct correspondence packages once."
+    "August 31 leftovers intake 11 compared all supplied hashes against every evidence catalog, rendered the four unmatched PDFs in full, OCR-checked all 12 sparse-text pages and retained three distinct correspondence packages once.",
+    "August 31 leftovers intake 12 verified all 13 PDFs and 199 pages, reused ten exact catalog matches, suppressed one page-identical sampling-guidance export after two-resolution render comparison, and retained two distinct interim-review threads."
   ],
   "decisions": [
+    {
+      "name": "August 31 leftovers intake 12 PFAS interim-review threads",
+      "reason": "The September and November packages preserve different correspondence states and agency actions. Both are retained; the longer November chain is not used to erase the September acknowledgement record."
+    },
     {
       "name": "Three August 31 leftovers correspondence records",
       "reason": "The PFAS sampling-guidance thread, the April 2018 extension clarification exchange and the December 2018 results transmittal preserve distinct official correspondence. Repeated attachment pages remain identified as overlap with established records, and the byte-different voicemail copy is suppressed after identical text and page renders at 72 and 144 DPI."

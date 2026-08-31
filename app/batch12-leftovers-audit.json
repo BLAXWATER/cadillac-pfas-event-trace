@@ -1,0 +1,133 @@
+{
+  "batch": "2026-08-31 leftovers intake 12",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Left Overs/COPY OF ALL DOCUMENTS",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all 13 supplied files and all 199 pages.",
+    "Compared every input hash against every published evidence catalog and prior render-identical audit finding before retention.",
+    "Reused ten exact catalog matches without creating redundant assets or records.",
+    "Compared the long-named sampling-guidance export with its established correspondence record using normalized extracted text and every page render at 72 and 144 DPI; the records are visually identical.",
+    "Extracted text from and rendered all ten pages of the two unmatched interim-review threads at 144 DPI, then inspected every rendered page for completeness and legibility."
+  ],
+  "stats": {
+    "receivedFiles": 13,
+    "pdfFiles": 13,
+    "pdfPages": 199,
+    "distinctInputHashes": 13,
+    "exactDuplicateFilenameCopies": 0,
+    "exactExistingHashes": 10,
+    "exactExistingFileInstances": 10,
+    "renderIdenticalExistingVariants": 1,
+    "renderIdenticalFileInstances": 1,
+    "ocrPages": 0,
+    "manualReviewPages": 16,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 2,
+    "timelineEventsAdded": 2
+  },
+  "exactExistingRecords": [
+    {
+      "sha256": "30e8027c2fcea54951dc2539478d00f429ffaf186ea18b56b49e32cc8b874339",
+      "match": "ipp record 090-30e8027c2fce",
+      "files": [
+        "RE_ Categorical determination _  CCI plant map with sewer drain lines.pdf"
+      ]
+    },
+    {
+      "sha256": "3db93feeaf816931a89a2ee36526651eafa9d4de1dad6aef63f8cc3cc106f94c",
+      "match": "ipp record 140-3db93feeaf81",
+      "files": [
+        "RE_ Cadillac MAHL.pdf"
+      ]
+    },
+    {
+      "sha256": "5c493c09b67c5206b19c1b7c3aca4babf869eb561f4df3b4b3cc865ff8aa6887",
+      "match": "ipp record 150-5c493c09b67c",
+      "files": [
+        "RE_ Cadillac Additional Local Limits Parameters - Proposed Sampling Plan.pdf"
+      ]
+    },
+    {
+      "sha256": "774fbfdfab32e0b3f346b9093d6c9420471c82daca8a5146bc0233d088b38249",
+      "match": "ipp record 151-774fbfdfab32",
+      "files": [
+        "RE_ Cadillac MAHL revisions.pdf"
+      ]
+    },
+    {
+      "sha256": "a0875a0a4df41be9523d4a74fb6f47e099b0726786add280978da9e87d162701",
+      "match": "pfas record 032-a0875a0a4df4",
+      "files": [
+        "Re_ 2021 Biosolids PFAS Lab Report.pdf"
+      ]
+    },
+    {
+      "sha256": "a1dc354bd52686bc6dac99f9156ec20de16bbd8179d81f73cee118c44744ffb5",
+      "match": "pfas record 023-a1dc354bd526",
+      "files": [
+        "RE_ December 2021 PFAS POTW Effluent Monitoring Report.pdf"
+      ]
+    },
+    {
+      "sha256": "c0c9d6ba627741e4f2ee8118f2577407048afd174b50859adb837f15bd96217e",
+      "match": "correspondence record corr-031-c0c9d6ba6277",
+      "files": [
+        "RE_ City of Cadillac .pdf"
+      ]
+    },
+    {
+      "sha256": "c1292bf05c0ff693a6c598845ff13d31cd3c41abc1199ef2fe4278f7cc84385e",
+      "match": "ipp record 152-c1292bf05c0f",
+      "files": [
+        "RE_ Categorical determination meeting_phone call.pdf"
+      ]
+    },
+    {
+      "sha256": "c3f871784cbf6beedc103f0b5922911fdd22339950bdb06df742937078162d0f",
+      "match": "biosolids record 040-c3f871784cbf",
+      "files": [
+        "RE_ Concerning your submission #HPC-K20Z-68T3J_ Annual Report Form For Reporting Biosolids.pdf"
+      ]
+    },
+    {
+      "sha256": "f1e208e42d04fd6dafd9241d7be4cf01cc653fa7439366445c06d4676ac52225",
+      "match": "ipp record 120-f1e208e42d04",
+      "files": [
+        "RE_ Cadillac MAHL - December 2024.pdf"
+      ]
+    }
+  ],
+  "renderIdenticalVariants": [
+    {
+      "sha256": "8715db9170efddc157de7a9c4635312a1622a8a92f530af85583825311aa76e6",
+      "files": [
+        "RE- IPP PFAS Initiative Sampling Guidance - Suggested Analytes - internal Q&A about WMRPDs planned methods - Method 537 vs modified - for testing landfills.pdf"
+      ],
+      "match": "correspondence record corr-038-60eb9cdca3e6",
+      "pages": 6,
+      "basis": "Normalized extracted text and every page render are identical at both 72 and 144 DPI; the byte difference is confined to the PDF export container and metadata."
+    }
+  ],
+  "retainedRecords": [
+    {
+      "id": "corr-041-7797237d5b67",
+      "sourceName": "RE_ Cadillac WWTP - IPP PFAS Interim Report Review.pdf",
+      "displayName": "2018-09-20 - PFAS Interim Report Follow-Up Questions and City Response.pdf",
+      "sha256": "7797237d5b67735ffd7e012ec867baa489e1e2c0fe581b03779be7cea17b9e71",
+      "pages": 4,
+      "size": 95451,
+      "reason": "Distinct four-page correspondence state preserving DEQ's six-question review, Cadillac's September response and the September 20 acknowledgement. It is not page-identical to the later November follow-up package."
+    },
+    {
+      "id": "corr-042-c73c0b45e14a",
+      "sourceName": "RE_ Cadillac WWTP - IPP PFAS Interim Report Review2.pdf",
+      "displayName": "2018-11-01 - Avon PFAS Sampling Direction and Landfill Follow-Up.pdf",
+      "sha256": "c73c0b45e14a47e6b989cce89a4f50a85fa6790addae092cd28e1cddefcd8049",
+      "pages": 6,
+      "size": 111787,
+      "reason": "Distinct later correspondence package containing the agency's November 1 sampling direction and the City's contemporaneous inline answers; this material is not present in the September record or the October 29 sampling-planning thread."
+    }
+  ],
+  "resolution": "All 13 supplied files are accounted for. Ten exact catalog matches and one page-identical sampling-guidance export reuse established evidence; two distinct interim-review correspondence packages are retained once and contribute two dated events without altering any source PDF."
+}

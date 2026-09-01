@@ -194,6 +194,131 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/ipp-docs/001-4e9a0cdf0189.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/002-3da57e8018fb.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/003-4d20ff2cea09.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/004-e09cc490d763.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/005-b1f62dff2c41.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/056-95a00ade695b.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/npdes-docs/038-8191c7e18aac.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/npdes-docs/080-6a540cadcdc6.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/dmr-docs/013-9a9721237464.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/dmr-docs/014-38abcc29105c.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/dmr-docs/015-e20050cc15eb.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/dmr-docs/016-36f3abe16dd1.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/dmr-docs/017-ff2a91f0f3b9.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/dmr-docs/018-6a73e78ae28d.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/compliance-docs/017-2713c81a8e63.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/compliance-docs/018-234577b7fcb4.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/compliance-docs/019-038472a6ae4c.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/compliance-docs/060-dd5fb72d29bd.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/wexford-docs/008-29d8248efbf8.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/wexford-docs/101-8716c8f5f6f1.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/wexford-docs/102-9011dd4b0fe6.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/wexford-docs/103-5114323584bd.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/docs/2014-preinspection.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/docs/2019-03-04-report-approval.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/docs/2019-12-pfas-status.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
 } as Record<string, string>;
 
 export function bundledPublicAsset(path: string): string {

@@ -70,6 +70,8 @@ test("contains the document reader and primary controls on mobile screens", asyn
   const css = await readFile(path.join(root, "app", "globals.css"), "utf8");
 
   assert.match(css, /@media\s*\(max-width:\s*900px\)/);
+  assert.match(css, /\.document-dialog-header\s*\{[^}]*width:\s*100%[^}]*min-width:\s*0[^}]*box-sizing:\s*border-box/s);
+  assert.match(css, /\.document-dialog-header > div:first-child\s*\{[^}]*flex:\s*1 1 auto[^}]*min-width:\s*0/s);
   assert.match(css, /\.document-dialog\s*\{[^}]*max-width:\s*calc\(100vw - 12px\)[^}]*grid-template-rows:\s*auto minmax\(0, 1fr\)/s);
   assert.match(css, /\.document-dialog > \[data-slot="dialog-close"\]\s*\{[^}]*width:\s*44px[^}]*height:\s*44px/s);
   assert.match(css, /\.document-frame\s*\{[^}]*width:\s*100%[^}]*min-width:\s*0[^}]*overflow:\s*hidden/s);

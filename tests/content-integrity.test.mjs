@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 677);
-  assert.equal(externalFiles, 840);
+  assert.equal(localFiles, 678);
+  assert.equal(externalFiles, 839);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -1277,6 +1277,45 @@ test("batch 25 preserves the draft fact sheet once and publishes the distinct EG
   }
 
   assert.match(audit.resolution, /No repeated catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /no supplied source PDF was modified/i);
+});
+
+test("batch 26 reuses the Septage and SIU records and repairs the stale Septage download", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch26-septage-siu-intake-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 2);
+  assert.equal(audit.stats.pdfPages, 27);
+  assert.equal(audit.stats.distinctInputHashes, 2);
+  assert.equal(audit.stats.exactCatalogMatches, 2);
+  assert.equal(audit.stats.distinctCatalogRecordsAdded, 0);
+  assert.equal(audit.stats.existingLocalDownloads, 1);
+  assert.equal(audit.stats.localDownloadsRepaired, 1);
+  assert.equal(audit.stats.bundledDownloadsEnabled, 2);
+  assert.equal(audit.stats.firstPagePreviewsAvailable, 2);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableFiles, 0);
+
+  for (const matched of audit.exactMatches) {
+    const record = catalogRows.find((row) => row.id === matched.recordId);
+    assert.ok(record, matched.recordId);
+    assert.equal(record.sha256, matched.sha256);
+    assert.equal(record.pages, matched.pages);
+    assert.equal(record.size, matched.size);
+    assert.equal(record.url, matched.asset);
+
+    const source = await readFile(path.join(publicDirectory, matched.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), matched.sha256);
+    assert.ok(previewManifest[matched.asset], `Missing preview for ${matched.asset}`);
+    assert.match(bundledSource, new RegExp(matched.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(audit.resolution, /No repeated catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /stale external link was repaired/i);
   assert.match(audit.resolution, /no supplied source PDF was modified/i);
 });
 

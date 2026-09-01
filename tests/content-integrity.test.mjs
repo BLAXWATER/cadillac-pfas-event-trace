@@ -1154,6 +1154,46 @@ test("batch 22 reconciles six Cadillac core sources and keeps their previews and
   assert.match(audit.resolution, /no source PDF was modified/i);
 });
 
+test("batch 23 reconciles nineteen Wexford sources and keeps their previews and downloads local", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch23-wexford-source-reconciliation-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 19);
+  assert.equal(audit.stats.pdfPages, 48);
+  assert.equal(audit.stats.distinctInputHashes, 19);
+  assert.equal(audit.stats.exactExistingHashes, 19);
+  assert.equal(audit.stats.establishedRecordsReused, 19);
+  assert.equal(audit.stats.canonicalAssetsRestored, 16);
+  assert.equal(audit.stats.bundledDownloadsEnabled, 19);
+  assert.equal(audit.stats.firstPagePreviewsAvailable, 19);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.missingHashes, 0);
+  assert.equal(audit.stats.staleHashes, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableFiles, 0);
+  assert.equal(audit.stats.retainedDistinctRecords, 0);
+  assert.equal(audit.catalogMatches.length, 19);
+
+  for (const matched of audit.catalogMatches) {
+    const record = catalogRows.find((row) => row.id === matched.recordId);
+    assert.ok(record, matched.recordId);
+    assert.equal(record.sha256, matched.sha256);
+    assert.equal(record.pages, matched.pages);
+    assert.equal(record.size, matched.size);
+
+    const source = await readFile(path.join(publicDirectory, matched.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), matched.sha256);
+    assert.ok(previewManifest[matched.asset], `Missing preview for ${matched.asset}`);
+    assert.match(bundledSource, new RegExp(matched.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(audit.resolution, /No repeated asset, catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /no source PDF was modified/i);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

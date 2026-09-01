@@ -270,9 +270,9 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 .document-dialog { width: min(1500px, 96vw) !important; max-width: none !important; height: 94vh; padding: 0 !important; gap: 0 !important; overflow: hidden; border-color: var(--border) !important; background: #050708 !important; }
-.document-dialog-header { min-height: 92px; display: flex !important; flex-direction: row !important; justify-content: space-between; align-items: center; gap: 18px; padding: 16px 54px 16px 20px; border-bottom: 1px solid var(--border); }
-.document-dialog-header > div { min-width: 0; }
-.document-dialog-header h2 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.document-dialog-header { width: 100%; min-width: 0; min-height: 92px; box-sizing: border-box; display: flex !important; flex-direction: row !important; justify-content: space-between; align-items: center; gap: 18px; padding: 16px 54px 16px 20px; border-bottom: 1px solid var(--border); }
+.document-dialog-header > div:first-child { flex: 1 1 auto; min-width: 0; }
+.document-dialog-header h2 { width: 100%; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .document-dialog-actions { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; }
 .document-preview-status { padding: 6px 10px; border: 1px solid #235263; border-radius: 999px; color: var(--primary); font-family: var(--font-mono); font-size: var(--font-11pt); letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
 .document-meta { max-width: 1040px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

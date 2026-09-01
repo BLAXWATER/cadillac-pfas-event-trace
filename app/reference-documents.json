@@ -1398,5 +1398,31 @@
     "sheets": null,
     "sha256": "b3871d88915e5510dd0caf105b8be9cfe8dd5101aa4bc419c00ad67b478e4398",
     "description": "Official EGLE daily Wexford County Wellogic package containing 9,273 WGS84 well records and 42,844 linked lithology rows. A spatial integrity check found 45 well records within 1,000 meters of the Census-geocoded 1121 Plett point, all with linked lithology. The files provide local well construction logs, lithology logs, screen intervals where reported, static-water levels, drillers and construction dates. Property-specific certification, coordinated elevation measurements, aquifer tests and directional flow analysis remain separate evidence needs."
+  },
+  {
+    "id": "117-a3c583d51c9b",
+    "name": "EGLE Wellogic Wells Within 1,000 m of 1121 Plett.geojson",
+    "url": "/reference-data/117-a3c583d51c9b.geojson",
+    "format": "GEOJSON",
+    "type": "Derived official well spatial subset",
+    "size": 70431,
+    "rows": 45,
+    "columns": 81,
+    "sheets": null,
+    "sha256": "a3c583d51c9b8e9aeb56b87005e64d20c688b10f6692df8fdd11be154f6f6339",
+    "description": "Spatial subset containing 45 unique EGLE Wellogic well points within 1,000 meters of 1121 Plett Road. All 45 records report well depth and static water level; 39 report a screen interval and only five report elevation. The derived subset is retained for local well context and does not replace certified property records, coordinated water-level measurements, aquifer testing or directional groundwater-flow analysis."
+  },
+  {
+    "id": "118-2e333d1adab3",
+    "name": "USGS 04121241 Clam River at Plett Road Flow Data.zip",
+    "url": "/reference-data/118-2e333d1adab3.zip",
+    "format": "ZIP",
+    "type": "Official surface-water discharge dataset",
+    "size": 8468,
+    "rows": 21,
+    "columns": 45,
+    "sheets": null,
+    "sha256": "2e333d1adab3a197e0a207353c6d4431c2db41c1b641ac21d7ca2ab7613d659b",
+    "description": "USGS export for station 04121241, Clam River at Plett Road, containing one monitoring-location row and ten approved field and channel-measurement rows. The ten discrete discharge observations span June 11, 1975 through September 11, 2001 and range from 6.24 to 57.6 cubic feet per second. This sparse surface-water series is hydrologic context; it is not continuous monitoring, groundwater-gradient evidence or a PFAS result."
   }
 ]

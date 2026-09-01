@@ -99,6 +99,16 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/reference-data/117-a3c583d51c9b.geojson", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/reference-data/118-2e333d1adab3.zip", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/findings-docs/146-6b4e98f4c779.pdf", {
     eager: true,
     import: "default",

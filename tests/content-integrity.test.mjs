@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 681);
+  assert.equal(localFiles, 684);
   assert.equal(externalFiles, 836);
 });
 
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1517);
+  assert.equal(recordCount, 1520);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -174,16 +174,17 @@ test("evidence request queue shows only unmatched, independently closable requir
   const requirementMet = (requirement, record) => {
     if (requirement.minPages && (record.pages ?? 0) < requirement.minPages) return false;
     const searchable = recordText(record);
+    if (["evidence intake manifest", "evidence recovery inventory", "not yet recovered"].some((term) => searchable.includes(normalize(term)))) return false;
     if (requirement.excludeTerms?.some((term) => searchable.includes(normalize(term)))) return false;
     return requirement.termGroups.every((group) => group.some((term) => searchable.includes(normalize(term))));
   };
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1517);
+  assert.equal(records.length, 1520);
   assert.equal(definitions.length, 5);
-  assert.equal(requirements.length, 19);
-  assert.equal(remaining.length, 19);
+  assert.equal(requirements.length, 23);
+  assert.equal(remaining.length, 23);
   assert.equal(new Set(definitions.map((definition) => definition.id)).size, definitions.length);
   assert.equal(new Set(requirements.map((requirement) => requirement.id)).size, requirements.length);
   assert.equal(definitions.some((definition) => definition.block === "2025 receptor sampling"), false);
@@ -212,6 +213,14 @@ test("evidence request queue shows only unmatched, independently closable requir
     const regionalReport = records.find((record) => record.id === recordId);
     assert.ok(siteMap && regionalReport);
     assert.equal(requirementMet(siteMap, regionalReport), false);
+  }
+
+  for (const recordId of ["107-d777daf8d23d", "108-2031480ac743"]) {
+    const trackingRecord = records.find((record) => record.id === recordId);
+    assert.ok(trackingRecord);
+    for (const requirement of definitions.find((definition) => definition.id === "receiving-history").requirements) {
+      assert.equal(requirementMet(requirement, trackingRecord), false, `${recordId} must not close ${requirement.id}`);
+    }
   }
 
   for (const requirement of requirements) {
@@ -248,8 +257,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1388);
-  assert.equal(audit.stats.pdfPages, 19541);
+  assert.equal(audit.stats.pdfRecords, 1389);
+  assert.equal(audit.stats.pdfPages, 19723);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -425,7 +434,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 98);
-  assert.equal(supplementalCatalog.length, 144);
+  assert.equal(supplementalCatalog.length, 145);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -1457,6 +1466,53 @@ test("batch 27 reuses the core IPP records and repairs every surfaced local down
   assert.match(audit.resolution, /No repeated catalog record or timeline event was added/i);
   assert.match(audit.resolution, /every surfaced stale or unbundled document path was repaired/i);
   assert.match(audit.resolution, /no supplied source PDF was modified/i);
+});
+
+test("batch 28 preserves distinct receiving-history context without closing transaction-level requests", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch28-receiving-history-intake-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 12);
+  assert.equal(audit.stats.pdfFiles, 10);
+  assert.equal(audit.stats.pdfPages, 604);
+  assert.equal(audit.stats.csvFiles, 2);
+  assert.equal(audit.stats.csvRows, 17);
+  assert.equal(audit.stats.distinctInputHashes, 12);
+  assert.equal(audit.stats.exactCatalogMatches, 9);
+  assert.equal(audit.stats.distinctCatalogRecordsAdded, 3);
+  assert.equal(audit.stats.outstandingRequirementsClosed, 0);
+  assert.equal(audit.stats.activeReceivingHistoryRequirements, 7);
+  assert.equal(audit.stats.missingFiles, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.exactMatches.length, 9);
+  assert.equal(audit.addedRecords.length, 3);
+
+  for (const matched of audit.exactMatches) {
+    const record = catalogRows.find((row) => row.id === matched.recordId);
+    assert.ok(record, matched.recordId);
+    assert.equal(record.sha256, matched.sha256);
+    assert.equal(record.pages, matched.pages);
+    assert.equal(record.size, matched.size);
+  }
+
+  for (const added of audit.addedRecords) {
+    const record = catalogRows.find((row) => row.id === added.recordId);
+    assert.ok(record, added.recordId);
+    assert.equal(record.sha256, added.sha256);
+    assert.equal(record.size, added.size);
+    const source = await readFile(path.join(publicDirectory, added.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), added.sha256);
+    assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.ok(previewManifest["/findings-docs/146-6b4e98f4c779.pdf"]);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+  assert.match(audit.queueResolution.reason, /none of the files contains per-load tickets/i);
+  assert.match(audit.queueResolution.trackingRecordPolicy, /cannot satisfy a requirement/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

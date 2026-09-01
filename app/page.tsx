@@ -205,9 +205,16 @@ const evidenceRecordText = (record: LibrarySearchRecord) => normalizeEvidenceTex
   ...(record.matchingSources ?? []).flatMap((source) => [source.name, source.relationship]),
 ].filter(Boolean).join(" "));
 
+const evidenceTrackingRecordTerms = [
+  "evidence intake manifest",
+  "evidence recovery inventory",
+  "not yet recovered",
+];
+
 const evidenceRequirementMet = (requirement: EvidenceRequirement, record: LibrarySearchRecord) => {
   if (requirement.minPages && (record.pages ?? 0) < requirement.minPages) return false;
   const searchable = evidenceRecordText(record);
+  if (evidenceTrackingRecordTerms.some((term) => searchable.includes(normalizeEvidenceText(term)))) return false;
   if (requirement.excludeTerms?.some((term) => searchable.includes(normalizeEvidenceText(term)))) return false;
   return requirement.termGroups.every((group) =>
     group.some((term) => searchable.includes(normalizeEvidenceText(term))),

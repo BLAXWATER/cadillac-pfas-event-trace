@@ -1870,5 +1870,18 @@
     "size": 1121102,
     "sha256": "a85c4e499dece2ddef8125fa7117fc64e483c15c61ca6f0e92c4321cf87061e7",
     "description": "One-page image-only collage of six owner-provided photographs associated by the archive classification index with driveway and well-head measurement context at 1140 Plett Road. The PDF metadata identifies the file as driveway_collage_8.5x11 and records a May 6, 2026 creation date. The photographs are preserved as secondary property context; they are not treated as a survey, a licensed well record, measured coordinates or proof of environmental conditions."
+  },
+  {
+    "id": "146-6b4e98f4c779",
+    "name": "FY2017 City of Cadillac Comprehensive Annual Financial Report.pdf",
+    "url": "/findings-docs/146-6b4e98f4c779.pdf",
+    "year": "2017",
+    "category": "Public finance & leachate treatment",
+    "type": "Audited financial report",
+    "format": "PDF",
+    "pages": 182,
+    "size": 3929791,
+    "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
+    "description": "City of Cadillac comprehensive annual financial report for the fiscal year ended June 30, 2017. Page 19 of the printed report (PDF page 25) states that revenue for treating Wexford County Landfill leachate exceeded budget by $307,683. This is aggregate audited financial context; it does not provide individual deliveries, gallons, invoices, receipts or the final delivery date."
   }
 ]

@@ -1,0 +1,49 @@
+{
+  "auditDate": "2026-09-01",
+  "purpose": "Reconcile the supplied receiving-history evidence package, preserve distinct records, and update the evidence request queue only when a source contains the requested transaction-level evidence.",
+  "stats": {
+    "receivedFiles": 12,
+    "pdfFiles": 10,
+    "pdfPages": 604,
+    "csvFiles": 2,
+    "csvRows": 17,
+    "distinctInputHashes": 12,
+    "exactCatalogMatches": 9,
+    "distinctCatalogRecordsAdded": 3,
+    "outstandingRequirementsClosed": 0,
+    "activeReceivingHistoryRequirements": 7,
+    "missingFiles": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "blankFirstPages": 0
+  },
+  "methods": [
+    "Computed SHA-256 and byte size for every supplied file.",
+    "Compared every PDF hash against every existing evidence catalog before adding a record.",
+    "Opened every supplied PDF and verified its page count; the distinct FY2017 report was text-searched and its first page plus the cited leachate-revenue page were visually inspected.",
+    "Imported both CSV files as structured workbooks and verified their row and column counts.",
+    "Compared the recovered evidence descriptions and limitations against each independently closable receiving-history requirement."
+  ],
+  "exactMatches": [
+    {"sourceName":"Spill notification 1-12-16.pdf","catalog":"compliance-documents.json","recordId":"039-c677de7c10e6","sha256":"c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d","pages":1,"size":74053},
+    {"sourceName":"April 1 2019 City Council_RN1123.pdf","catalog":"supplemental-documents.json","recordId":"018-be4038bf5cd5","sha256":"be4038bf5cd5438457ddcd05756514c877d2ab530720e37e670bb80f3eb75b80","pages":49,"size":2634450},
+    {"sourceName":"HNQ-VZP8-TWNRX V1 (1).pdf","catalog":"form-submission-documents.json","recordId":"form-submission-034-00d98416b456","sha256":"00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5","pages":3,"size":47218},
+    {"sourceName":"HNV-XK97-EV0GR V1 (1).pdf","catalog":"form-submission-documents.json","recordId":"form-submission-036-1873afe1dd72","sha256":"1873afe1dd72faba2066ef0163012c2feb727ca7dbd92726fd0f45c8935e6697","pages":3,"size":43266},
+    {"sourceName":"June 3 2019 City Council Packet.pdf","catalog":"supplemental-documents.json","recordId":"046-0fcfc8c9921f","sha256":"0fcfc8c9921f0ae0ae2957d5a2df3b2064a8a407c7ed5b8bea541f3fed215385","pages":82,"size":2821876},
+    {"sourceName":"May 21 2018 City Council Packet.pdf","catalog":"supplemental-documents.json","recordId":"045-25d3c10b9ea8","sha256":"25d3c10b9ea8697bb69779ea5341633f7c3326eca5f8130278188bd1cb388d88","pages":166,"size":7201375},
+    {"sourceName":"November 20 2017 City Council Packet.pdf","catalog":"supplemental-documents.json","recordId":"016-6ed7900b4952","sha256":"6ed7900b4952e238eda7baa37379cfc2d3293a25b2271abd0dcf72185a758194","pages":102,"size":7433697},
+    {"sourceName":"Pre-Inspection ReportLS.pdf","catalog":"compliance-documents.json","recordId":"059-72e0d17a78ae","sha256":"72e0d17a78aecc8973b70cded4666fbb4c7ba1a4df1d7f56a72f1b9ece7b5b67","pages":10,"size":115896},
+    {"sourceName":"September 8 2009 Special Meeting Minutes.pdf","catalog":"supplemental-documents.json","recordId":"008-5b67e1ed1d5c","sha256":"5b67e1ed1d5cef4fb50cca40560307f5befeff4e602f5229b0bf1422d803a9dd","pages":6,"size":21817}
+  ],
+  "addedRecords": [
+    {"sourceName":"FY2017 City of Cadillac CAFR.pdf","catalog":"supplemental-documents.json","recordId":"146-6b4e98f4c779","asset":"/findings-docs/146-6b4e98f4c779.pdf","sha256":"6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214","pages":182,"size":3929791,"finding":"The report states that FY2017 revenue for treating Wexford County Landfill leachate exceeded budget by $307,683. It is aggregate audited context, not transaction-level evidence."},
+    {"sourceName":"manifest.csv","catalog":"reference-documents.json","recordId":"107-d777daf8d23d","asset":"/reference-data/107-d777daf8d23d.csv","sha256":"d777daf8d23d7fd8f02eabdd44e9b17d4af3dd9d4d558df4967387cdedbb23b9","rows":10,"columns":18,"size":7199,"finding":"Evidence intake manifest identifying what each supplied source establishes and its limitations."},
+    {"sourceName":"NOT_YET_RECOVERED.csv","catalog":"reference-documents.json","recordId":"108-2031480ac743","asset":"/reference-data/108-2031480ac743.csv","sha256":"2031480ac74373b8c617e4fdf431d39139722e3f818c5788cb504527b36b0f2e","rows":7,"columns":8,"size":4540,"finding":"Recovery inventory defining the seven receiving-history record series that remain outstanding."}
+  ],
+  "queueResolution": {
+    "status": "kept-open",
+    "closedRequirementIds": [],
+    "reason": "The supplied package establishes the receiving relationship, aggregate volume and revenue context, and cessation context, but none of the files contains per-load tickets, receiving-log rows, delivery-linked invoices or receipts, signed agreement amendments, or the dated final delivery entry.",
+    "trackingRecordPolicy": "An evidence manifest or not-yet-recovered inventory cannot satisfy a requirement merely because it names the missing record."
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "sourceFileCount": 112,
-  "publishedFileCount": 106,
+  "sourceFileCount": 114,
+  "publishedFileCount": 108,
   "excludedFileCount": 6,
-  "includedBytes": 23726709,
+  "includedBytes": 23738448,
   "methods": [
     "SHA-256 byte comparison",
     "Normalized CSV header and cell comparison",

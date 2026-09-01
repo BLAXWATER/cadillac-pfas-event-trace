@@ -1,13 +1,15 @@
 {
   "auditDate": "2026-09-01",
-  "catalogRecordsReviewed": 1517,
+  "catalogRecordsReviewed": 1520,
   "priorCards": 6,
   "activeUniqueBlocks": 5,
-  "activeRequirements": 19,
+  "activeRequirements": 23,
   "changes": [
     "Merged the former 2025 receptor sampling card into Plett Road well results because both requested the same receptor-source package.",
     "Removed requests for records already represented by the current catalog, including DMRs, effluent PFAS reports, biosolids PFAS packages, Wexford site/topographic figures, regional groundwater literature and the available Plett Road analytical reports.",
-    "Split each active block into independently testable requirements so a supplied record removes only the requirement it satisfies and the block disappears only when all of its requirements are satisfied."
+    "Split each active block into independently testable requirements so a supplied record removes only the requirement it satisfies and the block disappears only when all of its requirements are satisfied.",
+    "Compared the September 1 receiving-history intake against all catalog hashes, preserved one distinct audited financial report and two intake inventories, and retained every transaction-level request because none of those files contains individual delivery rows.",
+    "Expanded the receiving-history block to the seven record series identified as not yet recovered: per-load tickets, Cadillac receiving logs, Cadillac receivables, Wexford billing, the executed 2009 agreement and rate schedule, later amendments, and the dated final delivery record."
   ],
   "heldEvidence": {
     "receivingHistory": [
@@ -40,6 +42,7 @@
     "The two-page A18 LDFA results compilation contains an I-5 influent sample from the LDFA Special Investigation and is not treated as Cadillac main-WWTP influent evidence.",
     "The 24-page EGLE comparability source packet does not satisfy the request for the complete 49-page Work Order 2509147.",
     "The secondary Plett well summary does not satisfy the request for an official or driller-certified completion log.",
-    "Regional USGS groundwater models do not satisfy the request for a site-specific source-to-Plett groundwater-flow map."
+    "Regional USGS groundwater models do not satisfy the request for a site-specific source-to-Plett groundwater-flow map.",
+    "Evidence intake manifests and not-yet-recovered inventories are tracking records; their descriptions cannot satisfy the evidence requests they enumerate."
   ]
 }

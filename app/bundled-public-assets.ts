@@ -44,6 +44,21 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/findings-docs/146-6b4e98f4c779.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/reference-data/107-d777daf8d23d.csv", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/reference-data/108-2031480ac743.csv", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/docs/2019-06-28-source-status.pdf", {
     eager: true,
     import: "default",
@@ -397,6 +412,6 @@ export function bundledFirstPagePreview(sourceUrl: string): string | undefined {
 
 export function bundledDocumentDownload(sourceUrl: string): string | undefined {
   const path = publicDocumentPath(sourceUrl);
-  if (!path || !/\.pdf$/i.test(path)) return undefined;
+  if (!path) return undefined;
   return bundledDocumentDownloads[`../public${path}`];
 }

@@ -21,7 +21,30 @@
       {
         "id": "wexford-leachate-invoices",
         "label": "Wexford landfill leachate invoices, billing statements or payment statements tied to deliveries.",
-        "termGroups": [["wexford"], ["leachate"], ["invoice", "billing statement", "payment statement"]]
+        "termGroups": [["wexford"], ["leachate"], ["invoice", "billing statement", "payment statement"]],
+        "excludeTerms": ["aggregate audited financial context", "does not provide"]
+      },
+      {
+        "id": "cadillac-leachate-receivables",
+        "label": "Cadillac accounts-receivable invoices, receipts or customer-ledger entries tied to Wexford leachate deliveries.",
+        "termGroups": [["cadillac", "wwtp"], ["wexford"], ["leachate"], ["accounts receivable", "invoice", "receipt", "customer ledger"]],
+        "excludeTerms": ["aggregate audited financial context", "does not provide"]
+      },
+      {
+        "id": "executed-2009-leachate-agreement",
+        "label": "The fully executed 2009 Wexford–Cadillac leachate-treatment agreement and its signed rate schedule.",
+        "termGroups": [["wexford"], ["cadillac"], ["leachate"], ["2009"], ["executed agreement", "signed agreement"], ["rate schedule"]]
+      },
+      {
+        "id": "leachate-agreement-renewals",
+        "label": "Signed renewals, amendments or successor leachate-treatment agreements covering 2011 through July 2019.",
+        "termGroups": [["wexford"], ["cadillac"], ["leachate"], ["renewal", "amendment", "successor agreement"], ["signed", "executed"]]
+      },
+      {
+        "id": "final-leachate-delivery-record",
+        "label": "The dated final Wexford leachate delivery, receiving-log entry or cessation record identifying when deliveries ended.",
+        "termGroups": [["wexford"], ["leachate"], ["final delivery", "last delivery", "cessation record", "receiving log"], ["date", "dated"]],
+        "excludeTerms": ["aggregate audited financial context", "does not provide"]
       }
     ]
   },

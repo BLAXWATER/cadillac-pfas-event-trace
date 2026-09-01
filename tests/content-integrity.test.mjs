@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 713);
+  assert.equal(localFiles, 715);
   assert.equal(externalFiles, 835);
 });
 
@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 62);
+  assert.equal(helperReferences.length, 64);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1548);
+  assert.equal(recordCount, 1550);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -181,7 +181,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1548);
+  assert.equal(records.length, 1550);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -262,8 +262,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1403);
-  assert.equal(audit.stats.pdfPages, 19824);
+  assert.equal(audit.stats.pdfRecords, 1405);
+  assert.equal(audit.stats.pdfPages, 19831);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -439,7 +439,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 98);
-  assert.equal(supplementalCatalog.length, 159);
+  assert.equal(supplementalCatalog.length, 161);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -1664,6 +1664,46 @@ test("batch 33 links the established multi-agency Plett packet without closing u
   assert.match(pageSource, /EGLE AOI Multi-Agency Testing/);
   assert.match(pageSource, /lacks chain-of-custody forms|does not supply chain-of-custody forms/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 34 adds only distinct AOI planning and redacted access records while leaving proof gaps open", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch34-aoi-access-planning-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 7);
+  assert.equal(audit.stats.totalPdfPagesReconciled, 98);
+  assert.equal(audit.stats.newPagesRenderedAndInspected, 8);
+  assert.equal(audit.stats.previouslyAuditedExactPagesReused, 90);
+  assert.equal(audit.stats.exactExistingRecords, 4);
+  assert.equal(audit.stats.blankTemplatesSuppressed, 1);
+  assert.equal(audit.stats.publicRedactionsCreated, 1);
+  assert.equal(audit.stats.recordsAdded, 2);
+  assert.equal(audit.stats.timelineEventsAdded, 2);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+
+  for (const added of audit.addedRecords) {
+    const record = catalogRows.find((row) => row.id === added.recordId);
+    assert.ok(record, added.recordId);
+    assert.equal(record.sha256, added.sha256);
+    assert.equal(record.pages, added.pages);
+    assert.equal(record.size, added.size);
+    const source = await readFile(path.join(publicDirectory, added.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), added.sha256);
+    assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    assert.ok(previewManifest[added.asset], added.asset);
+  }
+
+  assert.equal(audit.redaction.privateOriginal.published, false);
+  assert.notEqual(audit.redaction.privateOriginal.sha256, audit.redaction.publicDerivative.sha256);
+  assert.match(audit.suppressedRecord.classification, /blank template/i);
+  assert.match(pageSource, /Self-sample reports shape six proposed EGLE follow-up areas/);
+  assert.match(pageSource, /Signed agreement authorizes access to sample the 1140 Plett Road well/);
+  assert.match(pageSource, /a chain-of-custody or field sheet/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+  assert.match(audit.queueResolution.reason, /do not supply the complete 49-page work order/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

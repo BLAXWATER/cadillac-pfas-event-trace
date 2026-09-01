@@ -1,0 +1,106 @@
+{
+  "batch": "2026-09-01 AOI planning and access reconciliation 34",
+  "method": [
+    "Computed SHA-256, byte size, page count and readability for all seven supplied PDFs.",
+    "Matched four files byte-for-byte to previously audited canonical records and reused those records without creating duplicate catalog entries.",
+    "Rendered and visually reviewed all eight pages of the three unmatched records.",
+    "Suppressed the unexecuted blank questionnaire because the completed version was supplied in the same batch.",
+    "Preserved the completed questionnaire unchanged outside the public site and created a rasterized public derivative with names, contact details, owner details and the handwritten signature permanently removed.",
+    "Added the six sampling-area maps and redacted access agreement as two distinct records and two conservative timeline events.",
+    "Rechecked every open evidence request and closed none because the records do not establish an exact final leachate delivery date, the complete work order or chain of custody, the 2012 road-project agreement, or a proven PFAS migration pathway."
+  ],
+  "stats": {
+    "receivedFiles": 7,
+    "totalPdfPagesReconciled": 98,
+    "newPagesRenderedAndInspected": 8,
+    "previouslyAuditedExactPagesReused": 90,
+    "distinctInputHashes": 7,
+    "exactExistingRecords": 4,
+    "blankTemplatesSuppressed": 1,
+    "publicRedactionsCreated": 1,
+    "recordsAdded": 2,
+    "timelineEventsAdded": 2,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "exactExistingRecords": [
+    {
+      "name": "2025-11-06-Comparability-Study-Report-Cadillac.pdf",
+      "sha256": "ae1a7fc25cfe1448b8303c3f05624c2461ee3b7348827ecaf836bdaef92aa7c3",
+      "pages": 29,
+      "canonicalAsset": "/pfas-docs/055-ae1a7fc25cfe.pdf"
+    },
+    {
+      "name": "FAQ-Cadillac-Industrial-Park-AOI.pdf",
+      "sha256": "2944aeb34f9955423018234b5e5f6da00c721d482d56f29bdd9d443be57ae49a",
+      "pages": 12,
+      "canonicalAsset": "/findings-docs/156-2944aeb34f99.pdf"
+    },
+    {
+      "name": "MPART 2025-02-26 Cadillac AoI Update Session.pdf",
+      "sha256": "6fa34f7c9b0dcb59c47d00a87eafaba5628917216ad4058f7e2dc8411dbc51c1",
+      "pages": 44
+    },
+    {
+      "name": "Sample-Update-2025-05-29-Cadillac.pdf",
+      "sha256": "b4bd5d68b7a8c1e3b646e935fde72dbd9242226773623fd44f8c31136e46acb3",
+      "pages": 5,
+      "canonicalAsset": "/findings-docs/130-b4bd5d68b7a8.pdf"
+    }
+  ],
+  "suppressedRecord": {
+    "name": "05-20-2025 - Sampling Questionnaire and Access Agreement.pdf",
+    "sha256": "2d1c8fb8e777ad754f04c7189cd5fffe3b989df34444e1912a97b4e31d53c94b",
+    "pages": 1,
+    "classification": "Unexecuted blank template; not published as independent evidence because the completed version was supplied."
+  },
+  "redaction": {
+    "privateOriginal": {
+      "name": "05-20-2025 - Sampling Questionnaire and Access Agreement_001.pdf",
+      "sha256": "608e024fa6818608c3acbecee0b5f0ff7831e2bb43faade66c3965724e95d129",
+      "pages": 1,
+      "published": false
+    },
+    "publicDerivative": {
+      "recordId": "162-8086f65777d7",
+      "asset": "/findings-docs/162-8086f65777d7.pdf",
+      "sha256": "8086f65777d7b88c4199902b9eff880d0d222e5aafb79514998e3f58c8aefdd9",
+      "pages": 1,
+      "size": 287501
+    },
+    "removed": [
+      "resident names",
+      "phone number",
+      "email address",
+      "owner names and mailing address",
+      "handwritten signature"
+    ]
+  },
+  "addedRecords": [
+    {
+      "recordId": "161-945324bfdf2a",
+      "asset": "/findings-docs/161-945324bfdf2a.pdf",
+      "sha256": "945324bfdf2a240422b6f2d222d10225b00827c45b8bd03b624631bf028fea8e",
+      "pages": 6,
+      "size": 1125030
+    },
+    {
+      "recordId": "162-8086f65777d7",
+      "asset": "/findings-docs/162-8086f65777d7.pdf",
+      "sha256": "8086f65777d7b88c4199902b9eff880d0d222e5aafb79514998e3f58c8aefdd9",
+      "pages": 1,
+      "size": 287501
+    }
+  ],
+  "qualityFindings": [
+    "The April 9 maps document proposed sampling areas and distinguish original self-samples from proposed additional EGLE samples; they do not show completed sampling or results.",
+    "The signed access agreement documents authorization and sample-point conditions; it is not a chain-of-custody or analytical report.",
+    "The supplied records do not execute the unsigned 2012 Plett Road project agreement and do not prove a landfill-to-Plett migration pathway."
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "No request is closed. The maps and redacted agreement add response-planning and access context, but they do not supply the complete 49-page work order, chain of custody, exact final leachate delivery, executed 2012 road-project agreement, or source-to-receptor proof."
+  }
+}

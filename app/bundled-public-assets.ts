@@ -124,6 +124,16 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/findings-docs/161-945324bfdf2a.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/findings-docs/162-8086f65777d7.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/reference-data/119-ceebd83a93ce.txt", {
     eager: true,
     import: "default",

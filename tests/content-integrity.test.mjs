@@ -428,7 +428,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const completePreinspection = await readFile(path.join(publicDirectory, "docs", "2014-preinspection.pdf"));
   assert.equal(
     createHash("sha256").update(completePreinspection).digest("hex"),
-    "f496a616cd2a5ceef1019ce1b08c4aa1aa2f840387e20a78c7f5d9bd6a395cba",
+    "2afbbbc3680f99b401c8c6fba64379621dd73ac239d5fa6e97e8f2ff968a8040",
   );
   assert.equal(
     supplementalCatalog.filter((row) => row.category === "Research & technical literature" && row.type === "Peer-reviewed research article").length,
@@ -1192,6 +1192,57 @@ test("batch 23 reconciles nineteen Wexford sources and keeps their previews and 
 
   assert.match(audit.resolution, /No repeated asset, catalog record or timeline event was added/i);
   assert.match(audit.resolution, /no source PDF was modified/i);
+});
+
+test("batch 24 reconciles the verified-evidence sources and serves exact local downloads", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch24-verified-evidence-reconciliation-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 26);
+  assert.equal(audit.stats.pdfPages, 233);
+  assert.equal(audit.stats.distinctInputHashes, 26);
+  assert.equal(audit.stats.exactCatalogMatches, 22);
+  assert.equal(audit.stats.exactTimelineMatches, 3);
+  assert.equal(audit.stats.searchableDerivatives, 1);
+  assert.equal(audit.stats.establishedSourcesReused, 25);
+  assert.equal(audit.stats.canonicalAssetsRestored, 10);
+  assert.equal(audit.stats.bundledDownloadsEnabled, 25);
+  assert.equal(audit.stats.firstPagePreviewsAvailable, 25);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.missingHashes, 0);
+  assert.equal(audit.stats.staleHashes, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableFiles, 0);
+  assert.equal(audit.catalogMatches.length, 22);
+  assert.equal(audit.timelineMatches.length, 3);
+  assert.equal(audit.derivatives.length, 1);
+
+  for (const matched of audit.catalogMatches) {
+    const record = catalogRows.find((row) => row.id === matched.recordId);
+    assert.ok(record, matched.recordId);
+    assert.equal(record.sha256, matched.sha256);
+    assert.equal(record.pages, matched.pages);
+    assert.equal(record.size, matched.size);
+
+    const source = await readFile(path.join(publicDirectory, matched.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), matched.sha256);
+    assert.ok(previewManifest[matched.asset], `Missing preview for ${matched.asset}`);
+    assert.match(bundledSource, new RegExp(matched.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  for (const matched of audit.timelineMatches) {
+    const source = await readFile(path.join(publicDirectory, matched.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), matched.sha256);
+    assert.ok(previewManifest[matched.asset], `Missing preview for ${matched.asset}`);
+    assert.match(bundledSource, new RegExp(matched.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(audit.derivatives[0].classification, /Searchable OCR derivative/i);
+  assert.match(audit.resolution, /no supplied source PDF was modified/i);
+  assert.match(audit.resolution, /without adding a repeated catalog record or timeline event/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

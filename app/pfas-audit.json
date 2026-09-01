@@ -2,13 +2,13 @@
   "stats": {
     "suppliedFiles": 108,
     "finalDistinctRecords": 104,
-    "newDistinctRecords": 97,
+    "newDistinctRecords": 98,
     "existingRecordsReused": 6,
     "existingRecordReplaced": 1,
     "duplicateCopiesSuppressed": 4,
     "ocrReviewedPdfs": 24,
     "ocrReviewedPages": 192,
-    "publishedBytes": 109393890
+    "publishedBytes": 113425236
   },
   "methods": [
     "SHA-256 comparison within the 91-file category and against every catalog plus timeline source asset",

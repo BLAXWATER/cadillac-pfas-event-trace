@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "2baada1a0c88f2531c95c60d664ae1a72c3bdeda997fdf9073a0aa4e9f635214",
+  "catalogFingerprint": "dd4930880c6c96509674348689d2a98255086b05d6920f211a9980ad8d3aa13b",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1516,
-    "verifiedRecords": 1516,
-    "pdfRecords": 1387,
-    "pdfPages": 19517,
+    "catalogRecords": 1517,
+    "verifiedRecords": 1517,
+    "pdfRecords": 1388,
+    "pdfPages": 19541,
     "imageRecords": 13,
     "embeddedTextPages": 15786,
-    "ocrPages": 3744,
-    "ocrPagesWithText": 3406,
-    "manualReviewPages": 148,
+    "ocrPages": 3768,
+    "ocrPagesWithText": 3430,
+    "manualReviewPages": 134,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,24 +29,10 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 148,
+    "pagesReviewed": 134,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
-    {
-      "catalog": "ipp-documents.json",
-      "id": "158-05788837212e",
-      "name": "2015-05-14 - Pretreatment Compliance Inspection Interview Notes - Jill Edelbrock.pdf",
-      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/eb9cd4c0506afd72d73a4d4ebd4ab1ffe97ab7f5/public/ipp-docs/158-05788837212e.pdf",
-      "pages": [1, 2, 3, 4, 5, 6]
-    },
-    {
-      "catalog": "ipp-documents.json",
-      "id": "159-4158539aa924",
-      "name": "2015-05-14 - Pretreatment Compliance Inspection Interview Notes - Julie Lowe.pdf",
-      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/eb9cd4c0506afd72d73a4d4ebd4ab1ffe97ab7f5/public/ipp-docs/159-4158539aa924.pdf",
-      "pages": [1, 2, 3, 4, 5, 6, 7, 8]
-    },
     {
       "catalog": "biosolids-documents.json",
       "id": "089-3bbe404e48f4",

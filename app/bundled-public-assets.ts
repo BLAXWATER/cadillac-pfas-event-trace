@@ -229,7 +229,17 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/npdes-docs/044-a0347eae1366.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/npdes-docs/080-6a540cadcdc6.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/pfas-docs/098-044977305e5f.pdf", {
     eager: true,
     import: "default",
     query: "?url",

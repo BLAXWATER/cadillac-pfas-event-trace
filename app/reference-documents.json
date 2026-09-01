@@ -1424,5 +1424,57 @@
     "sheets": null,
     "sha256": "2e333d1adab3a197e0a207353c6d4431c2db41c1b641ac21d7ca2ab7613d659b",
     "description": "USGS export for station 04121241, Clam River at Plett Road, containing one monitoring-location row and ten approved field and channel-measurement rows. The ten discrete discharge observations span June 11, 1975 through September 11, 2001 and range from 6.24 to 57.6 cubic feet per second. This sparse surface-water series is hydrologic context; it is not continuous monitoring, groundwater-gradient evidence or a PFAS result."
+  },
+  {
+    "id": "119-ceebd83a93ce",
+    "name": "MDOT Contract 83609-108868 Bid Tabulation.txt",
+    "url": "/reference-data/119-ceebd83a93ce.txt",
+    "format": "TXT",
+    "type": "Official MDOT bid tabulation",
+    "size": 75828,
+    "rows": 729,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "ceebd83a93cefeb00c6a0563921d619e65dab69912a747283d0567de36343886",
+    "description": "MDOT bid tabulation for contract 83609-108868, call 022, with a June 1, 2012 letting date and June 28, 2012 print date. The work description and line items identify Plett/13th/Boon road construction, a box culvert and storm-sewer work. The record is roadway and drainage evidence and is not treated as proof of sanitary-sewer or WWTP work."
+  },
+  {
+    "id": "120-83295aef8621",
+    "name": "MDOT Contract 83609-108868 Modification 001.html",
+    "url": "/reference-data/120-83295aef8621.html",
+    "format": "HTML",
+    "type": "Official MDOT contract-modification record",
+    "size": 42854,
+    "rows": 2067,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "83295aef8621bf89235a9d0aa84205dbf76979b0cd8eeb87efe27f3214e52868",
+    "description": "Preserved MDOT Construction Contract Inquiry record for modification 001 to contract 83609-108868. It reports quantity changes and new items across projects 114222A and 108868A, including sewer removal, 15-inch sewer and sewer/culvert video items. In context with the bid tabulation, the sewer references are road-drainage items and do not establish a sanitary connection to the WWTP."
+  },
+  {
+    "id": "121-22691dcca74e",
+    "name": "MDOT Contract 83609-108868 Modification 002.html",
+    "url": "/reference-data/121-22691dcca74e.html",
+    "format": "HTML",
+    "type": "Official MDOT contract-modification record",
+    "size": 11936,
+    "rows": 398,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "22691dcca74e78a8dfae9610ab2ca8342af5cb8dfedaa0403d75d605f6aa52a9",
+    "description": "Preserved MDOT Construction Contract Inquiry record for modification 002 to contract 83609-108868. It lists $9,217.50 in added work, including drainage repair with a curb cut and guardrail items. It supplies roadway-drainage context, not groundwater, PFAS or sanitary-sewer evidence."
+  },
+  {
+    "id": "122-c8b0b8e50f92",
+    "name": "September 2026 Evidence Package Manifest.csv",
+    "url": "/reference-data/122-c8b0b8e50f92.csv",
+    "format": "CSV",
+    "type": "Evidence intake manifest",
+    "size": 10520,
+    "rows": 21,
+    "columns": 14,
+    "sheets": null,
+    "sha256": "c8b0b8e50f92c2784d92ad25aa52bcf1d57b42af5abba34b65fc26efdd4bc791",
+    "description": "Manifest for 21 native or original PDF records supplied in the September 1, 2026 evidence package. Every listed package path, file size and SHA-256 hash matched during intake. The manifest preserves provenance and integrity metadata but does not substitute for the underlying source records."
   }
 ]

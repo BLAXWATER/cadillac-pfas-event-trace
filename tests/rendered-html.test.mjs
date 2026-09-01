@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import path from "node:path";
 import test from "node:test";
 
 test("uses the core brand palette without recoloring the chronological trace", async () => {
@@ -43,6 +44,9 @@ test("renders stable site metadata and source policy", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
+  const firstPagePreviewManifest = JSON.parse(
+    await readFile(new URL("../app/first-page-preview-manifest.json", import.meta.url), "utf8"),
+  );
   assert.match(html, /<title>Cadillac PFAS Event Tracer<\/title>/i);
   assert.match(html, /Hierarchical, source-linked PFAS event trace/i);
   const logoPath = html.match(/<img[^>]+class="integrity-logo"[^>]+src="(\/assets\/blax-water-logo-optimized-[^"]+\.webp)"[^>]+alt="BLAX Water"/i)?.[1];
@@ -58,9 +62,11 @@ test("renders stable site metadata and source policy", async () => {
   assert.doesNotMatch(html, /4 of 10 events shown/i);
   assert.equal((html.match(/class="trace-row"/gi) ?? []).length, 83);
   assert.match(html, /class="source-thumbnail\s+source-thumbnail--(?:pdf|html|image|spreadsheet|office|archive|other)"/i);
-  assert.match(html, /src="\/assets\/008-5b67e1ed1d5c-[^"]+\.webp"/i);
-  assert.match(html, /src="\/assets\/2016-07-15-gw-public-notice-[^"]+\.webp"/i);
+  for (const sourcePath of ["/findings-docs/008-5b67e1ed1d5c.pdf", "/npdes-docs/076-a611a75485cf.pdf"]) {
+    const previewName = path.basename(firstPagePreviewManifest[sourcePath], ".webp");
+    assert.match(html, new RegExp(`src="/assets/${previewName}-[^"]+\\.webp"`, "i"));
+  }
   assert.doesNotMatch(html, /src="\/source-previews\//i);
-  assert.match(html, /Hover a filename for its source-page preview and result/i);
+  assert.match(html, /Hover a filename for its first-page preview and result/i);
   assert.doesNotMatch(html, /Original file not loaded/i);
 });

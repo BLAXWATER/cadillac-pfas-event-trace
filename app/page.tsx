@@ -47,7 +47,7 @@ import supplementalAudit from "./supplemental-audit.json";
 import supplementalDocuments from "./supplemental-documents.json";
 import wexfordAudit from "./wexford-audit.json";
 import wexfordDocuments from "./wexford-documents.json";
-import { bundledPublicAsset } from "./bundled-public-assets";
+import { bundledFirstPagePreview, bundledPublicAsset } from "./bundled-public-assets";
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
 import {
@@ -180,22 +180,18 @@ const pdf = (
   result: string,
   clock: Source["clock"],
   url?: string,
-): Source => ({
-  name,
-  url: url ?? repositoryAssetUrl(`/docs/${slug}.pdf`),
-  preview: bundledPublicAsset(`/previews/${slug}.jpg`),
-  pages,
-  format: "PDF",
-  role: "Primary source",
-  result,
-  clock,
-});
-
-const sourcePreviewFromUrl = (url: string) => {
-  const fileName = url.split("/").pop();
-  return fileName
-    ? bundledPublicAsset(`/source-previews/${fileName.replace(/\.pdf$/i, ".jpg")}`)
-    : undefined;
+): Source => {
+  const documentUrl = url ?? repositoryAssetUrl(`/docs/${slug}.pdf`);
+  return {
+    name,
+    url: documentUrl,
+    preview: bundledFirstPagePreview(documentUrl) ?? bundledPublicAsset(`/previews/${slug}.jpg`),
+    pages,
+    format: "PDF",
+    role: "Primary source",
+    result,
+    clock,
+  };
 };
 
 const ippSource = (
@@ -207,7 +203,7 @@ const ippSource = (
 ): Source => ({
   name,
   url,
-  preview: sourcePreviewFromUrl(url),
+  preview: bundledFirstPagePreview(url),
   pages,
   format: "PDF",
   role: "Primary source",
@@ -224,7 +220,7 @@ const archivedSource = (
 ): Source => ({
   name,
   url,
-  preview: sourcePreviewFromUrl(url),
+  preview: bundledFirstPagePreview(url),
   pages,
   format: "PDF",
   role: "Primary source",
@@ -2045,7 +2041,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
         <button type="button" className="source-button" aria-disabled={!linked} disabled={!linked} onClick={() => linked && open(source)}>{triggerContents}</button>
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
-        {previewAvailable ? <img src={previewUrl} alt={`Source-page preview of ${displayName}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className={`missing-preview missing-preview--${mediaKind}`}>{formatIcon}<span>{source.format} preview not available</span><small>The complete source can still be opened below.</small></div>}
+        {previewAvailable ? <img src={previewUrl} alt={`First-page preview of ${displayName}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className={`missing-preview missing-preview--${mediaKind}`}>{formatIcon}<span>{source.format} preview not available</span><small>The complete source can still be downloaded below.</small></div>}
         <div className="source-tooltip-copy">
           <p className="source-role">{source.role}</p>
           <p className="source-full-name" title={source.name}>{displayName}</p>
@@ -2075,6 +2071,7 @@ function catalogSource(document: CatalogDocument): Source {
   return {
     name: document.name,
     url: document.url,
+    preview: format === "PDF" ? bundledFirstPagePreview(document.url) : undefined,
     pages: document.pages ?? undefined,
     format,
     role: "Primary source",
@@ -2256,7 +2253,7 @@ export default function Home() {
           </div>
           <div className="integrity-note">
             <img className="integrity-logo" src={bundledPublicAsset("/blax-water-logo.png")} alt="BLAX Water" decoding="async" />
-            <div className="integrity-note-copy"><CheckCircle2 aria-hidden="true" /><div><strong>Original-source rule</strong><span>Hover a filename for its source-page preview and result. Click to open the complete document.</span></div></div>
+            <div className="integrity-note-copy"><CheckCircle2 aria-hidden="true" /><div><strong>Original-source rule</strong><span>Hover a filename for its first-page preview and result. Click to preview page one and download the complete document.</span></div></div>
           </div>
         </header>
 
@@ -2889,24 +2886,15 @@ export default function Home() {
               <DialogHeader className="document-dialog-header">
                 <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <div className="document-dialog-actions">
-                  <span className="document-preview-status">{selected.renderedPages || selected.preview ? "Readable preview" : "File details"}</span>
+                  <span className="document-preview-status">{selected.preview ? "First-page preview" : "File details"}</span>
                   {selectedDownloadUrl && <Button asChild variant="outline" size="sm"><a href={selectedDownloadUrl} target="_blank" rel="noreferrer" download={selected.name} aria-label={`Download ${selected.name}`}><Download aria-hidden="true" />Download</a></Button>}
                 </div>
               </DialogHeader>
-              <div className={`document-frame${selected.renderedPages ? " rendered-document-frame" : ""}`}>
-                {selected.renderedPages ? (
-                  <div className="document-pages" aria-label={`Rendered pages of ${selected.name}`}>
-                    {selected.renderedPages.map((page, index) => (
-                      <figure key={page} className="document-page">
-                        <img src={page} alt={`${selected.name}, page ${index + 1} of ${selected.renderedPages?.length}`} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
-                        <figcaption>Page {index + 1} of {selected.renderedPages.length}</figcaption>
-                      </figure>
-                    ))}
-                  </div>
-                ) : selected.preview ? (
+              <div className="document-frame">
+                {selected.preview ? (
                   <figure className="document-preview-page">
-                    <img src={selected.preview} alt={`Readable source-page preview of ${selected.name}`} />
-                    <figcaption>Source-page preview{selected.page ? ` · page ${selected.page}` : ""}{selected.pages ? ` · ${selected.pages} total pages` : ""}</figcaption>
+                    <img src={selected.preview} alt={`First-page preview of ${selected.name}`} />
+                    <figcaption>Page 1 preview{selected.pages ? ` · ${selected.pages} total pages in the download` : ""}</figcaption>
                   </figure>
                 ) : (
                   <div className="unsupported-document">

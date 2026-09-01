@@ -1,0 +1,108 @@
+{
+  "auditDate": "2026-09-01",
+  "scope": "Next package — municipal, county, MDOT, MPART and Michigan LARA evidence intake",
+  "stats": {
+    "receivedFileInstances": 48,
+    "distinctInputHashes": 46,
+    "exactExistingCatalogHashes": 27,
+    "recordsAdded": 15,
+    "pdfRecordsAdded": 11,
+    "pdfPagesRenderedAndInspected": 93,
+    "referenceRecordsAdded": 4,
+    "packageTrackerFilesNotCataloged": 4,
+    "timelineEventsAdded": 2,
+    "evidenceRequirementsClosed": 0,
+    "missingFiles": 0,
+    "manifestHashFailures": 0,
+    "manifestSizeFailures": 0,
+    "unreadableRecords": 0,
+    "blankFirstPages": 0
+  },
+  "withinPackageDuplicates": [
+    {
+      "sha256": "5b67e1ed1d5cef4fb50cca40560307f5befeff4e602f5229b0bf1422d803a9dd",
+      "paths": [
+        "September 8 2009 Special Meeting Minutes.pdf",
+        "01_City_of_Cadillac/Council_and_Contract_Records/September 8 2009 Special Meeting Minutes.pdf"
+      ],
+      "resolution": "Both instances match existing supplemental record 008-5b67e1ed1d5c; no duplicate catalog record was created."
+    },
+    {
+      "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+      "paths": [
+        "2798.pdf",
+        "01_City_of_Cadillac/Council_and_Contract_Records/November 20 2017 Proposed Injection Well Resolution.pdf"
+      ],
+      "resolution": "Both instances match existing supplemental record 100-850f00b27330; no duplicate catalog record was created."
+    }
+  ],
+  "exactExistingRecords": [
+    "147-501cb6326dac — 2012 Road Commission–City Plett Road Project Agreement",
+    "112-3e70c4808d58 — MDOT Bridge 13631 Plett Road over Clam River",
+    "100-850f00b27330 — Cadillac Resolution Opposing Wexford Water Technologies Injection-Well Permit",
+    "008-5b67e1ed1d5c — September 8 2009 Special Meeting Minutes",
+    "146-6b4e98f4c779 — FY2017 Cadillac Comprehensive Annual Financial Report",
+    "046-0fcfc8c9921f — June 3 2019 City Council Packet",
+    "045-25d3c10b9ea8 — May 21 2018 City Council Packet",
+    "092-c3e654984910 — August 16 2017 Wexford County Board Minutes",
+    "047-8d6267327b86 — February 21 2018 Wexford County Board Minutes",
+    "046-0d84b0d63d50 — February 7 2018 Wexford County Board Minutes",
+    "045-83afea408886 — January 17 2018 Wexford County Board Minutes",
+    "044-7c628f229e98 — November 1 2017 Wexford County Board Minutes",
+    "process-site-008-4127cba91f8b — November 15 2017 Wexford County Board Minutes",
+    "133-b131111d7828 — Wexford County 2018 Audited Financial Statements",
+    "148-c1f66e091159 — April 2026 Cadillac Flood News Release",
+    "007-238cf9655b70 — Cadillac WWTP CWSRF Project Plan and Funding Proposal",
+    "110-c1db81fc64d9 — Cadillac Laboratory 1121 Plett Road page",
+    "054-cd7547ee9370 — Cadillac Water and Wastewater PFAS Fact Sheet",
+    "109-ae6fb2bf0688 — EGLE Cadillac WWTP PFAS Record",
+    "115-60f86403524d — EGLE Bedrock Geology at 1121 Plett",
+    "114-ac3d967f79c6 — EGLE Quaternary Geology at 1121 Plett",
+    "117-a3c583d51c9b — EGLE Wellogic Wells Within 1,000 m of 1121 Plett",
+    "116-b3871d88915e — EGLE Wexford County Water Wells with Lithology",
+    "118-2e333d1adab3 — USGS Clam River at Plett Road Flow Data",
+    "149-e4e6ac86e7bc — USGS 2012 Cadillac North Topographic Map",
+    "082-1a5758abbd59 — USGS Cadillac Ground-Water Flow Report",
+    "111-f7ff41fbf818 — Road Commission, WWTP and 1121 Plett Records Index"
+  ],
+  "addedRecords": [
+    {"recordId":"150-09f087fefb8f","asset":"/findings-docs/150-09f087fefb8f.pdf","sha256":"09f087fefb8fd4fba323335301c63ea31e45beb36a67ed44b73ef9f938298b4d","pages":3,"size":320085},
+    {"recordId":"151-5a0d25ca941a","asset":"/findings-docs/151-5a0d25ca941a.pdf","sha256":"5a0d25ca941a6ab6f463534ee64b51c1ee43c35c6cd121be1fd8c06734f0cd71","pages":52,"size":4849213},
+    {"recordId":"152-4335077ddaf4","asset":"/findings-docs/152-4335077ddaf4.pdf","sha256":"4335077ddaf4c19d138cd8e6648d1f0253b052ab69e7e672aa9685d879917133","pages":4,"size":197413},
+    {"recordId":"153-b3da3c98dd4f","asset":"/findings-docs/153-b3da3c98dd4f.pdf","sha256":"b3da3c98dd4f053c4a3007e9f518225cd465c9decf5dfc65eaf03c303d49fd61","pages":5,"size":151158},
+    {"recordId":"154-42cf775b5b3a","asset":"/findings-docs/154-42cf775b5b3a.pdf","sha256":"42cf775b5b3ac2a07c5815c1b0a205b56f503f64022c214b7317807a50c48403","pages":4,"size":134252},
+    {"recordId":"155-4686cde76b57","asset":"/findings-docs/155-4686cde76b57.pdf","sha256":"4686cde76b57bc95a13ee18d2c3f774576f798b2c2b98619437af0aa5052dad5","pages":6,"size":218738},
+    {"recordId":"156-2944aeb34f99","asset":"/findings-docs/156-2944aeb34f99.pdf","sha256":"2944aeb34f9955423018234b5e5f6da00c721d482d56f29bdd9d443be57ae49a","pages":12,"size":245698},
+    {"recordId":"157-5f0ef7342a71","asset":"/findings-docs/157-5f0ef7342a71.pdf","sha256":"5f0ef7342a71608a90b5232769a530ec6ead7211452ae6e9fed7480d492283eb","pages":2,"size":213991},
+    {"recordId":"158-54e5a805019e","asset":"/findings-docs/158-54e5a805019e.pdf","sha256":"54e5a805019e042839fc5ac420931550dbea15e0627aaf2c18ab300cca5640eb","pages":2,"size":83796},
+    {"recordId":"159-156bb003c77d","asset":"/findings-docs/159-156bb003c77d.pdf","sha256":"156bb003c77d38e93006b8cc51ff34d103c2d24e0e5dd727fe35267d2635ca95","pages":1,"size":42044},
+    {"recordId":"160-148ff309f092","asset":"/findings-docs/160-148ff309f092.pdf","sha256":"148ff309f092e99ac9c07f393a635a343c830da2d2a64ac293aedbdce34c71fd","pages":2,"size":57214},
+    {"recordId":"119-ceebd83a93ce","asset":"/reference-data/119-ceebd83a93ce.txt","sha256":"ceebd83a93cefeb00c6a0563921d619e65dab69912a747283d0567de36343886","rows":729,"size":75828},
+    {"recordId":"120-83295aef8621","asset":"/reference-data/120-83295aef8621.html","sha256":"83295aef8621bf89235a9d0aa84205dbf76979b0cd8eeb87efe27f3214e52868","rows":2067,"size":42854},
+    {"recordId":"121-22691dcca74e","asset":"/reference-data/121-22691dcca74e.html","sha256":"22691dcca74e78a8dfae9610ab2ca8342af5cb8dfedaa0403d75d605f6aa52a9","rows":398,"size":11936},
+    {"recordId":"122-c8b0b8e50f92","asset":"/reference-data/122-c8b0b8e50f92.csv","sha256":"c8b0b8e50f92c2784d92ad25aa52bcf1d57b42af5abba34b65fc26efdd4bc791","rows":21,"columns":14,"size":10520}
+  ],
+  "uncatalogedPackageTrackers": [
+    "README.md",
+    "ENTITY_TREE.md",
+    "NOT_YET_RECOVERED.md",
+    "SHA256SUMS.txt"
+  ],
+  "timelineAdditions": [
+    "2019-03-18 — City anticipates leachate revenue ending with the deep well",
+    "2025-01 — MPART confirms the landfill source and summer 2019 cessation"
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The package adds official source, entity, road-drainage and cessation-context records, but it does not provide the executed 2009 agreement package, complete renewals or amendments, per-load manifests and receiving logs through July 2019, exact final load, invoice/payment chain, synchronized PFAS treatment series, or a site-specific source-to-receptor groundwater investigation. All existing evidence-request items therefore remain open."
+  },
+  "integrityNotes": [
+    "All 48 supplied file instances were SHA-256 hashed; 46 distinct hashes were present because two records were duplicated within the package.",
+    "All 21 MANIFEST.csv rows resolved to files whose size and SHA-256 values matched exactly.",
+    "All 21 SHA256SUMS.txt entries resolved and matched exactly.",
+    "All 93 pages across the 11 distinct added PDFs were rendered for visual inspection; no added PDF had a blank first page or failed to render.",
+    "The proposed Plett resolution is preserved as unexecuted because its resolution number, motion, vote and certification fields are blank.",
+    "The August 2012 packet is described as one packet containing separate road and WWTP subjects; it is not used to infer a sanitary-sewer or process connection.",
+    "The four package-authored tracker files were used for reconciliation and gap review but were not added as independent primary evidence records. The source manifest itself was retained as the package-level integrity record."
+  ]
+}

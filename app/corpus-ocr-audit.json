@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "4097c09e2be2fcb707a5147cbdfb5d0b2e3f1d09adfb6a2ede6758c2f443b6bd",
+  "catalogFingerprint": "18b379ea9ab30891fbe8c3ebaef35e87d697c1c21cc246a2fb8d86ec6ccd4ee6",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1533,
-    "verifiedRecords": 1533,
-    "pdfRecords": 1392,
-    "pdfPages": 19731,
+    "catalogRecords": 1548,
+    "verifiedRecords": 1548,
+    "pdfRecords": 1403,
+    "pdfPages": 19824,
     "imageRecords": 13,
-    "embeddedTextPages": 15971,
-    "ocrPages": 3773,
-    "ocrPagesWithText": 3434,
-    "manualReviewPages": 136,
+    "embeddedTextPages": 16038,
+    "ocrPages": 3799,
+    "ocrPagesWithText": 3457,
+    "manualReviewPages": 137,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,7 +29,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 136,
+    "pagesReviewed": 137,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -479,6 +479,15 @@
       "pages": [
         4,
         5
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "151-5a0d25ca941a",
+      "name": "August 6 2012 Cadillac Council Packet — Road Commission and WWTP.pdf",
+      "url": "/findings-docs/151-5a0d25ca941a.pdf",
+      "pages": [
+        37
       ]
     },
     {

@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 697);
+  assert.equal(localFiles, 712);
   assert.equal(externalFiles, 836);
 });
 
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1533);
+  assert.equal(recordCount, 1548);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -181,7 +181,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1533);
+  assert.equal(records.length, 1548);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -262,8 +262,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1392);
-  assert.equal(audit.stats.pdfPages, 19731);
+  assert.equal(audit.stats.pdfRecords, 1403);
+  assert.equal(audit.stats.pdfPages, 19824);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -439,7 +439,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 98);
-  assert.equal(supplementalCatalog.length, 148);
+  assert.equal(supplementalCatalog.length, 159);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -1562,6 +1562,46 @@ test("batch 30 preserves distinct Plett hydrology context without overstating pa
   assert.equal(audit.clamRiverValidation.latestDischargeCfs, 7.43);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
   assert.match(audit.queueResolution.reason, /neither supplies a certified Plett well record/i);
+});
+
+test("batch 31 adds only distinct official records and leaves unsupported gaps open", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch31-next-evidence-intake-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFileInstances, 48);
+  assert.equal(audit.stats.distinctInputHashes, 46);
+  assert.equal(audit.stats.exactExistingCatalogHashes, 27);
+  assert.equal(audit.stats.recordsAdded, 15);
+  assert.equal(audit.stats.pdfRecordsAdded, 11);
+  assert.equal(audit.stats.pdfPagesRenderedAndInspected, 93);
+  assert.equal(audit.stats.referenceRecordsAdded, 4);
+  assert.equal(audit.stats.packageTrackerFilesNotCataloged, 4);
+  assert.equal(audit.stats.timelineEventsAdded, 2);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.manifestHashFailures, 0);
+  assert.equal(audit.stats.manifestSizeFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.withinPackageDuplicates.length, 2);
+  assert.equal(audit.exactExistingRecords.length, 27);
+  assert.equal(audit.addedRecords.length, 15);
+
+  for (const added of audit.addedRecords) {
+    const record = catalogRows.find((row) => row.id === added.recordId);
+    assert.ok(record, added.recordId);
+    assert.equal(record.sha256, added.sha256);
+    assert.equal(record.size, added.size);
+    const source = await readFile(path.join(publicDirectory, added.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), added.sha256);
+    assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    if (added.asset.endsWith(".pdf")) assert.ok(previewManifest[added.asset], added.asset);
+  }
+
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+  assert.match(audit.queueResolution.reason, /does not provide the executed 2009 agreement package/i);
+  assert.match(audit.integrityNotes.join(" "), /unexecuted because its resolution number, motion, vote and certification fields are blank/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

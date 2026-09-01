@@ -116,7 +116,7 @@ test("normalizes every malformed pattern found in chronological source titles", 
 
 test("uses independent media handlers for document and image formats", async () => {
   const { sourceDocumentUrl, sourceDownloadUrl, sourceInlineUrl, sourceMediaKind, sourcePreviewUrl } = await vite.ssrLoadModule("/app/source-media.ts");
-  const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/a0f32eb8bb2275e93994b6c2543b200c55dc9a44/public";
+  const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/430a1cea6283f87b1b455f11ea0e5b767b2b1da5/public";
   const pinnedPdf = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/006-d8496c7348a6.pdf";
 
   assert.equal(sourceMediaKind("PDF"), "pdf");
@@ -148,6 +148,13 @@ test("opens document records in the reader and exposes a dedicated download acti
   assert.match(page, /download=\{selected\.name\}/);
   assert.match(bundledAssets, /import\.meta\.glob\("\.\.\/public\/first-page-previews\/\*\*\/\*\.webp"/);
   assert.match(bundledAssets, /export function bundledFirstPagePreview/);
+  assert.match(bundledAssets, /ipp-docs\/007-9aecbfcf4abc\.pdf/);
+  assert.match(bundledAssets, /ipp-docs\/125-9e67bc822d9c\.pdf/);
+  assert.match(bundledAssets, /ipp-docs\/140-3db93feeaf81\.pdf/);
+  assert.match(bundledAssets, /ipp-docs\/151-774fbfdfab32\.pdf/);
+  assert.match(bundledAssets, /compliance-docs\/012-16dae2e386d4\.pdf/);
+  assert.match(bundledAssets, /export function bundledDocumentDownload/);
+  assert.match(page, /bundledDocumentDownload\(selected\.url\)/);
   assert.equal((page.match(/target="_blank"/g) ?? []).length, 1);
 });
 

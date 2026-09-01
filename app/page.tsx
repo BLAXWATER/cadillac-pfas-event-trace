@@ -47,7 +47,7 @@ import supplementalAudit from "./supplemental-audit.json";
 import supplementalDocuments from "./supplemental-documents.json";
 import wexfordAudit from "./wexford-audit.json";
 import wexfordDocuments from "./wexford-documents.json";
-import { bundledFirstPagePreview, bundledPublicAsset } from "./bundled-public-assets";
+import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } from "./bundled-public-assets";
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
 import {
@@ -2240,7 +2240,8 @@ export default function Home() {
     return matchesType && matchesQuery;
   });
   const selectedDownloadUrl = selected?.url
-    ? sourceDownloadUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))
+    ? bundledDocumentDownload(selected.url)
+      ?? sourceDownloadUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))
     : undefined;
   return (
     <TooltipProvider delayDuration={120}>

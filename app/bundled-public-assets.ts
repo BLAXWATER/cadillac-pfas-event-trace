@@ -43,6 +43,34 @@ const bundledAssets = {
   }),
 } as Record<string, string>;
 
+const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/ipp-docs/007-9aecbfcf4abc.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/125-9e67bc822d9c.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/140-3db93feeaf81.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/151-774fbfdfab32.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/compliance-docs/012-16dae2e386d4.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+} as Record<string, string>;
+
 export function bundledPublicAsset(path: string): string {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const optimizedPath = normalizedPath
@@ -80,4 +108,10 @@ export function bundledFirstPagePreview(sourceUrl: string): string | undefined {
   const firstPagePath = (firstPagePreviewManifest as Record<string, string>)[path];
   if (!firstPagePath) return undefined;
   return bundledAssets[`../public${firstPagePath}`];
+}
+
+export function bundledDocumentDownload(sourceUrl: string): string | undefined {
+  const path = publicDocumentPath(sourceUrl);
+  if (!path || !/\.pdf$/i.test(path)) return undefined;
+  return bundledDocumentDownloads[`../public${path}`];
 }

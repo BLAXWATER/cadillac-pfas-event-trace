@@ -104,8 +104,9 @@ test("normalizes every malformed pattern found in chronological source titles", 
 });
 
 test("uses independent media handlers for document and image formats", async () => {
-  const { sourceDocumentUrl, sourceMediaKind, sourcePreviewUrl } = await vite.ssrLoadModule("/app/source-media.ts");
+  const { sourceDocumentUrl, sourceDownloadUrl, sourceInlineUrl, sourceMediaKind, sourcePreviewUrl } = await vite.ssrLoadModule("/app/source-media.ts");
   const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/a0f32eb8bb2275e93994b6c2543b200c55dc9a44/public";
+  const pinnedPdf = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/006-d8496c7348a6.pdf";
 
   assert.equal(sourceMediaKind("PDF"), "pdf");
   assert.equal(sourceMediaKind("HTML"), "html");
@@ -120,6 +121,18 @@ test("uses independent media handlers for document and image formats", async () 
   assert.equal(sourceDocumentUrl("/evidence/report.docx", "DOCX", () => "wrong"), `${repositoryAssetBase}/evidence/report.docx`);
   assert.equal(sourceDocumentUrl("/evidence/report.pdf", "PDF", (url) => `${url}#page=2`), "/evidence/report.pdf#page=2");
   assert.equal(sourceDocumentUrl("https://example.org/page.html", "HTML", () => "wrong"), "https://example.org/page.html");
+  assert.equal(sourceInlineUrl(pinnedPdf, "PDF", (url) => `${url}#page=2&view=FitH`), pinnedPdf.replace("/blob/", "/raw/") + "#page=2&view=FitH");
+  assert.equal(sourceDownloadUrl(pinnedPdf, "PDF", (url) => `${url}#page=2`), pinnedPdf.replace("/blob/", "/raw/"));
+});
+
+test("opens document records in the reader and exposes a dedicated download action", async () => {
+  const page = await readFile(path.join(root, "app", "page.tsx"), "utf8");
+
+  assert.match(page, /className="source-button"[^>]*onClick=\{\(\) => linked && open\(source\)\}/);
+  assert.match(page, /function DocumentPopoutButton/);
+  assert.match(page, /className="document-preview-status">[^\n]*"Readable preview"/);
+  assert.match(page, /download=\{selected\.name\}/);
+  assert.equal((page.match(/target="_blank"/g) ?? []).length, 1);
 });
 
 test("removes exactly the first period from every multi-period library filename", async () => {

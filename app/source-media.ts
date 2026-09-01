@@ -50,3 +50,31 @@ export function sourceDocumentUrl(
 ): string {
   return format === "PDF" ? withPdfPage(url) : repositorySourceUrl(url);
 }
+
+function rawRepositoryUrl(url: string, keepFragment: boolean): string {
+  const fragmentIndex = url.indexOf("#");
+  const base = fragmentIndex >= 0 ? url.slice(0, fragmentIndex) : url;
+  const fragment = fragmentIndex >= 0 ? url.slice(fragmentIndex) : "";
+  const rawBase = base.replace(
+    /^(https:\/\/github\.com\/BLAXWATER\/cadillac-pfas-event-trace\/)blob\//i,
+    "$1raw/",
+  );
+
+  return `${rawBase}${keepFragment ? fragment : ""}`;
+}
+
+export function sourceInlineUrl(
+  url: string,
+  format: SourceFormat,
+  withPdfPage: (url: string) => string,
+): string {
+  return rawRepositoryUrl(sourceDocumentUrl(url, format, withPdfPage), true);
+}
+
+export function sourceDownloadUrl(
+  url: string,
+  format: SourceFormat,
+  withPdfPage: (url: string) => string,
+): string {
+  return rawRepositoryUrl(sourceDocumentUrl(url, format, withPdfPage), false);
+}

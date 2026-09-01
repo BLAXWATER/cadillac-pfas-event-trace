@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   Database,
   Download,
-  ExternalLink,
   FileArchive,
   FileCode2,
   FileImage,
@@ -52,7 +51,7 @@ import { bundledPublicAsset } from "./bundled-public-assets";
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
 import {
-  sourceDocumentUrl,
+  sourceDownloadUrl,
   sourceMediaKind,
   sourcePreviewUrl,
   type SourceFormat,
@@ -92,6 +91,16 @@ type Source = {
     modified?: string;
     note: string;
   };
+};
+
+type CatalogDocument = {
+  name: string;
+  url: string;
+  format?: string | null;
+  pages?: number | null;
+  year?: string | null;
+  description?: string | null;
+  type?: string | null;
 };
 type Event = {
   year: string;
@@ -1999,10 +2008,6 @@ const evidenceRequests = [
 
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
-  const sourceUrl = source.url
-    ? sourceDocumentUrl(source.url, source.format, (url) => withPdfStartPage(url, source.page))
-    : undefined;
-  const external = Boolean(sourceUrl?.startsWith("https://github.com/"));
   const [previewFailed, setPreviewFailed] = useState(false);
   const previewUrl = sourcePreviewUrl(source);
   const previewAvailable = Boolean(previewUrl && !previewFailed);
@@ -2030,16 +2035,14 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
         <strong title={source.name}>{displayName}</strong>
         <small>{source.role}{source.page ? ` · page ${source.page}` : ""}</small>
       </span>
-      {linked && <ExternalLink className="source-open-icon" />}
+      {linked && <FileSearch className="source-open-icon" />}
     </>
   );
 
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        {external
-          ? <a className="source-button" href={sourceUrl} target="_blank" rel="noreferrer">{triggerContents}</a>
-          : <button type="button" className="source-button" aria-disabled={!linked} disabled={!linked} onClick={() => linked && open(source)}>{triggerContents}</button>}
+        <button type="button" className="source-button" aria-disabled={!linked} disabled={!linked} onClick={() => linked && open(source)}>{triggerContents}</button>
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
         {previewAvailable ? <img src={previewUrl} alt={`Source-page preview of ${displayName}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className={`missing-preview missing-preview--${mediaKind}`}>{formatIcon}<span>{source.format} preview not available</span><small>The complete source can still be opened below.</small></div>}
@@ -2054,10 +2057,49 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
             {source.clock.modified && <div><span>{source.format} modified</span><strong>{source.clock.modified}</strong></div>}
             <p>{source.clock.note}</p>
           </div>
-          <p className="source-hint">{linked ? external ? "Click to open the complete archived source in a new tab." : "Click to open the complete source in this window." : "Exact filename preserved; source acquisition required."}</p>
+          <p className="source-hint">{linked ? "Click to read the source in a document pop-out. A download control is provided inside." : "Exact filename preserved; source acquisition required."}</p>
         </div>
       </TooltipContent>
     </Tooltip>
+  );
+}
+
+function catalogSource(document: CatalogDocument): Source {
+  const inferredExtension = document.name.match(/\.([a-z0-9]+)$/i)?.[1]?.toUpperCase();
+  const inferredFormat = inferredExtension && ["PDF", "HTML", "JPG", "JPEG", "PNG", "WEBP", "DOC", "DOCX", "XLS", "XLSX", "CSV", "TSV", "MSG", "ZIP", "TXT"].includes(inferredExtension)
+    ? inferredExtension
+    : "OTHER";
+  const format = (document.format ?? inferredFormat) as SourceFormat;
+  const eventStamp = document.year ? `${document.year} · exact event time not stated` : "Reference record · time not stated";
+
+  return {
+    name: document.name,
+    url: document.url,
+    pages: document.pages ?? undefined,
+    format,
+    role: "Primary source",
+    result: document.description ?? document.type ?? "Preserved source document.",
+    clock: {
+      eventStamp,
+      basis: "Document library record",
+      note: document.description ?? "The complete preserved file is available from the download control.",
+    },
+  };
+}
+
+function DocumentPopoutButton({
+  document,
+  label,
+  open,
+}: {
+  document: CatalogDocument;
+  label: string;
+  open: (source: Source) => void;
+}) {
+  return (
+    <Button type="button" variant="outline" size="sm" onClick={() => open(catalogSource(document))}>
+      {label}<FileSearch />
+    </Button>
   );
 }
 
@@ -2200,6 +2242,9 @@ export default function Home() {
     const matchesQuery = !normalizedReferenceQuery || `${document.name} ${document.format} ${document.type}`.toLowerCase().includes(normalizedReferenceQuery);
     return matchesType && matchesQuery;
   });
+  const selectedDownloadUrl = selected?.url
+    ? sourceDownloadUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))
+    : undefined;
   return (
     <TooltipProvider delayDuration={120}>
       <main className="site-shell">
@@ -2251,7 +2296,7 @@ export default function Home() {
                       <div className="archive-meta"><Badge variant="outline">{document.archive}</Badge><span>{document.type}</span>{document.year && <span>{document.year}</span>}{document.format && <span>{document.format}</span>}</div>
                       <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                       {document.description && <p>{document.description}</p>}
-                      <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open record<ExternalLink /></a></Button>
+                      <DocumentPopoutButton document={document} label="Read record" open={setSelected} />
                     </article>
                   ))}
                 </div>
@@ -2369,7 +2414,7 @@ export default function Home() {
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
               </article>
             ))}
           </div>
@@ -2403,9 +2448,7 @@ export default function Home() {
               <article className="archive-card" key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                {document.format === "PDF"
-                  ? <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
-                  : <Button asChild variant="outline" size="sm"><a href={sourceDocumentUrl(document.url, document.format, (url) => withPdfStartPage(url))} target="_blank" rel="noreferrer">Open MSG<ExternalLink /></a></Button>}
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View MSG"} open={setSelected} />
               </article>
             ))}
           </div>
@@ -2440,7 +2483,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
               </article>
             ))}
           </div>
@@ -2475,7 +2518,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : document.format === "PNG" ? "Open image" : document.format === "XLSX" ? "Open workbook" : "Download MSG"}{document.format === "MSG" ? <Download /> : <ExternalLink />}</a></Button>
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : document.format === "PNG" ? "View image" : document.format === "XLSX" ? "View workbook" : "View MSG"} open={setSelected} />
               </article>
             ))}
           </div>
@@ -2510,7 +2553,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View image"} open={setSelected} />
               </article>
             ))}
           </div>
@@ -2545,7 +2588,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
               </article>
             ))}
           </div>
@@ -2580,7 +2623,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open source"}<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View source"} open={setSelected} />
               </article>
             ))}
           </div>
@@ -2615,7 +2658,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />
               </article>
             ))}
           </div>
@@ -2650,7 +2693,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : "Open image"}<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View image"} open={setSelected} />
               </article>
             ))}
           </div>
@@ -2695,12 +2738,12 @@ export default function Home() {
                           <small>{source.pages} {source.pages === 1 ? "page" : "pages"} · {formatBytes(source.size)} · independently hashed</small>
                           <p>{source.relationship}</p>
                         </div>
-                        <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(source.url)} target="_blank" rel="noreferrer">Open supplied file<ExternalLink /></a></Button>
+                        <DocumentPopoutButton document={{ ...source, format: "PDF", description: source.relationship }} label="Read supplied file" open={setSelected} />
                       </div>
                     ))}
                   </div>
                 ) : null}
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
               </article>
             ))}
           </div>
@@ -2735,7 +2778,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
               </article>
             ))}
           </div>
@@ -2770,7 +2813,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">{document.format === "PDF" ? "Open PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "Open image" : "Open source"}<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />
               </article>
             ))}
           </div>
@@ -2810,7 +2853,7 @@ export default function Home() {
                   {document.sheets !== null && <span>{document.sheets} {document.sheets === 1 ? "sheet" : "sheets"}</span>}
                   <span title={document.sha256}>SHA-256 {document.sha256.slice(0, 12)}…</span>
                 </div>
-                <Button asChild variant="outline" size="sm"><a href={sourceDocumentUrl(document.url, document.format as SourceFormat, (url) => withPdfStartPage(url))} target="_blank" rel="noreferrer">Open source<ExternalLink /></a></Button>
+                <DocumentPopoutButton document={document} label="View source" open={setSelected} />
               </article>
             ))}
           </div>
@@ -2845,7 +2888,10 @@ export default function Home() {
             {selected && <>
               <DialogHeader className="document-dialog-header">
                 <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
-                <Button asChild variant="outline" size="sm"><a href={sourceDocumentUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))} target="_blank" rel="noreferrer">Open separately<ExternalLink /></a></Button>
+                <div className="document-dialog-actions">
+                  <span className="document-preview-status">{selected.renderedPages || selected.preview ? "Readable preview" : "File details"}</span>
+                  {selectedDownloadUrl && <Button asChild variant="outline" size="sm"><a href={selectedDownloadUrl} target="_blank" rel="noreferrer" download={selected.name} aria-label={`Download ${selected.name}`}><Download aria-hidden="true" />Download</a></Button>}
+                </div>
               </DialogHeader>
               <div className={`document-frame${selected.renderedPages ? " rendered-document-frame" : ""}`}>
                 {selected.renderedPages ? (
@@ -2857,17 +2903,17 @@ export default function Home() {
                       </figure>
                     ))}
                   </div>
-                ) : sourceMediaKind(selected.format) === "pdf" ? (
-                  <iframe title={`Full document: ${selected.name}`} src={sourceDocumentUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page, true))} />
-                ) : sourceMediaKind(selected.format) === "html" ? (
-                  <iframe title={`Full HTML document: ${selected.name}`} src={sourceDocumentUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))} />
-                ) : sourceMediaKind(selected.format) === "image" ? (
-                  <img src={sourceDocumentUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))} alt={`Full source image: ${selected.name}`} />
+                ) : selected.preview ? (
+                  <figure className="document-preview-page">
+                    <img src={selected.preview} alt={`Readable source-page preview of ${selected.name}`} />
+                    <figcaption>Source-page preview{selected.page ? ` · page ${selected.page}` : ""}{selected.pages ? ` · ${selected.pages} total pages` : ""}</figcaption>
+                  </figure>
                 ) : (
                   <div className="unsupported-document">
                     <FileText />
-                    <strong>{selected.format} files open in a separate viewer.</strong>
-                    <p>Use the Open separately button to view or download the complete source.</p>
+                    <strong>{selected.format} file details</strong>
+                    <p>{selected.result}</p>
+                    <p>Use the download arrow above to open the complete preserved file in its compatible application.</p>
                   </div>
                 )}
               </div>

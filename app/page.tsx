@@ -2405,7 +2405,7 @@ export default function Home() {
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 {document.format === "PDF"
                   ? <Button asChild variant="outline" size="sm"><a href={withPdfStartPage(document.url)} target="_blank" rel="noreferrer">Open PDF<ExternalLink /></a></Button>
-                  : <Button asChild variant="outline" size="sm"><a href={document.url} download={document.name}>Download MSG<Download /></a></Button>}
+                  : <Button asChild variant="outline" size="sm"><a href={sourceDocumentUrl(document.url, document.format, (url) => withPdfStartPage(url))} target="_blank" rel="noreferrer">Open MSG<ExternalLink /></a></Button>}
               </article>
             ))}
           </div>
@@ -2810,7 +2810,7 @@ export default function Home() {
                   {document.sheets !== null && <span>{document.sheets} {document.sheets === 1 ? "sheet" : "sheets"}</span>}
                   <span title={document.sha256}>SHA-256 {document.sha256.slice(0, 12)}…</span>
                 </div>
-                <Button asChild variant="outline" size="sm"><a href={document.url} download={document.name}>Download<Download /></a></Button>
+                <Button asChild variant="outline" size="sm"><a href={sourceDocumentUrl(document.url, document.format as SourceFormat, (url) => withPdfStartPage(url))} target="_blank" rel="noreferrer">Open source<ExternalLink /></a></Button>
               </article>
             ))}
           </div>

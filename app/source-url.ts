@@ -1,15 +1,33 @@
-const repositoryAssetCommit = "be4c2d5dadbb16835a539e8509ac065d560bb055";
+const repositoryAssetCommit = "a0f32eb8bb2275e93994b6c2543b200c55dc9a44";
 const repositoryAssetBase =
   `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/${repositoryAssetCommit}/public`;
 
-export function repositorySourceUrl(url: string): string {
-  if (!url.startsWith("/")) return url;
+const repositoryBlobPath =
+  /^\/(?:cazey43|BLAXWATER)\/cadillac-pfas-event-trace\/blob\/([0-9a-f]{40})\/public(\/.*)$/i;
 
-  const [path, fragment] = url.split("#", 2);
-  const encodedPath = path
+function encodedRepositoryPath(path: string): string {
+  return path
     .split("/")
     .map((segment) => encodeURIComponent(decodeURIComponent(segment)))
     .join("/");
+}
+
+export function repositorySourceUrl(url: string): string {
+  const [base, fragment] = url.split("#", 2);
+
+  if (/^https:\/\/github\.com\//i.test(base)) {
+    const parsed = new URL(base);
+    const repositoryPath = parsed.pathname.match(repositoryBlobPath);
+    if (!repositoryPath) return url;
+
+    const pinnedBase =
+      `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/${repositoryPath[1].toLowerCase()}/public`;
+    return `${pinnedBase}${encodedRepositoryPath(decodeURIComponent(repositoryPath[2]))}${fragment ? `#${fragment}` : ""}`;
+  }
+
+  if (!base.startsWith("/")) return url;
+
+  const encodedPath = encodedRepositoryPath(base);
 
   return `${repositoryAssetBase}${encodedPath}${fragment ? `#${fragment}` : ""}`;
 }

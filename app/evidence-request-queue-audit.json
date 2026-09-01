@@ -1,0 +1,45 @@
+{
+  "auditDate": "2026-09-01",
+  "catalogRecordsReviewed": 1517,
+  "priorCards": 6,
+  "activeUniqueBlocks": 5,
+  "activeRequirements": 19,
+  "changes": [
+    "Merged the former 2025 receptor sampling card into Plett Road well results because both requested the same receptor-source package.",
+    "Removed requests for records already represented by the current catalog, including DMRs, effluent PFAS reports, biosolids PFAS packages, Wexford site/topographic figures, regional groundwater literature and the available Plett Road analytical reports.",
+    "Split each active block into independently testable requirements so a supplied record removes only the requirement it satisfies and the block disappears only when all of its requirements are satisfied."
+  ],
+  "heldEvidence": {
+    "receivingHistory": [
+      "2009 treatment agreement",
+      "2013–2014 receiving-point inspection records",
+      "2016 spill/tanker correspondence",
+      "FY2019 leachate-treatment revenue evidence",
+      "2022 inspection describing cessation of trucking/evaporation"
+    ],
+    "wwtpTreatmentDischarge": [
+      "72 DMR Daily records",
+      "Cadillac WWTP effluent PFAS analytical packages",
+      "Biosolids PFAS laboratory and QC packages"
+    ],
+    "subsurfacePathway": [
+      "Regional USGS groundwater-flow reports",
+      "Wexford site plan and north/south topographic figures",
+      "A secondary 1140 Plett Road well summary that is not driller-certified"
+    ],
+    "plettRoad": [
+      "March 4, 2025 Cyclopure report",
+      "September 10, 2025 Cyclopure report",
+      "April 9, 2026 MyTapScore analytical package",
+      "29-page comparability study",
+      "24-page comparability source packet",
+      "MPART presentations and maps"
+    ]
+  },
+  "conservativeExclusions": [
+    "The two-page A18 LDFA results compilation contains an I-5 influent sample from the LDFA Special Investigation and is not treated as Cadillac main-WWTP influent evidence.",
+    "The 24-page EGLE comparability source packet does not satisfy the request for the complete 49-page Work Order 2509147.",
+    "The secondary Plett well summary does not satisfy the request for an official or driller-certified completion log.",
+    "Regional USGS groundwater models do not satisfy the request for a site-specific source-to-Plett groundwater-flow map."
+  ]
+}

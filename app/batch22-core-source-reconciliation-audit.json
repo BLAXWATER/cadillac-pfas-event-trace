@@ -1,0 +1,96 @@
+{
+  "batch": "2026-09-01 Cadillac core-source reconciliation 22",
+  "requestedSources": [
+    "C:/Users/casey/OneDrive/Desktop/Already in portal/_07202026-326.pdf",
+    "C:/Users/casey/OneDrive/Desktop/individual_source_documents/03_Cadillac_Core/-7233250038345395334/IPP Profile.pdf",
+    "C:/Users/casey/OneDrive/Desktop/individual_source_documents/03_Cadillac_Core/-6666933816233107755/HNB-J69X-W1FHA V1.pdf",
+    "C:/Users/casey/OneDrive/Desktop/individual_source_documents/03_Cadillac_Core/-5801295826717958227/HNN-0QFE-AG22Q V1.pdf",
+    "C:/Users/casey/OneDrive/Desktop/individual_source_documents/03_Cadillac_Core/2395269267701377445/IU Form 1.pdf",
+    "C:/Users/casey/OneDrive/Desktop/individual_source_documents/03_Cadillac_Core/2151347118259606317/IU Form 2.pdf"
+  ],
+  "resolvedSourceFolder": "C:/Users/casey/OneDrive/Desktop/BLAX WATER/WWTP 790 PPT/03_Cadillac_Core",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for all six supplied files and all 81 pages.",
+    "Matched five files exactly to established evidence records by SHA-256, page count and byte size.",
+    "Compared the 62-page July 20, 2026 council packet export against the established packet page-by-page. It is the same official packet source with alternate online-agenda front matter and layout, so the established canonical record is reused.",
+    "Restored the three verified IPP source files from the repository's immutable history, generated their first-page previews and bundled all six canonical records as public browser downloads.",
+    "No source PDF was modified and no redundant evidence record or timeline event was added."
+  ],
+  "stats": {
+    "receivedFiles": 6,
+    "pdfFiles": 6,
+    "pdfPages": 81,
+    "distinctInputHashes": 6,
+    "exactExistingHashes": 5,
+    "alternateExistingSourceExports": 1,
+    "establishedRecordsReused": 6,
+    "canonicalAssetsRestored": 3,
+    "bundledDownloadsEnabled": 6,
+    "firstPagePreviewsAvailable": 6,
+    "missingHashes": 0,
+    "staleHashes": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "retainedDistinctRecords": 0,
+    "timelineEventsAdded": 0,
+    "timelineSourcesAdded": 0
+  },
+  "catalogMatches": [
+    {
+      "sourceName": "IPP Profile.pdf",
+      "recordId": "013-3d6cd5e0a57b",
+      "sha256": "3d6cd5e0a57bed064fbc15d56f0f82fe356b49671b70358a5222484ac0803013",
+      "pages": 4,
+      "size": 893152,
+      "asset": "/ipp-docs/013-3d6cd5e0a57b.pdf"
+    },
+    {
+      "sourceName": "HNB-J69X-W1FHA V1.pdf",
+      "recordId": "form-submission-074-120dbeb59d52",
+      "sha256": "120dbeb59d521dfe4b204dc7473c6d58b6c250fe77a1c0925ce1475cdc2ebbee",
+      "pages": 2,
+      "size": 288966,
+      "asset": "/form-submission-docs/form-submission-074-120dbeb59d52.pdf"
+    },
+    {
+      "sourceName": "HNN-0QFE-AG22Q V1.pdf",
+      "recordId": "form-submission-033-bffd8eec3c32",
+      "sha256": "bffd8eec3c32320f1857d416db4dd2516ffdcc9e03a198f37b4f4e523b59606e",
+      "pages": 2,
+      "size": 257363,
+      "asset": "/form-submission-docs/form-submission-033-bffd8eec3c32.pdf"
+    },
+    {
+      "sourceName": "IU Form 1.pdf",
+      "recordId": "012-4ef102885030",
+      "sha256": "4ef1028850304c56dccfc0621482b4c0c62372f1e7dec26bdcd555fc21a7e027",
+      "pages": 5,
+      "size": 454914,
+      "asset": "/ipp-docs/012-4ef102885030.pdf"
+    },
+    {
+      "sourceName": "IU Form 2.pdf",
+      "recordId": "011-9f84067f8dd2",
+      "sha256": "9f84067f8dd2aa93d43e6e0c0777c3008e0d7df1cf37e8e0798c83c0d72e8612",
+      "pages": 6,
+      "size": 1233526,
+      "asset": "/ipp-docs/011-9f84067f8dd2.pdf"
+    }
+  ],
+  "alternateSourceExports": [
+    {
+      "sourceName": "_07202026-326.pdf",
+      "sha256": "1ff3b8de34bf4d0ee2d8e720261425dee830662087514e62195276f3c4d7dab9",
+      "pages": 62,
+      "size": 6333806,
+      "recordId": "010-1aba682de0b8",
+      "canonicalName": "Council Packet 7-20-26.pdf",
+      "canonicalSha256": "1aba682de0b83300e2233ddc35b8029f388759ab9148502a5fd44433fc80fb89",
+      "canonicalSize": 8967441,
+      "canonicalAsset": "/findings-docs/010-1aba682de0b8.pdf",
+      "classification": "Same official 62-page meeting packet source. The submitted export uses a four-page online agenda instead of the canonical printable cover and agenda; the remaining packet sequence preserves the same supporting records, including the PFAS funding update and water-system project materials."
+    }
+  ],
+  "resolution": "All six supplied files and all 81 pages are accounted for. Five are exact established records and the July 20, 2026 file is an alternate export of the established council packet. The six canonical records now have browser-local preview and download handling. No redundant asset, catalog record or timeline event was added, and no source PDF was modified."
+}

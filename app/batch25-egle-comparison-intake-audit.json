@@ -1,0 +1,58 @@
+{
+  "batch": "2026-09-01 EGLE comparison evidence intake 25",
+  "requestedSources": [
+    "C:/Users/casey/OneDrive/Desktop/Fact Sheet-DRAFT_Cadillac WWTP.pdf",
+    "C:/Users/casey/OneDrive/Desktop/EGLE-COMPARISON-09102025_22.9 ~2.pdf"
+  ],
+  "resolvedSources": [
+    "C:/Users/casey/OneDrive/Desktop/Already in portal/Fact Sheet-DRAFT_Cadillac WWTP.pdf",
+    "C:/Users/casey/OneDrive/Desktop/EGLE STUDY/EGLE-COMPARISON-09102025_22.9 ~2.pdf"
+  ],
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and actual page count for both supplied files and all 27 pages.",
+    "Rendered and visually reviewed every page; no unreadable pages or blank first pages were found.",
+    "Matched the draft fact sheet exactly to its established NPDES catalog record and retained that record once.",
+    "Compared the EGLE packet with the separately cataloged final MPART comparability report and individual laboratory records. The packet remains materially distinct because it preserves the side-by-side table, available EGLE Work Order pages, Merit reports, Cyclopure reports and agency transmittal letter in one source package.",
+    "Enabled browser-local first-page previews and complete downloads for both established sources."
+  ],
+  "stats": {
+    "receivedFiles": 2,
+    "pdfFiles": 2,
+    "pdfPages": 27,
+    "distinctInputHashes": 2,
+    "exactCatalogMatches": 1,
+    "distinctCatalogRecordsAdded": 1,
+    "bundledDownloadsEnabled": 2,
+    "firstPagePreviewsAvailable": 2,
+    "blankFirstPages": 0,
+    "missingHashes": 0,
+    "staleHashes": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "timelineEventsAdded": 0
+  },
+  "exactMatches": [
+    {
+      "sourceName": "Fact Sheet-DRAFT_Cadillac WWTP.pdf",
+      "recordId": "044-a0347eae1366",
+      "sha256": "a0347eae1366e621a4c9b8d250db86e6b9200b9d0517314155187c96a742a3d5",
+      "pages": 3,
+      "size": 263820,
+      "asset": "/npdes-docs/044-a0347eae1366.pdf",
+      "resolution": "Exact established NPDES record retained once; browser-local download handling enabled."
+    }
+  ],
+  "distinctRecords": [
+    {
+      "sourceName": "EGLE-COMPARISON-09102025_22.9 ~2.pdf",
+      "recordId": "098-044977305e5f",
+      "sha256": "044977305e5fd34cdf638d762200c3d6832c29d0101e30ee8313013897dfa4d1",
+      "pages": 24,
+      "size": 4031346,
+      "asset": "/pfas-docs/098-044977305e5f.pdf",
+      "classification": "Materially distinct drinking-water laboratory comparison source packet."
+    }
+  ],
+  "resolution": "Both supplied files and all 27 pages are accounted for. The draft fact sheet remains represented by its exact established record, and the materially distinct EGLE comparison packet is retained once with an exact browser-local preview and complete download. No repeated catalog record or timeline event was added, and no supplied source PDF was modified."
+}

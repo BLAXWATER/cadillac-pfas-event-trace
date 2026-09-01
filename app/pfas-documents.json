@@ -1261,5 +1261,18 @@
     "size": 143259,
     "sha256": "e13fc785334ff3ae00fd36ed88c23332dbd56238910a92ffa498814c00c15acc",
     "description": "April 18, 2018 DEQ PFAS-source follow-up to Cadillac WWTP describing the landfill-leachate sampling initiative, encouraging coordination with landfill customers and moving the extension or alternative-monitoring-plan request deadline to May 8, 2018. Both scan-only pages were OCR-verified."
+  },
+  {
+    "id": "098-044977305e5f",
+    "name": "2025-09-10 - EGLE Cadillac Comparability Study Source Packet - 1140 Plett Road.pdf",
+    "url": "/pfas-docs/098-044977305e5f.pdf",
+    "year": "2025",
+    "category": "PFAS monitoring",
+    "type": "Drinking-water laboratory comparison packet",
+    "format": "PDF",
+    "pages": 24,
+    "size": 4031346,
+    "sha256": "044977305e5fd34cdf638d762200c3d6832c29d0101e30ee8313013897dfa4d1",
+    "description": "Twenty-four-page source packet for the Cadillac drinking-water comparability study at 1140 Plett Road. It preserves the side-by-side results table for samples collected September 10, 2025; available EGLE Work Order 2509147 pages; Merit laboratory reports; Cyclopure test-kit reports; and the October 15, 2025 EGLE transmittal letter. The packet is retained once as materially distinct source evidence and does not replace the separately cataloged final MPART comparability report or individual laboratory records."
   }
 ]

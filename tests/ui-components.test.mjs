@@ -114,6 +114,10 @@ test("normalizes every malformed pattern found in chronological source titles", 
     formatSourceDisplayName("210303.biosolids.PACE.pdf", "PDF", true),
     "210303 biosolids.PACE.pdf",
   );
+  assert.equal(
+    formatSourceDisplayName("EGLE Cadillac WWTP PFAS Record.geojson", "GEOJSON", true),
+    "EGLE Cadillac WWTP PFAS Record.geojson",
+  );
 });
 
 test("uses independent media handlers for document and image formats", async () => {
@@ -171,7 +175,7 @@ test("removes exactly the first period from every multi-period library filename"
     typeof record.name === "string" && (record.name.match(/\./g) ?? []).length > 1,
   );
 
-  assert.equal(records.length, 1520);
+  assert.equal(records.length, 1531);
   assert.equal(multiPeriodRecords.length, 195);
 
   for (const record of multiPeriodRecords) {

@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 678);
-  assert.equal(externalFiles, 839);
+  assert.equal(localFiles, 681);
+  assert.equal(externalFiles, 836);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -1316,6 +1316,65 @@ test("batch 26 reuses the Septage and SIU records and repairs the stale Septage 
 
   assert.match(audit.resolution, /No repeated catalog record or timeline event was added/i);
   assert.match(audit.resolution, /stale external link was repaired/i);
+  assert.match(audit.resolution, /no supplied source PDF was modified/i);
+});
+
+test("batch 27 reuses the core IPP records and repairs every surfaced local download", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch27-core-ipp-intake-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 14);
+  assert.equal(audit.stats.pdfPages, 113);
+  assert.equal(audit.stats.distinctInputHashes, 14);
+  assert.equal(audit.stats.exactCatalogMatches, 12);
+  assert.equal(audit.stats.renderIdenticalDerivatives, 2);
+  assert.equal(audit.stats.distinctCatalogRecordsAdded, 0);
+  assert.equal(audit.stats.localLinksRepaired, 3);
+  assert.equal(audit.stats.bundledDownloadsAdded, 4);
+  assert.equal(audit.stats.firstPagePreviewsAvailable, 14);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableFiles, 0);
+
+  for (const matched of audit.exactMatches) {
+    const record = catalogRows.find((row) => row.id === matched.recordId);
+    assert.ok(record, matched.recordId);
+    assert.equal(record.sha256, matched.sha256);
+    assert.equal(record.pages, matched.pages);
+    assert.equal(record.size, matched.size);
+    assert.equal(record.url, matched.asset);
+    const source = await readFile(path.join(publicDirectory, matched.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), matched.sha256);
+    assert.ok(previewManifest[matched.asset], `Missing preview for ${matched.asset}`);
+  }
+
+  for (const derivative of audit.renderIdentical) {
+    const record = catalogRows.find((row) => row.id === derivative.recordId);
+    assert.ok(record, derivative.recordId);
+    assert.equal(record.sha256, derivative.canonicalSha256);
+    assert.equal(record.pages, derivative.pages);
+    assert.equal(record.size, derivative.canonicalSize);
+    assert.equal(record.url, derivative.asset);
+    const source = await readFile(path.join(publicDirectory, derivative.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), derivative.canonicalSha256);
+    assert.ok(previewManifest[derivative.asset], `Missing preview for ${derivative.asset}`);
+    assert.match(derivative.comparison, /render pixel-for-pixel identically at 120 DPI/i);
+  }
+
+  for (const asset of [
+    "docs/2019-06-28-source-status.pdf",
+    "findings-docs/100-850f00b27330.pdf",
+    "form-submission-docs/form-submission-036-1873afe1dd72.pdf",
+    "ipp-docs/037-1f7e70d66b30.pdf",
+  ]) {
+    assert.match(bundledSource, new RegExp(asset.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(audit.resolution, /No repeated catalog record or timeline event was added/i);
+  assert.match(audit.resolution, /every surfaced stale or unbundled document path was repaired/i);
   assert.match(audit.resolution, /no supplied source PDF was modified/i);
 });
 

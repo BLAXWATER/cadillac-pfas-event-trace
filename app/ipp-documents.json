@@ -434,7 +434,7 @@
   {
     "id": "037-1f7e70d66b30",
     "name": "WEXFORD LANDFILL.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/037-1f7e70d66b30.pdf",
+    "url": "/ipp-docs/037-1f7e70d66b30.pdf",
     "year": "2017",
     "type": "IPP/industrial pretreatment record",
     "format": "PDF",
@@ -662,7 +662,7 @@
   {
     "id": "056-95a00ade695b",
     "name": "SIU-CIU_List.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/056-95a00ade695b.pdf",
+    "url": "/ipp-docs/056-95a00ade695b.pdf",
     "year": "2020",
     "type": "SIU/CIU inventory",
     "format": "PDF",

@@ -1,0 +1,63 @@
+{
+  "batch": "2026-09-01 Cadillac core IPP and permit record intake",
+  "stats": {
+    "receivedFiles": 14,
+    "pdfPages": 113,
+    "distinctInputHashes": 14,
+    "exactCatalogMatches": 12,
+    "renderIdenticalDerivatives": 2,
+    "distinctCatalogRecordsAdded": 0,
+    "localLinksRepaired": 3,
+    "bundledDownloadsAdded": 4,
+    "firstPagePreviewsAvailable": 14,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "timelineEventsAdded": 0
+  },
+  "exactMatches": [
+    {"sourceName":"POTW_Oversight_Table (1).pdf","recordId":"004-e09cc490d763","sha256":"e09cc490d763e734c7b8735143d937dca6f188a620956820ebe0c5e94258b2e7","pages":14,"size":48775,"asset":"/ipp-docs/004-e09cc490d763.pdf"},
+    {"sourceName":"HNQ-VZP8-TWNRX V1.pdf","recordId":"form-submission-034-00d98416b456","sha256":"00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5","pages":3,"size":47218,"asset":"/docs/2019-06-28-source-status.pdf"},
+    {"sourceName":"SIU-CIU_List (1).pdf","recordId":"005-b1f62dff2c41","sha256":"b1f62dff2c41ae0e8d8e44deec46559e56518bb4c74a10237812493dbca44e03","pages":6,"size":48663,"asset":"/ipp-docs/005-b1f62dff2c41.pdf"},
+    {"sourceName":"HNN-0QFE-AG22Q V1.pdf","recordId":"form-submission-033-bffd8eec3c32","sha256":"bffd8eec3c32320f1857d416db4dd2516ffdcc9e03a198f37b4f4e523b59606e","pages":2,"size":257363,"asset":"/form-submission-docs/form-submission-033-bffd8eec3c32.pdf"},
+    {"sourceName":"HNV-XK97-EV0GR V1.pdf","recordId":"form-submission-036-1873afe1dd72","sha256":"1873afe1dd72faba2066ef0163012c2feb727ca7dbd92726fd0f45c8935e6697","pages":3,"size":43266,"asset":"/form-submission-docs/form-submission-036-1873afe1dd72.pdf"},
+    {"sourceName":"POTW_Oversight_Table (1) (1).pdf","recordId":"003-4d20ff2cea09","sha256":"4d20ff2cea097b75992e4e5cb2a8ed159e482c0867ad1d5b93ba7d7749a34002","pages":14,"size":48518,"asset":"/ipp-docs/003-4d20ff2cea09.pdf"},
+    {"sourceName":"HNB-J69X-W1FHA V1.pdf","recordId":"form-submission-074-120dbeb59d52","sha256":"120dbeb59d521dfe4b204dc7473c6d58b6c250fe77a1c0925ce1475cdc2ebbee","pages":2,"size":288966,"asset":"/form-submission-docs/form-submission-074-120dbeb59d52.pdf"},
+    {"sourceName":"SIU-CIU_List (2).pdf","recordId":"056-95a00ade695b","sha256":"95a00ade695b98a74eb499dcb17d4e44dba27f6634d6099f145a18eb314c639c","pages":7,"size":48997,"asset":"/ipp-docs/056-95a00ade695b.pdf"},
+    {"sourceName":"Cadillac WWTP SIU Information (1).pdf","recordId":"001-4e9a0cdf0189","sha256":"4e9a0cdf01891e70d6ba197d3ed3a96d1949ca777ff58e7a0cd26818ff307846","pages":11,"size":498131,"asset":"/ipp-docs/001-4e9a0cdf0189.pdf"},
+    {"sourceName":"Cadillac WWTP Septage Information.pdf","recordId":"052-760656b79f1f","sha256":"760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51","pages":16,"size":948370,"asset":"/biosolids-docs/052-760656b79f1f.pdf"},
+    {"sourceName":"Pre-Inspection Report (1).pdf","recordId":"002-3da57e8018fb","sha256":"3da57e8018fbdeb2474b90c359352df532d2b0d46fbb00e591841182ae0b49e2","pages":7,"size":119143,"asset":"/ipp-docs/002-3da57e8018fb.pdf"},
+    {"sourceName":"WEXFORD LANDFILL.pdf","recordId":"037-1f7e70d66b30","sha256":"1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3","pages":1,"size":56579,"asset":"/ipp-docs/037-1f7e70d66b30.pdf"}
+  ],
+  "renderIdentical": [
+    {
+      "sourceName": "2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
+      "sourceSha256": "9f5e538bda6e286fa77abc64a879bfbb7fb1980326559f17a6426ec16e248542",
+      "sourceSize": 365515,
+      "recordId": "100-850f00b27330",
+      "canonicalSha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+      "canonicalSize": 344611,
+      "pages": 5,
+      "asset": "/findings-docs/100-850f00b27330.pdf",
+      "comparison": "Normalized text is identical and all five pages render pixel-for-pixel identically at 120 DPI. The byte difference is limited to PDF packaging, so the established canonical record is retained once."
+    },
+    {
+      "sourceName": "Application_2Q7-HQ21-P66B V1.pdf",
+      "sourceSha256": "c447fdfaf9cd97b5a9e1c543a370b77cff5c09c99c453f25a4b5ffe44ae30664",
+      "sourceSize": 137562,
+      "recordId": "080-6a540cadcdc6",
+      "canonicalSha256": "6a540cadcdc6fb9200560fcfd59897410932872fa6e48ca880ee5a8266642960",
+      "canonicalSize": 134638,
+      "pages": 22,
+      "asset": "/npdes-docs/080-6a540cadcdc6.pdf",
+      "comparison": "Normalized text is identical and all twenty-two pages render pixel-for-pixel identically at 120 DPI. The byte difference is limited to PDF packaging, so the established canonical record and timeline event are retained once."
+    }
+  ],
+  "repairs": [
+    "Replaced the former personal-GitHub URLs for WEXFORD LANDFILL.pdf, SIU-CIU_List.pdf and the Cadillac resolution with verified local asset URLs.",
+    "Bundled the WEXFORD source, Cadillac resolution, June 2019 PFAS status submission and December 2019 PFAS status submission for reliable hosted downloads.",
+    "Generated and visually verified the WEXFORD first-page preview; the other thirteen canonical records already had verified previews."
+  ],
+  "resolution": "All fourteen supplied PDFs reconcile to established evidence: twelve exact matches and two render-identical derivatives. No repeated catalog record or timeline event was added, no supplied source PDF was modified, and every surfaced stale or unbundled document path was repaired."
+}

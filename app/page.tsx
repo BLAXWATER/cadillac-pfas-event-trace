@@ -2138,6 +2138,33 @@ const events: Event[] = [
       },
     }],
   },
+  {
+    year: "2025",
+    date: "2025-09-10",
+    isoDate: "2025-09-10",
+    time: noTime,
+    timeBasis: "Latest sampling date stated in the MPART procedure",
+    phase: "AOI drinking-water comparability sampling",
+    kind: "receptor",
+    category: "04 / 06 / 13 · PFAS monitoring, lab results & wells",
+    title: "MPART comparability study documents Cadillac AOI receptor results",
+    finding: "MPART's September 9–10 side-by-side study used EGLE, Merit and Cyclopure methods at 20 Cadillac-area properties. The supplied address-table excerpts match the complete report and show PFOA drinking-water-criteria exceedance markings at anonymized addresses 5, 8, 11 and 20, with PFOS exceedance markings at address 11. AECOM's September 3 criteria heat map places detected and criteria-level drinking-water wells within the 13th-and-Plett AOI.",
+    significance: "Strengthens the receptor-result and AOI record while preserving the study's own limit: the report states that this sampling was not intended as a PFAS source investigation. It does not execute the proposed Plett Road resolution, identify the exact final leachate delivery or prove a source-to-Plett migration pathway.",
+    sources: [
+      archivedSource("MPART Study to Determine Comparability of PFAS Drinking Water Samples in Cadillac, Michigan.pdf", "/pfas-docs/055-ae1a7fc25cfe.pdf", 29, "The procedure and limitation appear on PDF pages 3–8; the supplied address-table images match PDF pages 14, 17, 20, 21, 27 and 29.", {
+        eventStamp: "2025-09-10 · time not stated",
+        basis: "Latest of the September 9–10 sampling dates stated on PDF page 4",
+        created: "2025-11-05 18:25:01 EST",
+        modified: "2025-11-09 19:54:36 EST",
+        note: "The event date follows the sampling activity. The report was published in November 2025 and explicitly says the study was not intended as a PFAS source investigation.",
+      }),
+      archivedSource("Cadillac PFAS Area Maps.pdf", "/findings-docs/122-e9b5255695c3.pdf", 7, "AECOM Figure 3 on PDF page 5 is the official base map reused in the supplied annotated 1140 Plett image.", {
+        eventStamp: "2025-09-03 · time not stated",
+        basis: "Drawn and approved date printed on AECOM Figure 3",
+        note: "The official map symbols provide spatial response context. Added boundary shading and callouts in the supplied PNG are treated as annotations, not independent agency findings.",
+      }),
+    ],
+  },
 ];
 
 const meta: Record<Kind, { label: string; icon: typeof Factory }> = {

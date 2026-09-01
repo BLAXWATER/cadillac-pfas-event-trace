@@ -44,6 +44,26 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/docs/2019-06-28-source-status.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/findings-docs/100-850f00b27330.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/form-submission-docs/form-submission-036-1873afe1dd72.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/037-1f7e70d66b30.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/biosolids-docs/052-760656b79f1f.pdf", {
     eager: true,
     import: "default",

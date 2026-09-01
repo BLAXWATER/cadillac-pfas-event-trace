@@ -56,7 +56,7 @@ export function withPdfStartPage(
   registry: FirstContentPageRegistry = verifiedFirstContentPages,
 ): string {
   const key = pdfSourceKey(url);
-  if (!key) return url;
+  if (!key) return repositorySourceUrl(url);
 
   const resolvedUrl = repositorySourceUrl(url);
   const base = resolvedUrl.split("#", 1)[0];

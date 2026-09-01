@@ -127,11 +127,16 @@ test("uses independent media handlers for document and image formats", async () 
 
 test("opens document records in the reader and exposes a dedicated download action", async () => {
   const page = await readFile(path.join(root, "app", "page.tsx"), "utf8");
+  const bundledAssets = await readFile(path.join(root, "app", "bundled-public-assets.ts"), "utf8");
 
   assert.match(page, /className="source-button"[^>]*onClick=\{\(\) => linked && open\(source\)\}/);
   assert.match(page, /function DocumentPopoutButton/);
-  assert.match(page, /className="document-preview-status">[^\n]*"Readable preview"/);
+  assert.match(page, /className="document-preview-status">[^\n]*"First-page preview"/);
+  assert.match(page, /<figcaption>Page 1 preview/);
+  assert.doesNotMatch(page, /<iframe src=\{selectedViewerUrl\}/);
   assert.match(page, /download=\{selected\.name\}/);
+  assert.match(bundledAssets, /import\.meta\.glob\("\.\.\/public\/first-page-previews\/\*\*\/\*\.webp"/);
+  assert.match(bundledAssets, /export function bundledFirstPagePreview/);
   assert.equal((page.match(/target="_blank"/g) ?? []).length, 1);
 });
 

@@ -1,3 +1,5 @@
+import firstPagePreviewManifest from "./first-page-preview-manifest.json";
+
 const bundledAssets = {
   ...import.meta.glob("../public/optimized-source-previews/*.webp", {
     eager: true,
@@ -20,6 +22,11 @@ const bundledAssets = {
     query: "?url",
   }),
   ...import.meta.glob("../public/document-pages/**/*.webp", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/first-page-previews/**/*.webp", {
     eager: true,
     import: "default",
     query: "?url",
@@ -48,4 +55,29 @@ export function bundledPublicAsset(path: string): string {
 
   if (bundledAsset) return bundledAsset;
   return normalizedPath;
+}
+
+function publicDocumentPath(sourceUrl: string): string | undefined {
+  const withoutFragment = sourceUrl.split("#", 1)[0];
+
+  try {
+    const parsed = new URL(withoutFragment, "https://site.invalid");
+    const publicMarker = "/public/";
+    const publicAt = parsed.pathname.indexOf(publicMarker);
+    const pathname = publicAt >= 0
+      ? parsed.pathname.slice(publicAt + publicMarker.length - 1)
+      : parsed.pathname;
+
+    return decodeURIComponent(pathname);
+  } catch {
+    return undefined;
+  }
+}
+
+export function bundledFirstPagePreview(sourceUrl: string): string | undefined {
+  const path = publicDocumentPath(sourceUrl);
+  if (!path || !/\.pdf$/i.test(path)) return undefined;
+  const firstPagePath = (firstPagePreviewManifest as Record<string, string>)[path];
+  if (!firstPagePath) return undefined;
+  return bundledAssets[`../public${firstPagePath}`];
 }

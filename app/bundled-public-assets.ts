@@ -44,6 +44,11 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/biosolids-docs/052-760656b79f1f.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/findings-docs/010-1aba682de0b8.pdf", {
     eager: true,
     import: "default",

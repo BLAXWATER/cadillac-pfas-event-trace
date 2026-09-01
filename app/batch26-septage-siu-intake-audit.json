@@ -1,0 +1,51 @@
+{
+  "batch": "2026-09-01 Cadillac WWTP Septage and SIU information intake",
+  "sourcePaths": [
+    "C:/Users/casey/Downloads/Cadillac WWTP Septage Information.pdf",
+    "C:/Users/casey/Downloads/Cadillac WWTP SIU Information.pdf"
+  ],
+  "stats": {
+    "receivedFiles": 2,
+    "pdfPages": 27,
+    "distinctInputHashes": 2,
+    "exactCatalogMatches": 2,
+    "distinctCatalogRecordsAdded": 0,
+    "existingLocalDownloads": 1,
+    "localDownloadsRepaired": 1,
+    "bundledDownloadsEnabled": 2,
+    "firstPagePreviewsAvailable": 2,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableFiles": 0,
+    "timelineEventsAdded": 0
+  },
+  "exactMatches": [
+    {
+      "sourceName": "Cadillac WWTP Septage Information.pdf",
+      "recordId": "052-760656b79f1f",
+      "catalog": "biosolids-documents.json",
+      "sha256": "760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51",
+      "pages": 16,
+      "size": 948370,
+      "asset": "/biosolids-docs/052-760656b79f1f.pdf",
+      "decision": "Exact established record. The catalog entry was retained once and its former personal-account GitHub URL was replaced with a verified local download and first-page preview."
+    },
+    {
+      "sourceName": "Cadillac WWTP SIU Information.pdf",
+      "recordId": "001-4e9a0cdf0189",
+      "catalog": "ipp-documents.json",
+      "sha256": "4e9a0cdf01891e70d6ba197d3ed3a96d1949ca777ff58e7a0cd26818ff307846",
+      "pages": 11,
+      "size": 498131,
+      "asset": "/ipp-docs/001-4e9a0cdf0189.pdf",
+      "decision": "Exact established record with an existing verified local download and first-page preview; no repeated catalog record was created."
+    }
+  ],
+  "verification": [
+    "SHA-256, byte size, PDF structure and page count were verified for both supplied files.",
+    "All 27 rendered pages were visually reviewed; every page was readable and neither first page was blank.",
+    "Both catalog records, local downloads, preview mappings and bundled browser assets were cross-checked after reconciliation."
+  ],
+  "resolution": "Both supplied PDFs are exact matches to established evidence records. No repeated catalog record or timeline event was added, no supplied source PDF was modified, and the Septage record's stale external link was repaired with the verified local source file."
+}

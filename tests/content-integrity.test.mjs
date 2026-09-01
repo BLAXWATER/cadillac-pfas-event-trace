@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 695);
+  assert.equal(localFiles, 697);
   assert.equal(externalFiles, 836);
 });
 
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1531);
+  assert.equal(recordCount, 1533);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -181,7 +181,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1531);
+  assert.equal(records.length, 1533);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -1518,6 +1518,50 @@ test("batch 28 preserves distinct receiving-history context without closing tran
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
   assert.match(audit.queueResolution.reason, /none of the files contains per-load tickets/i);
   assert.match(audit.queueResolution.trackingRecordPolicy, /cannot satisfy a requirement/i);
+});
+
+test("batch 30 preserves distinct Plett hydrology context without overstating pathway evidence", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch30-plett-hydrology-intake-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 7);
+  assert.equal(audit.stats.distinctInputHashes, 7);
+  assert.equal(audit.stats.exactExistingCatalogRecords, 5);
+  assert.equal(audit.stats.recordsAdded, 2);
+  assert.equal(audit.stats.geoJsonFeaturesAdded, 45);
+  assert.equal(audit.stats.flowTablesAdded, 3);
+  assert.equal(audit.stats.flowDataRowsAdded, 21);
+  assert.equal(audit.stats.approvedDischargeMeasurements, 10);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+  assert.equal(audit.exactExistingRecords.length, 5);
+  assert.equal(audit.addedRecords.length, 2);
+
+  for (const matched of audit.exactExistingRecords) {
+    const record = catalogRows.find((row) => row.sha256 === matched.sha256);
+    assert.ok(record, matched.sha256);
+  }
+
+  for (const added of audit.addedRecords) {
+    const record = catalogRows.find((row) => row.id === added.recordId);
+    assert.ok(record, added.recordId);
+    assert.equal(record.sha256, added.sha256);
+    assert.equal(record.size, added.size);
+    const source = await readFile(path.join(publicDirectory, added.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), added.sha256);
+    assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.equal(audit.wellSubsetValidation.features, 45);
+  assert.equal(audit.wellSubsetValidation.uniqueWellIds, 45);
+  assert.equal(audit.clamRiverValidation.minimumDischargeCfs, 6.24);
+  assert.equal(audit.clamRiverValidation.maximumDischargeCfs, 57.6);
+  assert.equal(audit.clamRiverValidation.latestDischargeCfs, 7.43);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+  assert.match(audit.queueResolution.reason, /neither supplies a certified Plett well record/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

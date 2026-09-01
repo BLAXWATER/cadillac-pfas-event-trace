@@ -1,0 +1,88 @@
+{
+  "auditDate": "2026-09-01",
+  "scope": "Plett Road geology, Wellogic, topographic, groundwater-flow and Clam River flow evidence intake",
+  "stats": {
+    "receivedFiles": 7,
+    "distinctInputHashes": 7,
+    "exactExistingCatalogRecords": 5,
+    "recordsAdded": 2,
+    "geoJsonFeaturesAdded": 45,
+    "flowTablesAdded": 3,
+    "flowDataRowsAdded": 21,
+    "approvedDischargeMeasurements": 10,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "missingHashes": 0,
+    "hashFailures": 0,
+    "unreadableRecords": 0
+  },
+  "exactExistingRecords": [
+    {
+      "name": "EGLE_Bedrock_Geology_at_1121_Plett.geojson",
+      "sha256": "60f86403524d8c2c31e802b6e28c52d3c787173fc20133ee20965250d0cc3009",
+      "match": "reference record 115-60f86403524d"
+    },
+    {
+      "name": "EGLE_Quaternary_Geology_at_1121_Plett.geojson",
+      "sha256": "ac3d967f79c61d2663b58e1bf5418332e1e2a1196de44a3ce753ea3f498ab434",
+      "match": "reference record 114-ac3d967f79c6"
+    },
+    {
+      "name": "EGLE_Wexford_WaterWells_with_Lithology.zip",
+      "sha256": "b3871d88915e5510dd0caf105b8be9cfe8dd5101aa4bc419c00ad67b478e4398",
+      "match": "reference record 116-b3871d88915e"
+    },
+    {
+      "name": "USGS_2012_Cadillac_North_Topo.pdf",
+      "sha256": "e4e6ac86e7bc79e4afaa0aa87206ff4e417917693dc137e43d29d44c2a0439e4",
+      "match": "supplemental record 149-e4e6ac86e7bc"
+    },
+    {
+      "name": "USGS_SIR_2004-5175_Cadillac_Groundwater_Flow.pdf",
+      "sha256": "1a5758abbd591b44fe1b547aadded48616988118525ca480a6a83d94192fc0a1",
+      "match": "supplemental record 082-1a5758abbd59"
+    }
+  ],
+  "addedRecords": [
+    {
+      "recordId": "117-a3c583d51c9b",
+      "asset": "/reference-data/117-a3c583d51c9b.geojson",
+      "sha256": "a3c583d51c9b8e9aeb56b87005e64d20c688b10f6692df8fdd11be154f6f6339",
+      "size": 70431
+    },
+    {
+      "recordId": "118-2e333d1adab3",
+      "asset": "/reference-data/118-2e333d1adab3.zip",
+      "sha256": "2e333d1adab3a197e0a207353c6d4431c2db41c1b641ac21d7ca2ab7613d659b",
+      "size": 8468
+    }
+  ],
+  "wellSubsetValidation": {
+    "features": 45,
+    "uniqueWellIds": 45,
+    "wellDepthPresent": 45,
+    "staticWaterLevelPresent": 45,
+    "screenIntervalPresent": 39,
+    "elevationPresent": 5,
+    "resolution": "Retained as a convenient derived subset of the official county Wellogic package. It does not replace certified well records or supply the coordinated elevations and measurements needed for a local groundwater-flow determination."
+  },
+  "clamRiverValidation": {
+    "station": "USGS-04121241",
+    "stationName": "CLAM RIVER AT PLETT ROAD AT CADILLAC, MI",
+    "measurementDates": "1975-06-11 through 2001-09-11",
+    "minimumDischargeCfs": 6.24,
+    "maximumDischargeCfs": 57.6,
+    "latestDischargeCfs": 7.43,
+    "resolution": "Retained as official surface-water hydrology context. The ten field visits are not a continuous series and do not establish groundwater gradient, PFAS conditions or source-to-receptor transport."
+  },
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The five repeated files add no new evidence. The two distinct files provide a derived nearby-well subset and sparse surface-water discharge context, but neither supplies a certified Plett well record, coordinated local water levels, a site-specific groundwater-flow map, PFAS analytical results or source-to-receptor sampling."
+  },
+  "integrityNotes": [
+    "All seven supplied files were SHA-256 hashed and compared against every current catalog record.",
+    "The two ZIP archives opened successfully; every member was read and the USGS CSV tables parsed without an unreadable row.",
+    "The two distinct records are downloadable local assets and are expressly limited to the evidence they contain.",
+    "No existing PDF record was repeated because five supplied files were exact binary matches to retained records."
+  ]
+}

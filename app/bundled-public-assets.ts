@@ -44,7 +44,37 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/findings-docs/010-1aba682de0b8.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/form-submission-docs/form-submission-033-bffd8eec3c32.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/form-submission-docs/form-submission-074-120dbeb59d52.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/ipp-docs/007-9aecbfcf4abc.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/011-9f84067f8dd2.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/012-4ef102885030.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/ipp-docs/013-3d6cd5e0a57b.pdf", {
     eager: true,
     import: "default",
     query: "?url",

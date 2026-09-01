@@ -36,7 +36,7 @@ test("Worker output excludes browser-only preview and document copies", async ()
     "Browser preview assets must remain published",
   );
   assert.ok(
-    clientFiles.filter((file) => file.toLowerCase().endsWith(".pdf")).length >= 5,
-    "The five verified intake PDFs must remain downloadable",
+    clientFiles.filter((file) => file.toLowerCase().endsWith(".pdf")).length >= 11,
+    "The eleven verified intake PDFs must remain downloadable",
   );
 });

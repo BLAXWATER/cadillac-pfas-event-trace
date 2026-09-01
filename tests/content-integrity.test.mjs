@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 672);
-  assert.equal(externalFiles, 844);
+  assert.equal(localFiles, 676);
+  assert.equal(externalFiles, 840);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {

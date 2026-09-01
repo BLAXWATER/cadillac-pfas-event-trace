@@ -66,6 +66,17 @@ test("keeps explicit application text at or above the 11pt minimum", async () =>
   assert.match(css, /\.site-shell \[data-slot="badge"\]\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
 });
 
+test("contains the document reader and primary controls on mobile screens", async () => {
+  const css = await readFile(path.join(root, "app", "globals.css"), "utf8");
+
+  assert.match(css, /@media\s*\(max-width:\s*900px\)/);
+  assert.match(css, /\.document-dialog\s*\{[^}]*max-width:\s*calc\(100vw - 12px\)[^}]*grid-template-rows:\s*auto minmax\(0, 1fr\)/s);
+  assert.match(css, /\.document-dialog > \[data-slot="dialog-close"\]\s*\{[^}]*width:\s*44px[^}]*height:\s*44px/s);
+  assert.match(css, /\.document-frame\s*\{[^}]*width:\s*100%[^}]*min-width:\s*0[^}]*overflow:\s*hidden/s);
+  assert.match(css, /\.timestamp-ribbon\s*\{[^}]*grid-template-columns:\s*auto minmax\(0, 1fr\)/s);
+  assert.match(css, /\.archive-card > :is\(a, button\)\s*\{[^}]*min-height:\s*44px/s);
+});
+
 test("normalizes every malformed pattern found in chronological source titles", async () => {
   const { formatSourceDisplayName } = await vite.ssrLoadModule("/app/source-display-name.ts");
 

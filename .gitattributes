@@ -12,3 +12,4 @@
 *.xls binary
 *.xlsx binary
 *.msg binary
+public/reference-data/*.csv binary

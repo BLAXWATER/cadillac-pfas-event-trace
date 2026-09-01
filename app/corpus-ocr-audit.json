@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "1f27d9be57c8c9dc08760b9615c32e9eecb4dccf9ee68bfd2f25f0519ffcd0f2",
+  "catalogFingerprint": "c21d8d4c9250d603bdaad77f40c61eadaaf87dd57375c2c7e068f1d62589d48c",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1520,
-    "verifiedRecords": 1520,
-    "pdfRecords": 1389,
-    "pdfPages": 19723,
+    "catalogRecords": 1531,
+    "verifiedRecords": 1531,
+    "pdfRecords": 1392,
+    "pdfPages": 19731,
     "imageRecords": 13,
-    "embeddedTextPages": 15965,
-    "ocrPages": 3771,
-    "ocrPagesWithText": 3433,
-    "manualReviewPages": 134,
+    "embeddedTextPages": 15971,
+    "ocrPages": 3773,
+    "ocrPagesWithText": 3434,
+    "manualReviewPages": 136,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,7 +29,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 134,
+    "pagesReviewed": 136,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -469,6 +469,16 @@
       "url": "/findings-docs/145-a85c4e499dec.pdf",
       "pages": [
         1
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "148-c1f66e091159",
+      "name": "City of Cadillac April 2026 Flood News Release.pdf",
+      "url": "/findings-docs/148-c1f66e091159.pdf",
+      "pages": [
+        4,
+        5
       ]
     },
     {

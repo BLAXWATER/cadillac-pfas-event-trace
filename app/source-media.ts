@@ -3,6 +3,7 @@ import { repositorySourceUrl } from "./source-url";
 export type SourceFormat =
   | "PDF"
   | "HTML"
+  | "GEOJSON"
   | "JPG"
   | "JPEG"
   | "PNG"
@@ -22,7 +23,7 @@ export type SourceMediaKind = "pdf" | "html" | "image" | "spreadsheet" | "office
 
 const imageFormats = new Set<SourceFormat>(["JPG", "JPEG", "PNG", "WEBP"]);
 const spreadsheetFormats = new Set<SourceFormat>(["XLS", "XLSX", "CSV", "TSV"]);
-const officeFormats = new Set<SourceFormat>(["DOC", "DOCX", "MSG", "TXT"]);
+const officeFormats = new Set<SourceFormat>(["DOC", "DOCX", "MSG", "TXT", "GEOJSON"]);
 
 export function sourceMediaKind(format: SourceFormat): SourceMediaKind {
   if (format === "PDF") return "pdf";

@@ -1,0 +1,67 @@
+{
+  "auditDate": "2026-09-01",
+  "scope": "Plett Road infrastructure, WWTP location, geology, Wellogic and flood-response evidence intake",
+  "stats": {
+    "receivedFiles": 15,
+    "distinctInputHashes": 14,
+    "withinBatchExactDuplicateCopies": 1,
+    "exactExistingCatalogRecords": 3,
+    "recordsAdded": 11,
+    "supplementalPdfRecordsAdded": 3,
+    "referenceRecordsAdded": 8,
+    "pdfInstancesReviewed": 7,
+    "pdfPagesReviewed": 47,
+    "distinctPdfPagesAdded": 8,
+    "blankFirstPages": 0,
+    "zipEntriesReviewed": 11,
+    "corruptZipEntries": 0,
+    "checksumManifestFilesMatched": 13,
+    "checksumManifestMismatches": 0,
+    "geoJsonFilesParsed": 4,
+    "timelineEventsAdded": 2,
+    "evidenceRequirementsClosed": 1,
+    "missingHashes": 0,
+    "hashFailures": 0,
+    "sizeFailures": 0,
+    "unreadableRecords": 0
+  },
+  "exactExistingRecords": [
+    {
+      "name": "City_Cadillac_Water_Wastewater_Fact_Sheet.pdf",
+      "sha256": "cd7547ee9370d1f3fc55b0d4cd15294b626cb83845ecd9b67aee5d258bf70785",
+      "match": "PFAS record 054-cd7547ee9370"
+    },
+    {
+      "name": "City_Cadillac_FV_CWSRF_Proposal_2026.pdf",
+      "sha256": "238cf9655b706a7ab8975373a7d6380f2a3b660d407a206fcb5e48cca4d8e83b",
+      "match": "supplemental record 007-238cf9655b70"
+    },
+    {
+      "name": "USGS_SIR_2004-5175_Cadillac_Groundwater_Flow.pdf",
+      "sha256": "1a5758abbd591b44fe1b547aadded48616988118525ca480a6a83d94192fc0a1",
+      "match": "supplemental record 082-1a5758abbd59"
+    }
+  ],
+  "withinBatchDuplicate": {
+    "canonicalName": "2012-07-16_Road_Commission_Agreement_original.pdf",
+    "duplicateName": "260.pdf",
+    "sha256": "501cb6326dac45ab36ca5eb7f0b04145bf8c5983ffe7d1b0f6e949f7db0b8911",
+    "resolution": "One clean record retained. The two source filenames contain the same exact two-page unsigned agreement binary."
+  },
+  "wellogicValidation": {
+    "countyWellRecords": 9273,
+    "linkedLithologyRows": 42844,
+    "wellsWithin1000MetersOf1121Plett": 45,
+    "nearbyWellsWithLinkedLithology": 45,
+    "coordinateBasis": "WGS84 well coordinates; 1121 Plett point from the supplied package's Census-geocoded reference",
+    "resolution": "Closes local-boring-well-construction only. Does not close certified 1140 Plett completion log, surveyed synoptic water levels, hydraulic testing or site-specific groundwater-flow mapping."
+  },
+  "integrityNotes": [
+    "Every distinct supplied binary was SHA-256 hashed and compared against all current catalog records.",
+    "Every supplied PDF opened successfully; the three distinct added PDFs were rendered in full and their first pages are not blank.",
+    "All 13 attached files named in SHA256SUMS.txt matched their declared hashes.",
+    "The Wellogic ZIP passed a complete entry CRC check, and well-to-lithology identifiers were validated before the spatial count was accepted.",
+    "The road-agreement copy has blank date and signature lines and is not described as signed or executed.",
+    "The regional USGS map and geology layers are not treated as site-specific groundwater-flow evidence."
+  ]
+}

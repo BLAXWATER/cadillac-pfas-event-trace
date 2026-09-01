@@ -1,11 +1,20 @@
 {
   "stats": {
-    "suppliedFiles": 697,
-    "newDistinctRecords": 145,
-    "exactExistingRecordsReused": 149,
-    "duplicateCopiesSuppressed": 33,
+    "suppliedFiles": 712,
+    "newDistinctRecords": 148,
+    "exactExistingRecordsReused": 152,
+    "duplicateCopiesSuppressed": 34,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 444104438,
+    "publishedBytes": 465979625,
+    "latestBatch29FilesReviewed": 15,
+    "latestBatch29DistinctInputHashes": 14,
+    "latestBatch29PdfPagesReviewed": 47,
+    "latestBatch29ExactExistingRecords": 3,
+    "latestBatch29WithinBatchDuplicateCopies": 1,
+    "latestBatch29SupplementalRecordsAdded": 3,
+    "latestBatch29ReferenceRecordsAdded": 8,
+    "latestBatch29RequirementsClosed": 1,
+    "latestBatch29TimelineEventsAdded": 2,
     "latestBatch28FilesReviewed": 10,
     "latestBatch28PdfPagesReviewed": 604,
     "latestBatch28ExactExistingRecords": 9,
@@ -161,9 +170,14 @@
     "August 31 leftovers intake 11: all 62 supplied PDFs and 371 pages passed file-hash, byte-size, page-count and readability checks. Forty-four distinct hashes exactly match published records; three additional TVS hashes reuse prior page-identical findings. The four remaining hashes were text-extracted and rendered in full, all 12 sparse-text pages received OCR, and the two 46-page voicemail packages matched page-for-page at both 72 and 144 DPI.",
     "August 31 leftovers intake 12: all 13 supplied PDFs and 199 pages passed hash, byte-size, page-count and readability checks. Ten exact matches were reused; one sampling-guidance export matched an established record page-for-page at 72 and 144 DPI; the two remaining correspondence threads were rendered and inspected in full.",
     "August 31 leftovers intake 13: all 11 supplied PDFs and 41 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Every file exactly matches an established IPP, NPDES, biosolids or laboratory record, and no document begins with a blank page.",
-    "August 31 leftovers intake 14: all 19 supplied PDFs and 690 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Eighteen files exactly match established NPDES records. The one image-only unmatched file was cross-checked against the archive classification indexes and retained once as secondary 1140 Plett Road property-measurement context. No document begins with a blank page."
+    "August 31 leftovers intake 14: all 19 supplied PDFs and 690 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Eighteen files exactly match established NPDES records. The one image-only unmatched file was cross-checked against the archive classification indexes and retained once as secondary 1140 Plett Road property-measurement context. No document begins with a blank page.",
+    "September 1 Plett infrastructure intake: 15 supplied files resolved to 14 distinct hashes. Seven PDF instances totaling 47 pages were opened; every first page was nonblank and the three distinct added PDFs were rendered in full. The Wellogic ZIP passed its internal archive test, all 13 attached files named in the supplied checksum manifest matched, and the four GeoJSON files were parsed before retention."
   ],
   "decisions": [
+    {
+      "name": "September 1 Plett infrastructure and hydrogeology intake",
+      "reason": "Three supplied PDFs exactly match established catalog records. The two road-agreement filenames are the same unsigned two-page binary, so one clean record is retained. The flood release, road agreement and official USGS topographic map are added as distinct PDFs; eight structured or tracking files are added to the reference library. The official Wellogic package closes only the local well-construction/lithology requirement. It does not close the requests for a certified 1140 Plett log, surveyed synoptic water levels, hydraulic tests or a site-specific groundwater-flow map."
+    },
     {
       "name": "August 31 leftovers intake 14",
       "reason": "Nineteen supplied files resolve to eighteen exact published NPDES hashes and one distinct property-measurement photo set associated by the archive classification index with 1140 Plett Road. The photo set is retained once in the groundwater and wells library without a timeline event because it is secondary imagery rather than a survey, licensed well record or dated official action; every supplied source remains unchanged."

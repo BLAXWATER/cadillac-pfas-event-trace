@@ -1,14 +1,17 @@
 {
-  "sourceFileCount": 114,
-  "publishedFileCount": 108,
+  "sourceFileCount": 122,
+  "publishedFileCount": 116,
   "excludedFileCount": 6,
-  "includedBytes": 23738448,
+  "includedBytes": 27190194,
   "methods": [
     "SHA-256 byte comparison",
     "Normalized CSV header and cell comparison",
     "Row-order-independent CSV comparison",
     "Workbook sheet, formula and cell-value comparison",
-    "ZIP-entry comparison against loose source files"
+    "ZIP-entry comparison against loose source files",
+    "GeoJSON feature and property-schema validation",
+    "HTML and TXT byte-integrity verification",
+    "Wellogic well-to-lithology linkage and 1,000-meter spatial check"
   ],
   "exclusions": [
     {

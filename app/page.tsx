@@ -29,6 +29,7 @@ import biosolidsAudit from "./biosolids-audit.json";
 import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
+import evidenceRequestQueue from "./evidence-request-queue.json";
 import formSubmissionAudit from "./form-submission-audit.json";
 import formSubmissionDocuments from "./form-submission-documents.json";
 import ippAudit from "./ipp-audit.json";
@@ -144,6 +145,24 @@ type LibrarySearchRecord = LibraryDocument & {
   archiveId: string;
 };
 
+type EvidenceRequirement = {
+  id: string;
+  label: string;
+  termGroups: readonly (readonly string[])[];
+  excludeTerms?: readonly string[];
+  minPages?: number;
+};
+
+type EvidenceRequestDefinition = {
+  id: string;
+  priority: string;
+  block: string;
+  category: string;
+  completes: string;
+  provide: string;
+  requirements: readonly EvidenceRequirement[];
+};
+
 const processSiteRecords = processSiteDocuments as readonly (LibraryDocument & { size: number })[];
 
 const libraryArchives: { id: string; label: string; documents: readonly LibraryDocument[] }[] = [
@@ -169,6 +188,38 @@ const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((arc
     archiveId: archive.id,
   })),
 );
+
+const evidenceRequestDefinitions = evidenceRequestQueue as readonly EvidenceRequestDefinition[];
+
+const normalizeEvidenceText = (value: string) =>
+  value.toLowerCase().replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+
+const evidenceRecordText = (record: LibrarySearchRecord) => normalizeEvidenceText([
+  record.name,
+  record.type,
+  record.description,
+  record.category,
+  record.year,
+  record.archive,
+  record.archiveId,
+  ...(record.matchingSources ?? []).flatMap((source) => [source.name, source.relationship]),
+].filter(Boolean).join(" "));
+
+const evidenceRequirementMet = (requirement: EvidenceRequirement, record: LibrarySearchRecord) => {
+  if (requirement.minPages && (record.pages ?? 0) < requirement.minPages) return false;
+  const searchable = evidenceRecordText(record);
+  if (requirement.excludeTerms?.some((term) => searchable.includes(normalizeEvidenceText(term)))) return false;
+  return requirement.termGroups.every((group) =>
+    group.some((term) => searchable.includes(normalizeEvidenceText(term))),
+  );
+};
+
+const evidenceRequests = evidenceRequestDefinitions.map((request) => ({
+  ...request,
+  remaining: request.requirements.filter((requirement) =>
+    !librarySearchRecords.some((record) => evidenceRequirementMet(requirement, record)),
+  ),
+})).filter((request) => request.remaining.length > 0);
 
 const repositoryAssetUrl = (path: string) =>
   `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/be4c2d5dadbb16835a539e8509ac065d560bb055/public/${path.replace(/^\//, "")}`;
@@ -1951,57 +2002,6 @@ const meta: Record<Kind, { label: string; icon: typeof Factory }> = {
   gap: { label: "Evidence gap", icon: AlertTriangle },
 };
 
-const evidenceRequests = [
-  {
-    priority: "Complete package",
-    block: "2025 receptor sampling",
-    category: "04 / 06 / 13 · Monitoring, lab, wells",
-    missing: "Full 49-page EGLE Work Order 2509147",
-    completes: "Restores sample IDs, collection/receipt times, methods, qualifiers, chain of custody and laboratory QA/QC.",
-    provide: "The complete PDF rather than an extracted result-page image.",
-  },
-  {
-    priority: "Time-series input",
-    block: "Landfill → WWTP receiving history",
-    category: "10 / 12 · Process, landfill & leachate",
-    missing: "Leachate manifests, hauler tickets, invoices and WWTP receiving logs for the receiving period through July 2019",
-    completes: "Creates a dated delivery series with load volume, frequency, hauler, receiving point and delivery cessation.",
-    provide: "CSV/XLSX preferred; PDFs or scans are acceptable if each page preserves its date, time and volume.",
-  },
-  {
-    priority: "Pathway input",
-    block: "WWTP treatment and discharge",
-    category: "01 / 04 / 05 / 06 · DMR, PFAS, biosolids, lab",
-    missing: "Time-stamped influent, effluent and sludge/biosolids PFAS results aligned with daily plant flow and DMR records",
-    completes: "Tests loading, treatment lag, attenuation, biosolids partitioning and discharge timing instead of relying on isolated samples.",
-    provide: "Native lab reports plus tables containing sample date/time, sample point, analyte, result, unit, detection limit and qualifier.",
-  },
-  {
-    priority: "Hydrogeologic input",
-    block: "Subsurface migration pathway",
-    category: "13 / 14 / 19 · Wells, maps, technical literature",
-    missing: "Well construction logs, boring logs, screened intervals, surveyed elevations, water levels, hydraulic tests and groundwater-flow maps",
-    completes: "Defines aquifer units, gradient, travel direction, possible capture zones and whether the proposed pathway is physically plausible.",
-    provide: "Original reports plus GIS/CAD/CSV data where available; include coordinate system, units and measurement dates.",
-  },
-  {
-    priority: "Receptor series",
-    block: "Plett Road well results",
-    category: "06 / 13 · Lab results, groundwater & wells",
-    missing: "Original digital reports and chain-of-custody forms for every Plett Road sample, including exact collection time",
-    completes: "Creates a comparable receptor series with consistent analytes, limits, qualifiers and sample identity.",
-    provide: "Unflattened original PDFs/CSVs where possible; include sampler, well ID, collection time, receipt time and preservation details.",
-  },
-  {
-    priority: "Attribution test",
-    block: "Source-to-receptor confirmation",
-    category: "04 / 06 / 13 / 14 · Monitoring, lab, wells, maps",
-    missing: "Synchronized upgradient, cross-gradient and downgradient PFAS sampling between the candidate sources and Plett Road",
-    completes: "Tests whether concentrations and PFAS fingerprints form a spatially coherent plume and helps evaluate alternative sources.",
-    provide: "Sampling plan, GPS locations, well construction data, field parameters, COC, blanks/duplicates and full analytical packages.",
-  },
-];
-
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
   const [previewFailed, setPreviewFailed] = useState(false);
@@ -2861,22 +2861,24 @@ export default function Home() {
         <section className="evidence-queue" aria-labelledby="evidence-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">EVIDENCE REQUEST QUEUE</p><h2 id="evidence-title">Potentially missing or hidden documents</h2></div>
-            <p>Upload these records in this chat using the filenames shown. Each source can be inserted under its year, event timestamp and pathway block without changing the underlying event record.</p>
+            <p>Only requirements not matched by the current evidence catalog are shown. When a supplied source satisfies a requirement, that line is removed automatically; completed blocks disappear.</p>
           </div>
-          <div className="request-grid">
-            {evidenceRequests.map((request, index) => (
-              <article className="request-card" key={request.block}>
-                <div className="request-index"><span>{String(index + 1).padStart(2, "0")}</span><Badge variant="outline">{request.priority}</Badge></div>
-                <p className="request-category">{request.category}</p>
-                <h3>{request.block}</h3>
-                <dl>
-                  <div><dt>Missing file / data</dt><dd>{request.missing}</dd></div>
-                  <div><dt>Completes</dt><dd>{request.completes}</dd></div>
-                  <div><dt>What to provide</dt><dd>{request.provide}</dd></div>
-                </dl>
-              </article>
-            ))}
-          </div>
+          {evidenceRequests.length > 0 ? (
+            <div className="request-grid">
+              {evidenceRequests.map((request, index) => (
+                <article className="request-card" key={request.id}>
+                  <div className="request-index"><span>{String(index + 1).padStart(2, "0")}</span><Badge variant="outline">{request.priority}</Badge></div>
+                  <p className="request-category">{request.category}</p>
+                  <h3>{request.block}</h3>
+                  <dl>
+                    <div><dt>Still needed</dt><dd><ul className="request-items">{request.remaining.map((requirement) => <li key={requirement.id}>{requirement.label}</li>)}</ul></dd></div>
+                    <div><dt>Completes</dt><dd>{request.completes}</dd></div>
+                    <div><dt>Preferred evidence</dt><dd>{request.provide}</dd></div>
+                  </dl>
+                </article>
+              ))}
+            </div>
+          ) : <p className="request-empty">No outstanding evidence requests remain in the current queue.</p>}
         </section>
 
         <footer><FileSearch /><p>Documentary event trace. Source attribution and migration opinions require qualified expert review.</p></footer>

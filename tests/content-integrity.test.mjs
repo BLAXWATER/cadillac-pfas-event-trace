@@ -150,6 +150,87 @@ test("site-wide search covers every evidence catalog", async () => {
   }
 });
 
+test("evidence request queue shows only unmatched, independently closable requirements", async () => {
+  const catalogs = await loadCatalogs();
+  const records = catalogs.flatMap((catalog) => catalog.rows.map((row) => ({
+    ...row,
+    archive: catalog.name,
+    archiveId: catalog.name.replace(/-documents\.json$/, ""),
+  })));
+  const definitions = JSON.parse(await readFile(path.join(appDirectory, "evidence-request-queue.json"), "utf8"));
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "evidence-request-queue-audit.json"), "utf8"));
+  const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+  const normalize = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+  const recordText = (record) => normalize([
+    record.name,
+    record.type,
+    record.description,
+    record.category,
+    record.year,
+    record.archive,
+    record.archiveId,
+    ...(record.matchingSources ?? []).flatMap((item) => [item.name, item.relationship]),
+  ].filter(Boolean).join(" "));
+  const requirementMet = (requirement, record) => {
+    if (requirement.minPages && (record.pages ?? 0) < requirement.minPages) return false;
+    const searchable = recordText(record);
+    if (requirement.excludeTerms?.some((term) => searchable.includes(normalize(term)))) return false;
+    return requirement.termGroups.every((group) => group.some((term) => searchable.includes(normalize(term))));
+  };
+
+  const requirements = definitions.flatMap((definition) => definition.requirements);
+  const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
+  assert.equal(records.length, 1517);
+  assert.equal(definitions.length, 5);
+  assert.equal(requirements.length, 19);
+  assert.equal(remaining.length, 19);
+  assert.equal(new Set(definitions.map((definition) => definition.id)).size, definitions.length);
+  assert.equal(new Set(requirements.map((requirement) => requirement.id)).size, requirements.length);
+  assert.equal(definitions.some((definition) => definition.block === "2025 receptor sampling"), false);
+  assert.equal(audit.priorCards, 6);
+  assert.equal(audit.activeUniqueBlocks, definitions.length);
+  assert.equal(audit.activeRequirements, requirements.length);
+
+  const workOrder = requirements.find((requirement) => requirement.id === "work-order-2509147-complete");
+  const sourcePacket = records.find((record) => record.id === "098-044977305e5f");
+  assert.ok(workOrder && sourcePacket);
+  assert.equal(sourcePacket.pages, 24);
+  assert.equal(requirementMet(workOrder, sourcePacket), false);
+
+  const influent = requirements.find((requirement) => requirement.id === "cadillac-main-wwtp-influent-pfas");
+  const ldfa = records.find((record) => record.id === "087-aa1a20bd287e");
+  assert.ok(influent && ldfa);
+  assert.equal(requirementMet(influent, ldfa), false);
+
+  const certifiedWellLog = requirements.find((requirement) => requirement.id === "plett-certified-well-log");
+  const secondaryWellSummary = records.find((record) => record.id === "144-346ad8ed5ebc");
+  assert.ok(certifiedWellLog && secondaryWellSummary);
+  assert.equal(requirementMet(certifiedWellLog, secondaryWellSummary), false);
+
+  const siteMap = requirements.find((requirement) => requirement.id === "site-specific-groundwater-map");
+  for (const recordId of ["082-1a5758abbd59", "084-2b78292aa0e0"]) {
+    const regionalReport = records.find((record) => record.id === recordId);
+    assert.ok(siteMap && regionalReport);
+    assert.equal(requirementMet(siteMap, regionalReport), false);
+  }
+
+  for (const requirement of requirements) {
+    const syntheticRecord = {
+      name: requirement.termGroups.map((group) => group[0]).join(" "),
+      type: "Supplied evidence",
+      pages: requirement.minPages ?? 1,
+      archive: "Added evidence",
+      archiveId: "supplemental",
+    };
+    assert.equal(requirementMet(requirement, syntheticRecord), true, `${requirement.id} cannot close when matching evidence is added`);
+  }
+
+  assert.match(source, /import evidenceRequestQueue from "\.\/evidence-request-queue\.json"/);
+  assert.match(source, /request\.requirements\.filter/);
+  assert.match(source, /\.filter\(\(request\) => request\.remaining\.length > 0\)/);
+  assert.match(source, /request\.remaining\.map/);
+});
+
 test("corpus OCR audit covers every record and leaves no verified duplicate", async () => {
   const catalogs = await loadCatalogs();
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);

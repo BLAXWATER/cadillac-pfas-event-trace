@@ -303,6 +303,9 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .request-card dl > div { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
 .request-card dt { color: var(--brand-gray); font-family: var(--font-mono); font-size: var(--font-11pt); letter-spacing: .08em; text-transform: uppercase; }
 .request-card dd { margin: 0; color: var(--brand-gray); font-size: var(--font-12pt); line-height: 1.55; }
+.request-items { display: grid; gap: 8px; margin: 0; padding-left: 20px; }
+.request-items li::marker { color: var(--primary); }
+.request-empty { margin: 0; padding: 24px; border: 1px solid rgba(0, 188, 235, .5); color: var(--brand-gray); background: linear-gradient(140deg, #002b3b, #050708); font-size: var(--font-12pt); }
 
 footer { display: flex; gap: 12px; align-items: flex-start; margin-top: 34px; padding: 24px 0; border-top: 1px solid var(--border); color: var(--brand-gray); font-size: var(--font-12pt); line-height: 1.6; }
 footer svg { flex: 0 0 auto; width: 18px; color: var(--primary); }

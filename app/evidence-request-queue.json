@@ -1,0 +1,152 @@
+[
+  {
+    "id": "receiving-history",
+    "priority": "Time-series input",
+    "block": "Landfill → WWTP receiving history",
+    "category": "10 / 12 · Process, landfill & leachate",
+    "completes": "Creates a dated delivery series with load volume, frequency, hauler, receiving point and delivery cessation.",
+    "provide": "Original PDFs or scans are acceptable; CSV/XLSX exports are preferred when every row preserves its date, time and volume.",
+    "requirements": [
+      {
+        "id": "wexford-leachate-load-tickets",
+        "label": "Per-load Wexford leachate manifests, hauler tickets or load tickets from 2009 through July 2019, with date/time, hauler and gallons.",
+        "termGroups": [["wexford"], ["leachate"], ["manifest", "hauler ticket", "load ticket"]],
+        "excludeTerms": ["master manifest", "acquisition manifest", "classification manifest"]
+      },
+      {
+        "id": "cadillac-wexford-receiving-logs",
+        "label": "Cadillac WWTP Wexford-leachate receiving, truck or load logs with date/time and gallons.",
+        "termGroups": [["cadillac", "wwtp"], ["wexford"], ["leachate"], ["receiving log", "truck log", "load log"]]
+      },
+      {
+        "id": "wexford-leachate-invoices",
+        "label": "Wexford landfill leachate invoices, billing statements or payment statements tied to deliveries.",
+        "termGroups": [["wexford"], ["leachate"], ["invoice", "billing statement", "payment statement"]]
+      }
+    ]
+  },
+  {
+    "id": "wwtp-treatment-discharge",
+    "priority": "Pathway input",
+    "block": "WWTP treatment and discharge",
+    "category": "01 / 04 / 05 / 06 · DMR, PFAS, biosolids, lab",
+    "completes": "Tests loading, treatment lag, attenuation, biosolids partitioning and discharge timing using comparable samples.",
+    "provide": "Native lab reports and operating tables should preserve sample date/time, sample point, analyte, result, unit, detection limit and qualifier.",
+    "requirements": [
+      {
+        "id": "cadillac-main-wwtp-influent-pfas",
+        "label": "Cadillac main-WWTP influent PFAS analytical laboratory reports; LDFA investigation samples do not satisfy this request.",
+        "termGroups": [["cadillac", "mi0020257"], ["influent"], ["pfas", "pfos", "pfoa"], ["lab report", "laboratory report", "analytical report"]],
+        "excludeTerms": ["ldfa", "landfill study"]
+      },
+      {
+        "id": "paired-wwtp-pfas-media",
+        "label": "A synchronized or paired same-day Cadillac WWTP PFAS package covering influent, effluent and sludge/biosolids.",
+        "termGroups": [["cadillac", "mi0020257"], ["pfas", "pfos", "pfoa"], ["influent"], ["effluent"], ["sludge", "biosolids"], ["synchronized", "same day", "paired"]]
+      },
+      {
+        "id": "paired-round-operating-logs",
+        "label": "Time-of-day plant operator and flow logs for the same paired influent/effluent/sludge sampling rounds.",
+        "termGroups": [["cadillac", "mi0020257"], ["operator log", "operations log", "plant flow log", "hourly flow"], ["sampling", "sample"], ["influent"], ["effluent"]]
+      }
+    ]
+  },
+  {
+    "id": "subsurface-pathway",
+    "priority": "Hydrogeologic input",
+    "block": "Subsurface migration pathway",
+    "category": "13 / 14 / 19 · Wells, maps, technical literature",
+    "completes": "Defines local aquifer units, gradient, travel direction, possible capture zones and whether the proposed pathway is physically plausible.",
+    "provide": "Use original or certified reports plus GIS/CAD/CSV data where available; include coordinate system, units and measurement dates.",
+    "requirements": [
+      {
+        "id": "plett-certified-well-log",
+        "label": "Official or driller-certified 1140 Plett Road well-completion record identifying the screened interval.",
+        "termGroups": [["1140 plett", "plett road"], ["well completion log", "well record"], ["screen interval", "screened interval"], ["driller", "certified"]],
+        "excludeTerms": ["not driller certified", "compiled property well summary", "research synthesis"]
+      },
+      {
+        "id": "local-boring-well-construction",
+        "label": "Local boring, lithology and monitoring-well construction logs for the Wexford–Cadillac–Plett area.",
+        "termGroups": [["wexford", "cadillac", "plett"], ["boring log", "lithology log", "monitoring well log", "well construction log"]]
+      },
+      {
+        "id": "surveyed-elevations-water-levels",
+        "label": "Surveyed wellhead elevations and a dated synoptic water-level round across the local wells.",
+        "termGroups": [["wexford", "cadillac", "plett"], ["surveyed elevation", "wellhead elevation"], ["water level", "synoptic"]]
+      },
+      {
+        "id": "local-hydraulic-tests",
+        "label": "Local slug tests, pumping tests or hydraulic-conductivity results tied to identified wells.",
+        "termGroups": [["wexford", "cadillac", "plett"], ["slug test", "pumping test", "hydraulic conductivity"]]
+      },
+      {
+        "id": "site-specific-groundwater-map",
+        "label": "A site-specific potentiometric or groundwater-flow contour map connecting Plett Road with at least one candidate source area.",
+        "termGroups": [["plett", "1140 plett"], ["wexford", "cadillac", "wwtp"], ["potentiometric surface", "groundwater flow map", "groundwater contour map"]],
+        "excludeTerms": ["regional model", "regional groundwater", "usgs"]
+      }
+    ]
+  },
+  {
+    "id": "plett-receptor-series",
+    "priority": "Receptor series",
+    "block": "Plett Road well results",
+    "category": "06 / 13 · Lab results, groundwater & wells",
+    "completes": "Creates a traceable receptor series with exact sample identity, collection time, custody and laboratory QA/QC.",
+    "provide": "Submit original, unflattened PDFs/CSVs where possible; preserve sampler, well ID, collection time, receipt time and preservation details.",
+    "requirements": [
+      {
+        "id": "work-order-2509147-complete",
+        "label": "The complete original 49-page EGLE Work Order 2509147, not the current 24-page source packet.",
+        "termGroups": [["2509147"], ["work order"]],
+        "minPages": 49
+      },
+      {
+        "id": "plett-coc-2025-03-04",
+        "label": "Chain-of-custody or field sheet with the exact sample metadata for the March 4, 2025 Plett Road sample.",
+        "termGroups": [["plett", "1140"], ["chain of custody", "coc", "field sheet"], ["2025 03 04", "march 4 2025"]]
+      },
+      {
+        "id": "plett-coc-2025-09-10",
+        "label": "Chain-of-custody or field sheet with the exact sample metadata for the September 10, 2025 Plett Road sample.",
+        "termGroups": [["plett", "1140"], ["chain of custody", "coc", "field sheet"], ["2025 09 10", "september 10 2025"]]
+      },
+      {
+        "id": "plett-coc-2026-04-09",
+        "label": "Chain-of-custody or field sheet with the exact sample metadata for the April 9, 2026 Plett Road sample.",
+        "termGroups": [["plett", "1140"], ["chain of custody", "coc", "field sheet"], ["2026 04 09", "april 9 2026"]]
+      }
+    ]
+  },
+  {
+    "id": "source-receptor-confirmation",
+    "priority": "Attribution test",
+    "block": "Source-to-receptor confirmation",
+    "category": "04 / 06 / 13 / 14 · Monitoring, lab, wells, maps",
+    "completes": "Tests whether concentrations and PFAS fingerprints form a spatially coherent plume while allowing alternative sources to be evaluated.",
+    "provide": "Provide native plans, coordinate tables, field records, COCs, QC records and complete analytical packages with consistent sample IDs.",
+    "requirements": [
+      {
+        "id": "pfas-transect-plan",
+        "label": "An explicit PFAS transect plan identifying upgradient, cross-gradient and downgradient locations through Plett Road.",
+        "termGroups": [["pfas"], ["sampling plan"], ["upgradient"], ["cross gradient", "crossgradient"], ["downgradient"], ["plett", "1140 plett"]]
+      },
+      {
+        "id": "sample-coordinate-table",
+        "label": "A GPS/coordinate table that ties every source and receptor location to its analytical sample ID.",
+        "termGroups": [["plett", "1140 plett"], ["sample id", "sample identifier"], ["gps", "coordinates", "latitude longitude"]]
+      },
+      {
+        "id": "synchronized-source-receptor-round",
+        "label": "One synchronized PFAS sampling round covering Plett Road and the candidate Wexford/Cadillac source areas.",
+        "termGroups": [["pfas"], ["synchronized", "same day", "paired"], ["plett", "1140 plett"], ["wexford", "cadillac", "wwtp"]]
+      },
+      {
+        "id": "transect-field-qc-package",
+        "label": "The matching field/QC package with field parameters, COCs, blanks, duplicates and the complete analytical package.",
+        "termGroups": [["plett", "1140 plett"], ["field parameter"], ["chain of custody", "coc"], ["blank"], ["duplicate"], ["analytical package", "lab package", "laboratory report"]]
+      }
+    ]
+  }
+]

@@ -1706,6 +1706,38 @@ test("batch 34 adds only distinct AOI planning and redacted access records while
   assert.match(audit.queueResolution.reason, /do not supply the complete 49-page work order/i);
 });
 
+test("batch 35 replaces the sampling agreement with an irreversible phone and email redaction", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch35-agreement-privacy-replacement-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pagesReviewed, 1);
+  assert.equal(audit.stats.privacyFieldsObscured, 2);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.recordsReplaced, 1);
+  assert.equal(audit.replacement.flattened, true);
+  assert.equal(audit.verification.underlyingContactCharactersPresent, false);
+
+  const replacement = catalogRows.find((row) => row.id === audit.replacement.recordId);
+  assert.ok(replacement);
+  assert.equal(replacement.sha256, audit.replacement.sha256);
+  assert.equal(replacement.pages, audit.replacement.pages);
+  assert.equal(replacement.size, audit.replacement.size);
+  const source = await readFile(path.join(publicDirectory, audit.replacement.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(source).digest("hex"), audit.replacement.sha256);
+  assert.match(bundledSource, new RegExp(audit.replacement.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  assert.ok(previewManifest[audit.replacement.asset]);
+
+  assert.equal(catalogRows.some((row) => row.id === audit.supersededPublicDerivative.recordId), false);
+  await assert.rejects(readFile(path.join(publicDirectory, audit.supersededPublicDerivative.asset.replace(/^\//, ""))));
+  assert.equal(bundledSource.includes(audit.supersededPublicDerivative.asset.replace(/^\//, "")), false);
+  assert.equal(previewManifest[audit.supersededPublicDerivative.asset], undefined);
+  assert.match(pageSource, /permanently obscures the phone-number and email fields/i);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

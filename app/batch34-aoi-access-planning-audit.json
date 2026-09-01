@@ -5,7 +5,7 @@
     "Matched four files byte-for-byte to previously audited canonical records and reused those records without creating duplicate catalog entries.",
     "Rendered and visually reviewed all eight pages of the three unmatched records.",
     "Suppressed the unexecuted blank questionnaire because the completed version was supplied in the same batch.",
-    "Preserved the completed questionnaire unchanged outside the public site and created a rasterized public derivative with names, contact details, owner details and the handwritten signature permanently removed.",
+    "Preserved the completed questionnaire unchanged outside the public site and published a flattened privacy derivative; the current replacement permanently obscures the phone-number and email fields in the page pixels.",
     "Added the six sampling-area maps and redacted access agreement as two distinct records and two conservative timeline events.",
     "Rechecked every open evidence request and closed none because the records do not establish an exact final leachate delivery date, the complete work order or chain of custody, the 2012 road-project agreement, or a proven PFAS migration pathway."
   ],
@@ -64,18 +64,15 @@
       "published": false
     },
     "publicDerivative": {
-      "recordId": "162-8086f65777d7",
-      "asset": "/findings-docs/162-8086f65777d7.pdf",
-      "sha256": "8086f65777d7b88c4199902b9eff880d0d222e5aafb79514998e3f58c8aefdd9",
+      "recordId": "162-a51176d31cfd",
+      "asset": "/findings-docs/162-a51176d31cfd.pdf",
+      "sha256": "a51176d31cfd243c9bf522ed36e2059bdde1861e97cde3465dc5f5beb524a979",
       "pages": 1,
-      "size": 287501
+      "size": 596125
     },
     "removed": [
-      "resident names",
       "phone number",
-      "email address",
-      "owner names and mailing address",
-      "handwritten signature"
+      "email address"
     ]
   },
   "addedRecords": [
@@ -87,11 +84,11 @@
       "size": 1125030
     },
     {
-      "recordId": "162-8086f65777d7",
-      "asset": "/findings-docs/162-8086f65777d7.pdf",
-      "sha256": "8086f65777d7b88c4199902b9eff880d0d222e5aafb79514998e3f58c8aefdd9",
+      "recordId": "162-a51176d31cfd",
+      "asset": "/findings-docs/162-a51176d31cfd.pdf",
+      "sha256": "a51176d31cfd243c9bf522ed36e2059bdde1861e97cde3465dc5f5beb524a979",
       "pages": 1,
-      "size": 287501
+      "size": 596125
     }
   ],
   "qualityFindings": [

@@ -1285,13 +1285,13 @@ const events: Event[] = [
     kind: "receptor",
     category: "04 / 13 · PFAS monitoring & wells",
     title: "Signed agreement authorizes access to sample the 1140 Plett Road well",
-    finding: "A signed EGLE sampling questionnaire and access agreement records an irrigation well at 1140 Plett Road, no water-treatment system, an available untreated outdoor spigot and instructions for accessing the sample point. The public copy permanently removes private names, contact details, owner details and the handwritten signature.",
+    finding: "A signed EGLE sampling questionnaire and access agreement records an irrigation well at 1140 Plett Road, no water-treatment system, an available untreated outdoor spigot and instructions for accessing the sample point. The public copy permanently obscures the phone-number and email fields.",
     significance: "Establishes property-access authorization and sample-point context only. It is not the unsigned 2012 Plett Road project agreement, a chain-of-custody or field sheet, proof that sampling occurred, an analytical result or evidence of a PFAS migration pathway.",
     sources: [
-      archivedSource("2025-05-20 Sampling Questionnaire and Access Agreement — Public Redacted Copy.pdf", "/findings-docs/162-8086f65777d7.pdf", 1, "The retained fields record the well use, treatment status, untreated outdoor sample point, access instructions and signature date; direct personal identifiers and the signature are removed from the public derivative.", {
+      archivedSource("2025-05-20 Sampling Questionnaire and Access Agreement — Phone and Email Redacted.pdf", "/findings-docs/162-a51176d31cfd.pdf", 1, "The flattened public page records the well use, treatment status, untreated outdoor sample point, access instructions and signature date; the phone-number and email fields are irreversibly obscured.", {
         eventStamp: "2025-05-20 · time not stated",
         basis: "Date written beside the signature line",
-        note: "The original record is preserved locally and was not published because it contains personal contact information and a handwritten signature.",
+        note: "This public derivative uses the supplied replacement page and permanently covers the phone-number and email fields; the underlying contact characters are not present in the PDF.",
       }),
     ],
   },

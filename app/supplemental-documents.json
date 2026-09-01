@@ -2080,16 +2080,16 @@
     "description": "Six April 9, 2025 Wexford sampling-area maps distinguishing original self-sampled properties from proposed additional EGLE sampling around W 32 Road/Boon, east and west Lake Mitchell, Constitution Boulevard, S 45 Road and 13th/Plett Road. The maps document response planning; they do not establish completed sampling, analytical results or a PFAS migration pathway."
   },
   {
-    "id": "162-8086f65777d7",
-    "name": "2025-05-20 Sampling Questionnaire and Access Agreement - Public Redacted Copy.pdf",
-    "url": "/findings-docs/162-8086f65777d7.pdf",
+    "id": "162-a51176d31cfd",
+    "name": "2025-05-20 Sampling Questionnaire and Access Agreement - Phone and Email Redacted.pdf",
+    "url": "/findings-docs/162-a51176d31cfd.pdf",
     "year": "2025",
     "category": "PFAS response & public health",
-    "type": "Redacted sampling access agreement",
+    "type": "Phone/email-redacted sampling access agreement",
     "format": "PDF",
     "pages": 1,
-    "size": 287501,
-    "sha256": "8086f65777d7b88c4199902b9eff880d0d222e5aafb79514998e3f58c8aefdd9",
-    "description": "Public-release derivative of the signed May 20, 2025 EGLE sampling questionnaire and access agreement for 1140 Plett Road. Private names, contact information, owner details and the handwritten signature were permanently removed. The retained form records an irrigation well, no treatment, an untreated outdoor spigot and sampling-access instructions; authorization alone does not prove that sampling occurred or establish a PFAS pathway."
+    "size": 596125,
+    "sha256": "a51176d31cfd243c9bf522ed36e2059bdde1861e97cde3465dc5f5beb524a979",
+    "description": "Public-release derivative of the signed May 20, 2025 EGLE sampling questionnaire and access agreement for 1140 Plett Road. The phone-number and email fields are permanently obscured in the flattened page. The form records an irrigation well, no treatment, an untreated outdoor spigot and sampling-access instructions; authorization alone does not prove that sampling occurred or establish a PFAS pathway."
   }
 ]

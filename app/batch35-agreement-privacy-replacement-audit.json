@@ -1,0 +1,53 @@
+{
+  "batch": "2026-09-01 sampling agreement privacy replacement 35",
+  "method": [
+    "Accepted the user-supplied replacement page as the authoritative public presentation of the signed sampling agreement.",
+    "Inspected the supplied image and found that part of the email remained readable beyond the handwritten X marks.",
+    "Replaced the phone-number and email value regions with opaque white pixels and newly drawn black X marks before PDF creation.",
+    "Flattened the sanitized raster into a one-page PDF so no text layer, annotation or hidden object can reveal the obscured contact fields.",
+    "Rendered and visually inspected the completed PDF, regenerated both preview assets and updated every catalog, timeline, bundle and integrity reference.",
+    "Removed the superseded public PDF and previews after verifying the replacement hash, size, page count and readability."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "pagesReviewed": 1,
+    "privacyFieldsObscured": 2,
+    "recordsAdded": 0,
+    "recordsReplaced": 1,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "suppliedImage": {
+    "name": "codex-clipboard-d9debe90-ac07-4f68-851b-5b44956ab1f6.png",
+    "sha256": "326e29cdc59b8c73838c04d59b7b8c512c9a0e06abba4239391f7d3fe112dcf0",
+    "size": 590096,
+    "privacyFinding": "The phone field was crossed out, but visible email characters remained to the right of the handwritten X marks. Both full value regions were therefore replaced with opaque pixels."
+  },
+  "replacement": {
+    "recordId": "162-a51176d31cfd",
+    "asset": "/findings-docs/162-a51176d31cfd.pdf",
+    "sha256": "a51176d31cfd243c9bf522ed36e2059bdde1861e97cde3465dc5f5beb524a979",
+    "pages": 1,
+    "size": 596125,
+    "flattened": true,
+    "obscuredFields": [
+      "phone number",
+      "email address"
+    ]
+  },
+  "supersededPublicDerivative": {
+    "recordId": "162-8086f65777d7",
+    "asset": "/findings-docs/162-8086f65777d7.pdf",
+    "sha256": "8086f65777d7b88c4199902b9eff880d0d222e5aafb79514998e3f58c8aefdd9",
+    "size": 287501,
+    "removedFromPublicBundle": true
+  },
+  "verification": {
+    "renderedPagesInspected": 1,
+    "catalogReferencesUpdated": 1,
+    "timelineSourcesUpdated": 1,
+    "previewManifestEntriesUpdated": 1,
+    "bundleImportsUpdated": 1,
+    "underlyingContactCharactersPresent": false
+  }
+}

@@ -1883,5 +1883,44 @@
     "size": 3929791,
     "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
     "description": "City of Cadillac comprehensive annual financial report for the fiscal year ended June 30, 2017. Page 19 of the printed report (PDF page 25) states that revenue for treating Wexford County Landfill leachate exceeded budget by $307,683. This is aggregate audited financial context; it does not provide individual deliveries, gallons, invoices, receipts or the final delivery date."
+  },
+  {
+    "id": "147-501cb6326dac",
+    "name": "2012 Road Commission–City Plett Road Project Agreement.pdf",
+    "url": "/findings-docs/147-501cb6326dac.pdf",
+    "year": "2012",
+    "category": "Road, bridge & municipal infrastructure",
+    "type": "Unsigned intergovernmental agreement form",
+    "format": "PDF",
+    "pages": 2,
+    "size": 248088,
+    "sha256": "501cb6326dac45ab36ca5eb7f0b04145bf8c5983ffe7d1b0f6e949f7db0b8911",
+    "description": "Two-page agreement form dated July 16, 2012 in its source filename and PDF metadata. It states that the Road Commission designed and would construct the Plett Road/13th Street roundabout and box-culvert project, that plans and specifications were on file with the City, and that material changes required City approval. The supplied copy has blank date and signature lines, so it is preserved as an unsigned project record rather than proof of execution."
+  },
+  {
+    "id": "148-c1f66e091159",
+    "name": "City of Cadillac April 2026 Flood News Release.pdf",
+    "url": "/findings-docs/148-c1f66e091159.pdf",
+    "year": "2026",
+    "category": "Flood response & public health",
+    "type": "City news release",
+    "format": "PDF",
+    "pages": 5,
+    "size": 467594,
+    "sha256": "c1f66e0911590ac36a30e55446ed8f612ba29e092f6c8c92031d56a94be2da1c",
+    "description": "April 24, 2026 City news release on post-flood conditions. It directs residents with flooded private wells to drinking-water sampling kits at the City laboratory, 1121 Plett Road, and reports that the observed flooding was associated mainly with lake and swamp conditions rather than a burst sanitary sewer, broken water main or damaged lift station. The release is emergency-response context, not a PFAS analytical result."
+  },
+  {
+    "id": "149-e4e6ac86e7bc",
+    "name": "USGS 2012 Cadillac North Topographic Map.pdf",
+    "url": "/findings-docs/149-e4e6ac86e7bc.pdf",
+    "year": "2012",
+    "category": "Groundwater & wells",
+    "type": "Official USGS topographic map",
+    "format": "PDF",
+    "pages": 1,
+    "size": 21159505,
+    "sha256": "e4e6ac86e7bc79e4afaa0aa87206ff4e417917693dc137e43d29d44c2a0439e4",
+    "description": "Official 2012 USGS Cadillac North 1:24,000 topographic GeoPDF showing regional relief, drainage, roads and the Clam River corridor in the Plett Road area. The map uses NAD83/WGS84 and UTM zone 16T. It is retained as regional topographic orientation and is not treated as a site-specific potentiometric surface or groundwater-flow map."
   }
 ]

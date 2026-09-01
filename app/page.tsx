@@ -208,6 +208,8 @@ const evidenceRecordText = (record: LibrarySearchRecord) => normalizeEvidenceTex
 const evidenceTrackingRecordTerms = [
   "evidence intake manifest",
   "evidence recovery inventory",
+  "evidence package records index",
+  "evidence package hash manifest",
   "not yet recovered",
 ];
 
@@ -1998,6 +2000,62 @@ const events: Event[] = [
       note: "The event follows the certified DMR summary and keeps the reported industrial-discharge and tertiary-filter comments distinct.",
     })],
   },
+  {
+    year: "2012",
+    date: "2012-07-16",
+    isoDate: "2012-07-16",
+    time: noTime,
+    timeBasis: "Source filename and PDF metadata; signature date is blank",
+    phase: "Plett Road infrastructure planning",
+    kind: "operation",
+    category: "10 / 19 · Infrastructure & maps",
+    title: "Plett project agreement places plans and specifications on file",
+    finding: "A two-page Road Commission–City agreement form describes the Plett Road/13th Street roundabout and box-culvert project, places the plans and specifications on file with the City and assigns construction and cost responsibilities.",
+    significance: "Adds dated infrastructure context at the Plett Road crossing. The supplied copy is unsigned with blank signature and agreement-date lines, so it does not establish that the agreement was executed.",
+    sources: [{
+      name: "2012 Road Commission–City Plett Road Project Agreement.pdf",
+      url: "/findings-docs/147-501cb6326dac.pdf",
+      preview: bundledFirstPagePreview("/findings-docs/147-501cb6326dac.pdf"),
+      pages: 2,
+      format: "PDF",
+      role: "Primary source",
+      result: "Two-page project agreement form; both supplied filenames resolve to this same exact binary.",
+      clock: {
+        eventStamp: "2012-07-16 · time not stated",
+        basis: "Source filename and PDF creation metadata",
+        created: "2012-07-16 11:43:48 EDT",
+        modified: "2012-07-16 11:43:58 EDT",
+        note: "All date and signature lines in the supplied copy are blank. The record is not described as signed or executed.",
+      },
+    }],
+  },
+  {
+    year: "2026",
+    date: "2026-04-24",
+    isoDate: "2026-04-24",
+    time: noTime,
+    timeBasis: "Issue date printed on the City news release",
+    phase: "Flood response",
+    kind: "receptor",
+    category: "06 / 13 · Sampling, groundwater & wells",
+    title: "City routes flooded-well testing to the 1121 Plett laboratory",
+    finding: "Cadillac's post-flood release tells residents whose private wells were flooded that drinking-water sampling kits are available from the City laboratory at 1121 Plett Road. It also reports that observed flooding was associated mainly with lake and swamp conditions rather than a burst sewer, broken water main or damaged lift station.",
+    significance: "Documents the laboratory's public-health role and the City's stated infrastructure assessment during the flood response. The release contains no PFAS result and does not establish a contaminant source or migration route.",
+    sources: [{
+      name: "City of Cadillac April 2026 Flood News Release.pdf",
+      url: "/findings-docs/148-c1f66e091159.pdf",
+      preview: bundledFirstPagePreview("/findings-docs/148-c1f66e091159.pdf"),
+      pages: 5,
+      format: "PDF",
+      role: "Primary source",
+      result: "Five-page City release with the April 24 update and two pages of response photographs.",
+      clock: {
+        eventStamp: "2026-04-24 · time not stated",
+        basis: "Issue date printed on the news release",
+        note: "The City release is emergency-response context. It is not treated as a laboratory report or PFAS finding.",
+      },
+    }],
+  },
 ];
 
 const meta: Record<Kind, { label: string; icon: typeof Factory }> = {
@@ -2069,7 +2127,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
 
 function catalogSource(document: CatalogDocument): Source {
   const inferredExtension = document.name.match(/\.([a-z0-9]+)$/i)?.[1]?.toUpperCase();
-  const inferredFormat = inferredExtension && ["PDF", "HTML", "JPG", "JPEG", "PNG", "WEBP", "DOC", "DOCX", "XLS", "XLSX", "CSV", "TSV", "MSG", "ZIP", "TXT"].includes(inferredExtension)
+  const inferredFormat = inferredExtension && ["PDF", "HTML", "GEOJSON", "JPG", "JPEG", "PNG", "WEBP", "DOC", "DOCX", "XLS", "XLSX", "CSV", "TSV", "MSG", "ZIP", "TXT"].includes(inferredExtension)
     ? inferredExtension
     : "OTHER";
   const format = (document.format ?? inferredFormat) as SourceFormat;

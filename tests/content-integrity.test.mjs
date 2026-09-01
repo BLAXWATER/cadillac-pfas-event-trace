@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 684);
+  assert.equal(localFiles, 695);
   assert.equal(externalFiles, 836);
 });
 
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1520);
+  assert.equal(recordCount, 1531);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -174,23 +174,23 @@ test("evidence request queue shows only unmatched, independently closable requir
   const requirementMet = (requirement, record) => {
     if (requirement.minPages && (record.pages ?? 0) < requirement.minPages) return false;
     const searchable = recordText(record);
-    if (["evidence intake manifest", "evidence recovery inventory", "not yet recovered"].some((term) => searchable.includes(normalize(term)))) return false;
+    if (["evidence intake manifest", "evidence recovery inventory", "evidence package records index", "evidence package hash manifest", "not yet recovered"].some((term) => searchable.includes(normalize(term)))) return false;
     if (requirement.excludeTerms?.some((term) => searchable.includes(normalize(term)))) return false;
     return requirement.termGroups.every((group) => group.some((term) => searchable.includes(normalize(term))));
   };
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1520);
+  assert.equal(records.length, 1531);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
-  assert.equal(remaining.length, 23);
+  assert.equal(remaining.length, 22);
   assert.equal(new Set(definitions.map((definition) => definition.id)).size, definitions.length);
   assert.equal(new Set(requirements.map((requirement) => requirement.id)).size, requirements.length);
   assert.equal(definitions.some((definition) => definition.block === "2025 receptor sampling"), false);
   assert.equal(audit.priorCards, 6);
   assert.equal(audit.activeUniqueBlocks, definitions.length);
-  assert.equal(audit.activeRequirements, requirements.length);
+  assert.equal(audit.activeRequirements, remaining.length);
 
   const workOrder = requirements.find((requirement) => requirement.id === "work-order-2509147-complete");
   const sourcePacket = records.find((record) => record.id === "098-044977305e5f");
@@ -215,13 +215,18 @@ test("evidence request queue shows only unmatched, independently closable requir
     assert.equal(requirementMet(siteMap, regionalReport), false);
   }
 
-  for (const recordId of ["107-d777daf8d23d", "108-2031480ac743"]) {
+  for (const recordId of ["107-d777daf8d23d", "108-2031480ac743", "111-f7ff41fbf818", "113-616420a3ae1a"]) {
     const trackingRecord = records.find((record) => record.id === recordId);
     assert.ok(trackingRecord);
     for (const requirement of definitions.find((definition) => definition.id === "receiving-history").requirements) {
       assert.equal(requirementMet(requirement, trackingRecord), false, `${recordId} must not close ${requirement.id}`);
     }
   }
+
+  const localConstruction = requirements.find((requirement) => requirement.id === "local-boring-well-construction");
+  const wellogic = records.find((record) => record.id === "116-b3871d88915e");
+  assert.ok(localConstruction && wellogic);
+  assert.equal(requirementMet(localConstruction, wellogic), true);
 
   for (const requirement of requirements) {
     const syntheticRecord = {
@@ -257,8 +262,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1389);
-  assert.equal(audit.stats.pdfPages, 19723);
+  assert.equal(audit.stats.pdfRecords, 1392);
+  assert.equal(audit.stats.pdfPages, 19731);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -434,7 +439,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 98);
-  assert.equal(supplementalCatalog.length, 145);
+  assert.equal(supplementalCatalog.length, 148);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);

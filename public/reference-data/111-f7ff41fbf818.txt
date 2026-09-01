@@ -1,0 +1,207 @@
+ROAD COMMISSION / WWTP / 1121 PLETT ROAD — ORIGINAL RECORDS INDEX
+Compiled: 2026-09-01
+Project searched: MDOT / Wexford County Road Commission contract 83609-108868
+
+BOTTOM LINE
+
+No publicly posted original located in this search expressly states that Wexford County
+Road Commission personnel coordinated with, directed, or received direction from Cadillac
+WWTP personnel during the 2012 bridge/box-culvert work.
+
+The strongest contemporaneous record is the City Council packet dated August 6, 2012. In
+the same packet and meeting, the Council (1) considered and approved the Wexford County
+Road Commission agreement for the Plett Road / 13th Street project and (2) separately
+approved a replacement return-activated-sludge pump for the WWTP. The record treats these
+as separate agenda matters and does not link them. The original packet is included.
+
+The bridge contract records do document storm-sewer, pipe-video, drainage, underdrain,
+foundation-excavation, temporary-sheet-piling, and box-culvert work. MDOT's contract
+description calls the sewer component "storm sewer." These line items alone are not proof
+that the contractor worked on a sanitary sewer or interacted with WWTP staff.
+
+The Road Commission agreement says the Road Commission designed and would construct the
+project according to plans and specifications "on file with the City," and makes those plans
+an integral part of the agreement. Those plans, specifications, as-builts, inspection logs,
+daily reports, utility-conflict records, and 2012 Road Commission minutes were not found in
+the agencies' public web archives. They are the best next records to request directly.
+
+
+01_BRIDGE_AND_ROAD_COMMISSION
+
+2012-07-16_Road_Commission_Agreement_original.pdf
+  Original City of Cadillac attachment. It states that the Road Commission designed and
+  would construct the project; plans/specifications were on file with the City; the Road
+  Commission would pay all box-culvert and associated-work costs; and the City and Road
+  Commission would split eligible roundabout costs subject to the City's cap.
+  Source: https://www.cadillac-mi.net/AgendaCenter/ViewFile/Item/260?fileID=297
+
+2012-07-16_Road_Commission_Agreement_Resolution_original.pdf
+  Original City resolution attachment approving the agreement.
+  Source: City of Cadillac Agenda Center, same July/August 2012 agenda series.
+
+2012-08-06_Cadillac_Council_Packet_Road_Commission_and_WWTP.pdf
+  Original full City Council packet. The Road Commission agreement/public hearing appears
+  in the same packet as the WWTP sludge-pump recommendation, but as independent items.
+  This is contemporaneous overlap, not evidence of direct Road Commission–WWTP contact.
+  Source: City of Cadillac Agenda Center, meeting packet 08062012-21.
+
+MDOT_83609-108868_Call_022_Bid_Tabulation_original.txt
+  Original MDOT letting bid tabulation. The contract description includes a culvert and
+  storm sewer. Pay items include sewer removal; 6-, 12-, 15-, and 18-inch sewer; video
+  taping of sewer and culvert pipe; drainage structures; underdrains; foundation excavation;
+  box-culvert bedding; temporary sheet piling; riprap; and erosion control.
+  Source: https://mdotjboss.state.mi.us/BidLetting/
+  Letting: 2012-06-01, Call 022, Contract 83609-108868.
+
+MDOT_CCI_83609-108868_Contract_Modification_001_original.html
+  Original MDOT Construction Contract Inquiry record with the project pay-item schedule,
+  including the sewer/drainage/foundation/culvert work described above.
+  Source: MDOT Construction Contract Inquiry, contract 83609-108868.
+
+MDOT_CCI_83609-108868_Contract_Modification_002_original.html
+  Original MDOT change record for guardrail and drainage items, including "Drainage Repair
+  w/ Curb Cut."
+  Source: MDOT Construction Contract Inquiry, contract 83609-108868.
+
+MDOT_Bridge_13631_Plett_Clam_River.geojson
+  Direct export from MDOT's official Bridge Condition ArcGIS service. It identifies state
+  structure 13631 / ID 83309H00013C010 as Plett Road over the Clam River, owned by Wexford
+  County and built in 2012. Point: -85.396533333, 44.267305556.
+  Source service: https://services2.arcgis.com/67lKNkQ2TO1I3lhR/arcgis/rest/services/BridgeConditionExport/FeatureServer/0
+  Query: STRC_NUM=13631; retrieved 2026-09-01.
+
+
+02_WWTP_AND_1121_PLETT
+
+City_Cadillac_Laboratory_1121_Plett.html
+  Saved original City webpage. It identifies the Cadillac Laboratory at 1121 Plett Road and
+  says the lab analyzes WWTP influent and effluent for permit requirements, as well as
+  drinking and surface water.
+  Source: https://www.cadillac-mi.net/186/Laboratory
+  Retrieved: 2026-09-01.
+
+City_Cadillac_Water_Wastewater_Fact_Sheet.pdf
+  Original City fact sheet. It describes the WWTP process and states that finished effluent
+  is discharged to the Clam River. It also describes the LDFA groundwater cleanup plant.
+  Source: https://www.cadillac-mi.net/DocumentCenter/View/3000/Cadillac-Water-Supply-and-Waste-Water-Treatment-Systems-Fact-Sheet
+
+EGLE_Cadillac_WWTP_PFAS_Record.geojson
+  Direct export from EGLE's official publicly owned treatment works / PFAS ArcGIS service.
+  It identifies Cadillac WWTP, NPDES permit MI0020257, outfall 001A, receiving waterbody
+  Clam River, and an approved industrial pretreatment program. EGLE point:
+  -85.3984, 44.2657.
+  Source service: https://services1.arcgis.com/FNjlrOFR0aGJ71Tg/arcgis/rest/services/Industrial_Pretreatment_Program_Waste_Water_Treatment_Plants_Public_View/FeatureServer/0
+  Retrieved: 2026-09-01.
+
+City_Cadillac_2026_Flood_News_Release.pdf
+  Original City release that expressly identifies the drinking-water laboratory at
+  1121 Plett Road. It also discusses floodwater movement and water sampling.
+  Source: https://www.cadillac-mi.net/DocumentCenter/View/3266/News-Release---UPDATED---City-responds-to-Historic-Flooding---4-24-26
+
+City_Cadillac_FV_CWSRF_Proposal_2026.pdf
+  Original engineering proposal for a Cadillac WWTP Clean Water State Revolving Fund
+  project plan. It is a proposal, not the completed project plan. Its scope says the future
+  plan would address environmental setting, surface and groundwater, maps, and sensitive
+  features.
+  Source: https://www.cadillac-mi.net/AgendaCenter/ViewFile/Item/7155?fileID=5069
+
+
+03_GEOLOGY_GROUNDWATER_AND_FLOW
+
+USGS_SIR_2004-5175_Cadillac_Groundwater_Flow.pdf
+  Original USGS Scientific Investigations Report 2004-5175, prepared with the City of
+  Cadillac. It contains:
+    - surficial glacial-deposit mapping;
+    - a hydrogeologic cross section;
+    - potentiometric-surface maps;
+    - a conceptual groundwater-flow diagram;
+    - recharge mapping;
+    - modeled groundwater heads; and
+    - 10-year contributing-area maps for the municipal well field.
+  It reports regional deep groundwater flow from southeast to northwest and describes thick
+  Pleistocene glacial deposits, sand-and-gravel aquifers, clay confining units, and Clam
+  River watershed hydrology.
+  Official landing page: https://www.usgs.gov/publications/simulation-ground-water-flow-and-areas-contributing-ground-water-production-wells
+  Original official file URL: http://pubs.usgs.gov/sir/2004/5175/MIsir2004-5175_report.pdf
+  Retrieval note: the present USGS file server blocked automated retrieval. This is the
+  Internet Archive's preserved copy of the exact official USGS PDF URL, capture
+  2006-10-13 22:41:16 UTC:
+  https://web.archive.org/web/20061013224116id_/http://pubs.usgs.gov/sir/2004/5175/MIsir2004-5175_report.pdf
+
+USGS_04121241_Clam_River_at_Plett_Road_Flow_Data.zip
+  Original USGS Water Data for the Nation download package for station USGS-04121241,
+  "Clam River at Plett Road at Cadillac." It contains field-measurements.csv,
+  channel-measurements.csv, and monitoring-location-metadata.csv. The approved discharge
+  measurements span 1975-2001 and range from 6.24 to 57.6 cubic feet per second.
+  Station point: -85.396717668, 44.267230290, essentially at the bridge location.
+  Source: https://waterdata.usgs.gov/monitoring-location/USGS-04121241/
+  Downloaded: 2026-09-01.
+
+USGS_2012_Cadillac_North_Topo.pdf
+  Original 2012 USGS GeoPDF topographic map for the Cadillac North quadrangle, useful for
+  the site, terrain, drainage, Clam River, and contemporaneous bridge-area setting.
+  Source: https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/USTopo/PDF/MI/MI_Cadillac_North_20120724_TM_geo.pdf
+
+EGLE_Wexford_WaterWells_with_Lithology.zip
+  Original daily EGLE county download containing all Wexford County Wellogic well points,
+  selected construction data, and lithology records.
+  Source: https://www.deq.state.mi.us/gis-data/downloads/waterwells/Wexford_WaterWells.zip
+  Agency index: https://www.michigan.gov/egle/maps-data/wellogic/water-wells
+  Downloaded: 2026-09-01.
+
+EGLE_Wellogic_Wells_within_1000m_1121_Plett.geojson
+  Direct spatial query from EGLE's official Wellogic ArcGIS layer for wells within 1,000 m
+  of the Census-geocoded 1121 Plett address point (-85.396575125, 44.263456666).
+  Of special relevance, Wellogic records at 1118 Plett Road show 75-foot wells with static
+  water levels of 44-45 feet. The lithology file in the original county ZIP records sand,
+  a thin clay interval, and deeper water-bearing sand for these wells.
+  Source service: https://gisagoegle.state.mi.us/arcgis/rest/services/EGLE/DwOpenData/MapServer/3
+  Retrieved: 2026-09-01.
+
+EGLE_Quaternary_Geology_at_1121_Plett.geojson
+  Direct point query from EGLE's official Quaternary Geology layer. The mapped unit at the
+  geocoded address is "Lacustrine sand and gravel" (TextCode 06, Code 6).
+  Source service: https://gisagoegle.state.mi.us/arcgis/rest/services/EGLE/GrmdOpenData/MapServer/8
+  Retrieved: 2026-09-01.
+
+EGLE_Bedrock_Geology_at_1121_Plett.geojson
+  Direct point query from EGLE's official Bedrock Geology layer. The service returned the
+  Saginaw Formation and a Midcontinent Rift regional polygon at the address point.
+  Source service: https://gisagoegle.state.mi.us/arcgis/rest/services/EGLE/GrmdOpenData/MapServer/0
+  Retrieved: 2026-09-01.
+
+
+LOCATION RELATIONSHIPS (APPROXIMATE)
+
+The Census address match for 1121 Plett is an interpolated street address, not a surveyed
+parcel corner. From that point, the EGLE WWTP point is about 289 m / 947 ft away, the MDOT
+bridge point about 428 m / 1,404 ft away, and the USGS Plett Road stream-measurement point
+about 420 m / 1,377 ft away. The MDOT bridge and USGS stream points are about 17 m apart.
+
+
+HIGH-VALUE ORIGINALS STILL TO REQUEST
+
+1. City of Cadillac: the complete plans and specifications incorporated by reference in the
+   Road Commission agreement; utility review comments; Water Resource Management / WWTP
+   correspondence; lab or WWTP operational logs noting bridge construction; sanitary and
+   storm sewer maps; outfall drawings; and approvals of plan changes.
+
+2. Wexford County Road Commission: design files, geotechnical/soil-boring reports, hydraulic
+   calculations, drainage and stream-flow plans, utility-conflict sheets, EGLE/USACE permit
+   files, preconstruction and progress-meeting minutes, daily reports, inspector diaries,
+   correspondence with the City/Utilities/WWTP, as-builts, and 2011-2013 board minutes.
+
+3. MDOT: proposal and plan set, special provisions, construction diary, inspector reports,
+   material and soil records, shop drawings, request-for-information log, utility coordination,
+   change-order support, final as-built plans, and bridge file for structure 13631.
+
+4. EGLE: Part 31/301/303 or joint-permit application and issued permit for the Plett Road
+   Clam River crossing; hydraulic review; stream-impact correspondence; NPDES MI0020257
+   outfall drawings and permit file; and any comments on bridge construction near the WWTP.
+
+Suggested scope language: "Records from January 1, 2011 through December 31, 2013 concerning
+MDOT contract 83609-108868, projects 108868A/114222A, Plett Road over the Clam River,
+structure 13631, the Plett/13th project, Cadillac WWTP/NPDES MI0020257/outfall 001A, and
+1121 Plett Road, including communications among WCRC, MDOT, City Utilities/WWTP, EGLE,
+contractors, and consultants."
+

@@ -2747,7 +2747,7 @@ export default function Home() {
           </div>
           <div className="reference-summary" aria-label="Wexford landfill archive audit summary">
             <div><FileText /><span><strong>{wexfordAudit.stats.recordsAddedThisPass}</strong> added in this pass</span></div>
-            <div><CheckCircle2 /><span><strong>{wexfordAudit.stats.exactExistingRecordsReused}</strong> exact records reused</span></div>
+            <div><CheckCircle2 /><span><strong>{wexfordAudit.stats.exactExistingRecordsReused}</strong> exact record(s) reused as cross reference(s)</span></div>
             <div><FileSearch /><span><strong>{formatBytes(wexfordAudit.stats.publishedBytes)}</strong> preserved</span></div>
           </div>
           <details className="audit-details archive-audit">

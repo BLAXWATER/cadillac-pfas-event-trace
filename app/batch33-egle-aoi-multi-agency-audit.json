@@ -1,0 +1,42 @@
+{
+  "batch": "2026-09-01 EGLE AOI multi-agency packet recheck 33",
+  "requestedSource": "C:/Users/casey/OneDrive/Desktop/EGLE STUDY/EGLE-COMPARISON-09102025_22.9 ~2.pdf",
+  "method": [
+    "Verified SHA-256, byte size, PDF readability and the actual 24-page count.",
+    "Rendered and visually reviewed all 24 pages, including the side-by-side table, selected EGLE Work Order pages, Merit reports, Cyclopure reports and EGLE transmittal letter.",
+    "Matched the supplied binary exactly to the established 1140 Plett comparison-packet record and reused its existing browser-local preview and full download.",
+    "Linked the established packet directly to the AOI event and labeled the evidence as multi-agency testing by EGLE, Merit and Cyclopure.",
+    "Retained the open evidence requests for the complete 49-page work order and chain-of-custody forms."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "pdfPagesReviewed": 24,
+    "distinctInputHashes": 1,
+    "exactExistingRecords": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "timelineSourcesAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "blankFirstPages": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "098-044977305e5f",
+    "name": "2025-09-10 - EGLE Cadillac Comparability Study Source Packet - 1140 Plett Road.pdf",
+    "asset": "/pfas-docs/098-044977305e5f.pdf",
+    "sha256": "044977305e5fd34cdf638d762200c3d6832c29d0101e30ee8313013897dfa4d1",
+    "pages": 24,
+    "size": 4031346
+  },
+  "findings": [
+    "The packet compares nine primary September 10, 2025 method-and-condition combinations plus an EGLE duplicate for unflushed indoor, three-minute-flushed indoor and outdoor samples.",
+    "The summary also carries forward a March 7, 2025 Cyclopure test and June 24, 2025 EGLE resample for 1140 Plett Road.",
+    "The summary reports PFOA results from 19.3 to 35 ng/L and PFOS results from 9.3 to 19 ng/L across the displayed rounds.",
+    "The packet contains only selected pages from EGLE Work Order 2509147 and no chain-of-custody form."
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The multi-agency results strengthen the repeated Plett receptor record, but the packet remains only 24 of 49 work-order pages and does not supply a chain-of-custody or field sheet for the September 10 sampling."
+  }
+}

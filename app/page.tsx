@@ -2147,10 +2147,17 @@ const events: Event[] = [
     phase: "AOI drinking-water comparability sampling",
     kind: "receptor",
     category: "04 / 06 / 13 · PFAS monitoring, lab results & wells",
-    title: "MPART comparability study documents Cadillac AOI receptor results",
-    finding: "MPART's September 9–10 side-by-side study used EGLE, Merit and Cyclopure methods at 20 Cadillac-area properties. The supplied address-table excerpts match the complete report and show PFOA drinking-water-criteria exceedance markings at anonymized addresses 5, 8, 11 and 20, with PFOS exceedance markings at address 11. AECOM's September 3 criteria heat map places detected and criteria-level drinking-water wells within the 13th-and-Plett AOI.",
-    significance: "Strengthens the receptor-result and AOI record while preserving the study's own limit: the report states that this sampling was not intended as a PFAS source investigation. It does not execute the proposed Plett Road resolution, identify the exact final leachate delivery or prove a source-to-Plett migration pathway.",
+    title: "EGLE AOI multi-agency testing compares EGLE, Merit and Cyclopure results",
+    finding: "MPART's September 9–10 side-by-side study used EGLE, Merit and Cyclopure methods at 20 Cadillac-area properties. The 1140 Plett Road packet preserves nine primary same-day method-and-condition comparisons, an EGLE duplicate and two earlier result sets across unflushed indoor, three-minute-flushed indoor and outdoor samples. Its summary reports PFOA from 19.3 to 35 ng/L and PFOS from 9.3 to 19 ng/L. The complete report marks PFOA drinking-water-criteria exceedances at anonymized addresses 5, 8, 11 and 20 and PFOS exceedances at address 11.",
+    significance: "Strengthens the repeated receptor-testing record with multiple laboratories and sampling conditions while preserving the study's own limit: the report states that this sampling was not intended as a PFAS source investigation. The packet does not supply chain-of-custody forms or the complete 49-page EGLE Work Order 2509147, execute the proposed Plett Road resolution, identify the exact final leachate delivery or prove a source-to-Plett migration pathway.",
     sources: [
+      archivedSource("EGLE AOI Multi-Agency Testing — EGLE, Merit and Cyclopure — 1140 Plett Road.pdf", "/pfas-docs/098-044977305e5f.pdf", 24, "Source packet with a side-by-side results table, available EGLE Work Order 2509147 pages, Merit reports, Cyclopure reports and the October 15, 2025 EGLE transmittal letter.", {
+        eventStamp: "2025-09-10 · attached reports show collection times from 08:00 through 08:52",
+        basis: "Collection date and times printed on the Merit and Cyclopure report pages",
+        created: "2025-11-08 09:11:33 EST",
+        modified: "2025-11-08 09:11:33 EST",
+        note: "The packet preserves multiple result sets for 1140 Plett Road but contains only selected pages from the 49-page EGLE work order and no chain-of-custody form.",
+      }),
       archivedSource("MPART Study to Determine Comparability of PFAS Drinking Water Samples in Cadillac, Michigan.pdf", "/pfas-docs/055-ae1a7fc25cfe.pdf", 29, "The procedure and limitation appear on PDF pages 3–8; the supplied address-table images match PDF pages 14, 17, 20, 21, 27 and 29.", {
         eventStamp: "2025-09-10 · time not stated",
         basis: "Latest of the September 9–10 sampling dates stated on PDF page 4",

@@ -11,7 +11,8 @@
     "Compared the September 1 receiving-history intake against all catalog hashes, preserved one distinct audited financial report and two intake inventories, and retained every transaction-level request because none of those files contains individual delivery rows.",
     "Expanded the receiving-history block to the seven record series identified as not yet recovered: per-load tickets, Cadillac receiving logs, Cadillac receivables, Wexford billing, the executed 2009 agreement and rate schedule, later amendments, and the dated final delivery record.",
     "Removed the local boring, lithology and well-construction request after verifying the official EGLE Wexford County Wellogic package: 9,273 well records, 42,844 linked lithology rows and 45 wells with linked lithology within 1,000 meters of the geocoded 1121 Plett point.",
-    "Reconciled six supplied AOI address-table screenshots to pages in the complete MPART comparability report and one annotated Plett heat-map image to the official AECOM map set. These strengthen receptor/AOI context but close no requirement because the report says the study was not intended as a PFAS source investigation."
+    "Reconciled six supplied AOI address-table screenshots to pages in the complete MPART comparability report and one annotated Plett heat-map image to the official AECOM map set. These strengthen receptor/AOI context but close no requirement because the report says the study was not intended as a PFAS source investigation.",
+    "Rechecked the 24-page 1140 Plett source packet and linked it directly to the AOI event as multi-agency testing by EGLE, Merit and Cyclopure. The packet preserves repeated results and collection times but does not close a queue requirement because it lacks chain-of-custody forms and 25 pages of EGLE Work Order 2509147."
   ],
   "heldEvidence": {
     "receivingHistory": [

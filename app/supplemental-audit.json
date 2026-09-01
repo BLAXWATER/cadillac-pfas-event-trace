@@ -1,8 +1,8 @@
 {
   "stats": {
-    "suppliedFiles": 719,
+    "suppliedFiles": 720,
     "newDistinctRecords": 159,
-    "exactExistingRecordsReused": 152,
+    "exactExistingRecordsReused": 153,
     "duplicateCopiesSuppressed": 41,
     "outOfScopeExcluded": 367,
     "publishedBytes": 465979625,
@@ -22,6 +22,11 @@
     "latestBatch32RecordsAdded": 0,
     "latestBatch32TimelineEventsAdded": 1,
     "latestBatch32RequirementsClosed": 0,
+    "latestBatch33FilesReviewed": 1,
+    "latestBatch33PdfPagesReviewed": 24,
+    "latestBatch33ExactExistingRecords": 1,
+    "latestBatch33TimelineSourcesAdded": 1,
+    "latestBatch33RequirementsClosed": 0,
     "latestBatch28FilesReviewed": 10,
     "latestBatch28PdfPagesReviewed": 604,
     "latestBatch28ExactExistingRecords": 9,
@@ -179,9 +184,14 @@
     "August 31 leftovers intake 13: all 11 supplied PDFs and 41 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Every file exactly matches an established IPP, NPDES, biosolids or laboratory record, and no document begins with a blank page.",
     "August 31 leftovers intake 14: all 19 supplied PDFs and 690 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Eighteen files exactly match established NPDES records. The one image-only unmatched file was cross-checked against the archive classification indexes and retained once as secondary 1140 Plett Road property-measurement context. No document begins with a blank page.",
     "September 1 Plett infrastructure intake: 15 supplied files resolved to 14 distinct hashes. Seven PDF instances totaling 47 pages were opened; every first page was nonblank and the three distinct added PDFs were rendered in full. The Wellogic ZIP passed its internal archive test, all 13 attached files named in the supplied checksum manifest matched, and the four GeoJSON files were parsed before retention.",
-    "September 1 AOI excerpt intake: all seven supplied PNGs were opened, dimension-checked and SHA-256 hashed. Six address-table images matched specific rendered pages in the complete MPART comparability report, and the annotated 13th-and-Plett image matched the official AECOM Figure 3 base map. The canonical report and map set were reused instead of publishing cropped or annotated copies."
+    "September 1 AOI excerpt intake: all seven supplied PNGs were opened, dimension-checked and SHA-256 hashed. Six address-table images matched specific rendered pages in the complete MPART comparability report, and the annotated 13th-and-Plett image matched the official AECOM Figure 3 base map. The canonical report and map set were reused instead of publishing cropped or annotated copies.",
+    "September 1 AOI multi-agency packet recheck: the supplied 24-page PDF exactly matches the established 1140 Plett source packet. All pages were rendered and reviewed; the packet was linked to the AOI event under an accurate EGLE, Merit and Cyclopure multi-agency testing label without adding another catalog copy or closing an unsupported evidence requirement."
   ],
   "decisions": [
+    {
+      "name": "September 1 EGLE AOI multi-agency testing packet",
+      "reason": "The supplied PDF exactly matches the established 24-page 1140 Plett source packet. It contains a side-by-side results summary, selected EGLE Work Order 2509147 pages, Merit reports, Cyclopure reports and an EGLE transmittal letter. The packet is now linked directly to the AOI event, but the evidence queue remains open for the complete 49-page work order and chain-of-custody forms."
+    },
     {
       "name": "September 1 EGLE/MPART AOI excerpt intake",
       "reason": "Six supplied address-table screenshots are page excerpts from the established 29-page comparability report, and the 1140 Plett hot-spot image is an annotated derivative of the official AECOM criteria heat map already preserved in the seven-page map set. The complete official sources are reused and the report is localized for first-page preview and full download. The receptor detections and exceedance markings strengthen AOI context, but the report expressly states that the study was not intended as a PFAS source investigation; no unsigned-resolution, exact-final-delivery or source-to-receptor requirement is closed."

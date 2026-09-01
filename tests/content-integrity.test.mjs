@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 61);
+  assert.equal(helperReferences.length, 62);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -1639,8 +1639,31 @@ test("batch 32 reuses complete AOI sources and does not overstate receptor excer
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
   assert.match(audit.queueResolution.reason, /do not execute the proposed Plett Road resolution/i);
   assert.match(audit.qualityFindings.map((finding) => finding.finding).join(" "), /not intended as a PFAS source investigation/i);
-  assert.match(pageSource, /MPART comparability study documents Cadillac AOI receptor results/);
-  assert.match(pageSource, /does not execute the proposed Plett Road resolution, identify the exact final leachate delivery or prove a source-to-Plett migration pathway/i);
+  assert.match(pageSource, /EGLE AOI multi-agency testing compares EGLE, Merit and Cyclopure results/);
+  assert.match(pageSource, /execute the proposed Plett Road resolution/);
+  assert.match(pageSource, /identify the exact final leachate delivery/);
+  assert.match(pageSource, /prove a source-to-Plett migration pathway/);
+});
+
+test("batch 33 links the established multi-agency Plett packet without closing unsupported requirements", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch33-egle-aoi-multi-agency-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 24);
+  assert.equal(audit.stats.exactExistingRecords, 1);
+  assert.equal(audit.stats.timelineSourcesAdded, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+
+  const record = catalogRows.find((row) => row.id === audit.canonicalRecord.recordId);
+  assert.ok(record);
+  assert.equal(record.sha256, audit.canonicalRecord.sha256);
+  assert.equal(record.pages, 24);
+  assert.match(pageSource, /EGLE AOI Multi-Agency Testing/);
+  assert.match(pageSource, /lacks chain-of-custody forms|does not supply chain-of-custody forms/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

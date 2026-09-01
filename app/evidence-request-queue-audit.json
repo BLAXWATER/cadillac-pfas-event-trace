@@ -1,6 +1,6 @@
 {
   "auditDate": "2026-09-01",
-  "catalogRecordsReviewed": 1531,
+  "catalogRecordsReviewed": 1548,
   "priorCards": 6,
   "activeUniqueBlocks": 5,
   "activeRequirements": 22,
@@ -10,7 +10,8 @@
     "Split each active block into independently testable requirements so a supplied record removes only the requirement it satisfies and the block disappears only when all of its requirements are satisfied.",
     "Compared the September 1 receiving-history intake against all catalog hashes, preserved one distinct audited financial report and two intake inventories, and retained every transaction-level request because none of those files contains individual delivery rows.",
     "Expanded the receiving-history block to the seven record series identified as not yet recovered: per-load tickets, Cadillac receiving logs, Cadillac receivables, Wexford billing, the executed 2009 agreement and rate schedule, later amendments, and the dated final delivery record.",
-    "Removed the local boring, lithology and well-construction request after verifying the official EGLE Wexford County Wellogic package: 9,273 well records, 42,844 linked lithology rows and 45 wells with linked lithology within 1,000 meters of the geocoded 1121 Plett point."
+    "Removed the local boring, lithology and well-construction request after verifying the official EGLE Wexford County Wellogic package: 9,273 well records, 42,844 linked lithology rows and 45 wells with linked lithology within 1,000 meters of the geocoded 1121 Plett point.",
+    "Reconciled six supplied AOI address-table screenshots to pages in the complete MPART comparability report and one annotated Plett heat-map image to the official AECOM map set. These strengthen receptor/AOI context but close no requirement because the report says the study was not intended as a PFAS source investigation."
   ],
   "heldEvidence": {
     "receivingHistory": [
@@ -45,6 +46,7 @@
     "The secondary Plett well summary does not satisfy the request for an official or driller-certified completion log.",
     "Regional USGS groundwater models and the 2012 USGS Cadillac North topographic map do not satisfy the request for a site-specific source-to-Plett groundwater-flow map.",
     "The Wellogic package satisfies the local well-construction and lithology request but does not supply the certified 1140 Plett completion record, surveyed synoptic water levels, hydraulic tests or a site-specific groundwater-flow map.",
-    "Evidence intake manifests and not-yet-recovered inventories are tracking records; their descriptions cannot satisfy the evidence requests they enumerate."
+    "Evidence intake manifests and not-yet-recovered inventories are tracking records; their descriptions cannot satisfy the evidence requests they enumerate.",
+    "The AOI address-table screenshots and annotated heat map do not satisfy the source-to-receptor confirmation request: they do not provide a site-specific gradient, an explicit upgradient/cross-gradient/downgradient transect, synchronized candidate-source samples, a coordinate-to-sample-ID table or the matching field/QC package."
   ]
 }

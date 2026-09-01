@@ -1,0 +1,78 @@
+{
+  "auditDate": "2026-09-01",
+  "scope": "EGLE/MPART Cadillac AOI table excerpts and annotated Plett heat-map intake",
+  "stats": {
+    "receivedImages": 7,
+    "distinctInputHashes": 7,
+    "receivedBytes": 5982757,
+    "existingReportPageExcerpts": 6,
+    "annotatedExistingMapDerivatives": 1,
+    "canonicalRecordsReused": 2,
+    "canonicalAssetsLocalized": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "missingFiles": 0,
+    "hashFailures": 0,
+    "unreadableImages": 0
+  },
+  "canonicalRecords": [
+    {
+      "recordId": "056-ae1a7fc25cfe",
+      "name": "2025-11-06-Comparability-Study-Report-Cadillac.pdf",
+      "asset": "/pfas-docs/055-ae1a7fc25cfe.pdf",
+      "sha256": "ae1a7fc25cfe1448b8303c3f05624c2461ee3b7348827ecaf836bdaef92aa7c3",
+      "pages": 29,
+      "size": 1228088,
+      "resolution": "The six supplied address-table PNGs are raster excerpts of printed report pages 12, 15, 18, 19, 25 and 27 (PDF pages 14, 17, 20, 21, 27 and 29). The complete official report is retained once and localized for first-page preview and full download."
+    },
+    {
+      "recordId": "122-e9b5255695c3",
+      "name": "Cadillac PFAS Area Maps.pdf",
+      "asset": "/findings-docs/122-e9b5255695c3.pdf",
+      "sha256": "e9b5255695c3f39ca6ada09de6406c4d1f73512bae1f5c7d7332fc90b7cd31a0",
+      "pages": 7,
+      "size": 2637033,
+      "resolution": "The supplied 1140 Plett hot-spot PNG reuses the official 13th-and-Plett criteria heat map on PDF page 5 with added boundary shading and explanatory callouts. The official seven-page map set remains the canonical source."
+    }
+  ],
+  "suppliedImages": [
+    {"name":"5.png","sha256":"05d06e630864eed6b5dcd9cdcfd6348c2b2e7b6975eafc88d839a979cfeb89cc","bytes":136018,"width":828,"height":939,"classification":"Raster excerpt of comparability report printed page 12 / PDF page 14"},
+    {"name":"8.png","sha256":"7919061d060db1ad3dfd6fd11bc2de8b6fa6e2144e327650f5a326ca92aeb691","bytes":138167,"width":829,"height":951,"classification":"Raster excerpt of comparability report printed page 15 / PDF page 17"},
+    {"name":"11.png","sha256":"07d0e4cb8b524c1da060fa6b333cb425bd0159639a1df2933aba132e14016e01","bytes":243442,"width":1164,"height":944,"classification":"Raster excerpt of comparability report printed page 18 / PDF page 20"},
+    {"name":"12.png","sha256":"dc36db049aa70817832f60246720c4cd188d04a8760743a2fe40903d4ff1ec15","bytes":99018,"width":666,"height":984,"classification":"Raster excerpt of comparability report printed page 19 / PDF page 21"},
+    {"name":"18.png","sha256":"90333f143ca49660e38c2260ca14407bc8d41a845e3fae9e34fb7443ed3e884e","bytes":137722,"width":834,"height":940,"classification":"Raster excerpt of comparability report printed page 25 / PDF page 27"},
+    {"name":"20.png","sha256":"adfc5a6f5b8170f3bd9a80ee926ff9e54ad2181c6749a81ba2139b84fb07459a","bytes":182519,"width":1165,"height":905,"classification":"Raster excerpt of comparability report printed page 27 / PDF page 29"},
+    {"name":"1140 PLETT - HOT SPOT (copy 2).png","sha256":"744934a2419cf128609a53d16dd271eef97eec68837e44e1f619fccf4854f039","bytes":5045871,"width":1892,"height":1212,"classification":"Annotated derivative of the official AECOM Figure 3 criteria heat map preserved in the seven-page Cadillac PFAS Area Maps record"}
+  ],
+  "qualityFindings": [
+    {
+      "severity": "low",
+      "confidence": "high",
+      "finding": "The address tables visibly document PFOA and PFOS detections and drinking-water-criteria exceedance markings at selected anonymized study addresses.",
+      "impact": "They strengthen receptor-result and AOI context and can be cited for the values shown in the official report."
+    },
+    {
+      "severity": "high",
+      "confidence": "high",
+      "finding": "The report expressly states that the comparability sampling was not intended as a PFAS source investigation.",
+      "impact": "The tables and heat map cannot be used by themselves to prove a source-to-Plett migration pathway or to exclude alternative sources."
+    },
+    {
+      "severity": "high",
+      "confidence": "high",
+      "finding": "None of the seven images contains an executed Plett Road resolution, a final leachate receiving record, or the hydrogeologic and synchronized source/receptor package requested by the evidence queue.",
+      "impact": "The unsigned-resolution, exact-final-delivery-date and proven-migration-pathway limitations remain open."
+    }
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The supplied images document receptor detections and AOI response context, but they are excerpts or annotations of two complete records already held. They do not execute the proposed Plett Road resolution, identify the exact final Wexford leachate load, or supply a site-specific gradient, transect, synchronized source/receptor round, coordinate/sample-ID table and matching field/QC package."
+  },
+  "integrityNotes": [
+    "All seven PNGs were opened, dimension-checked and SHA-256 hashed.",
+    "The six address tables were matched by address heading, table values, printed page number and rendered layout to the complete 29-page MPART comparability report.",
+    "The annotated Plett image was matched to the official AECOM Figure 3 base map in the existing seven-page Cadillac PFAS Area Maps record; added shading and callouts are treated as annotations, not agency findings.",
+    "No cropped or annotated duplicate was added as a separate source record."
+  ]
+}

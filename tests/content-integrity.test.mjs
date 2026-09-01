@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 712);
-  assert.equal(externalFiles, 836);
+  assert.equal(localFiles, 713);
+  assert.equal(externalFiles, 835);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 59);
+  assert.equal(helperReferences.length, 61);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -1602,6 +1602,45 @@ test("batch 31 adds only distinct official records and leaves unsupported gaps o
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
   assert.match(audit.queueResolution.reason, /does not provide the executed 2009 agreement package/i);
   assert.match(audit.integrityNotes.join(" "), /unexecuted because its resolution number, motion, vote and certification fields are blank/i);
+});
+
+test("batch 32 reuses complete AOI sources and does not overstate receptor excerpts as pathway proof", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch32-aoi-excerpt-intake-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedImages, 7);
+  assert.equal(audit.stats.distinctInputHashes, 7);
+  assert.equal(audit.stats.existingReportPageExcerpts, 6);
+  assert.equal(audit.stats.annotatedExistingMapDerivatives, 1);
+  assert.equal(audit.stats.canonicalRecordsReused, 2);
+  assert.equal(audit.stats.canonicalAssetsLocalized, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadableImages, 0);
+  assert.equal(audit.suppliedImages.length, 7);
+
+  for (const canonical of audit.canonicalRecords) {
+    const record = catalogRows.find((row) => row.id === canonical.recordId);
+    assert.ok(record, canonical.recordId);
+    assert.equal(record.sha256, canonical.sha256);
+    assert.equal(record.pages, canonical.pages);
+    assert.equal(record.size, canonical.size);
+    const source = await readFile(path.join(publicDirectory, canonical.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), canonical.sha256);
+    assert.match(bundledSource, new RegExp(canonical.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.ok(previewManifest["/pfas-docs/055-ae1a7fc25cfe.pdf"]);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+  assert.match(audit.queueResolution.reason, /do not execute the proposed Plett Road resolution/i);
+  assert.match(audit.qualityFindings.map((finding) => finding.finding).join(" "), /not intended as a PFAS source investigation/i);
+  assert.match(pageSource, /MPART comparability study documents Cadillac AOI receptor results/);
+  assert.match(pageSource, /does not execute the proposed Plett Road resolution, identify the exact final leachate delivery or prove a source-to-Plett migration pathway/i);
 });
 
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {

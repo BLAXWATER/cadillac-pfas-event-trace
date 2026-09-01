@@ -31,6 +31,14 @@ while IFS= read -r -d '' server_asset; do
   rm -f -- "${server_asset}"
   removed_count=$((removed_count + 1))
   removed_bytes=$((removed_bytes + asset_bytes))
-done < <(find "${server_root}" -type f \( -iname '*.webp' -o -iname '*.pdf' \) -print0)
+done < <(find "${server_root}" -type f \( \
+  -iname '*.webp' -o \
+  -iname '*.pdf' -o \
+  -iname '*.geojson' -o \
+  -iname '*.zip' -o \
+  -iname '*.html' -o \
+  -iname '*.txt' -o \
+  -iname '*.csv' \
+\) -print0)
 
 echo "Pruned ${removed_count} redundant Worker preview and download copies (${removed_bytes} bytes); browser assets remain in ${client_assets}."

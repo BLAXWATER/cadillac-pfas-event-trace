@@ -1,0 +1,50 @@
+{
+  "batch": "2026-09-02 Cadillac injection-well resolution cross-reference intake 41",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared them against every catalog record and published local asset.",
+    "Opened and text-extracted all five pages and rendered and visually inspected all five pages.",
+    "Confirmed the supplied file is byte-for-byte identical to established supplemental record 100 and suppressed a duplicate catalog entry.",
+    "Linked the existing draft-resolution record to the November 20, 2017 timeline event as a cross-reference while retaining the official minutes as the proof of Council action.",
+    "Preserved the blank resolution number, mover, seconder, vote, adoption-date and certification fields as an explicit evidentiary limitation."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "pdfPagesReviewed": 5,
+    "embeddedTextPages": 5,
+    "renderedPagesReviewed": 5,
+    "exactExistingRecords": 1,
+    "duplicateCatalogRecordsAdded": 0,
+    "timelineSourcesAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "suppliedFile": {
+    "name": "2798-Cadillac-Resolution-opposing-Wexford-Water-Technologies Injection Well Permit.pdf",
+    "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+    "size": 344611,
+    "pages": 5
+  },
+  "reusedRecord": {
+    "recordId": "100-850f00b27330",
+    "asset": "/findings-docs/100-850f00b27330.pdf",
+    "canonicalName": "Cadillac Resolution Opposing Wexford Water Technologies Injection-Well Permit.pdf",
+    "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+    "size": 344611,
+    "pages": 5,
+    "resolution": "The supplied file is an exact byte match; the established record is reused as a cross-reference and no duplicate is published."
+  },
+  "verifiedFindings": [
+    "PDF page 3 states that Cadillac had treated Wexford County Landfill leachate for over 20 years.",
+    "PDF page 3 states that Cadillac safely treated and discharged 14 million gallons of leachate in 2016 and had the ability to safely treat and discharge up to 20 million gallons annually.",
+    "PDF page 3 lists cadmium, lead, nickel, chromium, arsenic, benzene, ethylbenzene, ammonia, silver, copper and toluene as contaminants treated and removed through the City's IPP and wastewater treatment plant.",
+    "PDF page 4 states that contaminants were safely removed and clean water was discharged under EPA- and MDEQ-prescribed NPDES permit limits.",
+    "The separate official minutes record unanimous approval of motion 2017-232 to adopt a resolution with the same title and permit number."
+  ],
+  "evidentiaryBoundary": "The supplied PDF's resolution number, mover, seconder, vote, adoption date and certification fields are blank. It is therefore retained as draft resolution text, while the official minutes establish Council action. Its volume, duration, capacity and removal statements are municipal assertions and do not replace underlying delivery logs, DMR totals, capacity calculations, analytical results or treatment-removal measurements.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The reused draft adds municipal duration, volume, capacity and contaminant-treatment assertions, but it does not establish an exact final delivery date, provide load-level receiving history, supply PFAS analytical evidence or prove a source-to-receptor migration pathway."
+  }
+}

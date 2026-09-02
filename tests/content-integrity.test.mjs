@@ -1874,7 +1874,9 @@ test("batch 39 adds the distinct official November 2017 minutes and preserves un
   assert.match(pageSource, /City was paid to treat it/);
   assert.match(pageSource, /pumped into a tank and hauled to Cadillac's WWTP/);
   assert.match(pageSource, /unanimously approved motion 2017-232/);
-  assert.match(pageSource, /does not provide load tickets, invoices, precise delivered volumes, the exact final delivery date, PFAS concentrations or a proven groundwater migration pathway/);
+  assert.match(pageSource, /volume, duration, capacity and removal statements are City assertions in an unsigned draft resolution/);
+  assert.match(pageSource, /not the underlying delivery logs, DMR totals, capacity calculations, analytical results or contaminant-removal measurements/);
+  assert.match(pageSource, /does not provide the exact final delivery date, PFAS concentrations or a proven groundwater migration pathway/);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
@@ -1921,6 +1923,50 @@ test("batch 40 keeps the FY2019 adopted budget separate and bounds the revenue-p
   assert.equal(audit.separation.minutesDate, "2017-11-20");
   assert.equal(audit.separation.budgetDate, "2018-05-21");
   assert.notEqual(audit.separation.minutesRecordId, audit.separation.budgetRecordId);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 41 reuses the exact resolution record and preserves the draft-versus-adoption boundary", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch41-resolution-cross-reference-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 5);
+  assert.equal(audit.stats.embeddedTextPages, 5);
+  assert.equal(audit.stats.renderedPagesReviewed, 5);
+  assert.equal(audit.stats.exactExistingRecords, 1);
+  assert.equal(audit.stats.duplicateCatalogRecordsAdded, 0);
+  assert.equal(audit.stats.timelineSourcesAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const reused = catalogRows.find((row) => row.id === audit.reusedRecord.recordId);
+  assert.ok(reused);
+  assert.equal(reused.name, audit.reusedRecord.canonicalName);
+  assert.equal(reused.url, audit.reusedRecord.asset);
+  assert.equal(reused.sha256, audit.reusedRecord.sha256);
+  assert.equal(reused.pages, audit.reusedRecord.pages);
+  assert.equal(reused.size, audit.reusedRecord.size);
+  assert.equal(catalogRows.filter((row) => row.sha256 === audit.reusedRecord.sha256).length, 1);
+
+  const source = await readFile(path.join(publicDirectory, audit.reusedRecord.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(source).digest("hex"), audit.reusedRecord.sha256);
+  assert.match(bundledSource, new RegExp(audit.reusedRecord.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  assert.ok(previewManifest[audit.reusedRecord.asset]);
+
+  assert.match(pageSource, /<strong>over 20 years<\/strong>/);
+  assert.match(pageSource, /<strong>14 million gallons in 2016<\/strong>/);
+  assert.match(pageSource, /<strong>up to 20 million gallons annually<\/strong>/);
+  assert.match(pageSource, /cadmium, lead, nickel, chromium, arsenic, benzene, ethylbenzene, ammonia, silver, copper and toluene/);
+  assert.match(pageSource, /role: "Cross-reference"/);
+  assert.match(pageSource, /unsigned draft resolution/);
+  assert.match(pageSource, /official minutes separately establish unanimous adoption of motion 2017-232/);
+  assert.match(audit.evidentiaryBoundary, /resolution number, mover, seconder, vote, adoption date and certification fields are blank/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

@@ -1,11 +1,18 @@
 {
   "stats": {
-    "suppliedFiles": 734,
+    "suppliedFiles": 735,
     "newDistinctRecords": 164,
-    "exactExistingRecordsReused": 158,
+    "exactExistingRecordsReused": 159,
     "duplicateCopiesSuppressed": 42,
     "outOfScopeExcluded": 367,
     "publishedBytes": 472558610,
+    "latestBatch41FilesReviewed": 1,
+    "latestBatch41PdfPagesReviewed": 5,
+    "latestBatch41RenderedPagesReviewed": 5,
+    "latestBatch41ExactExistingRecords": 1,
+    "latestBatch41RecordsAdded": 0,
+    "latestBatch41TimelineSourcesAdded": 1,
+    "latestBatch41RequirementsClosed": 0,
     "latestBatch40FilesReviewed": 1,
     "latestBatch40PdfPagesReviewed": 235,
     "latestBatch40EmbeddedTextPages": 234,
@@ -205,6 +212,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 resolution cross-reference intake: the supplied five-page PDF was SHA-256 checked, text-extracted page by page and visually inspected on all five pages. It is an exact byte match to established record 100, so no duplicate was added. Pages 3–4 were linked as a cross-reference to the separate November 20, 2017 official-minutes event, with the blank execution and certification fields retained as an explicit limitation.",
     "September 2 FY2019 budget intake: all 235 pages of Cadillac's adopted 2018-2019 Annual Operating Budget were opened, 234 pages were text-indexed and the image-only cover was visually checked; the revenue table and Water Resources goals were visually inspected on PDF pages 105 and 41, and the May 21, 2018 approval date was verified on page 46. The budget is retained separately from the November 20, 2017 City Council minutes.",
     "September 2 official-minutes intake: the nine-page November 20, 2017 Cadillac City Council minutes were SHA-256 checked against the complete public corpus, text-extracted page by page and visually inspected on evidentiary pages 6 through 8. The minutes are distinct from the 102-page pre-meeting packet and unsigned proposed-resolution attachment and directly record the paid treatment relationship, collection and hauling explanation, and unanimous approval of motion 2017-232.",
     "SHA-256 byte comparison within the supplied batch and against the live archive",

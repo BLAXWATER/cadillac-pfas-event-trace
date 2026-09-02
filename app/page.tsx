@@ -83,7 +83,7 @@ type Source = {
   pages?: number;
   page?: number;
   format: SourceFormat;
-  role: "Primary source" | "Source page" | "Referenced—file missing";
+  role: "Primary source" | "Source page" | "Cross-reference" | "Referenced—file missing";
   result: string;
   clock: {
     eventStamp: string;
@@ -1603,8 +1603,8 @@ const events: Event[] = [
     kind: "regulatory",
     category: "12 · Landfill & leachate",
     title: "Cadillac records paid landfill leachate treatment and rejects the injection alternative",
-    finding: "The official minutes record City Manager Marcus Peccia stating that the landfill company deposited leachate at Cadillac's WWTP, the City was paid to treat it, a deep injection well would take that revenue source away, and Cadillac was responsible for treating the waste and discharging the treated water. Utilities Director Jeff Dietlin explained that leachate—rainwater and liquid from garbage—was collected in landfill cells, pumped into a tank and hauled to Cadillac's WWTP. Council then unanimously approved motion 2017-232 opposing draft permit MI-165-1I-0002.",
-    significance: "This is direct municipal evidence of the landfill-to-WWTP receiving and paid-treatment relationship, the treatment-and-discharge pathway, and the Council's recorded action. It does not provide load tickets, invoices, precise delivered volumes, the exact final delivery date, PFAS concentrations or a proven groundwater migration pathway.",
+    finding: <>The official minutes record City Manager Marcus Peccia stating that the landfill company deposited leachate at Cadillac's WWTP, the City was paid to treat it, a deep injection well would take that revenue source away, and Cadillac was responsible for treating the waste and discharging the treated water. Utilities Director Jeff Dietlin explained that leachate—rainwater and liquid from garbage—was collected in landfill cells, pumped into a tank and hauled to Cadillac's WWTP. Council then unanimously approved motion 2017-232 opposing draft permit MI-165-1I-0002. The associated draft resolution states that Cadillac treated Wexford County Landfill leachate for <strong>over 20 years</strong>, treated and discharged <strong>14 million gallons in 2016</strong>, and had capacity for <strong>up to 20 million gallons annually</strong>. It identifies cadmium, lead, nickel, chromium, arsenic, benzene, ethylbenzene, ammonia, silver, copper and toluene and states that contaminants were removed before discharge under NPDES limits.</>,
+    significance: "This is direct municipal evidence of the landfill-to-WWTP receiving and paid-treatment relationship, the treatment-and-discharge pathway, and the Council's recorded action. The volume, duration, capacity and removal statements are City assertions in an unsigned draft resolution, not the underlying delivery logs, DMR totals, capacity calculations, analytical results or contaminant-removal measurements. The record does not provide the exact final delivery date, PFAS concentrations or a proven groundwater migration pathway.",
     sources: [{
       name: "November 20, 2017 Cadillac City Council Meeting Minutes.pdf",
       url: "/findings-docs/164-519d4faa6c33.pdf",
@@ -1620,6 +1620,22 @@ const events: Event[] = [
         created: "2017-12-05 08:42:52 EST",
         modified: "2017-12-05 08:42:52 EST",
         note: "The December timestamps describe production of the minutes PDF, not the November 20 meeting. The complete nine-page official-minutes record is distinct from the earlier 102-page council packet and unsigned proposed-resolution attachment.",
+      },
+    }, {
+      name: "Cadillac Resolution Opposing Wexford Water Technologies Injection-Well Permit.pdf",
+      url: "/findings-docs/100-850f00b27330.pdf",
+      preview: bundledFirstPagePreview("/findings-docs/100-850f00b27330.pdf"),
+      pages: 5,
+      page: 3,
+      format: "PDF",
+      role: "Cross-reference",
+      result: "Pages 3–4 state the over-20-year treatment history, 14 million gallons treated and discharged in 2016, capacity for up to 20 million gallons annually, the listed contaminants and the claim that contaminants were removed before NPDES-compliant discharge.",
+      clock: {
+        eventStamp: "2017-11-20 6:00 PM · meeting time",
+        basis: "Meeting date and time printed in the draft and corroborated by the official minutes",
+        created: "2017-11-16 08:22:48 EST",
+        modified: "2017-11-16 08:22:48 EST",
+        note: "The newly supplied filename is an exact SHA-256 match to established record 100. Its resolution number, mover, seconder, vote and certification fields are blank, so it remains labeled as draft text. The official minutes separately establish unanimous adoption of motion 2017-232 for a resolution bearing the same title and permit number.",
       },
     }],
   },

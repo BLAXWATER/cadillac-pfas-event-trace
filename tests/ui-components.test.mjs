@@ -85,6 +85,21 @@ test("contains the document reader and primary controls on mobile screens", asyn
   assert.match(css, /\.archive-card > :is\(a, button\)\s*\{[^}]*min-height:\s*44px/s);
 });
 
+test("scales the complete layout across mobile, tablet, desktop and large screens", async () => {
+  const css = await readFile(path.join(root, "app", "globals.css"), "utf8");
+
+  assert.match(css, /--site-max-width:\s*1180px/);
+  assert.match(css, /\.site-shell\s*\{[^}]*width:\s*min\(var\(--site-max-width\),\s*calc\(100% - var\(--site-edge-space\) - var\(--site-edge-space\)\)\)/s);
+  assert.match(css, /@media\s*\(min-width:\s*1440px\)[\s\S]*--site-max-width:\s*1360px/);
+  assert.match(css, /@media\s*\(min-width:\s*1720px\)[\s\S]*--site-max-width:\s*1580px/);
+  assert.match(css, /@media\s*\(max-width:\s*1100px\)[\s\S]*\.trace-header,[^}]*grid-template-columns:\s*1fr/);
+  assert.match(css, /@media\s*\(max-width:\s*900px\)[\s\S]*\.global-search-grid,\s*\.document-grid\s*\{[^}]*grid-template-columns:\s*1fr/);
+  assert.match(css, /@media\s*\(max-width:\s*760px\)[\s\S]*--site-edge-space:\s*10px/);
+  assert.match(css, /@media\s*\(max-width:\s*480px\)[\s\S]*\.source-button-copy strong,\s*\.source-button-copy small\s*\{[^}]*white-space:\s*normal/);
+  assert.match(css, /\.global-search-grid\s*\{[^}]*max-height:\s*clamp\([^}]*overscroll-behavior:\s*contain/s);
+  assert.match(css, /\.document-grid\s*\{[^}]*max-height:\s*clamp\([^}]*overscroll-behavior:\s*contain/s);
+});
+
 test("normalizes every malformed pattern found in chronological source titles", async () => {
   const { formatSourceDisplayName } = await vite.ssrLoadModule("/app/source-display-name.ts");
 

@@ -41,6 +41,11 @@ const bundledAssets = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/record-placement-manifest.json", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {

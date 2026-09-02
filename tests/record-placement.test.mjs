@@ -19,3 +19,10 @@ test("the public placement manifest exactly mirrors the rendered archive registr
   const published = JSON.parse(await readFile(publicManifestPath, "utf8"));
   assert.deepEqual(published, manifest);
 });
+
+test("the production page exposes the bundled placement manifest used by the live audit", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const bundledAssets = await readFile(new URL("../app/bundled-public-assets.ts", import.meta.url), "utf8");
+  assert.match(page, /data-placement-manifest-url=\{bundledPublicAsset\("\/record-placement-manifest\.json"\)\}/);
+  assert.match(bundledAssets, /import\.meta\.glob\("\.\.\/public\/record-placement-manifest\.json"/);
+});

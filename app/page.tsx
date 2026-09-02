@@ -2549,7 +2549,7 @@ export default function Home() {
     : undefined;
   return (
     <TooltipProvider delayDuration={120}>
-      <main className="site-shell">
+      <main className="site-shell" data-placement-manifest-url={bundledPublicAsset("/record-placement-manifest.json")}>
         <header className="trace-header">
           <div>
             <p className="eyebrow">MI0020257 · SOURCE-LINKED RECORD</p>

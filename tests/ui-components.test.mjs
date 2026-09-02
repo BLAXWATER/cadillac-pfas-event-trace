@@ -45,7 +45,6 @@ test("emits the trace's critical layout and preview styles", async () => {
   assert.match(css, /object-fit:contain/);
   assert.match(css, /\.missing-preview\{/);
   assert.match(css, /\.document-grid\{/);
-  assert.match(css, /\.event-card h3\{[^}]*white-space:nowrap/);
   assert.match(css, /--font-11pt:\s*14\.667px/);
   assert.match(css, /--font-12pt:\s*16px/);
   assert.match(css, /--font-14pt:\s*18\.667px/);
@@ -53,6 +52,10 @@ test("emits the trace's critical layout and preview styles", async () => {
   const eventTitleStyles = css.match(/\.event-card h3\{[^}]*\}/)?.[0] ?? "";
   assert.match(eventTitleStyles, /font-weight:700/);
   assert.match(eventTitleStyles, /text-transform:uppercase/);
+  assert.match(eventTitleStyles, /max-width:100%/);
+  assert.match(eventTitleStyles, /overflow-wrap:anywhere/);
+  assert.match(eventTitleStyles, /white-space:normal/);
+  assert.doesNotMatch(eventTitleStyles, /text-overflow:ellipsis|white-space:nowrap/);
   assert.match(css, /\.event-card\{[^}]*border:3px solid var\(--trace-color\)/);
   assert.match(css, /@media\s*\(width<=760px\)/);
 });

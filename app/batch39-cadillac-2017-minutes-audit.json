@@ -1,0 +1,53 @@
+{
+  "batch": "2026-09-02 Cadillac November 20, 2017 official-minutes intake 39",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared the hash against every published public asset and evidence catalog.",
+    "Opened all nine pages, extracted the complete embedded text and confirmed that every page is readable and the first page is not blank.",
+    "Rendered and visually inspected evidentiary pages 6 through 8, which contain the paid-treatment discussion, collection and hauling explanation, motion number, permit number and vote.",
+    "Compared the official minutes with the existing 102-page November 20 council packet and the separate unsigned proposed-resolution attachment; all three are distinct records.",
+    "Added the official minutes once, linked the source to a dated timeline event and rechecked the evidence request queue without closing unsupported requirements."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "pdfPagesReviewed": 9,
+    "embeddedTextPages": 9,
+    "renderedEvidentiaryPages": 3,
+    "exactExistingRecords": 0,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "addedRecord": {
+    "recordId": "164-519d4faa6c33",
+    "asset": "/findings-docs/164-519d4faa6c33.pdf",
+    "canonicalName": "November 20, 2017 Cadillac City Council Meeting Minutes.pdf",
+    "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+    "size": 203476,
+    "pages": 9
+  },
+  "comparison": {
+    "existingCouncilPacket": {
+      "recordId": "016-6ed7900b4952",
+      "sha256": "6ed7900b4952e238eda7baa37379cfc2d3293a25b2271abd0dcf72185a758194",
+      "pages": 102,
+      "relationship": "Same meeting context, but a distinct pre-meeting council packet rather than the official minutes."
+    },
+    "existingProposedResolution": {
+      "recordId": "100-850f00b27330",
+      "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+      "relationship": "Distinct unsigned proposed-resolution attachment. The official minutes establish that motion 2017-232 was unanimously approved."
+    }
+  },
+  "verifiedFindings": [
+    "Pages 6 and 7 record City Manager Marcus Peccia's statements that Cadillac benefited from the landfill company depositing leachate at the WWTP, was paid to treat it, would lose that revenue to a deep injection well, and was responsible for treating the waste and discharging the treated water.",
+    "Pages 7 and 8 record Utilities Director Jeff Dietlin's explanation that rainwater and liquid from garbage were collected at the bottom of landfill cells, pumped to a tank and hauled to Cadillac's WWTP.",
+    "Page 8 records motion 2017-232 opposing draft permit MI-165-1I-0002 and states that the motion was unanimously approved."
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The official minutes establish the paid landfill-to-WWTP treatment relationship and the Council's action, but they do not provide an executed 2009 agreement package, load-by-load manifests, invoices, an exact final delivery date, PFAS analytical results or source-to-receptor migration proof."
+  }
+}

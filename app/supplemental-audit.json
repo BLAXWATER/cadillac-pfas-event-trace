@@ -1,11 +1,25 @@
 {
   "stats": {
-    "suppliedFiles": 732,
-    "newDistinctRecords": 162,
+    "suppliedFiles": 734,
+    "newDistinctRecords": 164,
     "exactExistingRecordsReused": 158,
     "duplicateCopiesSuppressed": 42,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 467770175,
+    "publishedBytes": 472558610,
+    "latestBatch40FilesReviewed": 1,
+    "latestBatch40PdfPagesReviewed": 235,
+    "latestBatch40EmbeddedTextPages": 234,
+    "latestBatch40ImageOnlyPages": 1,
+    "latestBatch40RenderedEvidentiaryPages": 2,
+    "latestBatch40RecordsAdded": 1,
+    "latestBatch40TimelineEventsAdded": 1,
+    "latestBatch40RequirementsClosed": 0,
+    "latestBatch39FilesReviewed": 1,
+    "latestBatch39PdfPagesReviewed": 9,
+    "latestBatch39RenderedEvidentiaryPages": 3,
+    "latestBatch39RecordsAdded": 1,
+    "latestBatch39TimelineEventsAdded": 1,
+    "latestBatch39RequirementsClosed": 0,
     "latestBatch38FilesReviewed": 3,
     "latestBatch38CsvRowsReviewed": 21,
     "latestBatch38ExactArchiveMembers": 3,
@@ -191,6 +205,8 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 FY2019 budget intake: all 235 pages of Cadillac's adopted 2018-2019 Annual Operating Budget were opened, 234 pages were text-indexed and the image-only cover was visually checked; the revenue table and Water Resources goals were visually inspected on PDF pages 105 and 41, and the May 21, 2018 approval date was verified on page 46. The budget is retained separately from the November 20, 2017 City Council minutes.",
+    "September 2 official-minutes intake: the nine-page November 20, 2017 Cadillac City Council minutes were SHA-256 checked against the complete public corpus, text-extracted page by page and visually inspected on evidentiary pages 6 through 8. The minutes are distinct from the 102-page pre-meeting packet and unsigned proposed-resolution attachment and directly record the paid treatment relationship, collection and hauling explanation, and unanimous approval of motion 2017-232.",
     "SHA-256 byte comparison within the supplied batch and against the live archive",
     "PDF page count and embedded metadata comparison",
     "Targeted text extraction plus OCR-aware review of scan-only pages",
@@ -221,6 +237,14 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "September 2 Cadillac FY2019 adopted operating budget",
+      "reason": "The 235-page budget is a distinct May 21, 2018 record and is not merged with the November 20, 2017 Council minutes. It reports FY2017 actual, FY2018 estimated and FY2019 proposed leachate revenue and places an additional-hauled-waste revenue goal next to NPDES, industrial-monitoring and Class A biosolids goals. This supports noting a potential policy tension, not asserting that a conflict, violation or causal relationship occurred."
+    },
+    {
+      "name": "September 2 Cadillac November 20, 2017 official minutes",
+      "reason": "The official minutes are a distinct nine-page municipal record, not another copy of the 102-page council packet or the unsigned proposed-resolution attachment. Pages 6 through 8 establish that Cadillac was paid to treat landfill leachate, describe its collection and hauling to the WWTP, record Cadillac's treatment and environmental discharge role, and document unanimous approval of motion 2017-232. The record is retained once and linked as a primary source; it does not supply transaction-level loads, invoices, an exact final delivery date, PFAS concentrations or migration-pathway proof."
+    },
     {
       "name": "September 1 USGS 04121241 Clam River discharge tables",
       "reason": "The three supplied CSVs are exact members of the established USGS ZIP package. They are exposed as individual searchable and downloadable table records for station identity, field measurements and channel measurements while the ZIP remains the canonical preserved package. The tables document ten approved discrete surface-water discharge observations, not continuous flow, PFAS results, groundwater direction or a contaminant pathway."

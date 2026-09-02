@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 720);
+  assert.equal(localFiles, 722);
   assert.equal(externalFiles, 834);
 });
 
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1554);
+  assert.equal(recordCount, 1556);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -181,7 +181,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1554);
+  assert.equal(records.length, 1556);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -262,8 +262,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1406);
-  assert.equal(audit.stats.pdfPages, 19834);
+  assert.equal(audit.stats.pdfRecords, 1408);
+  assert.equal(audit.stats.pdfPages, 20078);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -439,7 +439,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 98);
-  assert.equal(supplementalCatalog.length, 162);
+  assert.equal(supplementalCatalog.length, 164);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -1836,6 +1836,91 @@ test("batch 38 exposes the three exact USGS ZIP members without duplicating the 
   assert.equal((pageSource.match(/title: "USGS measures Clam River discharge at Plett Road"/g) ?? []).length, 1);
   assert.match(pageSource, /ten approved discrete discharge measurements/i);
   assert.match(pageSource, /not continuous monitoring/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 39 adds the distinct official November 2017 minutes and preserves unresolved proof gaps", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch39-cadillac-2017-minutes-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 9);
+  assert.equal(audit.stats.embeddedTextPages, 9);
+  assert.equal(audit.stats.renderedEvidentiaryPages, 3);
+  assert.equal(audit.stats.exactExistingRecords, 0);
+  assert.equal(audit.stats.recordsAdded, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const added = catalogRows.find((row) => row.id === audit.addedRecord.recordId);
+  assert.ok(added);
+  assert.equal(added.name, audit.addedRecord.canonicalName);
+  assert.equal(added.url, audit.addedRecord.asset);
+  assert.equal(added.sha256, audit.addedRecord.sha256);
+  assert.equal(added.pages, audit.addedRecord.pages);
+  assert.equal(added.size, audit.addedRecord.size);
+  const source = await readFile(path.join(publicDirectory, audit.addedRecord.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(source).digest("hex"), audit.addedRecord.sha256);
+  assert.match(bundledSource, new RegExp(audit.addedRecord.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  assert.ok(previewManifest[audit.addedRecord.asset]);
+
+  assert.match(pageSource, /Cadillac records paid landfill leachate treatment and rejects the injection alternative/);
+  assert.match(pageSource, /City was paid to treat it/);
+  assert.match(pageSource, /pumped into a tank and hauled to Cadillac's WWTP/);
+  assert.match(pageSource, /unanimously approved motion 2017-232/);
+  assert.match(pageSource, /does not provide load tickets, invoices, precise delivered volumes, the exact final delivery date, PFAS concentrations or a proven groundwater migration pathway/);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 40 keeps the FY2019 adopted budget separate and bounds the revenue-policy inference", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch40-cadillac-fy2019-budget-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 235);
+  assert.equal(audit.stats.embeddedTextPages, 234);
+  assert.equal(audit.stats.imageOnlyPages, 1);
+  assert.equal(audit.stats.renderedEvidentiaryPages, 2);
+  assert.equal(audit.stats.exactExistingRecords, 0);
+  assert.equal(audit.stats.recordsAdded, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const added = catalogRows.find((row) => row.id === audit.addedRecord.recordId);
+  assert.ok(added);
+  assert.equal(added.name, audit.addedRecord.canonicalName);
+  assert.equal(added.url, audit.addedRecord.asset);
+  assert.equal(added.sha256, audit.addedRecord.sha256);
+  assert.equal(added.pages, audit.addedRecord.pages);
+  assert.equal(added.size, audit.addedRecord.size);
+  const source = await readFile(path.join(publicDirectory, audit.addedRecord.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(source).digest("hex"), audit.addedRecord.sha256);
+  assert.match(bundledSource, new RegExp(audit.addedRecord.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  assert.ok(previewManifest[audit.addedRecord.asset]);
+
+  assert.match(pageSource, /Cadillac adopts FY2019 budget with leachate revenue and hauled-waste goals/);
+  assert.match(pageSource, /<strong>\$447,684<\/strong>/);
+  assert.match(pageSource, /<strong>\$350,000<\/strong>/);
+  assert.match(pageSource, /<strong>\$150,000<\/strong>/);
+  assert.match(pageSource, /additional hauled waste/);
+  assert.match(pageSource, /below NPDES permit levels/);
+  assert.match(pageSource, /Class A EQ biosolids/);
+  assert.match(pageSource, /budget does not state that the goals conflicted in practice/);
+  assert.equal(audit.separation.minutesDate, "2017-11-20");
+  assert.equal(audit.separation.budgetDate, "2018-05-21");
+  assert.notEqual(audit.separation.minutesRecordId, audit.separation.budgetRecordId);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

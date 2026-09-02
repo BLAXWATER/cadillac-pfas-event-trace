@@ -1,0 +1,50 @@
+{
+  "batch": "2026-09-02 Cadillac FY2019 adopted operating budget intake 40",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared the hash against every published public asset and evidence catalog.",
+    "Opened all 235 pages, text-indexed the 234 pages with embedded text and visually checked the image-only cover page.",
+    "Rendered and visually inspected PDF page 41 for the Water Resources goals and PDF page 105 for the leachate revenue row and column alignment.",
+    "Verified the May 21, 2018 approval date on PDF page 46 and kept the budget separate from the November 20, 2017 official council minutes.",
+    "Added the adopted budget once, linked it to its own dated timeline event and rechecked the evidence request queue without closing unsupported requirements."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "pdfPagesReviewed": 235,
+    "embeddedTextPages": 234,
+    "imageOnlyPages": 1,
+    "renderedEvidentiaryPages": 2,
+    "exactExistingRecords": 0,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "addedRecord": {
+    "recordId": "165-676065b15331",
+    "asset": "/findings-docs/165-676065b15331.pdf",
+    "canonicalName": "City of Cadillac FY2019 Adopted Operating Budget.pdf",
+    "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
+    "size": 4584959,
+    "pages": 235
+  },
+  "verifiedFindings": [
+    "PDF page 105 reports leachate revenue of $447,684 actual for FY2017, $350,000 estimated for FY2018, $150,000 adopted for FY2018 and $150,000 proposed for FY2019.",
+    "PDF page 41 lists evaluating new revenue through additional hauled waste as a Water Resources fiscal goal.",
+    "The same page separately lists maintaining discharges below NPDES permit levels, limiting industrial waste through active monitoring and maintaining Class A EQ biosolids as environmental goals.",
+    "PDF page 46 states that Ordinance 2018-06 was approved May 21, 2018."
+  ],
+  "interpretiveBoundary": "The adjacent fiscal and environmental goals support describing a potential policy tension. The budget does not state that the goals conflicted in practice, identify the source or constituents of additional hauled waste, or establish a permit violation.",
+  "separation": {
+    "minutesRecordId": "164-519d4faa6c33",
+    "minutesDate": "2017-11-20",
+    "budgetRecordId": "165-676065b15331",
+    "budgetDate": "2018-05-21",
+    "resolution": "The records are published as separate catalog entries and separate timeline events, with independent titles, dates, findings and source files."
+  },
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The adopted budget adds aggregate financial and policy evidence, but it does not provide load-by-load manifests, hauler tickets, invoices, payment records, an exact final delivery date, PFAS analytical results or source-to-receptor migration proof."
+  }
+}

@@ -2104,5 +2104,31 @@
     "size": 61381,
     "sha256": "c3da045eb14074a0fb2afcceeed8e4fd7f85593e0100abdbf2a202908abbb610",
     "description": "Approved August 20, 2025 Cadillac LDFA minutes recording completion of a well survey, a motion to seek a new EPA test-well sampling plan, work on PFAS QAPP and 14D sampling plans, authorization of up to $1,000 for PFAS pilot-study testing, and a request for MPART input on PFAS air-toxicity questions. The minutes document decisions and attributed updates; they do not supply the plans, chain-of-custody records or analytical results."
+  },
+  {
+    "id": "164-519d4faa6c33",
+    "name": "November 20, 2017 Cadillac City Council Meeting Minutes.pdf",
+    "url": "/findings-docs/164-519d4faa6c33.pdf",
+    "year": "2017",
+    "category": "Wexford landfill & leachate",
+    "type": "Official city council minutes",
+    "format": "PDF",
+    "pages": 9,
+    "size": 203476,
+    "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+    "description": "Official November 20, 2017 Cadillac City Council minutes. Pages 6–8 record that Cadillac was paid to treat landfill leachate, that a deep injection well would remove that revenue, that the City treated the waste and discharged the treated water, and that landfill liquid was collected in cells, pumped to a tank and hauled to the WWTP. The minutes also record unanimous approval of motion 2017-232 opposing draft injection-well permit MI-165-1I-0002. The record does not provide load-level dates, quantities, invoices, the exact final delivery date or PFAS migration proof."
+  },
+  {
+    "id": "165-676065b15331",
+    "name": "City of Cadillac FY2019 Adopted Operating Budget.pdf",
+    "url": "/findings-docs/165-676065b15331.pdf",
+    "year": "2018",
+    "category": "Municipal finance, WWTP operations & leachate",
+    "type": "Adopted city operating budget",
+    "format": "PDF",
+    "pages": 235,
+    "size": 4584959,
+    "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
+    "description": "Cadillac's FY2019 operating budget, approved May 21, 2018. The Water and Sewer Fund table reports leachate revenue of $447,684 actual for FY2017, $350,000 estimated for FY2018 and $150,000 proposed for FY2019. The Water Resources goals include evaluating additional hauled waste as a new-revenue opportunity while also maintaining NPDES-compliant discharges, limiting industrial waste through active monitoring and preserving Class A EQ biosolids. These adjacent goals document a policy tension but do not prove that the goals conflicted in practice or establish a violation."
   }
 ]

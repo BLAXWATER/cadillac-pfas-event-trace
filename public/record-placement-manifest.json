@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1554,
+  "recordCount": 1556,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 162
+      "count": 164
     },
     {
       "archiveId": "reference",
@@ -16056,6 +16056,28 @@
       "url": "/findings-docs/163-c3da045eb140.pdf",
       "sha256": "c3da045eb14074a0fb2afcceeed8e4fd7f85593e0100abdbf2a202908abbb610",
       "size": 61381
+    },
+    {
+      "id": "164-519d4faa6c33",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "November 20, 2017 Cadillac City Council Meeting Minutes.pdf",
+      "url": "/findings-docs/164-519d4faa6c33.pdf",
+      "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+      "size": 203476
+    },
+    {
+      "id": "165-676065b15331",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac FY2019 Adopted Operating Budget.pdf",
+      "url": "/findings-docs/165-676065b15331.pdf",
+      "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
+      "size": 4584959
     },
     {
       "id": "001-7c991baaf1e9",

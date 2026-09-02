@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "ebd31a64a879507a39f89a39338087bdf96a0a6b3c01b30bc9909fd1dd73aa02",
+  "catalogFingerprint": "7ac0c066211dd71c0d7eb9165318ed931797c5239646ffaa997e982b5b1df257",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1554,
-    "verifiedRecords": 1554,
-    "pdfRecords": 1406,
-    "pdfPages": 19834,
+    "catalogRecords": 1556,
+    "verifiedRecords": 1556,
+    "pdfRecords": 1408,
+    "pdfPages": 20078,
     "imageRecords": 13,
-    "embeddedTextPages": 16047,
-    "ocrPages": 3800,
-    "ocrPagesWithText": 3458,
-    "manualReviewPages": 137,
+    "embeddedTextPages": 16288,
+    "ocrPages": 3803,
+    "ocrPagesWithText": 3460,
+    "manualReviewPages": 138,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,7 +29,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 137,
+    "pagesReviewed": 138,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -488,6 +488,15 @@
       "url": "/findings-docs/151-5a0d25ca941a.pdf",
       "pages": [
         37
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "165-676065b15331",
+      "name": "City of Cadillac FY2019 Adopted Operating Budget.pdf",
+      "url": "/findings-docs/165-676065b15331.pdf",
+      "pages": [
+        235
       ]
     },
     {

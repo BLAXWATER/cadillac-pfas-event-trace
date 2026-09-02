@@ -1257,6 +1257,28 @@ const events: Event[] = [
   },
   {
     year: "2025",
+    date: "2025-08-20",
+    isoDate: "2025-08-20",
+    time: "10:31-11:27 · zone not stated",
+    timeBasis: "Call-to-order and adjournment times printed in the minutes",
+    phase: "LDFA PFAS sampling planning",
+    kind: "regulatory",
+    category: "04 / 13 · PFAS monitoring & wells",
+    title: "LDFA authorizes PFAS pilot testing and seeks an updated well plan",
+    finding: "Approved LDFA minutes record completion of a well survey, a unanimous motion to ask EPA for a new test-well sampling plan, work on PFAS QAPP approval and a 14D sampling plan, and unanimous authorization to spend up to $1,000 for proposed PFAS pilot-study testing. The board also requested MPART expert input on whether air stripping could release PFAS to air.",
+    significance: "Documents response planning, board authorization and attributed operational updates. The minutes do not provide the QAPP, sampling plans, chain-of-custody records, analytical results or a site-specific migration analysis, so they do not close an evidence request or prove a pathway.",
+    sources: [
+      archivedSource("Cadillac LDFA Board Minutes - August 20, 2025.pdf", "/findings-docs/163-c3da045eb140.pdf", 3, "Pages 1-2 record the well survey, EPA sampling-plan motion, PFAS QAPP and 14D planning, pilot-study testing authorization and air-toxicity discussion.", {
+        eventStamp: "2025-08-20 10:31-11:27 · zone not stated",
+        basis: "Meeting date, call-to-order time and adjournment time printed in the minutes",
+        created: "2025-09-18 09:58:31 EDT",
+        modified: "2025-09-18 09:58:31 EDT",
+        note: "The PDF timestamps reflect later production of the approved minutes, not the meeting time. The record documents decisions and statements, not completed testing or laboratory results.",
+      }),
+    ],
+  },
+  {
+    year: "2025",
     date: "2025-04-09",
     isoDate: "2025-04-09",
     time: noTime,

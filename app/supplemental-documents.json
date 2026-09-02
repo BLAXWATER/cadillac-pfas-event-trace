@@ -2091,5 +2091,18 @@
     "size": 596125,
     "sha256": "a51176d31cfd243c9bf522ed36e2059bdde1861e97cde3465dc5f5beb524a979",
     "description": "Public-release derivative of the signed May 20, 2025 EGLE sampling questionnaire and access agreement for 1140 Plett Road. The phone-number and email fields are permanently obscured in the flattened page. The form records an irrigation well, no treatment, an untreated outdoor spigot and sampling-access instructions; authorization alone does not prove that sampling occurred or establish a PFAS pathway."
+  },
+  {
+    "id": "163-c3da045eb140",
+    "name": "Cadillac LDFA Board Minutes - August 20, 2025.pdf",
+    "url": "/findings-docs/163-c3da045eb140.pdf",
+    "year": "2025",
+    "category": "PFAS response & public health",
+    "type": "LDFA board minutes",
+    "format": "PDF",
+    "pages": 3,
+    "size": 61381,
+    "sha256": "c3da045eb14074a0fb2afcceeed8e4fd7f85593e0100abdbf2a202908abbb610",
+    "description": "Approved August 20, 2025 Cadillac LDFA minutes recording completion of a well survey, a motion to seek a new EPA test-well sampling plan, work on PFAS QAPP and 14D sampling plans, authorization of up to $1,000 for PFAS pilot-study testing, and a request for MPART input on PFAS air-toxicity questions. The minutes document decisions and attributed updates; they do not supply the plans, chain-of-custody records or analytical results."
   }
 ]

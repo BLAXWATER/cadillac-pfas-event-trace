@@ -1,0 +1,39 @@
+{
+  "batch": "2026-09-01 LDFA August 2025 minutes reconciliation 36",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and checked the hash against every evidence catalog.",
+    "Extracted the embedded text and rendered all three pages for visual review.",
+    "Retained the record as distinct because no existing catalog entry has the same hash or complete August 20, 2025 meeting content.",
+    "Added one conservative timeline event limited to the motions, authorizations and attributed updates recorded in the minutes.",
+    "Rechecked every open evidence request and closed none because the minutes do not provide the referenced plans, field records, analytical packages, delivery history or site-specific migration proof."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 3,
+    "embeddedTextPages": 3,
+    "exactExistingRecords": 0,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "addedRecord": {
+    "recordId": "163-c3da045eb140",
+    "asset": "/findings-docs/163-c3da045eb140.pdf",
+    "sha256": "c3da045eb14074a0fb2afcceeed8e4fd7f85593e0100abdbf2a202908abbb610",
+    "pages": 3,
+    "size": 61381
+  },
+  "qualityFindings": [
+    "The minutes say the well survey was complete and record a motion to contact EPA for a new sampling plan; they do not include the resulting plan.",
+    "The minutes record work on PFAS QAPP and 14D sampling plans and authorize spending for proposed pilot-study testing; they do not contain completed test results.",
+    "The air-toxicity item records a question, the presence of demisters and a request for MPART expert input; it does not establish a measured PFAS air release or a completed risk determination."
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "No request is closed. The minutes add dated governance and planning context but do not supply leachate transaction records, main-WWTP PFAS analytical packages, certified Plett well construction, local hydraulic data, complete receptor field records or synchronized source-to-receptor evidence."
+  }
+}

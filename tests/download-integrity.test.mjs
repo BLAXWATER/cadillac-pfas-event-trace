@@ -8,4 +8,5 @@ test("every document download has valid metadata and a direct delivery path", as
   assert.equal(result.records.length, 1554);
   assert.equal(result.local.length, 720);
   assert.equal(result.external.length, 834);
+  assert.equal(result.bundledDeliveries.length + result.archiveDeliveries.length, result.records.length);
 });

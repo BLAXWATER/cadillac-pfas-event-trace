@@ -1,15 +1,15 @@
-import { loadDocumentRecords, parsePinnedRepositoryUrl } from "./document-download-integrity.mjs";
+import { loadDocumentRecords, loadDownloadDeliveryPlan } from "./document-download-integrity.mjs";
 import { createHash } from "node:crypto";
 
 const concurrency = Math.max(1, Number(process.env.DOWNLOAD_AUDIT_CONCURRENCY ?? 12));
 const timeoutMs = Math.max(1_000, Number(process.env.DOWNLOAD_AUDIT_TIMEOUT_MS ?? 30_000));
-const records = (await loadDocumentRecords()).filter((row) => !row.url.startsWith("/"));
+const records = await loadDocumentRecords();
+const deliveries = (await loadDownloadDeliveryPlan(records)).filter((entry) => entry.kind === "archive");
 const failures = [];
 let cursor = 0;
 
-async function inspect(row) {
-  const source = parsePinnedRepositoryUrl(row.url);
-  if (!source) return `${row.catalog}:${row.id} is not a pinned repository source`;
+async function inspect(delivery) {
+  const { row, source } = delivery;
 
   const response = await fetch(source.rawUrl, {
     method: "HEAD",
@@ -44,24 +44,25 @@ async function inspect(row) {
 async function worker() {
   while (true) {
     const index = cursor++;
-    if (index >= records.length) return;
-    const row = records[index];
+    if (index >= deliveries.length) return;
+    const delivery = deliveries[index];
     try {
-      const failure = await inspect(row);
+      const failure = await inspect(delivery);
       if (failure) failures.push(failure);
     } catch (error) {
+      const { row } = delivery;
       failures.push(`${row.catalog}:${row.id} request failed: ${error.message}`);
     }
   }
 }
 
-await Promise.all(Array.from({ length: Math.min(concurrency, records.length) }, () => worker()));
+await Promise.all(Array.from({ length: Math.min(concurrency, deliveries.length) }, () => worker()));
 
 if (failures.length) {
-  console.error(`Anonymous download integrity FAILED: ${failures.length} of ${records.length} public archive files.`);
+  console.error(`Anonymous download integrity FAILED: ${failures.length} of ${deliveries.length} public archive deliveries.`);
   for (const failure of failures.slice(0, 25)) console.error(`- ${failure}`);
   if (failures.length > 25) console.error(`- ... ${failures.length - 25} more`);
   process.exitCode = 1;
 } else {
-  console.log(`Anonymous download integrity passed: ${records.length} of ${records.length} public archive files returned directly with matching sizes.`);
+  console.log(`Anonymous download integrity passed: ${deliveries.length} of ${deliveries.length} public archive deliveries returned directly with matching sizes.`);
 }

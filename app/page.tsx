@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element -- document previews are local static evidence assets */
 
-import { useState, type CSSProperties } from "react";
+import { useState, type CSSProperties, type ReactNode } from "react";
 import {
   AlertTriangle,
   ArrowDown,
@@ -113,7 +113,7 @@ type Event = {
   kind: Kind;
   category: string;
   title: string;
-  finding: string;
+  finding: ReactNode;
   significance: string;
   sources: Source[];
 };
@@ -828,7 +828,7 @@ const events: Event[] = [
     kind: "sampling",
     category: "06 · Lab results",
     title: "Wexford leachate shows a strong PFAS burden",
-    finding: "TestAmerica job J17646-1 reports the landfill leachate PFAS panel, including approximately 590 ng/L PFOA and 120 ng/L PFOS.",
+    finding: <>TestAmerica job J17646-1 reports the landfill leachate PFAS panel, including approximately <strong>590 ng/L PFOA and 120 ng/L PFOS.</strong></>,
     significance: "Provides the upstream profile for comparison with WWTP effluent and receptor-water results.",
     sources: [pdf("J17646-1 UDS Level 2 Report Final Report (Leachate).pdf", "2018-10-03-j17646-leachate", 23, "Full TestAmerica analytical package for leachate collected October 3, 2018.", {
       eventStamp: "2018-10-03 09:30–09:35 · zone not stated",

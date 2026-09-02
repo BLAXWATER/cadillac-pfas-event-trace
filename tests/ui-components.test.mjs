@@ -50,6 +50,9 @@ test("emits the trace's critical layout and preview styles", async () => {
   assert.match(css, /--font-12pt:\s*16px/);
   assert.match(css, /--font-14pt:\s*18\.667px/);
   assert.match(css, /font-size:clamp\(var\(--font-11pt\),\s*var\(--event-title-fit,\s*22px\),\s*33px\)/);
+  const eventTitleStyles = css.match(/\.event-card h3\{[^}]*\}/)?.[0] ?? "";
+  assert.match(eventTitleStyles, /font-weight:700/);
+  assert.match(eventTitleStyles, /text-transform:uppercase/);
   assert.match(css, /\.event-card\{[^}]*border:3px solid var\(--trace-color\)/);
   assert.match(css, /@media\s*\(width<=760px\)/);
 });

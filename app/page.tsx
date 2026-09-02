@@ -2680,7 +2680,7 @@ export default function Home() {
                             "--event-title-fit": `${((100 / Math.max(event.title.length, 1)) * 1.7).toFixed(3)}cqw`,
                           } as CSSProperties}
                         >
-                          {event.title}
+                          {event.title.toUpperCase()}
                         </h3>
                         <p className="event-finding">{event.finding}</p>
                         <div className="consequence"><ArrowDown /><p><strong>Trace significance</strong>{event.significance}</p></div>

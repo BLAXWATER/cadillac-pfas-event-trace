@@ -171,7 +171,7 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(44px, 7.26vw, 94.6px); line-h
 .timestamp-ribbon span, .timestamp-ribbon i { color: #6f828e; font-size: var(--font-11pt); font-style: normal; letter-spacing: .11em; }
 .timestamp-ribbon strong { color: #cfe1e9; font-weight: 650; }
 .timestamp-ribbon i { margin-left: 8px; }
-.event-card h3 { width: 100%; margin: 17px 0 10px; overflow: hidden; color: #e8eef5; font-size: clamp(var(--font-11pt), var(--event-title-fit, 22px), 33px); line-height: 1.13; letter-spacing: -.025em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
+.event-card h3 { width: 100%; margin: 17px 0 10px; overflow: hidden; color: #e8eef5; font-size: clamp(var(--font-11pt), var(--event-title-fit, 22px), 33px); font-weight: 700; line-height: 1.13; letter-spacing: -.025em; text-overflow: ellipsis; text-transform: uppercase; white-space: nowrap; }
 .event-finding { max-width: 860px; margin: 0; color: #acbdc8; line-height: 1.68; }
 .consequence { display: grid; grid-template-columns: 22px 1fr; gap: 12px; margin: 18px 0 20px; padding-top: 17px; border-top: 1px solid #202c36; }
 .consequence svg { width: 17px; color: var(--trace-color); }

@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "7ac0c066211dd71c0d7eb9165318ed931797c5239646ffaa997e982b5b1df257",
+  "catalogFingerprint": "41d87ad19cb5b17e219f983fd051abf5a368249f5e002f4d6f6a2b7ff85848c0",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1556,
-    "verifiedRecords": 1556,
-    "pdfRecords": 1408,
-    "pdfPages": 20078,
+    "catalogRecords": 1557,
+    "verifiedRecords": 1557,
+    "pdfRecords": 1409,
+    "pdfPages": 20125,
     "imageRecords": 13,
-    "embeddedTextPages": 16288,
-    "ocrPages": 3803,
-    "ocrPagesWithText": 3460,
-    "manualReviewPages": 138,
+    "embeddedTextPages": 16334,
+    "ocrPages": 3804,
+    "ocrPagesWithText": 3461,
+    "manualReviewPages": 139,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,7 +29,7 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 138,
+    "pagesReviewed": 139,
     "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
@@ -537,6 +537,15 @@
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/086-6500e6efe946.pdf",
       "pages": [
         128
+      ]
+    },
+    {
+      "catalog": "compliance-documents.json",
+      "id": "062-4c293cc26b89",
+      "name": "2015-01-01 to 2015-03-31 - EPA ICIS Michigan Quarterly Non-Compliance Report.pdf",
+      "url": "/compliance-docs/062-4c293cc26b89.pdf",
+      "pages": [
+        1
       ]
     }
   ],

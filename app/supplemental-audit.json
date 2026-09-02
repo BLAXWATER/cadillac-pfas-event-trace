@@ -1,11 +1,22 @@
 {
   "stats": {
-    "suppliedFiles": 735,
+    "suppliedFiles": 738,
     "newDistinctRecords": 164,
-    "exactExistingRecordsReused": 159,
+    "exactExistingRecordsReused": 161,
     "duplicateCopiesSuppressed": 42,
     "outOfScopeExcluded": 367,
     "publishedBytes": 472558610,
+    "latestBatch42FilesReviewed": 3,
+    "latestBatch42PdfPagesReviewed": 150,
+    "latestBatch42EmbeddedTextPages": 147,
+    "latestBatch42ImageOnlyArchiveCovers": 3,
+    "latestBatch42RenderedPagesReviewed": 150,
+    "latestBatch42ExactExistingRecords": 2,
+    "latestBatch42RecordsLocalized": 2,
+    "latestBatch42RecordsAdded": 1,
+    "latestBatch42TimelineEventsAdded": 1,
+    "latestBatch42TimelineSourcesAdded": 2,
+    "latestBatch42RequirementsClosed": 0,
     "latestBatch41FilesReviewed": 1,
     "latestBatch41PdfPagesReviewed": 5,
     "latestBatch41RenderedPagesReviewed": 5,
@@ -212,6 +223,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 EPA quarterly noncompliance intake: all three supplied PDFs and all 150 pages were hash-checked, opened, text-extracted and rendered. The three image-only EPA archive covers were visually verified as nonblank. Two files exactly match established records and were localized for anonymous download; the distinct January–March 2015 report was retained once and linked to a new dated event.",
     "September 2 resolution cross-reference intake: the supplied five-page PDF was SHA-256 checked, text-extracted page by page and visually inspected on all five pages. It is an exact byte match to established record 100, so no duplicate was added. Pages 3–4 were linked as a cross-reference to the separate November 20, 2017 official-minutes event, with the blank execution and certification fields retained as an explicit limitation.",
     "September 2 FY2019 budget intake: all 235 pages of Cadillac's adopted 2018-2019 Annual Operating Budget were opened, 234 pages were text-indexed and the image-only cover was visually checked; the revenue table and Water Resources goals were visually inspected on PDF pages 105 and 41, and the May 21, 2018 approval date was verified on page 46. The budget is retained separately from the November 20, 2017 City Council minutes.",
     "September 2 official-minutes intake: the nine-page November 20, 2017 Cadillac City Council minutes were SHA-256 checked against the complete public corpus, text-extracted page by page and visually inspected on evidentiary pages 6 through 8. The minutes are distinct from the 102-page pre-meeting packet and unsigned proposed-resolution attachment and directly record the paid treatment relationship, collection and hauling explanation, and unanimous approval of motion 2017-232.",
@@ -245,6 +257,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "September 2 EPA quarterly noncompliance reports",
+      "reason": "The January–March 2014 and April–June 2014 files are exact byte matches to established records and were not added again; their canonical assets were localized for anonymous preview and download. The January–March 2015 file is distinct and was retained once. The later 2014 report carries forward the same December 31, 2013 DMR reporting violation, so it is linked as a cross-reference rather than counted as another violation event. The 2015 report lists seven ammonia and carbonaceous-BOD entries but supplies no concentrations, loads, root cause, PFAS finding, linked enforcement action or final order."
+    },
     {
       "name": "September 2 Cadillac FY2019 adopted operating budget",
       "reason": "The 235-page budget is a distinct May 21, 2018 record and is not merged with the November 20, 2017 Council minutes. It reports FY2017 actual, FY2018 estimated and FY2019 proposed leachate revenue and places an additional-hauled-waste revenue goal next to NPDES, industrial-monitoring and Class A biosolids goals. This supports noting a potential policy tension, not asserting that a conflict, violation or causal relationship occurred."

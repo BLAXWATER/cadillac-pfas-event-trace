@@ -134,6 +134,11 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/findings-docs/002-2ee7fa5b072b.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/findings-docs/161-945324bfdf2a.pdf", {
     eager: true,
     import: "default",
@@ -529,7 +534,17 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/compliance-docs/021-2bd817167074.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/compliance-docs/060-dd5fb72d29bd.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/compliance-docs/062-4c293cc26b89.pdf", {
     eager: true,
     import: "default",
     query: "?url",

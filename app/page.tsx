@@ -1567,13 +1567,50 @@ const events: Event[] = [
     kind: "compliance",
     category: "13 · Compliance & enforcement",
     title: "EPA ICIS report records overdue Cadillac DMR",
-    finding: "The January–March 2014 QNCR detail row records a Cadillac WWTP DMR overdue to EPA/State for outfall 001, violation date December 31, 2013, status date February 20, 2014 and code 2D reporting violation.",
-    significance: "Adds the primary federal status row and distinguishes a reporting violation from a pollutant-limit exceedance. The row states that no enforcement action or final order is linked.",
-    sources: [archivedSource("EPA ICIS Michigan Second-Quarter 2014 QNCR.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/002-2ee7fa5b072b.pdf", 50, "Cadillac-specific detail appears on PDF page 2.", {
-      eventStamp: "2014-06-14 · time not stated",
-      basis: "EPA ICIS data-run and refresh date",
-      note: "The underlying violation and status dates are December 31, 2013 and February 20, 2014, respectively.",
-    })],
+    finding: "The January–March 2014 QNCR detail row records a Cadillac WWTP DMR overdue to EPA/State for outfall 001, violation date December 31, 2013, status date February 20, 2014 and code 2D reporting violation. EPA's April–June 2014 report carries the same underlying DMR violation forward as continuing noncompliance in its September 13 data run.",
+    significance: "Adds the primary federal status row and distinguishes a reporting violation from a pollutant-limit exceedance. Neither report links an enforcement action or final order, and the later entry is treated as a status cross-reference rather than a new violation event.",
+    sources: [
+      {
+        ...archivedSource("EPA ICIS Michigan Second-Quarter 2014 QNCR.pdf", "/findings-docs/002-2ee7fa5b072b.pdf", 50, "Cadillac-specific detail appears on PDF page 2.", {
+          eventStamp: "2014-06-14 · time not stated",
+          basis: "EPA ICIS data-run and refresh date",
+          note: "The report period is January 1 through March 31, 2014. The underlying violation and status dates are December 31, 2013 and February 20, 2014, respectively.",
+        }),
+        page: 2,
+      },
+      {
+        ...archivedSource("2014-04-01 to 2014-06-30 - EPA ICIS Michigan Quarterly Non-Compliance Report.pdf", "/compliance-docs/021-2bd817167074.pdf", 53, "PDF page 2 carries forward the same overdue outfall 001 DMR status.", {
+          eventStamp: "2014-09-13 · time not stated",
+          basis: "EPA ICIS data-run and refresh date",
+          note: "This later quarterly report records continuing noncompliance for the same December 31, 2013 reporting violation; it is not counted as a new violation event.",
+        }),
+        page: 2,
+        role: "Cross-reference",
+      },
+    ],
+  },
+  {
+    year: "2015",
+    date: "2015-06-13",
+    isoDate: "2015-06-13",
+    time: noTime,
+    timeBasis: "EPA data-run date",
+    phase: "Federal noncompliance reporting",
+    kind: "compliance",
+    category: "13 · Compliance & enforcement",
+    title: "EPA QNCR lists seven Cadillac ammonia and carbonaceous-BOD violations",
+    finding: "EPA's January–March 2015 QNCR detail table lists seven code 3A1 non-monthly-average permit-effluent violations at Cadillac WWTP outfall 001-A. The parameters are total ammonia as nitrogen and carbonaceous biochemical oxygen demand, with underlying violation dates from October 31, 2014 through March 31, 2015.",
+    significance: "Preserves the federal ICIS status evidence as reported. The table does not supply concentrations, loads, root cause or PFAS findings, and it shows no linked enforcement action or final order.",
+    sources: [{
+      ...archivedSource("2015-01-01 to 2015-03-31 - EPA ICIS Michigan Quarterly Non-Compliance Report.pdf", "/compliance-docs/062-4c293cc26b89.pdf", 47, "Cadillac-specific detail appears on PDF page 3.", {
+        eventStamp: "2015-06-13 · time not stated",
+        basis: "EPA ICIS data-run and refresh date",
+        created: "2015-06-14",
+        modified: "2015-09-09",
+        note: "The report period is January 1 through March 31, 2015; the seven underlying entries span October 31, 2014 through March 31, 2015.",
+      }),
+      page: 3,
+    }],
   },
   {
     year: "2017",
@@ -1603,7 +1640,7 @@ const events: Event[] = [
     kind: "regulatory",
     category: "12 · Landfill & leachate",
     title: "Cadillac records paid landfill leachate treatment and rejects the injection alternative",
-    finding: <>The official minutes record City Manager Marcus Peccia stating that the landfill company deposited leachate at Cadillac's WWTP, the City was paid to treat it, a deep injection well would take that revenue source away, and Cadillac was responsible for treating the waste and discharging the treated water. Utilities Director Jeff Dietlin explained that leachate—rainwater and liquid from garbage—was collected in landfill cells, pumped into a tank and hauled to Cadillac's WWTP. Council then unanimously approved motion 2017-232 opposing draft permit MI-165-1I-0002. The associated draft resolution states that Cadillac treated Wexford County Landfill leachate for <strong>over 20 years</strong>, treated and discharged <strong>14 million gallons in 2016</strong>, and had capacity for <strong>up to 20 million gallons annually</strong>. It identifies cadmium, lead, nickel, chromium, arsenic, benzene, ethylbenzene, ammonia, silver, copper and toluene and states that contaminants were removed before discharge under NPDES limits.</>,
+    finding: <>The official minutes record City Manager Marcus Peccia stating that the landfill company deposited leachate at Cadillac&apos;s WWTP, the City was paid to treat it, a deep injection well would take that revenue source away, and Cadillac was responsible for treating the waste and discharging the treated water. Utilities Director Jeff Dietlin explained that leachate—rainwater and liquid from garbage—was collected in landfill cells, pumped into a tank and hauled to Cadillac&apos;s WWTP. Council then unanimously approved motion 2017-232 opposing draft permit MI-165-1I-0002. The associated draft resolution states that Cadillac treated Wexford County Landfill leachate for <strong>over 20 years</strong>, treated and discharged <strong>14 million gallons in 2016</strong>, and had capacity for <strong>up to 20 million gallons annually</strong>. It identifies cadmium, lead, nickel, chromium, arsenic, benzene, ethylbenzene, ammonia, silver, copper and toluene and states that contaminants were removed before discharge under NPDES limits.</>,
     significance: "This is direct municipal evidence of the landfill-to-WWTP receiving and paid-treatment relationship, the treatment-and-discharge pathway, and the Council's recorded action. The volume, duration, capacity and removal statements are City assertions in an unsigned draft resolution, not the underlying delivery logs, DMR totals, capacity calculations, analytical results or contaminant-removal measurements. The record does not provide the exact final delivery date, PFAS concentrations or a proven groundwater migration pathway.",
     sources: [{
       name: "November 20, 2017 Cadillac City Council Meeting Minutes.pdf",
@@ -1649,7 +1686,7 @@ const events: Event[] = [
     kind: "operation",
     category: "10 / 12 · Process, landfill & leachate",
     title: "Cadillac adopts FY2019 budget with leachate revenue and hauled-waste goals",
-    finding: <>The adopted budget reports leachate revenue of <strong>$447,684</strong> for FY2017 actual, <strong>$350,000</strong> for FY2018 estimated and <strong>$150,000</strong> for FY2019 proposed. The Water Resources Division's fiscal goal includes evaluating new revenue through additional hauled waste. In the same goals section, the division commits to keeping discharges below NPDES permit levels, limiting industrial waste through active monitoring and maintaining Class A EQ biosolids.</>,
+    finding: <>The adopted budget reports leachate revenue of <strong>$447,684</strong> for FY2017 actual, <strong>$350,000</strong> for FY2018 estimated and <strong>$150,000</strong> for FY2019 proposed. The Water Resources Division&apos;s fiscal goal includes evaluating new revenue through additional hauled waste. In the same goals section, the division commits to keeping discharges below NPDES permit levels, limiting industrial waste through active monitoring and maintaining Class A EQ biosolids.</>,
     significance: "The budget separately documents a revenue incentive and pollution-control obligations within the same Water Resources program. Read together, those goals create a policy tension worth tracing, but the budget does not state that the goals conflicted in practice, identify the source or contents of additional hauled waste, establish a permit violation, or replace load-level treatment and delivery records.",
     sources: [{
       name: "City of Cadillac FY2019 Adopted Operating Budget.pdf",

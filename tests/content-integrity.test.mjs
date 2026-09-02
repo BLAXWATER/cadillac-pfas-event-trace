@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 722);
-  assert.equal(externalFiles, 834);
+  assert.equal(localFiles, 725);
+  assert.equal(externalFiles, 832);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -96,6 +96,9 @@ test("every pinned GitHub source resolves to its recorded repository blob", asyn
 
 test("timeline source and preview assets are present", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+  const firstPagePreviewManifest = JSON.parse(
+    await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"),
+  );
   assert.doesNotMatch(source, /Original file not loaded/);
 
   const literalReferences = [...source.matchAll(/(?:url|preview):\s*["'](\/[^"']+)["']/g)].map((match) => match[1]);
@@ -106,6 +109,12 @@ test("timeline source and preview assets are present", async () => {
 
   const helperReferences = [...source.matchAll(/(?:ippSource|archivedSource)\(\s*"[^"]+"\s*,\s*"([^"]+\.pdf)"/gs)].map((match) => match[1]);
   for (const reference of helperReferences) {
+    const manifestPreview = firstPagePreviewManifest[reference];
+    if (manifestPreview) {
+      const target = path.join(publicDirectory, ...manifestPreview.slice(1).split("/"));
+      assert.ok((await stat(target)).size > 0, `missing or empty first-page preview: ${manifestPreview}`);
+      continue;
+    }
     const fileName = new URL(reference, "https://local.invalid").pathname.split("/").pop().replace(/\.pdf$/i, ".jpg");
     const preview = path.join(publicDirectory, "source-previews", fileName);
     assert.ok((await stat(preview)).size > 0, `missing or empty source preview: ${fileName}`);
@@ -124,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 66);
+  assert.equal(helperReferences.length, 68);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -140,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1556);
+  assert.equal(recordCount, 1557);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -181,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1556);
+  assert.equal(records.length, 1557);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -262,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1408);
-  assert.equal(audit.stats.pdfPages, 20078);
+  assert.equal(audit.stats.pdfRecords, 1409);
+  assert.equal(audit.stats.pdfPages, 20125);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -281,14 +290,14 @@ test("compliance archive audit preserves distinct records and excludes verified 
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "compliance-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 115);
-  assert.equal(audit.stats.finalDistinctRecords, 61);
+  assert.equal(audit.stats.sourceFilesReviewed, 116);
+  assert.equal(audit.stats.finalDistinctRecords, 62);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
   assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 6);
   assert.equal(audit.stats.analystAuthoredReportsExcluded, 4);
-  assert.equal(audit.stats.reviewedPages, 721);
+  assert.equal(audit.stats.reviewedPages, 768);
   assert.equal(audit.stats.ocrPages, 308);
   assert.equal(audit.stats.latestAllDocsIntakeFiles, 23);
   assert.equal(audit.stats.latestAllDocsActualDuplicateCopiesSuppressed, 1);
@@ -1872,7 +1881,7 @@ test("batch 39 adds the distinct official November 2017 minutes and preserves un
 
   assert.match(pageSource, /Cadillac records paid landfill leachate treatment and rejects the injection alternative/);
   assert.match(pageSource, /City was paid to treat it/);
-  assert.match(pageSource, /pumped into a tank and hauled to Cadillac's WWTP/);
+  assert.match(pageSource, /pumped into a tank and hauled to Cadillac(?:'|&apos;)s WWTP/);
   assert.match(pageSource, /unanimously approved motion 2017-232/);
   assert.match(pageSource, /volume, duration, capacity and removal statements are City assertions in an unsigned draft resolution/);
   assert.match(pageSource, /not the underlying delivery logs, DMR totals, capacity calculations, analytical results or contaminant-removal measurements/);
@@ -1967,6 +1976,54 @@ test("batch 41 reuses the exact resolution record and preserves the draft-versus
   assert.match(pageSource, /unsigned draft resolution/);
   assert.match(pageSource, /official minutes separately establish unanimous adoption of motion 2017-232/);
   assert.match(audit.evidentiaryBoundary, /resolution number, mover, seconder, vote, adoption date and certification fields are blank/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 42 reuses two exact EPA reports, adds the distinct 2015 QNCR and preserves status boundaries", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch42-epa-qncr-intake-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const catalogRows = catalogs.flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 3);
+  assert.equal(audit.stats.pdfPagesReviewed, 150);
+  assert.equal(audit.stats.embeddedTextPages, 147);
+  assert.equal(audit.stats.imageOnlyArchiveCovers, 3);
+  assert.equal(audit.stats.renderedPagesReviewed, 150);
+  assert.equal(audit.stats.exactExistingRecords, 2);
+  assert.equal(audit.stats.recordsLocalized, 2);
+  assert.equal(audit.stats.recordsAdded, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.timelineSourcesAdded, 2);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  for (const expected of [...audit.reusedRecords, audit.addedRecord]) {
+    const row = catalogRows.find((candidate) => candidate.id === expected.recordId);
+    assert.ok(row, `${expected.recordId} is absent from the catalog`);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.sha256, expected.sha256);
+    assert.equal(row.pages, expected.pages);
+    assert.equal(row.size, expected.size);
+    assert.equal(catalogRows.filter((candidate) => candidate.sha256 === expected.sha256).length, 1);
+
+    const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+    assert.match(bundledSource, new RegExp(expected.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    assert.ok(previewManifest[expected.asset], `${expected.asset} lacks a first-page preview`);
+  }
+
+  assert.match(pageSource, /EPA QNCR lists seven Cadillac ammonia and carbonaceous-BOD violations/);
+  assert.match(pageSource, /seven code 3A1 non-monthly-average permit-effluent violations/);
+  assert.match(pageSource, /October 31, 2014 through March 31, 2015/);
+  assert.match(pageSource, /same underlying DMR violation/);
+  assert.match(pageSource, /role: "Cross-reference"/);
+  assert.match(pageSource, /no linked enforcement action or final order/);
+  assert.match(audit.evidentiaryBoundary, /do not supply measured concentrations, loads, root-cause findings, PFAS results/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

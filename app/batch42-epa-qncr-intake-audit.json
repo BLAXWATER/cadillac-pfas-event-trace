@@ -1,0 +1,85 @@
+{
+  "batch": "2026-09-02 EPA quarterly noncompliance report intake 42",
+  "method": [
+    "Computed SHA-256 hashes and byte sizes for all three supplied PDFs and compared them against every evidence catalog.",
+    "Opened and text-extracted all 150 pages: 147 pages contain embedded text and three image-only EPA archive covers were visually verified as nonblank.",
+    "Rendered all 150 pages at 96 DPI, reviewed nine sequence-preserving contact sheets and inspected each Cadillac-specific page at full resolution.",
+    "Confirmed two supplied files are byte-for-byte matches to established catalog records and suppressed duplicate catalog entries.",
+    "Localized the two previously remote canonical records and retained the distinct January–March 2015 report so public users can preview and download without a GitHub account.",
+    "Separated the later 2014 carry-forward status from the distinct 2015 effluent-violation entries and preserved the evidentiary limits shown in the reports."
+  ],
+  "stats": {
+    "receivedFiles": 3,
+    "pdfPagesReviewed": 150,
+    "embeddedTextPages": 147,
+    "imageOnlyArchiveCovers": 3,
+    "renderedPagesReviewed": 150,
+    "exactExistingRecords": 2,
+    "recordsLocalized": 2,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 1,
+    "timelineSourcesAdded": 2,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "suppliedFiles": [
+    {
+      "name": "EPA report covering January–March 2014.pdf",
+      "sha256": "2ee7fa5b072b503ab56afa700e4f5e4c2a3b80992c3e8b957e2d4aa485ce7040",
+      "size": 237535,
+      "pages": 50,
+      "disposition": "Exact match to supplemental record 003; canonical asset localized and reused."
+    },
+    {
+      "name": "EPA report covering January–March 2015.pdf",
+      "sha256": "4c293cc26b89a0cc8ea429eb90534721a7297f6142d8ed8eddf6a03961933304",
+      "size": 162212,
+      "pages": 47,
+      "disposition": "Distinct report retained once as compliance record 062 and linked to a new timeline event."
+    },
+    {
+      "name": "EPA report covering April–June 2014 -mi3qtr14.pdf",
+      "sha256": "2bd8171670746e08cd124a3c8c7e1bfd1fa9c43022d43ef5c83900ef062ea06d",
+      "size": 249826,
+      "pages": 53,
+      "disposition": "Exact match to compliance record 021; canonical asset localized and linked as a carry-forward cross-reference."
+    }
+  ],
+  "reusedRecords": [
+    {
+      "recordId": "003-2ee7fa5b072b",
+      "asset": "/findings-docs/002-2ee7fa5b072b.pdf",
+      "sha256": "2ee7fa5b072b503ab56afa700e4f5e4c2a3b80992c3e8b957e2d4aa485ce7040",
+      "pages": 50,
+      "size": 237535
+    },
+    {
+      "recordId": "021-2bd817167074",
+      "asset": "/compliance-docs/021-2bd817167074.pdf",
+      "sha256": "2bd8171670746e08cd124a3c8c7e1bfd1fa9c43022d43ef5c83900ef062ea06d",
+      "pages": 53,
+      "size": 249826
+    }
+  ],
+  "addedRecord": {
+    "recordId": "062-4c293cc26b89",
+    "asset": "/compliance-docs/062-4c293cc26b89.pdf",
+    "canonicalName": "2015-01-01 to 2015-03-31 - EPA ICIS Michigan Quarterly Non-Compliance Report.pdf",
+    "sha256": "4c293cc26b89a0cc8ea429eb90534721a7297f6142d8ed8eddf6a03961933304",
+    "size": 162212,
+    "pages": 47
+  },
+  "verifiedFindings": [
+    "The January–March 2014 report's Cadillac row records an outfall 001 DMR overdue to EPA/State, underlying violation date December 31, 2013, status date February 20, 2014 and code 2D reporting violation.",
+    "The April–June 2014 report carries the same December 31, 2013 DMR reporting violation forward as continuing noncompliance in its September 13, 2014 data run; it is not a new violation entry.",
+    "The January–March 2015 report lists seven code 3A1 non-monthly-average permit-effluent violations for total ammonia as nitrogen and carbonaceous BOD at outfall 001-A, with violation dates from October 31, 2014 through March 31, 2015.",
+    "The displayed Cadillac rows show no linked enforcement action or final order."
+  ],
+  "evidentiaryBoundary": "The reports are EPA ICIS quarterly status records. The relevant rows do not supply measured concentrations, loads, root-cause findings, PFAS results or independent proof of offsite impact. The 2014 entries concern one carried-forward reporting violation; the 2015 entries are separately identified permit-effluent violations.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The reports add federal compliance-status evidence but do not supply the receiving-history, PFAS time series, complete receptor work order, certified well construction, water-level, hydraulic-test or source-to-receptor evidence requested by the remaining queue."
+  }
+}

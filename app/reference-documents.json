@@ -1426,6 +1426,63 @@
     "description": "USGS export for station 04121241, Clam River at Plett Road, containing one monitoring-location row and ten approved field and channel-measurement rows. The ten discrete discharge observations span June 11, 1975 through September 11, 2001 and range from 6.24 to 57.6 cubic feet per second. This sparse surface-water series is hydrologic context; it is not continuous monitoring, groundwater-gradient evidence or a PFAS result."
   },
   {
+    "id": "123-9f1ffc274f7f",
+    "name": "channel-measurements.csv",
+    "url": "/reference-data/123-9f1ffc274f7f.csv",
+    "format": "CSV",
+    "type": "Official USGS channel-measurement table",
+    "size": 3816,
+    "rows": 10,
+    "columns": 28,
+    "sheets": null,
+    "sha256": "9f1ffc274f7fc9e806155a2f9084fbf3d171dfff8a2e3ba509db1637da6737bf",
+    "description": "Exact channel-measurements.csv member of the preserved USGS station 04121241 export. It contains ten channel-measurement rows at the Clam River at Plett Road, including measurement number, observation time, discharge and units. The observations span June 11, 1975 through September 11, 2001; this is a discrete surface-water series, not continuous monitoring, a PFAS result or groundwater-pathway evidence.",
+    "matchingSources": [
+      {
+        "name": "USGS 04121241 Clam River at Plett Road Flow Data.zip",
+        "relationship": "Exact member of preserved source package"
+      }
+    ]
+  },
+  {
+    "id": "124-560341e4477c",
+    "name": "field-measurements.csv",
+    "url": "/reference-data/124-560341e4477c.csv",
+    "format": "CSV",
+    "type": "Official USGS field-measurement table",
+    "size": 3055,
+    "rows": 10,
+    "columns": 23,
+    "sheets": null,
+    "sha256": "560341e4477c0ce4632a710aca270e312d55f554cdfb2cfbc3682982caac0756",
+    "description": "Exact field-measurements.csv member of the preserved USGS station 04121241 export. All ten discharge rows are marked Approved by USGS and report values from 6.24 to 57.6 cubic feet per second between June 11, 1975 and September 11, 2001. The table documents field visits only; it does not establish continuous flow, PFAS conditions or groundwater direction.",
+    "matchingSources": [
+      {
+        "name": "USGS 04121241 Clam River at Plett Road Flow Data.zip",
+        "relationship": "Exact member of preserved source package"
+      }
+    ]
+  },
+  {
+    "id": "125-ffca040a7195",
+    "name": "monitoring-location-metadata.csv",
+    "url": "/reference-data/125-ffca040a7195.csv",
+    "format": "CSV",
+    "type": "Official USGS monitoring-location metadata",
+    "size": 1143,
+    "rows": 1,
+    "columns": 45,
+    "sheets": null,
+    "sha256": "ffca040a71951054e5842d8c9a47d6649d6d34485ebea5c78e271fb29b58f952",
+    "description": "Exact monitoring-location-metadata.csv member of the preserved USGS export. Its single row identifies station USGS-04121241 as CLAM RIVER AT PLETT ROAD AT CADILLAC, MI, site type Stream, in Wexford County, with map-interpolated NAD27 coordinates. It supplies station identity and location context, not a contaminant result or groundwater-flow determination.",
+    "matchingSources": [
+      {
+        "name": "USGS 04121241 Clam River at Plett Road Flow Data.zip",
+        "relationship": "Exact member of preserved source package"
+      }
+    ]
+  },
+  {
     "id": "119-ceebd83a93ce",
     "name": "MDOT Contract 83609-108868 Bid Tabulation.txt",
     "url": "/reference-data/119-ceebd83a93ce.txt",

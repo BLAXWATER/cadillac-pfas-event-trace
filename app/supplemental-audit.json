@@ -1,11 +1,18 @@
 {
   "stats": {
-    "suppliedFiles": 729,
+    "suppliedFiles": 732,
     "newDistinctRecords": 162,
     "exactExistingRecordsReused": 158,
     "duplicateCopiesSuppressed": 42,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 467762161,
+    "publishedBytes": 467770175,
+    "latestBatch38FilesReviewed": 3,
+    "latestBatch38CsvRowsReviewed": 21,
+    "latestBatch38ExactArchiveMembers": 3,
+    "latestBatch38RecordsAdded": 3,
+    "latestBatch38TimelineEventsAdded": 0,
+    "latestBatch38TimelineSourcesAdded": 3,
+    "latestBatch38RequirementsClosed": 0,
     "latestBatch37FilesReviewed": 1,
     "latestBatch37PdfPagesReviewed": 26,
     "latestBatch37ExactExistingRecords": 1,
@@ -210,9 +217,14 @@
     "August 31 leftovers intake 14: all 19 supplied PDFs and 690 pages passed hash, byte-size, page-count, source-binary and rendered-page checks. Eighteen files exactly match established NPDES records. The one image-only unmatched file was cross-checked against the archive classification indexes and retained once as secondary 1140 Plett Road property-measurement context. No document begins with a blank page.",
     "September 1 Plett infrastructure intake: 15 supplied files resolved to 14 distinct hashes. Seven PDF instances totaling 47 pages were opened; every first page was nonblank and the three distinct added PDFs were rendered in full. The Wellogic ZIP passed its internal archive test, all 13 attached files named in the supplied checksum manifest matched, and the four GeoJSON files were parsed before retention.",
     "September 1 AOI excerpt intake: all seven supplied PNGs were opened, dimension-checked and SHA-256 hashed. Six address-table images matched specific rendered pages in the complete MPART comparability report, and the annotated 13th-and-Plett image matched the official AECOM Figure 3 base map. The canonical report and map set were reused instead of publishing cropped or annotated copies.",
-    "September 1 AOI multi-agency packet recheck: the supplied 24-page PDF exactly matches the established 1140 Plett source packet. All pages were rendered and reviewed; the packet was linked to the AOI event under an accurate EGLE, Merit and Cyclopure multi-agency testing label without adding another catalog copy or closing an unsupported evidence requirement."
+    "September 1 AOI multi-agency packet recheck: the supplied 24-page PDF exactly matches the established 1140 Plett source packet. All pages were rendered and reviewed; the packet was linked to the AOI event under an accurate EGLE, Merit and Cyclopure multi-agency testing label without adding another catalog copy or closing an unsupported evidence requirement.",
+    "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "September 1 USGS 04121241 Clam River discharge tables",
+      "reason": "The three supplied CSVs are exact members of the established USGS ZIP package. They are exposed as individual searchable and downloadable table records for station identity, field measurements and channel measurements while the ZIP remains the canonical preserved package. The tables document ten approved discrete surface-water discharge observations, not continuous flow, PFAS results, groundwater direction or a contaminant pathway."
+    },
     {
       "name": "September 1 EGLE AOI multi-agency testing packet",
       "reason": "The supplied PDF exactly matches the established 24-page 1140 Plett source packet. It contains a side-by-side results summary, selected EGLE Work Order 2509147 pages, Merit reports, Cyclopure reports and an EGLE transmittal letter. The packet is now linked directly to the AOI event, but the evidence queue remains open for the complete 49-page work order and chain-of-custody forms."

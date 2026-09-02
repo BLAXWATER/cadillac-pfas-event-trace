@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 717);
+  assert.equal(localFiles, 720);
   assert.equal(externalFiles, 834);
 });
 
@@ -140,7 +140,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1551);
+  assert.equal(recordCount, 1554);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -181,7 +181,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1551);
+  assert.equal(records.length, 1554);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -1797,6 +1797,45 @@ test("batch 37 reuses and localizes the exact EGLE complete-results record witho
   assert.ok(previewManifest[audit.reusedRecord.asset]);
   assert.match(pageSource, /EGLE compiles multi-round Cadillac-area PFAS results/);
   assert.match(pageSource, /does not identify which address is Plett Road, close an evidence request or prove a migration pathway/);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 38 exposes the three exact USGS ZIP members without duplicating the discharge event", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch38-usgs-plett-discharge-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 3);
+  assert.equal(audit.stats.distinctInputHashes, 3);
+  assert.equal(audit.stats.csvRowsReviewed, 21);
+  assert.equal(audit.stats.exactExistingArchiveMembers, 3);
+  assert.equal(audit.stats.recordsAdded, 3);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.timelineSourcesAdded, 3);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+
+  const canonicalPackage = catalogRows.find((row) => row.id === audit.canonicalPackage.recordId);
+  assert.ok(canonicalPackage);
+  assert.equal(canonicalPackage.sha256, audit.canonicalPackage.sha256);
+
+  for (const added of audit.addedRecords) {
+    const record = catalogRows.find((row) => row.id === added.recordId);
+    assert.ok(record);
+    assert.equal(record.url, added.asset);
+    assert.equal(record.sha256, added.sha256);
+    assert.equal(record.rows, added.rows);
+    assert.equal(record.columns, added.columns);
+    assert.equal(record.matchingSources?.[0]?.relationship, "Exact member of preserved source package");
+    const source = await readFile(path.join(publicDirectory, added.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(source).digest("hex"), added.sha256);
+    assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    assert.match(pageSource, new RegExp(added.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.equal((pageSource.match(/title: "USGS measures Clam River discharge at Plett Road"/g) ?? []).length, 1);
+  assert.match(pageSource, /ten approved discrete discharge measurements/i);
+  assert.match(pageSource, /not continuous monitoring/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

@@ -1,6 +1,6 @@
 {
   "auditDate": "2026-09-01",
-  "catalogRecordsReviewed": 1551,
+  "catalogRecordsReviewed": 1554,
   "priorCards": 6,
   "activeUniqueBlocks": 5,
   "activeRequirements": 22,
@@ -13,7 +13,8 @@
     "Removed the local boring, lithology and well-construction request after verifying the official EGLE Wexford County Wellogic package: 9,273 well records, 42,844 linked lithology rows and 45 wells with linked lithology within 1,000 meters of the geocoded 1121 Plett point.",
     "Reconciled six supplied AOI address-table screenshots to pages in the complete MPART comparability report and one annotated Plett heat-map image to the official AECOM map set. These strengthen receptor/AOI context but close no requirement because the report says the study was not intended as a PFAS source investigation.",
     "Rechecked the 24-page 1140 Plett source packet and linked it directly to the AOI event as multi-agency testing by EGLE, Merit and Cyclopure. The packet preserves repeated results and collection times but does not close a queue requirement because it lacks chain-of-custody forms and 25 pages of EGLE Work Order 2509147.",
-    "Reconciled the supplied 26-page EGLE Complete Results PDF to the exact existing A13 compilation by SHA-256. The canonical record is now hosted locally with its full download and first-page preview, and a conservative timeline event links the address and LDFA result rounds. No request closes because the address labels are anonymized and the compilation lacks the coordinate crosswalk, COCs and synchronized source-to-receptor field package."
+    "Reconciled the supplied 26-page EGLE Complete Results PDF to the exact existing A13 compilation by SHA-256. The canonical record is now hosted locally with its full download and first-page preview, and a conservative timeline event links the address and LDFA result rounds. No request closes because the address labels are anonymized and the compilation lacks the coordinate crosswalk, COCs and synchronized source-to-receptor field package.",
+    "Verified the three supplied USGS station 04121241 CSVs as exact members of the established Clam River at Plett Road ZIP export and exposed each table for direct review. No request closes because the ten discrete surface-water discharge observations contain no PFAS results, groundwater gradient, hydraulic tests, receptor field/QC package or delivery history."
   ],
   "heldEvidence": {
     "receivingHistory": [
@@ -51,6 +52,7 @@
     "The Wellogic package satisfies the local well-construction and lithology request but does not supply the certified 1140 Plett completion record, surveyed synoptic water levels, hydraulic tests or a site-specific groundwater-flow map.",
     "Evidence intake manifests and not-yet-recovered inventories are tracking records; their descriptions cannot satisfy the evidence requests they enumerate.",
     "The AOI address-table screenshots and annotated heat map do not satisfy the source-to-receptor confirmation request: they do not provide a site-specific gradient, an explicit upgradient/cross-gradient/downgradient transect, synchronized candidate-source samples, a coordinate-to-sample-ID table or the matching field/QC package.",
-    "The 26-page EGLE Complete Results compilation preserves address and LDFA analytical tables but does not identify the anonymized addresses by coordinates, supply COCs or align a synchronized Plett/source transect; it therefore strengthens context without closing a receptor or pathway requirement."
+    "The 26-page EGLE Complete Results compilation preserves address and LDFA analytical tables but does not identify the anonymized addresses by coordinates, supply COCs or align a synchronized Plett/source transect; it therefore strengthens context without closing a receptor or pathway requirement.",
+    "The USGS station 04121241 CSV tables document ten discrete Clam River surface-water discharge observations and station metadata; they do not satisfy requests for site-specific groundwater gradients, hydraulic testing, synchronized PFAS sampling or source-to-receptor confirmation."
   ]
 }

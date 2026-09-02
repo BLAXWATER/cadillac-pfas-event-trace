@@ -63,6 +63,9 @@ test("renders stable site metadata and source policy", async () => {
   assert.equal((html.match(/class="trace-row"/gi) ?? []).length, 93);
   assert.match(html, /EGLE compiles multi-round Cadillac-area PFAS results/i);
   assert.match(html, /USGS measures Clam River discharge at Plett Road/i);
+  assert.match(html, /field-measurements\.csv/i);
+  assert.match(html, /channel-measurements\.csv/i);
+  assert.match(html, /monitoring-location-metadata\.csv/i);
   assert.match(html, /class="source-thumbnail\s+source-thumbnail--(?:pdf|html|image|spreadsheet|office|archive|other)"/i);
   for (const sourcePath of ["/findings-docs/008-5b67e1ed1d5c.pdf", "/npdes-docs/076-a611a75485cf.pdf"]) {
     const previewName = path.basename(firstPagePreviewManifest[sourcePath], ".webp");

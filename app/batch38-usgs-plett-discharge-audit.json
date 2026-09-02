@@ -1,0 +1,67 @@
+{
+  "batch": "2026-09-01 USGS Plett Road discharge tables reconciliation 38",
+  "method": [
+    "Computed SHA-256 hashes, byte sizes, row counts and column counts for all three supplied CSV files.",
+    "Parsed every row and confirmed that all ten field-measurement records identify station USGS-04121241, parameter 00060, cubic-feet-per-second units and USGS approval status.",
+    "Compared each supplied file byte-for-byte with the members of the established USGS 04121241 ZIP package and confirmed three exact archive-member matches.",
+    "Preserved the original ZIP as the canonical package while exposing its three exact CSV members as individually searchable and downloadable records.",
+    "Linked the three tables to the existing Clam River discharge event and rechecked every open evidence requirement without changing the event date or overstating the dataset."
+  ],
+  "stats": {
+    "receivedFiles": 3,
+    "distinctInputHashes": 3,
+    "csvRowsReviewed": 21,
+    "exactExistingArchiveMembers": 3,
+    "recordsAdded": 3,
+    "timelineEventsAdded": 0,
+    "timelineSourcesAdded": 3,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "parseFailures": 0
+  },
+  "canonicalPackage": {
+    "recordId": "118-2e333d1adab3",
+    "asset": "/reference-data/118-2e333d1adab3.zip",
+    "sha256": "2e333d1adab3a197e0a207353c6d4431c2db41c1b641ac21d7ca2ab7613d659b",
+    "size": 8468
+  },
+  "addedRecords": [
+    {
+      "recordId": "123-9f1ffc274f7f",
+      "asset": "/reference-data/123-9f1ffc274f7f.csv",
+      "name": "channel-measurements.csv",
+      "sha256": "9f1ffc274f7fc9e806155a2f9084fbf3d171dfff8a2e3ba509db1637da6737bf",
+      "size": 3816,
+      "rows": 10,
+      "columns": 28
+    },
+    {
+      "recordId": "124-560341e4477c",
+      "asset": "/reference-data/124-560341e4477c.csv",
+      "name": "field-measurements.csv",
+      "sha256": "560341e4477c0ce4632a710aca270e312d55f554cdfb2cfbc3682982caac0756",
+      "size": 3055,
+      "rows": 10,
+      "columns": 23
+    },
+    {
+      "recordId": "125-ffca040a7195",
+      "asset": "/reference-data/125-ffca040a7195.csv",
+      "name": "monitoring-location-metadata.csv",
+      "sha256": "ffca040a71951054e5842d8c9a47d6649d6d34485ebea5c78e271fb29b58f952",
+      "size": 1143,
+      "rows": 1,
+      "columns": 45
+    }
+  ],
+  "qualityFindings": [
+    "The monitoring-location row identifies station 04121241 as CLAM RIVER AT PLETT ROAD AT CADILLAC, MI and site type Stream.",
+    "The ten approved discrete discharge observations span June 11, 1975 through September 11, 2001 and range from 6.24 to 57.6 cubic feet per second.",
+    "The latest approved observation is 7.43 cubic feet per second on September 11, 2001.",
+    "The observations are sparse field visits rather than continuous monitoring, and the tables contain no PFAS results or groundwater-gradient measurements."
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "No request is closed. The three tables strengthen surface-water hydrology and station-location context, but they do not supply a site-specific potentiometric map, synchronized PFAS transect, groundwater hydraulic tests, receptor chain-of-custody records or leachate-delivery history."
+  }
+}

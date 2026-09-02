@@ -18,15 +18,23 @@ if [[ ! -x "${vinext}" ]]; then
   exit 69
 fi
 
+run_node_script() {
+  local script="$1"
+  if command -v node >/dev/null 2>&1; then
+    node "${SITES_PROJECT_ROOT}/${script}"
+  elif command -v node.exe >/dev/null 2>&1; then
+    node.exe "${script}"
+  else
+    echo "A Node.js executable is required for document integrity verification." >&2
+    exit 69
+  fi
+}
+
 echo "Verifying every document catalog entry and delivery path..."
-if command -v node >/dev/null 2>&1; then
-  node "${SITES_PROJECT_ROOT}/scripts/document-download-integrity.mjs"
-elif command -v node.exe >/dev/null 2>&1; then
-  node.exe "scripts/document-download-integrity.mjs"
-else
-  echo "A Node.js executable is required for document integrity verification." >&2
-  exit 69
-fi
+run_node_script "scripts/document-download-integrity.mjs"
+
+echo "Verifying every public archive download without authentication..."
+run_node_script "scripts/verify-anonymous-downloads.mjs"
 
 echo "Running bounded vinext build..."
 timeout \

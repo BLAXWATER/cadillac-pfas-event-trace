@@ -44,6 +44,11 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/pfas-docs/082-18e25560cde6.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/pfas-docs/055-ae1a7fc25cfe.pdf", {
     eager: true,
     import: "default",

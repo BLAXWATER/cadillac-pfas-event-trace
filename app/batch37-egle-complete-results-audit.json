@@ -1,0 +1,43 @@
+{
+  "batch": "2026-09-01 EGLE complete-results reconciliation 37",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared the hash with every evidence catalog.",
+    "Extracted embedded text from all 26 pages and rendered every page for visual review.",
+    "Matched the supplied binary exactly to established PFAS record 082-18e25560cde6, formerly labeled A13 - Complete Test Results.pdf.",
+    "Reused the established record rather than creating a duplicate, localized the complete PDF for the site reader and download action, and added a first-page preview.",
+    "Added one conservative timeline event covering only the printed address and LDFA analytical tables, then rechecked every open evidence requirement."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 26,
+    "embeddedTextPages": 26,
+    "exactExistingRecords": 1,
+    "recordsAdded": 0,
+    "recordsLocalized": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "reusedRecord": {
+    "recordId": "082-18e25560cde6",
+    "asset": "/pfas-docs/082-18e25560cde6.pdf",
+    "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
+    "pages": 26,
+    "size": 221882,
+    "priorName": "A13 - Complete Test Results.pdf",
+    "canonicalName": "EGLE - Complete Results.pdf"
+  },
+  "qualityFindings": [
+    "The first page is populated; no blank-page omission is required.",
+    "Pages 1-8 preserve EGLE Cadillac Industrial Park address-result rounds collected from October 30, 2024 through February 7, 2025, including field-blank notes and highlighted drinking-water-criteria exceedances.",
+    "Pages 22-26 preserve City of Cadillac LDFA Special Investigation results for plant effluent, I-5, S-series and I-series samples.",
+    "The address labels are anonymized and the PDF contains no coordinate crosswalk or chain-of-custody package tying each address to a named property."
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "No request is closed. The compilation adds consolidated analytical context, but it is not EGLE Work Order 2509147, does not provide Plett-specific COCs, does not identify each anonymized address by coordinates and does not supply a synchronized source-to-receptor field/QC package."
+  }
+}

@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 716);
-  assert.equal(externalFiles, 835);
+  assert.equal(localFiles, 717);
+  assert.equal(externalFiles, 834);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -124,7 +124,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 65);
+  assert.equal(helperReferences.length, 66);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -1764,6 +1764,39 @@ test("batch 36 adds the distinct August 2025 LDFA minutes without overstating pl
   assert.ok(previewManifest[audit.addedRecord.asset]);
   assert.match(pageSource, /LDFA authorizes PFAS pilot testing and seeks an updated well plan/);
   assert.match(pageSource, /do not close an evidence request or prove a pathway/);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 37 reuses and localizes the exact EGLE complete-results record without closing unsupported requests", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch37-egle-complete-results-audit.json"), "utf8"));
+  const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 26);
+  assert.equal(audit.stats.embeddedTextPages, 26);
+  assert.equal(audit.stats.exactExistingRecords, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.recordsLocalized, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+
+  const reused = catalogRows.find((row) => row.id === audit.reusedRecord.recordId);
+  assert.ok(reused);
+  assert.equal(reused.name, audit.reusedRecord.canonicalName);
+  assert.equal(reused.url, audit.reusedRecord.asset);
+  assert.equal(reused.sha256, audit.reusedRecord.sha256);
+  assert.equal(reused.pages, audit.reusedRecord.pages);
+  assert.equal(reused.size, audit.reusedRecord.size);
+  assert.equal(reused.matchingSources?.[0]?.relationship, "Exact record(s) reused as cross reference(s)");
+  const source = await readFile(path.join(publicDirectory, audit.reusedRecord.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(source).digest("hex"), audit.reusedRecord.sha256);
+  assert.match(bundledSource, new RegExp(audit.reusedRecord.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  assert.ok(previewManifest[audit.reusedRecord.asset]);
+  assert.match(pageSource, /EGLE compiles multi-round Cadillac-area PFAS results/);
+  assert.match(pageSource, /does not identify which address is Plett Road, close an evidence request or prove a migration pathway/);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

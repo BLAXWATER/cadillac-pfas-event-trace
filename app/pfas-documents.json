@@ -1056,8 +1056,8 @@
   },
   {
     "id": "082-18e25560cde6",
-    "name": "A13 - Complete Test Results.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/082-18e25560cde6.pdf",
+    "name": "EGLE - Complete Results.pdf",
+    "url": "/pfas-docs/082-18e25560cde6.pdf",
     "year": "2025",
     "category": "PFAS monitoring",
     "type": "PFAS results compilation",
@@ -1065,7 +1065,13 @@
     "pages": 26,
     "size": 221882,
     "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
-    "description": "Twenty-six-page printable compilation of the supplied Cadillac-area PFAS test-result tables. It is retained separately from the workbook because it is the complete fixed-layout record distributed with the A12-A24 source set."
+    "description": "Twenty-six-page EGLE compilation of Cadillac Industrial Park address results and LDFA special-investigation tables. It preserves sample IDs and collection dates for address rounds from October 30, 2024 through February 7, 2025, plus plant-effluent, I-5, S-series and I-series results. Address labels are anonymized and the compilation does not include the coordinate-to-sample crosswalk or chain-of-custody package needed to prove a source-to-receptor pathway.",
+    "matchingSources": [
+      {
+        "name": "A13 - Complete Test Results.pdf",
+        "relationship": "Exact record(s) reused as cross reference(s)"
+      }
+    ]
   },
   {
     "id": "083-3cf0ceaa3602",

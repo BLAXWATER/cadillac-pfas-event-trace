@@ -56,10 +56,20 @@ function rawRepositoryUrl(url: string, keepFragment: boolean): string {
   const fragmentIndex = url.indexOf("#");
   const base = fragmentIndex >= 0 ? url.slice(0, fragmentIndex) : url;
   const fragment = fragmentIndex >= 0 ? url.slice(fragmentIndex) : "";
-  const rawBase = base.replace(
-    /^(https:\/\/github\.com\/BLAXWATER\/cadillac-pfas-event-trace\/)blob\//i,
-    "$1raw/",
-  );
+  let rawBase = base;
+
+  try {
+    const parsed = new URL(base);
+    const githubPath = parsed.pathname.match(
+      /^\/(?:cazey43|BLAXWATER)\/cadillac-pfas-event-trace\/(?:blob|raw)\/([0-9a-f]{40})\/(.+)$/i,
+    );
+    if (parsed.hostname.toLowerCase() === "github.com" && githubPath) {
+      rawBase =
+        `https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/${githubPath[1].toLowerCase()}/${githubPath[2]}`;
+    }
+  } catch {
+    // Relative public assets stay relative so Sites can serve bundled files.
+  }
 
   return `${rawBase}${keepFragment ? fragment : ""}`;
 }

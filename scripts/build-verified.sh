@@ -18,6 +18,16 @@ if [[ ! -x "${vinext}" ]]; then
   exit 69
 fi
 
+echo "Verifying every document catalog entry and delivery path..."
+if command -v node >/dev/null 2>&1; then
+  node "${SITES_PROJECT_ROOT}/scripts/document-download-integrity.mjs"
+elif command -v node.exe >/dev/null 2>&1; then
+  node.exe "scripts/document-download-integrity.mjs"
+else
+  echo "A Node.js executable is required for document integrity verification." >&2
+  exit 69
+fi
+
 echo "Running bounded vinext build..."
 timeout \
   --signal=TERM \

@@ -138,8 +138,9 @@ test("uses independent media handlers for document and image formats", async () 
   assert.equal(sourceDocumentUrl("/evidence/report.docx", "DOCX", () => "wrong"), `${repositoryAssetBase}/evidence/report.docx`);
   assert.equal(sourceDocumentUrl("/evidence/report.pdf", "PDF", (url) => `${url}#page=2`), "/evidence/report.pdf#page=2");
   assert.equal(sourceDocumentUrl("https://example.org/page.html", "HTML", () => "wrong"), "https://example.org/page.html");
-  assert.equal(sourceInlineUrl(pinnedPdf, "PDF", (url) => `${url}#page=2&view=FitH`), pinnedPdf.replace("/blob/", "/raw/") + "#page=2&view=FitH");
-  assert.equal(sourceDownloadUrl(pinnedPdf, "PDF", (url) => `${url}#page=2`), pinnedPdf.replace("/blob/", "/raw/"));
+  const rawPinnedPdf = "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/006-d8496c7348a6.pdf";
+  assert.equal(sourceInlineUrl(pinnedPdf, "PDF", (url) => `${url}#page=2&view=FitH`), `${rawPinnedPdf}#page=2&view=FitH`);
+  assert.equal(sourceDownloadUrl(pinnedPdf, "PDF", (url) => `${url}#page=2`), rawPinnedPdf);
 });
 
 test("opens document records in the reader and exposes a dedicated download action", async () => {

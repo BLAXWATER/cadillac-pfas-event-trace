@@ -36,6 +36,9 @@ run_node_script "scripts/document-download-integrity.mjs"
 echo "Verifying every public archive download without authentication..."
 run_node_script "scripts/verify-anonymous-downloads.mjs"
 
+echo "Verifying every record is assigned to its intended visible archive block..."
+run_node_script "scripts/record-placement-integrity.mjs"
+
 echo "Running bounded vinext build..."
 timeout \
   --signal=TERM \

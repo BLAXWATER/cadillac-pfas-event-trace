@@ -1,0 +1,15 @@
+[
+  { "archiveId": "dmr", "label": "DMR & QA", "catalog": "dmr-documents.json", "sectionId": "document-library-title", "renderCollection": "filteredDocuments", "pathPrefixes": ["dmr-docs"] },
+  { "archiveId": "npdes", "label": "NPDES permits", "catalog": "npdes-documents.json", "sectionId": "permit-library-title", "renderCollection": "filteredPermitDocuments", "pathPrefixes": ["npdes-docs"] },
+  { "archiveId": "ipp", "label": "Industrial pretreatment", "catalog": "ipp-documents.json", "sectionId": "ipp-library-title", "renderCollection": "filteredIppDocuments", "pathPrefixes": ["ipp-docs"] },
+  { "archiveId": "pfas", "label": "PFAS monitoring", "catalog": "pfas-documents.json", "sectionId": "pfas-library-title", "renderCollection": "filteredPfasDocuments", "pathPrefixes": ["pfas-docs"] },
+  { "archiveId": "biosolids", "label": "Biosolids & land application", "catalog": "biosolids-documents.json", "sectionId": "biosolids-library-title", "renderCollection": "filteredBiosolidsDocuments", "pathPrefixes": ["biosolids-docs"] },
+  { "archiveId": "lab", "label": "Lab results & sampling", "catalog": "lab-documents.json", "sectionId": "lab-library-title", "renderCollection": "filteredLabDocuments", "pathPrefixes": ["lab-docs"] },
+  { "archiveId": "wexford", "label": "Wexford landfill", "catalog": "wexford-documents.json", "sectionId": "wexford-library-title", "renderCollection": "filteredWexfordDocuments", "pathPrefixes": ["wexford-docs"] },
+  { "archiveId": "compliance", "label": "Compliance & enforcement", "catalog": "compliance-documents.json", "sectionId": "compliance-library-title", "renderCollection": "filteredComplianceDocuments", "pathPrefixes": ["compliance-docs"] },
+  { "archiveId": "correspondence", "label": "Correspondence & letters", "catalog": "correspondence-documents.json", "sectionId": "correspondence-library-title", "renderCollection": "filteredCorrespondenceDocuments", "pathPrefixes": ["correspondence-docs"] },
+  { "archiveId": "process-site", "label": "Process & site documents", "catalog": "process-site-documents.json", "sectionId": "process-site-library-title", "renderCollection": "filteredProcessSiteDocuments", "pathPrefixes": ["process-site-docs"] },
+  { "archiveId": "form-submissions", "label": "Online form submissions", "catalog": "form-submission-documents.json", "sectionId": "form-submission-library-title", "renderCollection": "filteredFormSubmissionDocuments", "pathPrefixes": ["form-submission-docs", "docs"] },
+  { "archiveId": "supplemental", "label": "Added evidence", "catalog": "supplemental-documents.json", "sectionId": "supplemental-library-title", "renderCollection": "filteredSupplementalDocuments", "pathPrefixes": ["findings-docs"] },
+  { "archiveId": "reference", "label": "Reference data", "catalog": "reference-documents.json", "sectionId": "reference-library-title", "renderCollection": "filteredReferenceDocuments", "pathPrefixes": ["reference-data"] }
+]

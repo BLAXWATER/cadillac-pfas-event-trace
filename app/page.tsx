@@ -2694,7 +2694,7 @@ export default function Home() {
           })}
         </section>
 
-        <section className="document-library" aria-labelledby="document-library-title">
+        <section className="document-library" data-archive-id="dmr" aria-labelledby="document-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">DISCHARGE MONITORING ARCHIVE</p><h2 id="document-library-title">Search {dmrDocuments.length} DMR and QA records</h2></div>
             <p>The supplied Cadillac WWTP collection is preserved here as downloadable source files. Original filenames remain visible for provenance, while only confirmed content duplicates are suppressed.</p>
@@ -2713,7 +2713,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
@@ -2723,7 +2723,7 @@ export default function Home() {
           {filteredDocuments.length === 0 && <p className="document-empty">No documents match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="permit-library-title">
+        <section className="document-library permit-library" data-archive-id="npdes" aria-labelledby="permit-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 02 · NPDES PERMITS &amp; PERMIT ISSUANCE</p><h2 id="permit-library-title">Search {npdesDocuments.length} verified permit records</h2></div>
             <p>Applications, draft and final permits, WQBEL reviews, public notices, certifications, correspondence and original email-message files are preserved here. Only records proven equivalent by content and rendering are suppressed.</p>
@@ -2747,7 +2747,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredPermitDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View MSG"} open={setSelected} />
@@ -2757,7 +2757,7 @@ export default function Home() {
           {filteredPermitDocuments.length === 0 && <p className="document-empty">No permit records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="ipp-library-title">
+        <section className="document-library permit-library" data-archive-id="ipp" aria-labelledby="ipp-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 04 · INDUSTRIAL PRETREATMENT &amp; SIU RECORDS</p><h2 id="ipp-library-title">Search {ippDocuments.length} verified IPP records</h2></div>
             <p>The verified archive now spans annual IPP reports, SNC notices, industrial-user records, POTW monitoring and oversight tables, SIU/CIU inventories, MAHL/local-limit packages, corrective-action correspondence and program revisions. OCR was used only to locate text in scanned pages; reported fields were verified against rendered originals.</p>
@@ -2781,7 +2781,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredIppDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -2792,7 +2792,7 @@ export default function Home() {
           {filteredIppDocuments.length === 0 && <p className="document-empty">No industrial pretreatment records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="pfas-library-title">
+        <section className="document-library permit-library" data-archive-id="pfas" aria-labelledby="pfas-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">PFAS MONITORING · VERIFIED AUGUST 28, 2026</p><h2 id="pfas-library-title">Search {pfasDocuments.length} verified PFAS records</h2></div>
             <p>This category preserves PFAS results workbooks and tables, effluent and biosolids laboratory reports, electronic data deliverables, QA/QC packages, dated maps, agency updates, response plans and clearly labeled contextual records. Related files remain separate when they carry distinct analytical or evidentiary content.</p>
@@ -2816,7 +2816,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredPfasDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -2827,7 +2827,7 @@ export default function Home() {
           {filteredPfasDocuments.length === 0 && <p className="document-empty">No PFAS monitoring records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="biosolids-library-title">
+        <section className="document-library permit-library" data-archive-id="biosolids" aria-labelledby="biosolids-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 05 · BIOSOLIDS &amp; LAND APPLICATION · VERIFIED AUGUST 27, 2026</p><h2 id="biosolids-library-title">Search {biosolidsDocuments.length} verified biosolids records</h2></div>
             <p>This category preserves laboratory packages, land-application sites, as-applied workbooks, certifications, residuals-management-plan records, operational calculations, audit correspondence and field photographs. It also indexes the photographed note reporting an approximately 22,000-gallon biosolids overflow, without inferring migration or impact beyond the source.</p>
@@ -2851,7 +2851,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredBiosolidsDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -2862,7 +2862,7 @@ export default function Home() {
           {filteredBiosolidsDocuments.length === 0 && <p className="document-empty">No biosolids or land-application records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="lab-library-title">
+        <section className="document-library permit-library" data-archive-id="lab" aria-labelledby="lab-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 06 · LAB RESULTS &amp; SAMPLING · VERIFIED AUGUST 27, 2026</p><h2 id="lab-library-title">Search {labDocuments.length} verified laboratory records</h2></div>
             <p>This category preserves analytical reports, whole-effluent-toxicity studies, chain-of-custody and field sheets, exceedance records, method reviews, mercury monitoring, and biosolids or pathogen results. Similar templates remain separate when the monitoring date, sample, analyte, method, revision or reported result differs.</p>
@@ -2886,7 +2886,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredLabDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -2897,7 +2897,7 @@ export default function Home() {
           {filteredLabDocuments.length === 0 && <p className="document-empty">No laboratory or sampling records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="wexford-library-title">
+        <section className="document-library permit-library" data-archive-id="wexford" aria-labelledby="wexford-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 12 · WEXFORD LANDFILL &amp; RULE 2210(y) RECORDS</p><h2 id="wexford-library-title">Search {wexfordDocuments.length} verified records</h2></div>
             <p>This source set preserves the groundwater-discharge, landfill-gas, air-permit, compliance, county, leachate, stormwater and site-history record. Exact matches already indexed elsewhere are reused instead of republished, while substantive revisions remain available separately.</p>
@@ -2921,7 +2921,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredWexfordDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -2932,7 +2932,7 @@ export default function Home() {
           {filteredWexfordDocuments.length === 0 && <p className="document-empty">No Wexford landfill records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="compliance-library-title">
+        <section className="document-library permit-library" data-archive-id="compliance" aria-labelledby="compliance-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 08 · COMPLIANCE &amp; ENFORCEMENT · VERIFIED AUGUST 27, 2026</p><h2 id="compliance-library-title">Search {complianceDocuments.length} verified compliance records</h2></div>
             <p>This category preserves agency evaluations, violation notices, significant noncompliance (SNC) material, spill and bypass notifications, exceedance reports, correspondence, source-order extracts and photographed attachments. Every supplied page was read with embedded text or OCR; only records already preserved elsewhere and analyst-authored derivative reports are excluded.</p>
@@ -2956,7 +2956,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredComplianceDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -2967,7 +2967,7 @@ export default function Home() {
           {filteredComplianceDocuments.length === 0 && <p className="document-empty">No compliance records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="correspondence-library-title">
+        <section className="document-library permit-library" data-archive-id="correspondence" aria-labelledby="correspondence-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 09 · CORRESPONDENCE &amp; LETTERS · VERIFIED AUGUST 28, 2026</p><h2 id="correspondence-library-title">Search {correspondenceDocuments.length} verified correspondence records</h2></div>
             <p>This category preserves regulatory email chains, transmittal letters, permit-development discussions, PFAS and biosolids correspondence, compliance notices, Wexford Landfill filings and the original spill scan. Every page was checked through its text layer or OCR; exact copies already indexed elsewhere are reused through site-wide search.</p>
@@ -2991,7 +2991,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredCorrespondenceDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -3002,7 +3002,7 @@ export default function Home() {
           {filteredCorrespondenceDocuments.length === 0 && <p className="document-empty">No correspondence records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="process-site-library-title">
+        <section className="document-library permit-library" data-archive-id="process-site" aria-labelledby="process-site-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 10 · PROCESS &amp; SITE DOCUMENTS · VERIFIED AUGUST 31, 2026</p><h2 id="process-site-library-title">Search {processSiteRecords.length} verified process and site records</h2></div>
             <p>This category preserves plant process-flow drawings, site and sewer-line plans, operational digester and flow data, facility history and mapping, a historical plant brochure, classification material and county records concerning landfill infrastructure. Every supplied page was checked through its text layer or OCR; exact copies already indexed elsewhere are reused through site-wide search.</p>
@@ -3026,7 +3026,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredProcessSiteDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -3052,7 +3052,7 @@ export default function Home() {
           {filteredProcessSiteDocuments.length === 0 && <p className="document-empty">No process or site records match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="form-submission-library-title">
+        <section className="document-library permit-library" data-archive-id="form-submissions" aria-labelledby="form-submission-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 11 · ONLINE FORM SUBMISSIONS · VERIFIED AUGUST 28, 2026</p><h2 id="form-submission-library-title">Search {formSubmissionDocuments.length} verified portal submissions</h2></div>
             <p>MiWaters and MiEnviro copies of record are organized by submission date, form title, submission ID and version. The archive includes PFAS effluent and biosolids monitoring, IPP and biosolids annual reports, compliance responses, certifications, approvals, stormwater forms and a discharge report. Every supplied page was read through embedded text or OCR, and corrected versions remain separate from true duplicate exports.</p>
@@ -3076,7 +3076,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredFormSubmissionDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -3087,7 +3087,7 @@ export default function Home() {
           {filteredFormSubmissionDocuments.length === 0 && <p className="document-empty">No online form submissions match this search.</p>}
         </section>
 
-        <section className="document-library permit-library" aria-labelledby="supplemental-library-title">
+        <section className="document-library permit-library" data-archive-id="supplemental" aria-labelledby="supplemental-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 29, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} added records</h2></div>
             <p>These additions span federal compliance, landfill operations, civic actions, audited finances, historical groundwater context and response planning. Primary records, historical context and secondary research are explicitly distinguished; related records remain separate when their official edition, content or evidentiary role differs.</p>
@@ -3111,7 +3111,7 @@ export default function Home() {
           </div>
           <div className="document-grid">
             {filteredSupplementalDocuments.map((document) => (
-              <article className="archive-card" key={document.id}>
+              <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
@@ -3122,13 +3122,13 @@ export default function Home() {
           {filteredSupplementalDocuments.length === 0 && <p className="document-empty">No added records match this search.</p>}
         </section>
 
-        <section className="document-library reference-library" aria-labelledby="reference-library-title">
+        <section className="document-library reference-library" data-archive-id="reference" aria-labelledby="reference-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CATEGORY 00 · REFERENCE DATA</p><h2 id="reference-library-title">Search 106 verified datasets</h2></div>
+            <div><p className="eyebrow">CATEGORY 00 · REFERENCE DATA</p><h2 id="reference-library-title">Search {referenceDocuments.length} verified datasets</h2></div>
             <p>CSV exports, workbooks, manifests and research indexes are preserved as direct downloads. Each file was compared by content and structure before publishing.</p>
           </div>
           <div className="reference-summary" aria-label="Reference data audit summary">
-            <div><Database /><span><strong>{referenceAudit.publishedFileCount}</strong> distinct files</span></div>
+            <div><Database /><span><strong>{referenceDocuments.length}</strong> distinct files</span></div>
             <div><CheckCircle2 /><span><strong>{referenceAudit.excludedFileCount}</strong> duplicate copies excluded</span></div>
             <div><FileSearch /><span><strong>{formatBytes(referenceAudit.includedBytes)}</strong> published</span></div>
           </div>
@@ -3146,7 +3146,7 @@ export default function Home() {
           </div>
           <div className="document-grid reference-grid">
             {filteredReferenceDocuments.map((document) => (
-              <article className="archive-card reference-card" key={document.id}>
+              <article className="archive-card reference-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <div className="dataset-shape">

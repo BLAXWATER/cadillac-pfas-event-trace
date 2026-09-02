@@ -12,8 +12,10 @@
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/*.test.mjs",
     "test:download-integrity": "node --test tests/download-integrity.test.mjs",
+    "test:record-placement": "node --test tests/record-placement.test.mjs",
     "verify:anonymous-downloads": "node scripts/verify-anonymous-downloads.mjs",
-    "verify:release": "npm run test:download-integrity && npm run verify:anonymous-downloads",
+    "verify:public-placement": "node scripts/verify-public-record-placement.mjs",
+    "verify:release": "npm run test:download-integrity && npm run test:record-placement && npm run verify:anonymous-downloads",
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern tmp",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },

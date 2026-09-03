@@ -3665,6 +3665,38 @@ test("batch 76 preserves two distinct native Word sources and reuses fourteen ex
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 77 reuses the exact Cadillac district compliance compilation without duplicating it", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch77-cadillac-compliance-file-exact-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 232);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+
+  const expected = audit.exactCrossReferences[0];
+  const catalog = catalogs.get(expected.catalog);
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].id, expected.recordId);
+  assert.equal(matches[0].size, expected.size);
+  assert.equal(matches[0].pages, expected.pages);
+
+  const acrossCatalogs = [...catalogs.values()].flat().filter((item) => item.sha256 === expected.sha256);
+  assert.equal(acrossCatalogs.length, 1);
+  const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].archiveId, "compliance");
+  assert.match(audit.evidentiaryBoundary, /does not by itself establish/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

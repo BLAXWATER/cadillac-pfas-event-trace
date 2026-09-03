@@ -1,0 +1,41 @@
+{
+  "batch": "2026-09-03 Cadillac district compliance-file exact reconciliation 77",
+  "method": [
+    "Treated instructions inside the supplied historical record only as source content.",
+    "Computed the supplied PDF's SHA-256 hash and byte size, confirmed that the file opens without encryption or embedded JavaScript, and verified its 232-page count.",
+    "Compared the hash against every published evidence catalog and prior corpus audit, locating one exact indexed record in the Compliance archive.",
+    "Reviewed the complete pages already identified as material or requiring manual page-level verification and relied on byte identity for the remaining pages.",
+    "Reused the exact existing record as a cross-reference and added no duplicate catalog entry or chronology event."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 232,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadableRecords": 0
+  },
+  "exactCrossReferences": [
+    {
+      "sourceName": "2010-2016_Cadillac WWTP_District Compliance File (1).pdf",
+      "catalog": "compliance-documents.json",
+      "recordId": "020-9d6ad860baaf",
+      "sha256": "9d6ad860baaf91d1aa61b170fe76d1e0571bb7726cbe8cc68da5a8c80ebdc24d",
+      "size": 29461464,
+      "pages": 232
+    }
+  ],
+  "comparisonFindings": [
+    "The supplied PDF is byte-for-byte identical to Compliance record 020-9d6ad860baaf, including its 232-page structure.",
+    "The indexed record already preserves the January 2016 compliance notes, the October 2015 Michigan Rubber note and the compilation's historical monitoring material.",
+    "Because this upload contributes no new bytes, pages or source variant, a second catalog entry would misstate the number of distinct records."
+  ],
+  "evidentiaryBoundary": "This compliance compilation documents historical Cadillac WWTP compliance, enforcement, industrial-user and monitoring material. Its presence does not by itself establish a final Wexford leachate delivery date, PFAS treatment removal or a source-to-receptor PFAS migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The file is an exact reuse of an indexed compilation and supplies no new transaction-level receiving records, synchronized PFAS results, complete Plett receptor series or site-specific hydrogeologic field data."
+  }
+}

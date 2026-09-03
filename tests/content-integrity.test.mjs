@@ -3493,6 +3493,50 @@ test("batch 73 reuses the exact Wexford County financial audit without treating 
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 74 reconciles nine Wexford County Board minutes without duplicating records or overstating their evidence", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch74-wexford-board-minutes-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 9);
+  assert.equal(audit.stats.suppliedPathsAvailableAtReview, 0);
+  assert.equal(audit.stats.alternateExactCopiesAvailableAtReview, 9);
+  assert.equal(audit.stats.distinctInputHashes, 9);
+  assert.equal(audit.stats.pdfPagesRenderedAndReviewed, 46);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 9);
+  assert.equal(audit.stats.catalogDescriptionsCorrected, 5);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+
+  for (const expected of audit.exactCrossReferences) {
+    const catalog = catalogs.get(expected.catalog);
+    assert.ok(catalog, `Missing catalog ${expected.catalog}`);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1, `Expected one catalog record for ${expected.sourceLabel}`);
+    assert.equal(matches[0].id, expected.recordId);
+    assert.equal(matches[0].url, expected.asset);
+    assert.equal(matches[0].pages, expected.pages);
+    assert.equal(matches[0].size, expected.size);
+    assert.equal(matches[0].type, expected.classification);
+    assert.ok(matches[0].description.includes(expected.descriptionContains), `Missing bounded description for ${expected.sourceLabel}`);
+    assert.equal(placement.records.filter((item) => item.sha256 === expected.sha256).length, 1);
+    if (expected.localAsset) {
+      assert.ok(previewManifest[expected.localAsset], `Missing preview for ${expected.localAsset}`);
+    } else {
+      assert.match(expected.delivery, /Pinned public GitHub blob resolved by the site's document handler/);
+    }
+  }
+
+  assert.match(audit.evidentiaryBoundary, /no PFAS analytical results/i);
+  assert.match(audit.evidentiaryBoundary, /exact final leachate delivery date/i);
+  assert.match(audit.evidentiaryBoundary, /site-specific proof of a PFAS migration pathway/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

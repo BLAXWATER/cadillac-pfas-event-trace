@@ -525,7 +525,7 @@
     "pages": 8,
     "size": 288002,
     "sha256": "7c628f229e98599ab13a0152d8a06d797175a026199dece5bc1d34fc2115df96",
-    "description": "2017-11-01 Wexford County BOC Minutes. Verified as a distinct county proceedings after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Official November 1, 2017 Wexford County Board minutes recording discussion and public comments about proposed landfill injection wells, concern about leachate and chemicals in limestone, and the Board's direction to prepare an opposition resolution. These are deliberative statements, not technical groundwater or PFAS findings."
   },
   {
     "id": "045-83afea408886",
@@ -537,7 +537,7 @@
     "pages": 4,
     "size": 141005,
     "sha256": "83afea4088866121927aa3b077d868812f9c1ab72eebabd9f9e81b16bdfdf972",
-    "description": "2018-01-17 Wexford County BOC Minutes. Verified as a distinct county proceedings after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Official January 17, 2018 Wexford County Board minutes recording Pescador's landfill RAP update, including third and fourth sampling of monitoring well 65 and coordination with DEQ. The minutes do not include the analytical results, collection times or chain-of-custody record."
   },
   {
     "id": "046-0d84b0d63d50",
@@ -549,7 +549,7 @@
     "pages": 4,
     "size": 116957,
     "sha256": "0d84b0d63d506cf288333c679de272ea1b71be426870d84bdd7173596ed9f35e",
-    "description": "2018-02-07 Wexford County BOC Minutes. Verified as a distinct county proceedings after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Official February 7, 2018 Wexford County Board minutes recording discussion of a possible Cedar Creek ordinance change to stop landfill leachate injection wells, state-law preemption concerns and public objections. The minutes do not record adoption of an ordinance."
   },
   {
     "id": "047-8d6267327b86",
@@ -561,7 +561,7 @@
     "pages": 5,
     "size": 186031,
     "sha256": "8d6267327b86ca669f955a73a37c519bc8b9090fbc4483e665d4dc9fdef93f7c",
-    "description": "2018-02-21 Wexford County BOC Minutes. Verified as a distinct county proceedings after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Official February 21, 2018 Wexford County Board minutes recording a March 21 public hearing on the possibility of landfill injection wells and the Board's decision to move its own meeting time. This is hearing-coordination evidence, not a permit, construction or operating record."
   },
   {
     "id": "048-c18471b190b0",
@@ -1101,7 +1101,7 @@
     "pages": 6,
     "size": 171652,
     "sha256": "c3e654984910616cc2bf56710512a745d4e31143f314b72c5eda79c7aca920d0",
-    "description": "2017-08-16 Wexford County BOC Minutes. Verified as a distinct county proceedings after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Official August 16, 2017 Wexford County Board minutes recording unanimous approval of American Waste's proposal to close the landfill RAP pond and discharge area for no more than $137,400 from escrow. The discussion says a possible well beneath the pond was unknown and would be sampled if found; it does not establish that a well existed or provide analytical results."
   },
   {
     "id": "093-7cacdb3de1e5",

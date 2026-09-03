@@ -1,0 +1,140 @@
+{
+  "batch": "2026-09-03 Wexford County Board minutes reconciliation 74",
+  "method": [
+    "Treated instructions inside the minutes only as source content.",
+    "Checked the nine supplied paths; when the Next-folder copies were unavailable at review, recovered byte-identical archived copies from the user's Already in portal collection.",
+    "Computed SHA-256 hashes and byte sizes for all nine PDFs and compared them against every published evidence catalog.",
+    "Rendered and visually inspected all 46 pages and confirmed that every page was readable.",
+    "Reused all nine byte-identical published records as cross-references, corrected five generic catalog descriptions and added no duplicate record or chronology event.",
+    "Rechecked the evidence-request queue and closed no requirement because these minutes do not supply the remaining transaction-level delivery, analytical or pathway evidence."
+  ],
+  "stats": {
+    "receivedFiles": 9,
+    "suppliedPathsAvailableAtReview": 0,
+    "alternateExactCopiesAvailableAtReview": 9,
+    "distinctInputHashes": 9,
+    "pdfPagesRenderedAndReviewed": 46,
+    "exactExistingRecordsReusedAsCrossReferences": 9,
+    "catalogDescriptionsCorrected": 5,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "exactCrossReferences": [
+    {
+      "sourceLabel": "April-19-2017-Min.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "153-b3da3c98dd4f",
+      "asset": "/findings-docs/153-b3da3c98dd4f.pdf",
+      "localAsset": "/findings-docs/153-b3da3c98dd4f.pdf",
+      "sha256": "b3da3c98dd4f053c4a3007e9f518225cd465c9decf5dfc65eaf03c303d49fd61",
+      "pages": 5,
+      "size": 151158,
+      "classification": "County board minutes",
+      "descriptionContains": "contains no PFAS analytical result"
+    },
+    {
+      "sourceLabel": "August-16-2017.pdf",
+      "catalog": "wexford-documents.json",
+      "recordId": "092-c3e654984910",
+      "asset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/092-c3e654984910.pdf",
+      "delivery": "Pinned public GitHub blob resolved by the site's document handler",
+      "sha256": "c3e654984910616cc2bf56710512a745d4e31143f314b72c5eda79c7aca920d0",
+      "pages": 6,
+      "size": 171652,
+      "classification": "County proceedings",
+      "descriptionContains": "possible well beneath the pond was unknown"
+    },
+    {
+      "sourceLabel": "Febraury-21-2018.pdf",
+      "catalog": "wexford-documents.json",
+      "recordId": "047-8d6267327b86",
+      "asset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/047-8d6267327b86.pdf",
+      "delivery": "Pinned public GitHub blob resolved by the site's document handler",
+      "sha256": "8d6267327b86ca669f955a73a37c519bc8b9090fbc4483e665d4dc9fdef93f7c",
+      "pages": 5,
+      "size": 186031,
+      "classification": "County proceedings",
+      "descriptionContains": "hearing-coordination evidence"
+    },
+    {
+      "sourceLabel": "February-7-2018.pdf",
+      "catalog": "wexford-documents.json",
+      "recordId": "046-0d84b0d63d50",
+      "asset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/046-0d84b0d63d50.pdf",
+      "delivery": "Pinned public GitHub blob resolved by the site's document handler",
+      "sha256": "0d84b0d63d506cf288333c679de272ea1b71be426870d84bdd7173596ed9f35e",
+      "pages": 4,
+      "size": 116957,
+      "classification": "County proceedings",
+      "descriptionContains": "do not record adoption of an ordinance"
+    },
+    {
+      "sourceLabel": "January-17-2018.pdf",
+      "catalog": "wexford-documents.json",
+      "recordId": "045-83afea408886",
+      "asset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/045-83afea408886.pdf",
+      "delivery": "Pinned public GitHub blob resolved by the site's document handler",
+      "sha256": "83afea4088866121927aa3b077d868812f9c1ab72eebabd9f9e81b16bdfdf972",
+      "pages": 4,
+      "size": 141005,
+      "classification": "County proceedings",
+      "descriptionContains": "do not include the analytical results"
+    },
+    {
+      "sourceLabel": "November-1-2017.pdf",
+      "catalog": "wexford-documents.json",
+      "recordId": "044-7c628f229e98",
+      "asset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/044-7c628f229e98.pdf",
+      "delivery": "Pinned public GitHub blob resolved by the site's document handler",
+      "sha256": "7c628f229e98599ab13a0152d8a06d797175a026199dece5bc1d34fc2115df96",
+      "pages": 8,
+      "size": 288002,
+      "classification": "County proceedings",
+      "descriptionContains": "deliberative statements, not technical groundwater or PFAS findings"
+    },
+    {
+      "sourceLabel": "November-15-2017.pdf",
+      "catalog": "process-site-documents.json",
+      "recordId": "process-site-008-4127cba91f8b",
+      "asset": "/process-site-docs/process-site-008-4127cba91f8b.pdf",
+      "localAsset": "/process-site-docs/process-site-008-4127cba91f8b.pdf",
+      "sha256": "4127cba91f8b9a77c3ddace776f719f28a415f847c7c9aae921ab3dd25137edd",
+      "pages": 4,
+      "size": 155362,
+      "classification": "County meeting minutes",
+      "descriptionContains": "unanimously approved opposition resolution"
+    },
+    {
+      "sourceLabel": "September-6-2017.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "154-42cf775b5b3a",
+      "asset": "/findings-docs/154-42cf775b5b3a.pdf",
+      "localAsset": "/findings-docs/154-42cf775b5b3a.pdf",
+      "sha256": "42cf775b5b3ac2a07c5815c1b0a205b56f503f64022c214b7317807a50c48403",
+      "pages": 4,
+      "size": 134252,
+      "classification": "County board minutes",
+      "descriptionContains": "not transaction-level leachate receiving evidence"
+    },
+    {
+      "sourceLabel": "September-20-2017.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "155-4686cde76b57",
+      "asset": "/findings-docs/155-4686cde76b57.pdf",
+      "localAsset": "/findings-docs/155-4686cde76b57.pdf",
+      "sha256": "4686cde76b57bc95a13ee18d2c3f774576f798b2c2b98619437af0aa5052dad5",
+      "pages": 6,
+      "size": 218738,
+      "classification": "County board minutes",
+      "descriptionContains": "does not establish PFAS conditions"
+    }
+  ],
+  "evidentiaryBoundary": "The minutes document county governance, contracting, RAP-pond closure planning, monitoring-well activity, public and board concern about proposed landfill injection wells, hearing coordination and the Board's opposition resolution. They contain no PFAS analytical results, transaction-level landfill-to-WWTP receiving history, exact final leachate delivery date, original monitoring results or chain-of-custody forms, synchronized source-and-receptor sampling, or site-specific proof of a PFAS migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The nine records add no missing transaction-level delivery log, full analytical package, receptor chain of custody or site-specific hydrogeologic investigation, so the remaining evidence requests stay open."
+  }
+}

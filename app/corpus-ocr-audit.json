@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "58b7911ee1a851023ca92d005a050143cdfb0e1622d9cc28186abd28eb52d798",
+  "catalogFingerprint": "b35f4a88b8bbd75ff4e1b2cdaefa9c396b52f8988cd77722e558e38d58674493",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1558,
-    "verifiedRecords": 1558,
-    "pdfRecords": 1410,
-    "pdfPages": 20145,
+    "catalogRecords": 1559,
+    "verifiedRecords": 1559,
+    "pdfRecords": 1411,
+    "pdfPages": 20150,
     "imageRecords": 13,
     "embeddedTextPages": 16354,
-    "ocrPages": 3804,
-    "ocrPagesWithText": 3461,
-    "manualReviewPages": 139,
+    "ocrPages": 3809,
+    "ocrPagesWithText": 3466,
+    "manualReviewPages": 144,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,8 +29,8 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 139,
-    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
+    "pagesReviewed": 144,
+    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map, faint handwritten/form pages and the complete five-page scanned VN-019184 response package. No missing or corrupt source page was found."
   },
   "manualReview": [
     {
@@ -546,6 +546,19 @@
       "url": "/compliance-docs/062-4c293cc26b89.pdf",
       "pages": [
         1
+      ]
+    },
+    {
+      "catalog": "compliance-documents.json",
+      "id": "063-bfbcd24d8a0a",
+      "name": "2026-07-14 - Cadillac Response to Violation Notice VN-019184.pdf",
+      "url": "/compliance-docs/063-bfbcd24d8a0a.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
       ]
     }
   ],

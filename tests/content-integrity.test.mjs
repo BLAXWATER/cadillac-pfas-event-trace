@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 727);
-  assert.equal(externalFiles, 831);
+  assert.equal(localFiles, 729);
+  assert.equal(externalFiles, 830);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 68);
+  assert.equal(helperReferences.length, 71);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1558);
+  assert.equal(recordCount, 1559);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1558);
+  assert.equal(records.length, 1559);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1410);
-  assert.equal(audit.stats.pdfPages, 20145);
+  assert.equal(audit.stats.pdfRecords, 1411);
+  assert.equal(audit.stats.pdfPages, 20150);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -290,15 +290,15 @@ test("compliance archive audit preserves distinct records and excludes verified 
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "compliance-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 116);
-  assert.equal(audit.stats.finalDistinctRecords, 62);
+  assert.equal(audit.stats.sourceFilesReviewed, 118);
+  assert.equal(audit.stats.finalDistinctRecords, 63);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
-  assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
+  assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 1);
   assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 6);
   assert.equal(audit.stats.analystAuthoredReportsExcluded, 4);
-  assert.equal(audit.stats.reviewedPages, 768);
-  assert.equal(audit.stats.ocrPages, 308);
+  assert.equal(audit.stats.reviewedPages, 778);
+  assert.equal(audit.stats.ocrPages, 318);
   assert.equal(audit.stats.latestAllDocsIntakeFiles, 23);
   assert.equal(audit.stats.latestAllDocsActualDuplicateCopiesSuppressed, 1);
   assert.equal(audit.stats.latestDropboxIntakeFiles, 50);
@@ -2107,6 +2107,59 @@ test("batch 44 reuses and localizes the CWSRF proposal while strengthening its e
   assert.match(pageSource, /reducing available primary-settling capacity/);
   assert.match(pageSource, /projected 20-year capacity and treatment needs/);
   assert.match(pageSource, /does not itself establish that any listed condition caused a bypass/);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 45 suppresses the duplicate response copy and keeps EGLE's notice separate from Cadillac's defense", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch45-vn019184-notice-response-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const catalogRows = catalogs.flatMap((catalog) => catalog.rows);
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 2);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.exactDuplicateFilenameCopies, 1);
+  assert.equal(audit.stats.pdfInstancesReviewed, 2);
+  assert.equal(audit.stats.uniquePdfPagesReviewed, 5);
+  assert.equal(audit.stats.imageOnlyPages, 5);
+  assert.equal(audit.stats.renderedPagesReviewed, 5);
+  assert.equal(audit.stats.existingNoticeRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsLocalized, 1);
+  assert.equal(audit.stats.recordsAdded, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 2);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(new Set(audit.suppliedCopies.map((copy) => copy.sha256)).size, 1);
+
+  for (const expected of [audit.addedRecord, audit.existingNoticeRecord]) {
+    const row = catalogRows.find((candidate) => candidate.id === expected.recordId);
+    assert.ok(row, `${expected.recordId} is absent from the catalog`);
+    assert.equal(row.name, expected.canonicalName);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.sha256, expected.sha256);
+    assert.equal(row.pages, expected.pages);
+    assert.equal(row.size, expected.size);
+    assert.equal(catalogRows.filter((candidate) => candidate.sha256 === expected.sha256).length, 1);
+
+    const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+    assert.equal(previewManifest[expected.asset], expected.preview);
+    assert.ok((await stat(path.join(publicDirectory, expected.preview.replace(/^\//, "")))).size > 0);
+    assert.match(bundledSource, new RegExp(expected.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(pageSource, /EGLE cites a 16\.369-million-gallon April bypass/);
+  assert.match(pageSource, /Cadillac attributes April bypass to an RDS-exceeding flood/);
+  assert.match(pageSource, /approximately 16\.369 million gallons of partially treated sewage/);
+  assert.match(pageSource, /11\.79 inches of April precipitation/);
+  assert.match(pageSource, /11\.24 inches during the first 18 days/);
+  assert.match(pageSource, /does not establish how EGLE later evaluated Cadillac's response/);
+  assert.match(pageSource, /contains no later EGLE decision accepting the defense/);
+  assert.match(audit.evidentiaryBoundary, /does not contain a later EGLE determination accepting the RDS assertion/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

@@ -1,0 +1,73 @@
+{
+  "batch": "2026-09-02 VN-019184 notice and response reconciliation intake 45",
+  "method": [
+    "Computed SHA-256 hashes and byte sizes for both supplied PDFs and compared them with one another and every evidence catalog.",
+    "Confirmed that the two differently named supplied files are byte-for-byte identical five-page copies of Cadillac's July 14, 2026 response, not a notice-and-response pair.",
+    "Opened and rendered all five unique pages. The signed response, NOAA precipitation table and two EGLE reporting emails are complete and readable; the first page is not blank.",
+    "Reused the distinct two-page June 10, 2026 EGLE violation notice already present in the compliance catalog, localized it for anonymous preview and download, and kept its agency findings separate from Cadillac's later assertions.",
+    "Added the distinct response once, created separate June 10 and July 14 timeline events, and preserved the unresolved disposition boundary."
+  ],
+  "stats": {
+    "receivedFiles": 2,
+    "distinctInputHashes": 1,
+    "exactDuplicateFilenameCopies": 1,
+    "pdfInstancesReviewed": 2,
+    "uniquePdfPagesReviewed": 5,
+    "imageOnlyPages": 5,
+    "renderedPagesReviewed": 5,
+    "existingNoticeRecordsReusedAsCrossReferences": 1,
+    "recordsLocalized": 1,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 2,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "suppliedCopies": [
+    {
+      "name": "7563-EGLE Violation Notice VN-019184 — June 10, 2026.pdf",
+      "sha256": "bfbcd24d8a0adde6bffa8a5bc0fac22befaa3adebca864d82c14b9dc2ad5b4a0",
+      "size": 784458,
+      "pages": 5,
+      "classification": "Exact duplicate filename copy of Cadillac's July 14 response; the filename does not match the document content."
+    },
+    {
+      "name": "7563 EGLE - Response-VN-019184.pdf",
+      "sha256": "bfbcd24d8a0adde6bffa8a5bc0fac22befaa3adebca864d82c14b9dc2ad5b4a0",
+      "size": 784458,
+      "pages": 5,
+      "classification": "Canonical supplied copy of Cadillac's July 14 response."
+    }
+  ],
+  "addedRecord": {
+    "recordId": "063-bfbcd24d8a0a",
+    "asset": "/compliance-docs/063-bfbcd24d8a0a.pdf",
+    "preview": "/first-page-previews/by-sha256/42d4fc4b9f34af7aa02d079c1aa2f83eab7b4f0858ade93057d434c34a303d7d.webp",
+    "canonicalName": "2026-07-14 - Cadillac Response to Violation Notice VN-019184.pdf",
+    "sha256": "bfbcd24d8a0adde6bffa8a5bc0fac22befaa3adebca864d82c14b9dc2ad5b4a0",
+    "size": 784458,
+    "pages": 5
+  },
+  "existingNoticeRecord": {
+    "recordId": "007-5e26c04f42e1",
+    "asset": "/compliance-docs/007-5e26c04f42e1.pdf",
+    "preview": "/first-page-previews/by-sha256/687890bf8a3202301f7c66867135672b09698a007039180a4491add2a2f6787e.webp",
+    "canonicalName": "06-10-2026 - Violation Notice (VN 019184) Cadillac WWTP.pdf",
+    "sha256": "5e26c04f42e16908e4cada309111b6e4ca1e47114ea64e6025c0e44aaf21f654",
+    "size": 95700,
+    "pages": 2
+  },
+  "verifiedFindings": [
+    "EGLE's June 10 notice states that Cadillac reported an approximately 16.369-million-gallon partially treated discharge to the Clam River during the April 16-29, 2026 bypass.",
+    "The notice states that peak flow approached 5.0 MGD while tertiary-treatment capacity was 3.5 MGD and that required reporting and public notifications were late.",
+    "Cadillac's July 14 response attributes the bypass to snow and ice melt, frozen ground, flooding and heavy April precipitation and asserts that the reportable-discharge-scenario threshold was exceeded.",
+    "The response reports 11.79 inches of April precipitation, including 11.24 inches during the first 18 days, and confirms that future bypasses will be reported.",
+    "The response attachments include the supporting precipitation table and EGLE's April 22 and April 27 reporting directions."
+  ],
+  "evidentiaryBoundary": "The June notice records EGLE's violation findings; the July response records Cadillac's weather defense and reporting commitment. The supplied response package does not contain a later EGLE determination accepting the RDS assertion, withdrawing the notice, approving corrective action or closing VN-019184.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The notice and response document the April bypass and compliance dispute but do not supply the remaining leachate-delivery, synchronized PFAS, receptor-series, well-construction or groundwater-flow evidence."
+  }
+}

@@ -552,14 +552,14 @@
   {
     "id": "007-5e26c04f42e1",
     "name": "06-10-2026 - Violation Notice (VN 019184) Cadillac WWTP.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/007-5e26c04f42e1.pdf",
+    "url": "/compliance-docs/007-5e26c04f42e1.pdf",
     "year": "2026",
     "type": "Violation notice",
     "format": "PDF",
     "pages": 2,
     "size": 95700,
     "sha256": "5e26c04f42e16908e4cada309111b6e4ca1e47114ea64e6025c0e44aaf21f654",
-    "description": "Formal notice or supporting record concerning an identified compliance violation."
+    "description": "EGLE's June 10, 2026 Violation Notice VN-019184 concerning Cadillac WWTP's April 16-29 treatment bypass. EGLE states that approximately 16.369 million gallons of partially treated sewage reached the Clam River and that required agency, health-department and public notices were not completed within 24 hours. The notice asks Cadillac either to document that a reportable-discharge-scenario storm threshold was exceeded or to submit corrective action; it is a formal agency allegation, not a final disposition."
   },
   {
     "id": "016-0b40ac8b2ec4",
@@ -740,5 +740,17 @@
     "size": 130818,
     "sha256": "87297e8f640150641461dd031827934abd99e1fdfbf5f659dfae6e0c5ef7d832",
     "description": "MDEQ post-inspection database export for the November 19, 2009 Cadillac WWTP Industrial Pretreatment Program reconnaissance inspection. The inspector records elevated zinc in biosolids found during September 2009 point-source sampling, identifies Cadillac Castings as the source reported by the plant superintendent, and calls for a compliance report and permit-monitoring revisions."
+  },
+  {
+    "id": "063-bfbcd24d8a0a",
+    "name": "2026-07-14 - Cadillac Response to Violation Notice VN-019184.pdf",
+    "url": "/compliance-docs/063-bfbcd24d8a0a.pdf",
+    "year": "2026",
+    "type": "Violation response",
+    "format": "PDF",
+    "pages": 5,
+    "size": 784458,
+    "sha256": "bfbcd24d8a0adde6bffa8a5bc0fac22befaa3adebca864d82c14b9dc2ad5b4a0",
+    "description": "Cadillac's signed July 14, 2026 response to EGLE Violation Notice VN-019184. The City attributes the April 16-29 partial tertiary-treatment bypass to snowmelt, frozen ground, flooding and 11.79 inches of April precipitation, asserts that the reportable-discharge-scenario threshold was exceeded, and confirms that future bypasses will be reported. Attachments include a NOAA precipitation table and EGLE's April 22 and April 27 reporting reminders. This record does not show that EGLE accepted the City's weather defense or closed the violation."
   }
 ]

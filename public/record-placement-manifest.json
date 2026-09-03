@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1558,
+  "recordCount": 1559,
   "archiveCount": 13,
   "archives": [
     {
@@ -57,7 +57,7 @@
       "label": "Compliance & enforcement",
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
-      "count": 62
+      "count": 63
     },
     {
       "archiveId": "correspondence",
@@ -2479,7 +2479,7 @@
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "06-10-2026 - Violation Notice (VN 019184) Cadillac WWTP.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/007-5e26c04f42e1.pdf",
+      "url": "/compliance-docs/007-5e26c04f42e1.pdf",
       "sha256": "5e26c04f42e16908e4cada309111b6e4ca1e47114ea64e6025c0e44aaf21f654",
       "size": 95700
     },
@@ -3087,6 +3087,17 @@
       "url": "/compliance-docs/062-4c293cc26b89.pdf",
       "sha256": "4c293cc26b89a0cc8ea429eb90534721a7297f6142d8ed8eddf6a03961933304",
       "size": 162212
+    },
+    {
+      "id": "063-bfbcd24d8a0a",
+      "archiveId": "compliance",
+      "archiveLabel": "Compliance & enforcement",
+      "catalog": "compliance-documents.json",
+      "sectionId": "compliance-library-title",
+      "name": "2026-07-14 - Cadillac Response to Violation Notice VN-019184.pdf",
+      "url": "/compliance-docs/063-bfbcd24d8a0a.pdf",
+      "sha256": "bfbcd24d8a0adde6bffa8a5bc0fac22befaa3adebca864d82c14b9dc2ad5b4a0",
+      "size": 784458
     },
     {
       "id": "corr-001-4d33f697af5e",

@@ -1,5 +1,6 @@
 {
   "methods": [
+    "September 2 VN-019184 intake: both supplied five-page PDFs were hashed, opened, OCR-read and rendered. They are exact duplicate copies of Cadillac's July 14 response despite one misleading notice filename. The distinct June 10 EGLE notice already in the catalog was localized, the response was added once, and the agency notice and municipal response were placed in separate timeline events.",
     "September 2 EPA QNCR intake: all three supplied reports and all 150 pages were opened, text-extracted and rendered. Two exact existing records were localized for anonymous first-page preview and full download, and the distinct 47-page January–March 2015 report was added after a corpus-wide SHA-256 check.",
     "SHA-256 comparison within the category and against every published catalog",
     "PDF page-count and document-metadata verification",
@@ -9,16 +10,23 @@
     "Manual visual review of low-confidence aerial-image and rotated-table pages"
   ],
   "stats": {
-    "sourceFilesReviewed": 116,
-    "exactDuplicateGroupsWithinSource": 0,
+    "sourceFilesReviewed": 118,
+    "exactDuplicateGroupsWithinSource": 1,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 6,
     "analystAuthoredReportsExcluded": 4,
     "existingComplianceRecordsRetained": 3,
-    "finalDistinctRecords": 62,
-    "reviewedPages": 768,
-    "ocrPages": 308,
-    "publishedBytes": 60605432,
+    "finalDistinctRecords": 63,
+    "reviewedPages": 778,
+    "ocrPages": 318,
+    "publishedBytes": 61389890,
+    "latestVN019184IntakeFiles": 2,
+    "latestVN019184DistinctInputHashes": 1,
+    "latestVN019184ExactDuplicateFilenameCopies": 1,
+    "latestVN019184UniquePdfPages": 5,
+    "latestVN019184RecordsLocalized": 1,
+    "latestVN019184NewComplianceRecords": 1,
+    "latestVN019184TimelineEventsAdded": 2,
     "latestEPAQNCRIntakeFiles": 3,
     "latestEPAQNCRIntakePdfPages": 150,
     "latestEPAQNCRExactExistingRecords": 2,
@@ -42,6 +50,10 @@
     "latestPOTWMonitoringNewComplianceRecords": 1
   },
   "decisions": [
+    {
+      "name": "VN-019184 notice and response reconciliation",
+      "reason": "The two supplied files have the same 784,458-byte binary and SHA-256 hash and both contain Cadillac's signed July 14, 2026 response, NOAA precipitation table and two EGLE reporting emails. The response is retained once under a content-accurate title. The separate 95,700-byte June 10 EGLE notice already in the catalog was localized and cross-referenced. EGLE's violation findings and Cadillac's RDS assertion remain separate, and no final agency disposition is inferred."
+    },
     {
       "name": "Duplicate validation result",
       "reason": "No byte-identical or page-for-page render-identical duplicates were found among the remaining compliance source records. Similar titles, source extracts, revisions, raw MSG files and rendered email PDFs were retained when their content or format differed."

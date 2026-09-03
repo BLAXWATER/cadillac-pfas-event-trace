@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 740);
-  assert.equal(externalFiles, 822);
+  assert.equal(localFiles, 741);
+  assert.equal(externalFiles, 821);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -2806,6 +2806,56 @@ test("batch 59 reuses the Wexford public-notice email and cross-references the e
   assert.match(pageSource, /directed the recipients to have the notice published by July 15/i);
   assert.match(pageSource, /DEQ Email Transmitting Wexford County Landfill Public-Notice Documents\.pdf/);
   assert.match(audit.evidentiaryBoundary, /does not itself prove when or whether the newspaper published the notice/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 60 reuses and localizes the exact Pace biosolids laboratory package", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch60-pace-biosolids-recheck-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 44);
+  assert.equal(audit.stats.embeddedTextPages, 42);
+  assert.equal(audit.stats.imageOnlyPages, 2);
+  assert.equal(audit.stats.renderedPagesReviewed, 44);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.exactPublishedAssetHashMatches, 1);
+  assert.equal(audit.stats.recordsLocalized, 1);
+  assert.equal(audit.stats.recordDescriptionsExpanded, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const expected = audit.canonicalRecord;
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  const row = matches[0];
+  assert.equal(row.id, expected.recordId);
+  assert.equal(row.name, expected.canonicalName);
+  assert.equal(row.url, expected.asset);
+  assert.equal(row.size, expected.size);
+  assert.equal(row.pages, expected.pages);
+  assert.match(row.description, /Pace project 4610111/i);
+  assert.match(row.description, /contains no PFAS analytes or PFAS-specific method/i);
+  assert.equal(previewManifest[expected.asset], expected.preview);
+
+  const sourceBytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+  assert.equal(sourceBytes.length, expected.size);
+  assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), expected.sha256);
+  const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+
+  const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].archiveId, "lab");
+  assert.equal(placed[0].url, expected.asset);
+  assert.match(audit.evidentiaryBoundary, /does not establish PFAS in biosolids/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

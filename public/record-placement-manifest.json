@@ -10003,7 +10003,7 @@
       "catalog": "lab-documents.json",
       "sectionId": "lab-library-title",
       "name": "Pace Biosolids 3-28-2018 Sampling results.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/5be18df044489dcea83c7c3154f83ca047b6e5cb/public/lab-docs/086-bb9d5bc3d13f.pdf",
+      "url": "/lab-docs/086-bb9d5bc3d13f.pdf",
       "sha256": "bb9d5bc3d13f0fb497e06dcb9eea1522ff918be4a955f81dd3847066e4661415",
       "size": 986609
     },

@@ -1,0 +1,52 @@
+{
+  "batch": "2026-09-03 Pace biosolids laboratory recheck intake 60",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared them with every published evidence catalog.",
+    "Extracted embedded text from every page and rendered all 44 pages for sequence-preserving visual review.",
+    "Verified that the first page is substantive, that the final two image-only custody and receiving pages are readable, and that the report contains no PFAS analytes or PFAS-specific method.",
+    "Reused established laboratory record lab-086 as an exact cross-reference, localized its anonymous delivery to the verified archive asset and added a content-addressed first-page preview without creating a duplicate record or timeline event."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 44,
+    "embeddedTextPages": 42,
+    "imageOnlyPages": 2,
+    "renderedPagesReviewed": 44,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "exactPublishedAssetHashMatches": 1,
+    "recordsLocalized": 1,
+    "recordDescriptionsExpanded": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "lab-086-bb9d5bc3d13f",
+    "asset": "/lab-docs/086-bb9d5bc3d13f.pdf",
+    "preview": "/first-page-previews/by-sha256/0d8cdb0cd3fca183d0849beab44387f01c53e0fba77c725cc6e27e1ee88dac2f.webp",
+    "canonicalName": "Pace Biosolids 3-28-2018 Sampling results.pdf",
+    "sha256": "bb9d5bc3d13f0fb497e06dcb9eea1522ff918be4a955f81dd3847066e4661415",
+    "size": 986609,
+    "pages": 44,
+    "paceProject": "4610111",
+    "sampleLocation": "Holding Tank 4",
+    "sampleIds": ["4610111001", "4610111002"],
+    "collectionTimestamp": "2018-03-28 13:40",
+    "receivedTimestamp": "2018-03-29 12:40"
+  },
+  "verifiedFindings": [
+    "The package covers a Holding Tank 4 solid sample and a Holding Tank 4 water sample collected March 28, 2018 at 1:40 PM.",
+    "The laboratory package reports pesticides, PCBs, TCLP pesticides, metals and herbicides, total metals, VOCs, SVOCs, total and volatile solids, pH, total Kjeldahl nitrogen, ammonia and phosphorus with associated QA/QC.",
+    "The first 42 pages contain embedded laboratory text; pages 43 and 44 are readable scanned chain-of-custody and sample-receiving records.",
+    "No PFAS, PFOS, PFOA, perfluoroalkyl or polyfluoroalkyl analyte or PFAS-specific method appears in the 44-page report."
+  ],
+  "evidentiaryBoundary": "This is a conventional biosolids and associated water laboratory package. It does not establish PFAS in biosolids, identify a PFAS source, prove PFAS treatment or fate through the wastewater plant, document PFAS discharge, or support a PFAS compliance conclusion.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The report adds conventional biosolids analytical context but does not supply the transaction-level leachate receiving history, synchronized PFAS sampling, well-construction data or groundwater-flow evidence required by the remaining requests."
+  }
+}

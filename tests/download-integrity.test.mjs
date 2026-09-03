@@ -6,7 +6,7 @@ test("every document download has valid metadata and a direct delivery path", as
   const result = await verifyCatalogIntegrity();
   assert.deepEqual(result.failures, []);
   assert.equal(result.records.length, 1562);
-  assert.equal(result.local.length, 741);
-  assert.equal(result.external.length, 821);
+  assert.equal(result.local.length, 742);
+  assert.equal(result.external.length, 820);
   assert.equal(result.bundledDeliveries.length + result.archiveDeliveries.length, result.records.length);
 });

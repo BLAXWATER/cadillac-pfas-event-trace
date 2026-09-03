@@ -9288,7 +9288,7 @@
       "catalog": "lab-documents.json",
       "sectionId": "lab-library-title",
       "name": "FY19 Metals and Nutrient Results.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/5be18df044489dcea83c7c3154f83ca047b6e5cb/public/lab-docs/021-d8389dd7c1c7.pdf",
+      "url": "/lab-docs/021-d8389dd7c1c7.pdf",
       "sha256": "d8389dd7c1c74a2e0c8a2b4e8c730a7a9b2f9836bb42199e341181509d8fd6b0",
       "size": 801400
     },

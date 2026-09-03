@@ -189,6 +189,11 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/lab-docs/021-d8389dd7c1c7.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/lab-docs/086-bb9d5bc3d13f.pdf", {
     eager: true,
     import: "default",

@@ -1,0 +1,55 @@
+{
+  "batch": "2026-09-03 FY19 metals and nutrient results recheck intake 62",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared them with every published evidence catalog.",
+    "Extracted embedded text from every page and rendered all 23 pages for sequence-preserving visual review.",
+    "Verified that the first page is substantive, that the final two image-based custody and receiving pages are readable, and that the report contains no PFAS analytes or PFAS-specific method.",
+    "Reused established laboratory record lab-021 as an exact cross-reference, corrected its calendar year to the 2018 sample and report dates, localized its anonymous delivery to the verified archive asset and added a content-addressed first-page preview without creating a duplicate record or timeline event."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 23,
+    "embeddedTextPages": 21,
+    "imageOnlyPages": 2,
+    "renderedPagesReviewed": 23,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "exactPublishedAssetHashMatches": 1,
+    "recordsLocalized": 1,
+    "recordYearsCorrected": 1,
+    "recordDescriptionsExpanded": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "lab-021-d8389dd7c1c7",
+    "asset": "/lab-docs/021-d8389dd7c1c7.pdf",
+    "preview": "/first-page-previews/by-sha256/dd656fbca4f435754e41d0126ee4655ea8cdc39688c4a33f3dd721ef5fda56c0.webp",
+    "canonicalName": "FY19 Metals and Nutrient Results.pdf",
+    "sha256": "d8389dd7c1c74a2e0c8a2b4e8c730a7a9b2f9836bb42199e341181509d8fd6b0",
+    "size": 801400,
+    "pages": 23,
+    "paceProject": "4617192",
+    "sampleLocation": "Digester #4",
+    "sampleIds": ["4617192001", "4617192002"],
+    "collectionTimestamp": "2018-09-04 13:45",
+    "receivedTimestamp": "2018-09-05 09:50",
+    "reportDate": "2018-10-08"
+  },
+  "verifiedFindings": [
+    "The package covers a Digester #4 solid sample and a confirmation re-analysis collected September 4, 2018 at 1:45 PM.",
+    "The primary dry-weight results include arsenic 61.4 mg/kg, copper 897 mg/kg, zinc 1,170 mg/kg, mercury 0.51 mg/kg, total solids 3.3 percent, total volatile solids 56.3 percent, pH 7.8, total Kjeldahl nitrogen 57,000 mg/kg, ammonia nitrogen 22,300 mg/kg and phosphorus 48,200 mg/kg.",
+    "The confirmation re-analysis reports arsenic at 45.9J mg/kg; the report defines J as an estimated concentration above the adjusted method detection limit and below the adjusted reporting limit.",
+    "The first 21 pages contain the analytical report and QA/QC text; pages 22 and 23 are readable image-based chain-of-custody and sample-receiving records.",
+    "No PFAS, PFOS, PFOA, perfluoroalkyl or polyfluoroalkyl analyte or PFAS-specific method appears in the 23-page report."
+  ],
+  "evidentiaryBoundary": "This is a conventional biosolids metals and nutrient laboratory package. It is not a PFAS analytical record and does not identify a PFAS source, establish PFAS in biosolids, prove PFAS treatment or fate through the wastewater plant, document PFAS discharge, or support a PFAS compliance conclusion. No comparison with a regulatory ceiling is made without a cited governing standard and application basis.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The report adds conventional biosolids analytical context but does not supply the transaction-level leachate receiving history, synchronized PFAS sampling, well-construction data or groundwater-flow evidence required by the remaining requests."
+  }
+}

@@ -262,15 +262,15 @@
   {
     "id": "lab-021-d8389dd7c1c7",
     "name": "FY19 Metals and Nutrient Results.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/5be18df044489dcea83c7c3154f83ca047b6e5cb/public/lab-docs/021-d8389dd7c1c7.pdf",
-    "year": "2019",
+    "url": "/lab-docs/021-d8389dd7c1c7.pdf",
+    "year": "2018",
     "category": "Lab results & sampling",
-    "type": "Laboratory report",
+    "type": "Biosolids laboratory report",
     "format": "PDF",
     "pages": 23,
     "size": 801400,
     "sha256": "d8389dd7c1c74a2e0c8a2b4e8c730a7a9b2f9836bb42199e341181509d8fd6b0",
-    "description": "23-page distinct laboratory or analytical package for 2019. Revisions and repeated monitoring events remain separate when dates, samples, analytes or reported values differ."
+    "description": "Pace project 4617192 for a Digester #4 biosolids sample collected September 4, 2018 at 1:45 PM and reported October 8, 2018. The 23-page package reports metals, chloride, sulfate, nitrate, mercury, solids, pH, total Kjeldahl nitrogen, ammonia and phosphorus with QA/QC and custody forms. Arsenic was reported at 61.4 mg/kg in the initial analysis and 45.9J mg/kg in the confirmation re-analysis; the J result is estimated. The package contains no PFAS analytes or PFAS-specific method."
   },
   {
     "id": "lab-022-082656993156",

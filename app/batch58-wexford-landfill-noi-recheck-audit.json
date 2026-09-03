@@ -1,0 +1,51 @@
+{
+  "batch": "2026-09-03 Wexford landfill NOI recheck intake 58",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared them with every published evidence catalog and the canonical local asset.",
+    "Rendered and visually reviewed all three scan-only pages because the PDF contains no embedded text layer.",
+    "Verified that the application pages and April 11, 2012 cover letter are readable and that the first page is substantive rather than blank.",
+    "Verified the canonical first-page preview against its content-addressed SHA-256 filename.",
+    "Reused established Wexford record 096 as an exact cross-reference, repaired its catalog delivery to the verified local archive asset and expanded its neutral description without creating a duplicate timeline event."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 3,
+    "embeddedTextPages": 0,
+    "imageOnlyPages": 3,
+    "renderedPagesReviewed": 3,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "exactPublishedAssetHashMatches": 1,
+    "recordsLocalized": 1,
+    "recordDescriptionsExpanded": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "096-9173d234d4c8",
+    "asset": "/wexford-docs/096-9173d234d4c8.pdf",
+    "preview": "/first-page-previews/by-sha256/c6cfc91e7a646e8e9a7008effaec8884b4016f3cf935d54a5fcc47df4b6e5e78.webp",
+    "canonicalName": "Wexford Co Landfill NOI.pdf",
+    "sha256": "9173d234d4c8c4162d5fdc468426660152bd7fbb83c985ec53392dba4286b03e",
+    "size": 211705,
+    "pages": 3,
+    "pdfCreation": "2012-05-09 12:11:27 EDT",
+    "coverLetterDate": "2012-04-11",
+    "signedApplicationDate": "2012-04-12"
+  },
+  "verifiedFindings": [
+    "The package requests NPDES General Permit coverage for stormwater discharges associated with industrial activity at Wexford County Landfill LLC, 990 U.S. Highway 131, Manton, Michigan.",
+    "The signed form identifies the facility as an existing landfill, lists North Lake as the receiving water and identifies Vicki Garon as the certified stormwater operator.",
+    "Golder Associates' April 11, 2012 transmittal states that American Waste, Inc. was the applicant and describes requested coverage for stormwater leaving the existing landfill for adjacent property and ultimately North Lake and Long Lake.",
+    "The certification page is signed and dated April 12, 2012; the PDF creation timestamp is May 9, 2012 and is treated as later file history rather than the application date."
+  ],
+  "evidentiaryBoundary": "The package is a signed Notice of Intent and request for stormwater permit coverage. It does not by itself prove that coverage was issued, quantify an actual discharge, identify PFAS in stormwater or establish a PFAS migration pathway to Plett Road.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The NOI supplies facility and receiving-water context but not the well, groundwater, synchronized sampling or transaction-level evidence required by the remaining requests."
+  }
+}

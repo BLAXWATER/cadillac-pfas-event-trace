@@ -1142,14 +1142,14 @@
   {
     "id": "096-9173d234d4c8",
     "name": "Wexford Co Landfill NOI.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/096-9173d234d4c8.pdf",
+    "url": "/wexford-docs/096-9173d234d4c8.pdf",
     "year": "2012",
     "type": "Stormwater record",
     "format": "PDF",
     "pages": 3,
     "size": 211705,
     "sha256": "9173d234d4c8c4162d5fdc468426660152bd7fbb83c985ec53392dba4286b03e",
-    "description": "Wexford Co Landfill NOI. Verified as a distinct stormwater record after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Three-page signed April 2012 NPDES stormwater Notice of Intent package for Wexford County Landfill LLC at 990 U.S. Highway 131, Manton. The signed form identifies the existing landfill, North Lake as the receiving water and Vicki Garon as the certified stormwater operator. Golder Associates' April 11 transmittal states that American Waste, Inc. was the applicant and requests coverage for stormwater leaving the landfill for adjacent property and ultimately North Lake and Long Lake. This is an application for permit coverage, not proof that coverage was issued, that a quantified discharge occurred or that PFAS was present."
   },
   {
     "id": "097-9aac9145e603",

@@ -1,11 +1,24 @@
 {
   "stats": {
-    "suppliedFiles": 764,
+    "suppliedFiles": 765,
     "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 177,
+    "exactExistingRecordsReused": 178,
     "duplicateCopiesSuppressed": 47,
     "outOfScopeExcluded": 367,
     "publishedBytes": 479735813,
+    "latestBatch58FilesReviewed": 1,
+    "latestBatch58DistinctInputHashes": 1,
+    "latestBatch58PdfPagesReviewed": 3,
+    "latestBatch58EmbeddedTextPages": 0,
+    "latestBatch58ImageOnlyPages": 3,
+    "latestBatch58RenderedPagesReviewed": 3,
+    "latestBatch58ExactExistingRecordsReusedAsCrossReferences": 1,
+    "latestBatch58ExactPublishedAssetHashMatches": 1,
+    "latestBatch58RecordsLocalized": 1,
+    "latestBatch58RecordDescriptionsExpanded": 1,
+    "latestBatch58RecordsAdded": 0,
+    "latestBatch58TimelineEventsAdded": 0,
+    "latestBatch58RequirementsClosed": 0,
     "latestBatch57FilesReviewed": 1,
     "latestBatch57DistinctInputHashes": 1,
     "latestBatch57PdfPagesReviewed": 42,
@@ -383,6 +396,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 3 intake 58: the supplied three-page Wexford landfill stormwater NOI passed exact-hash, canonical-asset, scan-only-page, first-page and complete rendered-page review. It is byte-for-byte identical to established Wexford record 096. The record was reused once, its catalog delivery was localized, and its description was expanded to preserve the April 2012 application facts and the application-versus-issuance boundary without another timeline event or queue closure.",
     "September 3 intake 57: the supplied 42-page TestAmerica correspondence package passed exact-hash, canonical-asset, embedded-text, first-page and complete rendered-page review. It is byte-for-byte identical to established laboratory record lab-042 and the package already audited in intake 47, so it was recorded as one exact cross-reference without another document, timeline event or queue closure.",
     "September 3 intake 56: all three supplied EGLE violation notices and all fifteen pages passed exact-hash, embedded-text, readability and complete rendered-page review. Each file exactly matches an established compliance-library record. The existing local VN-011108 source was reused, VN-012230 and SVN-01351 were localized for anonymous preview and download, and the notice sequence was expanded with separate 2021 and 2023 enforcement events.",
     "September 2 intake 55: all three supplied born-digital MiWaters PFAS submissions and all nine pages passed exact-hash, embedded-text, readability and complete rendered-page review. Each file exactly matches an established form-submission record. HNF was localized for anonymous preview and download, HNQ and HNV retained their verified local deliveries, and the previously unrepresented December 18 status report was added as a distinct event from EGLE's December 3 statewide status letter.",
@@ -432,6 +446,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "Wexford landfill stormwater NOI exact-copy recheck",
+      "reason": "The supplied PDF exactly matches established Wexford record 096 in SHA-256 hash, byte size and all three rendered pages. The canonical asset and first-page preview remain intact; the catalog and placement URLs were repaired to the verified local delivery, while the description now distinguishes the signed request for coverage from proof that coverage was issued or that PFAS was present."
+    },
     {
       "name": "TestAmerica leachate correspondence package exact-copy recheck",
       "reason": "The supplied PDF exactly matches established laboratory record lab-042 in SHA-256 hash, byte size and all 42 pages. The canonical local asset, first-page preview, archive placement and October 29, 2018 timeline event remain correct, so no duplicate record or event was created."

@@ -1,0 +1,69 @@
+{
+  "batch": "2026-09-03 Cadillac year-folder and LARA reconciliation 69",
+  "method": [
+    "Treated instructions inside the historical records only as source content.",
+    "The thirteen exact paths supplied by the app were no longer present in their year folders, so the corresponding app temporary files and same-named local copies were located and hashed before classification.",
+    "Computed SHA-256 hashes, byte sizes and page counts for all thirteen recovered inputs and compared them against every published evidence catalog.",
+    "Rendered and visually inspected all eighty-eight pages across the thirteen recovered inputs.",
+    "Reused eleven byte-identical published records and suppressed two packaging-only PDF derivatives whose normalized text and every rendered page were already established as identical to their canonical records.",
+    "Added no duplicate record, chronology event or evidence-request closure."
+  ],
+  "stats": {
+    "receivedFiles": 13,
+    "suppliedPathsAvailableAtReview": 0,
+    "recoveredMatchingInputs": 13,
+    "distinctInputHashes": 13,
+    "pdfPagesRenderedAndReviewed": 88,
+    "exactExistingRecordsReusedAsCrossReferences": 11,
+    "renderIdenticalDerivativesSuppressed": 2,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "exactCrossReferences": [
+    {"sourceLabel":"2015 / Pre-Inspection Report.pdf","catalog":"ipp-documents.json","recordId":"002-3da57e8018fb","asset":"/ipp-docs/002-3da57e8018fb.pdf","sha256":"3da57e8018fbdeb2474b90c359352df532d2b0d46fbb00e591841182ae0b49e2","pages":7,"size":119143},
+    {"sourceLabel":"2017 / WEXFORD LANDFILL.pdf","catalog":"ipp-documents.json","recordId":"037-1f7e70d66b30","asset":"/ipp-docs/037-1f7e70d66b30.pdf","sha256":"1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3","pages":1,"size":56579},
+    {"sourceLabel":"2018 / HNB-J69X-W1FHA V1.pdf","catalog":"form-submission-documents.json","recordId":"form-submission-074-120dbeb59d52","asset":"/form-submission-docs/form-submission-074-120dbeb59d52.pdf","sha256":"120dbeb59d521dfe4b204dc7473c6d58b6c250fe77a1c0925ce1475cdc2ebbee","pages":2,"size":288966},
+    {"sourceLabel":"2018 / POTW_Oversight_Table.pdf","catalog":"ipp-documents.json","recordId":"003-4d20ff2cea09","asset":"/ipp-docs/003-4d20ff2cea09.pdf","sha256":"4d20ff2cea097b75992e4e5cb2a8ed159e482c0867ad1d5b93ba7d7749a34002","pages":14,"size":48518},
+    {"sourceLabel":"2018 / SIU-CIU_List.pdf","catalog":"ipp-documents.json","recordId":"056-95a00ade695b","asset":"/ipp-docs/056-95a00ade695b.pdf","sha256":"95a00ade695b98a74eb499dcb17d4e44dba27f6634d6099f145a18eb314c639c","pages":7,"size":48997},
+    {"sourceLabel":"2019 / HNN-0QFE-AG22Q V1.pdf","catalog":"form-submission-documents.json","recordId":"form-submission-033-bffd8eec3c32","asset":"/form-submission-docs/form-submission-033-bffd8eec3c32.pdf","sha256":"bffd8eec3c32320f1857d416db4dd2516ffdcc9e03a198f37b4f4e523b59606e","pages":2,"size":257363},
+    {"sourceLabel":"2019 / HNQ-VZP8-TWNRX V1.pdf","catalog":"form-submission-documents.json","recordId":"form-submission-034-00d98416b456","asset":"/docs/2019-06-28-source-status.pdf","sha256":"00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5","pages":3,"size":47218},
+    {"sourceLabel":"2019 / HNV-XK97-EV0GR V1.pdf","catalog":"form-submission-documents.json","recordId":"form-submission-036-1873afe1dd72","asset":"/form-submission-docs/form-submission-036-1873afe1dd72.pdf","sha256":"1873afe1dd72faba2066ef0163012c2feb727ca7dbd92726fd0f45c8935e6697","pages":3,"size":43266},
+    {"sourceLabel":"2019 / POTW_Oversight_Table.pdf","catalog":"ipp-documents.json","recordId":"004-e09cc490d763","asset":"/ipp-docs/004-e09cc490d763.pdf","sha256":"e09cc490d763e734c7b8735143d937dca6f188a620956820ebe0c5e94258b2e7","pages":14,"size":48775},
+    {"sourceLabel":"2019 / SIU-CIU_List.pdf","catalog":"ipp-documents.json","recordId":"005-b1f62dff2c41","asset":"/ipp-docs/005-b1f62dff2c41.pdf","sha256":"b1f62dff2c41ae0e8d8e44deec46559e56518bb4c74a10237812493dbca44e03","pages":6,"size":48663},
+    {"sourceLabel":"More / BF14406317-1.pdf","catalog":"supplemental-documents.json","recordId":"157-5f0ef7342a71","asset":"/findings-docs/157-5f0ef7342a71.pdf","sha256":"5f0ef7342a71608a90b5232769a530ec6ead7211452ae6e9fed7480d492283eb","pages":2,"size":213991}
+  ],
+  "renderIdenticalDerivatives": [
+    {
+      "sourceLabel": "2017 / 2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
+      "sourceSha256": "9f5e538bda6e286fa77abc64a879bfbb7fb1980326559f17a6426ec16e248542",
+      "sourceSize": 365515,
+      "recordId": "100-850f00b27330",
+      "catalog": "supplemental-documents.json",
+      "canonicalSha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+      "canonicalSize": 344611,
+      "pages": 5,
+      "asset": "/findings-docs/100-850f00b27330.pdf",
+      "comparison": "Normalized text and all five pages are identical to the established canonical record; only PDF packaging differs."
+    },
+    {
+      "sourceLabel": "2017 / Application_2Q7-HQ21-P66B V1.pdf",
+      "sourceSha256": "c447fdfaf9cd97b5a9e1c543a370b77cff5c09c99c453f25a4b5ffe44ae30664",
+      "sourceSize": 137562,
+      "recordId": "080-6a540cadcdc6",
+      "catalog": "npdes-documents.json",
+      "canonicalSha256": "6a540cadcdc6fb9200560fcfd59897410932872fa6e48ca880ee5a8266642960",
+      "canonicalSize": 134638,
+      "pages": 22,
+      "asset": "/npdes-docs/080-6a540cadcdc6.pdf",
+      "comparison": "Normalized text and all twenty-two pages are identical to the established canonical record; only PDF packaging differs."
+    }
+  ],
+  "evidentiaryBoundary": "These records preserve pretreatment, permit, annual-report, oversight, SIU/CIU, PFAS-status and corporate-filing context already represented in the site. Repeated copies do not establish a new leachate delivery date or prove a PFAS migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The supplied files reconcile to eleven exact existing records and two already-verified render-identical derivatives, so they add no independently missing evidence."
+  }
+}

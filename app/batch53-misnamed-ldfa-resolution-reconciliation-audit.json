@@ -1,0 +1,52 @@
+{
+  "batch": "2026-09-02 misnamed signed LDFA resolution reconciliation intake 53",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared them with every established evidence catalog and published asset.",
+    "Rendered and visually inspected both image-only pages. The first page is substantive, the second page contains the 7-0 vote and signed certification, and no blank-page fallback is needed.",
+    "Confirmed that the supplied bytes exactly match supplemental record 167 and its public download. The file is the February 25, 2026 signed LDFA Carbon Regeneration Grant Resolution, not the HNF-P7H3-DCN87 version 1 IPP PFAS Interim Report named in the supplied filename.",
+    "Reused the established signed-resolution record and timeline event without changing the distinct July 30, 2018 HNF submission, publishing another copy or propagating the misleading filename."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 2,
+    "embeddedTextPages": 0,
+    "imageOnlyPages": 2,
+    "renderedPagesReviewed": 2,
+    "exactPublishedAssetHashMatches": 1,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "misleadingFilenamesCorrected": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "file": {
+    "suppliedName": "7212 HNF-P7H3-DCN87-Version 1.pdf",
+    "sha256": "322217e527587e94fa6f7fcfece6c678d520b7493a45a1f4b6636341e1857563",
+    "size": 35880,
+    "pages": 2,
+    "classification": "exact existing signed-resolution record reused under its verified identity",
+    "canonicalRecordId": "167-322217e52758",
+    "canonicalName": "2026-02-25 - Signed LDFA Carbon Regeneration Grant Resolution.pdf",
+    "canonicalAsset": "/findings-docs/167-322217e52758.pdf",
+    "canonicalSha256": "322217e527587e94fa6f7fcfece6c678d520b7493a45a1f4b6636341e1857563",
+    "canonicalSize": 35880,
+    "comparison": "The supplied PDF is byte-for-byte identical to supplemental record 167. Its two scanned pages contain the LDFA carbon-regeneration grant-support resolution and signed 7-0 adoption certification; they do not contain the HNF-P7H3-DCN87 IPP PFAS Interim Report.",
+    "verifiedContent": "The resolution states that the LDFA oversees the Kysor Superfund groundwater cleanup system, that two 5,000-pound carbon vessels had been repurposed for PFAS capture, that one vessel was no longer effective because of accumulated foulants, and that the board voted 7-0 to support a City NextCycle grant request for onsite carbon regeneration and PFAS destruction."
+  },
+  "distinctRecordProtected": {
+    "recordId": "form-submission-073-c84ac8484363",
+    "name": "2018-07-30 - IPP PFAS interim report - Submission HNF-P7H3-DCN87 v1.pdf",
+    "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
+    "pages": 3,
+    "reason": "This separate born-digital July 30, 2018 portal submission remains the canonical HNF-P7H3-DCN87 record and was not replaced by the misnamed two-page resolution."
+  },
+  "evidentiaryBoundary": "The signed resolution establishes the LDFA vote and the board's statements about the carbon-vessel condition and proposed grant-supported technology. It does not establish a grant award, contractor selection, completed regeneration, PFAS destruction results or verified treatment performance.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The supplied file exactly repeats an established resolution and does not supply the transaction-level leachate records, synchronized PFAS treatment data, receptor sampling series or modern source-to-receptor pathway evidence still requested."
+  }
+}

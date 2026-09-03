@@ -2443,6 +2443,54 @@ test("batch 52 suppresses the indexed render-identical PFAS approval-letter vari
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 53 resolves the misleading HNF filename to the exact signed LDFA resolution", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch53-misnamed-ldfa-resolution-reconciliation-audit.json"), "utf8"));
+  const supplemental = JSON.parse(await readFile(path.join(appDirectory, "supplemental-documents.json"), "utf8"));
+  const formSubmissions = JSON.parse(await readFile(path.join(appDirectory, "form-submission-documents.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 2);
+  assert.equal(audit.stats.embeddedTextPages, 0);
+  assert.equal(audit.stats.imageOnlyPages, 2);
+  assert.equal(audit.stats.renderedPagesReviewed, 2);
+  assert.equal(audit.stats.exactPublishedAssetHashMatches, 1);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.misleadingFilenamesCorrected, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const canonical = supplemental.find((row) => row.id === audit.file.canonicalRecordId);
+  assert.ok(canonical);
+  assert.equal(canonical.name, audit.file.canonicalName);
+  assert.equal(canonical.url, audit.file.canonicalAsset);
+  assert.equal(canonical.sha256, audit.file.canonicalSha256);
+  assert.equal(canonical.size, audit.file.canonicalSize);
+  assert.equal(canonical.pages, audit.file.pages);
+
+  const canonicalBytes = await readFile(path.join(publicDirectory, audit.file.canonicalAsset.replace(/^\//, "")));
+  assert.equal(canonicalBytes.length, audit.file.canonicalSize);
+  assert.equal(createHash("sha256").update(canonicalBytes).digest("hex"), audit.file.canonicalSha256);
+
+  const protectedHnf = formSubmissions.find((row) => row.id === audit.distinctRecordProtected.recordId);
+  assert.ok(protectedHnf);
+  assert.equal(protectedHnf.name, audit.distinctRecordProtected.name);
+  assert.equal(protectedHnf.sha256, audit.distinctRecordProtected.sha256);
+  assert.equal(protectedHnf.pages, audit.distinctRecordProtected.pages);
+  assert.notEqual(canonical.sha256, protectedHnf.sha256);
+
+  assert.match(audit.file.comparison, /do not contain the HNF-P7H3-DCN87 IPP PFAS Interim Report/i);
+  assert.match(pageSource, /LDFA unanimously supports PFAS carbon-regeneration grant/);
+  assert.match(pageSource, /Cadillac flags Wexford County Landfill as a probable PFAS source/);
+  assert.match(audit.evidentiaryBoundary, /does not establish a grant award/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

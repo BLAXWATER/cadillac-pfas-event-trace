@@ -1,9 +1,10 @@
 {
-  "sourceFileCount": 136,
-  "publishedFileCount": 130,
+  "sourceFileCount": 138,
+  "publishedFileCount": 132,
   "excludedFileCount": 6,
-  "includedBytes": 27615629,
+  "includedBytes": 27695574,
   "methods": [
+    "Read-only Microsoft Word render and content review of the 2018 groundwater-permit termination letter and April 2018 compliance-monitoring field worksheet",
     "Complete visual and value-level inspection of the two POTW Monitoring Data Summary workbooks",
     "Microsoft Word render and normalized-text comparison of the two original stormwater DOC sources",
     "Complete eight-sheet render and formula-error inspection of the original 2018 Cadillac WWTP CSI report workbook",

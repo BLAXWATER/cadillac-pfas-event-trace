@@ -1632,5 +1632,47 @@
         "relationship": "Same issuance letter indexed as correspondence record corr-035-446cf8df580f; the PDF includes an additional continuation stub page"
       }
     ]
+  },
+  {
+    "id": "131-0805573f14c9",
+    "name": "Wexford County Landfill Termination Issued Letter.doc",
+    "url": "/reference-data/131-0805573f14c9.doc",
+    "format": "DOC",
+    "type": "Original groundwater-permit termination letter source document",
+    "size": 62464,
+    "rows": null,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "0805573f14c99ddc315e3b14546cedbcc6b8d7361344f2686e237f5c3bdf120c",
+    "description": "Original editable one-page source for DEQ's July 2, 2018 certified letter transmitting the termination statement for Groundwater Discharge Permit GW1010342 to Wexford County Landfill. The document was opened read-only, confirmed free of a VBA project, rendered and visually inspected. Its letter body matches the indexed official PDF; the source-format record does not add a later delivery date or PFAS finding.",
+    "matchingSources": [
+      {
+        "name": "Wexford County Landfill Termination Issued Letter.pdf",
+        "relationship": "Official one-page PDF rendition of the same July 2, 2018 termination letter, indexed as Wexford record 100-7bc1b5bbf6f2"
+      }
+    ]
+  },
+  {
+    "id": "132-969c9e8282e7",
+    "name": "2018-04-27 - Cadillac WWTP Compliance Monitoring Field Sheet.docx",
+    "url": "/reference-data/132-969c9e8282e7.docx",
+    "format": "DOCX",
+    "type": "Original compliance-monitoring field worksheet",
+    "size": 17481,
+    "rows": null,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "969c9e8282e73ac354f4bb5465ae7f4ecc136107089bf89c4efaf97bd41607f1",
+    "description": "Original one-page compliance-monitoring field worksheet dated April 27, 2018 for Cadillac WWTP, permit MI0020257 and Outfall 001. It identifies planned composite and grab parameters, including conventional pollutants, metals, available cyanide and fecal coliform, but contains no recorded sample times, analytical results or PFAS analytes. The document was opened read-only, confirmed free of a VBA project, rendered and visually inspected. It is distinct from the indexed March 12, 2007 field sheet.",
+    "matchingSources": [
+      {
+        "name": "2007-03-12 - Compliance Monitoring Field Sheet.pdf",
+        "relationship": "Earlier field sheet for the same facility and permit; retained separately because its date, personnel, sampling instructions and requested parameters differ"
+      },
+      {
+        "name": "2018-06-15 - Cadillac WWTP Compliance Sampling Inspection Final Report.pdf",
+        "relationship": "Later report for the May 9-10, 2018 inspection; retained separately because this April 27 worksheet is a planning record without results"
+      }
+    ]
   }
 ]

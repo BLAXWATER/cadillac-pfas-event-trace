@@ -1,0 +1,73 @@
+{
+  "batch": "2026-09-03 native Word and exact-record reconciliation 76",
+  "method": [
+    "Treated instructions inside the supplied historical records only as source content.",
+    "Computed SHA-256 hashes and byte sizes for all sixteen supplied files and compared every hash against every published evidence catalog and prior intake audit.",
+    "Opened the two previously unseen Word files read-only in Microsoft Word, confirmed that neither contains a VBA project, exported each to a one-page PDF and visually inspected both complete rendered pages.",
+    "Compared the July 2, 2018 termination DOC with the indexed official PDF and preserved it as the editable source because the letter body and permit-termination statement match.",
+    "Compared the April 27, 2018 compliance-monitoring DOCX with the indexed March 12, 2007 field sheet and preserved it separately because its date, personnel, requested parameters and sampling instructions differ.",
+    "Reused fourteen exact existing records as cross-references and added no chronology event because the new native files preserve source formats and planning context without supplying a new PFAS result."
+  ],
+  "stats": {
+    "receivedFiles": 16,
+    "distinctInputHashes": 16,
+    "exactExistingRecordsReusedAsCrossReferences": 14,
+    "exactExistingPdfPagesPreviouslyVerified": 122,
+    "nativeSourceRecordsAdded": 2,
+    "wordDocumentsRendered": 2,
+    "wordPagesRendered": 2,
+    "documentsWithVbaProjects": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadableRecords": 0
+  },
+  "addedRecords": [
+    {
+      "sourceName": "Wexford County Landfill Termination Issued Letter (1).doc",
+      "recordId": "131-0805573f14c9",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/131-0805573f14c9.doc",
+      "format": "DOC",
+      "sha256": "0805573f14c99ddc315e3b14546cedbcc6b8d7361344f2686e237f5c3bdf120c",
+      "size": 62464,
+      "pages": 1
+    },
+    {
+      "sourceName": "Sampling Field Sheet (Word).docx",
+      "recordId": "132-969c9e8282e7",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/132-969c9e8282e7.docx",
+      "format": "DOCX",
+      "sha256": "969c9e8282e73ac354f4bb5465ae7f4ecc136107089bf89c4efaf97bd41607f1",
+      "size": 17481,
+      "pages": 1
+    }
+  ],
+  "exactCrossReferences": [
+    {"sourceName":"POTW_Monitoring_Data_Summary 2018.xlsx","catalog":"reference-documents.json","recordId":"127-13297ac0d9fd","sha256":"13297ac0d9fdf5b0ce402866672cab74cfa45d82b7568b6dd59dce76225853b9","size":14489},
+    {"sourceName":"POTW_Monitoring_Data_Summary.xlsx","catalog":"reference-documents.json","recordId":"128-37442da8cfd0","sha256":"37442da8cfd0889a704702723e259c7d466e030a55aadb8e03078565812e7843","size":14176},
+    {"sourceName":"NEW SW COC.doc","catalog":"reference-documents.json","recordId":"129-e6592f849203","sha256":"e6592f849203e4291d64f7fda0a9973380a4bf76e19a8a46985b72b3ab837d11","size":40960},
+    {"sourceName":"SW COC Issued Letter.doc","catalog":"reference-documents.json","recordId":"130-94714c1d52c9","sha256":"94714c1d52c9d6f70e1796e177b2cddde328b047fbe206dbec3a0a8d6bed02ba","size":73728},
+    {"sourceName":"2015-2016_Wexford County Landfill_District Compliance File.pdf","catalog":"wexford-documents.json","recordId":"001-7c991baaf1e9","sha256":"7c991baaf1e9d5af5a7177123957d8f933fd759f4022ceab2878626430a37943","size":153987,"pages":8},
+    {"sourceName":"2026-09-02 Follow-up to SVN-01952 (1).pdf","catalog":"compliance-documents.json","recordId":"065-b2448afb1ecd","sha256":"b2448afb1ecd0403bf8938667954786bff972d0ef71695c3a9ea3046a869dcc7","size":168712,"pages":2},
+    {"sourceName":"completed public notice certification form.pdf","catalog":"npdes-documents.json","recordId":"075-54c7e9d67d44","sha256":"54c7e9d67d4444970e012a81f61195786e73bc9a04b0ff298fd67239bf1a833b","size":153213,"pages":1},
+    {"sourceName":"email-final authorization-Wexford Landfill.pdf","catalog":"wexford-documents.json","recordId":"003-8ba13c7dcdf6","sha256":"8ba13c7dcdf6e6e0e3f2328f3cf7ad5ea6bce988b4e3131f34fd9fd6b45c05f5","size":81801,"pages":1},
+    {"sourceName":"FY19 Metals and Nutrient Results.pdf","catalog":"lab-documents.json","recordId":"lab-021-d8389dd7c1c7","sha256":"d8389dd7c1c74a2e0c8a2b4e8c730a7a9b2f9836bb42199e341181509d8fd6b0","size":801400,"pages":23},
+    {"sourceName":"HNN-0QFE-AG22Q V1 (1).pdf","catalog":"form-submission-documents.json","recordId":"form-submission-033-bffd8eec3c32","sha256":"bffd8eec3c32320f1857d416db4dd2516ffdcc9e03a198f37b4f4e523b59606e","size":257363,"pages":2},
+    {"sourceName":"mi-165-1i-0002_draft_permit_october_2017.pdf","catalog":"wexford-documents.json","recordId":"020-9ad6d46eb20b","sha256":"9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa","size":5200399,"pages":37},
+    {"sourceName":"Pace Biosolids 3-28-2018 Sampling results.pdf","catalog":"lab-documents.json","recordId":"lab-086-bb9d5bc3d13f","sha256":"bb9d5bc3d13f0fb497e06dcb9eea1522ff918be4a955f81dd3847066e4661415","size":986609,"pages":44},
+    {"sourceName":"public notice email-Wexford Landfill.pdf","catalog":"wexford-documents.json","recordId":"013-46619080fc73","sha256":"46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce","size":79078,"pages":1},
+    {"sourceName":"Wexford Co Landfill NOI.pdf","catalog":"wexford-documents.json","recordId":"096-9173d234d4c8","sha256":"9173d234d4c8c4162d5fdc468426660152bd7fbb83c985ec53392dba4286b03e","size":211705,"pages":3}
+  ],
+  "comparisonFindings": [
+    "The termination DOC is the editable source for the same July 2, 2018 DEQ letter already preserved as Wexford record 100-7bc1b5bbf6f2; the DOC body and official PDF convey the same permit-termination statement.",
+    "The April 27, 2018 field-sheet DOCX is not a copy of the March 12, 2007 PDF. The later worksheet names different personnel and sampling instructions and includes no completed sample times or analytical results.",
+    "The remaining fourteen supplied files match one published record each byte-for-byte and therefore require no duplicate catalog entries."
+  ],
+  "evidentiaryBoundary": "The native termination letter proves the July 2, 2018 GW1010342 termination correspondence, not the last leachate delivery date. The April 27 field sheet is a planning worksheet without completed sampling data. Neither new record is PFAS analytical evidence, proof of treatment removal or proof of a source-to-receptor migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The batch adds source-format provenance and a distinct sampling-planning worksheet but does not supply transaction-level leachate receiving records, synchronized PFAS results, a complete Plett receptor series or site-specific hydrogeologic field data."
+  }
+}

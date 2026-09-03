@@ -1,0 +1,70 @@
+{
+  "batch": "2026-09-03 pretreatment violation-notice reconciliation intake 56",
+  "method": [
+    "Computed each supplied PDF's SHA-256 hash, byte size and page count and compared all three against the established evidence catalogs, placement manifest and prior duplicate inventory.",
+    "Extracted embedded text and rendered all fifteen supplied pages. Every page is readable and all three first pages are substantive.",
+    "Confirmed that each supplied file is byte-for-byte identical to an established compliance-library record. The three distinct notices were retained once under their verified notice identities.",
+    "Reused the existing local VN-011108 source, localized the VN-012230 and SVN-01351 downloads and generated verified first-page previews for the newly local files.",
+    "Expanded the established VN-011108 event and added separate VN-012230 and SVN-01351 events so the notice, corrective-action and continuing-enforcement sequence is explicit."
+  ],
+  "stats": {
+    "receivedFiles": 3,
+    "distinctInputHashes": 3,
+    "pdfPagesReviewed": 15,
+    "embeddedTextPages": 15,
+    "renderedPagesReviewed": 15,
+    "exactExistingRecordsReusedAsCrossReferences": 3,
+    "recordsLocalized": 3,
+    "recordDescriptionsExpanded": 3,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 2,
+    "timelineEventsExpanded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "records": [
+    {
+      "suppliedName": "2020-10-22 VN-011108 Cadillac WWTP.pdf",
+      "recordId": "008-5fff30df4912",
+      "canonicalName": "2020-10-22 VN-011108 Cadillac WWTP.pdf",
+      "asset": "/compliance-docs/008-5fff30df4912.pdf",
+      "preview": "/first-page-previews/by-sha256/41414dfd7ee83c4c389e9cb4748994fddddb73651f5fe8d72d8b00130e39b125.webp",
+      "sha256": "5fff30df4912f649583326f3400e168647efa2d598af82a36b1d111ab10b5649",
+      "size": 128337,
+      "pages": 5,
+      "signedAt": "2020-10-22 15:41:19 EDT",
+      "verifiedFinding": "After reviewing Cadillac's AAR Rinse Tank file, EGLE identified deficiencies involving legal authority, applicable limits, sampling points, self-monitoring and notification requirements, overdue flow reporting that constituted significant noncompliance, analytical methods, representative composite sampling and enforcement of monitoring requirements."
+    },
+    {
+      "suppliedName": "2021-09-30 VN-012230 Cadillac WWTP.pdf",
+      "recordId": "010-96bc79c5922b",
+      "canonicalName": "2021-09-30 VN-012230 Cadillac WWTP.pdf",
+      "asset": "/compliance-docs/010-96bc79c5922b.pdf",
+      "preview": "/first-page-previews/by-sha256/bdc1a905a62c559248b60fa00f373877c5e28252c258e32c58e6c7a6b25a9f35.webp",
+      "sha256": "96bc79c5922bee4e8d9a9b4028d3cee3efe95c25a9e663f110d830c50dddfd9b",
+      "size": 297796,
+      "pages": 7,
+      "signedAt": "2021-09-30 12:25:07 EDT",
+      "verifiedFinding": "EGLE found that Cadillac had not implemented its approved Enforcement Response Plan for Cadillac Casting's significant noncompliance, had missed required cadmium resampling, lacked process, flow and production records, issued a deficient industrial-user permit, needed to reevaluate local limits after copper violations and may not have supplied sufficient staffing or training."
+    },
+    {
+      "suppliedName": "2023-04-27 SVN-01351 Cadillac WWTP.pdf",
+      "recordId": "011-afac7f09906b",
+      "canonicalName": "2023-04-27 SVN-01351 Cadillac WWTP.pdf",
+      "asset": "/compliance-docs/011-afac7f09906b.pdf",
+      "preview": "/first-page-previews/by-sha256/bed3e1d1d4616e04648f50bdf57d2b3372c3c6f6be33e25600cb06915535cbbb.webp",
+      "sha256": "afac7f09906bbd98b04e7c016d6e2a6d9bea3fa52b6235bb7e9496b640cc2753",
+      "size": 250612,
+      "pages": 3,
+      "signedAt": "2023-04-27 09:35:27 EDT",
+      "verifiedFinding": "EGLE stated that Cadillac had not returned to compliance after VN-012230 and that its 2022 annual report showed AAR Mobility Systems, Cadillac Casting and Rec Boats Holding in significant noncompliance without the enforceable orders required by Cadillac's approved Enforcement Response Plan."
+    }
+  ],
+  "evidentiaryBoundary": "These signed EGLE notices are primary evidence of the agency's pretreatment-program findings, required corrective actions and continuing-enforcement position. They do not independently prove pollutant pass-through at the Cadillac outfall, PFAS occurrence, an exact final leachate delivery date or a groundwater migration pathway to Plett Road.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The notices materially strengthen the compliance-control chronology but do not supply the receiving logs, synchronized influent-effluent-sludge PFAS data, Plett receptor-series records or source-to-receptor hydrogeologic evidence still requested."
+  }
+}

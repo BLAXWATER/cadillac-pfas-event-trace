@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 735);
-  assert.equal(externalFiles, 827);
+  assert.equal(localFiles, 738);
+  assert.equal(externalFiles, 824);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 76);
+  assert.equal(helperReferences.length, 79);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -2595,6 +2595,63 @@ test("batch 55 reuses three exact PFAS portal submissions and localizes the HNF 
   assert.match(pageSource, /EGLE summarizes statewide IPP PFAS progress/);
   assert.match(pageSource, /form-submission-docs\/form-submission-073-c84ac8484363\.pdf/);
   assert.match(audit.evidentiaryBoundary, /do not independently prove the exact final leachate delivery date/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 56 reuses and localizes three exact pretreatment violation notices", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch56-pretreatment-violation-notices-reconciliation-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 3);
+  assert.equal(audit.stats.distinctInputHashes, 3);
+  assert.equal(audit.stats.pdfPagesReviewed, 15);
+  assert.equal(audit.stats.embeddedTextPages, 15);
+  assert.equal(audit.stats.renderedPagesReviewed, 15);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 3);
+  assert.equal(audit.stats.recordsLocalized, 3);
+  assert.equal(audit.stats.recordDescriptionsExpanded, 3);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 2);
+  assert.equal(audit.stats.timelineEventsExpanded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  for (const expected of audit.records) {
+    const row = catalog.find((item) => item.id === expected.recordId);
+    assert.ok(row);
+    assert.equal(row.name, expected.canonicalName);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.sha256, expected.sha256);
+    assert.equal(row.size, expected.size);
+    assert.equal(row.pages, expected.pages);
+    assert.equal(previewManifest[expected.asset], expected.preview);
+
+    const sourceBytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(sourceBytes.length, expected.size);
+    assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), expected.sha256);
+
+    const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+
+    const placed = placement.records.find((item) => item.id === expected.recordId);
+    assert.ok(placed);
+    assert.equal(placed.archiveId, "compliance");
+    assert.equal(placed.url, expected.asset);
+    assert.equal(catalog.filter((item) => item.sha256 === expected.sha256).length, 1);
+  }
+
+  assert.match(catalog.find((item) => item.id === "008-5fff30df4912").description, /overdue flow reporting that constituted significant noncompliance/i);
+  assert.match(catalog.find((item) => item.id === "010-96bc79c5922b").description, /had not implemented its Enforcement Response Plan/i);
+  assert.match(catalog.find((item) => item.id === "011-afac7f09906b").description, /issued no enforceable orders/i);
+  assert.match(pageSource, /VN-011108 identifies systemic AAR permit and enforcement deficiencies/);
+  assert.match(pageSource, /VN-012230 finds Cadillac failed to enforce industrial-user compliance/);
+  assert.match(pageSource, /SVN-01351 says Cadillac's pretreatment violations continued/);
+  assert.match(audit.evidentiaryBoundary, /do not independently prove pollutant pass-through/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

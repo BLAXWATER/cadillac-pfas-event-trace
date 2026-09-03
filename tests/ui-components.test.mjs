@@ -143,7 +143,7 @@ test("normalizes every malformed pattern found in chronological source titles", 
 
 test("uses independent media handlers for document and image formats", async () => {
   const { sourceDocumentUrl, sourceDownloadUrl, sourceInlineUrl, sourceMediaKind, sourcePreviewUrl } = await vite.ssrLoadModule("/app/source-media.ts");
-  const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/a0ee86951939e0e9203f0c44829b13d89cf5d10e/public";
+  const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/f930d63655fe41489cb346522a9f841daaa8bd3b/public";
   const pinnedPdf = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/006-d8496c7348a6.pdf";
 
   assert.equal(sourceMediaKind("PDF"), "pdf");

@@ -18,7 +18,7 @@ after(async () => {
 });
 
 const complianceUrl = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/020-9d6ad860baaf.pdf";
-const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/a0ee86951939e0e9203f0c44829b13d89cf5d10e/public";
+const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/f930d63655fe41489cb346522a9f841daaa8bd3b/public";
 
 test("verified blank first pages start on page 2", async () => {
   const { pdfSourceKey, resolvePdfStartPage, withPdfStartPage } = await vite.ssrLoadModule("/app/pdf-source-url.ts");

@@ -348,14 +348,14 @@
   {
     "id": "008-5fff30df4912",
     "name": "2020-10-22 VN-011108 Cadillac WWTP.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/008-5fff30df4912.pdf",
+    "url": "/compliance-docs/008-5fff30df4912.pdf",
     "year": "2020",
     "type": "Violation notice",
     "format": "PDF",
     "pages": 5,
     "size": 128337,
     "sha256": "5fff30df4912f649583326f3400e168647efa2d598af82a36b1d111ab10b5649",
-    "description": "Formal notice or supporting record concerning an identified compliance violation."
+    "description": "October 22, 2020 Violation Notice VN-011108 following EGLE's September 25 reconnaissance evaluation of Cadillac's AAR Rinse Tank industrial-user file. The notice identifies deficiencies involving legal authority, applicable permit limits, sampling points, self-monitoring and discharge-notification requirements, overdue flow reporting that constituted significant noncompliance, approved analytical methods, representative composite sampling and enforcement of monitoring requirements."
   },
   {
     "id": "009-caef07e3ea35",
@@ -384,14 +384,14 @@
   {
     "id": "010-96bc79c5922b",
     "name": "2021-09-30 VN-012230 Cadillac WWTP.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/010-96bc79c5922b.pdf",
+    "url": "/compliance-docs/010-96bc79c5922b.pdf",
     "year": "2021",
     "type": "Violation notice",
     "format": "PDF",
     "pages": 7,
     "size": 297796,
     "sha256": "96bc79c5922bee4e8d9a9b4028d3cee3efe95c25a9e663f110d830c50dddfd9b",
-    "description": "Formal notice or supporting record concerning an identified compliance violation."
+    "description": "September 30, 2021 Violation Notice VN-012230 following EGLE's September 9 pretreatment compliance inspection. EGLE found that Cadillac had not implemented its Enforcement Response Plan for Cadillac Casting's significant noncompliance, had not completed required cadmium resampling, lacked process, flow and production records needed for a categorical determination, issued a deficient industrial-user permit, needed to reevaluate local limits after copper violations and may not have provided sufficient pretreatment staffing or training."
   },
   {
     "id": "024-c374d6648cc1",
@@ -444,14 +444,14 @@
   {
     "id": "011-afac7f09906b",
     "name": "2023-04-27 SVN-01351 Cadillac WWTP.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/011-afac7f09906b.pdf",
+    "url": "/compliance-docs/011-afac7f09906b.pdf",
     "year": "2023",
     "type": "Violation notice",
     "format": "PDF",
     "pages": 3,
     "size": 250612,
     "sha256": "afac7f09906bbd98b04e7c016d6e2a6d9bea3fa52b6235bb7e9496b640cc2753",
-    "description": "Formal notice or supporting record concerning an identified compliance violation."
+    "description": "April 27, 2023 Second Violation Notice SVN-01351 stating that Cadillac had not returned to compliance after VN-012230. EGLE reported that Cadillac's 2022 annual report showed AAR Mobility Systems, Cadillac Casting and Rec Boats Holding in significant noncompliance for reporting or pretreatment standards, while Cadillac issued no enforceable orders required by its approved Enforcement Response Plan."
   },
   {
     "id": "026-42e2ef660e4e",

@@ -2490,7 +2490,7 @@
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "2020-10-22 VN-011108 Cadillac WWTP.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/008-5fff30df4912.pdf",
+      "url": "/compliance-docs/008-5fff30df4912.pdf",
       "sha256": "5fff30df4912f649583326f3400e168647efa2d598af82a36b1d111ab10b5649",
       "size": 128337
     },
@@ -2512,7 +2512,7 @@
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "2021-09-30 VN-012230 Cadillac WWTP.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/010-96bc79c5922b.pdf",
+      "url": "/compliance-docs/010-96bc79c5922b.pdf",
       "sha256": "96bc79c5922bee4e8d9a9b4028d3cee3efe95c25a9e663f110d830c50dddfd9b",
       "size": 297796
     },
@@ -2523,7 +2523,7 @@
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "2023-04-27 SVN-01351 Cadillac WWTP.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/011-afac7f09906b.pdf",
+      "url": "/compliance-docs/011-afac7f09906b.pdf",
       "sha256": "afac7f09906bbd98b04e7c016d6e2a6d9bea3fa52b6235bb7e9496b640cc2753",
       "size": 250612
     },

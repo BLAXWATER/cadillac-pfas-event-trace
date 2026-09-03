@@ -3356,6 +3356,36 @@ test("batch 69 reconciles year-folder records without duplicating established ev
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 70 reuses the exact September 2009 special-meeting minutes without duplicating it", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch70-september-2009-minutes-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.suppliedPathsAvailableAtReview, 0);
+  assert.equal(audit.stats.recoveredMatchingInputs, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesRenderedAndReviewed, 6);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+
+  const expected = audit.exactCrossReference;
+  const catalog = catalogs.get(expected.catalog);
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].id, expected.recordId);
+  assert.equal(matches[0].pages, expected.pages);
+  assert.equal(matches[0].size, expected.size);
+  assert.equal(placement.records.filter((item) => item.sha256 === expected.sha256).length, 1);
+  assert.match(expected.finding, /motion 2009\.216/i);
+  assert.match(audit.evidentiaryBoundary, /not the executed agreement/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

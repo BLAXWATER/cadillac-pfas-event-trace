@@ -1,11 +1,22 @@
 {
   "stats": {
-    "suppliedFiles": 755,
+    "suppliedFiles": 757,
     "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 169,
-    "duplicateCopiesSuppressed": 46,
+    "exactExistingRecordsReused": 170,
+    "duplicateCopiesSuppressed": 47,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 478733379,
+    "publishedBytes": 479005692,
+    "latestBatch54FilesReviewed": 2,
+    "latestBatch54DistinctInputHashes": 1,
+    "latestBatch54PdfPagesReviewed": 4,
+    "latestBatch54EmbeddedTextPages": 4,
+    "latestBatch54RenderedPagesReviewed": 4,
+    "latestBatch54ExactExistingRecordsReusedAsCrossReferences": 1,
+    "latestBatch54DuplicateCopiesSuppressed": 1,
+    "latestBatch54RecordsLocalized": 1,
+    "latestBatch54RecordsAdded": 0,
+    "latestBatch54TimelineEventsAdded": 0,
+    "latestBatch54RequirementsClosed": 0,
     "latestBatch53FilesReviewed": 1,
     "latestBatch53DistinctInputHashes": 1,
     "latestBatch53PdfPagesReviewed": 2,
@@ -338,6 +349,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 intake 54: both supplied two-page American Waste PFAS Survey files passed hash, embedded-text, readability and complete rendered-page review and are byte-for-byte identical to each other and established PFAS record 002. The canonical May 21, 2018 survey was retained once, localized for anonymous preview and download, and expanded with its verified 18-30 percent industrial-waste estimate, generator-record limitation and no-leachate-analysis statement. The claim-bearing second filename was not propagated as a source title.",
     "September 2 intake 53: the supplied two-page file passed hash, image-only-page and complete rendered-page review and exactly matches the signed February 25, 2026 LDFA Carbon Regeneration Grant Resolution already published as supplemental record 167. Its HNF-P7H3-DCN87 filename is incorrect and was not propagated; the distinct three-page July 30, 2018 HNF portal submission remains unchanged.",
     "September 2 intake 52: the supplied three-page PFAS Interim and Summary Report approval letter passed hash, embedded-text, readability and complete rendered-page review. Its hash is already present in the immutable source manifests, while all three page renders and normalized text match the established March 4, 2019 timeline source. The repeat variant was suppressed; the existing event preserves the confirmed-source finding and the audit preserves the letter's express non-waiver limitation.",
     "September 2 intake 51: the supplied 16-page SVN-01952 correspondence COPY passed hash, embedded-text, readability and complete rendered-page review. Its hash exactly matches the MiEnviro-primary export reviewed in intake 15, while all 16 page renders and normalized text match canonical compliance record 012. The repeated render-identical export was suppressed; blank-looking internal attachment separator pages 2 and 11 were preserved, and no first-page fallback was needed.",
@@ -383,6 +395,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "American Waste PFAS Survey exact-copy reconciliation and localization",
+      "reason": "Both supplied PDFs and all four supplied page instances are exact repeats of established PFAS record 002. The record was retained once under its signed May 21, 2018 identity and its former personal-account GitHub delivery was replaced with a verified local preview and download. The second filename's 18-30 percent characterization is supported by page 2 but is not a separate source title or a distinct document."
+    },
     {
       "name": "Misnamed HNF-P7H3-DCN87 file resolved as signed LDFA resolution",
       "reason": "The supplied bytes exactly match the established two-page signed February 25, 2026 LDFA Carbon Regeneration Grant Resolution, including its 7-0 vote and chairperson certification. They do not match or contain the separate three-page July 30, 2018 HNF-P7H3-DCN87 IPP PFAS Interim Report. The resolution is reused under its verified identity, the misleading filename is suppressed and neither record is overwritten or duplicated."

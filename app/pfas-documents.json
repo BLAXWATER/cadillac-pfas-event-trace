@@ -14,8 +14,8 @@
   },
   {
     "id": "002-aca419b24a35",
-    "name": "04 - PFAS Monitoring_2018_American Waste PFAS Survey.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/8d7d759d5377b74e9aee5c7b13da2252fc1cde53/public/pfas-docs/002-aca419b24a35.pdf",
+    "name": "2018-05-21 - American Waste PFAS Survey.pdf",
+    "url": "/pfas-docs/002-aca419b24a35.pdf",
     "year": "2018",
     "category": "PFAS monitoring",
     "type": "PFAS source-screening record",
@@ -23,7 +23,7 @@
     "pages": 2,
     "size": 272313,
     "sha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
-    "description": "Completed Cadillac IPP PFAS screening survey for American Waste. The record evaluates potential PFAS-source activities, including landfill-leachate discharge questions."
+    "description": "Signed May 21, 2018 Cadillac IPP PFAS survey for American Waste/Wexford County Landfill. The respondent states that the landfill was accepting waste, estimates industrial waste at 18-30 percent of incoming waste, describes incomplete generator information for loads delivered by other haulers and states that the leachate had not been analyzed for PFAS. These are respondent statements, not transaction-level delivery records or analytical results."
   },
   {
     "id": "003-f701e912ca3d",

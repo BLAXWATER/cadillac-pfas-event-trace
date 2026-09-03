@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "3fa243dc88da989708946bd155c320979d7ed6f7dd118379cf5bfebdf82cb22e",
+  "catalogFingerprint": "3ccb76760e540dde79e1799ad1d0862a70b5e5ab259219d4fb0ead719b079b5c",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",

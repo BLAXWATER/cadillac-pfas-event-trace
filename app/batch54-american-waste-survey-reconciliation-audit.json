@@ -1,0 +1,64 @@
+{
+  "batch": "2026-09-02 American Waste PFAS Survey reconciliation intake 54",
+  "method": [
+    "Computed both supplied PDFs' SHA-256 hashes, byte sizes and page counts and compared them with each other, every established evidence catalog and prior duplicate indexes.",
+    "Extracted embedded text and rendered all four supplied page instances. Both first pages are substantive and each corresponding page render is identical.",
+    "Confirmed that both supplied files are byte-for-byte identical to established PFAS record 002, retained one canonical record and suppressed the second copy.",
+    "Replaced the canonical record's former personal-account GitHub URL with an exact local PDF and verified first-page preview, without adding another record or timeline event."
+  ],
+  "stats": {
+    "receivedFiles": 2,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 4,
+    "uniquePdfPagesReviewed": 2,
+    "embeddedTextPages": 4,
+    "renderedPagesReviewed": 4,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "duplicateCopiesSuppressed": 1,
+    "recordsLocalized": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "suppliedFiles": [
+    {
+      "name": "American Waste PFAS Survey.pdf",
+      "sha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
+      "size": 272313,
+      "pages": 2,
+      "decision": "Exact canonical binary reused."
+    },
+    {
+      "name": "American Waste PFAS Survey -18-30% was industrial.pdf",
+      "sha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
+      "size": 272313,
+      "pages": 2,
+      "decision": "Byte-identical repeat suppressed; the claim-bearing filename was not used as source metadata."
+    }
+  ],
+  "canonicalRecord": {
+    "recordId": "002-aca419b24a35",
+    "catalog": "pfas-documents.json",
+    "canonicalName": "2018-05-21 - American Waste PFAS Survey.pdf",
+    "asset": "/pfas-docs/002-aca419b24a35.pdf",
+    "preview": "/first-page-previews/by-sha256/ff6d032e7b1ea9d71427b149151199a1177f24acc1296742d7cc809c6de1c0bd.webp",
+    "sha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
+    "size": 272313,
+    "pages": 2
+  },
+  "verifiedFindings": [
+    "The survey is signed May 21, 2018 by Vicki Garon as Landfill Engineer for Wexford County Landfill, LLC.",
+    "The respondent states that the landfill was currently accepting waste and that ownership began in fall 2011, limiting its knowledge of waste accepted under prior county control.",
+    "The respondent defines industrial waste broadly and estimates that industrial waste represented between 18 and 30 percent of incoming waste.",
+    "The respondent says it records generator names for waste it transports but does not necessarily have equivalent information for waste delivered by other hauling companies and does not track those shipments by SIC code or another method that could answer the requested percentages by source type.",
+    "The respondent states that it had not analyzed its leachate for PFAS as of the signed survey date."
+  ],
+  "evidentiaryBoundary": "The survey records the landfill respondent's statements and an estimated overall industrial-waste share. It does not identify transaction-level deliveries, prove which industrial loads contained PFAS, provide historical records from before fall 2011, or contain leachate analytical results.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The survey does not close the receiving-history, synchronized treatment-data, Plett receptor-series or source-to-receptor pathway requests. Its generator-record limitation reinforces why transaction-level manifests, hauler tickets, invoices and WWTP receiving logs remain necessary."
+  }
+}

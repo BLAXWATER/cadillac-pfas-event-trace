@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 733);
-  assert.equal(externalFiles, 829);
+  assert.equal(localFiles, 734);
+  assert.equal(externalFiles, 828);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -2488,6 +2488,57 @@ test("batch 53 resolves the misleading HNF filename to the exact signed LDFA res
   assert.match(pageSource, /LDFA unanimously supports PFAS carbon-regeneration grant/);
   assert.match(pageSource, /Cadillac flags Wexford County Landfill as a probable PFAS source/);
   assert.match(audit.evidentiaryBoundary, /does not establish a grant award/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 54 localizes one verified American Waste survey and suppresses its renamed copy", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch54-american-waste-survey-reconciliation-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "pfas-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 2);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 4);
+  assert.equal(audit.stats.uniquePdfPagesReviewed, 2);
+  assert.equal(audit.stats.embeddedTextPages, 4);
+  assert.equal(audit.stats.renderedPagesReviewed, 4);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.duplicateCopiesSuppressed, 1);
+  assert.equal(audit.stats.recordsLocalized, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+  assert.equal(audit.suppliedFiles[0].sha256, audit.suppliedFiles[1].sha256);
+
+  const row = catalog.find((item) => item.id === audit.canonicalRecord.recordId);
+  assert.ok(row);
+  assert.equal(row.name, audit.canonicalRecord.canonicalName);
+  assert.equal(row.url, audit.canonicalRecord.asset);
+  assert.equal(row.sha256, audit.canonicalRecord.sha256);
+  assert.equal(row.size, audit.canonicalRecord.size);
+  assert.equal(row.pages, audit.canonicalRecord.pages);
+  assert.match(row.description, /18-30 percent of incoming waste/i);
+  assert.match(row.description, /other haulers/i);
+  assert.match(row.description, /had not been analyzed for PFAS/i);
+
+  const bytes = await readFile(path.join(publicDirectory, audit.canonicalRecord.asset.replace(/^\//, "")));
+  assert.equal(bytes.length, audit.canonicalRecord.size);
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), audit.canonicalRecord.sha256);
+  assert.equal(previewManifest[audit.canonicalRecord.asset], audit.canonicalRecord.preview);
+  const previewBytes = await readFile(path.join(publicDirectory, audit.canonicalRecord.preview.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(audit.canonicalRecord.preview, ".webp"));
+
+  const placed = placement.records.find((item) => item.id === audit.canonicalRecord.recordId);
+  assert.ok(placed);
+  assert.equal(placed.archiveId, "pfas");
+  assert.equal(placed.name, audit.canonicalRecord.canonicalName);
+  assert.equal(placed.url, audit.canonicalRecord.asset);
+  assert.equal(catalog.filter((item) => item.sha256 === audit.canonicalRecord.sha256).length, 1);
+  assert.match(audit.evidentiaryBoundary, /does not identify transaction-level deliveries/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

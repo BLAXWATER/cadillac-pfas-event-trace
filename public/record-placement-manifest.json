@@ -11674,8 +11674,8 @@
       "archiveLabel": "PFAS monitoring",
       "catalog": "pfas-documents.json",
       "sectionId": "pfas-library-title",
-      "name": "04 - PFAS Monitoring_2018_American Waste PFAS Survey.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/8d7d759d5377b74e9aee5c7b13da2252fc1cde53/public/pfas-docs/002-aca419b24a35.pdf",
+      "name": "2018-05-21 - American Waste PFAS Survey.pdf",
+      "url": "/pfas-docs/002-aca419b24a35.pdf",
       "sha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
       "size": 272313
     },

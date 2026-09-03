@@ -774,5 +774,17 @@
         "relationship": "Original workbook attachment represented in the report tables"
       }
     ]
+  },
+  {
+    "id": "065-b2448afb1ecd",
+    "name": "2026-09-02 - EGLE Follow-up to SVN-01952 - Local Limits.pdf",
+    "url": "/compliance-docs/065-b2448afb1ecd.pdf",
+    "year": "2026",
+    "type": "Pretreatment compliance correspondence",
+    "format": "PDF",
+    "pages": 2,
+    "size": 168712,
+    "sha256": "b2448afb1ecd0403bf8938667954786bff972d0ef71695c3a9ea3046a869dcc7",
+    "description": "EGLE's September 2, 2026 follow-up to Second Violation Notice SVN-01952. WRD finds Cadillac's proposed daily maximum local limits for benzidine (0.6 µg/L), beryllium (17 µg/L) and phenol (1,737 µg/L) approvable, but requires an attorney certification and certified adopted legal authorities by December 31, 2026 before final approval. The letter also states that WRD's review did not include worker-health-and-safety compliance under 40 CFR 403.5(b)(7)."
   }
 ]

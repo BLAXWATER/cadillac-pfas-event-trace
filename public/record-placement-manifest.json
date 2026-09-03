@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1569,
+  "recordCount": 1570,
   "archiveCount": 13,
   "archives": [
     {
@@ -57,7 +57,7 @@
       "label": "Compliance & enforcement",
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
-      "count": 64
+      "count": 65
     },
     {
       "archiveId": "correspondence",
@@ -3109,6 +3109,17 @@
       "url": "/compliance-docs/064-8ccde0a7d5d7.pdf",
       "sha256": "8ccde0a7d5d7ba5f773534ebeaa7dfed890e91f1744adb61d70350dd0f821318",
       "size": 131736
+    },
+    {
+      "id": "065-b2448afb1ecd",
+      "archiveId": "compliance",
+      "archiveLabel": "Compliance & enforcement",
+      "catalog": "compliance-documents.json",
+      "sectionId": "compliance-library-title",
+      "name": "2026-09-02 - EGLE Follow-up to SVN-01952 - Local Limits.pdf",
+      "url": "/compliance-docs/065-b2448afb1ecd.pdf",
+      "sha256": "b2448afb1ecd0403bf8938667954786bff972d0ef71695c3a9ea3046a869dcc7",
+      "size": 168712
     },
     {
       "id": "corr-001-4d33f697af5e",

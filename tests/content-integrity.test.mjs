@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 752);
+  assert.equal(localFiles, 753);
   assert.equal(externalFiles, 817);
 });
 
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 81);
+  assert.equal(helperReferences.length, 82);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1569);
+  assert.equal(recordCount, 1570);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1569);
+  assert.equal(records.length, 1570);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1415);
-  assert.equal(audit.stats.pdfPages, 20369);
+  assert.equal(audit.stats.pdfRecords, 1416);
+  assert.equal(audit.stats.pdfPages, 20371);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -290,14 +290,14 @@ test("compliance archive audit preserves distinct records and excludes verified 
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "compliance-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 119);
-  assert.equal(audit.stats.finalDistinctRecords, 64);
+  assert.equal(audit.stats.sourceFilesReviewed, 120);
+  assert.equal(audit.stats.finalDistinctRecords, 65);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 1);
   assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 6);
   assert.equal(audit.stats.analystAuthoredReportsExcluded, 4);
-  assert.equal(audit.stats.reviewedPages, 796);
+  assert.equal(audit.stats.reviewedPages, 798);
   assert.equal(audit.stats.ocrPages, 327);
   assert.equal(audit.stats.latestAllDocsIntakeFiles, 23);
   assert.equal(audit.stats.latestAllDocsActualDuplicateCopiesSuppressed, 1);
@@ -3534,6 +3534,67 @@ test("batch 74 reconciles nine Wexford County Board minutes without duplicating 
   assert.match(audit.evidentiaryBoundary, /no PFAS analytical results/i);
   assert.match(audit.evidentiaryBoundary, /exact final leachate delivery date/i);
   assert.match(audit.evidentiaryBoundary, /site-specific proof of a PFAS migration pathway/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 75 adds the distinct SVN-01952 follow-up while preserving the conditions on final approval", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch75-svn01952-followup-intake-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 2);
+  assert.equal(audit.stats.embeddedTextPages, 2);
+  assert.equal(audit.stats.renderedPagesReviewed, 2);
+  assert.equal(audit.stats.exactExistingRecords, 0);
+  assert.equal(audit.stats.recordsAdded, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const expected = audit.addedRecord;
+  const row = catalog.find((item) => item.id === expected.recordId);
+  assert.ok(row);
+  assert.equal(row.name, expected.canonicalName);
+  assert.equal(row.url, expected.asset);
+  assert.equal(row.sha256, expected.sha256);
+  assert.equal(row.size, expected.size);
+  assert.equal(row.pages, expected.pages);
+  assert.equal(row.type, expected.classification);
+  assert.equal(catalog.filter((item) => item.sha256 === expected.sha256).length, 1);
+  assert.match(row.description, /0\.6 µg\/L/);
+  assert.match(row.description, /17 µg\/L/);
+  assert.match(row.description, /1,737 µg\/L/);
+  assert.match(row.description, /before final approval/i);
+  assert.match(row.description, /did not include worker-health-and-safety compliance/i);
+
+  const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+  assert.equal(bytes.length, expected.size);
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+  assert.equal(previewManifest[expected.asset], expected.preview);
+  const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+
+  const placed = placement.records.find((item) => item.id === expected.recordId);
+  assert.ok(placed);
+  assert.equal(placed.archiveId, "compliance");
+  assert.equal(placed.url, expected.asset);
+
+  assert.match(pageSource, /EGLE finds three proposed toxic local limits approvable/);
+  assert.match(pageSource, /0\.6 µg\/L for benzidine/);
+  assert.match(pageSource, /17 µg\/L for beryllium/);
+  assert.match(pageSource, /1,737 µg\/L for phenol/);
+  assert.match(pageSource, /not final approval/i);
+  assert.match(pageSource, /December 31, 2026/);
+  assert.match(pageSource, /did not include worker-health-and-safety compliance/);
+  assert.match(audit.evidentiaryBoundary, /not final approval/i);
+  assert.match(audit.evidentiaryBoundary, /not.*closure of SVN-01952/i);
+  assert.match(audit.evidentiaryBoundary, /not.*PFAS analytical evidence/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

@@ -1,0 +1,45 @@
+{
+  "batch": "2026-09-03 SVN-01952 follow-up intake 75",
+  "method": [
+    "Treated instructions inside the supplied PDF only as source content.",
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared them against every published evidence catalog, placement record and prior intake audit.",
+    "Extracted embedded text and rendered both pages for visual review; both pages are substantive and readable.",
+    "Confirmed that the September 2 letter is a distinct agency record issued after the May 22 Second Violation Notice and Cadillac's August 20 approval request.",
+    "Added the exact source once to the compliance library, generated its first-page preview and added one bounded timeline event that distinguishes approvability from final approval.",
+    "Rechecked the evidence-request queue and closed no requirement because the letter does not supply the remaining delivery-history, PFAS analytical or migration-pathway evidence."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 2,
+    "embeddedTextPages": 2,
+    "renderedPagesReviewed": 2,
+    "exactExistingRecords": 0,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "addedRecord": {
+    "suppliedName": "2026-09-02 Follow-up to SVN-01952 (1).pdf",
+    "recordId": "065-b2448afb1ecd",
+    "canonicalName": "2026-09-02 - EGLE Follow-up to SVN-01952 - Local Limits.pdf",
+    "catalog": "compliance-documents.json",
+    "asset": "/compliance-docs/065-b2448afb1ecd.pdf",
+    "preview": "/first-page-previews/by-sha256/829ef2005085629a3a2d6d6593a2133f897c55aca5240644c2b8cd1aed415f13.webp",
+    "sha256": "b2448afb1ecd0403bf8938667954786bff972d0ef71695c3a9ea3046a869dcc7",
+    "size": 168712,
+    "pages": 2,
+    "classification": "Pretreatment compliance correspondence",
+    "issuedDate": "2026-09-02",
+    "created": "2026-09-02 13:18:54 EDT",
+    "verifiedFinding": "EGLE found the proposed daily maximum local limits for benzidine (0.6 µg/L), beryllium (17 µg/L) and phenol (1,737 µg/L) approvable. Final approval still requires attorney certification and certified adopted legal authorities by December 31, 2026, and WRD's review did not include worker-health-and-safety compliance under 40 CFR 403.5(b)(7)."
+  },
+  "evidentiaryBoundary": "The letter is primary evidence of EGLE's September 2, 2026 review position and the remaining steps for final approval. It is not final approval, proof that Cadillac adopted the limits, a closure of SVN-01952, PFAS analytical evidence, transaction-level landfill receiving history or proof of a source-to-receptor groundwater migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The letter advances the pretreatment compliance chronology but does not provide the still-missing leachate manifests and receiving logs, synchronized influent-effluent-sludge PFAS data, complete Plett receptor series or site-specific hydrogeologic investigation."
+  }
+}

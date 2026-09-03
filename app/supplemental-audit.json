@@ -1,11 +1,17 @@
 {
   "stats": {
-    "suppliedFiles": 818,
+    "suppliedFiles": 819,
     "newDistinctRecords": 167,
     "exactExistingRecordsReused": 224,
     "duplicateCopiesSuppressed": 49,
     "outOfScopeExcluded": 367,
     "publishedBytes": 480058284,
+    "latestBatch75FilesReviewed": 1,
+    "latestBatch75DistinctInputHashes": 1,
+    "latestBatch75PdfPagesReviewed": 2,
+    "latestBatch75RecordsAdded": 1,
+    "latestBatch75TimelineEventsAdded": 1,
+    "latestBatch75RequirementsClosed": 0,
     "latestBatch74FilesReviewed": 9,
     "latestBatch74DistinctInputHashes": 9,
     "latestBatch74PdfPagesReviewed": 46,

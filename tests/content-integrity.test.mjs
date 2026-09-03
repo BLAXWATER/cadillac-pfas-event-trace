@@ -2255,6 +2255,15 @@ test("batch 47 localizes the complete TestAmerica package and preserves the limi
   assert.match(pageSource, /making it through the plant/);
   assert.match(pageSource, /Since this leachate is a trucked in source we could stop it at any time/);
   assert.match(pageSource, /does not establish that Cadillac actually stopped/);
+  assert.match(pageSource, /<strong>PFOS 120 ng\/L<\/strong>/);
+  assert.match(pageSource, /<strong>PFOA 590 ng\/L<\/strong>/);
+  assert.match(pageSource, /<strong>PFHxS 610 ng\/L<\/strong>/);
+  assert.match(pageSource, /<strong>PFBS 950 ng\/L<\/strong>/);
+  assert.match(pageSource, /<strong>PFHxA 2,100 ng\/L<\/strong>/);
+  assert.match(pageSource, /<strong>PFPeA 610 ng\/L<\/strong>/);
+  assert.match(pageSource, /<strong>PFPeS 160 ng\/L<\/strong>/);
+  assert.match(pageSource, /duplicate leachate sample plus equipment, field and method blanks/);
+  assert.match(pageSource, /do not by themselves establish passage through the WWTP/);
   assert.match(audit.evidentiaryBoundary, /not an actual cessation decision or final delivery date/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });

@@ -828,9 +828,9 @@ const events: Event[] = [
     kind: "sampling",
     category: "06 · Lab results",
     title: "Wexford leachate shows a strong PFAS burden",
-    finding: <>TestAmerica job J17646-1 reports the landfill leachate PFAS panel, including approximately <strong>590 ng/L PFOA and 120 ng/L PFOS.</strong></>,
-    significance: "Provides the upstream profile for comparison with WWTP effluent and receptor-water results.",
-    sources: [pdf("J17646-1 UDS Level 2 Report Final Report (Leachate).pdf", "2018-10-03-j17646-leachate", 23, "Full TestAmerica analytical package for leachate collected October 3, 2018.", {
+    finding: <>TestAmerica job J17646-1 reports the October 3 landfill leachate sample at <strong>PFOS 120 ng/L</strong>, <strong>PFOA 590 ng/L</strong>, <strong>PFHxS 610 ng/L</strong>, <strong>PFBS 950 ng/L</strong>, <strong>PFHxA 2,100 ng/L</strong>, <strong>PFPeA 610 ng/L</strong> and <strong>PFPeS 160 ng/L</strong>. The package also includes a duplicate leachate sample plus equipment, field and method blanks.</>,
+    significance: "Provides the upstream profile for comparison with WWTP effluent and receptor-water results. The duplicate reports the same general PFAS pattern, while the equipment, field and method blanks report the listed compounds below their respective reporting limits. These source results do not by themselves establish passage through the WWTP.",
+    sources: [pdf("J17646-1 UDS Level 2 Report Final Report (Leachate).pdf", "2018-10-03-j17646-leachate", 23, "Full TestAmerica analytical package for leachate collected October 3, 2018, including primary and duplicate leachate samples plus equipment, field and method blanks.", {
       eventStamp: "2018-10-03 09:30–09:35 · zone not stated",
       basis: "Laboratory sample collection records",
       created: "2018-10-29 06:51:04 CDT",

@@ -69,7 +69,13 @@ test("renders stable site metadata and source policy", async () => {
   assert.match(html, /field-measurements\.csv/i);
   assert.match(html, /channel-measurements\.csv/i);
   assert.match(html, /monitoring-location-metadata\.csv/i);
-  assert.match(html, /<strong>590 ng\/L PFOA and 120 ng\/L PFOS\.<\/strong>/i);
+  assert.match(html, /<strong>PFOS 120 ng\/L<\/strong>/i);
+  assert.match(html, /<strong>PFOA 590 ng\/L<\/strong>/i);
+  assert.match(html, /<strong>PFHxS 610 ng\/L<\/strong>/i);
+  assert.match(html, /<strong>PFBS 950 ng\/L<\/strong>/i);
+  assert.match(html, /<strong>PFHxA 2,100 ng\/L<\/strong>/i);
+  assert.match(html, /<strong>PFPeA 610 ng\/L<\/strong>/i);
+  assert.match(html, /<strong>PFPeS 160 ng\/L<\/strong>/i);
   assert.match(html, /class="source-thumbnail\s+source-thumbnail--(?:pdf|html|image|spreadsheet|office|archive|other)"/i);
   for (const sourcePath of ["/findings-docs/008-5b67e1ed1d5c.pdf", "/npdes-docs/076-a611a75485cf.pdf"]) {
     const previewName = path.basename(firstPagePreviewManifest[sourcePath], ".webp");

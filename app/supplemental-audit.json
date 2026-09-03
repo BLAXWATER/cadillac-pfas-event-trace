@@ -1,11 +1,24 @@
 {
   "stats": {
-    "suppliedFiles": 753,
+    "suppliedFiles": 754,
     "newDistinctRecords": 167,
     "exactExistingRecordsReused": 168,
-    "duplicateCopiesSuppressed": 45,
+    "duplicateCopiesSuppressed": 46,
     "outOfScopeExcluded": 367,
     "publishedBytes": 478733379,
+    "latestBatch52FilesReviewed": 1,
+    "latestBatch52DistinctInputHashes": 1,
+    "latestBatch52PdfPagesReviewed": 3,
+    "latestBatch52EmbeddedTextPages": 3,
+    "latestBatch52RenderedPagesReviewed": 3,
+    "latestBatch52RenderExactCanonicalPages": 3,
+    "latestBatch52NormalizedTextExactCanonicalPages": 3,
+    "latestBatch52ExactPreviouslyIndexedInputHashes": 1,
+    "latestBatch52RenderIdenticalExistingVariants": 1,
+    "latestBatch52DuplicateCopiesSuppressed": 1,
+    "latestBatch52RecordsAdded": 0,
+    "latestBatch52TimelineEventsAdded": 0,
+    "latestBatch52RequirementsClosed": 0,
     "latestBatch51FilesReviewed": 1,
     "latestBatch51DistinctInputHashes": 1,
     "latestBatch51PdfPagesReviewed": 16,
@@ -313,6 +326,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 intake 52: the supplied three-page PFAS Interim and Summary Report approval letter passed hash, embedded-text, readability and complete rendered-page review. Its hash is already present in the immutable source manifests, while all three page renders and normalized text match the established March 4, 2019 timeline source. The repeat variant was suppressed; the existing event preserves the confirmed-source finding and the audit preserves the letter's express non-waiver limitation.",
     "September 2 intake 51: the supplied 16-page SVN-01952 correspondence COPY passed hash, embedded-text, readability and complete rendered-page review. Its hash exactly matches the MiEnviro-primary export reviewed in intake 15, while all 16 page renders and normalized text match canonical compliance record 012. The repeated render-identical export was suppressed; blank-looking internal attachment separator pages 2 and 11 were preserved, and no first-page fallback was needed.",
     "September 2 intake 50: the supplied two-page HNJ-P0ZX-8AVDS PDF passed hash, embedded-text, readability and rendered-page review and exactly matches the established November 29, 2018 MiWaters IPP PFAS Summary Report. The existing neutral record and timeline event were reused; the supplied filename's cleanup characterization was not substituted for the source title because the wording is a comment in Cadillac's submission rather than a separate landfill-authored letter or independent agency finding.",
     "September 2 intake 49: both supplied WWTP flow-diagram PDFs and all six pages passed hash, readability and rendered-page review. The five-page 2018 DEQ/City correspondence exactly matches established NPDES record 090, and the separate large-format 0P1.02 Process Flow Diagram II exactly matches established process-site record 003. Both records were reused as cross-references without republishing a duplicate or creating a new event.",
@@ -356,6 +370,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "Cadillac PFAS Interim and Summary Report approval-letter repeat intake",
+      "reason": "The supplied PDF is an exact repeat of a source-manifest binary and a byte-different but page-for-page render-identical version of the existing March 4, 2019 timeline source. The complete signed letter remains represented once. Its approval concerns the submitted reports and expressly does not waive NPDES or Part 31 liability; no duplicate record, extra event or unsupported evidence-request closure was added."
+    },
     {
       "name": "SVN-01952 correspondence COPY (1) repeat intake",
       "reason": "The supplied PDF is an exact repeat of the previously reviewed MiEnviro-primary export and a byte-different but page-for-page render-identical version of canonical compliance record 012. The complete notice and its attached IU-permit and MAHL comments remain represented once in the compliance archive; no duplicate record or timeline event was added, and the formal notice is not treated as a final enforcement disposition."

@@ -1,0 +1,50 @@
+{
+  "batch": "2026-09-02 PFAS interim and summary report approval-letter reconciliation intake 52",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared them with the site catalogs, timeline sources, public reference manifests and prior intake audits.",
+    "Extracted text from all three pages and rendered the complete sequence for visual review. All pages are readable, the first page is substantive and no blank-page fallback is needed.",
+    "Rendered the supplied PDF and the established March 4, 2019 timeline source with the same renderer and resolution; all three page images matched byte-for-byte, and normalized extracted text matched exactly.",
+    "Confirmed that the supplied hash is already indexed in the immutable source manifests and that the same approval letter is already represented by the established three-page timeline source. The cleaner canonical source was retained without another copy, catalog row or timeline event."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 3,
+    "embeddedTextPages": 3,
+    "renderedPagesReviewed": 3,
+    "renderExactCanonicalPages": 3,
+    "normalizedTextExactCanonicalPages": 3,
+    "exactPreviouslyIndexedInputHashes": 1,
+    "renderIdenticalExistingVariants": 1,
+    "duplicateCopiesSuppressed": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "file": {
+    "suppliedName": "Cadillac WWTP PFAS Interim and Summary Rpt Approval Letter.pdf",
+    "sha256": "0c500dc1ea41e8d5ecc70a9a54d24368a61977350dda27315be469bea0d421c5",
+    "size": 120071,
+    "pages": 3,
+    "classification": "exact repeat of an indexed source-manifest binary; render-identical existing variant suppressed",
+    "indexedSourceIds": [
+      "2019-03-04__403570696290303528__Cadillac WWTP PFAS Interim and Summary Rpt Approval Letter.pdf.pdf",
+      "2019-03-04__8004028571974457714__Cadillac WWTP PFAS Interim and Summary Rpt Approval Letter.pdf.pdf"
+    ],
+    "canonicalEventDate": "2019-03-04",
+    "canonicalName": "Cadillac WWTP PFAS Interim and Summary Rpt Approval Letter.pdf",
+    "canonicalAsset": "/docs/2019-03-04-report-approval.pdf",
+    "canonicalSha256": "66353d067ca56f14be259845da84fc331943e26b70762c0fbeeabc5560f811c3",
+    "canonicalSize": 123393,
+    "comparison": "The supplied PDF and canonical timeline PDF have different container hashes and byte sizes but identical normalized extracted text and identical rendered PNG bytes for all three pages. Both preserve the complete March 4, 2019 approval letter, including the signed third page.",
+    "verifiedContent": "DEQ states that Cadillac accepted wastewater from one facility discharging PFOS above the 12 ng/L screening level, records a November 5, 2018 WWTP-effluent result of 6.5 ng/L, approves Cadillac's IPP PFAS Interim and Summary Reports, requires semiannual PFAS effluent monitoring and status reports, and calls for work with the confirmed source to reduce PFOS discharged to the Clam River and accumulated in biosolids."
+  },
+  "evidentiaryBoundary": "The approval applies to Cadillac's IPP PFAS Interim and Summary Reports; it expressly does not release or waive NPDES, permit-application or Part 31 liability. It does not prove that source-control work was completed, that trucked leachate had stopped, that the WWTP removed PFAS, that biosolids were unrestricted, or that a groundwater migration pathway was established.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The complete letter and its key findings were already represented by the canonical March 4, 2019 timeline source. Repeating the same record does not fill any remaining independently closable evidence request."
+  }
+}

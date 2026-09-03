@@ -2408,6 +2408,41 @@ test("batch 51 suppresses the repeated render-identical SVN-01952 correspondence
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 52 suppresses the indexed render-identical PFAS approval-letter variant", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch52-pfas-approval-letter-reconciliation-audit.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+  const sourceManifest = await readFile(path.join(publicDirectory, "reference-data", "096-07f9a338453b.csv"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 3);
+  assert.equal(audit.stats.embeddedTextPages, 3);
+  assert.equal(audit.stats.renderedPagesReviewed, 3);
+  assert.equal(audit.stats.renderExactCanonicalPages, 3);
+  assert.equal(audit.stats.normalizedTextExactCanonicalPages, 3);
+  assert.equal(audit.stats.exactPreviouslyIndexedInputHashes, 1);
+  assert.equal(audit.stats.renderIdenticalExistingVariants, 1);
+  assert.equal(audit.stats.duplicateCopiesSuppressed, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const canonicalBytes = await readFile(path.join(publicDirectory, audit.file.canonicalAsset.replace(/^\//, "")));
+  assert.equal(canonicalBytes.length, audit.file.canonicalSize);
+  assert.equal(createHash("sha256").update(canonicalBytes).digest("hex"), audit.file.canonicalSha256);
+  assert.notEqual(audit.file.sha256, audit.file.canonicalSha256);
+  assert.match(sourceManifest, new RegExp(audit.file.sha256, "g"));
+  assert.match(audit.file.comparison, /identical rendered PNG bytes for all three pages/i);
+  assert.match(audit.file.verifiedContent, /requires semiannual PFAS effluent monitoring and status reports/i);
+  assert.match(pageSource, /DEQ approves reports and acknowledges a confirmed source/);
+  assert.match(pageSource, /accepted wastewater from one facility discharging PFOS above 12 ng\/L/);
+  assert.match(audit.evidentiaryBoundary, /does not release or waive NPDES, permit-application or Part 31 liability/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

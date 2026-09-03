@@ -1,0 +1,67 @@
+{
+  "batch": "2026-09-02 PFAS portal-submission reconciliation intake 55",
+  "method": [
+    "Computed each supplied PDF's SHA-256 hash, byte size and page count and compared all three against every established evidence catalog, published asset and prior duplicate index.",
+    "Extracted embedded text and rendered all nine supplied pages. Every page is readable and all three first pages are substantive.",
+    "Confirmed that each supplied file is byte-for-byte identical to its established born-digital MiWaters portal record. The three distinct submissions were retained once under their verified submission identities.",
+    "Verified the two existing local downloads, localized the remaining July 2018 interim report and reused its established first-page preview.",
+    "Added the previously unrepresented December 18, 2019 status event and separated it from EGLE's distinct December 3 statewide program-status letter."
+  ],
+  "stats": {
+    "receivedFiles": 3,
+    "distinctInputHashes": 3,
+    "pdfPagesReviewed": 9,
+    "embeddedTextPages": 9,
+    "renderedPagesReviewed": 9,
+    "exactExistingRecordsReusedAsCrossReferences": 3,
+    "recordsLocalized": 1,
+    "recordDescriptionsExpanded": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 1,
+    "timelineEventsCorrected": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "records": [
+    {
+      "suppliedName": "HNF-P7H3-DCN87 V1.pdf",
+      "recordId": "form-submission-073-c84ac8484363",
+      "canonicalName": "2018-07-30 - IPP PFAS interim report - Submission HNF-P7H3-DCN87 v1.pdf",
+      "asset": "/form-submission-docs/form-submission-073-c84ac8484363.pdf",
+      "preview": "/first-page-previews/by-sha256/04b1fd2b8ebe2520f08c002b4f0798bb9738d663a0caafb351d57caf50a6d5b4.webp",
+      "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
+      "size": 53376,
+      "pages": 3,
+      "verifiedFinding": "Cadillac listed Wexford County Landfill as the only probable PFOS/PFOA source among the screened facilities, identified the landfill as participating in the waste-program initiative, reported source-sampling results pending and stated that POTW effluent had not yet been sampled."
+    },
+    {
+      "suppliedName": "HNQ-VZP8-TWNRX V1.pdf",
+      "recordId": "form-submission-034-00d98416b456",
+      "canonicalName": "2019-06-28 - IPP PFAS status report - Submission HNQ-VZP8-TWNRX v1.pdf",
+      "asset": "/docs/2019-06-28-source-status.pdf",
+      "preview": "/first-page-previews/by-sha256/cf21666cf2e17847bab39da4d0cc26777e8b98cb201c0ba5adee88060692adf2.webp",
+      "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+      "size": 47218,
+      "pages": 3,
+      "verifiedFinding": "Cadillac stated that it had determined Wexford County Landfill was its source, that the landfill had moved to deep-well injection and had said it would no longer bring leachate to Cadillac. The form lists June 4 effluent results of PFOS 7.1 ng/L and PFOA 15 ng/L at 2 MGD."
+    },
+    {
+      "suppliedName": "HNV-XK97-EV0GR V1.pdf",
+      "recordId": "form-submission-036-1873afe1dd72",
+      "canonicalName": "2019-12-18 - IPP PFAS status report - Submission HNV-XK97-EV0GR v1.pdf",
+      "asset": "/form-submission-docs/form-submission-036-1873afe1dd72.pdf",
+      "preview": "/first-page-previews/by-sha256/7a0537f32ab97c3d6390dd9845c37cc35bfcd8d82c4fb767f1f2f3a1b40ef2a4.webp",
+      "sha256": "1873afe1dd72faba2066ef0163012c2feb727ca7dbd92726fd0f45c8935e6697",
+      "size": 43266,
+      "pages": 3,
+      "verifiedFinding": "Cadillac again identified Wexford County Landfill as its confirmed PFOS source, stated that it was no longer accepting the landfill's leachate and recorded deep-well injection as the reduction method. The form lists October 22 effluent results of PFOS 2.4 ng/L and PFOA 3.4 ng/L at 1.98 MGD."
+    }
+  ],
+  "evidentiaryBoundary": "These are certified Cadillac MiWaters submissions and preserve the City's source-identification, cessation and monitoring statements. They do not independently prove the exact final leachate delivery date, identify transaction-level loads or volumes, establish that deep-well injection began on a specific day, or demonstrate a groundwater migration pathway to Plett Road.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The submissions strengthen the documented screening, confirmation and post-cessation sequence but do not supply the manifests, hauler tickets, invoices, WWTP receiving logs, synchronized treatment data, Plett receptor-series records or modern source-to-receptor pathway evidence still requested."
+  }
+}

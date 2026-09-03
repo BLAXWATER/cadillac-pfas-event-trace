@@ -7286,7 +7286,7 @@
       "catalog": "form-submission-documents.json",
       "sectionId": "form-submission-library-title",
       "name": "2018-07-30 - IPP PFAS interim report - Submission HNF-P7H3-DCN87 v1.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/form-submission-docs/form-submission-073-c84ac8484363.pdf",
+      "url": "/form-submission-docs/form-submission-073-c84ac8484363.pdf",
       "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
       "size": 53376
     },

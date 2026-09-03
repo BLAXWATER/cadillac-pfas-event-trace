@@ -1,11 +1,23 @@
 {
   "stats": {
-    "suppliedFiles": 757,
+    "suppliedFiles": 760,
     "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 170,
+    "exactExistingRecordsReused": 173,
     "duplicateCopiesSuppressed": 47,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 479005692,
+    "publishedBytes": 479059068,
+    "latestBatch55FilesReviewed": 3,
+    "latestBatch55DistinctInputHashes": 3,
+    "latestBatch55PdfPagesReviewed": 9,
+    "latestBatch55EmbeddedTextPages": 9,
+    "latestBatch55RenderedPagesReviewed": 9,
+    "latestBatch55ExactExistingRecordsReusedAsCrossReferences": 3,
+    "latestBatch55RecordsLocalized": 1,
+    "latestBatch55RecordDescriptionsExpanded": 1,
+    "latestBatch55RecordsAdded": 0,
+    "latestBatch55TimelineEventsAdded": 1,
+    "latestBatch55TimelineEventsCorrected": 1,
+    "latestBatch55RequirementsClosed": 0,
     "latestBatch54FilesReviewed": 2,
     "latestBatch54DistinctInputHashes": 1,
     "latestBatch54PdfPagesReviewed": 4,
@@ -349,6 +361,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 intake 55: all three supplied born-digital MiWaters PFAS submissions and all nine pages passed exact-hash, embedded-text, readability and complete rendered-page review. Each file exactly matches an established form-submission record. HNF was localized for anonymous preview and download, HNQ and HNV retained their verified local deliveries, and the previously unrepresented December 18 status report was added as a distinct event from EGLE's December 3 statewide status letter.",
     "September 2 intake 54: both supplied two-page American Waste PFAS Survey files passed hash, embedded-text, readability and complete rendered-page review and are byte-for-byte identical to each other and established PFAS record 002. The canonical May 21, 2018 survey was retained once, localized for anonymous preview and download, and expanded with its verified 18-30 percent industrial-waste estimate, generator-record limitation and no-leachate-analysis statement. The claim-bearing second filename was not propagated as a source title.",
     "September 2 intake 53: the supplied two-page file passed hash, image-only-page and complete rendered-page review and exactly matches the signed February 25, 2026 LDFA Carbon Regeneration Grant Resolution already published as supplemental record 167. Its HNF-P7H3-DCN87 filename is incorrect and was not propagated; the distinct three-page July 30, 2018 HNF portal submission remains unchanged.",
     "September 2 intake 52: the supplied three-page PFAS Interim and Summary Report approval letter passed hash, embedded-text, readability and complete rendered-page review. Its hash is already present in the immutable source manifests, while all three page renders and normalized text match the established March 4, 2019 timeline source. The repeat variant was suppressed; the existing event preserves the confirmed-source finding and the audit preserves the letter's express non-waiver limitation.",
@@ -395,6 +408,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "HNF, HNQ and HNV PFAS portal-submission reconciliation",
+      "reason": "The three supplied PDFs exactly match established, distinct MiWaters submissions dated July 30, 2018, June 28, 2019 and December 18, 2019. Each canonical record remains singular. The HNF download was localized, HNV's description was expanded, and its post-cessation source-identification and effluent results were added as a separate timeline event without treating the City's statements as an exact final-delivery date or hydrogeologic proof."
+    },
     {
       "name": "American Waste PFAS Survey exact-copy reconciliation and localization",
       "reason": "Both supplied PDFs and all four supplied page instances are exact repeats of established PFAS record 002. The record was retained once under its signed May 21, 2018 identity and its former personal-account GitHub delivery was replaced with a verified local preview and download. The second filename's 18-30 percent characterization is supported by page 2 but is not a separate source title or a distinct document."

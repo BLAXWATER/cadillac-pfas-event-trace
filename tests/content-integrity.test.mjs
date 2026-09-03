@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 734);
-  assert.equal(externalFiles, 828);
+  assert.equal(localFiles, 735);
+  assert.equal(externalFiles, 827);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 75);
+  assert.equal(helperReferences.length, 76);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -2539,6 +2539,62 @@ test("batch 54 localizes one verified American Waste survey and suppresses its r
   assert.equal(placed.url, audit.canonicalRecord.asset);
   assert.equal(catalog.filter((item) => item.sha256 === audit.canonicalRecord.sha256).length, 1);
   assert.match(audit.evidentiaryBoundary, /does not identify transaction-level deliveries/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 55 reuses three exact PFAS portal submissions and localizes the HNF record", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch55-pfas-portal-submissions-reconciliation-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "form-submission-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 3);
+  assert.equal(audit.stats.distinctInputHashes, 3);
+  assert.equal(audit.stats.pdfPagesReviewed, 9);
+  assert.equal(audit.stats.embeddedTextPages, 9);
+  assert.equal(audit.stats.renderedPagesReviewed, 9);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 3);
+  assert.equal(audit.stats.recordsLocalized, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.timelineEventsCorrected, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  for (const expected of audit.records) {
+    const row = catalog.find((item) => item.id === expected.recordId);
+    assert.ok(row);
+    assert.equal(row.name, expected.canonicalName);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.sha256, expected.sha256);
+    assert.equal(row.size, expected.size);
+    assert.equal(row.pages, expected.pages);
+    assert.equal(previewManifest[expected.asset], expected.preview);
+    const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+    const placed = placement.records.find((item) => item.id === expected.recordId);
+    assert.ok(placed);
+    assert.equal(placed.archiveId, "form-submissions");
+    assert.equal(placed.url, expected.asset);
+    assert.equal(catalog.filter((item) => item.sha256 === expected.sha256).length, 1);
+  }
+
+  const hnf = audit.records.find((item) => item.recordId === "form-submission-073-c84ac8484363");
+  const hnfBytes = await readFile(path.join(publicDirectory, hnf.asset.replace(/^\//, "")));
+  assert.equal(hnfBytes.length, hnf.size);
+  assert.equal(createHash("sha256").update(hnfBytes).digest("hex"), hnf.sha256);
+
+  const hnv = catalog.find((item) => item.id === "form-submission-036-1873afe1dd72");
+  assert.match(hnv.description, /no longer accepting its leachate/i);
+  assert.match(hnv.description, /PFOS 2\.4 ng\/L/i);
+  assert.match(hnv.description, /PFOA 3\.4 ng\/L/i);
+  assert.match(pageSource, /Cadillac reports that it no longer accepts Wexford leachate/);
+  assert.match(pageSource, /EGLE summarizes statewide IPP PFAS progress/);
+  assert.match(pageSource, /form-submission-docs\/form-submission-073-c84ac8484363\.pdf/);
+  assert.match(audit.evidentiaryBoundary, /do not independently prove the exact final leachate delivery date/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

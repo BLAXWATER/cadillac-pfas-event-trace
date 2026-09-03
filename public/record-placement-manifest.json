@@ -9518,8 +9518,8 @@
       "archiveLabel": "Lab results & sampling",
       "catalog": "lab-documents.json",
       "sectionId": "lab-library-title",
-      "name": "10-29-2018 - FW_ TestAmerica invoice and report files from 190-17646-1 City of Cadillac.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/5be18df044489dcea83c7c3154f83ca047b6e5cb/public/lab-docs/042-17dfcc25e8a0.pdf",
+      "name": "2018-10-29 - City PFOS Exceedance Email and TestAmerica Leachate Package.pdf",
+      "url": "/lab-docs/042-17dfcc25e8a0.pdf",
       "sha256": "17dfcc25e8a000c958df286900ed43baac2eb39801eb502c8fa3d21f0fc88dfa",
       "size": 2696076
     },

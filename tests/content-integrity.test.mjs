@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 732);
-  assert.equal(externalFiles, 830);
+  assert.equal(localFiles, 733);
+  assert.equal(externalFiles, 829);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 74);
+  assert.equal(helperReferences.length, 75);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -2209,6 +2209,53 @@ test("batch 46 retains the historical groundwater records and signed LDFA resolu
   assert.match(pageSource, /two 5,000-pound carbon-filter vessels/);
   assert.match(pageSource, /No grant award, contract, completed regeneration or performance result is included/);
   assert.match(audit.evidentiaryBoundary, /work plan rather than the resulting investigation/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 47 localizes the complete TestAmerica package and preserves the limits of the City response", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch47-testamerica-leachate-response-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const catalogRows = catalogs.flatMap((catalog) => catalog.rows);
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 42);
+  assert.equal(audit.stats.embeddedTextPages, 42);
+  assert.equal(audit.stats.renderedPagesReviewed, 42);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsLocalized, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const expected = audit.canonicalRecord;
+  const row = catalogRows.find((candidate) => candidate.id === expected.recordId);
+  assert.ok(row, `${expected.recordId} is absent from the catalog`);
+  assert.equal(row.name, expected.canonicalName);
+  assert.equal(row.url, expected.asset);
+  assert.equal(row.sha256, expected.sha256);
+  assert.equal(row.pages, expected.pages);
+  assert.equal(row.size, expected.size);
+  assert.equal(catalogRows.filter((candidate) => candidate.sha256 === expected.sha256).length, 1);
+
+  const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+  assert.equal(previewManifest[expected.asset], expected.preview);
+  assert.ok((await stat(path.join(publicDirectory, expected.preview.replace(/^\//, "")))).size > 0);
+  assert.match(bundledSource, new RegExp(expected.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+
+  assert.match(pageSource, /City identifies PFOS exceedance and ability to stop trucked leachate/);
+  assert.match(pageSource, /applicable PFOS water-quality standard of 12 ng\/L/);
+  assert.match(pageSource, /making it through the plant/);
+  assert.match(pageSource, /Since this leachate is a trucked in source we could stop it at any time/);
+  assert.match(pageSource, /does not establish that Cadillac actually stopped/);
+  assert.match(audit.evidentiaryBoundary, /not an actual cessation decision or final delivery date/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

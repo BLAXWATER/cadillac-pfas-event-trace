@@ -1,0 +1,45 @@
+{
+  "batch": "2026-09-02 TestAmerica leachate response intake 47",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared it with every published evidence catalog.",
+    "Opened, text-extracted and rendered all 42 pages, including the City email chain, 23-page TestAmerica report and 15-page DEQ guidance attachment.",
+    "Verified the October 29, 2018 City laboratory and Utilities Director messages against the rendered first page and embedded text.",
+    "Reused and localized established laboratory record lab-042 rather than creating a duplicate record.",
+    "Kept the October 29 response event separate from the October 3 sample-collection event and rechecked the evidence-request queue."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 42,
+    "embeddedTextPages": 42,
+    "renderedPagesReviewed": 42,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsLocalized": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "lab-042-17dfcc25e8a0",
+    "asset": "/lab-docs/042-17dfcc25e8a0.pdf",
+    "preview": "/first-page-previews/by-sha256/05aabbe9ecaf73036f6fda27868736ef10f8de5826f718612f4af4acee3cb55c.webp",
+    "canonicalName": "2018-10-29 - City PFOS Exceedance Email and TestAmerica Leachate Package.pdf",
+    "sha256": "17dfcc25e8a000c958df286900ed43baac2eb39801eb502c8fa3d21f0fc88dfa",
+    "size": 2696076,
+    "pages": 42
+  },
+  "verifiedFindings": [
+    "At 09:51 on October 29, 2018, Cadillac laboratory supervisor Cindy Tomaszewski wrote that the TestAmerica leachate PFAS results exceeded the applicable PFOS water-quality standard of 12 ng/L.",
+    "At 09:56, Utilities Director Jeff Dietlin asked DEQ whether the City should test its effluent to determine whether PFAS was making it through the plant.",
+    "Dietlin wrote that the leachate was a trucked-in source that the City could stop at any time and said the City would work with the landfill on pretreatment before delivery to the WWTP.",
+    "The attached TestAmerica report lists 590 ng/L PFOA and 120 ng/L PFOS in the primary leachate sample and 700 ng/L PFOA and 140 ng/L PFOS in the duplicate."
+  ],
+  "evidentiaryBoundary": "Dietlin's email documents stated operational ability, not an actual cessation decision or final delivery date. The message asks whether PFAS was passing through the WWTP but does not answer that question. It does not replace time-stamped influent, effluent and sludge results or transaction-level receiving records.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The package strengthens the contemporaneous source-response record but does not provide a final leachate delivery date, complete receiving history or synchronized influent-effluent-sludge testing."
+  }
+}

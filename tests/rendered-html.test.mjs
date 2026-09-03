@@ -54,13 +54,13 @@ test("renders stable site metadata and source policy", async () => {
   assert.ok(html.indexOf(logoPath) < html.indexOf("Original-source rule"));
   assert.match(html, /Original-source rule/i);
   assert.match(html, /Year Over Year, Multiple Events, One source trail/i);
-  assert.match(html, /2018: jump to 15 events/i);
-  assert.match(html, /<strong>2018<\/strong><span>15(?:<!-- -->\s*)+events<\/span>/i);
+  assert.match(html, /2018: jump to 16 events/i);
+  assert.match(html, /<strong>2018<\/strong><span>16(?:<!-- -->\s*)+events<\/span>/i);
   assert.doesNotMatch(html, /class="year-nav-overflow"/i);
   assert.doesNotMatch(html, /class="year-overflow-toggle"/i);
   assert.doesNotMatch(html, /aria-expanded=/i);
   assert.doesNotMatch(html, /4 of 10 events shown/i);
-  assert.equal((html.match(/class="trace-row"/gi) ?? []).length, 101);
+  assert.equal((html.match(/class="trace-row"/gi) ?? []).length, 102);
   assert.match(html, /EGLE cites a 16\.369-million-gallon April bypass/i);
   assert.match(html, /Cadillac attributes April bypass to an RDS-exceeding flood/i);
   assert.match(html, /EPA QNCR lists seven Cadillac ammonia and carbonaceous-BOD violations/i);

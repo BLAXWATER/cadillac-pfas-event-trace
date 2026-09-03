@@ -1,11 +1,21 @@
 {
   "stats": {
-    "suppliedFiles": 745,
+    "suppliedFiles": 746,
     "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 162,
+    "exactExistingRecordsReused": 163,
     "duplicateCopiesSuppressed": 43,
     "outOfScopeExcluded": 367,
     "publishedBytes": 478733379,
+    "latestBatch47FilesReviewed": 1,
+    "latestBatch47DistinctInputHashes": 1,
+    "latestBatch47PdfPagesReviewed": 42,
+    "latestBatch47EmbeddedTextPages": 42,
+    "latestBatch47RenderedPagesReviewed": 42,
+    "latestBatch47ExactExistingRecordsReusedAsCrossReferences": 1,
+    "latestBatch47RecordsLocalized": 1,
+    "latestBatch47RecordsAdded": 0,
+    "latestBatch47TimelineEventsAdded": 1,
+    "latestBatch47RequirementsClosed": 0,
     "latestBatch46FilesReviewed": 3,
     "latestBatch46DistinctInputHashes": 3,
     "latestBatch46PdfPagesReviewed": 201,
@@ -260,6 +270,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 intake 47: the supplied 42-page TestAmerica email, analytical report and DEQ guidance package was SHA-256 checked against every catalog, text-extracted and rendered in full. It exactly matches established laboratory record lab-042, which was localized for anonymous preview and download and linked to a separate October 29, 2018 response event.",
     "September 2 intake 46: all three supplied PDFs and all 201 pages passed hash, readability, text and rendered-sequence review. The distinct 1985 progress report, 1986 RI/FS work plan and signed 2026 LDFA resolution were retained separately; planning statements were not recast as completed field results, and no evidence request was closed.",
     "September 2 VN-019184 notice/response reconciliation: both supplied PDFs were SHA-256 checked, opened, OCR-read and rendered. They are exact duplicate five-page copies of Cadillac's July 14 response despite one misleading notice filename. The response was retained once, the already cataloged two-page EGLE notice was localized, and separate notice and response timeline events preserve the unresolved agency-disposition boundary.",
     "September 2 CWSRF proposal cross-reference intake: the supplied nine-page PDF was SHA-256 checked against every catalog record, text-extracted page by page and rendered in full. It exactly matches established supplemental record 007. The canonical record was localized for anonymous preview and download, and its existing February 2, 2026 timeline entry was expanded with the deferred-upgrade, headworks, UV, clarifier-capacity and 20-year-review statements verified on PDF pages 1-3.",
@@ -298,6 +309,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "October 29, 2018 City PFOS exceedance and trucked-leachate response",
+      "reason": "The supplied package exactly matches established laboratory record lab-042, so no duplicate was added. Its City email records the laboratory supervisor's statement that the leachate results exceeded the applicable 12 ng/L PFOS standard and Dietlin's question about passage through the plant and ability to stop the trucked source. The event is separate from the October 3 sampling event and does not infer that acceptance actually stopped, that PFAS passed through the plant or that a final delivery date is established."
+    },
     {
       "name": "Historical groundwater records and signed LDFA carbon resolution",
       "reason": "All three files are distinct. The 1985 progress report and 1986 RI/FS work plan predate PFAS work, and the work plan proposes rather than reports the detailed field investigation. The signed 2026 LDFA resolution proves a 7-0 vote supporting a grant request, not a grant award, completed treatment work or verified performance. No evidence-queue requirement was closed."

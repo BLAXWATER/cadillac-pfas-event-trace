@@ -80,7 +80,7 @@
   {
     "id": "007-238cf9655b70",
     "name": "Cadillac WWTP CWSRF Project Plan and Funding Proposal.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/007-238cf9655b70.pdf",
+    "url": "/findings-docs/007-238cf9655b70.pdf",
     "year": "2026",
     "category": "Process & site",
     "type": "WWTP capital planning",
@@ -88,7 +88,7 @@
     "pages": 9,
     "size": 1000330,
     "sha256": "238cf9655b706a7ab8975373a7d6380f2a3b660d407a206fcb5e48cca4d8e83b",
-    "description": "February 2, 2026 Council communication and F&V proposal for a $36,800 CWSRF project plan. Candidate improvements include headworks, blowers, UV disinfection, solids handling, biogas use and site repairs; the selected construction project was not yet fixed by this planning proposal."
+    "description": "February 2, 2026 Council communication and F&V proposal for a $36,800 CWSRF project plan. The City states that it postponed several needed upgrades. The proposal identifies a 1960s headworks with aging, inefficient equipment and a building in poor condition; recurring UV pneumatic-wiper, intensity-meter and bank-control problems; and reduced primary-settling capacity because one clarifier is used as a waste-activated-sludge holding tank. It calls for evaluating performance, compliance status and projected 20-year capacity, but does not establish a causal link to a later bypass or prove an approved final construction scope."
   },
   {
     "id": "008-5b67e1ed1d5c",

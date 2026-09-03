@@ -1751,13 +1751,13 @@ const events: Event[] = [
     phase: "WWTP capital planning",
     kind: "operation",
     category: "10 · Process & site",
-    title: "Cadillac advances a CWSRF WWTP planning package",
-    finding: "The Council communication recommends a $36,800 F&V project plan for potential FY2027 CWSRF funding. The proposal identifies candidate work at the headworks, blowers, UV system, solids handling, biogas facilities and aging site structures and requires alternatives analysis before selecting a project.",
-    significance: "Documents planned infrastructure evaluation and possible future improvements. It is a planning proposal, not proof that construction, funding or a final project scope was approved.",
-    sources: [archivedSource("Cadillac WWTP CWSRF Project Plan and Funding Proposal.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/007-238cf9655b70.pdf", 9, "Council communication, January 8 engineering proposal, project-plan outline and 2013 professional-services agreement.", {
+    title: "Cadillac acknowledges deferred WWTP upgrades and capacity constraints",
+    finding: "The City states that it postponed several needed upgrades. F&V's proposal says the 1960s headworks has aging, inefficient equipment and a building in poor condition; the 18- to 23-year-old UV system has recurring pneumatic-wiper, intensity-meter and individual bank-control problems; and one primary clarifier is being used as a waste-activated-sludge holding tank, reducing available primary-settling capacity. The proposed project plan would evaluate current performance, regulatory-compliance status and projected 20-year capacity and treatment needs.",
+    significance: "Provides contemporaneous infrastructure context for evaluating the separate April 2026 bypass records. The planning proposal does not itself establish that any listed condition caused a bypass or that construction, funding or a final project scope was approved.",
+    sources: [archivedSource("Cadillac WWTP CWSRF Project Plan and Funding Proposal.pdf", "/findings-docs/007-238cf9655b70.pdf", 9, "Council communication, January 8 engineering proposal, project-plan outline and 2013 professional-services agreement. The deferred-upgrade statement and cited system conditions appear on PDF pages 1-3.", {
       eventStamp: "2026-02-02 · time not stated",
       basis: "Council communication date",
-      note: "The proposal anticipated an April draft and May 1, 2026 submission deadline; completion is not inferred from this source.",
+      note: "The proposal anticipated an April draft and May 1, 2026 submission deadline. Completion and a causal link to any later bypass are not inferred from this source.",
     })],
   },
   {

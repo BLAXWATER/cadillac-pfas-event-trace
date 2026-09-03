@@ -1,0 +1,47 @@
+{
+  "batch": "2026-09-02 Cadillac WWTP CWSRF proposal cross-reference intake 44",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared the hash against every evidence catalog.",
+    "Confirmed an exact byte match to established supplemental record 007-238cf9655b70, so no duplicate record was created.",
+    "Opened all nine pages, extracted readable embedded text from pages 1-6 and visually reviewed the complete nine-page sequence, including the image-only professional-services agreement on pages 7-9.",
+    "Verified the deferred-upgrade statement and the headworks, UV-system, primary-clarifier and 20-year-review details on PDF pages 1-3.",
+    "Localized the canonical PDF for anonymous first-page preview and full-document download and expanded the existing February 2, 2026 timeline entry."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "pdfPagesReviewed": 9,
+    "embeddedTextPages": 6,
+    "imageOnlyPages": 3,
+    "renderedPagesReviewed": 9,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsLocalized": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "timelineEventsUpdated": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "007-238cf9655b70",
+    "asset": "/findings-docs/007-238cf9655b70.pdf",
+    "preview": "/first-page-previews/by-sha256/e0922a424e81061a217b7d17ecdb256597a389c1142d4eaf062c16358e085218.webp",
+    "canonicalName": "Cadillac WWTP CWSRF Project Plan and Funding Proposal.pdf",
+    "sha256": "238cf9655b706a7ab8975373a7d6380f2a3b660d407a206fcb5e48cca4d8e83b",
+    "size": 1000330,
+    "pages": 9
+  },
+  "verifiedFindings": [
+    "The February 2, 2026 Council communication says the wastewater treatment plant had postponed several needed upgrades and consolidated them into one Capital Improvement Program project.",
+    "The engineering proposal describes the existing headworks as constructed in the 1960s, with aging and inefficient equipment and a building in poor condition.",
+    "The proposal says the 18- to 23-year-old UV disinfection system had recurring pneumatic-wiper, UV-intensity-meter and individual-bank-control problems.",
+    "The proposal says one primary clarifier was being used as a waste-activated-sludge holding tank, reducing available primary-settling capacity.",
+    "The proposed project plan included evaluation of current infrastructure performance, regulatory-compliance status and projected 20-year capacity and treatment requirements."
+  ],
+  "evidentiaryBoundary": "The proposal supplies contemporaneous infrastructure context for evaluating separate April 2026 bypass records. It does not itself establish that any listed condition caused a bypass, identify a selected final construction project, or prove funding approval or completed construction.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The proposal is infrastructure-planning evidence and does not supply the remaining delivery, laboratory, receptor, well-construction, groundwater-flow or synchronized source-to-receptor data."
+  }
+}

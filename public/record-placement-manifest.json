@@ -14370,7 +14370,7 @@
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
       "name": "Cadillac WWTP CWSRF Project Plan and Funding Proposal.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/007-238cf9655b70.pdf",
+      "url": "/findings-docs/007-238cf9655b70.pdf",
       "sha256": "238cf9655b706a7ab8975373a7d6380f2a3b660d407a206fcb5e48cca4d8e83b",
       "size": 1000330
     },

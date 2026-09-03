@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 726);
-  assert.equal(externalFiles, 832);
+  assert.equal(localFiles, 727);
+  assert.equal(externalFiles, 831);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -2061,6 +2061,52 @@ test("batch 43 retains the EGLE statewide PFAS report once without overstating C
   assert.match(bundledSource, new RegExp(audit.addedRecord.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   assert.match(row.description, /does not identify Cadillac or Wexford by name/i);
   assert.match(audit.evidentiaryBoundary, /no Cadillac-specific sample result/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 44 reuses and localizes the CWSRF proposal while strengthening its existing timeline entry", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch44-cwsrf-proposal-cross-reference-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const catalogRows = catalogs.flatMap((catalog) => catalog.rows);
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 9);
+  assert.equal(audit.stats.embeddedTextPages, 6);
+  assert.equal(audit.stats.imageOnlyPages, 3);
+  assert.equal(audit.stats.renderedPagesReviewed, 9);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsLocalized, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.timelineEventsUpdated, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const row = catalogRows.find((candidate) => candidate.id === audit.canonicalRecord.recordId);
+  assert.ok(row, `${audit.canonicalRecord.recordId} is absent from the catalog`);
+  assert.equal(row.url, audit.canonicalRecord.asset);
+  assert.equal(row.sha256, audit.canonicalRecord.sha256);
+  assert.equal(row.pages, audit.canonicalRecord.pages);
+  assert.equal(row.size, audit.canonicalRecord.size);
+  assert.equal(catalogRows.filter((candidate) => candidate.sha256 === audit.canonicalRecord.sha256).length, 1);
+
+  const bytes = await readFile(path.join(publicDirectory, audit.canonicalRecord.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), audit.canonicalRecord.sha256);
+  assert.equal(previewManifest[audit.canonicalRecord.asset], audit.canonicalRecord.preview);
+  assert.ok((await stat(path.join(publicDirectory, audit.canonicalRecord.preview.replace(/^\//, "")))).size > 0);
+  assert.match(bundledSource, /findings-docs\/007-238cf9655b70\.pdf/);
+  assert.match(pageSource, /Cadillac acknowledges deferred WWTP upgrades and capacity constraints/);
+  assert.match(pageSource, /postponed several needed upgrades/);
+  assert.match(pageSource, /1960s headworks has aging, inefficient equipment/);
+  assert.match(pageSource, /recurring pneumatic-wiper, intensity-meter and individual bank-control problems/);
+  assert.match(pageSource, /reducing available primary-settling capacity/);
+  assert.match(pageSource, /projected 20-year capacity and treatment needs/);
+  assert.match(pageSource, /does not itself establish that any listed condition caused a bypass/);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

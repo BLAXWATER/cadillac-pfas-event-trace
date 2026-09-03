@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 729);
+  assert.equal(localFiles, 732);
   assert.equal(externalFiles, 830);
 });
 
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 71);
+  assert.equal(helperReferences.length, 74);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1559);
+  assert.equal(recordCount, 1562);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1559);
+  assert.equal(records.length, 1562);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1411);
-  assert.equal(audit.stats.pdfPages, 20150);
+  assert.equal(audit.stats.pdfRecords, 1414);
+  assert.equal(audit.stats.pdfPages, 20351);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -448,7 +448,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 99);
-  assert.equal(supplementalCatalog.length, 164);
+  assert.equal(supplementalCatalog.length, 167);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -2160,6 +2160,55 @@ test("batch 45 suppresses the duplicate response copy and keeps EGLE's notice se
   assert.match(pageSource, /does not establish how EGLE later evaluated Cadillac's response/);
   assert.match(pageSource, /contains no later EGLE decision accepting the defense/);
   assert.match(audit.evidentiaryBoundary, /does not contain a later EGLE determination accepting the RDS assertion/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 46 retains the historical groundwater records and signed LDFA resolution without closing unsupported gaps", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch46-historical-groundwater-ldfa-resolution-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const catalogRows = catalogs.flatMap((catalog) => catalog.rows);
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 3);
+  assert.equal(audit.stats.distinctInputHashes, 3);
+  assert.equal(audit.stats.pdfPagesReviewed, 201);
+  assert.equal(audit.stats.embeddedTextPages, 199);
+  assert.equal(audit.stats.imageOnlyPages, 2);
+  assert.equal(audit.stats.renderedPagesReviewed, 201);
+  assert.equal(audit.stats.exactExistingRecords, 0);
+  assert.equal(audit.stats.recordsAdded, 3);
+  assert.equal(audit.stats.timelineEventsAdded, 3);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  for (const expected of audit.addedRecords) {
+    const row = catalogRows.find((candidate) => candidate.id === expected.recordId);
+    assert.ok(row, `${expected.recordId} is absent from the catalog`);
+    assert.equal(row.name, expected.canonicalName);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.sha256, expected.sha256);
+    assert.equal(row.pages, expected.pages);
+    assert.equal(row.size, expected.size);
+    assert.equal(catalogRows.filter((candidate) => candidate.sha256 === expected.sha256).length, 1);
+
+    const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+    assert.equal(previewManifest[expected.asset], expected.preview);
+    assert.ok((await stat(path.join(publicDirectory, expected.preview.replace(/^\//, "")))).size > 0);
+    assert.match(bundledSource, new RegExp(expected.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(pageSource, /DNR calls for a broader Cadillac-area groundwater study/);
+  assert.match(pageSource, /Cadillac-area RI\/FS plan maps a multi-source investigation/);
+  assert.match(pageSource, /LDFA unanimously supports PFAS carbon-regeneration grant/);
+  assert.match(pageSource, /60 approximately 90-foot source-location wells/);
+  assert.match(pageSource, /two 5,000-pound carbon-filter vessels/);
+  assert.match(pageSource, /No grant award, contract, completed regeneration or performance result is included/);
+  assert.match(audit.evidentiaryBoundary, /work plan rather than the resulting investigation/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

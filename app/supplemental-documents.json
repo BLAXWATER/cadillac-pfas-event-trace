@@ -2130,5 +2130,44 @@
     "size": 4584959,
     "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
     "description": "Cadillac's FY2019 operating budget, approved May 21, 2018. The Water and Sewer Fund table reports leachate revenue of $447,684 actual for FY2017, $350,000 estimated for FY2018 and $150,000 proposed for FY2019. The Water Resources goals include evaluating additional hauled waste as a new-revenue opportunity while also maintaining NPDES-compliant discharges, limiting industrial waste through active monitoring and preserving Class A EQ biosolids. These adjacent goals document a policy tension but do not prove that the goals conflicted in practice or establish a violation."
+  },
+  {
+    "id": "166-fd889bd49fef",
+    "name": "1985-07-23 - Northernaire Plating Progress Report No. 4.pdf",
+    "url": "/findings-docs/166-fd889bd49fef.pdf",
+    "year": "1985",
+    "category": "Historical groundwater investigation",
+    "type": "State and EPA Superfund progress report",
+    "format": "PDF",
+    "pages": 3,
+    "size": 164635,
+    "sha256": "fd889bd49fefd6fc9d52c6b0c3b1c39c02f17ed3bda67be1bdef27b7096400da",
+    "description": "Michigan DNR's July 23, 1985 Northernaire Plating progress report. It records elevated cadmium and chromium in site soils and sewer sediment, recommends excavation and off-site disposal, and states that complex hydrogeology, limited groundwater-flow information and other possible area sources required further study. The report describes requested EPA funding and a broader Act 307 Cadillac-area investigation; it predates PFAS work and does not establish a modern source-to-receptor pathway."
+  },
+  {
+    "id": "167-322217e52758",
+    "name": "2026-02-25 - Signed LDFA Carbon Regeneration Grant Resolution.pdf",
+    "url": "/findings-docs/167-322217e52758.pdf",
+    "year": "2026",
+    "category": "PFAS response and cleanup systems",
+    "type": "Signed LDFA resolution",
+    "format": "PDF",
+    "pages": 2,
+    "size": 35880,
+    "sha256": "322217e527587e94fa6f7fcfece6c678d520b7493a45a1f4b6636341e1857563",
+    "description": "Signed February 25, 2026 Cadillac Local Finance Development Authority resolution, adopted 7-0. It states that the LDFA operates the Kysor Superfund groundwater cleanup system, that its two 5,000-pound carbon vessels were repurposed for PFAS capture, and that one vessel was no longer effective because of foulant accumulation. The resolution supports a City NextCycle grant request for onsite carbon regeneration and PFAS destruction; it does not establish a grant award, contractor selection, completed regeneration or treatment performance."
+  },
+  {
+    "id": "168-cdc906173203",
+    "name": "1986-05 - Cadillac Area Groundwater Contamination RI-FS Work Plan.pdf",
+    "url": "/findings-docs/168-cdc906173203.pdf",
+    "year": "1986",
+    "category": "Historical groundwater investigation",
+    "type": "Remedial investigation and feasibility-study work plan",
+    "format": "PDF",
+    "pages": 196,
+    "size": 5974254,
+    "sha256": "cdc90617320399b0a58b6c67306d5687b264fc4a8ec9a0876663c2308120e036",
+    "description": "May 1986 E.G. Jordan and Michigan DNR work plan for the Cadillac Area Groundwater Contamination RI/FS. It records contaminated private wells since 1978, historical industrial-source concerns, a preliminary three-aquifer interpretation and estimated shallow and intermediate flow directions. The plan proposes soil-gas screening, new wells, groundwater sampling, aquifer tests and a flow-and-transport model; it is not the completed investigation and does not establish a modern PFAS pathway to Plett Road."
   }
 ]

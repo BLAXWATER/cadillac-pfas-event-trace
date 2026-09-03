@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1559,
+  "recordCount": 1562,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 164
+      "count": 167
     },
     {
       "archiveId": "reference",
@@ -16111,6 +16111,39 @@
       "url": "/findings-docs/165-676065b15331.pdf",
       "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
       "size": 4584959
+    },
+    {
+      "id": "166-fd889bd49fef",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "1985-07-23 - Northernaire Plating Progress Report No. 4.pdf",
+      "url": "/findings-docs/166-fd889bd49fef.pdf",
+      "sha256": "fd889bd49fefd6fc9d52c6b0c3b1c39c02f17ed3bda67be1bdef27b7096400da",
+      "size": 164635
+    },
+    {
+      "id": "167-322217e52758",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "2026-02-25 - Signed LDFA Carbon Regeneration Grant Resolution.pdf",
+      "url": "/findings-docs/167-322217e52758.pdf",
+      "sha256": "322217e527587e94fa6f7fcfece6c678d520b7493a45a1f4b6636341e1857563",
+      "size": 35880
+    },
+    {
+      "id": "168-cdc906173203",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "1986-05 - Cadillac Area Groundwater Contamination RI-FS Work Plan.pdf",
+      "url": "/findings-docs/168-cdc906173203.pdf",
+      "sha256": "cdc90617320399b0a58b6c67306d5687b264fc4a8ec9a0876663c2308120e036",
+      "size": 5974254
     },
     {
       "id": "001-7c991baaf1e9",

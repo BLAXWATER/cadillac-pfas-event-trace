@@ -1,0 +1,66 @@
+{
+  "batch": "2026-09-02 historical groundwater and signed LDFA resolution intake 46",
+  "method": [
+    "Computed SHA-256 hashes and byte sizes for all three supplied PDFs and compared them with every published evidence catalog.",
+    "Opened all 201 PDF pages, extracted the embedded text from all 199 text-bearing pages and rendered the full page sequences for visual review.",
+    "Visually inspected both image-only pages of the signed LDFA resolution and confirmed the 7-0 vote, chairperson signature and certification.",
+    "Separated the 1985 progress report, the 1986 RI/FS work plan and the 2026 signed resolution into distinct catalog records and timeline events.",
+    "Rechecked the evidence-request queue and retained every requirement because the historical work plan does not supply completed field results or a modern PFAS pathway."
+  ],
+  "stats": {
+    "receivedFiles": 3,
+    "distinctInputHashes": 3,
+    "pdfPagesReviewed": 201,
+    "embeddedTextPages": 199,
+    "imageOnlyPages": 2,
+    "renderedPagesReviewed": 201,
+    "exactExistingRecords": 0,
+    "recordsAdded": 3,
+    "timelineEventsAdded": 3,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "addedRecords": [
+    {
+      "recordId": "166-fd889bd49fef",
+      "asset": "/findings-docs/166-fd889bd49fef.pdf",
+      "preview": "/first-page-previews/by-sha256/3078426273987e0e217e3917d90b4d1b0c051727c462b3b6f4e3f8738e72fd42.webp",
+      "canonicalName": "1985-07-23 - Northernaire Plating Progress Report No. 4.pdf",
+      "sha256": "fd889bd49fefd6fc9d52c6b0c3b1c39c02f17ed3bda67be1bdef27b7096400da",
+      "size": 164635,
+      "pages": 3
+    },
+    {
+      "recordId": "167-322217e52758",
+      "asset": "/findings-docs/167-322217e52758.pdf",
+      "preview": "/first-page-previews/by-sha256/c4f357576a26d974792d3e435a53982132ecbe854fb7ff18d513e144460fe77d.webp",
+      "canonicalName": "2026-02-25 - Signed LDFA Carbon Regeneration Grant Resolution.pdf",
+      "sha256": "322217e527587e94fa6f7fcfece6c678d520b7493a45a1f4b6636341e1857563",
+      "size": 35880,
+      "pages": 2
+    },
+    {
+      "recordId": "168-cdc906173203",
+      "asset": "/findings-docs/168-cdc906173203.pdf",
+      "preview": "/first-page-previews/by-sha256/e3a82efae11b3ed1e450b7a4aa620b0f0fcb6358985df6b928b3e09e111bf772.webp",
+      "canonicalName": "1986-05 - Cadillac Area Groundwater Contamination RI-FS Work Plan.pdf",
+      "sha256": "cdc90617320399b0a58b6c67306d5687b264fc4a8ec9a0876663c2308120e036",
+      "size": 5974254,
+      "pages": 196
+    }
+  ],
+  "verifiedFindings": [
+    "The July 23, 1985 progress report records elevated cadmium and chromium in Northernaire soils and sewer sediment, recommends excavation and off-site disposal, and says limited flow information, complex hydrogeology and other possible sources required a broader groundwater study.",
+    "The 1985 report records a requested $244,162 EPA supplement and approximately $1.3 million in Act 307 funding, including $872,000 for water-supply extensions and approximately $445,000 for investigation.",
+    "The May 1986 work plan describes three aquifers and preliminary estimated shallow flow northeast at about 200 feet per year and intermediate flow northwest at about 25 feet per year, while stating that plume boundaries and hydrogeology were not sufficiently defined.",
+    "The work plan proposes 60 approximately 90-foot source-location wells, 26 tentative shallow and deep wells, groundwater sampling, aquifer testing and a flow-and-transport model.",
+    "The February 25, 2026 signed LDFA resolution states that two 5,000-pound carbon vessels had been repurposed for PFAS capture, that one vessel was ineffective because of foulants, and records a 7-0 vote supporting a NextCycle grant request for onsite regeneration and PFAS destruction."
+  ],
+  "evidentiaryBoundary": "The 1985 and 1986 records concern historical metals and VOC groundwater investigation and predate PFAS work. The RI/FS document is a work plan rather than the resulting investigation. The 2026 resolution proves LDFA adoption of grant support, not a grant award, contract, completed regeneration, destruction result or verified treatment performance.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The historical documents do not supply completed local boring or well-construction logs, dated synoptic water levels, hydraulic-test results, a Plett-specific modern groundwater-flow map or synchronized PFAS source-to-receptor sampling. The signed LDFA resolution is unrelated to those missing analytical and delivery records."
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "b35f4a88b8bbd75ff4e1b2cdaefa9c396b52f8988cd77722e558e38d58674493",
+  "catalogFingerprint": "59114c40f60f394fc66961d58fb7c40903a5907b1f33465dbee5af00f3173f84",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1559,
-    "verifiedRecords": 1559,
-    "pdfRecords": 1411,
-    "pdfPages": 20150,
+    "catalogRecords": 1562,
+    "verifiedRecords": 1562,
+    "pdfRecords": 1414,
+    "pdfPages": 20351,
     "imageRecords": 13,
-    "embeddedTextPages": 16354,
-    "ocrPages": 3809,
-    "ocrPagesWithText": 3466,
-    "manualReviewPages": 144,
+    "embeddedTextPages": 16553,
+    "ocrPages": 3811,
+    "ocrPagesWithText": 3468,
+    "manualReviewPages": 146,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,8 +29,8 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 144,
-    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map, faint handwritten/form pages and the complete five-page scanned VN-019184 response package. No missing or corrupt source page was found."
+    "pagesReviewed": 146,
+    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map, faint handwritten/form pages, the complete five-page scanned VN-019184 response package and both pages of the signed LDFA resolution. No missing or corrupt source page was found."
   },
   "manualReview": [
     {
@@ -559,6 +559,16 @@
         3,
         4,
         5
+      ]
+    },
+    {
+      "catalog": "supplemental-documents.json",
+      "id": "167-322217e52758",
+      "name": "2026-02-25 - Signed LDFA Carbon Regeneration Grant Resolution.pdf",
+      "url": "/findings-docs/167-322217e52758.pdf",
+      "pages": [
+        1,
+        2
       ]
     }
   ],

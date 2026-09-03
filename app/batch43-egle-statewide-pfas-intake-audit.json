@@ -1,0 +1,43 @@
+{
+  "batch": "2026-09-02 EGLE statewide wastewater and biosolids PFAS report intake 43",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared the hash against every evidence catalog and local public asset.",
+    "Opened all 20 pages and confirmed that every page contains readable embedded text.",
+    "Rendered all 20 pages and visually reviewed the complete page sequence, figures, tables, cover and references.",
+    "Retained the report once in the PFAS monitoring library with a local first-page preview and anonymous full-document download.",
+    "Applied a statewide-context boundary because the report does not identify Cadillac or Wexford by name or provide facility-specific results."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "pdfPagesReviewed": 20,
+    "embeddedTextPages": 20,
+    "renderedPagesReviewed": 20,
+    "exactExistingRecords": 0,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "addedRecord": {
+    "recordId": "099-f22dafcb83f6",
+    "asset": "/pfas-docs/099-f22dafcb83f6.pdf",
+    "preview": "/first-page-previews/by-sha256/491f1f28b75567763d56bc7ebf1050c34902839f371a0e6e093330b45a44e331.webp",
+    "canonicalName": "2020-06 - EGLE Summary Report - PFAS in Municipal Wastewater and Associated Residuals.pdf",
+    "sha256": "f22dafcb83f651a38b026112e5557b3293754e6368e0bb8c2cf1aee0ccd6e43d",
+    "size": 2766647,
+    "pages": 20
+  },
+  "verifiedFindings": [
+    "EGLE summarizes a 2018 IPP PFAS initiative covering 95 municipal WWTPs and a separate statewide assessment covering 42 WWTPs and 22 biosolids land-application sites.",
+    "The report says PFOA was not detected above the applicable state water-quality values in any participating WWTP effluent and identifies PFOS as the principal regulatory driver; 31 percent of the 95 IPP WWTPs were reported as having a PFOS source and a discharge above the applicable water-quality value.",
+    "For the 42-WWTP assessment, the report gives a PFOS biosolids/sludge average of 195 micrograms per kilogram and a median of 13 micrograms per kilogram; excluding seven industrially impacted samples reduces the stated average to 16 and median to 11 micrograms per kilogram.",
+    "Field screening found higher PFAS concentrations across environmental matrices associated with more highly impacted biosolids, while emphasizing that site-specific environmental conditions affected potential impacts and exposure pathways."
+  ],
+  "evidentiaryBoundary": "The report is statewide program and technical context. Its maps and plots do not identify Cadillac or Wexford, and it supplies no Cadillac-specific sample result, delivery record, violation finding, source determination, groundwater direction or source-to-receptor pathway proof.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The report does not supply the Cadillac-specific synchronized influent, effluent and biosolids data; complete receptor work order; receiving history; certified well construction; water-level or hydraulic-test data; or source-to-receptor sampling required by the remaining queue."
+  }
+}

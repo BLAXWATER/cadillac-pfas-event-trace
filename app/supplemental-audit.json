@@ -1,11 +1,19 @@
 {
   "stats": {
-    "suppliedFiles": 738,
+    "suppliedFiles": 739,
     "newDistinctRecords": 164,
     "exactExistingRecordsReused": 161,
     "duplicateCopiesSuppressed": 42,
     "outOfScopeExcluded": 367,
     "publishedBytes": 472558610,
+    "latestBatch43FilesReviewed": 1,
+    "latestBatch43PdfPagesReviewed": 20,
+    "latestBatch43EmbeddedTextPages": 20,
+    "latestBatch43RenderedPagesReviewed": 20,
+    "latestBatch43ExactExistingRecords": 0,
+    "latestBatch43RecordsAdded": 1,
+    "latestBatch43TimelineEventsAdded": 0,
+    "latestBatch43RequirementsClosed": 0,
     "latestBatch42FilesReviewed": 3,
     "latestBatch42PdfPagesReviewed": 150,
     "latestBatch42EmbeddedTextPages": 147,
@@ -223,6 +231,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 EGLE statewide PFAS report intake: the supplied 20-page PDF was opened, hash-checked, text-extracted and rendered in full. It is a distinct statewide technical record; all pages are readable and the first page is a nonblank report cover.",
     "September 2 EPA quarterly noncompliance intake: all three supplied PDFs and all 150 pages were hash-checked, opened, text-extracted and rendered. The three image-only EPA archive covers were visually verified as nonblank. Two files exactly match established records and were localized for anonymous download; the distinct January–March 2015 report was retained once and linked to a new dated event.",
     "September 2 resolution cross-reference intake: the supplied five-page PDF was SHA-256 checked, text-extracted page by page and visually inspected on all five pages. It is an exact byte match to established record 100, so no duplicate was added. Pages 3–4 were linked as a cross-reference to the separate November 20, 2017 official-minutes event, with the blank execution and certification fields retained as an explicit limitation.",
     "September 2 FY2019 budget intake: all 235 pages of Cadillac's adopted 2018-2019 Annual Operating Budget were opened, 234 pages were text-indexed and the image-only cover was visually checked; the revenue table and Water Resources goals were visually inspected on PDF pages 105 and 41, and the May 21, 2018 approval date was verified on page 46. The budget is retained separately from the November 20, 2017 City Council minutes.",
@@ -257,6 +266,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "September 2 EGLE statewide wastewater and biosolids PFAS report",
+      "reason": "The June 2020 EGLE report is distinct and was retained once in the PFAS library. It documents statewide IPP and wastewater/biosolids findings but does not name Cadillac or Wexford or supply a local analytical result, so no Cadillac timeline event was added and no evidence-request requirement was closed."
+    },
     {
       "name": "September 2 EPA quarterly noncompliance reports",
       "reason": "The January–March 2014 and April–June 2014 files are exact byte matches to established records and were not added again; their canonical assets were localized for anonymous preview and download. The January–March 2015 file is distinct and was retained once. The later 2014 report carries forward the same December 31, 2013 DMR reporting violation, so it is linked as a cross-reference rather than counted as another violation event. The 2015 report lists seven ammonia and carbonaceous-BOD entries but supplies no concentrations, loads, root cause, PFAS finding, linked enforcement action or final order."

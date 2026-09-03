@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suppliedFiles": 108,
-    "finalDistinctRecords": 104,
-    "newDistinctRecords": 98,
+    "suppliedFiles": 109,
+    "finalDistinctRecords": 105,
+    "newDistinctRecords": 99,
     "existingRecordsReused": 6,
     "existingRecordReplaced": 1,
     "duplicateCopiesSuppressed": 4,
     "ocrReviewedPdfs": 24,
     "ocrReviewedPages": 192,
-    "publishedBytes": 113425236
+    "publishedBytes": 116191883
   },
   "methods": [
     "SHA-256 comparison within the 91-file category and against every catalog plus timeline source asset",
@@ -18,9 +18,14 @@
     "OCR of all 30 pages in eight image-only PDFs, followed by rendered-page review",
     "Full-page visual comparison of the two J19915 variants",
     "Workbook inspection plus page-by-page text and visual review of the 16-record A12-A24 PFAS source set",
-    "Two-pass OCR and rendered-page verification of the image-only April 18, 2018 DEQ PFAS-source follow-up letter"
+    "Two-pass OCR and rendered-page verification of the image-only April 18, 2018 DEQ PFAS-source follow-up letter",
+    "Hash, embedded-text and rendered-page review of all 20 pages in the June 2020 EGLE statewide wastewater and biosolids PFAS summary"
   ],
   "decisions": [
+    {
+      "name": "June 2020 EGLE statewide wastewater and biosolids PFAS summary",
+      "reason": "The 20-page report has a distinct SHA-256 hash and preserves statewide regulatory and technical context for the 95-WWTP IPP initiative and the 42-WWTP/22-field assessment. It does not name Cadillac or Wexford or provide a facility-specific result, so it is retained in the PFAS library without a Cadillac timeline event and without closing a local source, time-series or migration-pathway requirement."
+    },
     {
       "name": "J19915-1 UDS Level 2 Report",
       "reason": "The two 22-page files have identical normalized text and matching report metadata. The older copy has cropped and overlapping pages 15-16; the complete reconstructed version replaces it without carrying a duplicate label."

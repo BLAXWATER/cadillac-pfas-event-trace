@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1557,
+  "recordCount": 1558,
   "archiveCount": 13,
   "archives": [
     {
@@ -29,7 +29,7 @@
       "label": "PFAS monitoring",
       "catalog": "pfas-documents.json",
       "sectionId": "pfas-library-title",
-      "count": 98
+      "count": 99
     },
     {
       "archiveId": "biosolids",
@@ -12723,6 +12723,17 @@
       "url": "/pfas-docs/098-044977305e5f.pdf",
       "sha256": "044977305e5fd34cdf638d762200c3d6832c29d0101e30ee8313013897dfa4d1",
       "size": 4031346
+    },
+    {
+      "id": "099-f22dafcb83f6",
+      "archiveId": "pfas",
+      "archiveLabel": "PFAS monitoring",
+      "catalog": "pfas-documents.json",
+      "sectionId": "pfas-library-title",
+      "name": "2020-06 - EGLE Summary Report - PFAS in Municipal Wastewater and Associated Residuals.pdf",
+      "url": "/pfas-docs/099-f22dafcb83f6.pdf",
+      "sha256": "f22dafcb83f651a38b026112e5557b3293754e6368e0bb8c2cf1aee0ccd6e43d",
+      "size": 2766647
     },
     {
       "id": "process-site-001-d5e68ea065b6",

@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 725);
+  assert.equal(localFiles, 726);
   assert.equal(externalFiles, 832);
 });
 
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1557);
+  assert.equal(recordCount, 1558);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1557);
+  assert.equal(records.length, 1558);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1409);
-  assert.equal(audit.stats.pdfPages, 20125);
+  assert.equal(audit.stats.pdfRecords, 1410);
+  assert.equal(audit.stats.pdfPages, 20145);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -425,8 +425,8 @@ test("PFAS archive audit and repaired J19915 source remain consistent", async ()
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "pfas-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "pfas-audit.json"), "utf8"));
   assert.equal(catalog.length, audit.stats.newDistinctRecords);
-  assert.equal(audit.stats.suppliedFiles, 108);
-  assert.equal(audit.stats.finalDistinctRecords, 104);
+  assert.equal(audit.stats.suppliedFiles, 109);
+  assert.equal(audit.stats.finalDistinctRecords, 105);
   assert.equal(audit.stats.duplicateCopiesSuppressed, 4);
   assert.equal(audit.stats.ocrReviewedPages, 192);
   assert.equal(catalog.some((row) => /PENDING/.test(row.url)), false);
@@ -447,7 +447,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const intakeAudit = JSON.parse(await readFile(path.join(appDirectory, "archive-intake-audit.json"), "utf8"));
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
-  assert.equal(pfasCatalog.length, 98);
+  assert.equal(pfasCatalog.length, 99);
   assert.equal(supplementalCatalog.length, 164);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
@@ -2024,6 +2024,43 @@ test("batch 42 reuses two exact EPA reports, adds the distinct 2015 QNCR and pre
   assert.match(pageSource, /role: "Cross-reference"/);
   assert.match(pageSource, /no linked enforcement action or final order/);
   assert.match(audit.evidentiaryBoundary, /do not supply measured concentrations, loads, root-cause findings, PFAS results/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 43 retains the EGLE statewide PFAS report once without overstating Cadillac-specific evidence", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch43-egle-statewide-pfas-intake-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const catalogRows = catalogs.flatMap((catalog) => catalog.rows);
+  const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 20);
+  assert.equal(audit.stats.embeddedTextPages, 20);
+  assert.equal(audit.stats.renderedPagesReviewed, 20);
+  assert.equal(audit.stats.exactExistingRecords, 0);
+  assert.equal(audit.stats.recordsAdded, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const row = catalogRows.find((candidate) => candidate.id === audit.addedRecord.recordId);
+  assert.ok(row, `${audit.addedRecord.recordId} is absent from the catalog`);
+  assert.equal(row.url, audit.addedRecord.asset);
+  assert.equal(row.sha256, audit.addedRecord.sha256);
+  assert.equal(row.pages, audit.addedRecord.pages);
+  assert.equal(row.size, audit.addedRecord.size);
+  assert.equal(catalogRows.filter((candidate) => candidate.sha256 === audit.addedRecord.sha256).length, 1);
+
+  const bytes = await readFile(path.join(publicDirectory, audit.addedRecord.asset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), audit.addedRecord.sha256);
+  assert.equal(previewManifest[audit.addedRecord.asset], audit.addedRecord.preview);
+  assert.ok((await stat(path.join(publicDirectory, audit.addedRecord.preview.replace(/^\//, "")))).size > 0);
+  assert.match(bundledSource, new RegExp(audit.addedRecord.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  assert.match(row.description, /does not identify Cadillac or Wexford by name/i);
+  assert.match(audit.evidentiaryBoundary, /no Cadillac-specific sample result/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

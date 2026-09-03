@@ -489,6 +489,11 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/pfas-docs/099-f22dafcb83f6.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/dmr-docs/013-9a9721237464.pdf", {
     eager: true,
     import: "default",

@@ -1280,5 +1280,18 @@
     "size": 4031346,
     "sha256": "044977305e5fd34cdf638d762200c3d6832c29d0101e30ee8313013897dfa4d1",
     "description": "Twenty-four-page source packet for the Cadillac drinking-water comparability study at 1140 Plett Road. It preserves the side-by-side results table for samples collected September 10, 2025; available EGLE Work Order 2509147 pages; Merit laboratory reports; Cyclopure test-kit reports; and the October 15, 2025 EGLE transmittal letter. The packet is retained once as materially distinct source evidence and does not replace the separately cataloged final MPART comparability report or individual laboratory records."
+  },
+  {
+    "id": "099-f22dafcb83f6",
+    "name": "2020-06 - EGLE Summary Report - PFAS in Municipal Wastewater and Associated Residuals.pdf",
+    "url": "/pfas-docs/099-f22dafcb83f6.pdf",
+    "year": "2020",
+    "category": "PFAS monitoring",
+    "type": "Statewide PFAS technical report",
+    "format": "PDF",
+    "pages": 20,
+    "size": 2766647,
+    "sha256": "f22dafcb83f651a38b026112e5557b3293754e6368e0bb8c2cf1aee0ccd6e43d",
+    "description": "June 2020 EGLE summary of the 2018 Industrial Pretreatment Program PFAS initiative at 95 municipal WWTPs and statewide sampling of 42 WWTPs and 22 biosolids land-application sites. It reports PFOS as the principal compliance driver and discusses industrial-source controls, influent/effluent/residual distributions and field screening. The report does not identify Cadillac or Wexford by name or provide a Cadillac-specific result, so it is retained as statewide agency context rather than local source, violation or migration-pathway proof."
   }
 ]

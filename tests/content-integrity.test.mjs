@@ -2329,6 +2329,40 @@ test("batch 49 reuses the exact WWTP correspondence and official 0P1.02 drawing"
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 50 reuses HNJ-P0ZX-8AVDS and preserves the cleanup statement as Cadillac's account", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch50-hnj-summary-submission-reconciliation-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "form-submission-documents.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 2);
+  assert.equal(audit.stats.embeddedTextPages, 2);
+  assert.equal(audit.stats.imageOnlyPages, 0);
+  assert.equal(audit.stats.renderedPagesReviewed, 2);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const row = catalog.find((candidate) => candidate.id === audit.file.recordId);
+  assert.ok(row, `${audit.file.recordId} is absent from the form-submission catalog`);
+  assert.equal(row.name, audit.file.canonicalName);
+  assert.equal(row.sha256, audit.file.sha256);
+  assert.equal(row.size, audit.file.size);
+  assert.equal(row.pages, audit.file.pages);
+  assert.equal(catalog.filter((candidate) => candidate.sha256 === audit.file.sha256).length, 1);
+
+  assert.match(audit.file.verifiedContent, /Landfill refuses to invest money on cleanup/);
+  assert.match(pageSource, /no landfill action had been taken and comments that the landfill refused to invest in cleanup/);
+  assert.match(pageSource, /without treating that account as an independent agency finding/);
+  assert.match(audit.evidentiaryBoundary, /does not contain a landfill-authored response/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

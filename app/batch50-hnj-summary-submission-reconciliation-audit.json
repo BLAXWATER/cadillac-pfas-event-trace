@@ -1,0 +1,40 @@
+{
+  "batch": "2026-09-02 HNJ-P0ZX-8AVDS summary-submission reconciliation intake 50",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared them with the established form-submission catalog and retained born-digital record metadata.",
+    "Extracted the embedded text and rendered both pages for full visual review; neither page is blank or unreadable.",
+    "Confirmed that the supplied PDF is an exact byte-for-byte copy of the established November 29, 2018 MiWaters IPP PFAS Summary Report submission.",
+    "Checked the supplied filename's characterization against the record and retained the neutral canonical title because the cleanup statement is a comment in Cadillac's submission, not a separate landfill-authored refusal letter or an independent agency finding."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 2,
+    "embeddedTextPages": 2,
+    "imageOnlyPages": 0,
+    "renderedPagesReviewed": 2,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "file": {
+    "suppliedName": "HNJ-P0ZX-8AVDS V1 - Landfill Refuses to invest money into cleanup.pdf",
+    "sha256": "7cac269c4207f212eae8b5587cda7a9c38ed8db720560a4b9c803041f383cc97",
+    "size": 52125,
+    "pages": 2,
+    "classification": "exact existing record reused as cross-reference",
+    "recordId": "form-submission-030-7cac269c4207",
+    "canonicalName": "2018-11-29 - IPP PFAS summary report - Submission HNJ-P0ZX-8AVDS v1.pdf",
+    "canonicalRepositoryPath": "public/form-submission-docs/form-submission-030-7cac269c4207.pdf",
+    "verifiedContent": "Cadillac's submitted form says Wexford County Landfill sampling was completed by the POTW and received, attaches the J17646-1 leachate report, records Avon sampling as pending and includes the comment 'Landfill refuses to invest money on cleanup.' The form also reports that no POTW effluent PFOS or PFOA values were provided for November 5, 2018 and that biosolids monitoring had not yet been required."
+  },
+  "evidentiaryBoundary": "The cleanup sentence is preserved as a statement in Cadillac's municipal submission. The record does not contain a landfill-authored response, define the proposed cleanup, prove that no investment occurred, establish the date leachate acceptance stopped or demonstrate PFAS passage through the WWTP or a groundwater migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The exact record was already linked to the November 29, 2018 timeline event. It does not supply transaction-level receiving records, synchronized influent/effluent/sludge PFAS data or hydrogeologic pathway proof."
+  }
+}

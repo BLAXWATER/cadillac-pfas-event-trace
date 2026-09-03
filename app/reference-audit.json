@@ -1,9 +1,11 @@
 {
-  "sourceFileCount": 132,
-  "publishedFileCount": 126,
+  "sourceFileCount": 136,
+  "publishedFileCount": 130,
   "excludedFileCount": 6,
-  "includedBytes": 27472276,
+  "includedBytes": 27615629,
   "methods": [
+    "Complete visual and value-level inspection of the two POTW Monitoring Data Summary workbooks",
+    "Microsoft Word render and normalized-text comparison of the two original stormwater DOC sources",
     "Complete eight-sheet render and formula-error inspection of the original 2018 Cadillac WWTP CSI report workbook",
     "SHA-256 byte comparison",
     "Normalized CSV header and cell comparison",

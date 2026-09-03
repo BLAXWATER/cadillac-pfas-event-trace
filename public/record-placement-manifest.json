@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1565,
+  "recordCount": 1569,
   "archiveCount": 13,
   "archives": [
     {
@@ -92,7 +92,7 @@
       "label": "Reference data",
       "catalog": "reference-documents.json",
       "sectionId": "reference-library-title",
-      "count": 126
+      "count": 130
     }
   ],
   "records": [
@@ -14340,6 +14340,50 @@
       "url": "/reference-data/126-5811dc8c913b.xlsx",
       "sha256": "5811dc8c913b6a5849ae929cafff135e00ffeac1352187c2dbd0ccd61f5e4f7b",
       "size": 54031
+    },
+    {
+      "id": "127-13297ac0d9fd",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "POTW_Monitoring_Data_Summary 2018.xlsx",
+      "url": "/reference-data/127-13297ac0d9fd.xlsx",
+      "sha256": "13297ac0d9fdf5b0ce402866672cab74cfa45d82b7568b6dd59dce76225853b9",
+      "size": 14489
+    },
+    {
+      "id": "128-37442da8cfd0",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "POTW_Monitoring_Data_Summary.xlsx",
+      "url": "/reference-data/128-37442da8cfd0.xlsx",
+      "sha256": "37442da8cfd0889a704702723e259c7d466e030a55aadb8e03078565812e7843",
+      "size": 14176
+    },
+    {
+      "id": "129-e6592f849203",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "NEW SW COC.doc",
+      "url": "/reference-data/129-e6592f849203.doc",
+      "sha256": "e6592f849203e4291d64f7fda0a9973380a4bf76e19a8a46985b72b3ab837d11",
+      "size": 40960
+    },
+    {
+      "id": "130-94714c1d52c9",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "SW COC Issued Letter.doc",
+      "url": "/reference-data/130-94714c1d52c9.doc",
+      "sha256": "94714c1d52c9d6f70e1796e177b2cddde328b047fbe206dbec3a0a8d6bed02ba",
+      "size": 73728
     },
     {
       "id": "001-d8496c7348a6",

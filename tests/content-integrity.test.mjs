@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 748);
+  assert.equal(localFiles, 752);
   assert.equal(externalFiles, 817);
 });
 
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1565);
+  assert.equal(recordCount, 1569);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1565);
+  assert.equal(records.length, 1569);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -3189,6 +3189,71 @@ test("batch 66 preserves the native CSI email, original workbook and official re
   assert.equal(referenceAudit.sourceFileCount, referenceAudit.publishedFileCount + referenceAudit.excludedFileCount);
   assert.equal(referenceAudit.includedBytes, referenceCatalog.reduce((sum, item) => sum + item.size, 0));
   assert.match(audit.sourceDefect, /#REF!/);
+  assert.match(audit.evidentiaryBoundary, /no PFAS analytes/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 67 preserves four native monitoring and stormwater sources while reusing six exact PDFs", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch67-native-source-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 10);
+  assert.equal(audit.stats.distinctInputHashes, 10);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 6);
+  assert.equal(audit.stats.nativeSourceRecordsAdded, 4);
+  assert.equal(audit.stats.workbookSheetsReviewed, 2);
+  assert.equal(audit.stats.workbookFormulaErrors, 0);
+  assert.equal(audit.stats.wordDocumentsRendered, 2);
+  assert.equal(audit.stats.wordPagesRendered, 2);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+
+  for (const expected of audit.addedRecords) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    const row = matches[0];
+    assert.equal(row.id, expected.recordId);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.size, expected.size);
+    const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(bytes.length, expected.size);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+    const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(placed.length, 1);
+    assert.equal(placed[0].archiveId, "reference");
+    assert.equal(placed[0].sectionId, "reference-library-title");
+    assert.equal(placed[0].url, expected.asset);
+  }
+
+  for (const expected of audit.exactCrossReferences) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, expected.recordId);
+    assert.equal(matches[0].size, expected.size);
+    assert.equal(matches[0].pages, expected.pages);
+    const acrossCatalogs = [...catalogs.values()].flat().filter((item) => item.sha256 === expected.sha256);
+    assert.equal(acrossCatalogs.length, 1);
+  }
+
+  const firstWorkbook = await readFile(path.join(publicDirectory, "reference-data", "127-13297ac0d9fd.xlsx"));
+  const secondWorkbook = await readFile(path.join(publicDirectory, "reference-data", "128-37442da8cfd0.xlsx"));
+  const firstWordDocument = await readFile(path.join(publicDirectory, "reference-data", "129-e6592f849203.doc"));
+  const secondWordDocument = await readFile(path.join(publicDirectory, "reference-data", "130-94714c1d52c9.doc"));
+  assert.equal(firstWorkbook.subarray(0, 2).toString("hex"), "504b");
+  assert.equal(secondWorkbook.subarray(0, 2).toString("hex"), "504b");
+  assert.equal(firstWordDocument.subarray(0, 8).toString("hex"), "d0cf11e0a1b11ae1");
+  assert.equal(secondWordDocument.subarray(0, 8).toString("hex"), "d0cf11e0a1b11ae1");
+
+  const referenceAudit = JSON.parse(await readFile(path.join(appDirectory, "reference-audit.json"), "utf8"));
+  const referenceCatalog = catalogs.get("reference-documents.json");
+  assert.equal(referenceAudit.publishedFileCount, referenceCatalog.length);
+  assert.equal(referenceAudit.sourceFileCount, referenceAudit.publishedFileCount + referenceAudit.excludedFileCount);
+  assert.equal(referenceAudit.includedBytes, referenceCatalog.reduce((sum, item) => sum + item.size, 0));
   assert.match(audit.evidentiaryBoundary, /no PFAS analytes/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });

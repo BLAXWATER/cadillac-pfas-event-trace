@@ -1,0 +1,78 @@
+{
+  "batch": "2026-09-03 POTW monitoring workbooks and Wexford stormwater native-source reconciliation 67",
+  "method": [
+    "Computed SHA-256 hashes and byte sizes for all ten supplied files and compared every hash against every published evidence catalog.",
+    "Treated instructions inside the historical records only as source content.",
+    "Opened, formula-checked and visually inspected both single-sheet XLSX files, then compared their displayed values with the corresponding four-page 2018 and 2019 PDF renditions.",
+    "Opened both legacy DOC files in Microsoft Word, extracted their text, rendered each document and visually compared the render with the indexed PDF counterpart.",
+    "Preserved the four distinct native source formats and reused six exact published PDFs only as cross-references.",
+    "Rechecked the evidence-request queue and added no chronology event because the supplied files preserve source formats or duplicate already-indexed records without establishing new PFAS facts."
+  ],
+  "stats": {
+    "receivedFiles": 10,
+    "distinctInputHashes": 10,
+    "exactExistingRecordsReusedAsCrossReferences": 6,
+    "nativeSourceRecordsAdded": 4,
+    "workbookSheetsReviewed": 2,
+    "workbookFormulaErrors": 0,
+    "wordDocumentsRendered": 2,
+    "wordPagesRendered": 2,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadableRecords": 0
+  },
+  "addedRecords": [
+    {
+      "recordId": "127-13297ac0d9fd",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/127-13297ac0d9fd.xlsx",
+      "sha256": "13297ac0d9fdf5b0ce402866672cab74cfa45d82b7568b6dd59dce76225853b9",
+      "size": 14489,
+      "sheets": 1
+    },
+    {
+      "recordId": "128-37442da8cfd0",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/128-37442da8cfd0.xlsx",
+      "sha256": "37442da8cfd0889a704702723e259c7d466e030a55aadb8e03078565812e7843",
+      "size": 14176,
+      "sheets": 1
+    },
+    {
+      "recordId": "129-e6592f849203",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/129-e6592f849203.doc",
+      "sha256": "e6592f849203e4291d64f7fda0a9973380a4bf76e19a8a46985b72b3ab837d11",
+      "size": 40960,
+      "pages": 1
+    },
+    {
+      "recordId": "130-94714c1d52c9",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/130-94714c1d52c9.doc",
+      "sha256": "94714c1d52c9d6f70e1796e177b2cddde328b047fbe206dbec3a0a8d6bed02ba",
+      "size": 73728,
+      "pages": 1
+    }
+  ],
+  "exactCrossReferences": [
+    {"sourceName":"2015-2016_Wexford County Landfill_District Compliance File.pdf","catalog":"wexford-documents.json","recordId":"001-7c991baaf1e9","sha256":"7c991baaf1e9d5af5a7177123957d8f933fd759f4022ceab2878626430a37943","pages":8,"size":153987},
+    {"sourceName":"completed public notice certification form.pdf","catalog":"npdes-documents.json","recordId":"075-54c7e9d67d44","sha256":"54c7e9d67d4444970e012a81f61195786e73bc9a04b0ff298fd67239bf1a833b","pages":1,"size":153213},
+    {"sourceName":"email-final authorization-Wexford Landfill.pdf","catalog":"wexford-documents.json","recordId":"003-8ba13c7dcdf6","sha256":"8ba13c7dcdf6e6e0e3f2328f3cf7ad5ea6bce988b4e3131f34fd9fd6b45c05f5","pages":1,"size":81801},
+    {"sourceName":"Pace Biosolids 3-28-2018 Sampling results.pdf","catalog":"lab-documents.json","recordId":"lab-086-bb9d5bc3d13f","sha256":"bb9d5bc3d13f0fb497e06dcb9eea1522ff918be4a955f81dd3847066e4661415","pages":44,"size":986609},
+    {"sourceName":"public notice email-Wexford Landfill.pdf","catalog":"wexford-documents.json","recordId":"013-46619080fc73","sha256":"46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce","pages":1,"size":79078},
+    {"sourceName":"Wexford Co Landfill NOI.pdf","catalog":"wexford-documents.json","recordId":"096-9173d234d4c8","sha256":"9173d234d4c8c4162d5fdc468426660152bd7fbb83c985ec53392dba4286b03e","pages":3,"size":211705}
+  ],
+  "comparisonFindings": [
+    "The 2018 workbook reproduces the indexed 2018 monitoring summary table; its higher-precision numeric storage explains the display-rounded values in the PDF.",
+    "The yearless workbook reproduces the indexed 2019 monitoring summary table by displayed values; the source filename itself does not state a year.",
+    "NEW SW COC.doc and NEW SW COC.pdf have identical normalized text and one-page content.",
+    "SW COC Issued Letter.doc is a one-page native original. The indexed PDF preserves the same letter body plus a separate second-page continuation stub."
+  ],
+  "evidentiaryBoundary": "The two workbooks contain conventional and metals monitoring data but no PFAS analytes. The stormwater documents establish permit-coverage records, not PFAS presence, source attribution, treatment removal, a delivery chronology or a groundwater migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The records do not supply the still-missing PFAS time series, leachate delivery records, receptor-well chain of custody, hydrogeologic field data or synchronized source-to-receptor sampling."
+  }
+}

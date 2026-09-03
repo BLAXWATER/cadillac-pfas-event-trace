@@ -1556,5 +1556,81 @@
         "relationship": "Official MiEnviro rendition of the transmittal and workbook"
       }
     ]
+  },
+  {
+    "id": "127-13297ac0d9fd",
+    "name": "POTW_Monitoring_Data_Summary 2018.xlsx",
+    "url": "/reference-data/127-13297ac0d9fd.xlsx",
+    "format": "XLSX",
+    "type": "Original POTW monitoring data workbook",
+    "size": 14489,
+    "rows": 20,
+    "columns": 22,
+    "sheets": 1,
+    "sha256": "13297ac0d9fdf5b0ce402866672cab74cfa45d82b7568b6dd59dce76225853b9",
+    "description": "Original single-sheet 2018 POTW Monitoring Data Summary workbook. The sheet was opened, formula-checked and visually inspected; its local-limits, influent, effluent and biosolids values match the four-page 2018 PDF rendition. The table contains conventional and metals monitoring data, not PFAS analytes.",
+    "matchingSources": [
+      {
+        "name": "POTW_Monitoring_Data_Summary 2018.pdf",
+        "relationship": "Four-page PDF rendition of the same 2018 monitoring table"
+      }
+    ]
+  },
+  {
+    "id": "128-37442da8cfd0",
+    "name": "POTW_Monitoring_Data_Summary.xlsx",
+    "url": "/reference-data/128-37442da8cfd0.xlsx",
+    "format": "XLSX",
+    "type": "Original POTW monitoring data workbook",
+    "size": 14176,
+    "rows": 20,
+    "columns": 22,
+    "sheets": 1,
+    "sha256": "37442da8cfd0889a704702723e259c7d466e030a55aadb8e03078565812e7843",
+    "description": "Original single-sheet POTW Monitoring Data Summary workbook whose displayed values match the four-page 2019 PDF rendition. The sheet was opened, formula-checked and visually inspected. The source filename omits a year, so the 2019 identification is based on the matching published table rather than the filename alone. The table contains conventional and metals monitoring data, not PFAS analytes.",
+    "matchingSources": [
+      {
+        "name": "POTW_Monitoring_Data_Summary 2019.pdf",
+        "relationship": "Four-page PDF rendition with matching 2019 monitoring-table values"
+      }
+    ]
+  },
+  {
+    "id": "129-e6592f849203",
+    "name": "NEW SW COC.doc",
+    "url": "/reference-data/129-e6592f849203.doc",
+    "format": "DOC",
+    "type": "Original stormwater certificate source document",
+    "size": 40960,
+    "rows": null,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "e6592f849203e4291d64f7fda0a9973380a4bf76e19a8a46985b72b3ab837d11",
+    "description": "Original editable one-page source document for Certificate of Coverage MIS111718, issued June 27, 2012 to Wexford County Landfill LLC under stormwater General Permit MIS110000. The document was opened and rendered in Microsoft Word; its normalized text matches the indexed PDF exactly.",
+    "matchingSources": [
+      {
+        "name": "NEW SW COC.pdf",
+        "relationship": "Text-identical one-page PDF rendition indexed as Wexford record 095-019ae9c3bfd6"
+      }
+    ]
+  },
+  {
+    "id": "130-94714c1d52c9",
+    "name": "SW COC Issued Letter.doc",
+    "url": "/reference-data/130-94714c1d52c9.doc",
+    "format": "DOC",
+    "type": "Original stormwater issuance-letter source document",
+    "size": 73728,
+    "rows": null,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "94714c1d52c9d6f70e1796e177b2cddde328b047fbe206dbec3a0a8d6bed02ba",
+    "description": "Original editable one-page June 28, 2012 issuance letter transmitting Certificate of Coverage MIS111718 to Wexford County Landfill LLC. The source was opened and rendered in Microsoft Word. Its letter body matches the indexed PDF, while that PDF retains a separate second-page continuation stub; both source-format records are preserved.",
+    "matchingSources": [
+      {
+        "name": "SW COC Issued Letter.pdf",
+        "relationship": "Same issuance letter indexed as correspondence record corr-035-446cf8df580f; the PDF includes an additional continuation stub page"
+      }
+    ]
   }
 ]

@@ -649,6 +649,26 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/reference-data/127-13297ac0d9fd.xlsx", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/reference-data/128-37442da8cfd0.xlsx", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/reference-data/129-e6592f849203.doc", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/reference-data/130-94714c1d52c9.doc", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
 } as Record<string, string>;
 
 export function bundledPublicAsset(path: string): string {

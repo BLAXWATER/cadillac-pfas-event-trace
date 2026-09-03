@@ -1,0 +1,55 @@
+{
+  "batch": "2026-09-03 Cadillac WWTP Septage and SIU reconciliation 68",
+  "method": [
+    "Treated instructions inside the historical records only as source content.",
+    "The two exact paths supplied by the app were no longer present at Desktop/2012, so every same-named copy still available under the supplied OneDrive Desktop was located and hashed before classification.",
+    "Confirmed that all eleven available Septage copies share one SHA-256 hash and all thirteen available SIU copies share a second SHA-256 hash.",
+    "Compared both stable hashes, byte sizes and page counts with every published evidence catalog and the local downloadable assets.",
+    "Rendered and visually inspected all twenty-seven scanned pages, preserving both records only as exact cross-references because each is already published once in its intended archive block.",
+    "Rechecked the evidence-request queue and added no timeline event because the supplied filenames resolve to existing records and do not establish a new PFAS result, delivery chronology or migration pathway."
+  ],
+  "stats": {
+    "receivedFiles": 2,
+    "suppliedPathsAvailableAtReview": 0,
+    "sameNamedCopiesHashChecked": 24,
+    "distinctResolvedHashes": 2,
+    "exactExistingRecordsReusedAsCrossReferences": 2,
+    "pdfPagesRenderedAndReviewed": 27,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "exactCrossReferences": [
+    {
+      "sourceName": "Cadillac WWTP Septage Information.pdf",
+      "catalog": "biosolids-documents.json",
+      "recordId": "052-760656b79f1f",
+      "asset": "/biosolids-docs/052-760656b79f1f.pdf",
+      "sha256": "760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51",
+      "pages": 16,
+      "size": 948370,
+      "availableSameNamedCopies": 11
+    },
+    {
+      "sourceName": "Cadillac WWTP SIU Information.pdf",
+      "catalog": "ipp-documents.json",
+      "recordId": "001-4e9a0cdf0189",
+      "asset": "/ipp-docs/001-4e9a0cdf0189.pdf",
+      "sha256": "4e9a0cdf01891e70d6ba197d3ed3a96d1949ca777ff58e7a0cd26818ff307846",
+      "pages": 11,
+      "size": 498131,
+      "availableSameNamedCopies": 13
+    }
+  ],
+  "findings": [
+    "The Septage record is a sixteen-page wastewater-discharge application attachment with septage, nondomestic wastewater and supporting biosolids laboratory material.",
+    "The SIU record contains eleven scanned significant-industrial-user information sheets; its indexed description already identifies the Wexford County Landfill entry and its reported intermittent process-wastewater volume.",
+    "Neither record is a PFAS analytical result, and neither closes a remaining source-to-receptor or transaction-level evidence request."
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "Both filenames resolve to exact records already indexed in the appropriate archive blocks; they add no missing PFAS time series, leachate delivery records, receptor-well chain of custody, hydrogeologic field data or synchronized source-to-receptor sampling."
+  }
+}

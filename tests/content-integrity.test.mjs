@@ -3258,6 +3258,48 @@ test("batch 67 preserves four native monitoring and stormwater sources while reu
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 68 reconciles the Cadillac Septage and SIU filenames to exact existing records", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch68-cadillac-septage-siu-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 2);
+  assert.equal(audit.stats.suppliedPathsAvailableAtReview, 0);
+  assert.equal(audit.stats.sameNamedCopiesHashChecked, 24);
+  assert.equal(audit.stats.distinctResolvedHashes, 2);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 2);
+  assert.equal(audit.stats.pdfPagesRenderedAndReviewed, 27);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+
+  for (const expected of audit.exactCrossReferences) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    const row = matches[0];
+    assert.equal(row.id, expected.recordId);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.size, expected.size);
+    assert.equal(row.pages, expected.pages);
+    const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(bytes.length, expected.size);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+    const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(placed.length, 1);
+    assert.equal(placed[0].url, expected.asset);
+    const preview = previewManifest[expected.asset];
+    const previewBytes = await readFile(path.join(publicDirectory, preview.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(preview, ".webp"));
+  }
+
+  assert.match(audit.findings.join(" "), /Neither record is a PFAS analytical result/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

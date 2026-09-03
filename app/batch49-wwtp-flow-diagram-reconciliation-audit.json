@@ -1,0 +1,51 @@
+{
+  "batch": "2026-09-02 WWTP flow-diagram reconciliation intake 49",
+  "method": [
+    "Computed SHA-256 hashes and byte sizes for both supplied PDFs and compared them with the NPDES and process-site catalogs and their published binaries.",
+    "Opened and rendered all six pages. Four correspondence pages contain embedded text; the correspondence attachment page and the large-format official drawing were visually reviewed as image-only pages.",
+    "Confirmed that both supplied PDFs are exact byte-for-byte matches to established public records and that neither begins with a blank page.",
+    "Reused the existing NPDES correspondence record and official 0P1.02 process-flow record without creating duplicate document copies or timeline events."
+  ],
+  "stats": {
+    "receivedFiles": 2,
+    "distinctInputHashes": 2,
+    "pdfPagesReviewed": 6,
+    "embeddedTextPages": 4,
+    "imageOnlyPages": 2,
+    "renderedPagesReviewed": 6,
+    "exactExistingRecordsReusedAsCrossReferences": 2,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "files": [
+    {
+      "name": "Compliance Correspondence_Cadillac WWTP - Updated Narrative and Flow Diagram.pdf",
+      "sha256": "7374bc78179a45892a0478b69ca83763916bf0b704888b7d188d48cfc13500cd",
+      "size": 260947,
+      "pages": 5,
+      "classification": "exact existing record reused as cross-reference",
+      "recordId": "090-7374bc78179a",
+      "canonicalAsset": "/npdes-docs/090-7374bc78179a.pdf",
+      "verifiedContent": "The June-July 2018 DEQ/City correspondence asks for an updated process-flow diagram, records that the WWTP had changed from chlorine to UV disinfection, and states that the City revised page 1 while previously submitted pages 2 and 3 should remain representative. The package ends with Process Flow Diagram III, drawing 0P1.03."
+    },
+    {
+      "name": "Official WWTP Flow Diagram -  0P1-02 Process Flow Diagram.pdf",
+      "sha256": "be54bb8561dd68cf47006de2a66328221b9b336175346937239970f778792ef1",
+      "size": 364177,
+      "pages": 1,
+      "classification": "exact existing record reused as cross-reference",
+      "recordId": "process-site-003-be54bb8561dd",
+      "canonicalAsset": "/process-site-docs/process-site-003-be54bb8561dd.pdf",
+      "verifiedContent": "The large-format Stantec drawing is titled Process Flow Diagram II, drawing 0P1.02, for the Cadillac WWTP 2007 improvements. It maps return and waste activated sludge, equalization-basin drainage, ferric-chloride feed, primary clarifiers and aeration-tank connections."
+    }
+  ],
+  "evidentiaryBoundary": "The correspondence documents a requested diagram update and a stated change to UV disinfection. The drawings describe facility process connections but do not by themselves establish actual operating conditions on a particular date, PFAS removal performance, passage through the plant or a groundwater migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The records improve process-layout cross-reference support but do not supply synchronized influent, effluent and sludge PFAS results, transaction-level leachate receiving history or hydrogeologic pathway proof."
+  }
+}

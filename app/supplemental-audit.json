@@ -1,11 +1,21 @@
 {
   "stats": {
-    "suppliedFiles": 749,
+    "suppliedFiles": 751,
     "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 165,
+    "exactExistingRecordsReused": 167,
     "duplicateCopiesSuppressed": 44,
     "outOfScopeExcluded": 367,
     "publishedBytes": 478733379,
+    "latestBatch49FilesReviewed": 2,
+    "latestBatch49DistinctInputHashes": 2,
+    "latestBatch49PdfPagesReviewed": 6,
+    "latestBatch49EmbeddedTextPages": 4,
+    "latestBatch49ImageOnlyPages": 2,
+    "latestBatch49RenderedPagesReviewed": 6,
+    "latestBatch49ExactExistingRecordsReusedAsCrossReferences": 2,
+    "latestBatch49RecordsAdded": 0,
+    "latestBatch49TimelineEventsAdded": 0,
+    "latestBatch49RequirementsClosed": 0,
     "latestBatch48FilesReviewed": 3,
     "latestBatch48DistinctInputHashes": 3,
     "latestBatch48PdfPagesReviewed": 66,
@@ -280,6 +290,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 intake 49: both supplied WWTP flow-diagram PDFs and all six pages passed hash, readability and rendered-page review. The five-page 2018 DEQ/City correspondence exactly matches established NPDES record 090, and the separate large-format 0P1.02 Process Flow Diagram II exactly matches established process-site record 003. Both records were reused as cross-references without republishing a duplicate or creating a new event.",
     "September 2 intake 48: all three supplied TestAmerica PDFs and all 66 pages passed hash, readability, embedded-text and rendered-sequence review. J17646-1 and J17993-1 exactly match established timeline sources. The supplied J19915-1 file preserves the same 22-page laboratory report and analytical tables as the established record but clips the right side of its receipt-log page, so the cleaner canonical site copy was retained and no duplicate record or event was added.",
     "September 2 intake 47: the supplied 42-page TestAmerica email, analytical report and DEQ guidance package was SHA-256 checked against every catalog, text-extracted and rendered in full. It exactly matches established laboratory record lab-042, which was localized for anonymous preview and download and linked to a separate October 29, 2018 response event. The October 3 source-characterization event preserves the full primary-sample concentration profile and identifies the included duplicate, equipment blank, field blank and method blank.",
     "September 2 intake 46: all three supplied PDFs and all 201 pages passed hash, readability, text and rendered-sequence review. The distinct 1985 progress report, 1986 RI/FS work plan and signed 2026 LDFA resolution were retained separately; planning statements were not recast as completed field results, and no evidence request was closed.",
@@ -320,6 +331,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "WWTP 2018 flow-diagram correspondence and official 0P1.02 drawing",
+      "reason": "Both supplied PDFs exactly match existing public records. The correspondence records a requested process-flow update and the City's stated change from chlorine to UV disinfection; the separate large-format drawing is official Stantec Process Flow Diagram II, drawing 0P1.02. Existing canonical links are reused, and neither record is treated as proof of PFAS removal, plant passage or actual operating conditions on a specific date."
+    },
     {
       "name": "TestAmerica J17646-1, J17993-1 and J19915-1 report reconciliation",
       "reason": "The J17646-1 leachate and J17993-1 effluent submissions exactly match the established site binaries and are reused as cross-references. The J19915-1 submission is a byte-different rendition of the same 22-page June 2019 effluent report; its analytical content and page sequence match, but PDF page 16 is horizontally clipped. The existing complete site copy remains canonical, and no duplicate timeline event or document was added."

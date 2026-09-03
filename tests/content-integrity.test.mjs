@@ -2298,6 +2298,37 @@ test("batch 48 reuses exact TestAmerica reports and keeps the complete J19915 re
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 49 reuses the exact WWTP correspondence and official 0P1.02 drawing", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch49-wwtp-flow-diagram-reconciliation-audit.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 2);
+  assert.equal(audit.stats.distinctInputHashes, 2);
+  assert.equal(audit.stats.pdfPagesReviewed, 6);
+  assert.equal(audit.stats.embeddedTextPages, 4);
+  assert.equal(audit.stats.imageOnlyPages, 2);
+  assert.equal(audit.stats.renderedPagesReviewed, 6);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 2);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  for (const file of audit.files) {
+    const canonicalBytes = await readFile(path.join(publicDirectory, file.canonicalAsset.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(canonicalBytes).digest("hex"), file.sha256);
+    assert.equal(canonicalBytes.length, file.size);
+  }
+
+  assert.match(audit.files[0].verifiedContent, /changed from chlorine to UV disinfection/i);
+  assert.match(audit.files[0].verifiedContent, /Process Flow Diagram III/);
+  assert.match(audit.files[1].verifiedContent, /Process Flow Diagram II/);
+  assert.match(audit.files[1].verifiedContent, /drawing 0P1\.02/);
+  assert.match(audit.evidentiaryBoundary, /do not by themselves establish actual operating conditions/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

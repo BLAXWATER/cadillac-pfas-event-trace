@@ -610,15 +610,27 @@ const events: Event[] = [
     phase: "Public notice",
     kind: "regulatory",
     category: "12 · Landfill & leachate",
-    title: "DEQ publishes the proposed groundwater authorization",
-    finding: "The public notice identifies proposed permit GW1010342 and the Rule 2210(y) authorization process for the Wexford County Landfill discharge to ground or groundwater.",
-    significance: "Documents the formal public-notice stage between application review and final issuance.",
-    sources: [pdf("GW Public Notice Document.html", "2016-07-15-gw-public-notice", 1, "One-page public notice; the supplied file exactly matches Category 02 record 076.", {
-      eventStamp: "2016-07-15 · time not stated",
-      basis: "Date printed in the public notice",
-      created: "2016-07-12 15:48:26 EDT",
-      note: "The .html-named source is a valid PDF payload. Its creation metadata reflects preparation three days before publication.",
-    }, "/npdes-docs/076-a611a75485cf.pdf")],
+    title: "DEQ issues the proposed groundwater-authorization public notice",
+    finding: "The public notice identifies proposed permit GW1010342 and the Rule 2210(y) authorization process for the Wexford County Landfill discharge to ground or groundwater. DEQ's July 12 email transmitted the cover letter, public notice, certification form and draft permit, directed the recipients to have the notice published by July 15 and recorded that a public-notice email sent the preceding week had not been received.",
+    significance: "Documents the formal public-notice stage between application review and final issuance, including the agency's publication instruction and acknowledged transmission delay. The email does not itself verify that newspaper publication occurred by July 15.",
+    sources: [
+      pdf("GW Public Notice Document.html", "2016-07-15-gw-public-notice", 1, "One-page public notice; the supplied file exactly matches Category 02 record 076.", {
+        eventStamp: "2016-07-15 · time not stated",
+        basis: "Date printed in the public notice",
+        created: "2016-07-12 15:48:26 EDT",
+        note: "The .html-named source is a valid PDF payload. Its creation metadata reflects preparation three days before publication.",
+      }, "/npdes-docs/076-a611a75485cf.pdf"),
+      {
+        ...archivedSource("DEQ Email Transmitting Wexford County Landfill Public-Notice Documents.pdf", "/wexford-docs/013-46619080fc73.pdf", 1, "Email transmitting the four-document public-notice package, directing newspaper publication by July 15 and recording that an earlier public-notice email had not been received.", {
+          eventStamp: "2016-07-12 3:36 PM · zone not stated",
+          basis: "Sent date and time printed in the email",
+          created: "2016-07-12 15:46:17 EDT",
+          modified: "2016-07-12 15:46:17 EDT",
+          note: "This exact established Wexford record is used as a cross-reference to the July 15 public-notice event. It proves the agency's instruction and acknowledged email delay, but not completion of newspaper publication by the stated date.",
+        }),
+        role: "Cross-reference",
+      },
+    ],
   },
   {
     year: "2016",

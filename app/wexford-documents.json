@@ -146,14 +146,14 @@
   {
     "id": "013-46619080fc73",
     "name": "public notice email-Wexford Landfill.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/013-46619080fc73.pdf",
+    "url": "/wexford-docs/013-46619080fc73.pdf",
     "year": "2016",
     "type": "Permit correspondence",
     "format": "PDF",
     "pages": 1,
     "size": 79078,
     "sha256": "46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce",
-    "description": "July 12 correspondence instructing publication by July 15 and identifying the cover letter, public notice, certification form and draft permit attachments."
+    "description": "DEQ email sent July 12, 2016 at 3:36 PM transmitting the Wexford County Landfill public-notice package, directing publication by July 15 and requesting confirmation of receipt. The message says a prior public-notice email from the preceding week was not received and apologizes for the delay; it does not itself verify that newspaper publication occurred by July 15."
   },
   {
     "id": "014-a6e913ab7006",

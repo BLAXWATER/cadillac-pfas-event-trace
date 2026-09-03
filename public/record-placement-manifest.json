@@ -16284,7 +16284,7 @@
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
       "name": "public notice email-Wexford Landfill.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/013-46619080fc73.pdf",
+      "url": "/wexford-docs/013-46619080fc73.pdf",
       "sha256": "46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce",
       "size": 79078
     },

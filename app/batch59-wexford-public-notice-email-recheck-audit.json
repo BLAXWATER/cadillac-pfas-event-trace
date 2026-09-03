@@ -1,0 +1,52 @@
+{
+  "batch": "2026-09-03 Wexford public-notice email recheck intake 59",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared them with every published evidence catalog and the canonical local asset.",
+    "Extracted the embedded text and rendered the complete one-page record for visual review.",
+    "Verified that the page is readable and substantive rather than blank and that the canonical first-page preview matches its content-addressed SHA-256 filename.",
+    "Reused established Wexford record 013 as an exact cross-reference, repaired its catalog delivery to the verified local archive asset, expanded its neutral description and attached it to the existing July 15 public-notice event without creating a duplicate record or event."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 1,
+    "embeddedTextPages": 1,
+    "imageOnlyPages": 0,
+    "renderedPagesReviewed": 1,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "exactPublishedAssetHashMatches": 1,
+    "recordsLocalized": 1,
+    "recordDescriptionsExpanded": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "timelineEventsExpanded": 1,
+    "timelineSourcesAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "013-46619080fc73",
+    "asset": "/wexford-docs/013-46619080fc73.pdf",
+    "preview": "/first-page-previews/by-sha256/bead7dec9187d58b9bf6bb41d9f939a700e0bddad62a5b3d58ae1cd37b1f9b2d.webp",
+    "canonicalName": "public notice email-Wexford Landfill.pdf",
+    "sha256": "46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce",
+    "size": 79078,
+    "pages": 1,
+    "sentTimestamp": "2016-07-12 3:36 PM",
+    "pdfCreation": "2016-07-12 15:46:17 EDT",
+    "subject": "Wexford County Landfill-Public Notice Documents"
+  },
+  "verifiedFindings": [
+    "DEQ emailed the Wexford County Landfill public-notice package on July 12, 2016 at 3:36 PM.",
+    "The listed attachments are the cover letter, public notice, public-notice certification form and draft Rule 2210 permit.",
+    "The message directs the recipients to have the public notice published in the newspaper by July 15, 2016 and to return the certification as soon as possible.",
+    "The message requests confirmation of receipt and says a public-notice email from the preceding week had not been received, followed by an apology for the delay."
+  ],
+  "evidentiaryBoundary": "The email establishes DEQ's transmission, instruction, requested deadline and acknowledged email delay. It does not itself prove when or whether the newspaper published the notice, establish completion of the certification, alter the final permit terms, document a leachate delivery or establish a PFAS migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The email adds public-notice process context but does not supply the transaction-level receiving history, synchronized PFAS sampling, well-construction data or groundwater-flow evidence required by the remaining requests."
+  }
+}

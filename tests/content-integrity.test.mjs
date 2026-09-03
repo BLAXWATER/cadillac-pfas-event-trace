@@ -2268,6 +2268,36 @@ test("batch 47 localizes the complete TestAmerica package and preserves the limi
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 48 reuses exact TestAmerica reports and keeps the complete J19915 rendition", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch48-testamerica-report-reconciliation-audit.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 3);
+  assert.equal(audit.stats.distinctInputHashes, 3);
+  assert.equal(audit.stats.pdfPagesReviewed, 66);
+  assert.equal(audit.stats.embeddedTextPages, 66);
+  assert.equal(audit.stats.renderedPagesReviewed, 66);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 2);
+  assert.equal(audit.stats.sameContentDerivativesSuppressed, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  for (const file of audit.files) {
+    const canonicalBytes = await readFile(path.join(publicDirectory, file.canonicalAsset.replace(/^\//, "")));
+    const canonicalHash = createHash("sha256").update(canonicalBytes).digest("hex");
+    assert.equal(canonicalHash, file.canonicalSha256 ?? file.sha256);
+  }
+
+  const derivative = audit.files.find((file) => file.classification === "same-report derivative suppressed");
+  assert.ok(derivative);
+  assert.notEqual(derivative.sha256, derivative.canonicalSha256);
+  assert.match(derivative.comparison, /clips the right side of PDF page 16/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

@@ -1,11 +1,21 @@
 {
   "stats": {
-    "suppliedFiles": 746,
+    "suppliedFiles": 749,
     "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 163,
-    "duplicateCopiesSuppressed": 43,
+    "exactExistingRecordsReused": 165,
+    "duplicateCopiesSuppressed": 44,
     "outOfScopeExcluded": 367,
     "publishedBytes": 478733379,
+    "latestBatch48FilesReviewed": 3,
+    "latestBatch48DistinctInputHashes": 3,
+    "latestBatch48PdfPagesReviewed": 66,
+    "latestBatch48EmbeddedTextPages": 66,
+    "latestBatch48RenderedPagesReviewed": 66,
+    "latestBatch48ExactExistingRecordsReusedAsCrossReferences": 2,
+    "latestBatch48SameContentDerivativesSuppressed": 1,
+    "latestBatch48RecordsAdded": 0,
+    "latestBatch48TimelineEventsAdded": 0,
+    "latestBatch48RequirementsClosed": 0,
     "latestBatch47FilesReviewed": 1,
     "latestBatch47DistinctInputHashes": 1,
     "latestBatch47PdfPagesReviewed": 42,
@@ -270,6 +280,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 intake 48: all three supplied TestAmerica PDFs and all 66 pages passed hash, readability, embedded-text and rendered-sequence review. J17646-1 and J17993-1 exactly match established timeline sources. The supplied J19915-1 file preserves the same 22-page laboratory report and analytical tables as the established record but clips the right side of its receipt-log page, so the cleaner canonical site copy was retained and no duplicate record or event was added.",
     "September 2 intake 47: the supplied 42-page TestAmerica email, analytical report and DEQ guidance package was SHA-256 checked against every catalog, text-extracted and rendered in full. It exactly matches established laboratory record lab-042, which was localized for anonymous preview and download and linked to a separate October 29, 2018 response event. The October 3 source-characterization event preserves the full primary-sample concentration profile and identifies the included duplicate, equipment blank, field blank and method blank.",
     "September 2 intake 46: all three supplied PDFs and all 201 pages passed hash, readability, text and rendered-sequence review. The distinct 1985 progress report, 1986 RI/FS work plan and signed 2026 LDFA resolution were retained separately; planning statements were not recast as completed field results, and no evidence request was closed.",
     "September 2 VN-019184 notice/response reconciliation: both supplied PDFs were SHA-256 checked, opened, OCR-read and rendered. They are exact duplicate five-page copies of Cadillac's July 14 response despite one misleading notice filename. The response was retained once, the already cataloged two-page EGLE notice was localized, and separate notice and response timeline events preserve the unresolved agency-disposition boundary.",
@@ -309,6 +320,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "TestAmerica J17646-1, J17993-1 and J19915-1 report reconciliation",
+      "reason": "The J17646-1 leachate and J17993-1 effluent submissions exactly match the established site binaries and are reused as cross-references. The J19915-1 submission is a byte-different rendition of the same 22-page June 2019 effluent report; its analytical content and page sequence match, but PDF page 16 is horizontally clipped. The existing complete site copy remains canonical, and no duplicate timeline event or document was added."
+    },
     {
       "name": "October 29, 2018 City PFOS exceedance and trucked-leachate response",
       "reason": "The supplied package exactly matches established laboratory record lab-042, so no duplicate was added. Its City email records the laboratory supervisor's statement that the leachate results exceeded the applicable 12 ng/L PFOS standard and Dietlin's question about passage through the plant and ability to stop the trucked source. The event is separate from the October 3 sampling event and does not infer that acceptance actually stopped, that PFAS passed through the plant or that a final delivery date is established."

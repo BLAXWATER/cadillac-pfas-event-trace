@@ -10871,7 +10871,7 @@
       "archiveLabel": "NPDES permits",
       "catalog": "npdes-documents.json",
       "sectionId": "permit-library-title",
-      "name": "07-12-2016 - completed public notice certification form.pdf",
+      "name": "07-15-2016 - completed public notice certification form.pdf",
       "url": "/npdes-docs/075-54c7e9d67d44.pdf",
       "sha256": "54c7e9d67d4444970e012a81f61195786e73bc9a04b0ff298fd67239bf1a833b",
       "size": 153213
@@ -16152,7 +16152,7 @@
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
       "name": "2015-2016_Wexford County Landfill_District Compliance File.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/001-7c991baaf1e9.pdf",
+      "url": "/wexford-docs/001-7c991baaf1e9.pdf",
       "sha256": "7c991baaf1e9d5af5a7177123957d8f933fd759f4022ceab2878626430a37943",
       "size": 153987
     },
@@ -16174,7 +16174,7 @@
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
       "name": "email-final authorization-Wexford Landfill.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/003-8ba13c7dcdf6.pdf",
+      "url": "/wexford-docs/003-8ba13c7dcdf6.pdf",
       "sha256": "8ba13c7dcdf6e6e0e3f2328f3cf7ad5ea6bce988b4e3131f34fd9fd6b45c05f5",
       "size": 81801
     },

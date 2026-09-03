@@ -1,0 +1,83 @@
+{
+  "batch": "2026-09-03 Wexford four-file recheck intake 64",
+  "method": [
+    "Computed SHA-256 hashes, byte sizes and page counts for all four supplied PDFs and compared them with every published evidence catalog.",
+    "Rendered and visually reviewed all eleven pages, including the complete eight-page district compliance file and each one-page permit, certification and map record.",
+    "Verified that every first page is substantive and that each established local PDF and content-addressed first-page preview exactly matches its recorded hash.",
+    "Reused all four established records as exact cross-references, localized two stale Wexford download paths, corrected the signed certification's visible date and expanded two descriptions without creating duplicate records or timeline events."
+  ],
+  "stats": {
+    "receivedFiles": 4,
+    "distinctInputHashes": 4,
+    "pdfPagesReviewed": 11,
+    "embeddedTextPages": 1,
+    "imageOnlyPages": 10,
+    "renderedPagesReviewed": 11,
+    "exactExistingRecordsReusedAsCrossReferences": 4,
+    "exactPublishedAssetHashMatches": 4,
+    "exactPreviewHashMatches": 4,
+    "recordsLocalized": 2,
+    "recordNamesCorrected": 1,
+    "recordDescriptionsExpanded": 2,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecords": [
+    {
+      "recordId": "004-aaa74db2f56d",
+      "catalog": "wexford-documents.json",
+      "asset": "/wexford-docs/004-aaa74db2f56d.pdf",
+      "preview": "/first-page-previews/by-sha256/9c08deef8da1ec3bfdff06b39ec2938821def0595440196439e153bb1b9e029c.webp",
+      "canonicalName": "Fig 1 - Site Location.pdf",
+      "sha256": "aaa74db2f56d4369bf069082693a16e31d42b7944f1eaf1317c2eb4befb902b5",
+      "size": 342082,
+      "pages": 1
+    },
+    {
+      "recordId": "001-7c991baaf1e9",
+      "catalog": "wexford-documents.json",
+      "asset": "/wexford-docs/001-7c991baaf1e9.pdf",
+      "preview": "/first-page-previews/by-sha256/238e01ca9eac27e71441a7746dc0aa51abc0c049383cbe1311be6fc165807bb3.webp",
+      "canonicalName": "2015-2016_Wexford County Landfill_District Compliance File.pdf",
+      "sha256": "7c991baaf1e9d5af5a7177123957d8f933fd759f4022ceab2878626430a37943",
+      "size": 153987,
+      "pages": 8
+    },
+    {
+      "recordId": "075-54c7e9d67d44",
+      "catalog": "npdes-documents.json",
+      "asset": "/npdes-docs/075-54c7e9d67d44.pdf",
+      "preview": "/first-page-previews/by-sha256/d50bc46f4aafcc92158c7b703ad6eae30268bdd2e8927928d5eff83c934a5e06.webp",
+      "canonicalName": "07-15-2016 - completed public notice certification form.pdf",
+      "sha256": "54c7e9d67d4444970e012a81f61195786e73bc9a04b0ff298fd67239bf1a833b",
+      "size": 153213,
+      "pages": 1
+    },
+    {
+      "recordId": "003-8ba13c7dcdf6",
+      "catalog": "wexford-documents.json",
+      "asset": "/wexford-docs/003-8ba13c7dcdf6.pdf",
+      "preview": "/first-page-previews/by-sha256/ec6270f89e1b21382c2937122fa338b28035989c59c6fd24a9d346a8db4bfea2.webp",
+      "canonicalName": "email-final authorization-Wexford Landfill.pdf",
+      "sha256": "8ba13c7dcdf6e6e0e3f2328f3cf7ad5ea6bce988b4e3131f34fd9fd6b45c05f5",
+      "size": 81801,
+      "pages": 1
+    }
+  ],
+  "verifiedFindings": [
+    "The site-location figure is a Golder Associates map dated February 20, 2012 that outlines the landfill on a USGS Cadillac North topographic base.",
+    "The district compliance file contains a January 25, 2016 DEQ cover letter and termination statement confirming that certificate MIS111718 was terminated effective January 13, 2016 after a scheduled inspection determined that the site did not discharge storm water.",
+    "The compliance file's pre-inspection report identifies permit MIS111718, lists no effluent, schedule, DMR/CMR or other violations, and leaves its spills, SSO and citizen-complaint table blank.",
+    "The signed Rule 2117 certification states that notice was posted at the landfill entrance beginning July 15, 2016 and that the draft permit and notice had been sent on July 12, 2016.",
+    "The September 16, 2016 DEQ email transmits the final groundwater-discharge authorization and identifies the attached Rule 2210 permit document."
+  ],
+  "evidentiaryBoundary": "These records establish stormwater-certificate termination, public-notice posting, permit transmittal and regional site orientation. They do not establish an exact final leachate delivery date, PFAS concentrations, monitoring-well conditions, groundwater-flow direction or a demonstrated source-to-receptor migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "None of the four records supplies the transaction-level receiving history, synchronized PFAS sampling, well-construction data, water-level measurements or hydraulic testing required by the remaining evidence requests."
+  }
+}

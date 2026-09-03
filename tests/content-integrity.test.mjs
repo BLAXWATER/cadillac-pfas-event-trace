@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 743);
-  assert.equal(externalFiles, 819);
+  assert.equal(localFiles, 745);
+  assert.equal(externalFiles, 817);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -3015,6 +3015,66 @@ test("batch 63 reuses and localizes the exact Wexford site-location figure", asy
   assert.equal(placed[0].archiveId, "wexford");
   assert.equal(placed[0].url, expected.asset);
   assert.match(audit.evidentiaryBoundary, /does not depict monitoring wells/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 64 reuses four exact Wexford records and repairs the remaining surfaced download paths", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch64-wexford-four-file-recheck-audit.json"), "utf8"));
+  const catalogs = new Map([
+    ["wexford-documents.json", JSON.parse(await readFile(path.join(appDirectory, "wexford-documents.json"), "utf8"))],
+    ["npdes-documents.json", JSON.parse(await readFile(path.join(appDirectory, "npdes-documents.json"), "utf8"))],
+  ]);
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 4);
+  assert.equal(audit.stats.distinctInputHashes, 4);
+  assert.equal(audit.stats.pdfPagesReviewed, 11);
+  assert.equal(audit.stats.embeddedTextPages, 1);
+  assert.equal(audit.stats.imageOnlyPages, 10);
+  assert.equal(audit.stats.renderedPagesReviewed, 11);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 4);
+  assert.equal(audit.stats.exactPublishedAssetHashMatches, 4);
+  assert.equal(audit.stats.exactPreviewHashMatches, 4);
+  assert.equal(audit.stats.recordsLocalized, 2);
+  assert.equal(audit.stats.recordNamesCorrected, 1);
+  assert.equal(audit.stats.recordDescriptionsExpanded, 2);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  for (const expected of audit.canonicalRecords) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    const row = matches[0];
+    assert.equal(row.id, expected.recordId);
+    assert.equal(row.name, expected.canonicalName);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.size, expected.size);
+    assert.equal(row.pages, expected.pages);
+    assert.equal(previewManifest[expected.asset], expected.preview);
+
+    const sourceBytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(sourceBytes.length, expected.size);
+    assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), expected.sha256);
+    const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+    assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+
+    const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(placed.length, 1);
+    assert.equal(placed[0].url, expected.asset);
+  }
+
+  const certification = catalogs.get("npdes-documents.json").find((item) => item.id === "075-54c7e9d67d44");
+  assert.match(certification.name, /^07-15-2016/);
+  assert.match(certification.description, /landfill entrance beginning July 15, 2016/i);
+  const authorization = catalogs.get("wexford-documents.json").find((item) => item.id === "003-8ba13c7dcdf6");
+  assert.match(authorization.description, /does not document leachate deliveries/i);
+  assert.match(audit.evidentiaryBoundary, /do not establish an exact final leachate delivery date/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

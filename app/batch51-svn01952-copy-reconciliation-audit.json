@@ -1,0 +1,47 @@
+{
+  "batch": "2026-09-02 SVN-01952 correspondence copy reconciliation intake 51",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared them with every established catalog record and prior intake audit.",
+    "Extracted text from all 16 pages and rendered the complete sequence for visual review. The first page is substantive; pages 2 and 11 are intentionally blank-looking internal attachment separators that preserve hidden attachment-name and media-type text.",
+    "Rendered the supplied export and canonical compliance record with the same renderer and resolution; all 16 resulting page images matched byte-for-byte, and normalized extracted text matched page-for-page.",
+    "Confirmed that the supplied hash was already reviewed in intake 15 as the MiEnviro-primary export of the same correspondence package, so the established canonical record was retained without another copy, catalog row or timeline event."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 16,
+    "embeddedTextPages": 16,
+    "renderedPagesReviewed": 16,
+    "renderExactCanonicalPages": 16,
+    "visuallyBlankInternalAttachmentPages": 2,
+    "exactPreviouslyReviewedInputHashes": 1,
+    "renderIdenticalExistingVariants": 1,
+    "duplicateCopiesSuppressed": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "file": {
+    "suppliedName": "EGLE WRD Correspondence_  SVN-01952_Cadillac WWTP_COPY (1).pdf",
+    "sha256": "7db46990afdd8f02211b43fa025ca1e4f91d580c8e8e1331f86c0bca6a335d31",
+    "size": 486483,
+    "pages": 16,
+    "classification": "exact repeat of a previously reviewed render-identical export; duplicate copy suppressed",
+    "previouslyReviewedAs": "SVN-01952 EGLE Correspondence and Attachment - 2026-05-21-22 - MiEnviro primary.pdf",
+    "previousAudit": "batch15-mahl-audit.json",
+    "canonicalRecordId": "012-16dae2e386d4",
+    "canonicalName": "2026-05-22__-1255819534835910397__EGLE WRD Correspondence_ SVN-01952_Cadillac WWTP.msg.pdf",
+    "canonicalAsset": "/compliance-docs/012-16dae2e386d4.pdf",
+    "canonicalSha256": "16dae2e386d4a6ca3242cda43d4dd4b5abe27dfd2178b0dcd5bd0767eb34941d",
+    "comparison": "The supplied PDF and canonical PDF have different container hashes but identical normalized extracted text and identical rendered PNG bytes for all 16 pages. Both include the May 22 transmission email, the May 21 seven-page Second Violation Notice, the October 2024 IU-permit comment email and its five-page attachment, with blank-looking attachment separator pages at PDF pages 2 and 11.",
+    "verifiedContent": "EGLE's Second Violation Notice reports eight pretreatment-program concerns or violations, states that the identified violations were continuing as of the April 9, 2026 inspection, sets response and revision deadlines from June 21 through July 31, 2026, and reserves potential enforcement. The package also preserves the October 2024 industrial-user-permit comments and May 13, 2026 MAHL comments attached to the notice."
+  },
+  "evidentiaryBoundary": "The package is a formal EGLE notice and supporting comments, not a final enforcement disposition. It does not include Cadillac's completed corrective actions, later EGLE acceptance or closure, transaction-level landfill receiving records, synchronized PFAS treatment data or proof of a groundwater migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The supplied export was already represented by the canonical compliance record. Repeating it does not fill any remaining independently closable evidence request."
+  }
+}

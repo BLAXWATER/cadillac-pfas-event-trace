@@ -1,11 +1,24 @@
 {
   "stats": {
-    "suppliedFiles": 752,
+    "suppliedFiles": 753,
     "newDistinctRecords": 167,
     "exactExistingRecordsReused": 168,
-    "duplicateCopiesSuppressed": 44,
+    "duplicateCopiesSuppressed": 45,
     "outOfScopeExcluded": 367,
     "publishedBytes": 478733379,
+    "latestBatch51FilesReviewed": 1,
+    "latestBatch51DistinctInputHashes": 1,
+    "latestBatch51PdfPagesReviewed": 16,
+    "latestBatch51EmbeddedTextPages": 16,
+    "latestBatch51RenderedPagesReviewed": 16,
+    "latestBatch51RenderExactCanonicalPages": 16,
+    "latestBatch51VisuallyBlankInternalAttachmentPages": 2,
+    "latestBatch51ExactPreviouslyReviewedInputHashes": 1,
+    "latestBatch51RenderIdenticalExistingVariants": 1,
+    "latestBatch51DuplicateCopiesSuppressed": 1,
+    "latestBatch51RecordsAdded": 0,
+    "latestBatch51TimelineEventsAdded": 0,
+    "latestBatch51RequirementsClosed": 0,
     "latestBatch50FilesReviewed": 1,
     "latestBatch50DistinctInputHashes": 1,
     "latestBatch50PdfPagesReviewed": 2,
@@ -300,6 +313,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 2 intake 51: the supplied 16-page SVN-01952 correspondence COPY passed hash, embedded-text, readability and complete rendered-page review. Its hash exactly matches the MiEnviro-primary export reviewed in intake 15, while all 16 page renders and normalized text match canonical compliance record 012. The repeated render-identical export was suppressed; blank-looking internal attachment separator pages 2 and 11 were preserved, and no first-page fallback was needed.",
     "September 2 intake 50: the supplied two-page HNJ-P0ZX-8AVDS PDF passed hash, embedded-text, readability and rendered-page review and exactly matches the established November 29, 2018 MiWaters IPP PFAS Summary Report. The existing neutral record and timeline event were reused; the supplied filename's cleanup characterization was not substituted for the source title because the wording is a comment in Cadillac's submission rather than a separate landfill-authored letter or independent agency finding.",
     "September 2 intake 49: both supplied WWTP flow-diagram PDFs and all six pages passed hash, readability and rendered-page review. The five-page 2018 DEQ/City correspondence exactly matches established NPDES record 090, and the separate large-format 0P1.02 Process Flow Diagram II exactly matches established process-site record 003. Both records were reused as cross-references without republishing a duplicate or creating a new event.",
     "September 2 intake 48: all three supplied TestAmerica PDFs and all 66 pages passed hash, readability, embedded-text and rendered-sequence review. J17646-1 and J17993-1 exactly match established timeline sources. The supplied J19915-1 file preserves the same 22-page laboratory report and analytical tables as the established record but clips the right side of its receipt-log page, so the cleaner canonical site copy was retained and no duplicate record or event was added.",
@@ -342,6 +356,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "SVN-01952 correspondence COPY (1) repeat intake",
+      "reason": "The supplied PDF is an exact repeat of the previously reviewed MiEnviro-primary export and a byte-different but page-for-page render-identical version of canonical compliance record 012. The complete notice and its attached IU-permit and MAHL comments remain represented once in the compliance archive; no duplicate record or timeline event was added, and the formal notice is not treated as a final enforcement disposition."
+    },
     {
       "name": "HNJ-P0ZX-8AVDS version 1 cleanup-comment cross-reference",
       "reason": "The supplied file is byte-identical to form-submission record 030. Cadillac's submission states that the POTW contacted the landfill, lists no corrective action and comments that the landfill refused to invest in cleanup. The timeline already reports that language as Cadillac's contemporaneous account and explicitly avoids treating it as an independent agency finding, so no duplicate record, renamed source or additional event was created."

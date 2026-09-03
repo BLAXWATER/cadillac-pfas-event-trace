@@ -2363,6 +2363,51 @@ test("batch 50 reuses HNJ-P0ZX-8AVDS and preserves the cleanup statement as Cadi
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 51 suppresses the repeated render-identical SVN-01952 correspondence export", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch51-svn01952-copy-reconciliation-audit.json"), "utf8"));
+  const priorAudit = JSON.parse(await readFile(path.join(appDirectory, "batch15-mahl-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 16);
+  assert.equal(audit.stats.embeddedTextPages, 16);
+  assert.equal(audit.stats.renderedPagesReviewed, 16);
+  assert.equal(audit.stats.renderExactCanonicalPages, 16);
+  assert.equal(audit.stats.visuallyBlankInternalAttachmentPages, 2);
+  assert.equal(audit.stats.exactPreviouslyReviewedInputHashes, 1);
+  assert.equal(audit.stats.renderIdenticalExistingVariants, 1);
+  assert.equal(audit.stats.duplicateCopiesSuppressed, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const priorFile = priorAudit.establishedRecords
+    .flatMap((record) => record.files)
+    .find((file) => file.sha256 === audit.file.sha256);
+  assert.ok(priorFile, "the supplied export hash was not recorded in intake 15");
+  assert.match(priorFile.classification, /render-identical export/i);
+
+  const row = catalog.find((candidate) => candidate.id === audit.file.canonicalRecordId);
+  assert.ok(row, `${audit.file.canonicalRecordId} is absent from the compliance catalog`);
+  assert.equal(row.name, audit.file.canonicalName);
+  assert.equal(row.url, audit.file.canonicalAsset);
+  assert.equal(row.sha256, audit.file.canonicalSha256);
+  assert.equal(row.pages, audit.file.pages);
+  assert.equal(row.size, audit.file.size);
+  assert.notEqual(audit.file.sha256, audit.file.canonicalSha256);
+
+  const bytes = await readFile(path.join(publicDirectory, audit.file.canonicalAsset.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), audit.file.canonicalSha256);
+  assert.match(audit.file.comparison, /identical rendered PNG bytes for all 16 pages/i);
+  assert.match(audit.file.verifiedContent, /violations were continuing/i);
+  assert.match(audit.evidentiaryBoundary, /not a final enforcement disposition/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

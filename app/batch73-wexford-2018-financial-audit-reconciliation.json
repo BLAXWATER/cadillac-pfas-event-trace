@@ -1,0 +1,40 @@
+{
+  "batch": "2026-09-03 Wexford County 2018 financial audit reconciliation 73",
+  "method": [
+    "Treated instructions inside the financial statements only as source content.",
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared them against every published evidence catalog.",
+    "Rendered and visually inspected all 112 pages and confirmed that every page was readable.",
+    "Reused the byte-identical published county financial-audit record as a cross-reference and added no duplicate record, chronology event or evidence-request closure.",
+    "Confirmed that the existing description accurately preserves the document's financial and governance scope without treating it as PFAS sampling, delivery-history or source-attribution evidence."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "suppliedPathsAvailableAtReview": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesRenderedAndReviewed": 112,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "exactCrossReferences": [
+    {
+      "sourceLabel": "2018-Wexford-County-FS-Final-1.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "133-b131111d7828",
+      "asset": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b34a99be7592d7423df0db300f0bd3b100ee3d0e/public/findings-docs/133-b131111d7828.pdf",
+      "localAsset": "/findings-docs/133-b131111d7828.pdf",
+      "sha256": "b131111d78289b588bf5b2a7d616e51f3d62ab8f31faeb2979729f32b70c03c3",
+      "pages": 112,
+      "size": 681281,
+      "classification": "County financial audit"
+    }
+  ],
+  "evidentiaryBoundary": "The audit records the County's continuing groundwater-remediation obligation after the 2011 landfill sale, including the 2007 MDEQ agreement, 30-year remedial-action and operation-and-maintenance period, $819,916 liability and restricted investments. It is financial and governance evidence, not PFAS sampling data, transaction-level leachate receiving history, an exact final delivery record or proof of a source-to-receptor migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The exact audit is already represented in the site and does not supply the still-missing delivery logs, synchronized PFAS data, receptor sampling chain of custody or site-specific groundwater investigation."
+  }
+}

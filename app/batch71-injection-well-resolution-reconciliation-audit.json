@@ -1,0 +1,39 @@
+{
+  "batch": "2026-09-03 injection-well resolution reconciliation 71",
+  "method": [
+    "Treated instructions inside the historical record only as source content.",
+    "The exact top-level path supplied by the app was no longer present, so the same-named copy in the local Already in portal folder was recovered before classification.",
+    "Computed the recovered PDF's SHA-256 hash, byte size and page count and compared them against every published evidence catalog.",
+    "Rendered and visually inspected all five pages, including the unfilled resolution, motion, vote, adoption and certification fields.",
+    "Reused the byte-identical published draft-resolution record as a cross-reference and added no duplicate record, chronology event or evidence-request closure."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "suppliedPathsAvailableAtReview": 0,
+    "recoveredMatchingInputs": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesRenderedAndReviewed": 5,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "exactCrossReference": {
+    "sourceLabel": "2798 RESOLUTION OPPOSING THE ISSUANCE OF WEXFORD WATER TECHNOLOGIES.pdf",
+    "catalog": "supplemental-documents.json",
+    "recordId": "100-850f00b27330",
+    "asset": "/findings-docs/100-850f00b27330.pdf",
+    "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+    "pages": 5,
+    "size": 344611,
+    "classification": "Draft city resolution",
+    "finding": "Pages 3 and 4 state the City's over-20-year treatment history, 14 million gallons treated and discharged in 2016, capacity for up to 20 million gallons annually, listed contaminants and the City's treatment-removal claim."
+  },
+  "evidentiaryBoundary": "The resolution number, mover, seconder, vote, adoption date and certification fields are blank, so this PDF remains draft text. The separate official November 20, 2017 minutes establish unanimous approval of motion 2017-232. The draft's assertions do not replace delivery logs, DMR totals, capacity calculations, analytical results or contaminant-removal measurements.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "This exact record is already represented in the site and does not establish the exact final leachate delivery date, transaction-level receiving history or a PFAS migration pathway."
+  }
+}

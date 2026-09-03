@@ -2655,6 +2655,54 @@ test("batch 56 reuses and localizes three exact pretreatment violation notices",
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 57 reuses the exact TestAmerica leachate package without duplicating it", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch57-testamerica-leachate-package-recheck-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 42);
+  assert.equal(audit.stats.embeddedTextPages, 42);
+  assert.equal(audit.stats.renderedPagesReviewed, 42);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.exactPublishedAssetHashMatches, 1);
+  assert.equal(audit.stats.duplicateCopiesSuppressed, 0);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const expected = audit.canonicalRecord;
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  const row = matches[0];
+  assert.equal(row.id, expected.recordId);
+  assert.equal(row.name, expected.canonicalName);
+  assert.equal(row.url, expected.asset);
+  assert.equal(row.size, expected.size);
+  assert.equal(row.pages, expected.pages);
+  assert.equal(previewManifest[expected.asset], expected.preview);
+
+  const sourceBytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+  assert.equal(sourceBytes.length, expected.size);
+  assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), expected.sha256);
+  const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+
+  const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].archiveId, "lab");
+  assert.equal(placed[0].url, expected.asset);
+  assert.match(pageSource, /City identifies PFOS exceedance and ability to stop trucked leachate/);
+  assert.match(audit.evidentiaryBoundary, /does not add evidence of an actual leachate-acceptance stop date/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

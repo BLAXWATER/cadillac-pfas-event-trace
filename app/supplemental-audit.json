@@ -1,11 +1,21 @@
 {
   "stats": {
-    "suppliedFiles": 763,
+    "suppliedFiles": 764,
     "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 176,
+    "exactExistingRecordsReused": 177,
     "duplicateCopiesSuppressed": 47,
     "outOfScopeExcluded": 367,
     "publishedBytes": 479735813,
+    "latestBatch57FilesReviewed": 1,
+    "latestBatch57DistinctInputHashes": 1,
+    "latestBatch57PdfPagesReviewed": 42,
+    "latestBatch57EmbeddedTextPages": 42,
+    "latestBatch57RenderedPagesReviewed": 42,
+    "latestBatch57ExactExistingRecordsReusedAsCrossReferences": 1,
+    "latestBatch57ExactPublishedAssetHashMatches": 1,
+    "latestBatch57RecordsAdded": 0,
+    "latestBatch57TimelineEventsAdded": 0,
+    "latestBatch57RequirementsClosed": 0,
     "latestBatch56FilesReviewed": 3,
     "latestBatch56DistinctInputHashes": 3,
     "latestBatch56PdfPagesReviewed": 15,
@@ -373,6 +383,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 3 intake 57: the supplied 42-page TestAmerica correspondence package passed exact-hash, canonical-asset, embedded-text, first-page and complete rendered-page review. It is byte-for-byte identical to established laboratory record lab-042 and the package already audited in intake 47, so it was recorded as one exact cross-reference without another document, timeline event or queue closure.",
     "September 3 intake 56: all three supplied EGLE violation notices and all fifteen pages passed exact-hash, embedded-text, readability and complete rendered-page review. Each file exactly matches an established compliance-library record. The existing local VN-011108 source was reused, VN-012230 and SVN-01351 were localized for anonymous preview and download, and the notice sequence was expanded with separate 2021 and 2023 enforcement events.",
     "September 2 intake 55: all three supplied born-digital MiWaters PFAS submissions and all nine pages passed exact-hash, embedded-text, readability and complete rendered-page review. Each file exactly matches an established form-submission record. HNF was localized for anonymous preview and download, HNQ and HNV retained their verified local deliveries, and the previously unrepresented December 18 status report was added as a distinct event from EGLE's December 3 statewide status letter.",
     "September 2 intake 54: both supplied two-page American Waste PFAS Survey files passed hash, embedded-text, readability and complete rendered-page review and are byte-for-byte identical to each other and established PFAS record 002. The canonical May 21, 2018 survey was retained once, localized for anonymous preview and download, and expanded with its verified 18-30 percent industrial-waste estimate, generator-record limitation and no-leachate-analysis statement. The claim-bearing second filename was not propagated as a source title.",
@@ -421,6 +432,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "TestAmerica leachate correspondence package exact-copy recheck",
+      "reason": "The supplied PDF exactly matches established laboratory record lab-042 in SHA-256 hash, byte size and all 42 pages. The canonical local asset, first-page preview, archive placement and October 29, 2018 timeline event remain correct, so no duplicate record or event was created."
+    },
     {
       "name": "VN-011108, VN-012230 and SVN-01351 enforcement-sequence reconciliation",
       "reason": "The three supplied PDFs exactly match established, distinct EGLE notices dated October 22, 2020, September 30, 2021 and April 27, 2023. Each canonical record remains singular. Their anonymous delivery paths and descriptions were repaired, the existing 2020 event was expanded, and the 2021 and 2023 notices were added as separate events without treating pretreatment-program findings as PFAS occurrence, contaminant pass-through or groundwater-pathway proof."

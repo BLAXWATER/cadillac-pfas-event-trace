@@ -1,0 +1,49 @@
+{
+  "batch": "2026-09-03 TestAmerica leachate package recheck intake 57",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash and byte size and compared both values with every published evidence catalog and the canonical local asset.",
+    "Extracted text from and rendered all 42 pages, including the City email chain, 23-page TestAmerica report and 15-page DEQ guidance attachment.",
+    "Verified that all 42 pages contain embedded text, all 42 rendered pages are readable and the first page is substantive rather than blank.",
+    "Verified the canonical first-page preview against its content-addressed SHA-256 filename.",
+    "Reused established laboratory record lab-042 as an exact cross-reference and made no duplicate catalog, asset or timeline entry."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 42,
+    "embeddedTextPages": 42,
+    "renderedPagesReviewed": 42,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "exactPublishedAssetHashMatches": 1,
+    "duplicateCopiesSuppressed": 0,
+    "recordsLocalized": 0,
+    "recordDescriptionsExpanded": 0,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "lab-042-17dfcc25e8a0",
+    "asset": "/lab-docs/042-17dfcc25e8a0.pdf",
+    "preview": "/first-page-previews/by-sha256/05aabbe9ecaf73036f6fda27868736ef10f8de5826f718612f4af4acee3cb55c.webp",
+    "canonicalName": "2018-10-29 - City PFOS Exceedance Email and TestAmerica Leachate Package.pdf",
+    "sha256": "17dfcc25e8a000c958df286900ed43baac2eb39801eb502c8fa3d21f0fc88dfa",
+    "size": 2696076,
+    "pages": 42
+  },
+  "reconciliation": {
+    "result": "exact existing record reused as cross-reference",
+    "priorAudit": "batch47-testamerica-leachate-response-audit.json",
+    "catalogChanges": 0,
+    "assetChanges": 0,
+    "timelineChanges": 0
+  },
+  "evidentiaryBoundary": "This exact copy confirms the already established October 29, 2018 correspondence and attached TestAmerica results. It does not add evidence of an actual leachate-acceptance stop date, determine whether PFAS passed through the WWTP or establish a source-to-receptor groundwater pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The file is an exact copy of the complete package already represented by laboratory record lab-042 and therefore does not supply a new independently closable requirement."
+  }
+}

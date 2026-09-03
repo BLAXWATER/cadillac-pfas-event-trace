@@ -3078,6 +3078,61 @@ test("batch 64 reuses four exact Wexford records and repairs the remaining surfa
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 65 reuses the exact FY19 biosolids laboratory package without duplicating it", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch65-fy19-metals-nutrients-second-recheck-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 23);
+  assert.equal(audit.stats.embeddedTextPages, 21);
+  assert.equal(audit.stats.imageOnlyPages, 2);
+  assert.equal(audit.stats.renderedPagesReviewed, 23);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.exactPublishedAssetHashMatches, 1);
+  assert.equal(audit.stats.exactPreviewHashMatches, 1);
+  assert.equal(audit.stats.recordsLocalized, 0);
+  assert.equal(audit.stats.recordYearsCorrected, 0);
+  assert.equal(audit.stats.recordDescriptionsExpanded, 0);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const expected = audit.canonicalRecord;
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  const row = matches[0];
+  assert.equal(row.id, expected.recordId);
+  assert.equal(row.name, expected.canonicalName);
+  assert.equal(row.url, expected.asset);
+  assert.equal(row.year, "2018");
+  assert.equal(row.type, "Biosolids laboratory report");
+  assert.equal(row.size, expected.size);
+  assert.equal(row.pages, expected.pages);
+  assert.match(row.description, /Pace project 4617192/i);
+  assert.match(row.description, /contains no PFAS analytes or PFAS-specific method/i);
+  assert.equal(previewManifest[expected.asset], expected.preview);
+
+  const sourceBytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+  assert.equal(sourceBytes.length, expected.size);
+  assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), expected.sha256);
+  const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+
+  const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].archiveId, "lab");
+  assert.equal(placed[0].sectionId, "lab-library-title");
+  assert.equal(placed[0].url, expected.asset);
+  assert.match(audit.evidentiaryBoundary, /not a PFAS analytical record/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

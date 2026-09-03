@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 755);
+  assert.equal(localFiles, 757);
   assert.equal(externalFiles, 817);
 });
 
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1572);
+  assert.equal(recordCount, 1574);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1572);
+  assert.equal(records.length, 1574);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -3727,6 +3727,68 @@ test("batch 78 reuses the exact draft injection permit while preserving its unis
   assert.equal(placed[0].archiveId, "wexford");
   assert.match(audit.evidentiaryBoundary, /draft permit, not proof/i);
   assert.match(audit.evidentiaryBoundary, /not a PFAS analysis/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 79 preserves two native compliance sources and reuses eleven exact records", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch79-native-compliance-and-exact-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 13);
+  assert.equal(audit.stats.distinctInputHashes, 13);
+  assert.equal(audit.stats.pdfPagesReviewed, 355);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 11);
+  assert.equal(audit.stats.nativeSourceRecordsAdded, 2);
+  assert.equal(audit.stats.wordDocumentsRendered, 2);
+  assert.equal(audit.stats.wordPagesRendered, 8);
+  assert.equal(audit.stats.documentsWithVbaProjects, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+
+  for (const expected of audit.addedRecords) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, expected.recordId);
+    assert.equal(matches[0].url, expected.asset);
+    assert.equal(matches[0].size, expected.size);
+    assert.equal(matches[0].format, expected.format);
+    const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(bytes.length, expected.size);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+    assert.equal(bytes.subarray(0, 8).toString("hex"), "d0cf11e0a1b11ae1");
+    const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(placed.length, 1);
+    assert.equal(placed[0].archiveId, "reference");
+    assert.equal(placed[0].sectionId, "reference-library-title");
+  }
+
+  for (const expected of audit.exactCrossReferences) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, expected.recordId);
+    assert.equal(matches[0].size, expected.size);
+    const acrossCatalogs = [...catalogs.values()].flat().filter((item) => item.sha256 === expected.sha256);
+    assert.equal(acrossCatalogs.length, 1);
+  }
+
+  const compliance = catalogs.get("reference-documents.json").find((item) => item.id === "133-730dad67c05a");
+  const preInspection = catalogs.get("reference-documents.json").find((item) => item.id === "134-89af44caa00a");
+  assert.match(compliance.description, /missing total-mercury Pollution Minimization Plan/i);
+  assert.match(compliance.description, /contains no PFAS result/i);
+  assert.match(preInspection.description, /accepted hauled county-landfill leachate/i);
+  assert.match(preInspection.description, /contains no PFAS analytical result/i);
+
+  const referenceAudit = JSON.parse(await readFile(path.join(appDirectory, "reference-audit.json"), "utf8"));
+  const referenceCatalog = catalogs.get("reference-documents.json");
+  assert.equal(referenceAudit.publishedFileCount, referenceCatalog.length);
+  assert.equal(referenceAudit.sourceFileCount, referenceAudit.publishedFileCount + referenceAudit.excludedFileCount);
+  assert.equal(referenceAudit.includedBytes, referenceCatalog.reduce((sum, item) => sum + item.size, 0));
+  assert.match(audit.evidentiaryBoundary, /do not provide PFAS results/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

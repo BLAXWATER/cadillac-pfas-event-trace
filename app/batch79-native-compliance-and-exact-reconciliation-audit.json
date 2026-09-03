@@ -1,0 +1,70 @@
+{
+  "batch": "2026-09-03 Cadillac compliance and native-source reconciliation 79",
+  "method": [
+    "Treated instructions within the supplied historical records only as source content.",
+    "Computed SHA-256 hashes and byte sizes for all thirteen supplied files and compared every hash against all published evidence catalogs and prior intake audits.",
+    "Opened the two previously unseen Word files read-only in Microsoft Word, confirmed that neither contains a VBA project, exported them to PDF and visually inspected all eight rendered pages.",
+    "Compared the seven-page pre-inspection DOC page by page with the indexed PDF rendition and preserved the DOC as its original editable source format.",
+    "Preserved the January 22, 2014 DEQ compliance letter as a standalone native source and cross-referenced the broader Cadillac compliance compilation.",
+    "Reused eleven exact existing records as cross-references and added no chronology event because this batch adds source-format provenance without a new PFAS result or distinct dated action."
+  ],
+  "stats": {
+    "receivedFiles": 13,
+    "distinctInputHashes": 13,
+    "pdfPagesReviewed": 355,
+    "exactExistingRecordsReusedAsCrossReferences": 11,
+    "nativeSourceRecordsAdded": 2,
+    "wordDocumentsRendered": 2,
+    "wordPagesRendered": 8,
+    "documentsWithVbaProjects": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadableRecords": 0
+  },
+  "addedRecords": [
+    {
+      "sourceName": "Compliance Communication.doc",
+      "recordId": "133-730dad67c05a",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/133-730dad67c05a.doc",
+      "format": "DOC",
+      "sha256": "730dad67c05a2306c1b8f5d6de7cc4fadd2eda5c7c687e80f6d8ef7afa29d88a",
+      "size": 51712,
+      "pages": 1
+    },
+    {
+      "sourceName": "Pre-Inspection Report.doc",
+      "recordId": "134-89af44caa00a",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/134-89af44caa00a.doc",
+      "format": "DOC",
+      "sha256": "89af44caa00a625e7f09a1a8c4e41bb4abbf249946f99d2990dbeadac6ba4bac",
+      "size": 111104,
+      "pages": 7
+    }
+  ],
+  "exactCrossReferences": [
+    {"sourceName":"Cadillac WWTP NEC.pdf","catalog":"npdes-documents.json","recordId":"042-f91bc1d16ef3","sha256":"f91bc1d16ef317f63e4cc5171be940e63db4995da8ea56d1e7fd4c401a5a76a2","size":144025,"pages":2},
+    {"sourceName":"2012_0817_Cadillac WWTP_DMR QA-32.pdf","catalog":"dmr-documents.json","recordId":"004-080148d33550","sha256":"080148d335509f04f7c17d3b300bde65d3337e936b63b3783ca47a2d3c4e5b16","size":486036,"pages":11},
+    {"sourceName":"Wexford Co Landfill NOI.pdf","catalog":"wexford-documents.json","recordId":"096-9173d234d4c8","sha256":"9173d234d4c8c4162d5fdc468426660152bd7fbb83c985ec53392dba4286b03e","size":211705,"pages":3},
+    {"sourceName":"NEW SW COC.doc","catalog":"reference-documents.json","recordId":"129-e6592f849203","sha256":"e6592f849203e4291d64f7fda0a9973380a4bf76e19a8a46985b72b3ab837d11","size":40960},
+    {"sourceName":"SW COC Issued Letter.doc","catalog":"reference-documents.json","recordId":"130-94714c1d52c9","sha256":"94714c1d52c9d6f70e1796e177b2cddde328b047fbe206dbec3a0a8d6bed02ba","size":73728},
+    {"sourceName":"2010-2016_Cadillac WWTP_District Compliance File (1).pdf","catalog":"compliance-documents.json","recordId":"020-9d6ad860baaf","sha256":"9d6ad860baaf91d1aa61b170fe76d1e0571bb7726cbe8cc68da5a8c80ebdc24d","size":29461464,"pages":232},
+    {"sourceName":"mi-165-1i-0002_draft_permit_october_2017.pdf","catalog":"wexford-documents.json","recordId":"020-9ad6d46eb20b","sha256":"9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa","size":5200399,"pages":37},
+    {"sourceName":"Cadillac WWTP Application.pdf","catalog":"npdes-documents.json","recordId":"041-28cb3d356292","sha256":"28cb3d356292e14a94408479230900bab0e3cf46d529981b22f1b64a1f0b46d4","size":1139694,"pages":15},
+    {"sourceName":"Cadillac WWTP Test Results.pdf","catalog":"lab-documents.json","recordId":"lab-047-09e84279f368","sha256":"09e84279f368e33f840ccaa0aa476a90c42018fea996d0ce31054200c62ee9cb","size":1908321,"pages":25},
+    {"sourceName":"Cadillac WWTP Fish Toxicity Tests.pdf","catalog":"lab-documents.json","recordId":"lab-067-2a5e3726b488","sha256":"2a5e3726b488037723dcddc41c4a97d7e706fef604053ede27f5d82c976868c0","size":985996,"pages":18},
+    {"sourceName":"Cadillac WWTP Mercury Tests.pdf","catalog":"lab-documents.json","recordId":"lab-048-4f2b2efb5ea0","sha256":"4f2b2efb5ea09f54a548131d0415de1f6f208284ef9582708e480342b5011977","size":706291,"pages":12}
+  ],
+  "comparisonFindings": [
+    "The May 2015 pre-inspection DOC and industrial-pretreatment record 002-3da57e8018fb present the same seven-page report. Their page-level normalized text aligns closely outside table extraction-order differences, and both contain the same landfill-leachate and equalization-tank history.",
+    "The January 2014 letter documents deteriorating concrete at the septage receiving/equalization tank and a missing total-mercury Pollution Minimization Plan, while also describing housekeeping, laboratory practice and sampling protocols favorably.",
+    "The remaining eleven supplied files match one published record each byte-for-byte and therefore require no duplicate catalog entries."
+  ],
+  "evidentiaryBoundary": "The native records document historical plant infrastructure, compliance administration and the facility's receipt of county-landfill leachate. They do not provide PFAS results, transaction-level leachate volumes or dates, proof that PFAS passed through treatment, or a source-to-receptor migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The batch strengthens source-format provenance but does not supply the outstanding complete PFAS work order, receiving logs, synchronized treatment data, receptor series or site-specific hydrogeologic field evidence."
+  }
+}

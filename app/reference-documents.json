@@ -1674,5 +1674,43 @@
         "relationship": "Later report for the May 9-10, 2018 inspection; retained separately because this April 27 worksheet is a planning record without results"
       }
     ]
+  },
+  {
+    "id": "133-730dad67c05a",
+    "name": "Compliance Communication.doc",
+    "url": "/reference-data/133-730dad67c05a.doc",
+    "format": "DOC",
+    "type": "Original compliance-evaluation correspondence source document",
+    "size": 51712,
+    "rows": null,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "730dad67c05a2306c1b8f5d6de7cc4fadd2eda5c7c687e80f6d8ef7afa29d88a",
+    "description": "Original editable one-page January 22, 2014 DEQ letter documenting the September 30, 2013 Cadillac WWTP compliance evaluation. It notes good housekeeping, deteriorating concrete at the septage receiving/equalization tank, planned funding for aging infrastructure, acceptable laboratory and sampling practices, and a missing total-mercury Pollution Minimization Plan. The document was opened read-only, confirmed free of a VBA project, rendered and visually inspected; it contains no PFAS result.",
+    "matchingSources": [
+      {
+        "name": "2010-2016_Cadillac WWTP_District Compliance File.pdf",
+        "relationship": "Broader 232-page Cadillac compliance compilation covering the same regulatory period; retained separately because this file is the original editable standalone letter"
+      }
+    ]
+  },
+  {
+    "id": "134-89af44caa00a",
+    "name": "Pre-Inspection Report.doc",
+    "url": "/reference-data/134-89af44caa00a.doc",
+    "format": "DOC",
+    "type": "Original pretreatment pre-inspection report source document",
+    "size": 111104,
+    "rows": null,
+    "columns": 0,
+    "sheets": null,
+    "sha256": "89af44caa00a625e7f09a1a8c4e41bb4abbf249946f99d2990dbeadac6ba4bac",
+    "description": "Original editable seven-page source for Pretreatment Compliance Inspection 57515, completed May 13, 2015. Its inspection history states that the equalization tank accepted hauled county-landfill leachate, lacked apparent screening or flow metering, and needed flow-proportioned sampling and influent metering. The document was opened read-only, confirmed free of a VBA project, rendered and visually inspected; it contains no PFAS analytical result or transaction-level delivery history.",
+    "matchingSources": [
+      {
+        "name": "Pre-Inspection Report.pdf",
+        "relationship": "Seven-page PDF rendition indexed as industrial-pretreatment record 002-3da57e8018fb; page-level text and content match, with only rendering and extraction-order differences"
+      }
+    ]
   }
 ]

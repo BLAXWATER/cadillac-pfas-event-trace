@@ -1,11 +1,20 @@
 {
   "stats": {
-    "suppliedFiles": 837,
+    "suppliedFiles": 850,
     "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 240,
+    "exactExistingRecordsReused": 251,
     "duplicateCopiesSuppressed": 49,
     "outOfScopeExcluded": 367,
     "publishedBytes": 480058284,
+    "latestBatch79FilesReviewed": 13,
+    "latestBatch79DistinctInputHashes": 13,
+    "latestBatch79PdfPagesReviewed": 355,
+    "latestBatch79ExactExistingRecordsReusedAsCrossReferences": 11,
+    "latestBatch79NativeSourceRecordsAdded": 2,
+    "latestBatch79WordDocumentsRendered": 2,
+    "latestBatch79WordPagesRendered": 8,
+    "latestBatch79TimelineEventsAdded": 0,
+    "latestBatch79RequirementsClosed": 0,
     "latestBatch78FilesReviewed": 1,
     "latestBatch78DistinctInputHashes": 1,
     "latestBatch78PdfPagesReviewed": 37,
@@ -644,6 +653,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "September 3 Cadillac compliance and native-source reconciliation",
+      "reason": "Eleven supplied files are exact hashes of established records and are reused as cross-references. The January 2014 compliance letter and May 2015 pre-inspection report are preserved as distinct native Word source files after read-only VBA checks and complete rendering. Their substantive findings are already represented by the compliance and pretreatment record sets, so no chronology event is duplicated and no PFAS, delivery-history or migration-pathway requirement is closed."
+    },
     {
       "name": "2018 Cadillac WWTP compliance sampling inspection email, workbook and official rendition",
       "reason": "The supplied native MSG is a distinct June 15, 2018 MDEQ transmittal. Its XLSX attachment is the original eight-sheet source workbook, and the exact MiEnviro PDF is the readable official rendition of the message and workbook. All three formats are retained once with explicit cross-references because each preserves a different provenance or access function. The embedded signature image is not cataloged separately. The record contains conventional, cyanide and metals sampling only; it is not treated as PFAS testing and closes no outstanding PFAS or pathway requirement."

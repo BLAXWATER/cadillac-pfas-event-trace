@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1572,
+  "recordCount": 1574,
   "archiveCount": 13,
   "archives": [
     {
@@ -92,7 +92,7 @@
       "label": "Reference data",
       "catalog": "reference-documents.json",
       "sectionId": "reference-library-title",
-      "count": 132
+      "count": 134
     }
   ],
   "records": [
@@ -14417,6 +14417,28 @@
       "url": "/reference-data/132-969c9e8282e7.docx",
       "sha256": "969c9e8282e73ac354f4bb5465ae7f4ecc136107089bf89c4efaf97bd41607f1",
       "size": 17481
+    },
+    {
+      "id": "133-730dad67c05a",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "Compliance Communication.doc",
+      "url": "/reference-data/133-730dad67c05a.doc",
+      "sha256": "730dad67c05a2306c1b8f5d6de7cc4fadd2eda5c7c687e80f6d8ef7afa29d88a",
+      "size": 51712
+    },
+    {
+      "id": "134-89af44caa00a",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "Pre-Inspection Report.doc",
+      "url": "/reference-data/134-89af44caa00a.doc",
+      "sha256": "89af44caa00a625e7f09a1a8c4e41bb4abbf249946f99d2990dbeadac6ba4bac",
+      "size": 111104
     },
     {
       "id": "001-d8496c7348a6",

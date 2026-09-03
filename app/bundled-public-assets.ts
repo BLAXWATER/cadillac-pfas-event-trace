@@ -684,6 +684,16 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/reference-data/133-730dad67c05a.doc", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/reference-data/134-89af44caa00a.doc", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
 } as Record<string, string>;
 
 export function bundledPublicAsset(path: string): string {

@@ -3,7 +3,7 @@ import "./globals.css";
 import { bundledPublicAsset } from "./bundled-public-assets";
 
 export const metadata: Metadata = {
-  title: "Cadillac PFAS Event Tracer",
+  title: "Cadillac Contamination - Environmental Records Repository",
   description: "Hierarchical, source-linked PFAS event trace with event timestamps, embedded file metadata and an evidence request queue.",
   icons: {
     icon: bundledPublicAsset("/favicon.svg"),

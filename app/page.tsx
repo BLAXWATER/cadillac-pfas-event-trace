@@ -2900,7 +2900,7 @@ export default function Home() {
         <header className="trace-header">
           <div>
             <p className="eyebrow">MI0020257 · SOURCE-LINKED RECORD</p>
-            <h1>Cadillac PFAS Event Tracer</h1>
+            <h1>Cadillac Contamination - Environmental Records Repository</h1>
             <p className="header-copy">Follow the hierarchy from year to event timestamp to the exact source document, with separate clocks for the event, the issued record and embedded file metadata.</p>
           </div>
           <div className="integrity-note">

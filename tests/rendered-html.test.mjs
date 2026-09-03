@@ -47,7 +47,7 @@ test("renders stable site metadata and source policy", async () => {
   const firstPagePreviewManifest = JSON.parse(
     await readFile(new URL("../app/first-page-preview-manifest.json", import.meta.url), "utf8"),
   );
-  assert.match(html, /<title>Cadillac PFAS Event Tracer<\/title>/i);
+  assert.match(html, /<title>Cadillac Contamination - Environmental Records Repository<\/title>/i);
   assert.match(html, /Hierarchical, source-linked PFAS event trace/i);
   const logoPath = html.match(/<img[^>]+class="integrity-logo"[^>]+src="(\/assets\/blax-water-logo-optimized-[^"]+\.webp)"[^>]+alt="BLAX Water"/i)?.[1];
   assert.ok(logoPath, "the bundled BLAX Water logo should render before the source policy");

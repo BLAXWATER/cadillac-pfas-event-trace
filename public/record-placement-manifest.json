@@ -16185,7 +16185,7 @@
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
       "name": "Fig 1 - Site Location.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/004-aaa74db2f56d.pdf",
+      "url": "/wexford-docs/004-aaa74db2f56d.pdf",
       "sha256": "aaa74db2f56d4369bf069082693a16e31d42b7944f1eaf1317c2eb4befb902b5",
       "size": 342082
     },

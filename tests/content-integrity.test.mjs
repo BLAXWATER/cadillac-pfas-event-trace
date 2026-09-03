@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 742);
-  assert.equal(externalFiles, 820);
+  assert.equal(localFiles, 743);
+  assert.equal(externalFiles, 819);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -2964,6 +2964,57 @@ test("batch 62 reuses, corrects and localizes the exact FY19 biosolids laborator
   assert.equal(placed[0].archiveId, "lab");
   assert.equal(placed[0].url, expected.asset);
   assert.match(audit.evidentiaryBoundary, /not a PFAS analytical record/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 63 reuses and localizes the exact Wexford site-location figure", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch63-wexford-site-location-recheck-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "wexford-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 1);
+  assert.equal(audit.stats.embeddedTextPages, 0);
+  assert.equal(audit.stats.imageOnlyPages, 1);
+  assert.equal(audit.stats.renderedPagesReviewed, 1);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.exactPublishedAssetHashMatches, 1);
+  assert.equal(audit.stats.exactPreviewHashMatches, 1);
+  assert.equal(audit.stats.recordsLocalized, 1);
+  assert.equal(audit.stats.recordDescriptionsExpanded, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const expected = audit.canonicalRecord;
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  const row = matches[0];
+  assert.equal(row.id, expected.recordId);
+  assert.equal(row.name, expected.canonicalName);
+  assert.equal(row.url, expected.asset);
+  assert.equal(row.size, expected.size);
+  assert.equal(row.pages, expected.pages);
+  assert.match(row.description, /dated February 20, 2012/i);
+  assert.match(row.description, /regional orientation only/i);
+  assert.equal(previewManifest[expected.asset], expected.preview);
+
+  const sourceBytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+  assert.equal(sourceBytes.length, expected.size);
+  assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), expected.sha256);
+  const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+
+  const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].archiveId, "wexford");
+  assert.equal(placed[0].url, expected.asset);
+  assert.match(audit.evidentiaryBoundary, /does not depict monitoring wells/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

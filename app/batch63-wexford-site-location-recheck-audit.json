@@ -1,0 +1,52 @@
+{
+  "batch": "2026-09-03 Wexford site-location figure recheck intake 63",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared them with every published evidence catalog.",
+    "Rendered the complete one-page image-based PDF and visually reviewed its title block, map extent, site outline, locator insets, scale, north arrow and source note.",
+    "Verified that the page is substantive and readable, and that the established local PDF and content-addressed first-page preview exactly match their recorded hashes.",
+    "Reused established Wexford record 004 as an exact cross-reference, repaired its catalog and placement URLs to the verified anonymous local delivery, and expanded its description without creating a duplicate record or timeline event."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 1,
+    "embeddedTextPages": 0,
+    "imageOnlyPages": 1,
+    "renderedPagesReviewed": 1,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "exactPublishedAssetHashMatches": 1,
+    "exactPreviewHashMatches": 1,
+    "recordsLocalized": 1,
+    "recordDescriptionsExpanded": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "004-aaa74db2f56d",
+    "asset": "/wexford-docs/004-aaa74db2f56d.pdf",
+    "preview": "/first-page-previews/by-sha256/9c08deef8da1ec3bfdff06b39ec2938821def0595440196439e153bb1b9e029c.webp",
+    "canonicalName": "Fig 1 - Site Location.pdf",
+    "sha256": "aaa74db2f56d4369bf069082693a16e31d42b7944f1eaf1317c2eb4befb902b5",
+    "size": 342082,
+    "pages": 1,
+    "drawingDate": "2012-02-20",
+    "applicationFilingDate": "2016-03-16",
+    "projectNumber": "123-88763",
+    "sourceMap": "U.S. Geological Survey 7.5-minute Cadillac North, Michigan topographic quadrangle, 1983"
+  },
+  "verifiedFindings": [
+    "The Golder Associates title block identifies Figure 1 as a Site Location Map dated February 20, 2012 for project 123-88763.",
+    "The map outlines the Wexford County Landfill site and provides Michigan and Wexford County locator insets, a scale bar and north arrow.",
+    "The figure cites the U.S. Geological Survey 7.5-minute Cadillac North, Michigan topographic quadrangle map, 1983, as its reference base.",
+    "The image-based page has no embedded text layer but is complete, substantive and readable when rendered."
+  ],
+  "evidentiaryBoundary": "This figure provides regional site orientation. It does not depict monitoring wells, boring logs, screened intervals, water levels, hydraulic testing, PFAS results, groundwater-flow direction or a demonstrated source-to-receptor migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The map does not supply the well-construction, surveyed water-level, hydraulic-test or site-specific groundwater-flow evidence required by the remaining hydrogeologic and source-attribution requests."
+  }
+}

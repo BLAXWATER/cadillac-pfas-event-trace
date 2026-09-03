@@ -38,14 +38,14 @@
   {
     "id": "004-aaa74db2f56d",
     "name": "Fig 1 - Site Location.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/004-aaa74db2f56d.pdf",
+    "url": "/wexford-docs/004-aaa74db2f56d.pdf",
     "year": "2016",
     "type": "Application map",
     "format": "PDF",
     "pages": 1,
     "size": 342082,
     "sha256": "aaa74db2f56d4369bf069082693a16e31d42b7944f1eaf1317c2eb4befb902b5",
-    "description": "Site-location map submitted with the Rule 2210(y) groundwater-discharge application."
+    "description": "Golder Associates Figure 1 site-location map dated February 20, 2012 and later submitted with the Rule 2210(y) groundwater-discharge application. It outlines the Wexford County Landfill on the USGS 7.5-minute Cadillac North topographic quadrangle and includes Michigan and Wexford County locator insets. The map provides regional orientation only; it does not depict PFAS results, monitoring wells or a groundwater-flow pathway."
   },
   {
     "id": "005-07d4a892d342",

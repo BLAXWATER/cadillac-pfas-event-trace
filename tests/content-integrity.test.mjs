@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 80);
+  assert.equal(helperReferences.length, 81);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -2856,6 +2856,60 @@ test("batch 60 reuses and localizes the exact Pace biosolids laboratory package"
   assert.equal(placed[0].archiveId, "lab");
   assert.equal(placed[0].url, expected.asset);
   assert.match(audit.evidentiaryBoundary, /does not establish PFAS in biosolids/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 61 reuses the exact 2018 IPP annual report and adds one bounded timeline cross-reference", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch61-hnn-ipp-annual-recheck-audit.json"), "utf8"));
+  const catalog = JSON.parse(await readFile(path.join(appDirectory, "form-submission-documents.json"), "utf8"));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 2);
+  assert.equal(audit.stats.embeddedTextPages, 2);
+  assert.equal(audit.stats.imageOnlyPages, 0);
+  assert.equal(audit.stats.renderedPagesReviewed, 2);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.exactPublishedAssetHashMatches, 1);
+  assert.equal(audit.stats.recordsLocalized, 0);
+  assert.equal(audit.stats.recordDescriptionsExpanded, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.timelineSourcesAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const expected = audit.canonicalRecord;
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  const row = matches[0];
+  assert.equal(row.id, expected.recordId);
+  assert.equal(row.name, expected.canonicalName);
+  assert.equal(row.url, expected.asset);
+  assert.equal(row.size, expected.size);
+  assert.equal(row.pages, expected.pages);
+  assert.match(row.description, /reported no POTW-effluent or biosolids problems/i);
+  assert.match(row.description, /underlying files are not embedded/i);
+  assert.equal(previewManifest[expected.asset], expected.preview);
+
+  const sourceBytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+  assert.equal(sourceBytes.length, expected.size);
+  assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), expected.sha256);
+  const previewBytes = await readFile(path.join(publicDirectory, expected.preview.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(expected.preview, ".webp"));
+
+  const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].archiveId, "form-submissions");
+  assert.equal(placed[0].url, expected.asset);
+  assert.match(pageSource, /Cadillac certifies its 2018 IPP annual report/);
+  assert.match(pageSource, /municipal self-report, not an independent agency finding/i);
+  assert.match(audit.evidentiaryBoundary, /not an independent agency determination/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

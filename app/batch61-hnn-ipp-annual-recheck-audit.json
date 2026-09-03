@@ -1,0 +1,54 @@
+{
+  "batch": "2026-09-03 HNN IPP annual-report recheck intake 61",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared them with every published evidence catalog and the canonical local asset.",
+    "Extracted the embedded text and rendered both pages for visual review.",
+    "Verified that both pages are readable, that the first page is substantive rather than blank, and that the canonical first-page preview matches its content-addressed SHA-256 filename.",
+    "Reused established form-submission record 033 as an exact cross-reference, expanded its neutral description and added one dated timeline cross-reference without creating a duplicate record."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 2,
+    "embeddedTextPages": 2,
+    "imageOnlyPages": 0,
+    "renderedPagesReviewed": 2,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "exactPublishedAssetHashMatches": 1,
+    "recordsLocalized": 0,
+    "recordDescriptionsExpanded": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 1,
+    "timelineSourcesAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "canonicalRecord": {
+    "recordId": "form-submission-033-bffd8eec3c32",
+    "asset": "/form-submission-docs/form-submission-033-bffd8eec3c32.pdf",
+    "preview": "/first-page-previews/by-sha256/0e54e1b292919291fd46dcf5eb5b26678a2ca9fe562aa25fc22687995415fc4c.webp",
+    "canonicalName": "2019-03-20 - IPP annual report - Submission HNN-0QFE-AG22Q v1.pdf",
+    "sha256": "bffd8eec3c32320f1857d416db4dd2516ffdcc9e03a198f37b4f4e523b59606e",
+    "size": 257363,
+    "pages": 2,
+    "submissionId": "HNN-0QFE-AG22Q",
+    "reportingPeriodStart": "2018-01-01",
+    "reportingPeriodEnd": "2018-12-31",
+    "submittedTimestamp": "2019-03-20 14:55:06 EDT",
+    "copyOfRecordTimestamp": "2019-03-20 14:55:08 EDT"
+  },
+  "verifiedFindings": [
+    "Cadillac identified the reporting period as January 1 through December 31, 2018.",
+    "The certified form answers no to adopting or evaluating local limits and no to adding or deleting pollutants from the local-limits list during the reporting period.",
+    "The form reports no pass-through, interference or NPDES-limit problems with POTW effluent and no problems with biosolids or sewage-sludge use or disposal during the reporting period.",
+    "The form lists the SIU/CIU list, POTW oversight table, proof of publication and 2018 annual pollutant monitoring summary as uploaded attachments.",
+    "The status history records Jeffrey Dietlin submitting the report on March 20, 2019 at 2:55:06 PM; the copy-of-record signature and PDF metadata follow two seconds later."
+  ],
+  "evidentiaryBoundary": "The record preserves Cadillac's certified annual-report answers and attachment inventory. It is not an independent agency determination that no problem occurred, does not reproduce the listed attachment contents, does not establish a final leachate delivery date and does not prove a PFAS migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The annual report adds dated pretreatment-program context but does not supply transaction-level leachate receiving records, synchronized PFAS sampling, well-construction data or groundwater-flow evidence required by the remaining requests."
+  }
+}

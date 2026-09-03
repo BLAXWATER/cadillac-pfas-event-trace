@@ -3420,6 +3420,42 @@ test("batch 71 reuses the exact injection-well resolution while preserving its d
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 72 reuses exact AOI, road-project and topography records without overstating them", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch72-aoi-road-and-topography-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 5);
+  assert.equal(audit.stats.suppliedPathsAvailableAtReview, 5);
+  assert.equal(audit.stats.distinctInputHashes, 5);
+  assert.equal(audit.stats.pdfPagesRenderedAndReviewed, 70);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 5);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+
+  for (const expected of audit.exactCrossReferences) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, expected.recordId);
+    assert.equal(matches[0].url, expected.asset);
+    assert.equal(matches[0].pages, expected.pages);
+    assert.equal(matches[0].size, expected.size);
+    assert.equal(matches[0].type, expected.classification);
+    assert.equal(placement.records.filter((item) => item.sha256 === expected.sha256).length, 1);
+    assert.ok(previewManifest[expected.asset], `Missing preview for ${expected.asset}`);
+  }
+
+  assert.match(audit.evidentiaryBoundary, /not the exact final load date/i);
+  assert.match(audit.evidentiaryBoundary, /does not establish a drainage or process connection/i);
+  assert.match(audit.evidentiaryBoundary, /not a site-specific groundwater-flow/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

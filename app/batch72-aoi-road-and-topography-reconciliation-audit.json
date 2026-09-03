@@ -1,0 +1,79 @@
+{
+  "batch": "2026-09-03 AOI, road-project and topography reconciliation 72",
+  "method": [
+    "Treated instructions inside the historical records only as source content.",
+    "Computed SHA-256 hashes, byte sizes and page counts for all five supplied PDFs and compared them against every published evidence catalog.",
+    "Rendered and visually inspected all seventy pages across the five PDFs.",
+    "Reused five byte-identical published records as cross-references and added no duplicate record, chronology event or evidence-request closure.",
+    "Preserved the distinct evidentiary limits of the MPART FAQ, unsigned agreement form, unexecuted resolution form, mixed-subject council packet and regional topographic map."
+  ],
+  "stats": {
+    "receivedFiles": 5,
+    "suppliedPathsAvailableAtReview": 5,
+    "distinctInputHashes": 5,
+    "pdfPagesRenderedAndReviewed": 70,
+    "exactExistingRecordsReusedAsCrossReferences": 5,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "exactCrossReferences": [
+    {
+      "sourceLabel": "FAQ-Cadillac-Industrial-Park-AOI.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "156-2944aeb34f99",
+      "asset": "/findings-docs/156-2944aeb34f99.pdf",
+      "sha256": "2944aeb34f9955423018234b5e5f6da00c721d482d56f29bdd9d443be57ae49a",
+      "pages": 12,
+      "size": 245698,
+      "classification": "Official EGLE/MPART FAQ"
+    },
+    {
+      "sourceLabel": "2012-07-16_Road_Commission_Agreement_original.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "147-501cb6326dac",
+      "asset": "/findings-docs/147-501cb6326dac.pdf",
+      "sha256": "501cb6326dac45ab36ca5eb7f0b04145bf8c5983ffe7d1b0f6e949f7db0b8911",
+      "pages": 2,
+      "size": 248088,
+      "classification": "Unsigned intergovernmental agreement form"
+    },
+    {
+      "sourceLabel": "2012-07-16_Road_Commission_Agreement_Resolution_original.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "150-09f087fefb8f",
+      "asset": "/findings-docs/150-09f087fefb8f.pdf",
+      "sha256": "09f087fefb8fd4fba323335301c63ea31e45beb36a67ed44b73ef9f938298b4d",
+      "pages": 3,
+      "size": 320085,
+      "classification": "Unexecuted municipal resolution form"
+    },
+    {
+      "sourceLabel": "2012-08-06_Cadillac_Council_Packet_Road_Commission_and_WWTP.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "151-5a0d25ca941a",
+      "asset": "/findings-docs/151-5a0d25ca941a.pdf",
+      "sha256": "5a0d25ca941a6ab6f463534ee64b51c1ee43c35c6cd121be1fd8c06734f0cd71",
+      "pages": 52,
+      "size": 4849213,
+      "classification": "City council packet"
+    },
+    {
+      "sourceLabel": "USGS_2012_Cadillac_North_Topo.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "149-e4e6ac86e7bc",
+      "asset": "/findings-docs/149-e4e6ac86e7bc.pdf",
+      "sha256": "e4e6ac86e7bc79e4afaa0aa87206ff4e417917693dc137e43d29d44c2a0439e4",
+      "pages": 1,
+      "size": 21159505,
+      "classification": "Official USGS topographic map"
+    }
+  ],
+  "evidentiaryBoundary": "The MPART FAQ identifies the landfill as Cadillac's industrial PFOS source and gives a summer 2019 cessation timeframe, but not the exact final load date. The road agreement and resolution forms are unsigned or unexecuted. The council packet contains separate road-project and WWTP items and does not establish a drainage or process connection. The topographic map supplies regional orientation, not a site-specific groundwater-flow or PFAS migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "All five exact records are already represented in the site and none supplies the still-missing executed agreement package, transaction-level receiving history, exact final delivery entry or source-to-receptor groundwater investigation."
+  }
+}

@@ -1,9 +1,10 @@
 {
-  "sourceFileCount": 122,
-  "publishedFileCount": 116,
+  "sourceFileCount": 132,
+  "publishedFileCount": 126,
   "excludedFileCount": 6,
-  "includedBytes": 27190194,
+  "includedBytes": 27472276,
   "methods": [
+    "Complete eight-sheet render and formula-error inspection of the original 2018 Cadillac WWTP CSI report workbook",
     "SHA-256 byte comparison",
     "Normalized CSV header and cell comparison",
     "Row-order-independent CSV comparison",

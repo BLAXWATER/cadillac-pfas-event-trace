@@ -1533,5 +1533,28 @@
     "sheets": null,
     "sha256": "c8b0b8e50f92c2784d92ad25aa52bcf1d57b42af5abba34b65fc26efdd4bc791",
     "description": "Manifest for 21 native or original PDF records supplied in the September 1, 2026 evidence package. Every listed package path, file size and SHA-256 hash matched during intake. The manifest preserves provenance and integrity metadata but does not substitute for the underlying source records."
+  },
+  {
+    "id": "126-5811dc8c913b",
+    "name": "2018 Cadillac WWTP CSI Final Report.xlsx",
+    "url": "/reference-data/126-5811dc8c913b.xlsx",
+    "format": "XLSX",
+    "type": "Original compliance sampling report workbook",
+    "size": 54031,
+    "rows": 74,
+    "columns": 22,
+    "sheets": 8,
+    "sha256": "5811dc8c913b6a5849ae929cafff135e00ffeac1352187c2dbd0ccd61f5e4f7b",
+    "description": "Original eight-sheet workbook attached to MDEQ's June 15, 2018 Cadillac WWTP compliance sampling inspection transmittal. Every worksheet was opened and visually checked. The workbook contains the cover, survey procedure, composite and grab results, split-sample comparison, 2014 comparison, and preservative/code table. One unused result cell retains a pre-existing #REF! formula defect; the published report tables render normally. No PFAS analytes are present.",
+    "matchingSources": [
+      {
+        "name": "2018-06-15 - Cadillac WWTP CSI Final Report Transmittal.msg",
+        "relationship": "Exact workbook attachment extracted from the native email"
+      },
+      {
+        "name": "2018-06-15 - Cadillac WWTP Compliance Sampling Inspection Final Report.pdf",
+        "relationship": "Official MiEnviro rendition of the transmittal and workbook"
+      }
+    ]
   }
 ]

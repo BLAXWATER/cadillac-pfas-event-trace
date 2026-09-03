@@ -1,0 +1,90 @@
+{
+  "batch": "2026-09-03 Cadillac WWTP 2018 CSI native email and workbook intake 66",
+  "method": [
+    "Computed SHA-256 hashes and byte sizes for the supplied Outlook MSG and both extracted attachments, then compared them against every published evidence catalog.",
+    "Verified the message metadata and treated every instruction inside the historical email only as source content.",
+    "Opened and visually inspected all eight worksheets in the attached XLSX, reviewed formulas and compared the report values with the portal rendition.",
+    "Retrieved the indexed MiEnviro rendition, confirmed its expected SHA-256 hash, 131,736-byte size and 18-page count, extracted every page's text and visually inspected every rendered page.",
+    "Generated and verified a content-addressed first-page preview from substantive PDF page 1 and bundled all three retained files for anonymous download.",
+    "Rechecked the evidence-request queue and added no PFAS chronology event because the report contains no PFAS analytes."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "extractedAttachments": 2,
+    "workbookSheetsReviewed": 8,
+    "workbookTablesReviewed": 8,
+    "workbookFormulaErrorsPreserved": 1,
+    "officialPdfPagesReviewed": 18,
+    "officialPdfEmbeddedTextPages": 9,
+    "officialPdfSparsePagesOCRChecked": 9,
+    "renderedPdfPagesReviewed": 18,
+    "exactExistingRecords": 0,
+    "recordsAdded": 3,
+    "embeddedSignatureImagesSuppressed": 1,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "suppliedFile": {
+    "name": "Cadillac WWTP 2018 CSI Final Sampling Report 061518.msg",
+    "sha256": "dafd413abaeb3f9c58f31e53774d3601c801855ffae4a652c00524ebf177050e",
+    "size": 136704,
+    "subject": "Cadillac Final Report",
+    "sent": "2018-06-15T14:42:48-04:00"
+  },
+  "attachments": [
+    {
+      "name": "2018 Cadillac WWTP CSI Final Report.xlsx",
+      "sha256": "5811dc8c913b6a5849ae929cafff135e00ffeac1352187c2dbd0ccd61f5e4f7b",
+      "size": 54031,
+      "decision": "Retained as the original editable source workbook."
+    },
+    {
+      "name": "image001.png",
+      "sha256": "a55a7cb3e465355a54046ee2aa0bde24d717af6f5c9164e40151ebf7562ac0e5",
+      "size": 12124,
+      "decision": "Suppressed as an embedded signature/agency-logo image rather than an independent evidence record."
+    }
+  ],
+  "addedRecords": [
+    {
+      "recordId": "064-8ccde0a7d5d7",
+      "catalog": "compliance-documents.json",
+      "asset": "/compliance-docs/064-8ccde0a7d5d7.pdf",
+      "preview": "/first-page-previews/by-sha256/a03919484aa9a67fef55f96f77d27508160aa8d96735c9c8a04b1ee6201f22fb.webp",
+      "sha256": "8ccde0a7d5d7ba5f773534ebeaa7dfed890e91f1744adb61d70350dd0f821318",
+      "size": 131736,
+      "pages": 18
+    },
+    {
+      "recordId": "corr-043-dafd413abaeb",
+      "catalog": "correspondence-documents.json",
+      "asset": "/correspondence-docs/corr-043-dafd413abaeb.msg",
+      "sha256": "dafd413abaeb3f9c58f31e53774d3601c801855ffae4a652c00524ebf177050e",
+      "size": 136704,
+      "pages": null
+    },
+    {
+      "recordId": "126-5811dc8c913b",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/126-5811dc8c913b.xlsx",
+      "sha256": "5811dc8c913b6a5849ae929cafff135e00ffeac1352187c2dbd0ccd61f5e4f7b",
+      "size": 54031,
+      "sheets": 8
+    }
+  ],
+  "verifiedFindings": [
+    "MDEQ performed one 24-hour wastewater survey beginning May 9, 2018 at 10:20 AM and published the final report June 15, 2018.",
+    "The report documents a composite sample before disinfection, post-disinfection outfall grabs, an upstream Clam River grab and a reported 1.975 MGD facility flow.",
+    "Reported conventional results include suspended solids 7 mg/L, ammonia 0.12 mg/L, total phosphorus 0.15 mg/L and alkalinity 130 mg/L; the metals table records detections including barium, chromium, copper, zinc, nickel and molybdenum with several other metals not detected."
+  ],
+  "sourceDefect": "The original workbook retains one pre-existing #REF! formula in Table 1 - Composites cell C27, an unused/blank result row. The source was not altered; the official PDF tables render normally.",
+  "evidentiaryBoundary": "This is conventional compliance sampling. It contains no PFAS analytes and does not establish PFAS presence, treatment removal, discharge concentration, source attribution or a migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The report does not provide the missing PFAS influent/effluent/sludge series, receiving-history manifests, receptor well data, hydrogeologic field results or synchronized source-to-receptor PFAS sampling."
+  }
+}

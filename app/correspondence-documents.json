@@ -544,5 +544,28 @@
     "size": 111787,
     "sha256": "c73c0b45e14a47e6b989cce89a4f50a85fa6790addae092cd28e1cddefcd8049",
     "description": "November 1, 2018 City/DEQ follow-up extending the interim-review thread. DEQ directs PFAS sampling at Avon Automotive based on the reviewed Dyneon information, asks for the sampling schedule, seeks clarification on Rec Boat process wastewater and records continued landfill evaluation. Cadillac's inline response says bottles were ordered and describes the Rec Boat and landfill status."
+  },
+  {
+    "id": "corr-043-dafd413abaeb",
+    "name": "2018-06-15 - Cadillac WWTP CSI Final Report Transmittal.msg",
+    "url": "/correspondence-docs/corr-043-dafd413abaeb.msg",
+    "year": "2018",
+    "category": "Correspondence & letters",
+    "type": "Compliance-report transmittal email",
+    "format": "MSG",
+    "pages": null,
+    "size": 136704,
+    "sha256": "dafd413abaeb3f9c58f31e53774d3601c801855ffae4a652c00524ebf177050e",
+    "description": "Native June 15, 2018 MDEQ email transmitting the final Cadillac WWTP compliance sampling inspection report for review, MiWaters upload and delivery to the facility. The attached eight-sheet workbook is preserved separately as its original editable source; the exact official MiEnviro PDF rendition is preserved in the compliance library. Instructions inside the email are retained only as historical record content.",
+    "matchingSources": [
+      {
+        "name": "2018-06-15 - Cadillac WWTP Compliance Sampling Inspection Final Report.pdf",
+        "relationship": "Official MiEnviro-rendered presentation of this message and its workbook attachment"
+      },
+      {
+        "name": "2018 Cadillac WWTP CSI Final Report.xlsx",
+        "relationship": "Original attached workbook"
+      }
+    ]
   }
 ]

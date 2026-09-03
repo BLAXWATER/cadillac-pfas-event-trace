@@ -3182,7 +3182,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View image"} open={setSelected} />
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />
               </article>
             ))}
           </div>
@@ -3319,10 +3319,10 @@ export default function Home() {
           <div className="document-grid">
             {filteredCorrespondenceDocuments.map((document) => (
               <article className="archive-card" data-record-id={document.id} key={document.id}>
-                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{document.description}</p>
-                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View image"} open={setSelected} />
+                <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />
               </article>
             ))}
           </div>

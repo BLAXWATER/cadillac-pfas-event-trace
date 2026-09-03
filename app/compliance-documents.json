@@ -752,5 +752,27 @@
     "size": 784458,
     "sha256": "bfbcd24d8a0adde6bffa8a5bc0fac22befaa3adebca864d82c14b9dc2ad5b4a0",
     "description": "Cadillac's signed July 14, 2026 response to EGLE Violation Notice VN-019184. The City attributes the April 16-29 partial tertiary-treatment bypass to snowmelt, frozen ground, flooding and 11.79 inches of April precipitation, asserts that the reportable-discharge-scenario threshold was exceeded, and confirms that future bypasses will be reported. Attachments include a NOAA precipitation table and EGLE's April 22 and April 27 reporting reminders. This record does not show that EGLE accepted the City's weather defense or closed the violation."
+  },
+  {
+    "id": "064-8ccde0a7d5d7",
+    "name": "2018-06-15 - Cadillac WWTP Compliance Sampling Inspection Final Report.pdf",
+    "url": "/compliance-docs/064-8ccde0a7d5d7.pdf",
+    "year": "2018",
+    "type": "Compliance sampling inspection final report",
+    "format": "PDF",
+    "pages": 18,
+    "size": 131736,
+    "sha256": "8ccde0a7d5d7ba5f773534ebeaa7dfed890e91f1744adb61d70350dd0f821318",
+    "description": "MDEQ's final report for the May 9-10, 2018 compliance sampling inspection at Cadillac WWTP, preserved in the exact 18-page MiEnviro PDF rendition of the June 15 transmittal and attached workbook. It documents a 24-hour composite before disinfection, post-disinfection outfall grabs, an upstream Clam River grab, a reported 1.975 MGD flow and conventional, cyanide and metals results. The report contains no PFAS analytes and is not treated as evidence of PFAS presence, removal or source attribution.",
+    "matchingSources": [
+      {
+        "name": "2018-06-15 - Cadillac WWTP CSI Final Report Transmittal.msg",
+        "relationship": "Native email source rendered in the official portal PDF"
+      },
+      {
+        "name": "2018 Cadillac WWTP CSI Final Report.xlsx",
+        "relationship": "Original workbook attachment represented in the report tables"
+      }
+    ]
   }
 ]

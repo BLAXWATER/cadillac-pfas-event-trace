@@ -1,6 +1,6 @@
 {
   "stats": {
-    "sourceFilesReviewed": 51,
+    "sourceFilesReviewed": 52,
     "sourcePdfRecords": 50,
     "sourceImageRecords": 1,
     "reviewedPages": 247,
@@ -10,13 +10,16 @@
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 14,
     "existingRecordMovedIntoCategory": 1,
-    "newDistinctRecords": 41,
-    "finalDistinctRecords": 42,
+    "newDistinctRecords": 42,
+    "finalDistinctRecords": 43,
     "duplicateLabelsRemoved": 4,
     "publishedPages": 231,
     "publishedOcrPages": 34,
     "publishedOcrPagesWithText": 26,
-    "publishedBytes": 13321166,
+    "publishedBytes": 13457870,
+    "latestCSIMessageFilesReviewed": 1,
+    "latestCSIMessageAttachmentsExtracted": 2,
+    "latestCSIMessageRecordsAdded": 1,
     "latestBatch11FilesReviewed": 62,
     "latestBatch11PdfPagesReviewed": 371,
     "latestBatch11DistinctCorrespondenceRecords": 3,
@@ -29,6 +32,7 @@
     "latestBatch12TimelineEventsAdded": 2
   },
   "methods": [
+    "September 3 CSI message intake opened the native Outlook container, verified sender, recipients, subject and timestamp, extracted the workbook and embedded signature image, and compared each attachment hash against every catalog before classification.",
     "SHA-256 comparison within the entire supplied folder and against every published evidence catalog",
     "Page-count, PDF metadata and embedded-text review for every file",
     "OCR on every scan-only or sparse-text page, with page-level confidence and readability checks",
@@ -38,6 +42,10 @@
     "August 31 leftovers intake 12 verified all 13 PDFs and 199 pages, reused ten exact catalog matches, suppressed one page-identical sampling-guidance export after two-resolution render comparison, and retained two distinct interim-review threads."
   ],
   "decisions": [
+    {
+      "name": "2018-06-15 Cadillac Final Report native email",
+      "reason": "The native MDEQ message is retained as distinct correspondence because it preserves original email metadata and identifies the attached workbook as the final 2018 CSI report for MiWaters upload and delivery to the facility. The workbook and official PDF rendition are linked cross-references; the signature image is an embedded branding asset and is not a separate evidence record."
+    },
     {
       "name": "August 31 leftovers intake 12 PFAS interim-review threads",
       "reason": "The September and November packages preserve different correspondence states and agency actions. Both are retained; the longer November chain is not used to erase the September acknowledgement record."

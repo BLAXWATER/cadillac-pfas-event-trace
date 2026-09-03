@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 745);
+  assert.equal(localFiles, 748);
   assert.equal(externalFiles, 817);
 });
 
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1562);
+  assert.equal(recordCount, 1565);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1562);
+  assert.equal(records.length, 1565);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1414);
-  assert.equal(audit.stats.pdfPages, 20351);
+  assert.equal(audit.stats.pdfRecords, 1415);
+  assert.equal(audit.stats.pdfPages, 20369);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -290,15 +290,15 @@ test("compliance archive audit preserves distinct records and excludes verified 
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "compliance-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "compliance-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 118);
-  assert.equal(audit.stats.finalDistinctRecords, 63);
+  assert.equal(audit.stats.sourceFilesReviewed, 119);
+  assert.equal(audit.stats.finalDistinctRecords, 64);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 1);
   assert.equal(audit.stats.renderIdenticalByteDifferentGroupsWithinSource, 0);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 6);
   assert.equal(audit.stats.analystAuthoredReportsExcluded, 4);
-  assert.equal(audit.stats.reviewedPages, 778);
-  assert.equal(audit.stats.ocrPages, 318);
+  assert.equal(audit.stats.reviewedPages, 796);
+  assert.equal(audit.stats.ocrPages, 327);
   assert.equal(audit.stats.latestAllDocsIntakeFiles, 23);
   assert.equal(audit.stats.latestAllDocsActualDuplicateCopiesSuppressed, 1);
   assert.equal(audit.stats.latestDropboxIntakeFiles, 50);
@@ -313,10 +313,10 @@ test("correspondence archive audit preserves distinct records and reuses exact c
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "correspondence-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "correspondence-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 51);
+  assert.equal(audit.stats.sourceFilesReviewed, 52);
   assert.equal(audit.stats.reviewedPages, 247);
   assert.equal(audit.stats.sourceOcrPages, 23);
-  assert.equal(audit.stats.finalDistinctRecords, 42);
+  assert.equal(audit.stats.finalDistinctRecords, 43);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 14);
   assert.equal(audit.stats.existingRecordMovedIntoCategory, 1);
@@ -3130,6 +3130,66 @@ test("batch 65 reuses the exact FY19 biosolids laboratory package without duplic
   assert.equal(placed[0].sectionId, "lab-library-title");
   assert.equal(placed[0].url, expected.asset);
   assert.match(audit.evidentiaryBoundary, /not a PFAS analytical record/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 66 preserves the native CSI email, original workbook and official readable rendition without inventing a PFAS finding", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch66-csi-email-workbook-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.extractedAttachments, 2);
+  assert.equal(audit.stats.workbookSheetsReviewed, 8);
+  assert.equal(audit.stats.workbookFormulaErrorsPreserved, 1);
+  assert.equal(audit.stats.officialPdfPagesReviewed, 18);
+  assert.equal(audit.stats.officialPdfEmbeddedTextPages, 9);
+  assert.equal(audit.stats.officialPdfSparsePagesOCRChecked, 9);
+  assert.equal(audit.stats.renderedPdfPagesReviewed, 18);
+  assert.equal(audit.stats.recordsAdded, 3);
+  assert.equal(audit.stats.embeddedSignatureImagesSuppressed, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  for (const expected of audit.addedRecords) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    const row = matches[0];
+    assert.equal(row.id, expected.recordId);
+    assert.equal(row.url, expected.asset);
+    assert.equal(row.size, expected.size);
+    const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
+    assert.equal(bytes.length, expected.size);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
+    const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(placed.length, 1);
+    assert.equal(placed[0].url, expected.asset);
+  }
+
+  const pdfRecord = catalogs.get("compliance-documents.json").find((item) => item.id === "064-8ccde0a7d5d7");
+  assert.equal(pdfRecord.pages, 18);
+  assert.match(pdfRecord.description, /no PFAS analytes/i);
+  const pdfExpected = audit.addedRecords.find((item) => item.recordId === pdfRecord.id);
+  assert.equal(previewManifest[pdfExpected.asset], pdfExpected.preview);
+  const previewBytes = await readFile(path.join(publicDirectory, pdfExpected.preview.replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(pdfExpected.preview, ".webp"));
+
+  const messageBytes = await readFile(path.join(publicDirectory, "correspondence-docs", "corr-043-dafd413abaeb.msg"));
+  assert.equal(messageBytes.subarray(0, 8).toString("hex"), "d0cf11e0a1b11ae1");
+  const workbookBytes = await readFile(path.join(publicDirectory, "reference-data", "126-5811dc8c913b.xlsx"));
+  assert.equal(workbookBytes.subarray(0, 2).toString("hex"), "504b");
+  const referenceAudit = JSON.parse(await readFile(path.join(appDirectory, "reference-audit.json"), "utf8"));
+  const referenceCatalog = catalogs.get("reference-documents.json");
+  assert.equal(referenceAudit.publishedFileCount, referenceCatalog.length);
+  assert.equal(referenceAudit.sourceFileCount, referenceAudit.publishedFileCount + referenceAudit.excludedFileCount);
+  assert.equal(referenceAudit.includedBytes, referenceCatalog.reduce((sum, item) => sum + item.size, 0));
+  assert.match(audit.sourceDefect, /#REF!/);
+  assert.match(audit.evidentiaryBoundary, /no PFAS analytes/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

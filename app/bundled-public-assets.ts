@@ -634,6 +634,21 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/compliance-docs/064-8ccde0a7d5d7.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/correspondence-docs/corr-043-dafd413abaeb.msg", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/reference-data/126-5811dc8c913b.xlsx", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
 } as Record<string, string>;
 
 export function bundledPublicAsset(path: string): string {

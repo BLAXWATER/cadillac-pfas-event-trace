@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "be8e89b701a6ab2931070f523a74d94e581ebb5ba5521fdaa9c340ee03c38cc0",
+  "catalogFingerprint": "fabd0bc9f1405ac95e7d942696bc697403e0ccf79a4f4d6493efa4c9f5f26cbd",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,15 +8,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1562,
-    "verifiedRecords": 1562,
-    "pdfRecords": 1414,
-    "pdfPages": 20351,
+    "catalogRecords": 1565,
+    "verifiedRecords": 1565,
+    "pdfRecords": 1415,
+    "pdfPages": 20369,
     "imageRecords": 13,
-    "embeddedTextPages": 16553,
-    "ocrPages": 3811,
-    "ocrPagesWithText": 3468,
-    "manualReviewPages": 146,
+    "embeddedTextPages": 16562,
+    "ocrPages": 3820,
+    "ocrPagesWithText": 3473,
+    "manualReviewPages": 139,
     "missingHashes": 0,
     "hashFailures": 0,
     "sizeFailures": 0,
@@ -29,8 +29,8 @@
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
     "status": "visually-verified",
-    "pagesReviewed": 146,
-    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map, faint handwritten/form pages, the complete five-page scanned VN-019184 response package and both pages of the signed LDFA resolution. No missing or corrupt source page was found."
+    "pagesReviewed": 139,
+    "finding": "Every low-confidence page was visually inspected. They are valid non-text or sparse-content pages: faint reverse-side scans, appendix dividers, photographs, an aerial image, dense tables, sparse worksheet cells, a site map and faint handwritten/form pages. No missing or corrupt source page was found."
   },
   "manualReview": [
     {
@@ -196,6 +196,15 @@
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/fc85cac00de72c88cc7beaa4d56690f6761eae40/public/compliance-docs/050-8681b59f46b5.pdf",
       "pages": [
         40
+      ]
+    },
+    {
+      "catalog": "compliance-documents.json",
+      "id": "064-8ccde0a7d5d7",
+      "name": "2018-06-15 - Cadillac WWTP Compliance Sampling Inspection Final Report.pdf",
+      "url": "/compliance-docs/064-8ccde0a7d5d7.pdf",
+      "pages": [
+        6
       ]
     },
     {
@@ -537,38 +546,6 @@
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/086-6500e6efe946.pdf",
       "pages": [
         128
-      ]
-    },
-    {
-      "catalog": "compliance-documents.json",
-      "id": "062-4c293cc26b89",
-      "name": "2015-01-01 to 2015-03-31 - EPA ICIS Michigan Quarterly Non-Compliance Report.pdf",
-      "url": "/compliance-docs/062-4c293cc26b89.pdf",
-      "pages": [
-        1
-      ]
-    },
-    {
-      "catalog": "compliance-documents.json",
-      "id": "063-bfbcd24d8a0a",
-      "name": "2026-07-14 - Cadillac Response to Violation Notice VN-019184.pdf",
-      "url": "/compliance-docs/063-bfbcd24d8a0a.pdf",
-      "pages": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    {
-      "catalog": "supplemental-documents.json",
-      "id": "167-322217e52758",
-      "name": "2026-02-25 - Signed LDFA Carbon Regeneration Grant Resolution.pdf",
-      "url": "/findings-docs/167-322217e52758.pdf",
-      "pages": [
-        1,
-        2
       ]
     }
   ],

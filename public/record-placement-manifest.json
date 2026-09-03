@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1562,
+  "recordCount": 1565,
   "archiveCount": 13,
   "archives": [
     {
@@ -57,14 +57,14 @@
       "label": "Compliance & enforcement",
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
-      "count": 63
+      "count": 64
     },
     {
       "archiveId": "correspondence",
       "label": "Correspondence & letters",
       "catalog": "correspondence-documents.json",
       "sectionId": "correspondence-library-title",
-      "count": 42
+      "count": 43
     },
     {
       "archiveId": "process-site",
@@ -92,7 +92,7 @@
       "label": "Reference data",
       "catalog": "reference-documents.json",
       "sectionId": "reference-library-title",
-      "count": 125
+      "count": 126
     }
   ],
   "records": [
@@ -3100,6 +3100,17 @@
       "size": 784458
     },
     {
+      "id": "064-8ccde0a7d5d7",
+      "archiveId": "compliance",
+      "archiveLabel": "Compliance & enforcement",
+      "catalog": "compliance-documents.json",
+      "sectionId": "compliance-library-title",
+      "name": "2018-06-15 - Cadillac WWTP Compliance Sampling Inspection Final Report.pdf",
+      "url": "/compliance-docs/064-8ccde0a7d5d7.pdf",
+      "sha256": "8ccde0a7d5d7ba5f773534ebeaa7dfed890e91f1744adb61d70350dd0f821318",
+      "size": 131736
+    },
+    {
       "id": "corr-001-4d33f697af5e",
       "archiveId": "correspondence",
       "archiveLabel": "Correspondence & letters",
@@ -3560,6 +3571,17 @@
       "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/623d9abbdd9aa2dd388da68e3e95c23e59c31387/public/correspondence-docs/corr-042-c73c0b45e14a.pdf",
       "sha256": "c73c0b45e14a47e6b989cce89a4f50a85fa6790addae092cd28e1cddefcd8049",
       "size": 111787
+    },
+    {
+      "id": "corr-043-dafd413abaeb",
+      "archiveId": "correspondence",
+      "archiveLabel": "Correspondence & letters",
+      "catalog": "correspondence-documents.json",
+      "sectionId": "correspondence-library-title",
+      "name": "2018-06-15 - Cadillac WWTP CSI Final Report Transmittal.msg",
+      "url": "/correspondence-docs/corr-043-dafd413abaeb.msg",
+      "sha256": "dafd413abaeb3f9c58f31e53774d3601c801855ffae4a652c00524ebf177050e",
+      "size": 136704
     },
     {
       "id": "001-e12b255837e5",
@@ -14307,6 +14329,17 @@
       "url": "/reference-data/125-ffca040a7195.csv",
       "sha256": "ffca040a71951054e5842d8c9a47d6649d6d34485ebea5c78e271fb29b58f952",
       "size": 1143
+    },
+    {
+      "id": "126-5811dc8c913b",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "2018 Cadillac WWTP CSI Final Report.xlsx",
+      "url": "/reference-data/126-5811dc8c913b.xlsx",
+      "sha256": "5811dc8c913b6a5849ae929cafff135e00ffeac1352187c2dbd0ccd61f5e4f7b",
+      "size": 54031
     },
     {
       "id": "001-d8496c7348a6",

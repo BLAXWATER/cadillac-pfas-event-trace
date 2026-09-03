@@ -1,5 +1,6 @@
 {
   "methods": [
+    "September 3 CSI intake: verified the exact 18-page MiEnviro rendition of MDEQ's June 15, 2018 Cadillac WWTP final compliance sampling inspection report, including all four sparse interior pages and its native-email/workbook provenance.",
     "September 2 VN-019184 intake: both supplied five-page PDFs were hashed, opened, OCR-read and rendered. They are exact duplicate copies of Cadillac's July 14 response despite one misleading notice filename. The distinct June 10 EGLE notice already in the catalog was localized, the response was added once, and the agency notice and municipal response were placed in separate timeline events.",
     "September 2 EPA QNCR intake: all three supplied reports and all 150 pages were opened, text-extracted and rendered. Two exact existing records were localized for anonymous first-page preview and full download, and the distinct 47-page January–March 2015 report was added after a corpus-wide SHA-256 check.",
     "SHA-256 comparison within the category and against every published catalog",
@@ -10,16 +11,21 @@
     "Manual visual review of low-confidence aerial-image and rotated-table pages"
   ],
   "stats": {
-    "sourceFilesReviewed": 118,
+    "sourceFilesReviewed": 119,
     "exactDuplicateGroupsWithinSource": 1,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 6,
     "analystAuthoredReportsExcluded": 4,
     "existingComplianceRecordsRetained": 3,
-    "finalDistinctRecords": 63,
-    "reviewedPages": 778,
-    "ocrPages": 318,
-    "publishedBytes": 61389890,
+    "finalDistinctRecords": 64,
+    "reviewedPages": 796,
+    "ocrPages": 327,
+    "publishedBytes": 61521626,
+    "latestCSIIntakeFiles": 1,
+    "latestCSIIntakePdfPages": 18,
+    "latestCSIIntakeSparsePages": 9,
+    "latestCSIRecordsAdded": 1,
+    "latestCSITimelineEventsAdded": 0,
     "latestVN019184IntakeFiles": 2,
     "latestVN019184DistinctInputHashes": 1,
     "latestVN019184ExactDuplicateFilenameCopies": 1,
@@ -50,6 +56,10 @@
     "latestPOTWMonitoringNewComplianceRecords": 1
   },
   "decisions": [
+    {
+      "name": "2018 Cadillac WWTP compliance sampling inspection final report",
+      "reason": "The exact 18-page MiEnviro PDF rendition is retained once as the readable compliance record. It includes the June 15 MDEQ transmittal and the report tables from the original workbook. The native MSG and XLSX are preserved in their format-appropriate archives and cross-referenced rather than collapsed into the PDF. Four sparse interior pages are intentional workbook-pagination artifacts, not missing content. No PFAS analytes were reported."
+    },
     {
       "name": "VN-019184 notice and response reconciliation",
       "reason": "The two supplied files have the same 784,458-byte binary and SHA-256 hash and both contain Cadillac's signed July 14, 2026 response, NOAA precipitation table and two EGLE reporting emails. The response is retained once under a content-accurate title. The separate 95,700-byte June 10 EGLE notice already in the catalog was localized and cross-referenced. EGLE's violation findings and Cadillac's RDS assertion remain separate, and no final agency disposition is inferred."

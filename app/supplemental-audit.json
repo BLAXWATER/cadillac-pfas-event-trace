@@ -1,11 +1,21 @@
 {
   "stats": {
-    "suppliedFiles": 775,
+    "suppliedFiles": 776,
     "newDistinctRecords": 167,
     "exactExistingRecordsReused": 188,
     "duplicateCopiesSuppressed": 47,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 479735813,
+    "publishedBytes": 480058284,
+    "latestBatch66FilesReviewed": 1,
+    "latestBatch66DistinctInputHashes": 1,
+    "latestBatch66ExtractedAttachments": 2,
+    "latestBatch66PdfPagesReviewed": 18,
+    "latestBatch66WorkbookSheetsReviewed": 8,
+    "latestBatch66SparsePdfPagesOCRChecked": 9,
+    "latestBatch66RecordsAdded": 3,
+    "latestBatch66EmbeddedSignatureImagesSuppressed": 1,
+    "latestBatch66TimelineEventsAdded": 0,
+    "latestBatch66RequirementsClosed": 0,
     "latestBatch65FilesReviewed": 1,
     "latestBatch65DistinctInputHashes": 1,
     "latestBatch65PdfPagesReviewed": 23,
@@ -496,6 +506,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 3 intake 66: opened the native Outlook message, verified its metadata and extracted both embedded attachments; inspected all eight workbook sheets, verified the exact 18-page MiEnviro PDF rendition page by page, and compared all three substantive binaries by SHA-256 against every published catalog before preserving the native message, original workbook and readable official rendition as linked records.",
     "September 3 intake 58: the supplied three-page Wexford landfill stormwater NOI passed exact-hash, canonical-asset, scan-only-page, first-page and complete rendered-page review. It is byte-for-byte identical to established Wexford record 096. The record was reused once, its catalog delivery was localized, and its description was expanded to preserve the April 2012 application facts and the application-versus-issuance boundary without another timeline event or queue closure.",
     "September 3 intake 57: the supplied 42-page TestAmerica correspondence package passed exact-hash, canonical-asset, embedded-text, first-page and complete rendered-page review. It is byte-for-byte identical to established laboratory record lab-042 and the package already audited in intake 47, so it was recorded as one exact cross-reference without another document, timeline event or queue closure.",
     "September 3 intake 56: all three supplied EGLE violation notices and all fifteen pages passed exact-hash, embedded-text, readability and complete rendered-page review. Each file exactly matches an established compliance-library record. The existing local VN-011108 source was reused, VN-012230 and SVN-01351 were localized for anonymous preview and download, and the notice sequence was expanded with separate 2021 and 2023 enforcement events.",
@@ -546,6 +557,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "2018 Cadillac WWTP compliance sampling inspection email, workbook and official rendition",
+      "reason": "The supplied native MSG is a distinct June 15, 2018 MDEQ transmittal. Its XLSX attachment is the original eight-sheet source workbook, and the exact MiEnviro PDF is the readable official rendition of the message and workbook. All three formats are retained once with explicit cross-references because each preserves a different provenance or access function. The embedded signature image is not cataloged separately. The record contains conventional, cyanide and metals sampling only; it is not treated as PFAS testing and closes no outstanding PFAS or pathway requirement."
+    },
     {
       "name": "Wexford landfill stormwater NOI exact-copy recheck",
       "reason": "The supplied PDF exactly matches established Wexford record 096 in SHA-256 hash, byte size and all three rendered pages. The canonical asset and first-page preview remain intact; the catalog and placement URLs were repaired to the verified local delivery, while the description now distinguishes the signed request for coverage from proof that coverage was issued or that PFAS was present."

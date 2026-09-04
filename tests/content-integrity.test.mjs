@@ -4058,6 +4058,45 @@ test("batch 90 reuses the exact Wexford Executive PFAS packet without overstatin
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 91 reuses the exact January 2025 council packet while keeping exact-date and pathway gaps open", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch91-january-2025-city-council-packet-cross-reference-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.suppliedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 59);
+  assert.equal(audit.stats.embeddedTextPages, 55);
+  assert.equal(audit.stats.pagesOCRCheckedOnGPU, 4);
+  assert.equal(audit.stats.ocrPagesWithText, 4);
+  assert.equal(audit.stats.manualReviewPages, 0);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+
+  const expected = audit.exactCrossReferences[0];
+  const catalog = catalogs.get(expected.catalog);
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].id, expected.recordId);
+  assert.equal(matches[0].size, expected.size);
+  assert.equal(matches[0].pages, expected.pages);
+
+  const acrossCatalogs = [...catalogs.values()].flat().filter((item) => item.sha256 === expected.sha256);
+  assert.equal(acrossCatalogs.length, 1);
+  const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].archiveId, "supplemental");
+  assert.match(expected.boundary, /does not identify the exact final landfill delivery date/i);
+  assert.match(expected.boundary, /did not yet point to a singular source/i);
+  assert.match(audit.queueDecision, /'summer 2019'.*seasonal level/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

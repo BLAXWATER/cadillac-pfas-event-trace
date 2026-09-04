@@ -1,0 +1,45 @@
+{
+  "batch": "September 4, 2026 - January 21, 2025 Cadillac City Council packet reconciliation",
+  "stats": {
+    "suppliedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 59,
+    "embeddedTextPages": 55,
+    "pagesOCRCheckedOnGPU": 4,
+    "ocrPagesWithText": 4,
+    "manualReviewPages": 0,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "methods": [
+    "Calculated SHA-256, byte size and page count for the supplied PDF and compared its hash with every published catalog.",
+    "Reviewed all 59 pages; 55 pages supplied embedded text and four image-only pages received GPU-assisted OCR.",
+    "Visually verified the cover, every OCR-required page, the MPART FAQ opening page and its controlling WWTP-source page.",
+    "Reused the byte-identical published supplemental-archive record as a cross reference and created no filename-based duplicate."
+  ],
+  "exactCrossReferences": [
+    {
+      "suppliedName": "2656.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "025-96c05e1a98f8",
+      "canonicalName": "January 21 2025 City Council Packet [Item 2656].pdf",
+      "asset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/025-96c05e1a98f8.pdf",
+      "archiveId": "supplemental",
+      "sha256": "96c05e1a98f82fcbb0940a6aa602626b767cce0cc3cd72c77a7276c7a1488cea",
+      "size": 1775637,
+      "pages": 59,
+      "finding": "The packet already preserves the January 2025 MPART Cadillac Industrial Park Area of Interest FAQ. The FAQ states that Cadillac identified the Wexford County Landfill as one industrial PFOS source to the WWTP and ceased accepting its discharge in summer 2019; it also summarizes drinking-water, effluent, surface-water and biosolids context through 2024.",
+      "boundary": "The FAQ does not identify the exact final landfill delivery date, provide a delivery-level receiving record, or establish one source for the broader Cadillac private-well investigation; it expressly says several sources were under investigation and samples did not yet point to a singular source."
+    }
+  ],
+  "queueDecision": "No evidence-request item is closed. The phrase 'summer 2019' corroborates cessation only at a seasonal level and does not satisfy the request for the dated final Wexford delivery, receiving-log entry or cessation record. The packet also does not supply load manifests, delivery-linked invoices, an executed leachate-treatment agreement, synchronized source-to-receptor sampling, certified 1140 Plett well construction, hydraulic tests or a site-specific groundwater-flow map.",
+  "queueResolution": {
+    "closedRequirementIds": []
+  },
+  "evidentiaryBoundary": "The packet is official public-response context and contains MPART's January 2025 agency summary. It does not convert the seasonal cessation statement into an exact delivery date, turn summarized agency conclusions into underlying laboratory packages, or prove a PFAS migration pathway from one source to Plett Road."
+}

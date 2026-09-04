@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1583,
+  "recordCount": 1585,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 171
+      "count": 173
     },
     {
       "archiveId": "reference",
@@ -16364,6 +16364,28 @@
       "url": "/findings-docs/172-f779ef08f411.pdf",
       "sha256": "f779ef08f411e0b4ceed60f4398491fdf679b460e0bf418aa14a23905012be55",
       "size": 11746162
+    },
+    {
+      "id": "173-87cc40ccea58",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Region 5 PCB Waste Handlers Database - July 18, 2014.pdf",
+      "url": "/findings-docs/173-87cc40ccea58.pdf",
+      "sha256": "87cc40ccea585d5ac80a92500490205d679c7674b2f4da755c67e85eaa4fec5b",
+      "size": 1126741
+    },
+    {
+      "id": "174-f091763d0d37",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Former McDonald's Country Store PFAS Site Investigation - October 3, 2022.pdf",
+      "url": "/findings-docs/174-f091763d0d37.pdf",
+      "sha256": "f091763d0d3739ffa98bfed87e4a79a076a7df76d0bf2342d910e723d6fcd121",
+      "size": 17184330
     },
     {
       "id": "001-7c991baaf1e9",

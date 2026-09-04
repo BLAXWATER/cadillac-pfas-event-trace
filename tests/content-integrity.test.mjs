@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 766);
+  assert.equal(localFiles, 768);
   assert.equal(externalFiles, 817);
 });
 
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1583);
+  assert.equal(recordCount, 1585);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1583);
+  assert.equal(records.length, 1585);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1425);
-  assert.equal(audit.stats.pdfPages, 21119);
+  assert.equal(audit.stats.pdfRecords, 1427);
+  assert.equal(audit.stats.pdfPages, 22170);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -635,7 +635,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 102);
-  assert.equal(supplementalCatalog.length, 171);
+  assert.equal(supplementalCatalog.length, 173);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -4420,6 +4420,7 @@ test("batch 98 reconciles supplied scan pages to parent records without promotin
 
 test("batch 99 preserves carrier context without converting a 2022 soil shipment into Cadillac leachate evidence", async () => {
   const audit = JSON.parse(await readFile(path.join(appDirectory, "batch99-carrier-context-reconciliation-audit.json"), "utf8"));
+  const previews = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
   const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
   const supplemental = catalogs.get("supplemental-documents.json");
 
@@ -4443,6 +4444,10 @@ test("batch 99 preserves carrier context without converting a 2022 soil shipment
   assert.match(oscoda.description, /three drums of PFAS-impacted investigation soil/i);
   assert.match(oscoda.description, /disposal-facility block names Northern A-1 Services rather than Wexford County Landfill/i);
   assert.match(oscoda.description, /not Wexford leachate, a Cadillac WWTP receiving record/i);
+  assert.equal(previews[epa.url], "/first-page-previews/by-sha256/54d54ab4e3b83cd23e09848cbfcdb53ef368573fd62e21b3837d5213aa8d39a7.webp");
+  assert.equal(previews[oscoda.url], "/first-page-previews/by-sha256/9f930efe88733fc07e4eceb153ef0a6afcb606df9b753251a1cea0fe936b84e9.webp");
+  await stat(path.join(publicDirectory, ...previews[epa.url].slice(1).split("/")));
+  await stat(path.join(publicDirectory, ...previews[oscoda.url].slice(1).split("/")));
 
   assert.equal(audit.canonicalRecords.length, 2);
   assert.equal(audit.suppressedDerivatives.length, 3);

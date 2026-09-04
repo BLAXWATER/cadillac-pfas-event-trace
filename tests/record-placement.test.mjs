@@ -8,9 +8,9 @@ test("every source record is assigned to exactly one intended visible archive bl
   assert.deepEqual(failures, []);
   assert.equal(schema.length, 13);
   assert.equal(manifest.archiveCount, 13);
-  assert.equal(manifest.recordCount, 1583);
-  assert.equal(new Set(manifest.records.map((record) => record.id)).size, 1583);
-  assert.equal(manifest.archives.reduce((sum, archive) => sum + archive.count, 0), 1583);
+  assert.equal(manifest.recordCount, 1585);
+  assert.equal(new Set(manifest.records.map((record) => record.id)).size, 1585);
+  assert.equal(manifest.archives.reduce((sum, archive) => sum + archive.count, 0), 1585);
 });
 
 test("the public placement manifest exactly mirrors the rendered archive registry", async () => {

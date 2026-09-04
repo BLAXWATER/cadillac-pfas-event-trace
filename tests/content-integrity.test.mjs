@@ -3979,6 +3979,48 @@ test("batch 79 preserves two native compliance sources and reuses eleven exact r
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 89 reuses seven numbered City archive files without creating duplicates", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch89-numbered-city-archive-cross-reference-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.suppliedFiles, 7);
+  assert.equal(audit.stats.distinctInputHashes, 7);
+  assert.equal(audit.stats.pdfPagesReviewed, 809);
+  assert.equal(audit.stats.embeddedTextPages, 736);
+  assert.equal(audit.stats.pagesOCRCheckedOnGPU, 73);
+  assert.equal(audit.stats.ocrPagesWithText, 68);
+  assert.equal(audit.stats.manualReviewPages, 1);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 7);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+
+  for (const expected of audit.exactCrossReferences) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, expected.recordId);
+    assert.equal(matches[0].size, expected.size);
+    assert.equal(matches[0].pages, expected.pages);
+
+    const acrossCatalogs = [...catalogs.values()].flat().filter((item) => item.sha256 === expected.sha256);
+    assert.equal(acrossCatalogs.length, 1);
+    const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(placed.length, 1);
+    assert.equal(placed[0].archiveId, expected.archiveId);
+  }
+
+  assert.match(audit.queueDecision, /No evidence-request item is closed/i);
+  assert.match(audit.evidentiaryBoundary, /do not convert budget figures into load-level proof/i);
+  assert.match(audit.evidentiaryBoundary, /unsigned 2798 resolution text/i);
+  assert.match(audit.evidentiaryBoundary, /do not.*establish PFAS treatment pass-through/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

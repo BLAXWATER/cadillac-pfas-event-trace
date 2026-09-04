@@ -1,0 +1,123 @@
+{
+  "batch": "September 4, 2026 - numbered City archive-file reconciliation",
+  "stats": {
+    "suppliedFiles": 7,
+    "distinctInputHashes": 7,
+    "pdfPagesReviewed": 809,
+    "embeddedTextPages": 736,
+    "pagesOCRCheckedOnGPU": 73,
+    "ocrPagesWithText": 68,
+    "manualReviewPages": 1,
+    "exactExistingRecordsReusedAsCrossReferences": 7,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "methods": [
+    "Calculated SHA-256, byte size and page count for every supplied PDF and compared each hash with every published catalog.",
+    "Opened and fingerprinted all 809 pages; 736 pages supplied embedded text and 73 sparse or image-only pages received GPU-assisted OCR.",
+    "Visually verified each supplied first page and the only low-text page requiring direct review, a valid site photograph on PDF page 110 of the May 21, 2018 council packet.",
+    "Reused every byte-identical published record as a cross reference and created no filename-based duplicate."
+  ],
+  "exactCrossReferences": [
+    {
+      "suppliedName": "909.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "169-1dfb7b3336af",
+      "canonicalName": "City of Cadillac FY2016 Comprehensive Annual Financial Report.pdf",
+      "asset": "/findings-docs/169-1dfb7b3336af.pdf",
+      "archiveId": "supplemental",
+      "sha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
+      "size": 3816435,
+      "pages": 172,
+      "finding": "The report already supplies aggregate FY2016 Wexford County Landfill leachate-treatment revenue context.",
+      "boundary": "It does not supply delivery-level dates, times, gallons, invoices, receipts or the final delivery date."
+    },
+    {
+      "suppliedName": "2798.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "100-850f00b27330",
+      "canonicalName": "Cadillac Resolution Opposing Wexford Water Technologies Injection-Well Permit.pdf",
+      "asset": "/findings-docs/100-850f00b27330.pdf",
+      "archiveId": "supplemental",
+      "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+      "size": 344611,
+      "pages": 5,
+      "finding": "The resolution text already states Cadillac's historical treatment, 2016 volume, claimed annual capacity and identified non-PFAS contaminants.",
+      "boundary": "This supplied file remains an unsigned draft; the separate official minutes establish adoption of motion 2017-232."
+    },
+    {
+      "suppliedName": "1047.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "045-25d3c10b9ea8",
+      "canonicalName": "May 21 2018 City Council Packet [Item 1047].pdf",
+      "asset": "/findings-docs/045-25d3c10b9ea8.pdf",
+      "archiveId": "supplemental",
+      "sha256": "25d3c10b9ea8697bb69779ea5341633f7c3326eca5f8130278188bd1cb388d88",
+      "size": 7201375,
+      "pages": 166,
+      "finding": "The packet already preserves the budget amendment increasing leachate revenue from $150,000 to $400,000 because of additional Wexford County Landfill treatment.",
+      "boundary": "The amendment is aggregate budget evidence, not a delivery invoice, payment statement or receiving log."
+    },
+    {
+      "suppliedName": "1043.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "146-6b4e98f4c779",
+      "canonicalName": "FY2017 City of Cadillac Comprehensive Annual Financial Report.pdf",
+      "asset": "/findings-docs/146-6b4e98f4c779.pdf",
+      "archiveId": "supplemental",
+      "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
+      "size": 3929791,
+      "pages": 182,
+      "finding": "The report already states that FY2017 Wexford County Landfill leachate-treatment revenue exceeded budget by $307,683.",
+      "boundary": "The amount is an aggregate audited variance, not transaction-level proof."
+    },
+    {
+      "suppliedName": "994.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "017-b0276675116f",
+      "canonicalName": "December 4 2017 City Council Packet [Item 994].pdf",
+      "asset": "/findings-docs/017-b0276675116f.pdf",
+      "archiveId": "supplemental",
+      "sha256": "b0276675116fd81b39148452cf196c745ddd067fec7967d094399c0ae1d5a462",
+      "size": 6250039,
+      "pages": 38,
+      "finding": "The packet is already retained as the subsequent council record concerning the injection-well opposition resolution and Cadillac's treatment of landfill leachate.",
+      "boundary": "It does not establish PFAS concentrations, a synchronized treatment sample or a groundwater migration pathway."
+    },
+    {
+      "suppliedName": "1238.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "013-f756ecea1687",
+      "canonicalName": "City of Cadillac FY2019 CAFR.pdf",
+      "asset": "/findings-docs/013-f756ecea1687.pdf",
+      "archiveId": "supplemental",
+      "sha256": "f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241",
+      "size": 1870493,
+      "pages": 187,
+      "finding": "The report already states that FY2019 Wexford County Landfill leachate-treatment revenue exceeded budget by $44,691.",
+      "boundary": "The amount is aggregate audited context, not total gallons, PFAS content or treatment-performance proof."
+    },
+    {
+      "suppliedName": "2656.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "025-96c05e1a98f8",
+      "canonicalName": "January 21 2025 City Council Packet [Item 2656].pdf",
+      "asset": "/findings-docs/025-96c05e1a98f8.pdf",
+      "archiveId": "supplemental",
+      "sha256": "96c05e1a98f82fcbb0940a6aa602626b767cce0cc3cd72c77a7276c7a1488cea",
+      "size": 1775637,
+      "pages": 59,
+      "finding": "The packet already attaches the MPART Cadillac Area of Interest FAQ and preserves the City's public investigation-and-response discussion.",
+      "boundary": "It does not establish source-to-receptor causation or replace the requested synchronized analytical and hydrogeologic evidence."
+    }
+  ],
+  "queueDecision": "No evidence-request item is closed. These seven uploads are exact copies of records already evaluated and placed in the supplemental archive. They add no new delivery-level receiving history, invoices, executed agreements, cessation record, synchronized treatment sampling, certified well construction, hydraulic testing or source-to-receptor PFAS package.",
+  "queueResolution": {
+    "closedRequirementIds": []
+  },
+  "evidentiaryBoundary": "The financial reports and packets corroborate aggregate treatment, revenue and public-response context. They do not convert budget figures into load-level proof, turn the unsigned 2798 resolution text into an executed form, or establish PFAS treatment pass-through or a groundwater migration pathway."
+}

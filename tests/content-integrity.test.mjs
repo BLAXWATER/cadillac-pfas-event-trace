@@ -4387,6 +4387,37 @@ test("batch 97 reconciles hauling-source records without closing transaction-lev
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 98 reconciles supplied scan pages to parent records without promoting derivatives", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch98-scan-image-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+
+  assert.equal(audit.stats.suppliedPageImages, 309);
+  assert.equal(audit.stats.distinctParentHashes, 15);
+  assert.equal(audit.stats.machineOcrPages, 309);
+  assert.equal(audit.stats.machineOcrPagesWithText, 290);
+  assert.equal(audit.stats.visuallyReviewedNonTextPages, 19);
+  assert.equal(audit.stats.ocrErrors, 0);
+  assert.equal(audit.stats.existingCatalogOrTimelineParentsReused, 14);
+  assert.equal(audit.stats.pageIdenticalDuplicateImagePairs, 12);
+  assert.equal(audit.stats.detachedNonSubstantiveAttachmentPagesSuppressed, 2);
+  assert.equal(audit.stats.catalogDescriptionsClarified, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+
+  const compliance = catalogs.get("compliance-documents.json").find((item) => item.id === "020-9d6ad860baaf");
+  assert.match(compliance.description, /American Waste's leachate driver reported an offloading release at 9:22 a\.m\./i);
+  assert.match(compliance.description, /no screen or flow meter was apparent/i);
+  assert.match(compliance.description, /no measured load or spill volume/i);
+
+  assert.equal(audit.sourceMappings.reduce((sum, item) => sum + item.pageImages, 0), 309);
+  assert.equal(audit.duplicateFamilies.reduce((sum, item) => sum + item.identicalImagePairs, 0), 12);
+  assert.match(audit.contentFindings[0].boundary, /no screen or flow meter was apparent/i);
+  assert.match(audit.contentFindings[1].boundary, /not a manifest, receiving log or measured delivery record/i);
+  assert.match(audit.queueDecision, /No receiving-history requirement is closed/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

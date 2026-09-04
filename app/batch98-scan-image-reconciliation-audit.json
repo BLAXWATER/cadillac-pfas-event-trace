@@ -1,0 +1,84 @@
+{
+  "batch": "September 4, 2026 - supplied scan-image reconciliation",
+  "stats": {
+    "suppliedPageImages": 309,
+    "distinctParentHashes": 15,
+    "machineOcrPages": 309,
+    "machineOcrPagesWithText": 290,
+    "visuallyReviewedNonTextPages": 19,
+    "ocrErrors": 0,
+    "existingCatalogOrTimelineParentsReused": 14,
+    "pageIdenticalDuplicateImagePairs": 12,
+    "detachedNonSubstantiveAttachmentPagesSuppressed": 2,
+    "catalogDescriptionsClarified": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0
+  },
+  "methods": [
+    "Recovered the supplied images from the relocated OneDrive work/scan-images folder after the stale Codex-session paths failed.",
+    "Mapped each image filename prefix to the source-document SHA-256 prefix and the generating scan manifest, then reconciled the parent with the existing evidence catalogs, timeline sources and prior intake audits.",
+    "Ran local OCR on exactly the 309 supplied pages. Nineteen pages produced no machine text and were reviewed visually; they were blank or near-blank pages, tables, maps, covers, attachment placeholders or other image-dominant pages.",
+    "Excluded NPDES-petition pages 21 through 36 because they existed in the recovered working folder but were not included in the user's supplied page list.",
+    "Searched the supplied pages for Wexford, landfill, leachate, hauled waste, offloading, truck, gallons, delivery, manifests, load tickets, receiving logs, invoices, billing, payments, agreements, rate schedules, renewals, amendments and cessation evidence.",
+    "Compared the two rendered duplicate families byte-for-byte at the image level and suppressed derivative duplicates rather than creating new evidence records."
+  ],
+  "sourceMappings": [
+    {"prefix":"9d6ad860baaf","sourceName":"2010-2016_Cadillac WWTP_District Compliance File","suppliedPages":"1-232","pageImages":232,"catalog":"compliance-documents.json","recordId":"020-9d6ad860baaf","classification":"complete page-render set of an established canonical record"},
+    {"prefix":"37ac85d03cbb","sourceName":"2016-02-04 Violation Letter.Cadillac WWTP-Dietlin.pdf","suppliedPages":"1-12","pageImages":12,"catalog":"compliance-documents.json","recordId":"041-37ac85d03cbb","classification":"complete page-render set of an established canonical record"},
+    {"prefix":"0a15737862f4","sourceName":"2019-02-05 Cadillac WWTP 2018 CSI Trnsmt & VN Crrspnd 020519.msg.pdf","suppliedPages":"40-42, 44, 46, 52, 61-65","pageImages":11,"canonicalRecordId":"050-8681b59f46b5","classification":"selected pages byte-identical to the retained canonical variant"},
+    {"prefix":"8681b59f46b5","sourceName":"2019-02-05 Cadillac WWTP 2018 CSI Trnsmt & VN Crrspnd 020519.msg.pdf","suppliedPages":"40-42, 44, 46, 52, 61-65","pageImages":11,"catalog":"compliance-documents.json","recordId":"050-8681b59f46b5","classification":"selected page renders from the established canonical record"},
+    {"prefix":"f78183d826bf","sourceName":"EM-Hauling Info.pdf","suppliedPages":"2-6, 49-50","pageImages":7,"catalog":"biosolids-documents.json","recordId":"142-f78183d826bf","classification":"selected page renders from an established canonical record"},
+    {"prefix":"e1b7446e4226","sourceName":"VN response from City.Feb 29 2016.pdf","suppliedPages":"1-5","pageImages":5,"catalog":"compliance-documents.json","recordId":"040-e1b7446e4226","classification":"complete page-render set of an established canonical record"},
+    {"prefix":"f68f7933cc10","sourceName":"2015-09-29 Cadillac WWTP CCH Petition.pdf","suppliedPages":"1-20 of 36","pageImages":20,"catalog":"npdes-documents.json","recordId":"058-f68f7933cc10","classification":"selected page renders from an established canonical record"},
+    {"prefix":"f14db99c8153","sourceName":"2018-11-29 J17646-1 UDS Level 2 Report Final Report (Leachate).pdf","suppliedPages":"21-23","pageImages":3,"recordId":"established J17646 leachate laboratory source","classification":"chain-of-custody and sample-receipt page renders from an established source"},
+    {"prefix":"caef07e3ea35","sourceName":"2020-11-25 RE_ EGLE WRD VN-011108 Cadillac WWTP.pdf","suppliedPages":"3","pageImages":1,"catalog":"compliance-documents.json","recordId":"009-caef07e3ea35","classification":"blank terminal page render from an established canonical record"},
+    {"prefix":"585873427aee","sourceName":"2019-02-27 Pre-Public Note Ltr_Cadillac WWTP.pdf","suppliedPages":"47","pageImages":1,"catalog":"npdes-documents.json","recordId":"102-585873427aee","classification":"attachment-placeholder page render from an established canonical record"},
+    {"prefix":"8b191c79623d","sourceName":"2019-06-04 Public Notice Ltr_Cadillac WWTP.pdf","suppliedPages":"9","pageImages":1,"catalog":"npdes-documents.json","recordId":"106-8b191c79623d","classification":"attachment-placeholder page render from an established canonical record"},
+    {"prefix":"3da57e8018fb","sourceName":"2015-05-13 Pre-Inspection Report.pdf","suppliedPages":"7","pageImages":1,"catalog":"ipp-documents.json","recordId":"002-3da57e8018fb","classification":"signed completion page render from an established canonical record"},
+    {"prefix":"c73c0b45e14a","sourceName":"2018-11-01 Cadillac WWTP IPP PFAS interim-review follow-up.pdf","suppliedPages":"6","pageImages":1,"catalog":"correspondence-documents.json","recordId":"corr-042-c73c0b45e14a","classification":"terminal contact page render from an established canonical record"},
+    {"prefix":"0476f2566033","sourceName":"2019-01-23 Cadillac WWTP IPP PFAS interim-review follow-up.msg.pdf","suppliedPages":"6","pageImages":1,"canonicalRecordId":"corr-042-c73c0b45e14a","classification":"page image byte-identical to the retained canonical variant"},
+    {"prefix":"cfaee79bdc7e","sourceName":"2020-12-17 Re_ Permit modification review.pdf","suppliedPages":"2-3","pageImages":2,"classification":"attachment placeholder and EGLE logo only; no substantive source page supplied"}
+  ],
+  "duplicateFamilies": [
+    {
+      "prefixes": ["0a15737862f4", "8681b59f46b5"],
+      "suppliedPages": "40-42, 44, 46, 52, 61-65",
+      "identicalImagePairs": 11,
+      "canonicalRecordId": "050-8681b59f46b5"
+    },
+    {
+      "prefixes": ["0476f2566033", "c73c0b45e14a"],
+      "suppliedPages": "6",
+      "identicalImagePairs": 1,
+      "canonicalRecordId": "corr-042-c73c0b45e14a"
+    }
+  ],
+  "contentFindings": [
+    {
+      "recordId": "020-9d6ad860baaf",
+      "page": 71,
+      "finding": "The February 3, 2011 inspection history states that Cadillac's equalization tank accepted hauled waste described as landfill leachate from the County Landfill.",
+      "boundary": "The same inspection statement says no screen or flow meter was apparent at that receiving area and provides no load date, time, hauler, actual gallons or receiving-log entry."
+    },
+    {
+      "recordId": "020-9d6ad860baaf",
+      "page": 5,
+      "finding": "The January 12, 2016 City letter records a 9:22 a.m. call from American Waste's leachate driver after an offloading spill and states that the tanker could hold up to 10,000 gallons.",
+      "boundary": "The letter says only that less than the tanker capacity spilled. It is an incident report, not a manifest, receiving log or measured delivery record."
+    },
+    {
+      "recordId": "142-f78183d826bf",
+      "finding": "The selected EM-Hauling pages are attachment wrappers, land-application field photographs and biosolids laboratory-report pages.",
+      "boundary": "They concern outbound biosolids hauling and do not document inbound Wexford landfill-leachate deliveries."
+    },
+    {
+      "recordId": "established J17646 leachate laboratory source",
+      "finding": "The supplied terminal pages preserve chain-of-custody and sample-receipt material for the October 2018 leachate sample.",
+      "boundary": "They document laboratory custody, not a landfill-to-WWTP delivery transaction or cessation date."
+    }
+  ],
+  "queueDecision": "No receiving-history requirement is closed. The supplied page renders contain no per-load manifest or ticket, WWTP receiving log, delivery-linked invoice or ledger, fully executed 2009 agreement with signed rate schedule, signed renewal or amendment, or dated final-delivery record.",
+  "queueResolution": {"closedRequirementIds": []},
+  "evidentiaryBoundary": "The batch corroborates the receiving point, the absence of an apparent flow meter in the 2011 inspection history and the documented 2016 offloading spill. It cannot be converted into a load-by-load delivery series, executed contract record or precise cessation date. Page renders remain derivatives of their parent records and were not added as separate primary documents."
+}

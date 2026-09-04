@@ -1,0 +1,62 @@
+{
+  "batch": "2026-09-04 financial-report and DEHP technical-context intake",
+  "stats": {
+    "suppliedFiles": 11,
+    "distinctInputHashes": 9,
+    "pdfPageInstancesReviewed": 1150,
+    "exactExistingRecordsReusedAsCrossReferences": 6,
+    "sameBatchDuplicateCopiesSuppressed": 2,
+    "recordsAdded": 3,
+    "addedPdfPages": 385,
+    "addedPagesWithEmbeddedText": 370,
+    "addedSparsePagesOCRCheckedOnGPU": 15,
+    "manualReviewPages": 0,
+    "timelineEventsAdded": 3,
+    "requirementsClosed": 0
+  },
+  "methods": [
+    "Calculated SHA-256 hashes and page counts for every supplied file and compared every distinct hash with all published catalogs.",
+    "Read all embedded PDF text and applied GPU-backed OCR to every added page with fewer than 40 normalized embedded characters.",
+    "Rendered and visually inspected the relevant report pages before recording any dollar amount or facility-table value.",
+    "Kept audited budget variances separate from total revenue, delivery quantities, invoices and receiving logs; kept the third-party DEHP compilation separate from PFAS and route proof."
+  ],
+  "addedRecords": [
+    {
+      "id": "169-1dfb7b3336af",
+      "name": "City of Cadillac FY2016 Comprehensive Annual Financial Report.pdf",
+      "sha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
+      "pages": 172,
+      "finding": "PDF page 25 reports that Wexford County Landfill leachate-treatment revenue exceeded budget by $93,147.",
+      "boundary": "$93,147 is a budget variance, not total leachate revenue or load-level proof."
+    },
+    {
+      "id": "170-641352fc860b",
+      "name": "City of Cadillac FY2018 Comprehensive Annual Financial Report.pdf",
+      "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb",
+      "pages": 183,
+      "finding": "PDF page 25 reports that landfill-leachate treatment revenue exceeded budget by $31,105.",
+      "boundary": "$31,105 is a budget variance, not total leachate revenue or load-level proof."
+    },
+    {
+      "id": "171-165d76b4138d",
+      "name": "Di-ethylhexyl Phthalate (DEHP) - Technical Report on Conditions of Use.pdf",
+      "sha256": "165d76b4138d7bd23e617ba3f70f9aa5118e2572f9702954c8a7e96edce817d5",
+      "pages": 30,
+      "finding": "Aggregate 2012-2018 tables list Cadillac generators and Wexford County Landfill and Cadillac WWTP destinations.",
+      "boundary": "The tables do not directly pair generator and destination rows; the report is third-party DEHP context, not PFAS or route proof."
+    }
+  ],
+  "exactExistingRecordsReused": [
+    { "suppliedName": "Wexford-County-Landfill.pdf", "catalogId": "017-4b475079a927", "sha256": "4b475079a927cb48147206bb617c64addaf8215f55534601f1674eacb8fb359e" },
+    { "suppliedName": "January 21 2025 City Council Packet.pdf", "catalogId": "025-96c05e1a98f8", "sha256": "96c05e1a98f82fcbb0940a6aa602626b767cce0cc3cd72c77a7276c7a1488cea" },
+    { "suppliedName": "June 3 2019 City Council Packet.pdf", "catalogId": "046-0fcfc8c9921f", "sha256": "0fcfc8c9921f0ae0ae2957d5a2df3b2064a8a407c7ed5b8bea541f3fed215385" },
+    { "suppliedName": "May 21 2018 City Council Packet.pdf", "catalogId": "045-25d3c10b9ea8", "sha256": "25d3c10b9ea8697bb69779ea5341633f7c3326eca5f8130278188bd1cb388d88" },
+    { "suppliedName": "FY2017 City of Cadillac CAFR.pdf", "catalogId": "146-6b4e98f4c779", "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214" },
+    { "suppliedName": "Wexford-County-Landfill August 20, 2012.pdf", "catalogId": "039-a2b89f4b2389", "sha256": "a2b89f4b2389a8a3681c0a571ad711063734093892d0876bca0b8b3c2063fd43" }
+  ],
+  "duplicateCopiesSuppressed": [
+    { "name": "FY2018 City of Cadillac CAFR (1).pdf", "sameAs": "FY2018 City of Cadillac CAFR.pdf", "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb" },
+    { "name": "June 3 2019 City Council Packet (1).pdf", "sameAs": "June 3 2019 City Council Packet.pdf", "sha256": "0fcfc8c9921f0ae0ae2957d5a2df3b2064a8a407c7ed5b8bea541f3fed215385" }
+  ],
+  "queueDecision": "No request is closed. The records add aggregate financial and non-PFAS technical context but do not supply per-load delivery history, receiving logs, invoices, executed agreements, an exact cessation record, synchronized PFAS treatment samples or a site-specific migration pathway."
+}

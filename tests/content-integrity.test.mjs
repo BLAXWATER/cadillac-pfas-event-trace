@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 760);
+  assert.equal(localFiles, 763);
   assert.equal(externalFiles, 817);
 });
 
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 86);
+  assert.equal(helperReferences.length, 89);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1577);
+  assert.equal(recordCount, 1580);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1577);
+  assert.equal(records.length, 1580);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1419);
-  assert.equal(audit.stats.pdfPages, 20497);
+  assert.equal(audit.stats.pdfRecords, 1422);
+  assert.equal(audit.stats.pdfPages, 20882);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -453,6 +453,52 @@ test("batch 85 adds the February 2021 Wexford packet and reuses Construction Per
   assert.match(audit.evidentiaryBoundary, /does not include the underlying 2020 monitoring data/i);
 });
 
+test("batch 86 adds two audited Cadillac financial reports and bounded DEHP context", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch86-financial-and-dehp-intake-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const records = catalogs.flatMap((catalog) => catalog.rows.map((row) => ({ ...row, archive: catalog.name })));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.suppliedFiles, 11);
+  assert.equal(audit.stats.distinctInputHashes, 9);
+  assert.equal(audit.stats.pdfPageInstancesReviewed, 1150);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 6);
+  assert.equal(audit.stats.sameBatchDuplicateCopiesSuppressed, 2);
+  assert.equal(audit.stats.recordsAdded, 3);
+  assert.equal(audit.stats.addedPdfPages, 385);
+  assert.equal(audit.stats.addedPagesWithEmbeddedText, 370);
+  assert.equal(audit.stats.addedSparsePagesOCRCheckedOnGPU, 15);
+  assert.equal(audit.stats.manualReviewPages, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 3);
+  assert.equal(audit.stats.requirementsClosed, 0);
+
+  for (const added of audit.addedRecords) {
+    const matches = records.filter((row) => row.sha256 === added.sha256);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, added.id);
+    assert.equal(matches[0].pages, added.pages);
+    assert.equal(matches[0].archive, "supplemental-documents.json");
+    const bytes = await readFile(path.join(publicDirectory, matches[0].url.replace(/^\//, "")));
+    assert.equal(bytes.length, matches[0].size);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), added.sha256);
+    assert.ok(previewManifest[matches[0].url]);
+    assert.equal(placement.records.find((row) => row.id === added.id)?.archiveId, "supplemental");
+  }
+
+  for (const reused of audit.exactExistingRecordsReused) {
+    const matches = records.filter((row) => row.sha256 === reused.sha256);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].id, reused.catalogId);
+  }
+
+  assert.match(pageSource, /FY2016 landfill-leachate revenue variance/);
+  assert.match(pageSource, /FY2017 landfill-leachate revenue variance/);
+  assert.match(pageSource, /FY2018 landfill-leachate revenue variance/);
+  assert.match(audit.queueDecision, /No request is closed.*do not supply per-load delivery history.*synchronized PFAS treatment samples.*site-specific migration pathway/i);
+});
+
 test("local public assets contain no byte-identical redundant copies", async () => {
   const files = await walkFiles(publicDirectory);
   const byHash = new Map();
@@ -491,7 +537,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 101);
-  assert.equal(supplementalCatalog.length, 167);
+  assert.equal(supplementalCatalog.length, 170);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);

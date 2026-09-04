@@ -2169,5 +2169,44 @@
     "size": 5974254,
     "sha256": "cdc90617320399b0a58b6c67306d5687b264fc4a8ec9a0876663c2308120e036",
     "description": "May 1986 E.G. Jordan and Michigan DNR work plan for the Cadillac Area Groundwater Contamination RI/FS. It records contaminated private wells since 1978, historical industrial-source concerns, a preliminary three-aquifer interpretation and estimated shallow and intermediate flow directions. The plan proposes soil-gas screening, new wells, groundwater sampling, aquifer tests and a flow-and-transport model; it is not the completed investigation and does not establish a modern PFAS pathway to Plett Road."
+  },
+  {
+    "id": "169-1dfb7b3336af",
+    "name": "City of Cadillac FY2016 Comprehensive Annual Financial Report.pdf",
+    "url": "/findings-docs/169-1dfb7b3336af.pdf",
+    "year": "2016",
+    "category": "Public finance & leachate treatment",
+    "type": "Audited financial report",
+    "format": "PDF",
+    "pages": 172,
+    "size": 3816435,
+    "sha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
+    "description": "City of Cadillac comprehensive annual financial report for the fiscal year ended June 30, 2016. Page 14 of the printed report (PDF page 25) states that revenue for treatment of Wexford County Landfill leachate exceeded budget by $93,147. This is an aggregate audited budget variance, not total leachate revenue, and it does not provide individual deliveries, gallons, invoices, receipts or the final delivery date."
+  },
+  {
+    "id": "170-641352fc860b",
+    "name": "City of Cadillac FY2018 Comprehensive Annual Financial Report.pdf",
+    "url": "/findings-docs/170-641352fc860b.pdf",
+    "year": "2018",
+    "category": "Public finance & leachate treatment",
+    "type": "Audited financial report",
+    "format": "PDF",
+    "pages": 183,
+    "size": 3803130,
+    "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb",
+    "description": "City of Cadillac comprehensive annual financial report for the fiscal year ended June 30, 2018. Page 19 of the printed report (PDF page 25) states that landfill-leachate treatment revenue exceeded budget by $31,105. This is an aggregate audited budget variance, not total leachate revenue, and it does not provide individual deliveries, gallons, invoices, receipts or the final delivery date."
+  },
+  {
+    "id": "171-165d76b4138d",
+    "name": "Di-ethylhexyl Phthalate (DEHP) - Technical Report on Conditions of Use.pdf",
+    "url": "/findings-docs/171-165d76b4138d.pdf",
+    "year": "2019",
+    "category": "Technical literature & industrial-source context",
+    "type": "Third-party technical report",
+    "format": "PDF",
+    "pages": 30,
+    "size": 428479,
+    "sha256": "165d76b4138d7bd23e617ba3f70f9aa5118e2572f9702954c8a7e96edce817d5",
+    "description": "November 2019 Material Research L3C report prepared for Earthjustice using public information, including EPA data. Its 2012-2018 aggregate tables list Michigan Rubber Products in Cadillac with 52,964.53 pounds of off-site DEHP transfers, Akwel Cadillac with 179.89 pounds, Wexford County Landfill as a destination with 30,627.69 pounds and Cadillac WWTP as a POTW destination with 179.89 pounds. The facility and destination tables do not directly pair a Cadillac generator with a specific destination; this third-party DEHP compilation is not PFAS evidence and does not prove a Wexford-to-Cadillac delivery or migration pathway."
   }
 ]

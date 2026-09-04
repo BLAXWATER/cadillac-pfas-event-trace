@@ -1,11 +1,22 @@
 {
   "stats": {
-    "suppliedFiles": 850,
-    "newDistinctRecords": 167,
-    "exactExistingRecordsReused": 251,
-    "duplicateCopiesSuppressed": 49,
+    "suppliedFiles": 861,
+    "newDistinctRecords": 170,
+    "exactExistingRecordsReused": 257,
+    "duplicateCopiesSuppressed": 51,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 480058284,
+    "publishedBytes": 488106328,
+    "latestBatch86FilesReviewed": 11,
+    "latestBatch86DistinctInputHashes": 9,
+    "latestBatch86PdfPagesReviewed": 1150,
+    "latestBatch86ExactExistingRecordsReusedAsCrossReferences": 6,
+    "latestBatch86DuplicateCopiesSuppressed": 2,
+    "latestBatch86RecordsAdded": 3,
+    "latestBatch86AddedPdfPages": 385,
+    "latestBatch86AddedPdfPagesWithEmbeddedText": 370,
+    "latestBatch86AddedPdfPagesOCRCheckedOnGPU": 15,
+    "latestBatch86TimelineEventsAdded": 3,
+    "latestBatch86RequirementsClosed": 0,
     "latestBatch79FilesReviewed": 13,
     "latestBatch79DistinctInputHashes": 13,
     "latestBatch79PdfPagesReviewed": 355,
@@ -602,6 +613,7 @@
     "latestBatch14TimelineEventsAdded": 0
   },
   "methods": [
+    "September 4 intake 86: all 11 supplied PDFs and 1,150 page instances were hash-checked against every catalog. Nine unique binaries resolved to six exact established records and three distinct additions; two extra duplicate filenames were suppressed. The three added PDFs total 385 pages, with 370 embedded-text pages and GPU OCR checks on all 15 sparse-text pages. Their evidentiary pages were rendered and visually inspected, and no missing or corrupt page was found.",
     "September 3 intake 66: opened the native Outlook message, verified its metadata and extracted both embedded attachments; inspected all eight workbook sheets, verified the exact 18-page MiEnviro PDF rendition page by page, and compared all three substantive binaries by SHA-256 against every published catalog before preserving the native message, original workbook and readable official rendition as linked records.",
     "September 3 intake 58: the supplied three-page Wexford landfill stormwater NOI passed exact-hash, canonical-asset, scan-only-page, first-page and complete rendered-page review. It is byte-for-byte identical to established Wexford record 096. The record was reused once, its catalog delivery was localized, and its description was expanded to preserve the April 2012 application facts and the application-versus-issuance boundary without another timeline event or queue closure.",
     "September 3 intake 57: the supplied 42-page TestAmerica correspondence package passed exact-hash, canonical-asset, embedded-text, first-page and complete rendered-page review. It is byte-for-byte identical to established laboratory record lab-042 and the package already audited in intake 47, so it was recorded as one exact cross-reference without another document, timeline event or queue closure.",
@@ -653,6 +665,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "September 4 financial-report and DEHP technical-context intake",
+      "reason": "The FY2016 and FY2018 Cadillac audits are distinct records and are retained separately; together with the exact existing FY2017 audit they add three bounded financial chronology entries. Their dollar figures are budget variances, not total leachate revenue or load-level delivery evidence. The DEHP report is retained as third-party technical context based on aggregate public-data tables, not as PFAS evidence or proof of a generator-to-destination route. The Wexford operating license, January 2025 packet, May 2018 packet, June 2019 packet, FY2017 audit and 2012 construction permit are exact records reused as cross references. No delivery-history, matched-PFAS or migration-pathway requirement is closed."
+    },
     {
       "name": "September 3 Cadillac compliance and native-source reconciliation",
       "reason": "Eleven supplied files are exact hashes of established records and are reused as cross-references. The January 2014 compliance letter and May 2015 pre-inspection report are preserved as distinct native Word source files after read-only VBA checks and complete rendering. Their substantive findings are already represented by the compliance and pretreatment record sets, so no chronology event is duplicated and no PFAS, delivery-history or migration-pathway requirement is closed."

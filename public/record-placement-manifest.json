@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1577,
+  "recordCount": 1580,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 167
+      "count": 170
     },
     {
       "archiveId": "reference",
@@ -16298,6 +16298,39 @@
       "url": "/findings-docs/168-cdc906173203.pdf",
       "sha256": "cdc90617320399b0a58b6c67306d5687b264fc4a8ec9a0876663c2308120e036",
       "size": 5974254
+    },
+    {
+      "id": "169-1dfb7b3336af",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac FY2016 Comprehensive Annual Financial Report.pdf",
+      "url": "/findings-docs/169-1dfb7b3336af.pdf",
+      "sha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
+      "size": 3816435
+    },
+    {
+      "id": "170-641352fc860b",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac FY2018 Comprehensive Annual Financial Report.pdf",
+      "url": "/findings-docs/170-641352fc860b.pdf",
+      "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb",
+      "size": 3803130
+    },
+    {
+      "id": "171-165d76b4138d",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Di-ethylhexyl Phthalate (DEHP) - Technical Report on Conditions of Use.pdf",
+      "url": "/findings-docs/171-165d76b4138d.pdf",
+      "sha256": "165d76b4138d7bd23e617ba3f70f9aa5118e2572f9702954c8a7e96edce817d5",
+      "size": 428479
     },
     {
       "id": "001-7c991baaf1e9",

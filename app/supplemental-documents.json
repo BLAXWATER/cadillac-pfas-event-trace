@@ -2221,5 +2221,31 @@
     "size": 11746162,
     "sha256": "f779ef08f411e0b4ceed60f4398491fdf679b460e0bf418aa14a23905012be55",
     "description": "July 20, 2022 Wexford County Board packet. Correspondence on PDF pages 113-115 preserves Pescador's August 8, 2021 proposal for the 2022 Wexford County Landfill Remedial Action Plan budget under the 2002 consent order. The proposal identifies long-term groundwater monitoring, an annual monitoring report, financial-assurance work, RAP tasks and analytical costs, with a total estimated 2022 annual budget of $57,400 and $52,600 remaining after two listed invoices. This is a budget proposal, not proof that the work was completed or the amounts were paid; it does not provide landfill-leachate invoices tied to deliveries and contains no PFAS results, surveyed water-level round, site-specific flow map or Plett Road source-to-receptor analysis."
+  },
+  {
+    "id": "173-87cc40ccea58",
+    "name": "EPA Region 5 PCB Waste Handlers Database - July 18, 2014.pdf",
+    "url": "/findings-docs/173-87cc40ccea58.pdf",
+    "year": "2014",
+    "category": "Corporate, carrier & facility context",
+    "type": "EPA PCB transporter registry",
+    "format": "PDF",
+    "pages": 635,
+    "size": 1126741,
+    "sha256": "87cc40ccea585d5ac80a92500490205d679c7674b2f4da755c67e85eaa4fec5b",
+    "description": "Archived EPA Region 5 PCB Waste Handlers Database report dated July 18, 2014. PDF page 199, printed page 198, identifies Northern A-1 Services at 3947 N. US 131 in Kalkaska under EPA ID MID020906814, marks the facility as a PCB transporter and names American Waste as the facility owner. This is registry and organizational context only: it identifies no particular shipment, does not establish PFAS handling and does not show that Northern A-1 hauled Wexford landfill leachate to Cadillac's WWTP."
+  },
+  {
+    "id": "174-f091763d0d37",
+    "name": "Former McDonald's Country Store PFAS Site Investigation - October 3, 2022.pdf",
+    "url": "/findings-docs/174-f091763d0d37.pdf",
+    "year": "2022",
+    "category": "PFAS waste-disposal & carrier context",
+    "type": "EGLE contractor PFAS site-investigation report",
+    "format": "PDF",
+    "pages": 416,
+    "size": 17184330,
+    "sha256": "f091763d0d3739ffa98bfed87e4a79a076a7df76d0bf2342d910e723d6fcd121",
+    "description": "AECOM's October 3, 2022 draft-deliberative report for EGLE's Former McDonald's Country Store PFAS investigation in Oscoda. Section 2.7 states that Northern A-1 Environmental Services transported three drums of PFAS-impacted investigation soil to Wexford County Landfill. Appendix B, PDF page 61, preserves bill of lading 05032-22, which records three drums, a total quantity of 1,500 with UOM 'P,' transporter Northern A-1 Services, truck 817, trailer 193 and approval 22-00203. The bill's disposal-facility block names Northern A-1 Services rather than Wexford County Landfill, so that source-level discrepancy is retained. The record concerns a 2022 Oscoda soil shipment; it is not Wexford leachate, a Cadillac WWTP receiving record or evidence of the requested 2009-July 2019 delivery series."
   }
 ]

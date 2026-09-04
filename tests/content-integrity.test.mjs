@@ -4418,6 +4418,38 @@ test("batch 98 reconciles supplied scan pages to parent records without promotin
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 99 preserves carrier context without converting a 2022 soil shipment into Cadillac leachate evidence", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch99-carrier-context-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const supplemental = catalogs.get("supplemental-documents.json");
+
+  assert.equal(audit.stats.suppliedFiles, 5);
+  assert.equal(audit.stats.suppliedPdfs, 2);
+  assert.equal(audit.stats.suppliedPngs, 3);
+  assert.equal(audit.stats.parentPdfPagesReviewed, 1051);
+  assert.equal(audit.stats.embeddedTextPages, 1049);
+  assert.equal(audit.stats.canonicalPdfsAdded, 2);
+  assert.equal(audit.stats.derivativePngsSuppressed, 3);
+  assert.equal(audit.stats.recordsAdded, 2);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+
+  const epa = supplemental.find((item) => item.id === "173-87cc40ccea58");
+  const oscoda = supplemental.find((item) => item.id === "174-f091763d0d37");
+  assert.equal(epa.sha256, "87cc40ccea585d5ac80a92500490205d679c7674b2f4da755c67e85eaa4fec5b");
+  assert.equal(oscoda.sha256, "f091763d0d3739ffa98bfed87e4a79a076a7df76d0bf2342d910e723d6fcd121");
+  assert.match(epa.description, /marks the facility as a PCB transporter and names American Waste as the facility owner/i);
+  assert.match(epa.description, /identifies no particular shipment/i);
+  assert.match(oscoda.description, /three drums of PFAS-impacted investigation soil/i);
+  assert.match(oscoda.description, /disposal-facility block names Northern A-1 Services rather than Wexford County Landfill/i);
+  assert.match(oscoda.description, /not Wexford leachate, a Cadillac WWTP receiving record/i);
+
+  assert.equal(audit.canonicalRecords.length, 2);
+  assert.equal(audit.suppressedDerivatives.length, 3);
+  assert.match(audit.queueDecision, /No receiving-history requirement is closed/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

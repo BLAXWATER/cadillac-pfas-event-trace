@@ -1,0 +1,89 @@
+{
+  "batch": "September 4, 2026 - carrier and PFAS-soil disposal context reconciliation",
+  "stats": {
+    "suppliedFiles": 5,
+    "suppliedPdfs": 2,
+    "suppliedPngs": 3,
+    "distinctInputHashes": 5,
+    "parentPdfPagesReviewed": 1051,
+    "embeddedTextPages": 1049,
+    "visuallyReviewedSourcePages": 5,
+    "canonicalPdfsAdded": 2,
+    "derivativePngsSuppressed": 3,
+    "recordsAdded": 2,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "sizeFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "methods": [
+    "Recovered the supplied carrier folder one directory deeper under OneDrive after the stale Codex-session paths failed.",
+    "Calculated SHA-256 and byte size for all five supplied files, inspected the three PNGs and treated them only as views derived from the two complete parent PDFs.",
+    "Reviewed embedded text across all 1,051 PDF pages. The EPA archive cover and the Oscoda bill of lading had no embedded text and were reviewed visually; the short section-divider pages and both cited source pages were also rendered and checked.",
+    "Searched the complete PDFs for Northern A-1, American Waste, Wexford County Landfill, the EPA ID, bill-of-lading number, PFAS waste, shipment quantities, dates, truck and trailer identifiers and disposal wording.",
+    "Evaluated the evidence against the open 2009-July 2019 Wexford-leachate receiving-history requirements without converting later PFAS-soil transport into earlier Cadillac leachate evidence."
+  ],
+  "canonicalRecords": [
+    {
+      "recordId": "173-87cc40ccea58",
+      "sourceName": "EPA_PCB_2014.pdf",
+      "sha256": "87cc40ccea585d5ac80a92500490205d679c7674b2f4da755c67e85eaa4fec5b",
+      "size": 1126741,
+      "pages": 635,
+      "catalog": "supplemental-documents.json"
+    },
+    {
+      "recordId": "174-f091763d0d37",
+      "sourceName": "Oscoda_2022.pdf",
+      "sha256": "f091763d0d3739ffa98bfed87e4a79a076a7df76d0bf2342d910e723d6fcd121",
+      "size": 17184330,
+      "pages": 416,
+      "catalog": "supplemental-documents.json"
+    }
+  ],
+  "suppressedDerivatives": [
+    {
+      "sourceName": "pcb-page198.png",
+      "sha256": "28b1f2e9dfe31476b2bfcc49110ab5e2e9c77b0150e13c04defad4f27a49ac89",
+      "classification": "page view of EPA_PCB_2014.pdf PDF page 199, printed page 198",
+      "canonicalRecordId": "173-87cc40ccea58"
+    },
+    {
+      "sourceName": "bol2022.png",
+      "sha256": "ac545e8a1403db39663685b030c8884c86cd06d3b1a3936a6df038d605d56034",
+      "classification": "page view of Oscoda_2022.pdf PDF page 61, bill of lading 05032-22",
+      "canonicalRecordId": "174-f091763d0d37"
+    },
+    {
+      "sourceName": "lastpages.png",
+      "sha256": "7e34b56eade10f83b60c75557a4e002770a31c8143b2a6ee220c7948953f2fa8",
+      "classification": "contact-sheet view of Oscoda_2022.pdf PDF pages 397-416",
+      "canonicalRecordId": "174-f091763d0d37"
+    }
+  ],
+  "contentFindings": [
+    {
+      "recordId": "173-87cc40ccea58",
+      "pages": "PDF page 199, printed page 198",
+      "finding": "EPA's 2014 PCB handler report lists Northern A-1 Services, EPA ID MID020906814, as a transporter and names American Waste as the owner facility.",
+      "boundary": "The registry entry is not a shipment record, does not identify PFAS handling and does not establish the carrier for Wexford-to-Cadillac leachate deliveries."
+    },
+    {
+      "recordId": "174-f091763d0d37",
+      "pages": "PDF pages 5 and 61",
+      "finding": "The report says Northern A-1 transported three drums of investigation-derived PFAS soil from the Oscoda site to Wexford County Landfill. Bill of lading 05032-22 records the three drums, quantity 1,500 with UOM 'P,' transporter, truck, trailer, approval number and dates.",
+      "boundary": "The bill's disposal-facility field names Northern A-1 Services rather than Wexford County Landfill. The 2022 Oscoda soil movement is outside the requested period and is neither landfill leachate nor a Cadillac WWTP receipt."
+    },
+    {
+      "recordId": "174-f091763d0d37",
+      "pages": "PDF pages 397-416",
+      "finding": "The supplied contact sheet corresponds to laboratory QC results, chronicles, receipt forms and isotope-dilution summaries already contained in the complete report.",
+      "boundary": "Those pages are analytical-support material for the Oscoda investigation and do not create separate records or Cadillac-specific results."
+    }
+  ],
+  "queueDecision": "No receiving-history requirement is closed. The batch documents a separate 2022 PFAS-soil movement and carrier/ownership context, but supplies none of the requested 2009-July 2019 Wexford leachate manifests, Cadillac receiving logs, delivery-linked invoices or ledger entries, executed 2009 agreement and rate schedule, signed renewals or amendments, or dated final leachate delivery record.",
+  "queueResolution": {"closedRequirementIds": []},
+  "evidentiaryBoundary": "The records support a later Northern A-1/American Waste carrier relationship and a separate Wexford-destination statement in an Oscoda PFAS report. They must not be used to infer the identity of a 2009-2019 Cadillac leachate hauler, prove a Wexford-to-Cadillac load or resolve the final-delivery date."
+}

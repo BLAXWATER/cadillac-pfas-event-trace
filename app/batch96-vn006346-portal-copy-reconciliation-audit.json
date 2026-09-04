@@ -1,0 +1,52 @@
+{
+  "batch": "September 4, 2026 - VN-006346 portal-copy reconciliation",
+  "stats": {
+    "suppliedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 12,
+    "uniquePdfPages": 12,
+    "embeddedTextPages": 0,
+    "gpuRequestedOcrPages": 12,
+    "ocrPagesWithText": 12,
+    "manualReviewPages": 0,
+    "exactExistingCatalogRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "sizeFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "methods": [
+    "Calculated SHA-256 and byte size for the supplied PDF before comparing it with every evidence catalog and prior intake audit.",
+    "Opened and reviewed all 12 image-only pages; GPU-requested OCR recovered readable text on every page, with no page requiring manual recovery.",
+    "Verified that the dated MiEnviro portal download is byte-identical to established compliance record 041-37ac85d03cbb and preserved that single canonical record.",
+    "Created no duplicate document card, timeline event or source asset."
+  ],
+  "suppliedCopy": {
+    "name": "2016-02-04_-5228663365988565838_Violation Letter.Cadillac WWTP-Dietlin.pdf",
+    "portalSystemId": "-5228663365988565838",
+    "portalIndexDate": "2016-02-04",
+    "sha256": "37ac85d03cbbe59e1302a27d68055f905cdb0053f7b18f1fdc9ebaa61a575483",
+    "size": 737118,
+    "pages": 12,
+    "classification": "Exact SHA-256 match to established compliance record 041-37ac85d03cbb"
+  },
+  "canonicalRecord": {
+    "catalog": "compliance",
+    "recordId": "041-37ac85d03cbb",
+    "name": "Violation Letter.Cadillac WWTP-Dietlin.pdf",
+    "sha256": "37ac85d03cbbe59e1302a27d68055f905cdb0053f7b18f1fdc9ebaa61a575483",
+    "size": 737118,
+    "pages": 12,
+    "noticeNumber": "VN-006346",
+    "noticeDate": "2016-02-01",
+    "finding": "The seven-page DEQ violation notice identifies Cadillac WWTP permit violations from October 2014 through June 2015 involving TSS, CBOD5, fecal coliform, ammonia, phosphorus and pH. The package also preserves a 2014 Class A facility-classification letter, an operator-designation form and relevant permit excerpts.",
+    "boundary": "The February 4, 2016 portal date is an index or filing date, not the date of the notice or a separate enforcement action. The record concerns wastewater-permit compliance and does not establish a PFAS source, leachate delivery, final acceptance date or migration pathway."
+  },
+  "timelineDecision": "No new event is added. The timeline already separately preserves Cadillac's February 26, 2016 response to VN-006346; this exact catalog copy does not establish another notice or response.",
+  "queueDecision": "No evidence-request item is closed. The notice is not a per-load leachate record, delivery-linked financial record, executed treatment agreement, synchronized WWTP PFAS sampling package, certified well record, hydraulic test or source-to-receptor sampling round.",
+  "queueResolution": {"closedRequirementIds": []},
+  "evidentiaryBoundary": "The supplied filename's February 4 date must not replace the February 1 date printed on VN-006346 or be treated as evidence of a second violation notice."
+}

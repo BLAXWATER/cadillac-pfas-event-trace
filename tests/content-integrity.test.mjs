@@ -4297,6 +4297,49 @@ test("batch 95 reuses the two dated J17646 portal copies without inventing separ
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 96 reuses the exact VN-006346 portal copy without inventing a second notice", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch96-vn006346-portal-copy-reconciliation-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const page = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.suppliedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 12);
+  assert.equal(audit.stats.uniquePdfPages, 12);
+  assert.equal(audit.stats.embeddedTextPages, 0);
+  assert.equal(audit.stats.gpuRequestedOcrPages, 12);
+  assert.equal(audit.stats.ocrPagesWithText, 12);
+  assert.equal(audit.stats.manualReviewPages, 0);
+  assert.equal(audit.stats.exactExistingCatalogRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.sizeFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+
+  assert.equal(audit.suppliedCopy.sha256, audit.canonicalRecord.sha256);
+  assert.equal(audit.suppliedCopy.size, audit.canonicalRecord.size);
+  assert.equal(audit.suppliedCopy.pages, audit.canonicalRecord.pages);
+  assert.equal(audit.suppliedCopy.portalIndexDate, "2016-02-04");
+  assert.equal(audit.canonicalRecord.noticeDate, "2016-02-01");
+  assert.match(audit.suppliedCopy.classification, /Exact SHA-256 match/i);
+
+  const matchingRecords = catalogs.flatMap((catalog) => catalog.rows)
+    .filter((item) => item.sha256 === audit.canonicalRecord.sha256);
+  assert.equal(matchingRecords.length, 1, "VN-006346 must remain one catalog record");
+  assert.equal(matchingRecords[0].id, audit.canonicalRecord.recordId);
+  assert.equal(matchingRecords[0].size, audit.canonicalRecord.size);
+  assert.equal(matchingRecords[0].pages, audit.canonicalRecord.pages);
+  assert.match(page, /Cadillac responds to Violation Notice VN-006346/i);
+  assert.match(audit.timelineDecision, /No new event is added/i);
+  assert.match(audit.canonicalRecord.boundary, /does not establish a PFAS source/i);
+  assert.match(audit.evidentiaryBoundary, /must not replace the February 1 date/i);
+  assert.match(audit.queueDecision, /No evidence-request item is closed/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

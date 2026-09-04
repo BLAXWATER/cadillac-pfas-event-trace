@@ -66,8 +66,8 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 768);
-  assert.equal(externalFiles, 817);
+  assert.equal(localFiles, 769);
+  assert.equal(externalFiles, 816);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -1487,6 +1487,7 @@ test("batch 23 reconciles nineteen Wexford sources and keeps their previews and 
 
 test("batch 24 reconciles the verified-evidence sources and serves exact local downloads", async () => {
   const audit = JSON.parse(await readFile(path.join(appDirectory, "batch24-verified-evidence-reconciliation-audit.json"), "utf8"));
+  const replacementAudit = JSON.parse(await readFile(path.join(appDirectory, "batch100-misnamed-fce-source-replacement-audit.json"), "utf8"));
   const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
   const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
   const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
@@ -1512,6 +1513,11 @@ test("batch 24 reconciles the verified-evidence sources and serves exact local d
   assert.equal(audit.derivatives.length, 1);
 
   for (const matched of audit.catalogMatches) {
+    if (matched.recordId === replacementAudit.supersededRendition.recordId) {
+      assert.equal(matched.sha256, replacementAudit.supersededRendition.sha256);
+      assert.ok(catalogRows.find((row) => row.id === replacementAudit.canonicalRecord.recordId));
+      continue;
+    }
     const record = catalogRows.find((row) => row.id === matched.recordId);
     assert.ok(record, matched.recordId);
     assert.equal(record.sha256, matched.sha256);
@@ -4452,6 +4458,40 @@ test("batch 99 preserves carrier context without converting a 2022 soil shipment
   assert.equal(audit.canonicalRecords.length, 2);
   assert.equal(audit.suppressedDerivatives.length, 3);
   assert.match(audit.queueDecision, /No receiving-history requirement is closed/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 100 corrects the misnamed 2017 Wexford FCE and retains the source-original rendition", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch100-misnamed-fce-source-replacement-audit.json"), "utf8"));
+  const previews = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const compliance = catalogs.get("compliance-documents.json");
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.pagesReviewed, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.recordsReplaced, 1);
+  assert.equal(audit.stats.duplicateRecordsSuppressed, 1);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.match(audit.suppliedFile.actualIdentity, /November 6, 2017.*FCE Summary Report.*Wexford County Landfill/i);
+
+  const current = compliance.find((item) => item.id === audit.canonicalRecord.recordId);
+  assert.ok(current);
+  assert.equal(current.sha256, audit.canonicalRecord.sha256);
+  assert.equal(current.size, audit.canonicalRecord.size);
+  assert.equal(current.pages, audit.canonicalRecord.pages);
+  assert.match(current.description, /Wexford County Landfill.*N3862/i);
+  assert.match(current.description, /not a 2018 UDS laboratory report/i);
+  assert.equal(compliance.some((item) => item.id === audit.supersededRendition.recordId), false);
+
+  const source = await readFile(path.join(publicDirectory, ...audit.canonicalRecord.asset.slice(1).split("/")));
+  assert.equal(createHash("sha256").update(source).digest("hex"), audit.canonicalRecord.sha256);
+  assert.equal(previews[audit.canonicalRecord.asset], audit.canonicalRecord.preview);
+  const preview = await readFile(path.join(publicDirectory, ...audit.canonicalRecord.preview.slice(1).split("/")));
+  assert.equal(createHash("sha256").update(preview).digest("hex"), path.basename(audit.canonicalRecord.preview, ".webp"));
+  assert.equal(audit.supersededRendition.renderComparison.differentPixels, 610);
+  assert.match(audit.supersededRendition.classification, /small added EGLE mark/i);
+  assert.match(audit.evidentiaryBoundary, /does not contain leachate laboratory results/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

@@ -2594,15 +2594,15 @@
       "size": 36902
     },
     {
-      "id": "018-234577b7fcb4",
+      "id": "018-d38fe00fd269",
       "archiveId": "compliance",
       "archiveLabel": "Compliance & enforcement",
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "11-06-2017 - N3862_Full Compliance Evaluation_11-06-2017.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/018-234577b7fcb4.pdf",
-      "sha256": "234577b7fcb4be9d9bdc9a9f93e5278c058733864b4c3bf735e9e7fb9fe539c6",
-      "size": 31853
+      "url": "/compliance-docs/018-d38fe00fd269.pdf",
+      "sha256": "d38fe00fd269c4a5febc3cd944927c834a962245008c11e0c8b9b076226919ef",
+      "size": 28716
     },
     {
       "id": "019-038472a6ae4c",

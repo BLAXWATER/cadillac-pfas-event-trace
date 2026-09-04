@@ -1,0 +1,56 @@
+{
+  "batch": "2026-09-04 misnamed 2017 Wexford FCE source replacement 100",
+  "method": [
+    "Inspected all pages, PDF metadata, embedded text and a 160-DPI rendering of the supplied file.",
+    "Compared the supplied page with the cataloged November 6, 2017 N3862 full-compliance-evaluation page using metadata, normalized extracted text and same-resolution pixel comparison.",
+    "Replaced the Aspose-produced repository rendition with the earlier RICOH and Adobe Paper Capture source while retaining one correctly identified evidence record.",
+    "Regenerated the first-page preview and corrected the record description so the file is not represented as a Cadillac leachate laboratory report."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "pagesReviewed": 1,
+    "recordsAdded": 0,
+    "recordsReplaced": 1,
+    "duplicateRecordsSuppressed": 1,
+    "unreadablePages": 0
+  },
+  "suppliedFile": {
+    "name": "Cadillac_Leachate_UDS_Level2_Report_2018.pdf",
+    "sha256": "d38fe00fd269c4a5febc3cd944927c834a962245008c11e0c8b9b076226919ef",
+    "size": 28716,
+    "pages": 1,
+    "creator": "RICOH MP 4054",
+    "producer": "Adobe Acrobat 10.1.16 Paper Capture Plug-in",
+    "actualIdentity": "Signed November 6, 2017 Michigan DEQ Air Quality Division FCE Summary Report for Wexford County Landfill, SRN N3862"
+  },
+  "canonicalRecord": {
+    "recordId": "018-d38fe00fd269",
+    "asset": "/compliance-docs/018-d38fe00fd269.pdf",
+    "preview": "/first-page-previews/by-sha256/ac01aa66dc3088709805b703471af89f7085f8c162a1f9ce7eca562f98326a76.webp",
+    "sha256": "d38fe00fd269c4a5febc3cd944927c834a962245008c11e0c8b9b076226919ef",
+    "size": 28716,
+    "pages": 1,
+    "verifiedFinding": "The signed AQD summary identifies Wexford County Landfill, SRN N3862, and records compliance for the November 6, 2017 scheduled inspection, two 2017 ROP certifications and the March 13, 2017 MAERS activity."
+  },
+  "supersededRendition": {
+    "recordId": "018-234577b7fcb4",
+    "asset": "/compliance-docs/018-234577b7fcb4.pdf",
+    "sha256": "234577b7fcb4be9d9bdc9a9f93e5278c058733864b4c3bf735e9e7fb9fe539c6",
+    "size": 31853,
+    "producer": "Aspose.PDF for .NET 26.5.0",
+    "classification": "Same one-page source and extracted content, with only a small added EGLE mark at the lower-right corner after rendering.",
+    "renderComparison": {
+      "resolutionDpi": 160,
+      "canvasPixels": 2393600,
+      "differentPixels": 610,
+      "differentPercent": 0.0254846256684492,
+      "differenceBounds": [1292, 1737, 1359, 1755]
+    },
+    "removedFromCurrentPublicBundle": true
+  },
+  "evidentiaryBoundary": "The source is an air-program compliance summary. It does not contain leachate laboratory results, PFAS concentrations, Cadillac WWTP receiving information, individual delivery data, invoices, an agreement or a final leachate-delivery date.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "No transaction-level Wexford-to-Cadillac leachate receiving-history requirement is satisfied by this air compliance summary."
+  }
+}

@@ -67,7 +67,7 @@ test("catalog records are unique and source metadata matches local files", async
   }
 
   assert.equal(localFiles, 766);
-  assert.equal(externalFiles, 817);
+  assert.equal(externalFiles, 819);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1583);
+  assert.equal(recordCount, 1585);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1583);
+  assert.equal(records.length, 1585);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1425);
-  assert.equal(audit.stats.pdfPages, 21119);
+  assert.equal(audit.stats.pdfRecords, 1427);
+  assert.equal(audit.stats.pdfPages, 22170);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -635,7 +635,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 102);
-  assert.equal(supplementalCatalog.length, 171);
+  assert.equal(supplementalCatalog.length, 173);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);
@@ -4414,6 +4414,45 @@ test("batch 98 reconciles supplied scan pages to parent records without promotin
   assert.equal(audit.duplicateFamilies.reduce((sum, item) => sum + item.identicalImagePairs, 0), 12);
   assert.match(audit.contentFindings[0].boundary, /no screen or flow meter was apparent/i);
   assert.match(audit.contentFindings[1].boundary, /not a manifest, receiving log or measured delivery record/i);
+  assert.match(audit.queueDecision, /No receiving-history requirement is closed/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 99 preserves carrier context without converting a 2022 soil shipment into Cadillac leachate evidence", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch99-carrier-context-reconciliation-audit.json"), "utf8"));
+  const previews = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const supplemental = catalogs.get("supplemental-documents.json");
+
+  assert.equal(audit.stats.suppliedFiles, 5);
+  assert.equal(audit.stats.suppliedPdfs, 2);
+  assert.equal(audit.stats.suppliedPngs, 3);
+  assert.equal(audit.stats.parentPdfPagesReviewed, 1051);
+  assert.equal(audit.stats.embeddedTextPages, 1049);
+  assert.equal(audit.stats.canonicalPdfsAdded, 2);
+  assert.equal(audit.stats.derivativePngsSuppressed, 3);
+  assert.equal(audit.stats.recordsAdded, 2);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+
+  const epa = supplemental.find((item) => item.id === "173-87cc40ccea58");
+  const oscoda = supplemental.find((item) => item.id === "174-f091763d0d37");
+  const epaSourceKey = "/findings-docs/173-87cc40ccea58.pdf";
+  const oscodaSourceKey = "/findings-docs/174-f091763d0d37.pdf";
+  assert.equal(epa.sha256, "87cc40ccea585d5ac80a92500490205d679c7674b2f4da755c67e85eaa4fec5b");
+  assert.equal(oscoda.sha256, "f091763d0d3739ffa98bfed87e4a79a076a7df76d0bf2342d910e723d6fcd121");
+  assert.match(epa.description, /marks the facility as a PCB transporter and names American Waste as the facility owner/i);
+  assert.match(epa.description, /identifies no particular shipment/i);
+  assert.match(oscoda.description, /three drums of PFAS-impacted investigation soil/i);
+  assert.match(oscoda.description, /disposal-facility block names Northern A-1 Services rather than Wexford County Landfill/i);
+  assert.match(oscoda.description, /not Wexford leachate, a Cadillac WWTP receiving record/i);
+  assert.equal(previews[epaSourceKey], "/first-page-previews/by-sha256/54d54ab4e3b83cd23e09848cbfcdb53ef368573fd62e21b3837d5213aa8d39a7.webp");
+  assert.equal(previews[oscodaSourceKey], "/first-page-previews/by-sha256/9f930efe88733fc07e4eceb153ef0a6afcb606df9b753251a1cea0fe936b84e9.webp");
+  await stat(path.join(publicDirectory, ...previews[epaSourceKey].slice(1).split("/")));
+  await stat(path.join(publicDirectory, ...previews[oscodaSourceKey].slice(1).split("/")));
+
+  assert.equal(audit.canonicalRecords.length, 2);
+  assert.equal(audit.suppressedDerivatives.length, 3);
   assert.match(audit.queueDecision, /No receiving-history requirement is closed/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });

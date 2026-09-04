@@ -1,11 +1,11 @@
 {
   "stats": {
-    "suppliedFiles": 864,
-    "newDistinctRecords": 171,
+    "suppliedFiles": 869,
+    "newDistinctRecords": 173,
     "exactExistingRecordsReused": 259,
     "duplicateCopiesSuppressed": 51,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 499852490,
+    "publishedBytes": 518163561,
     "latestBatch88FilesReviewed": 4,
     "latestBatch88DistinctInputHashes": 4,
     "latestBatch88PdfPagesReviewed": 301,

@@ -1319,5 +1319,18 @@
     "size": 607413,
     "sha256": "8fd975e9aa54111e2af90190c24d66e97c24c00ec2f4ad3fda79023c3f59440a",
     "description": "Pace Project 35956761 for the second UCMR5 sampling event at the Crosby Wellfield Service Building and 44 Road Water Service Building, collected May 19, 2025. The two primary drinking-water samples are reported with U qualifiers—analyzed but not detected—across the listed EPA 533 and EPA 537.1 PFAS panels. The 19-page report includes sample summaries, analytical and QC pages, qualifier definitions, a chain-of-custody record listing two field reagent blanks and sample-receipt/preservation forms. It is municipal drinking-water monitoring and does not contain wastewater-treatment-process samples, a Plett Road receptor sample, Wexford leachate-delivery records or source-to-receptor pathway proof."
+  },
+  {
+    "id": "102-03b43f8e8597",
+    "name": "2021-04 - EGLE-AECOM Full Report - PFAS in Michigan Wastewater Treatment Plants.pdf",
+    "url": "/pfas-docs/102-03b43f8e8597.pdf",
+    "year": "2021",
+    "category": "PFAS monitoring",
+    "type": "Statewide PFAS technical report with Cadillac tables",
+    "format": "PDF",
+    "pages": 119,
+    "size": 15379618,
+    "sha256": "03b43f8e859721d74882c546b2e0e76933e02cc7ea33b49d64127056b69aa6a4",
+    "description": "April 2021 EGLE/AECOM full technical report for the Michigan IPP PFAS Initiative and statewide WWTP assessment. Table 2 identifies Cadillac WWTP as sampled for PFAS under permit MI0020257; Table 3 reports Cadillac effluent results of 20 ng/L PFOA and 6.5 ng/L PFOS on November 5, 2018, 16 and 7.8 ng/L on June 4, 2019, and 3.4 and 2.0 ng/L on October 22, 2019. Table 14 lists one coded active Type II landfill SIU sample associated with Cadillac at 590 ng/L PFOA and 120 ng/L PFOS. The report concludes generally that conventional wastewater treatment did not remove PFOA and PFOS. The coded table does not name Wexford County Landfill, preserve a delivery record or establish a Plett Road groundwater-migration pathway."
   }
 ]

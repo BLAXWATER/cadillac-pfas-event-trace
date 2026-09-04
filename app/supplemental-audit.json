@@ -1,11 +1,22 @@
 {
   "stats": {
-    "suppliedFiles": 861,
-    "newDistinctRecords": 170,
-    "exactExistingRecordsReused": 257,
+    "suppliedFiles": 864,
+    "newDistinctRecords": 171,
+    "exactExistingRecordsReused": 259,
     "duplicateCopiesSuppressed": 51,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 488106328,
+    "publishedBytes": 499852490,
+    "latestBatch88FilesReviewed": 4,
+    "latestBatch88DistinctInputHashes": 4,
+    "latestBatch88PdfPagesReviewed": 301,
+    "latestBatch88EmbeddedTextPages": 227,
+    "latestBatch88PagesOCRCheckedOnGPU": 74,
+    "latestBatch88OCRPagesWithText": 68,
+    "latestBatch88ExactExistingRecordsReusedAsCrossReferences": 2,
+    "latestBatch88RecordsAdded": 2,
+    "latestBatch88AddedPdfPages": 234,
+    "latestBatch88TimelineEventsAdded": 2,
+    "latestBatch88RequirementsClosed": 0,
     "latestBatch86FilesReviewed": 11,
     "latestBatch86DistinctInputHashes": 9,
     "latestBatch86PdfPagesReviewed": 1150,
@@ -665,6 +676,10 @@
     "September 1 USGS Plett discharge-table reconciliation: all three supplied CSVs parsed successfully and matched the three members of the established station 04121241 ZIP package byte-for-byte. The 21 rows were reviewed, the original ZIP remained the canonical package, and its exact member tables were exposed individually without adding another timeline event or closing a groundwater/PFAS requirement."
   ],
   "decisions": [
+    {
+      "name": "September 4 statewide PFAS and Wexford remedial-budget intake",
+      "reason": "The 119-page EGLE/AECOM study and 115-page July 2022 county packet are distinct and retained once in their correct PFAS and supplemental blocks. The January 2022 Executive Committee packet and October 2017 injection-well draft permit are exact existing records reused as cross references. The new records add Cadillac PFAS tables and a proposed $57,400 landfill RAP budget, but they do not provide per-load delivery history, a synchronized WWTP PFAS package, surveyed local water levels, a site-specific groundwater-flow map or source-to-receptor confirmation; no evidence-request item is closed."
+    },
     {
       "name": "September 4 financial-report and DEHP technical-context intake",
       "reason": "The FY2016 and FY2018 Cadillac audits are distinct records and are retained separately; together with the exact existing FY2017 audit they add three bounded financial chronology entries. Their dollar figures are budget variances, not total leachate revenue or load-level delivery evidence. The DEHP report is retained as third-party technical context based on aggregate public-data tables, not as PFAS evidence or proof of a generator-to-destination route. The Wexford operating license, January 2025 packet, May 2018 packet, June 2019 packet, FY2017 audit and 2012 construction permit are exact records reused as cross references. No delivery-history, matched-PFAS or migration-pathway requirement is closed."

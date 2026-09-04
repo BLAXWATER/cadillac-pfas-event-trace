@@ -1,0 +1,88 @@
+{
+  "batch": "September 4, 2026 — statewide PFAS and Wexford remedial-budget intake",
+  "stats": {
+    "suppliedFiles": 4,
+    "distinctInputHashes": 4,
+    "pdfPagesReviewed": 301,
+    "embeddedTextPages": 227,
+    "pagesOCRCheckedOnGPU": 74,
+    "ocrPagesWithText": 68,
+    "manualReviewPages": 0,
+    "exactExistingRecordsReusedAsCrossReferences": 2,
+    "recordsAdded": 2,
+    "addedPdfPages": 234,
+    "timelineEventsAdded": 2,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadablePages": 0
+  },
+  "methods": [
+    "Computed SHA-256, byte size and page count for every supplied file and compared each hash across all published catalogs.",
+    "Audited all 301 PDF pages; 227 pages supplied embedded text and 74 pages received GPU-assisted OCR, with readable OCR recovered from 68 sparse or image-only pages.",
+    "Visually verified both new first pages and the controlling Cadillac result tables, county packet index, landfill remedial-action scope and proposed budget pages.",
+    "Preserved exact existing records as cross references rather than publishing filename copies."
+  ],
+  "inputs": [
+    {
+      "suppliedName": "2022-07-20-BOC-Packet.pdf",
+      "sha256": "f779ef08f411e0b4ceed60f4398491fdf679b460e0bf418aa14a23905012be55",
+      "size": 11746162,
+      "pages": 115,
+      "classification": "Distinct county packet retained once",
+      "catalog": "supplemental-documents.json",
+      "recordId": "172-f779ef08f411",
+      "asset": "/findings-docs/172-f779ef08f411.pdf"
+    },
+    {
+      "suppliedName": "pfas-initiatives-statewide-full-report.pdf",
+      "sha256": "03b43f8e859721d74882c546b2e0e76933e02cc7ea33b49d64127056b69aa6a4",
+      "size": 15379618,
+      "pages": 119,
+      "classification": "Distinct full statewide report retained once",
+      "catalog": "pfas-documents.json",
+      "recordId": "102-03b43f8e8597",
+      "asset": "/pfas-docs/102-03b43f8e8597.pdf"
+    },
+    {
+      "suppliedName": "Executive-Packet-01.11.2022.pdf",
+      "sha256": "18a4462171aa5b0e99f527e197279ebf0cf5803628a53a2ee114706887f73fb8",
+      "size": 2118311,
+      "pages": 30,
+      "classification": "Exact existing record reused as cross reference",
+      "catalog": "supplemental-documents.json",
+      "canonicalRecordId": "112-18a4462171aa",
+      "canonicalName": "Wexford County Executive Committee Packet — January 11, 2022.pdf"
+    },
+    {
+      "suppliedName": "mi-165-1i-0002_draft_permit_october_2017.pdf",
+      "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
+      "size": 5200399,
+      "pages": 37,
+      "classification": "Exact existing record reused as cross reference",
+      "catalog": "wexford-documents.json",
+      "canonicalRecordId": "020-9ad6d46eb20b",
+      "canonicalName": "01-01-2017 - mi-165-1i-0002_draft_permit_october_2017.pdf"
+    }
+  ],
+  "addedRecords": [
+    {
+      "id": "102-03b43f8e8597",
+      "catalog": "pfas-documents.json",
+      "sha256": "03b43f8e859721d74882c546b2e0e76933e02cc7ea33b49d64127056b69aa6a4",
+      "pages": 119,
+      "asset": "/pfas-docs/102-03b43f8e8597.pdf",
+      "archiveId": "pfas"
+    },
+    {
+      "id": "172-f779ef08f411",
+      "catalog": "supplemental-documents.json",
+      "sha256": "f779ef08f411e0b4ceed60f4398491fdf679b460e0bf418aa14a23905012be55",
+      "pages": 115,
+      "asset": "/findings-docs/172-f779ef08f411.pdf",
+      "archiveId": "supplemental"
+    }
+  ],
+  "queueDecision": "No evidence-request item is closed. The full statewide report consolidates Cadillac effluent and coded landfill-SIU PFAS results, but it does not name Wexford County Landfill in that row, document individual deliveries, synchronize influent/effluent/sludge sampling or establish groundwater migration to Plett Road. The county packet preserves a proposed monitoring and remedial-action budget, not the requested certified well construction, surveyed synoptic water levels, hydraulic tests, flow map or source-to-receptor sampling package.",
+  "evidentiaryBoundary": "The $57,400 figure is an estimated 2022 budget, not proof of payment or completed work. The 590 ng/L PFOA and 120 ng/L PFOS row is associated with Cadillac and a coded active Type II landfill SIU, but the report itself does not identify the facility by name or establish a delivery date, treatment-plant pass-through for that sample, or a receptor pathway."
+}

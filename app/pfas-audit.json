@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suppliedFiles": 111,
-    "finalDistinctRecords": 107,
-    "newDistinctRecords": 101,
+    "suppliedFiles": 112,
+    "finalDistinctRecords": 108,
+    "newDistinctRecords": 102,
     "existingRecordsReused": 6,
     "existingRecordReplaced": 1,
     "duplicateCopiesSuppressed": 4,
     "ocrReviewedPdfs": 26,
     "ocrReviewedPages": 230,
-    "publishedBytes": 117424305
+    "publishedBytes": 132803923
   },
   "methods": [
     "SHA-256 comparison within the 91-file category and against every catalog plus timeline source asset",
@@ -21,9 +21,14 @@
     "Two-pass OCR and rendered-page verification of the image-only April 18, 2018 DEQ PFAS-source follow-up letter",
     "Hash, embedded-text and rendered-page review of all 20 pages in the June 2020 EGLE statewide wastewater and biosolids PFAS summary",
     "Hash, embedded-text and rendered-page review of all 19 pages in Pace Project 35919999, including analytical, QC, qualifier, sample-receipt and chain-of-custody pages",
-    "Hash, embedded-text and rendered-page review of all 19 pages in Pace Project 35956761, including the scanned chain-of-custody and sample-receipt/preservation forms"
+    "Hash, embedded-text and rendered-page review of all 19 pages in Pace Project 35956761, including the scanned chain-of-custody and sample-receipt/preservation forms",
+    "GPU-assisted full-page review of all 119 pages in the April 2021 EGLE/AECOM report, with direct visual checks of the Cadillac facility, effluent and coded landfill-SIU tables"
   ],
   "decisions": [
+    {
+      "name": "April 2021 EGLE/AECOM full Michigan WWTP PFAS report",
+      "reason": "The 119-page report is distinct from the established 20-page June 2020 statewide summary. It is retained because its named tables identify Cadillac WWTP, publish three Cadillac effluent results and list one coded active Type II landfill SIU sample at 590 ng/L PFOA and 120 ng/L PFOS. The coded row does not name Wexford County Landfill and the report does not preserve a delivery record or establish migration to Plett Road."
+    },
     {
       "name": "May 2025 Pace UCMR5 plant-tap PFAS report — Crosby and 44 Road",
       "reason": "The 19-page report is a distinct second-round municipal drinking-water record. Its two primary samples are U-qualified as analyzed but not detected across the listed EPA 533 and EPA 537.1 PFAS panels. It is retained without representing the results as wastewater-process, Plett Road, leachate-delivery or source-to-receptor pathway evidence."

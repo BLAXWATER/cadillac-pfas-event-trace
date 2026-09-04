@@ -2208,5 +2208,18 @@
     "size": 428479,
     "sha256": "165d76b4138d7bd23e617ba3f70f9aa5118e2572f9702954c8a7e96edce817d5",
     "description": "November 2019 Material Research L3C report prepared for Earthjustice using public information, including EPA data. Its 2012-2018 aggregate tables list Michigan Rubber Products in Cadillac with 52,964.53 pounds of off-site DEHP transfers, Akwel Cadillac with 179.89 pounds, Wexford County Landfill as a destination with 30,627.69 pounds and Cadillac WWTP as a POTW destination with 179.89 pounds. The facility and destination tables do not directly pair a Cadillac generator with a specific destination; this third-party DEHP compilation is not PFAS evidence and does not prove a Wexford-to-Cadillac delivery or migration pathway."
+  },
+  {
+    "id": "172-f779ef08f411",
+    "name": "Wexford County Board of Commissioners Packet — July 20, 2022.pdf",
+    "url": "/findings-docs/172-f779ef08f411.pdf",
+    "year": "2022",
+    "category": "Wexford landfill & leachate",
+    "type": "County board packet",
+    "format": "PDF",
+    "pages": 115,
+    "size": 11746162,
+    "sha256": "f779ef08f411e0b4ceed60f4398491fdf679b460e0bf418aa14a23905012be55",
+    "description": "July 20, 2022 Wexford County Board packet. Correspondence on PDF pages 113-115 preserves Pescador's August 8, 2021 proposal for the 2022 Wexford County Landfill Remedial Action Plan budget under the 2002 consent order. The proposal identifies long-term groundwater monitoring, an annual monitoring report, financial-assurance work, RAP tasks and analytical costs, with a total estimated 2022 annual budget of $57,400 and $52,600 remaining after two listed invoices. This is a budget proposal, not proof that the work was completed or the amounts were paid; it does not provide landfill-leachate invoices tied to deliveries and contains no PFAS results, surveyed water-level round, site-specific flow map or Plett Road source-to-receptor analysis."
   }
 ]

@@ -1,0 +1,59 @@
+{
+  "batch": "2026-09-04 Wexford operating-license exact recheck intake 87",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count and compared them with every published evidence catalog.",
+    "Extracted text from all eight pages and rendered and visually reviewed the complete seven-page license plus Attachment A site map.",
+    "Downloaded the immutable canonical GitHub source anonymously, verified HTTP 200 delivery and matched its byte count and SHA-256 hash to the supplied file.",
+    "Verified that the established content-addressed first-page preview exists and that its filename matches its own SHA-256 hash.",
+    "Reused established Wexford record 017 as an exact cross-reference because its title and description already preserve the November 19, 2024 issue date and November 19, 2029 expiration date."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 8,
+    "embeddedTextPages": 8,
+    "renderedPagesReviewed": 8,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "anonymousCanonicalDownloadStatus": 200,
+    "exactCanonicalDownloadHashMatches": 1,
+    "exactPreviewHashMatches": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "suppliedFile": {
+    "name": "Wexford-County-November 19, 2024 -2029 -Landfill.PDF",
+    "sha256": "4b475079a927cb48147206bb617c64addaf8215f55534601f1674eacb8fb359e",
+    "size": 3588035,
+    "pages": 8
+  },
+  "canonicalRecord": {
+    "catalog": "wexford-documents.json",
+    "recordId": "017-4b475079a927",
+    "canonicalName": "Wexford-County-Landfill.PDF · Operating License 9758",
+    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/017-4b475079a927.pdf",
+    "anonymousRawUrl": "https://raw.githubusercontent.com/cazey43/cadillac-pfas-event-trace/1f44c9e90e718f6e130bdfc319be48098d2163e5/public/wexford-docs/017-4b475079a927.pdf",
+    "previewManifestKey": "/wexford-docs/017-4b475079a927.pdf",
+    "preview": "/first-page-previews/by-sha256/fcca6536fd5a01e4894558c315933a31b2720268a5255c66be5fc09eecd6734c.webp",
+    "sha256": "4b475079a927cb48147206bb617c64addaf8215f55534601f1674eacb8fb359e",
+    "size": 3588035,
+    "pages": 8,
+    "licenseNumber": "9758",
+    "issueDate": "2024-11-19",
+    "expirationDate": "2029-11-19"
+  },
+  "verifiedFindings": [
+    "EGLE issued Solid Waste Disposal Area Operating License 9758 to Wexford County Landfill, LLC on November 19, 2024, with an expiration date of November 19, 2029.",
+    "The license describes a 196.4-acre municipal solid-waste landfill at 990 Mackinaw Trail in Manton and identifies facility ID 470336.",
+    "The license incorporates Construction Permits 4100 and 4127, the March 2018 hydrogeological monitoring plan and later leachate, engineering, gas-monitoring and surface-emission plans.",
+    "Attachment A is the 2024 aerial-topography site map showing property and permitted-waste boundaries, active and closed areas and future cells."
+  ],
+  "evidentiaryBoundary": "This record establishes the landfill's 2024-2029 operating authorization and incorporated operating plans. It does not provide per-load leachate deliveries to Cadillac, Cadillac receiving or billing records, PFAS analytical results, an exact final-delivery date or a demonstrated PFAS migration pathway to Plett Road.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The renamed copy adds no new evidentiary content beyond the exact operating-license record already indexed; none of the remaining transaction-level, synchronized-sampling or hydrogeologic requests is closed."
+  }
+}

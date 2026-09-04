@@ -36,7 +36,8 @@
     "Revision-sensitive review: draft/final, versioned, corrected and differently scoped records were retained whenever their content or metadata was substantively distinct",
     "Immutable GitHub preservation verification: the original 81 blobs were reread from commit b4705928d16ccaac9701ee43cba04369982c5ab6 and the three supplemental on-site inspections from commit 49922c706588f236e1edbad5fa8996e4c249e330, with recorded byte counts and SHA-256 hashes matched",
     "MiEnviro repeat-intake verification: all 42 supplied PDFs (230 pages) were SHA-256 checked against every evidence catalog and the timeline source; the 41 unique content hashes totaling 200 unique pages were already preserved. The image-only three-page leachate-request source was also rendered and visually rechecked against its existing timeline copy.",
-    "September 2026 follow-up intake: the three-page Wexford construction permit was hash-matched to the existing NPDES record, while the complete 88-page February 2021 county packet was checked page by page; 40 sparse or image-only pages were OCR processed on the GPU and all yielded readable text."
+    "September 2026 follow-up intake: the three-page Wexford construction permit was hash-matched to the existing NPDES record, while the complete 88-page February 2021 county packet was checked page by page; 40 sparse or image-only pages were OCR processed on the GPU and all yielded readable text.",
+    "Operating License 9758 renamed-copy recheck: the supplied eight-page PDF was matched byte for byte to record 017, all pages were rendered and reviewed, and anonymous delivery of the immutable canonical source returned HTTP 200 with the expected byte count and SHA-256 hash."
   ],
   "decisions": [
     {
@@ -82,6 +83,10 @@
     {
       "name": "September 2026 construction permit and February 2021 county packet",
       "reason": "The supplied three-page Wexford landfill PDF is byte-identical to Construction Permit 4127 already preserved as NPDES record 039-a2b89f4b2389 and was reused as a cross-reference. The 88-page county agenda packet is distinct and was retained because its final page preserves EGLE's January 22, 2021 acceptance of the landfill's 2020 long-term groundwater-monitoring report."
+    },
+    {
+      "name": "Operating License 9758 renamed copy",
+      "reason": "The supplied filename adds the November 19, 2024 through November 19, 2029 date range, but its bytes exactly match Wexford record 017 and those dates are already stated in the established title and description. The existing record was reused as a cross-reference and no duplicate was added."
     }
   ]
 }

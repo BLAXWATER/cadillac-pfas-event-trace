@@ -499,6 +499,53 @@ test("batch 86 adds two audited Cadillac financial reports and bounded DEHP cont
   assert.match(audit.queueDecision, /No request is closed.*do not supply per-load delivery history.*synchronized PFAS treatment samples.*site-specific migration pathway/i);
 });
 
+test("batch 87 reuses the exact Wexford 2024-2029 operating license and verifies anonymous delivery", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch87-wexford-operating-license-recheck-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const records = catalogs.flatMap((catalog) => catalog.rows.map((row) => ({ ...row, archive: catalog.name })));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.receivedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 8);
+  assert.equal(audit.stats.embeddedTextPages, 8);
+  assert.equal(audit.stats.renderedPagesReviewed, 8);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.anonymousCanonicalDownloadStatus, 200);
+  assert.equal(audit.stats.exactCanonicalDownloadHashMatches, 1);
+  assert.equal(audit.stats.exactPreviewHashMatches, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.unreadablePages, 0);
+  assert.equal(audit.stats.blankFirstPages, 0);
+
+  const matches = records.filter((row) => row.sha256 === audit.suppliedFile.sha256);
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].archive, audit.canonicalRecord.catalog);
+  assert.equal(matches[0].id, audit.canonicalRecord.recordId);
+  assert.equal(matches[0].name, audit.canonicalRecord.canonicalName);
+  assert.equal(matches[0].url, audit.canonicalRecord.url);
+  assert.equal(matches[0].pages, audit.canonicalRecord.pages);
+  assert.equal(matches[0].size, audit.canonicalRecord.size);
+  assert.match(matches[0].description, /November 19, 2024 through November 19, 2029/i);
+
+  assert.equal(previewManifest[audit.canonicalRecord.previewManifestKey], audit.canonicalRecord.preview);
+  const previewPath = path.join(publicDirectory, audit.canonicalRecord.preview.replace(/^\//, ""));
+  const previewBytes = await readFile(previewPath);
+  assert.equal(createHash("sha256").update(previewBytes).digest("hex"), path.basename(previewPath, ".webp"));
+
+  const placed = placement.records.filter((row) => row.sha256 === audit.suppliedFile.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].id, audit.canonicalRecord.recordId);
+  assert.equal(placed[0].archiveId, "wexford");
+  assert.match(audit.evidentiaryBoundary, /does not provide per-load leachate deliveries/i);
+  assert.match(audit.evidentiaryBoundary, /does not provide.*PFAS analytical results/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("local public assets contain no byte-identical redundant copies", async () => {
   const files = await walkFiles(publicDirectory);
   const byHash = new Map();

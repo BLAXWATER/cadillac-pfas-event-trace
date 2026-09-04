@@ -4141,6 +4141,47 @@ test("batch 92 reuses the exact Cadillac injection-well resolution while preserv
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 93 reuses the exact FY2017 Cadillac financial report without treating a budget variance as total revenue", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch93-fy2017-cadillac-financial-report-cross-reference-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.suppliedFiles, 1);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 182);
+  assert.equal(audit.stats.embeddedTextPages, 175);
+  assert.equal(audit.stats.pagesOCRCheckedOnGPU, 7);
+  assert.equal(audit.stats.ocrPagesWithText, 6);
+  assert.equal(audit.stats.manualReviewPages, 0);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+
+  const expected = audit.exactCrossReferences[0];
+  const catalog = catalogs.get(expected.catalog);
+  const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].id, expected.recordId);
+  assert.equal(matches[0].size, expected.size);
+  assert.equal(matches[0].pages, expected.pages);
+
+  const acrossCatalogs = [...catalogs.values()].flat().filter((item) => item.sha256 === expected.sha256);
+  assert.equal(acrossCatalogs.length, 1);
+  const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+  assert.equal(placed.length, 1);
+  assert.equal(placed[0].archiveId, "supplemental");
+  assert.match(expected.finding, /exceeded budget by \$307,683/i);
+  assert.match(expected.boundary, /not total leachate revenue/i);
+  assert.match(expected.boundary, /no customer invoice, receipt, payment, delivery date, time, hauler, gallons/i);
+  assert.match(audit.queueDecision, /No evidence-request item is closed/i);
+  assert.match(audit.evidentiaryBoundary, /does not establish total leachate revenue/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

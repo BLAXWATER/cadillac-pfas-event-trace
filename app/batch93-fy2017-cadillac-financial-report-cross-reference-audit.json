@@ -1,0 +1,45 @@
+{
+  "batch": "September 4, 2026 - FY2017 Cadillac financial-report reconciliation",
+  "stats": {
+    "suppliedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 182,
+    "embeddedTextPages": 175,
+    "pagesOCRCheckedOnGPU": 7,
+    "ocrPagesWithText": 6,
+    "manualReviewPages": 0,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "methods": [
+    "Calculated SHA-256, byte size and page count for the supplied PDF and compared its hash with every published catalog.",
+    "Reviewed all 182 pages; 175 pages supplied embedded text and seven sparse or image-only pages received GPU-requested OCR inspection.",
+    "Visually verified the cover and PDF page 25, including the management discussion identifying the fiscal-year landfill-leachate revenue variance.",
+    "Reused the byte-identical supplemental-archive record as a cross reference and created no filename-based duplicate."
+  ],
+  "exactCrossReferences": [
+    {
+      "suppliedName": "1043.pdf",
+      "catalog": "supplemental-documents.json",
+      "recordId": "146-6b4e98f4c779",
+      "canonicalName": "FY2017 City of Cadillac Comprehensive Annual Financial Report.pdf",
+      "asset": "/findings-docs/146-6b4e98f4c779.pdf",
+      "archiveId": "supplemental",
+      "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
+      "size": 3929791,
+      "pages": 182,
+      "finding": "PDF page 25 states that Cadillac received revenue for treatment of Wexford County Landfill leachate and that the revenue exceeded budget by $307,683 during the fiscal year ended June 30, 2017.",
+      "boundary": "$307,683 is the amount above budget, not total leachate revenue. The report provides aggregate audited fiscal context but no customer invoice, receipt, payment, delivery date, time, hauler, gallons, PFAS result or treatment-effectiveness measurement."
+    }
+  ],
+  "queueDecision": "No evidence-request item is closed. This exact report was already evaluated, placed in the supplemental archive and linked to the existing FY2017 audited-financial-report event. It does not supply per-load Wexford delivery history, delivery-linked invoices or account-ledger entries, an executed leachate-treatment agreement, the exact final delivery date, synchronized PFAS treatment sampling, certified 1140 Plett well construction, hydraulic tests or a site-specific groundwater-flow and source-to-receptor PFAS package.",
+  "queueResolution": {
+    "closedRequirementIds": []
+  },
+  "evidentiaryBoundary": "The audited report corroborates paid Wexford County Landfill leachate treatment during FY2017 and quantifies a $307,683 favorable revenue variance. It does not establish total leachate revenue, delivery-level quantities or timing, PFAS concentrations, PFAS removal, cessation timing or a PFAS migration pathway."
+}

@@ -143,7 +143,7 @@ test("normalizes every malformed pattern found in chronological source titles", 
 
 test("uses independent media handlers for document and image formats", async () => {
   const { sourceDocumentUrl, sourceDownloadUrl, sourceInlineUrl, sourceMediaKind, sourcePreviewUrl } = await vite.ssrLoadModule("/app/source-media.ts");
-  const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/f930d63655fe41489cb346522a9f841daaa8bd3b/public";
+  const repositoryAssetBase = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/8b4494682914892f5ac6d80d9017e6faa6575b19/public";
   const pinnedPdf = "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/006-d8496c7348a6.pdf";
 
   assert.equal(sourceMediaKind("PDF"), "pdf");
@@ -197,7 +197,7 @@ test("removes exactly the first period from every multi-period library filename"
     typeof record.name === "string" && (record.name.match(/\./g) ?? []).length > 1,
   );
 
-  assert.equal(records.length, 1580);
+  assert.equal(records.length, 1582);
   assert.equal(multiPeriodRecords.length, 196);
 
   for (const record of multiPeriodRecords) {

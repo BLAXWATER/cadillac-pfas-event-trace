@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 759);
+  assert.equal(localFiles, 760);
   assert.equal(externalFiles, 817);
 });
 
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 85);
+  assert.equal(helperReferences.length, 86);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1576);
+  assert.equal(recordCount, 1577);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1576);
+  assert.equal(records.length, 1577);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1418);
-  assert.equal(audit.stats.pdfPages, 20409);
+  assert.equal(audit.stats.pdfRecords, 1419);
+  assert.equal(audit.stats.pdfPages, 20497);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -383,20 +383,20 @@ test("Wexford archive OCRs every page and excludes only verified copies or non-p
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "wexford-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "wexford-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 114);
-  assert.equal(audit.stats.sourcePagesAndImagesReviewed, 1688);
+  assert.equal(audit.stats.sourceFilesReviewed, 116);
+  assert.equal(audit.stats.sourcePagesAndImagesReviewed, 1779);
   assert.equal(audit.stats.sourceEmbeddedTextPages + audit.stats.sourceOcrPages, audit.stats.sourcePagesAndImagesReviewed);
-  assert.equal(audit.stats.sourceOcrPagesWithText, 384);
+  assert.equal(audit.stats.sourceOcrPagesWithText, 424);
   assert.equal(audit.stats.sourceManualReviewPages, 8);
-  assert.equal(audit.stats.finalDistinctRecords, 103);
+  assert.equal(audit.stats.finalDistinctRecords, 104);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
-  assert.equal(audit.stats.recordsAddedThisPass, 84);
-  assert.equal(audit.stats.exactExistingRecordsReused, 16);
+  assert.equal(audit.stats.recordsAddedThisPass, 85);
+  assert.equal(audit.stats.exactExistingRecordsReused, 17);
   assert.equal(audit.stats.actualDuplicateGroupsRemoved, 5);
   assert.equal(audit.stats.actualDuplicateFilesRemoved, 5);
   assert.equal(audit.stats.nonPrimaryRecordsExcluded, 9);
   assert.equal(audit.stats.duplicateLikeLabelsRemoved, 12);
-  assert.equal(audit.stats.publishedPages, 1591);
+  assert.equal(audit.stats.publishedPages, 1679);
   assert.equal(audit.stats.latestRepeatIntakeFilesReviewed, 42);
   assert.equal(audit.stats.latestRepeatIntakePagesReviewed, 230);
   assert.equal(audit.stats.latestRepeatIntakeDistinctContentHashes, 41);
@@ -408,6 +408,49 @@ test("Wexford archive OCRs every page and excludes only verified copies or non-p
   assert.equal(catalog.some((row) => /Truth-First|TruthFirst/i.test(row.name)), false);
   assert.equal(catalog.some((row) => /^(?:duplicates?|copy)[-_ ]|~\d+|\(copy\s*\d+\)/i.test(row.name)), false);
   assert.equal(catalog.some((row) => /rev(?:ision)?\.?\s*1|_v2|version\s*2/i.test(row.name)), true);
+});
+
+test("batch 85 adds the February 2021 Wexford packet and reuses Construction Permit 4127", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch85-wexford-monitoring-correspondence-intake-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+  const pageSource = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.receivedFiles, 2);
+  assert.equal(audit.stats.receivedPages, 91);
+  assert.equal(audit.stats.gpuOcrPages, 40);
+  assert.equal(audit.stats.gpuOcrPagesWithText, 40);
+  assert.equal(audit.stats.recordsAdded, 1);
+  assert.equal(audit.stats.existingRecordsReusedAsCrossReferences, 1);
+  assert.equal(audit.stats.timelineEventsAdded, 1);
+  assert.equal(audit.stats.evidenceRequirementsClosed, 0);
+
+  const duplicate = audit.inputs.find((item) => item.classification.includes("cross-reference"));
+  const duplicateCatalog = catalogs.get(duplicate.canonicalCatalog);
+  const duplicateMatches = duplicateCatalog.filter((item) => item.sha256 === duplicate.sha256);
+  assert.equal(duplicateMatches.length, 1);
+  assert.equal(duplicateMatches[0].id, duplicate.canonicalRecordId);
+
+  const added = audit.inputs.find((item) => item.recordId);
+  const addedCatalog = catalogs.get(added.catalog);
+  const addedMatches = addedCatalog.filter((item) => item.sha256 === added.sha256);
+  assert.equal(addedMatches.length, 1);
+  assert.equal(addedMatches[0].id, added.recordId);
+  assert.equal(addedMatches[0].url, added.asset);
+  assert.equal(addedMatches[0].pages, added.pages);
+  assert.equal(addedMatches[0].size, added.size);
+  const bytes = await readFile(path.join(publicDirectory, added.asset.replace(/^\//, "")));
+  assert.equal(bytes.length, added.size);
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), added.sha256);
+  assert.ok(previewManifest[added.asset]);
+
+  const placed = placement.records.find((item) => item.id === added.recordId);
+  assert.ok(placed);
+  assert.equal(placed.archiveId, "wexford");
+  assert.match(pageSource, /EGLE accepts Wexford's 2020 long-term monitoring report/);
+  assert.match(pageSource, /January 22 agency-letter date/);
+  assert.match(audit.evidentiaryBoundary, /does not include the underlying 2020 monitoring data/i);
 });
 
 test("local public assets contain no byte-identical redundant copies", async () => {

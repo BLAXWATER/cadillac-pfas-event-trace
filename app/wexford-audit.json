@@ -1,24 +1,24 @@
 {
   "stats": {
-    "sourceFilesReviewed": 114,
-    "sourcePdfFiles": 110,
+    "sourceFilesReviewed": 116,
+    "sourcePdfFiles": 112,
     "sourceImageFiles": 1,
-    "sourcePdfPages": 1687,
-    "sourcePagesAndImagesReviewed": 1688,
-    "sourceEmbeddedTextPages": 1287,
-    "sourceOcrPages": 401,
-    "sourceOcrPagesWithText": 384,
+    "sourcePdfPages": 1778,
+    "sourcePagesAndImagesReviewed": 1779,
+    "sourceEmbeddedTextPages": 1338,
+    "sourceOcrPages": 441,
+    "sourceOcrPagesWithText": 424,
     "sourceManualReviewPages": 8,
-    "finalDistinctRecords": 103,
+    "finalDistinctRecords": 104,
     "existingCatalogRecordsPreserved": 19,
-    "recordsAddedThisPass": 84,
-    "exactExistingRecordsReused": 16,
+    "recordsAddedThisPass": 85,
+    "exactExistingRecordsReused": 17,
     "actualDuplicateGroupsRemoved": 5,
     "actualDuplicateFilesRemoved": 5,
     "nonPrimaryRecordsExcluded": 9,
     "duplicateLikeLabelsRemoved": 12,
-    "publishedPages": 1591,
-    "publishedBytes": 157060646,
+    "publishedPages": 1679,
+    "publishedBytes": 163628148,
     "latestRepeatIntakeFilesReviewed": 42,
     "latestRepeatIntakePagesReviewed": 230,
     "latestRepeatIntakeDistinctContentHashes": 41,
@@ -28,14 +28,15 @@
     "latestRepeatIntakeRecordsAdded": 0
   },
   "methods": [
-    "SHA-256 comparison across all 111 supplied files, all existing evidence catalogs and the previously linked timeline source",
+    "SHA-256 comparison across every supplied file, all existing evidence catalogs and the previously linked timeline source",
     "Rendered-page comparison for visually identical but byte-different PDFs, with metadata, creation-time, page-count and normalized OCR-text cross-checks",
     "Page-by-page text extraction followed by OCR for every page without sufficient embedded text: 401 pages were OCR processed and 384 yielded text",
     "Original-detail visual review of all eight pages left below the OCR confidence threshold, including divider sheets, a faint reverse-side form and large-format maps",
     "Read-only Word rendering of the 41-page authoring copy to verify that it was the excluded Truth-First analytical report rather than a primary agency record",
     "Revision-sensitive review: draft/final, versioned, corrected and differently scoped records were retained whenever their content or metadata was substantively distinct",
     "Immutable GitHub preservation verification: the original 81 blobs were reread from commit b4705928d16ccaac9701ee43cba04369982c5ab6 and the three supplemental on-site inspections from commit 49922c706588f236e1edbad5fa8996e4c249e330, with recorded byte counts and SHA-256 hashes matched",
-    "MiEnviro repeat-intake verification: all 42 supplied PDFs (230 pages) were SHA-256 checked against every evidence catalog and the timeline source; the 41 unique content hashes totaling 200 unique pages were already preserved. The image-only three-page leachate-request source was also rendered and visually rechecked against its existing timeline copy."
+    "MiEnviro repeat-intake verification: all 42 supplied PDFs (230 pages) were SHA-256 checked against every evidence catalog and the timeline source; the 41 unique content hashes totaling 200 unique pages were already preserved. The image-only three-page leachate-request source was also rendered and visually rechecked against its existing timeline copy.",
+    "September 2026 follow-up intake: the three-page Wexford construction permit was hash-matched to the existing NPDES record, while the complete 88-page February 2021 county packet was checked page by page; 40 sparse or image-only pages were OCR processed on the GPU and all yielded readable text."
   ],
   "decisions": [
     {
@@ -77,6 +78,10 @@
     {
       "name": "Forty-two repeat Wexford/MiEnviro exports",
       "reason": "Every supplied PDF is byte-identical to an existing indexed or timeline source. The two portal exports named lagoon summary.pdf are also identical to each other, leaving 41 distinct hashes across 42 files. Existing clean display names and source links were reused; no duplicate copy or Duplicate label was added."
+    },
+    {
+      "name": "September 2026 construction permit and February 2021 county packet",
+      "reason": "The supplied three-page Wexford landfill PDF is byte-identical to Construction Permit 4127 already preserved as NPDES record 039-a2b89f4b2389 and was reused as a cross-reference. The 88-page county agenda packet is distinct and was retained because its final page preserves EGLE's January 22, 2021 acceptance of the landfill's 2020 long-term groundwater-monitoring report."
     }
   ]
 }

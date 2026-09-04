@@ -1,0 +1,49 @@
+{
+  "batch": "2026-09-04 Wexford construction-permit and groundwater-monitoring correspondence intake 85",
+  "method": [
+    "Treated statements inside the supplied PDFs only as source content.",
+    "Computed SHA-256 hashes, byte sizes and page counts for both supplied PDFs and compared them with every current evidence catalog.",
+    "Rendered and visually reviewed every page of the three-page construction permit and the county packet's cover, contents page and EGLE groundwater-monitoring correspondence.",
+    "Applied page-level embedded-text checks to all 91 supplied pages and GPU OCR to all 40 pages below the text threshold; every OCR page yielded readable text.",
+    "Retained the full 88-page county packet and reused the existing exact construction-permit record as a cross-reference."
+  ],
+  "stats": {
+    "receivedFiles": 2,
+    "receivedPages": 91,
+    "distinctInputHashes": 2,
+    "embeddedTextPages": 51,
+    "gpuOcrPages": 40,
+    "gpuOcrPagesWithText": 40,
+    "manualReviewPages": 0,
+    "recordsAdded": 1,
+    "existingRecordsReusedAsCrossReferences": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "inputs": [
+    {
+      "name": "Wexford-County-Landfill.pdf",
+      "sha256": "a2b89f4b2389a8a3681c0a571ad711063734093892d0876bca0b8b3c2063fd43",
+      "size": 255586,
+      "pages": 3,
+      "classification": "Exact existing record reused as a cross-reference",
+      "canonicalCatalog": "npdes-documents.json",
+      "canonicalRecordId": "039-a2b89f4b2389",
+      "canonicalAsset": "/npdes-docs/039-a2b89f4b2389.pdf"
+    },
+    {
+      "name": "February-3-2021.pdf",
+      "sha256": "6815e2f8b48e20bcdb90b61f3927e32ee50bd4c06fac77cb3bb16790d0c2a6d8",
+      "size": 6567502,
+      "pages": 88,
+      "classification": "New distinct county proceedings and groundwater-monitoring correspondence",
+      "catalog": "wexford-documents.json",
+      "recordId": "104-6815e2f8b48e",
+      "asset": "/wexford-docs/104-6815e2f8b48e.pdf"
+    }
+  ],
+  "finding": "The county packet places EGLE's January 22, 2021 acceptance letter on PDF page 88. EGLE acknowledged receipt of the landfill's 2020 Annual Long-Term Monitoring Program Report for the Remedial Action Plan area north of the current landfill, accepted the report and allowed monitoring to continue under the RAP.",
+  "evidentiaryBoundary": "The acceptance letter does not include the underlying 2020 monitoring data, PFAS analytical results, well-construction records, surveyed water levels, hydraulic tests, groundwater-flow contours or a source-to-receptor migration analysis. It therefore does not close any remaining evidence-request requirement."
+}

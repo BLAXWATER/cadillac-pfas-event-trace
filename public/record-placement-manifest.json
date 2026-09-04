@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1576,
+  "recordCount": 1577,
   "archiveCount": 13,
   "archives": [
     {
@@ -50,7 +50,7 @@
       "label": "Wexford landfill",
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
-      "count": 103
+      "count": 104
     },
     {
       "archiveId": "compliance",
@@ -17431,6 +17431,17 @@
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/wexford-docs/103-5114323584bd.pdf",
       "sha256": "5114323584bd9f2b98c09145c4c1941ba7beb059abdc4b2f8a7b0f3f76e4e4b4",
       "size": 102694
+    },
+    {
+      "id": "104-6815e2f8b48e",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "Wexford County Board Agenda - February 3, 2021.pdf",
+      "url": "/wexford-docs/104-6815e2f8b48e.pdf",
+      "sha256": "6815e2f8b48e20bcdb90b61f3927e32ee50bd4c06fac77cb3bb16790d0c2a6d8",
+      "size": 6567502
     }
   ]
 }

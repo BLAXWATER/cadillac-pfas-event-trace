@@ -1234,5 +1234,17 @@
     "size": 102694,
     "sha256": "5114323584bd9f2b98c09145c4c1941ba7beb059abdc4b2f8a7b0f3f76e4e4b4",
     "description": "Air Quality Division on-site inspection record for Wexford County Landfill, including gas-collection and leachate-evaporation operating context. It is distinct from the one-page compliance-evaluation record and is not characterized as a PFAS sampling result."
+  },
+  {
+    "id": "104-6815e2f8b48e",
+    "name": "Wexford County Board Agenda - February 3, 2021.pdf",
+    "url": "/wexford-docs/104-6815e2f8b48e.pdf",
+    "year": "2021",
+    "type": "County proceedings and groundwater-monitoring correspondence",
+    "format": "PDF",
+    "pages": 88,
+    "size": 6567502,
+    "sha256": "6815e2f8b48e20bcdb90b61f3927e32ee50bd4c06fac77cb3bb16790d0c2a6d8",
+    "description": "Eighty-eight-page Wexford County Board agenda packet for February 3, 2021. Correspondence on PDF page 88 is EGLE's January 22, 2021 acceptance of the landfill's 2020 Annual Long-Term Monitoring Program Report for the Remedial Action Plan area north of the current landfill. The letter authorizes monitoring to continue under the RAP but does not include the underlying monitoring data, PFAS results or a Plett Road migration analysis."
   }
 ]

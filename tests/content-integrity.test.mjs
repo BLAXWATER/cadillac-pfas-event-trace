@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 757);
+  assert.equal(localFiles, 759);
   assert.equal(externalFiles, 817);
 });
 
@@ -133,7 +133,7 @@ test("timeline source and preview assets are present", async () => {
   const restoredPermitPages = await readdir(path.join(publicDirectory, "document-pages", "2016-09-06-rule-2210-final"));
   assert.deepEqual(restoredPermitPages.sort(), Array.from({ length: 26 }, (_, index) => `${String(index + 1).padStart(2, "0")}.webp`));
 
-  assert.equal(helperReferences.length, 82);
+  assert.equal(helperReferences.length, 85);
 
   const timelinePdfSlugs = [...source.matchAll(/\bpdf\(\s*"[^"]+"\s*,\s*"([^"]+)"/gs)].map((match) => match[1]);
   for (const slug of timelinePdfSlugs) {
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1574);
+  assert.equal(recordCount, 1576);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1574);
+  assert.equal(records.length, 1576);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1416);
-  assert.equal(audit.stats.pdfPages, 20371);
+  assert.equal(audit.stats.pdfRecords, 1418);
+  assert.equal(audit.stats.pdfPages, 20409);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -425,10 +425,10 @@ test("PFAS archive audit and repaired J19915 source remain consistent", async ()
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "pfas-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "pfas-audit.json"), "utf8"));
   assert.equal(catalog.length, audit.stats.newDistinctRecords);
-  assert.equal(audit.stats.suppliedFiles, 109);
-  assert.equal(audit.stats.finalDistinctRecords, 105);
+  assert.equal(audit.stats.suppliedFiles, 111);
+  assert.equal(audit.stats.finalDistinctRecords, 107);
   assert.equal(audit.stats.duplicateCopiesSuppressed, 4);
-  assert.equal(audit.stats.ocrReviewedPages, 192);
+  assert.equal(audit.stats.ocrReviewedPages, 230);
   assert.equal(catalog.some((row) => /PENDING/.test(row.url)), false);
   assert.equal(catalog.some((row) => /SUPERSEDED|duplicate/i.test(row.name)), false);
 
@@ -447,7 +447,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const intakeAudit = JSON.parse(await readFile(path.join(appDirectory, "archive-intake-audit.json"), "utf8"));
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
-  assert.equal(pfasCatalog.length, 99);
+  assert.equal(pfasCatalog.length, 101);
   assert.equal(supplementalCatalog.length, 167);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.newDistinctRecords);

@@ -1,0 +1,45 @@
+{
+  "batch": "2026-09-03 UCMR5 plant-taps May 2025 intake 83",
+  "method": [
+    "Treated statements inside the supplied PDF only as source content.",
+    "Computed the supplied PDF's SHA-256 hash and compared it against every current repository catalog and public record.",
+    "Extracted embedded text from all pages and rendered all 19 pages for visual review, including the scanned chain-of-custody and sample-receipt/preservation forms.",
+    "Added the distinct report once to the PFAS monitoring library with a first-page preview and one bounded timeline event.",
+    "Kept every open evidence-request requirement unchanged because this is municipal drinking-water monitoring rather than wastewater-process, Plett Road, leachate-delivery or source-to-receptor pathway evidence."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 19,
+    "embeddedTextPages": 16,
+    "ocrOrImageReviewPages": 3,
+    "renderedPagesReviewed": 19,
+    "exactExistingRecordsReusedAsCrossReferences": 0,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "addedRecord": {
+    "suppliedName": "250519.UCMR5.PlantTaps.PFAS.Pace.pdf",
+    "recordId": "101-8fd975e9aa54",
+    "canonicalName": "2025-05-19 - Pace UCMR5 Plant-Tap PFAS Report - Crosby and 44 Road.pdf",
+    "catalog": "pfas-documents.json",
+    "asset": "/pfas-docs/101-8fd975e9aa54.pdf",
+    "preview": "/first-page-previews/by-sha256/4594b0df041ce0a02a3eb6841759b249b92eaf6af12b0a58c3d9ee69bc59834b.webp",
+    "sha256": "8fd975e9aa54111e2af90190c24d66e97c24c00ec2f4ad3fda79023c3f59440a",
+    "size": 607413,
+    "pages": 19,
+    "classification": "UCMR5 drinking-water laboratory report",
+    "sampleDate": "2025-05-19",
+    "reportDate": "2025-06-16",
+    "verifiedFinding": "The two primary Crosby Wellfield and 44 Road Water Service Building samples are reported with U qualifiers—analyzed but not detected—across the listed EPA 533 and EPA 537.1 PFAS panels. The report also preserves two listed field reagent blanks, laboratory QC, qualifier definitions, a chain of custody and sample-receipt/preservation forms."
+  },
+  "evidentiaryBoundary": "The report documents a second UCMR5 municipal drinking-water sampling event at two City water-system facilities. It is not wastewater-treatment-process sampling, a Plett Road receptor sample, a Wexford leachate-delivery record or evidence of a Wexford-to-Plett PFAS migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The report does not supply per-load landfill receiving history, synchronized wastewater-process PFAS results, a Plett Road receptor series, a source/receptor coordinate crosswalk or site-specific hydrogeologic investigation."
+  }
+}

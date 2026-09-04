@@ -1,0 +1,66 @@
+{
+  "batch": "2026-09-03 HP1 asset-management submission reconciliation 84",
+  "method": [
+    "Treated statements inside the supplied PDF only as source content.",
+    "Computed the supplied PDF's SHA-256 hash and compared its submission ID, version, fields, attachment, status history, metadata, extracted text and rendered pages with every current repository record.",
+    "Rendered and visually reviewed all three supplied pages and the complete one-page canonical copy of record.",
+    "Retained the contemporaneous digitally signed copy of record and classified the supplied 2026 export as a later repagination of the same 2020 submission rather than a new evidentiary record.",
+    "Corrected the canonical catalog label to identify the submission as the Asset Management Annual Report while preserving the form title and submission details in its description."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "suppliedPdfPagesReviewed": 3,
+    "canonicalPdfPagesReviewed": 1,
+    "renderedPagesReviewed": 4,
+    "existingRecordsReusedAsCrossReferences": 1,
+    "catalogMetadataCorrections": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "suppliedRecord": {
+    "name": "HP1-NF8B-MDEG6-v1-SubmissionDownload.pdf",
+    "sha256": "2428f855ca08b1e29ff29e1b7ed8e6e9ec34584a9efee0ac5cff9f3b764c441e",
+    "size": 40241,
+    "pages": 3,
+    "created": "2026-08-17 09:01:41 EDT",
+    "classification": "Later portal re-export of an existing submission"
+  },
+  "canonicalRecord": {
+    "catalog": "form-submission-documents.json",
+    "recordId": "form-submission-038-f054ae329624",
+    "name": "2020-07-31 - Asset Management Annual Report Submission HP1-NF8B-MDEG6 v1.pdf",
+    "asset": "/form-submission-docs/form-submission-038-f054ae329624.pdf",
+    "sha256": "f054ae32962452794f7b76f2ebc74de73eefd33e336e73c5d53089339c587370",
+    "size": 33809,
+    "pages": 1,
+    "created": "2020-07-31 14:00:00 EDT",
+    "classification": "Contemporaneous digitally signed MiWaters copy of record"
+  },
+  "comparison": {
+    "sameSubmissionFacts": [
+      "Submission ID HP1-NF8B-MDEG6, version 1",
+      "Submission alias Asset Management Annual Report",
+      "Cadillac WWTP and permit MI0020257",
+      "2020 wastewater asset-management report attachment",
+      "July 31, 2020 draft and submitted status history"
+    ],
+    "suppliedExportOnly": [
+      "Table of contents",
+      "Generic certification-statement page",
+      "Attachment context column that repeats the file's role"
+    ],
+    "canonicalCopyOnly": [
+      "Contemporaneous digital-signature block marked Copy Of Record",
+      "July 31, 2020 signed timestamp"
+    ],
+    "decision": "The later export is not published separately because it does not add a distinct submission, version, attachment, status, event or evidentiary fact."
+  },
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "This is an asset-management submission wrapper and does not provide the outstanding transaction-level leachate, synchronized treatment, well-construction, water-level or source-to-receptor evidence."
+  }
+}

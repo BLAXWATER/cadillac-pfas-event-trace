@@ -64,6 +64,16 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/pfas-docs/100-cea8f3321719.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
+  ...import.meta.glob("../public/pfas-docs/101-8fd975e9aa54.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/findings-docs/122-e9b5255695c3.pdf", {
     eager: true,
     import: "default",

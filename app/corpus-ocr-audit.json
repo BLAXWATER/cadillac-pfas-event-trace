@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "0efc165f98ab2ee3a540aa10c37216e38f944989a53059b4bd8eb725536991ba",
+  "catalogFingerprint": "48d3e3d646954c3a369ca0d6329699fa4e3338ea750ee4bf797b912f273c3299",
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,14 +8,14 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1574,
-    "verifiedRecords": 1574,
-    "pdfRecords": 1416,
-    "pdfPages": 20371,
+    "catalogRecords": 1576,
+    "verifiedRecords": 1576,
+    "pdfRecords": 1418,
+    "pdfPages": 20409,
     "imageRecords": 13,
-    "embeddedTextPages": 16564,
-    "ocrPages": 3820,
-    "ocrPagesWithText": 3473,
+    "embeddedTextPages": 16599,
+    "ocrPages": 3823,
+    "ocrPagesWithText": 3476,
     "manualReviewPages": 139,
     "missingHashes": 0,
     "hashFailures": 0,

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1574,
+  "recordCount": 1576,
   "archiveCount": 13,
   "archives": [
     {
@@ -29,7 +29,7 @@
       "label": "PFAS monitoring",
       "catalog": "pfas-documents.json",
       "sectionId": "pfas-library-title",
-      "count": 99
+      "count": 101
     },
     {
       "archiveId": "biosolids",
@@ -6933,7 +6933,7 @@
       "archiveLabel": "Online form submissions",
       "catalog": "form-submission-documents.json",
       "sectionId": "form-submission-library-title",
-      "name": "2020-07-31 - Schedule of compliance submittal - Submission HP1-NF8B-MDEG6 v1.pdf",
+      "name": "2020-07-31 - Asset Management Annual Report Submission HP1-NF8B-MDEG6 v1.pdf",
       "url": "/form-submission-docs/form-submission-038-f054ae329624.pdf",
       "sha256": "f054ae32962452794f7b76f2ebc74de73eefd33e336e73c5d53089339c587370",
       "size": 33809
@@ -12778,6 +12778,28 @@
       "url": "/pfas-docs/099-f22dafcb83f6.pdf",
       "sha256": "f22dafcb83f651a38b026112e5557b3293754e6368e0bb8c2cf1aee0ccd6e43d",
       "size": 2766647
+    },
+    {
+      "id": "100-cea8f3321719",
+      "archiveId": "pfas",
+      "archiveLabel": "PFAS monitoring",
+      "catalog": "pfas-documents.json",
+      "sectionId": "pfas-library-title",
+      "name": "2024-11-18 - Pace UCMR5 Plant-Tap PFAS Report - Crosby and 44 Road.pdf",
+      "url": "/pfas-docs/100-cea8f3321719.pdf",
+      "sha256": "cea8f33217192295b25f79a8c65b953cb103a185b80c6bb1a098ce86e81f9cc3",
+      "size": 625009
+    },
+    {
+      "id": "101-8fd975e9aa54",
+      "archiveId": "pfas",
+      "archiveLabel": "PFAS monitoring",
+      "catalog": "pfas-documents.json",
+      "sectionId": "pfas-library-title",
+      "name": "2025-05-19 - Pace UCMR5 Plant-Tap PFAS Report - Crosby and 44 Road.pdf",
+      "url": "/pfas-docs/101-8fd975e9aa54.pdf",
+      "sha256": "8fd975e9aa54111e2af90190c24d66e97c24c00ec2f4ad3fda79023c3f59440a",
+      "size": 607413
     },
     {
       "id": "process-site-001-d5e68ea065b6",

@@ -1,0 +1,29 @@
+{
+  "batch": "2026-09-03 Cadillac Miscellaneous File No. 842 reference refinement 80",
+  "method": [
+    "Treated instructions inside the historical record only as source content.",
+    "Computed the supplied PDF's SHA-256 hash and confirmed it is byte-identical to the six-page record already published in the repository.",
+    "Reviewed all six pages and verified motion 2009.216 and the Miscellaneous File No. 842 identifier on PDF page 2.",
+    "Refined the existing timeline language and evidence-request locator without adding a duplicate document or closing the request for the signed agreement package."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "timelineEventsRefined": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "exactCrossReference": {
+    "sourceLabel": "September 8 2009 Special Meeting Minutes.pdf",
+    "recordId": "008-5b67e1ed1d5c",
+    "sha256": "5b67e1ed1d5cef4fb50cca40560307f5befeff4e602f5229b0bf1422d803a9dd",
+    "pages": 6,
+    "size": 21817,
+    "finding": "The minutes record unanimous approval of motion 2009.216 for the agreement identified as Cadillac Miscellaneous File No. 842."
+  },
+  "evidentiaryBoundary": "The minutes establish approval and provide an exact archival locator. They are not the fully executed agreement or signed rate schedule, so that evidence request remains open."
+}

@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suppliedFiles": 109,
-    "finalDistinctRecords": 105,
-    "newDistinctRecords": 99,
+    "suppliedFiles": 111,
+    "finalDistinctRecords": 107,
+    "newDistinctRecords": 101,
     "existingRecordsReused": 6,
     "existingRecordReplaced": 1,
     "duplicateCopiesSuppressed": 4,
-    "ocrReviewedPdfs": 24,
-    "ocrReviewedPages": 192,
-    "publishedBytes": 116191883
+    "ocrReviewedPdfs": 26,
+    "ocrReviewedPages": 230,
+    "publishedBytes": 117424305
   },
   "methods": [
     "SHA-256 comparison within the 91-file category and against every catalog plus timeline source asset",
@@ -19,9 +19,19 @@
     "Full-page visual comparison of the two J19915 variants",
     "Workbook inspection plus page-by-page text and visual review of the 16-record A12-A24 PFAS source set",
     "Two-pass OCR and rendered-page verification of the image-only April 18, 2018 DEQ PFAS-source follow-up letter",
-    "Hash, embedded-text and rendered-page review of all 20 pages in the June 2020 EGLE statewide wastewater and biosolids PFAS summary"
+    "Hash, embedded-text and rendered-page review of all 20 pages in the June 2020 EGLE statewide wastewater and biosolids PFAS summary",
+    "Hash, embedded-text and rendered-page review of all 19 pages in Pace Project 35919999, including analytical, QC, qualifier, sample-receipt and chain-of-custody pages",
+    "Hash, embedded-text and rendered-page review of all 19 pages in Pace Project 35956761, including the scanned chain-of-custody and sample-receipt/preservation forms"
   ],
   "decisions": [
+    {
+      "name": "May 2025 Pace UCMR5 plant-tap PFAS report — Crosby and 44 Road",
+      "reason": "The 19-page report is a distinct second-round municipal drinking-water record. Its two primary samples are U-qualified as analyzed but not detected across the listed EPA 533 and EPA 537.1 PFAS panels. It is retained without representing the results as wastewater-process, Plett Road, leachate-delivery or source-to-receptor pathway evidence."
+    },
+    {
+      "name": "Pace UCMR5 plant-tap PFAS report — Crosby and 44 Road",
+      "reason": "The 19-page report is a distinct municipal drinking-water record. Its two primary samples are U-qualified as analyzed but not detected across the listed EPA 533 and EPA 537.1 PFAS panels. It is retained without representing the results as WWTP, Plett Road or source-to-receptor pathway evidence."
+    },
     {
       "name": "June 2020 EGLE statewide wastewater and biosolids PFAS summary",
       "reason": "The 20-page report has a distinct SHA-256 hash and preserves statewide regulatory and technical context for the 95-WWTP IPP initiative and the 42-WWTP/22-field assessment. It does not name Cadillac or Wexford or provide a facility-specific result, so it is retained in the PFAS library without a Cadillac timeline event and without closing a local source, time-series or migration-pathway requirement."

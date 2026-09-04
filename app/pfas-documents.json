@@ -1293,5 +1293,31 @@
     "size": 2766647,
     "sha256": "f22dafcb83f651a38b026112e5557b3293754e6368e0bb8c2cf1aee0ccd6e43d",
     "description": "June 2020 EGLE summary of the 2018 Industrial Pretreatment Program PFAS initiative at 95 municipal WWTPs and statewide sampling of 42 WWTPs and 22 biosolids land-application sites. It reports PFOS as the principal compliance driver and discusses industrial-source controls, influent/effluent/residual distributions and field screening. The report does not identify Cadillac or Wexford by name or provide a Cadillac-specific result, so it is retained as statewide agency context rather than local source, violation or migration-pathway proof."
+  },
+  {
+    "id": "100-cea8f3321719",
+    "name": "2024-11-18 - Pace UCMR5 Plant-Tap PFAS Report - Crosby and 44 Road.pdf",
+    "url": "/pfas-docs/100-cea8f3321719.pdf",
+    "year": "2024",
+    "category": "PFAS monitoring",
+    "type": "UCMR5 drinking-water laboratory report",
+    "format": "PDF",
+    "pages": 19,
+    "size": 625009,
+    "sha256": "cea8f33217192295b25f79a8c65b953cb103a185b80c6bb1a098ce86e81f9cc3",
+    "description": "Pace Project 35919999 for UCMR5 samples collected November 18, 2024 at the Crosby Wellfield Service Building and 44 Road Water Service Building. The two primary drinking-water samples are reported with U qualifiers—analyzed but not detected—across the listed EPA 533 and EPA 537.1 PFAS panels. The 19-page report includes sample summaries, analytical and QC pages, qualifier definitions and chain-of-custody/sample-receipt records listing two field reagent blanks. It is municipal drinking-water monitoring and does not contain wastewater-treatment-process samples, a Plett Road receptor sample or source-to-receptor pathway proof."
+  },
+  {
+    "id": "101-8fd975e9aa54",
+    "name": "2025-05-19 - Pace UCMR5 Plant-Tap PFAS Report - Crosby and 44 Road.pdf",
+    "url": "/pfas-docs/101-8fd975e9aa54.pdf",
+    "year": "2025",
+    "category": "PFAS monitoring",
+    "type": "UCMR5 drinking-water laboratory report",
+    "format": "PDF",
+    "pages": 19,
+    "size": 607413,
+    "sha256": "8fd975e9aa54111e2af90190c24d66e97c24c00ec2f4ad3fda79023c3f59440a",
+    "description": "Pace Project 35956761 for the second UCMR5 sampling event at the Crosby Wellfield Service Building and 44 Road Water Service Building, collected May 19, 2025. The two primary drinking-water samples are reported with U qualifiers—analyzed but not detected—across the listed EPA 533 and EPA 537.1 PFAS panels. The 19-page report includes sample summaries, analytical and QC pages, qualifier definitions, a chain-of-custody record listing two field reagent blanks and sample-receipt/preservation forms. It is municipal drinking-water monitoring and does not contain wastewater-treatment-process samples, a Plett Road receptor sample, Wexford leachate-delivery records or source-to-receptor pathway proof."
   }
 ]

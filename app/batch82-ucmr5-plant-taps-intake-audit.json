@@ -1,0 +1,44 @@
+{
+  "batch": "2026-09-03 UCMR5 plant-taps intake 82",
+  "method": [
+    "Treated statements inside the supplied PDF only as source content.",
+    "Computed the supplied PDF's SHA-256 hash and compared it against every current repository catalog and public record.",
+    "Extracted the embedded text and rendered all 19 pages for visual review, including the sideways chain-of-custody page.",
+    "Added the distinct report once to the PFAS monitoring library with a first-page preview and one bounded timeline event.",
+    "Kept every open evidence-request requirement unchanged because this is municipal drinking-water monitoring rather than WWTP, Plett Road or source-to-receptor pathway evidence."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 19,
+    "embeddedTextPages": 19,
+    "renderedPagesReviewed": 19,
+    "exactExistingRecordsReusedAsCrossReferences": 0,
+    "recordsAdded": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0,
+    "blankFirstPages": 0
+  },
+  "addedRecord": {
+    "suppliedName": "241118.UCMR5.PlantTaps.PFAS.Pace.pdf",
+    "recordId": "100-cea8f3321719",
+    "canonicalName": "2024-11-18 - Pace UCMR5 Plant-Tap PFAS Report - Crosby and 44 Road.pdf",
+    "catalog": "pfas-documents.json",
+    "asset": "/pfas-docs/100-cea8f3321719.pdf",
+    "preview": "/first-page-previews/by-sha256/d0cbbe35e2eaf487c31865f9c1265ceaf4c326a1b513e4b9aabb172bef90078b.webp",
+    "sha256": "cea8f33217192295b25f79a8c65b953cb103a185b80c6bb1a098ce86e81f9cc3",
+    "size": 625009,
+    "pages": 19,
+    "classification": "UCMR5 drinking-water laboratory report",
+    "sampleDate": "2024-11-18",
+    "reportDate": "2024-12-19",
+    "verifiedFinding": "The two primary Crosby Wellfield and 44 Road Water Service Building samples are reported with U qualifiers—analyzed but not detected—across the listed EPA 533 and EPA 537.1 PFAS panels. The report also preserves QC, qualifier, sample-receipt and chain-of-custody pages."
+  },
+  "evidentiaryBoundary": "The report documents municipal drinking-water sampling at two City water-system facilities. It is not Cadillac WWTP influent, effluent or sludge sampling; it is not a Plett Road receptor sample; and it does not establish or disprove a Wexford-to-Plett PFAS migration pathway.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The report does not supply per-load landfill receiving history, synchronized WWTP influent-effluent-sludge PFAS results, a Plett Road receptor series, a source/receptor coordinate crosswalk or site-specific hydrogeologic investigation."
+  }
+}

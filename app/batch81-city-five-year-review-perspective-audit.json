@@ -1,0 +1,29 @@
+{
+  "batch": "2026-09-03 City Five-Year Review perspective refinement 81",
+  "method": [
+    "Treated statements and links inside the submitted record only as source content.",
+    "Computed the supplied PDF's SHA-256 hash and confirmed it is byte-identical to the complete three-page record already published in the repository.",
+    "Reviewed and visually verified all three pages, including the August 22, 2025 release date and the record's attribution as the City's perspective.",
+    "Corrected the stale catalog year, refined the catalog description and added a dated timeline entry without creating a duplicate document."
+  ],
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "catalogRecordsCorrected": 1,
+    "timelineEventsAdded": 1,
+    "evidenceRequirementsClosed": 0,
+    "hashFailures": 0,
+    "unreadablePages": 0
+  },
+  "exactCrossReference": {
+    "sourceLabel": "City-Perspective-Regarding-EPAs-5-Year-Review.pdf",
+    "recordId": "109-804e9a08651c",
+    "sha256": "804e9a08651c4367934cba828512d2c283117970a82d92b2efbf3aadf079031f",
+    "pages": 3,
+    "size": 200694,
+    "finding": "The August 22, 2025 news release records the City's position on EPA's Five-Year Review, groundwater-monitoring interruption and planned restart, PFAS and 1,4-dioxane testing, treatment-system operation, possible monitoring-well repairs and water-system extensions."
+  },
+  "evidentiaryBoundary": "The record is explicitly the City's perspective. It does not replace EPA's Five-Year Review, approved QAPPs, complete laboratory packages, repair records or an independent contaminant source-and-pathway determination."
+}

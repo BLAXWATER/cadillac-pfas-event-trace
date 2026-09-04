@@ -4249,6 +4249,54 @@ test("batch 94 reconciles the MiEnviro index, reuses 22 exact records and adds o
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 95 reuses the two dated J17646 portal copies without inventing separate reports or events", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch95-j17646-dated-portal-copy-reconciliation-audit.json"), "utf8"));
+  const catalogs = await loadCatalogs();
+  const page = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
+
+  assert.equal(audit.stats.suppliedFiles, 2);
+  assert.equal(audit.stats.distinctInputHashes, 1);
+  assert.equal(audit.stats.pdfPagesReviewed, 46);
+  assert.equal(audit.stats.uniquePdfPages, 23);
+  assert.equal(audit.stats.embeddedTextPages, 40);
+  assert.equal(audit.stats.gpuRequestedOcrPages, 6);
+  assert.equal(audit.stats.ocrPagesWithText, 6);
+  assert.equal(audit.stats.manualReviewPages, 0);
+  assert.equal(audit.stats.exactDuplicateGroupsWithinInput, 1);
+  assert.equal(audit.stats.exactExistingTimelineSourcesReusedAsCrossReferences, 2);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.sizeFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+  assert.equal(audit.suppliedCopies.length, 2);
+  assert.equal(new Set(audit.suppliedCopies.map((item) => item.sha256)).size, 1);
+  assert.equal(new Set(audit.suppliedCopies.map((item) => item.portalSystemId)).size, 2);
+
+  for (const supplied of audit.suppliedCopies) {
+    assert.equal(supplied.sha256, audit.canonicalSource.sha256);
+    assert.equal(supplied.size, audit.canonicalSource.size);
+    assert.equal(supplied.pages, audit.canonicalSource.pages);
+    assert.match(supplied.classification, /Exact SHA-256 match/i);
+  }
+
+  const canonicalPath = path.join(publicDirectory, ...audit.canonicalSource.asset.slice(1).split("/"));
+  const canonicalBytes = await readFile(canonicalPath);
+  assert.equal(canonicalBytes.length, audit.canonicalSource.size);
+  assert.equal(createHash("sha256").update(canonicalBytes).digest("hex"), audit.canonicalSource.sha256);
+  const catalogMatches = catalogs.flatMap((catalog) => catalog.rows).filter((item) => item.sha256 === audit.canonicalSource.sha256);
+  assert.equal(catalogMatches.length, 0, "timeline-only source must not be duplicated in a library catalog");
+  assert.equal((page.match(/2018-10-03-j17646-leachate/g) ?? []).length, 1);
+  assert.match(audit.canonicalSource.finding, /PFOS 120 ng\/L/i);
+  assert.match(audit.canonicalSource.finding, /PFOA 590 ng\/L/i);
+  assert.match(audit.canonicalSource.boundary, /does not establish that PFAS passed through the WWTP/i);
+  assert.match(audit.evidentiaryBoundary, /do not establish two separate reports/i);
+  assert.match(audit.queueDecision, /No evidence-request item is closed/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

@@ -1,0 +1,59 @@
+{
+  "batch": "September 4, 2026 - dated J17646-1 portal-copy reconciliation",
+  "stats": {
+    "suppliedFiles": 2,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 46,
+    "uniquePdfPages": 23,
+    "embeddedTextPages": 40,
+    "gpuRequestedOcrPages": 6,
+    "ocrPagesWithText": 6,
+    "manualReviewPages": 0,
+    "exactDuplicateGroupsWithinInput": 1,
+    "exactExistingTimelineSourcesReusedAsCrossReferences": 2,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "sizeFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "methods": [
+    "Calculated SHA-256 and byte size for both supplied PDFs before comparing them with each other, every evidence catalog and the established timeline assets.",
+    "Opened and reviewed all 46 supplied PDF pages; 40 pages supplied embedded text and six sparse pages received GPU-requested OCR inspection with readable text recovered on all six.",
+    "Verified that both dated portal downloads are byte-identical to each other and to the established 23-page J17646-1 timeline source.",
+    "Preserved the existing canonical source and created no duplicate document card, timeline event or source asset."
+  ],
+  "suppliedCopies": [
+    {
+      "name": "2018-11-29_792182164173532957_J17646-1 UDS Level 2 Report Final Report (Leachate).pdf",
+      "portalSystemId": "792182164173532957",
+      "sha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6",
+      "size": 2220096,
+      "pages": 23,
+      "classification": "Exact SHA-256 match to the canonical J17646-1 timeline source"
+    },
+    {
+      "name": "2019-06-28_6286447248229530622_J17646-1 UDS Level 2 Report Final Report (Leachate).pdf",
+      "portalSystemId": "6286447248229530622",
+      "sha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6",
+      "size": 2220096,
+      "pages": 23,
+      "classification": "Exact SHA-256 match to the canonical J17646-1 timeline source"
+    }
+  ],
+  "canonicalSource": {
+    "name": "J17646-1 UDS Level 2 Report Final Report (Leachate).pdf",
+    "asset": "/docs/2018-10-03-j17646-leachate.pdf",
+    "sha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6",
+    "size": 2220096,
+    "pages": 23,
+    "timelineDate": "2018-10-03",
+    "finding": "The established event already records the October 3, 2018 primary and duplicate Wexford leachate samples, including PFOS 120 ng/L, PFOA 590 ng/L, PFHxS 610 ng/L, PFBS 950 ng/L, PFHxA 2,100 ng/L, PFPeA 610 ng/L and PFPeS 160 ng/L, together with equipment, field and method blanks.",
+    "boundary": "The report characterizes the sampled landfill leachate. It does not establish that PFAS passed through the WWTP, identify leachate delivery dates or volumes, establish the final delivery or cessation date, or prove a source-to-receptor migration pathway."
+  },
+  "queueDecision": "No evidence-request item is closed. These are duplicate portal occurrences of an already preserved source, not new receiving logs, delivery-linked financial records, executed agreements, synchronized WWTP influent-effluent-sludge sampling, certified well construction, hydraulic testing or source-to-receptor sampling.",
+  "queueResolution": {"closedRequirementIds": []},
+  "evidentiaryBoundary": "The two portal dates do not establish two separate reports, sampling rounds or leachate deliveries because the files are byte-identical. The underlying report remains evidence of the October 3, 2018 leachate samples only."
+}

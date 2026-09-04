@@ -1,0 +1,45 @@
+{
+  "batch": "September 4, 2026 - Wexford Executive Committee PFAS packet reconciliation",
+  "stats": {
+    "suppliedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 15,
+    "embeddedTextPages": 15,
+    "pagesOCRCheckedOnGPU": 0,
+    "ocrPagesWithText": 0,
+    "manualReviewPages": 0,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "methods": [
+    "Calculated SHA-256, byte size and page count for the supplied PDF and compared its hash with every published catalog.",
+    "Reviewed embedded text on all 15 pages; no page required OCR or manual transcription.",
+    "Visually verified the cover, the PFAS disposal request and the two-page EGLE initial PFAS monitoring correspondence and schedule.",
+    "Reused the byte-identical published PFAS-archive record as a cross reference and created no filename-based duplicate."
+  ],
+  "exactCrossReferences": [
+    {
+      "suppliedName": "Executive-Agenda-Packet-10-13-20.pdf",
+      "catalog": "pfas-documents.json",
+      "recordId": "014-990955a02a90",
+      "canonicalName": "06_Wexford_County_2020-10-13_PFAS_Disposal_Agenda_Packet.pdf",
+      "asset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/8d7d759d5377b74e9aee5c7b13da2252fc1cde53/public/pfas-docs/014-990955a02a90.pdf",
+      "archiveId": "pfas",
+      "sha256": "990955a02a90f01cdb9c8007db2e9056fd217c571a6b7af11bc54048b3c4a91f",
+      "size": 976468,
+      "pages": 15,
+      "finding": "The packet already preserves the October 13, 2020 proposal to dispose of an estimated 250-300 tons of PFAS-contaminated Bay City fire-station soil at the Wexford County Landfill and EGLE's initial Cedar Creek Township drinking-water PFAS monitoring requirement.",
+      "boundary": "The agenda item records a request and recommendation for discussion, not final approval or completed disposal; the EGLE correspondence sets a future sampling requirement and supplies no analytical result."
+    }
+  ],
+  "queueDecision": "No evidence-request item is closed. This exact existing record does not provide Wexford-to-Cadillac delivery manifests, WWTP receiving logs, delivery-linked invoices or customer-ledger entries, an executed leachate-treatment agreement, renewals, a cessation record, synchronized WWTP PFAS sampling, certified well construction, hydraulic testing or a source-to-receptor PFAS package.",
+  "queueResolution": {
+    "closedRequirementIds": []
+  },
+  "evidentiaryBoundary": "The packet documents a proposed 2020 out-of-county PFAS-soil disposal request and an initial drinking-water sampling obligation. It does not establish that the proposed soil was accepted or disposed, provide resulting PFAS measurements, document historical leachate deliveries to Cadillac, demonstrate treatment pass-through or prove a groundwater migration pathway."
+}

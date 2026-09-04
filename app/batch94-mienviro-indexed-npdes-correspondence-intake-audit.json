@@ -1,0 +1,83 @@
+{
+  "batch": "September 4, 2026 - indexed MiEnviro NPDES and correspondence intake",
+  "stats": {
+    "suppliedPdfs": 23,
+    "distinctInputHashes": 23,
+    "suppliedIndexRows": 35,
+    "suppliedIndexColumns": 10,
+    "suppliedPdfPagesReviewed": 300,
+    "embeddedTextPages": 264,
+    "pagesOCRCheckedOnGPU": 36,
+    "ocrPagesWithText": 36,
+    "manualReviewPages": 0,
+    "indexRowsMatchedToSuppliedPdfs": 23,
+    "indexHashMismatches": 0,
+    "indexSizeMismatches": 0,
+    "exactExistingRecordsReusedAsCrossReferences": 22,
+    "recordsAdded": 1,
+    "addedPdfPages": 3,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "sourceIndex": {
+    "name": "document-index.csv",
+    "sha256": "e33cb0f0fd5f2b26faf4ff72d41962d498e2f6779b0763764d6ac743c93fb8b4",
+    "size": 11980,
+    "rows": 35,
+    "columns": 10,
+    "statusValues": ["Downloaded"],
+    "errorRows": 0,
+    "decision": "Used as the batch-level provenance and reconciliation index. It is not independently cataloged as an evidentiary record because it inventories downloads rather than supplying the underlying agency record content."
+  },
+  "methods": [
+    "Calculated SHA-256, byte size and page count for all 23 supplied PDFs and compared every hash with every published catalog.",
+    "Reviewed all 300 PDF pages; 264 pages supplied embedded text and 36 sparse or image-only pages received GPU-requested OCR inspection, with readable text recovered on all 36.",
+    "Reconciled the 23 PDFs against the supplied 35-row, 10-column CSV index by filename, SHA-256 and byte size; all 23 matched and every row reported Downloaded with no error.",
+    "Visually verified all three pages of the sole unmatched PDF and retained it once in the correspondence archive with an explicit evidentiary boundary.",
+    "Reused 22 byte-identical catalog records as cross references and created no filename-based duplicates."
+  ],
+  "exactCrossReferences": [
+    {"suppliedName":"2015-07-08_-8459938767715139506_Fact Sheet.pdf","catalog":"npdes-documents.json","recordId":"037-4208a010fbb2","archiveId":"npdes","sha256":"4208a010fbb2ba933452c3c5fbc3a3ca11777d2ce6c45c37bbc398bf81eaa93c","size":149154,"pages":3},
+    {"suppliedName":"2015-09-29_-264868687133678095_Cadillac WWTP CCH Petition.pdf","catalog":"npdes-documents.json","recordId":"058-f68f7933cc10","archiveId":"npdes","sha256":"f68f7933cc108a5ada3aea8dd9d4950c07a964839e684dc7556d220f6dd4f7fc","size":2453804,"pages":36},
+    {"suppliedName":"2015-09-29_2634479280526975746_Cadillac Mod Public Notice Document.pdf","catalog":"npdes-documents.json","recordId":"066-daf374ea55ee","archiveId":"npdes","sha256":"daf374ea55eea648d78002f4da12326a5ecc439655c2600bd3fd0eacaaa988a6","size":47071,"pages":1},
+    {"suppliedName":"2015-09-30_7718544574668863958_Cadillac Mod Basis for Decision Memo.pdf","catalog":"npdes-documents.json","recordId":"069-ca7b070f65a3","archiveId":"npdes","sha256":"ca7b070f65a3649e3b837f73c084565beb8b0d30da5477f9df21f50747321046","size":74115,"pages":2},
+    {"suppliedName":"2015-12-10_344392362451469223_Cadillac Draft Permit for Issue.pdf","catalog":"npdes-documents.json","recordId":"040-a6e09a96382e","archiveId":"npdes","sha256":"a6e09a96382ec027c54a8c14a1141c1699296e0b53d381e1db8f0324cbaf6f0a","size":311501,"pages":29},
+    {"suppliedName":"2018-06-13_3628686366959490149_WQBEL Memo - Conventionals (WORD).pdf","catalog":"npdes-documents.json","recordId":"091-cf9fd2af33d7","archiveId":"npdes","sha256":"cf9fd2af33d7efd9edd3870ce8bad4b7a239aec59f4768eb5370f5a9e6cd4ed5","size":64604,"pages":4},
+    {"suppliedName":"2018-06-14_5107184373189296510_NPDES Permit-FINAL_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"082-9f01fe21418a","archiveId":"npdes","sha256":"9f01fe21418ab3c840b003f2834560b3fbc45edff80eb7baaf73b4fd7a921401","size":242034,"pages":38},
+    {"suppliedName":"2018-08-02_-4635650844082025800_Public Notice Document_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"105-987cffc548fa","archiveId":"npdes","sha256":"987cffc548fab237bce8fdc70ffeb501a206e9025503c6e3be05e6c599fcd007","size":53213,"pages":1},
+    {"suppliedName":"2018-08-02_-5308550134164369318_Fact Sheet_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"008-0b7e9c09363e","archiveId":"npdes","sha256":"0b7e9c09363ef4b4e033aea714a6f28f067450885db25a15cb25fafbaaa3ac57","size":940617,"pages":3},
+    {"suppliedName":"2018-08-02_-6957847096866406337_Basis for Decision Memo-FINAL_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"088-ce395833a637","archiveId":"npdes","sha256":"ce395833a637f5b5b89d9f16dc046283691ed653046c4734bd419df6c62c34e8","size":92428,"pages":4},
+    {"suppliedName":"2018-09-12_9171882716938331285_Additional Email Correspondence_Asset Management Conversation.pdf","catalog":"correspondence-documents.json","recordId":"corr-008-ef6102a6d438","archiveId":"correspondence","sha256":"ef6102a6d438556826a312a1eb87af4c9d74f4377d8fd63a3739e0d71aeb74d4","size":70741,"pages":8},
+    {"suppliedName":"2019-02-01_-1215723651577862901_Cadillac WWTP_99% Flow Data.pdf","catalog":"process-site-documents.json","recordId":"process-site-012-121a3a58fff1","archiveId":"process-site","sha256":"121a3a58fff13b08b208ef2d37f50b757f49fa4aa3d534e2231063570ceb3b8b","size":23587,"pages":6},
+    {"suppliedName":"2019-02-27_-150348501006616963_Pre-Public Note Ltr_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"102-585873427aee","archiveId":"npdes","sha256":"585873427aee531f78321911e68910b8f125f78af157c99dd4e8698ec325a808","size":897867,"pages":50},
+    {"suppliedName":"2019-05-02_-4898722065399202194_Department Response to Second Round of PPN Comments_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"097-71d66393d0a0","archiveId":"npdes","sha256":"71d66393d0a0311d848ae9a49e276e3a8c65e08b9e63c5dcdffea7635c386314","size":229663,"pages":6},
+    {"suppliedName":"2019-05-29_-1302747580337855905_PPN Correspondence_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"101-f368ee6ddbb6","archiveId":"npdes","sha256":"f368ee6ddbb67e64f612c0344e62abba5a5d75f4178c8166fd6768ff2074daf5","size":240183,"pages":7},
+    {"suppliedName":"2019-06-04_4912358191559826487_Public Notice Ltr_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"106-8b191c79623d","archiveId":"npdes","sha256":"8b191c79623d7685308cef9207619ccc7336c692ecb7acbcac925770a569786d","size":906433,"pages":51},
+    {"suppliedName":"2019-06-04_6030670746472801357_Basis for Decision Memo-DRAFT for Public Notice_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"096-62893e0607dd","archiveId":"npdes","sha256":"62893e0607ddea1870dc357ad81984c8ca8fd7920b4fcfdf98a45e8ae767e9e9","size":219525,"pages":4},
+    {"suppliedName":"2019-06-04_8202905883452332436_NPDES Permit-DRAFT for Public Notice_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"099-93cb43659965","archiveId":"npdes","sha256":"93cb43659965b5140f75dc1a26ab8c16baa9dec79df76c0a90e5a3ef20c5731f","size":470261,"pages":38},
+    {"suppliedName":"2019-06-06_5411273080965715241_Public Notice Verification_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"108-8cb545bb27e3","archiveId":"npdes","sha256":"8cb545bb27e33f11de14575bd8520f1cd9979566fa2b793841eb5211add7d94f","size":53859,"pages":1},
+    {"suppliedName":"2019-06-06_5504019015290538937_Public Notice Notification_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"107-30c98a6d5944","archiveId":"npdes","sha256":"30c98a6d59444570a12ecc50838a4948c86c790549800e4f47ba92ea4b289951","size":47306,"pages":1},
+    {"suppliedName":"2019-08-30_-8533260144873024140_Issuance Letter_Cadillac WWTP.pdf","catalog":"npdes-documents.json","recordId":"098-f70e63291723","archiveId":"npdes","sha256":"f70e63291723e96231531c8de1e5298502a3fdd17784445c60e95eef1e35ad8a","size":47593,"pages":1},
+    {"suppliedName":"2020-07-31_-621303826784066175_UPDATED Cadillac Waste Water AMP - NPDES permit report document 2020.pdf","catalog":"npdes-documents.json","recordId":"112-dae13ed709cb","archiveId":"npdes","sha256":"dae13ed709cbdf35a3281c31348e1bf01f8247fdf92d3eced8ed9b5e8e6b6968","size":63368,"pages":3}
+  ],
+  "addedRecords": [
+    {
+      "suppliedName": "2018-09-20_4781418742612633433_Additional Email Correspondence_Chlorine and UV Inquiry.pdf",
+      "catalog": "correspondence-documents.json",
+      "recordId": "corr-044-b0440ae9e001",
+      "archiveId": "correspondence",
+      "asset": "/correspondence-docs/corr-044-b0440ae9e001.pdf",
+      "sha256": "b0440ae9e001fac873727208551d12fb6ab0c8fb4d5d8f5d44b48d3e7058e2b8",
+      "size": 101035,
+      "pages": 3,
+      "finding": "On September 20, 2018, City staff stated that UV had completely replaced chlorine, that obsolete chlorine and sulfur-dioxide equipment had been removed, and that no newer flow diagram existed than the previously submitted diagram.",
+      "boundary": "This is a City representation about treatment-plant process configuration. It contains no PFAS analytical result, leachate delivery, invoice, receiving log, removal-efficiency measurement, final cessation date or source-to-receptor pathway evidence."
+    }
+  ],
+  "queueDecision": "No evidence-request item is closed. The new correspondence documents disinfection-system configuration and an outdated process diagram, while the 22 exact records remain in their established archives. None supplies per-load Wexford delivery history, delivery-linked financial records, an executed 2009 agreement or successor agreements, the exact final delivery date, synchronized PFAS treatment sampling, certified 1140 Plett well construction, hydraulic tests or a site-specific groundwater-flow and source-to-receptor PFAS package.",
+  "queueResolution": {"closedRequirementIds": []},
+  "evidentiaryBoundary": "The added record supports only the City's 2018 representation that UV replaced chlorine and sulfur-dioxide equipment. It does not establish PFAS source attribution, PFAS removal, leachate receipt or cessation, or environmental migration."
+}

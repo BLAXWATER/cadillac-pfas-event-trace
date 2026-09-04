@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1582,
+  "recordCount": 1583,
   "archiveCount": 13,
   "archives": [
     {
@@ -64,7 +64,7 @@
       "label": "Correspondence & letters",
       "catalog": "correspondence-documents.json",
       "sectionId": "correspondence-library-title",
-      "count": 43
+      "count": 44
     },
     {
       "archiveId": "process-site",
@@ -3593,6 +3593,17 @@
       "url": "/correspondence-docs/corr-043-dafd413abaeb.msg",
       "sha256": "dafd413abaeb3f9c58f31e53774d3601c801855ffae4a652c00524ebf177050e",
       "size": 136704
+    },
+    {
+      "id": "corr-044-b0440ae9e001",
+      "archiveId": "correspondence",
+      "archiveLabel": "Correspondence & letters",
+      "catalog": "correspondence-documents.json",
+      "sectionId": "correspondence-library-title",
+      "name": "2018-09-20 - Chlorine and UV Disinfection Inquiry Correspondence.pdf",
+      "url": "/correspondence-docs/corr-044-b0440ae9e001.pdf",
+      "sha256": "b0440ae9e001fac873727208551d12fb6ab0c8fb4d5d8f5d44b48d3e7058e2b8",
+      "size": 101035
     },
     {
       "id": "001-e12b255837e5",

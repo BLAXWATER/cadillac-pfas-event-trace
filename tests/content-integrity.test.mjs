@@ -66,7 +66,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 765);
+  assert.equal(localFiles, 766);
   assert.equal(externalFiles, 817);
 });
 
@@ -149,7 +149,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1582);
+  assert.equal(recordCount, 1583);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -190,7 +190,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1582);
+  assert.equal(records.length, 1583);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,8 +271,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1424);
-  assert.equal(audit.stats.pdfPages, 21116);
+  assert.equal(audit.stats.pdfRecords, 1425);
+  assert.equal(audit.stats.pdfPages, 21119);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -313,10 +313,10 @@ test("correspondence archive audit preserves distinct records and reuses exact c
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "correspondence-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "correspondence-audit.json"), "utf8"));
 
-  assert.equal(audit.stats.sourceFilesReviewed, 52);
-  assert.equal(audit.stats.reviewedPages, 247);
+  assert.equal(audit.stats.sourceFilesReviewed, 53);
+  assert.equal(audit.stats.reviewedPages, 250);
   assert.equal(audit.stats.sourceOcrPages, 23);
-  assert.equal(audit.stats.finalDistinctRecords, 43);
+  assert.equal(audit.stats.finalDistinctRecords, 44);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 14);
   assert.equal(audit.stats.existingRecordMovedIntoCategory, 1);
@@ -4179,6 +4179,73 @@ test("batch 93 reuses the exact FY2017 Cadillac financial report without treatin
   assert.match(expected.boundary, /no customer invoice, receipt, payment, delivery date, time, hauler, gallons/i);
   assert.match(audit.queueDecision, /No evidence-request item is closed/i);
   assert.match(audit.evidentiaryBoundary, /does not establish total leachate revenue/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
+test("batch 94 reconciles the MiEnviro index, reuses 22 exact records and adds only the distinct UV correspondence", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch94-mienviro-indexed-npdes-correspondence-intake-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+  const placement = JSON.parse(await readFile(path.join(publicDirectory, "record-placement-manifest.json"), "utf8"));
+  const previews = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+
+  assert.equal(audit.stats.suppliedPdfs, 23);
+  assert.equal(audit.stats.distinctInputHashes, 23);
+  assert.equal(audit.stats.suppliedIndexRows, 35);
+  assert.equal(audit.stats.suppliedIndexColumns, 10);
+  assert.equal(audit.stats.suppliedPdfPagesReviewed, 300);
+  assert.equal(audit.stats.embeddedTextPages, 264);
+  assert.equal(audit.stats.pagesOCRCheckedOnGPU, 36);
+  assert.equal(audit.stats.ocrPagesWithText, 36);
+  assert.equal(audit.stats.manualReviewPages, 0);
+  assert.equal(audit.stats.indexRowsMatchedToSuppliedPdfs, 23);
+  assert.equal(audit.stats.indexHashMismatches, 0);
+  assert.equal(audit.stats.indexSizeMismatches, 0);
+  assert.equal(audit.stats.exactExistingRecordsReusedAsCrossReferences, 22);
+  assert.equal(audit.stats.recordsAdded, 1);
+  assert.equal(audit.stats.addedPdfPages, 3);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+  assert.equal(audit.sourceIndex.sha256, "e33cb0f0fd5f2b26faf4ff72d41962d498e2f6779b0763764d6ac743c93fb8b4");
+  assert.equal(audit.sourceIndex.errorRows, 0);
+  assert.equal(audit.exactCrossReferences.length, 22);
+
+  for (const expected of audit.exactCrossReferences) {
+    const catalog = catalogs.get(expected.catalog);
+    const matches = catalog.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1, `${expected.suppliedName} must resolve to one catalog record`);
+    assert.equal(matches[0].id, expected.recordId);
+    assert.equal(matches[0].size, expected.size);
+    assert.equal(matches[0].pages, expected.pages);
+    const acrossCatalogs = [...catalogs.values()].flat().filter((item) => item.sha256 === expected.sha256);
+    assert.equal(acrossCatalogs.length, 1, `${expected.suppliedName} must not be republished`);
+    const placed = placement.records.filter((item) => item.sha256 === expected.sha256);
+    assert.equal(placed.length, 1);
+    assert.equal(placed[0].archiveId, expected.archiveId);
+  }
+
+  const added = audit.addedRecords[0];
+  const addedMatches = catalogs.get(added.catalog).filter((item) => item.sha256 === added.sha256);
+  assert.equal(addedMatches.length, 1);
+  assert.equal(addedMatches[0].id, added.recordId);
+  assert.equal(addedMatches[0].pages, 3);
+  assert.equal(addedMatches[0].size, added.size);
+  assert.match(addedMatches[0].description, /UV had completely replaced chlorine/i);
+  assert.match(addedMatches[0].description, /contains no PFAS analytical result/i);
+  const sourcePath = path.join(publicDirectory, ...added.asset.slice(1).split("/"));
+  const sourceBytes = await readFile(sourcePath);
+  assert.equal(createHash("sha256").update(sourceBytes).digest("hex"), added.sha256);
+  const previewPath = previews[added.asset];
+  assert.ok(previewPath);
+  assert.ok((await stat(path.join(publicDirectory, ...previewPath.slice(1).split("/")))).size > 0);
+  const placedAdded = placement.records.filter((item) => item.sha256 === added.sha256);
+  assert.equal(placedAdded.length, 1);
+  assert.equal(placedAdded[0].archiveId, "correspondence");
+  assert.match(added.finding, /sulfur-dioxide equipment had been removed/i);
+  assert.match(added.boundary, /no PFAS analytical result/i);
+  assert.match(audit.queueDecision, /No evidence-request item is closed/i);
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 

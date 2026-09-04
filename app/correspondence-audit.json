@@ -1,22 +1,22 @@
 {
   "stats": {
-    "sourceFilesReviewed": 52,
-    "sourcePdfRecords": 50,
+    "sourceFilesReviewed": 53,
+    "sourcePdfRecords": 51,
     "sourceImageRecords": 1,
-    "reviewedPages": 247,
+    "reviewedPages": 250,
     "sourceOcrPages": 23,
     "sourceOcrPagesWithText": 14,
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 14,
     "existingRecordMovedIntoCategory": 1,
-    "newDistinctRecords": 42,
-    "finalDistinctRecords": 43,
+    "newDistinctRecords": 43,
+    "finalDistinctRecords": 44,
     "duplicateLabelsRemoved": 4,
-    "publishedPages": 231,
+    "publishedPages": 234,
     "publishedOcrPages": 34,
     "publishedOcrPagesWithText": 26,
-    "publishedBytes": 13457870,
+    "publishedBytes": 13558905,
     "latestCSIMessageFilesReviewed": 1,
     "latestCSIMessageAttachmentsExtracted": 2,
     "latestCSIMessageRecordsAdded": 1,
@@ -33,6 +33,7 @@
   },
   "methods": [
     "September 3 CSI message intake opened the native Outlook container, verified sender, recipients, subject and timestamp, extracted the workbook and embedded signature image, and compared each attachment hash against every catalog before classification.",
+    "September 4 indexed NPDES intake reconciled all 23 supplied PDFs against the 35-row MiEnviro download index and every published evidence catalog; 22 exact records were reused as cross references and one distinct three-page disinfection correspondence record was retained.",
     "SHA-256 comparison within the entire supplied folder and against every published evidence catalog",
     "Page-count, PDF metadata and embedded-text review for every file",
     "OCR on every scan-only or sparse-text page, with page-level confidence and readability checks",
@@ -42,6 +43,10 @@
     "August 31 leftovers intake 12 verified all 13 PDFs and 199 pages, reused ten exact catalog matches, suppressed one page-identical sampling-guidance export after two-resolution render comparison, and retained two distinct interim-review threads."
   ],
   "decisions": [
+    {
+      "name": "2018 chlorine and UV disinfection inquiry correspondence",
+      "reason": "The three-page City/MDEQ chain is retained once because it preserves a distinct City representation that UV had replaced chlorine and that obsolete chlorine and sulfur-dioxide equipment had been removed while the available process diagram remained outdated. It is classified as process-configuration correspondence and is not treated as PFAS, leachate, removal-efficiency or migration-pathway evidence."
+    },
     {
       "name": "2018-06-15 Cadillac Final Report native email",
       "reason": "The native MDEQ message is retained as distinct correspondence because it preserves original email metadata and identifies the attached workbook as the final 2018 CSI report for MiWaters upload and delivery to the facility. The workbook and official PDF rendition are linked cross-references; the signature image is an embedded branding asset and is not a separate evidence record."

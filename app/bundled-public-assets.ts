@@ -679,6 +679,11 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
+  ...import.meta.glob("../public/correspondence-docs/corr-044-b0440ae9e001.pdf", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  }),
   ...import.meta.glob("../public/reference-data/126-5811dc8c913b.xlsx", {
     eager: true,
     import: "default",

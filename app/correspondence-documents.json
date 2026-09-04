@@ -567,5 +567,18 @@
         "relationship": "Original attached workbook"
       }
     ]
+  },
+  {
+    "id": "corr-044-b0440ae9e001",
+    "name": "2018-09-20 - Chlorine and UV Disinfection Inquiry Correspondence.pdf",
+    "url": "/correspondence-docs/corr-044-b0440ae9e001.pdf",
+    "year": "2018",
+    "category": "Correspondence & letters",
+    "type": "NPDES process-configuration correspondence",
+    "format": "PDF",
+    "pages": 3,
+    "size": 101035,
+    "sha256": "b0440ae9e001fac873727208551d12fb6ab0c8fb4d5d8f5d44b48d3e7058e2b8",
+    "description": "Three-page January-through-September 2018 City/MDEQ email chain about Cadillac WWTP disinfection equipment and outdated process diagrams. On September 20, City staff state that UV had completely replaced chlorine, that the obsolete chlorine and sulfur-dioxide equipment had been removed, and that the available flow diagram remained unchanged except for those systems. The correspondence documents the City's process-configuration representation; it contains no PFAS analytical result, leachate delivery record, treatment-effectiveness measurement or source-to-receptor pathway evidence."
   }
 ]

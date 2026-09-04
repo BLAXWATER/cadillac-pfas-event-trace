@@ -1,0 +1,85 @@
+{
+  "batch": "September 4, 2026 - hauling-source record reconciliation",
+  "stats": {
+    "suppliedPdfs": 10,
+    "distinctInputHashes": 10,
+    "pdfPagesReviewed": 83,
+    "embeddedTextPages": 79,
+    "gpuRequestedOcrPages": 4,
+    "ocrPagesWithText": 4,
+    "manualReviewPages": 0,
+    "exactExistingCatalogRecordsReusedAsCrossReferences": 8,
+    "pageIdenticalExistingVariantsSuppressed": 2,
+    "pageIdenticalGroupsWithinInput": 1,
+    "catalogDescriptionsClarified": 2,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "hashFailures": 0,
+    "sizeFailures": 0,
+    "pageCountFailures": 0,
+    "unreadableRecords": 0
+  },
+  "methods": [
+    "Calculated SHA-256 and byte size for all ten supplied PDFs before comparing them with every evidence catalog and prior intake audit.",
+    "Reviewed all 83 pages. Seventy-nine pages contained embedded text; GPU-requested OCR recovered readable text from the remaining four pages, with no page requiring manual recovery.",
+    "Compared normalized page text and rendered page sequences for the two byte-different duplicate families and retained one established canonical record for each.",
+    "Searched every page for delivery dates and times, load volume, hauler identity, manifests, receiving logs, invoices, payments, agreements, rate schedules and cessation evidence before evaluating the receiving-history queue.",
+    "Clarified the two generic catalog descriptions whose titles could otherwise misstate the evidentiary value of hauling-related material."
+  ],
+  "exactCrossReferences": [
+    {"suppliedName":"-2838228056125865720.pdf","catalog":"form-submission-documents.json","recordId":"form-submission-073-c84ac8484363","sha256":"c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77","size":53376,"pages":3},
+    {"suppliedName":"-3430155575482837490.pdf","catalog":"ipp-documents.json","recordId":"002-3da57e8018fb","sha256":"3da57e8018fbdeb2474b90c359352df532d2b0d46fbb00e591841182ae0b49e2","size":119143,"pages":7},
+    {"suppliedName":"-7625399138862663878.pdf","catalog":"correspondence-documents.json","recordId":"corr-042-c73c0b45e14a","sha256":"c73c0b45e14a47e6b989cce89a4f50a85fa6790addae092cd28e1cddefcd8049","size":111787,"pages":6},
+    {"suppliedName":"-8585248556278470835.pdf","catalog":"form-submission-documents.json","recordId":"form-submission-004-511f0e56cb9d","sha256":"511f0e56cb9dd841dad39f0b87e002c21512745cf79e869bab6096a53071d77a","size":261112,"pages":2},
+    {"suppliedName":"2793559677356639638.pdf","catalog":"form-submission-documents.json","recordId":"form-submission-034-00d98416b456","sha256":"00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5","size":47218,"pages":3},
+    {"suppliedName":"3092683663291337793.pdf","catalog":"form-submission-documents.json","recordId":"form-submission-030-7cac269c4207","sha256":"7cac269c4207f212eae8b5587cda7a9c38ed8db720560a4b9c803041f383cc97","size":52125,"pages":2},
+    {"suppliedName":"EM_Hauling_Info_2018.pdf","catalog":"biosolids-documents.json","recordId":"142-f78183d826bf","sha256":"f78183d826bf8b56009928a072b365e44c25c6d6ff3145d39a580bd95897a084","size":1628096,"pages":50},
+    {"suppliedName":"WEXFORD_LANDFILL_2017.pdf","catalog":"ipp-documents.json","recordId":"037-1f7e70d66b30","sha256":"1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3","size":56579,"pages":1}
+  ],
+  "pageIdenticalVariants": [
+    {
+      "suppliedName": "-7912880971146198502.pdf",
+      "sha256": "0476f2566033bfedcd6647d06fa977956468a5ca00fdf6574397b297ffe9266d",
+      "size": 111787,
+      "pages": 6,
+      "canonicalRecordId": "corr-042-c73c0b45e14a",
+      "canonicalSha256": "c73c0b45e14a47e6b989cce89a4f50a85fa6790addae092cd28e1cddefcd8049",
+      "basis": "Normalized text and the complete six-page rendered sequence are identical to the retained correspondence record."
+    },
+    {
+      "suppliedName": "8004028571974457714.pdf",
+      "sha256": "0c500dc1ea41e8d5ecc70a9a54d24368a61977350dda27315be469bea0d421c5",
+      "size": 120071,
+      "pages": 3,
+      "canonicalAsset": "/docs/2019-03-04-report-approval.pdf",
+      "canonicalSha256": "66353d067ca56f14be259845da84fc331943e26b70762c0fbeeabc5560f811c3",
+      "basis": "Normalized text and the complete three-page rendered sequence are identical to the retained March 4, 2019 approval letter."
+    }
+  ],
+  "contentFindings": [
+    {
+      "recordId": "037-1f7e70d66b30",
+      "finding": "The 2017 SIU information sheet identifies Wexford County Landfill LLC, permit 590-13, and reports process wastewater averaging 33,000 gallons per day with intermittent discharge.",
+      "boundary": "The value is an aggregate SIU-profile estimate, not a delivery-level record; the sheet provides no load date/time, actual load gallons, hauler, receiving entry, invoice, agreement or cessation date."
+    },
+    {
+      "recordId": "002-3da57e8018fb",
+      "finding": "The 2015 pre-inspection report preserves a February 2011 inspection statement that Cadillac's equalization tank accepted hauled waste that was county-landfill leachate.",
+      "boundary": "The same statement says no flow meter was apparent at that location and supplies no delivery ledger or transaction details."
+    },
+    {
+      "recordId": "form-submission-034-00d98416b456",
+      "finding": "The June 28, 2019 PFAS status report says Wexford had moved to deep-well injection and had said it would not bring leachate to Cadillac anymore.",
+      "boundary": "The statement establishes reporting-period cessation context but not the date or details of the final delivery."
+    },
+    {
+      "recordId": "142-f78183d826bf",
+      "finding": "The May 2018 email and attached Pace report concern Cadillac biosolids samples and intended land-application fields.",
+      "boundary": "The email subject 'Hauling' describes outbound biosolids land application, not inbound Wexford leachate loads."
+    }
+  ],
+  "queueDecision": "No receiving-history requirement is closed. The batch contains aggregate flow and cessation context but no per-load manifest, receiving log, delivery-linked invoice or ledger, fully executed 2009 agreement and signed rate schedule, signed renewal or amendment, or dated final delivery record.",
+  "queueResolution": {"closedRequirementIds": []},
+  "evidentiaryBoundary": "The records corroborate that Cadillac accepted Wexford landfill leachate and later reported that deliveries would stop. They cannot be converted into a load-by-load delivery series or an exact cessation date, and the biosolids hauling correspondence must not be characterized as landfill-leachate transport evidence."
+}

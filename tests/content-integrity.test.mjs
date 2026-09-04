@@ -4340,6 +4340,53 @@ test("batch 96 reuses the exact VN-006346 portal copy without inventing a second
   assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
 });
 
+test("batch 97 reconciles hauling-source records without closing transaction-level evidence requests", async () => {
+  const audit = JSON.parse(await readFile(path.join(appDirectory, "batch97-hauler-source-reconciliation-audit.json"), "utf8"));
+  const catalogs = new Map((await loadCatalogs()).map((catalog) => [catalog.name, catalog.rows]));
+
+  assert.equal(audit.stats.suppliedPdfs, 10);
+  assert.equal(audit.stats.distinctInputHashes, 10);
+  assert.equal(audit.stats.pdfPagesReviewed, 83);
+  assert.equal(audit.stats.embeddedTextPages, 79);
+  assert.equal(audit.stats.gpuRequestedOcrPages, 4);
+  assert.equal(audit.stats.ocrPagesWithText, 4);
+  assert.equal(audit.stats.manualReviewPages, 0);
+  assert.equal(audit.stats.exactExistingCatalogRecordsReusedAsCrossReferences, 8);
+  assert.equal(audit.stats.pageIdenticalExistingVariantsSuppressed, 2);
+  assert.equal(audit.stats.pageIdenticalGroupsWithinInput, 1);
+  assert.equal(audit.stats.catalogDescriptionsClarified, 2);
+  assert.equal(audit.stats.recordsAdded, 0);
+  assert.equal(audit.stats.timelineEventsAdded, 0);
+  assert.equal(audit.stats.requirementsClosed, 0);
+  assert.equal(audit.stats.hashFailures, 0);
+  assert.equal(audit.stats.sizeFailures, 0);
+  assert.equal(audit.stats.pageCountFailures, 0);
+  assert.equal(audit.stats.unreadableRecords, 0);
+
+  for (const expected of audit.exactCrossReferences) {
+    const matches = catalogs.get(expected.catalog).filter((item) => item.sha256 === expected.sha256);
+    assert.equal(matches.length, 1, `${expected.suppliedName} must resolve to one canonical catalog record`);
+    assert.equal(matches[0].id, expected.recordId);
+    assert.equal(matches[0].size, expected.size);
+    assert.equal(matches[0].pages, expected.pages);
+  }
+
+  const wexford = catalogs.get("ipp-documents.json").find((item) => item.id === "037-1f7e70d66b30");
+  assert.match(wexford.description, /33,000 gallons per day/i);
+  assert.match(wexford.description, /not transaction-level evidence/i);
+  const hauling = catalogs.get("biosolids-documents.json").find((item) => item.id === "142-f78183d826bf");
+  assert.match(hauling.description, /outbound biosolids application fields/i);
+  assert.match(hauling.description, /unrelated to inbound landfill-leachate delivery transactions/i);
+
+  assert.equal(audit.pageIdenticalVariants.length, 2);
+  assert.match(audit.contentFindings[0].finding, /33,000 gallons per day/i);
+  assert.match(audit.contentFindings[1].boundary, /no flow meter was apparent/i);
+  assert.match(audit.contentFindings[2].boundary, /not the date or details of the final delivery/i);
+  assert.match(audit.contentFindings[3].boundary, /not inbound Wexford leachate loads/i);
+  assert.match(audit.queueDecision, /No receiving-history requirement is closed/i);
+  assert.deepEqual(audit.queueResolution.closedRequirementIds, []);
+});
+
 test("laboratory archive audit preserves revisions and suppresses only verified wrapper copies", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "lab-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "lab-audit.json"), "utf8"));

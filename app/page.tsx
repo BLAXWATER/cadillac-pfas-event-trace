@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element -- document previews are local static evidence assets */
 
-import { useState, type CSSProperties, type ReactNode } from "react";
+import { useReducer, useState, type CSSProperties, type ReactNode } from "react";
 import {
   AlertTriangle,
   ArrowDown,
@@ -51,6 +51,8 @@ import wexfordDocuments from "./wexford-documents.json";
 import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } from "./bundled-public-assets";
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
+import verifiedFilenameAliases from "./verified-filename-aliases.json";
+import { createLibrarySearchIndex, initialLibrarySearchState, librarySearchReducer, librarySearchWindow, normalizeLibrarySearch, searchLibrary, SEARCH_BATCH_SIZE } from "./library-search";
 import {
   sourceDownloadUrl,
   sourceMediaKind,
@@ -190,6 +192,8 @@ const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((arc
     archiveId: archive.id,
   })),
 );
+
+const librarySearchIndex = createLibrarySearchIndex(librarySearchRecords, verifiedFilenameAliases);
 
 const evidenceRequestDefinitions = evidenceRequestQueue as readonly EvidenceRequestDefinition[];
 
@@ -3193,7 +3197,8 @@ function DocumentPopoutButton({
 
 export default function Home() {
   const [selected, setSelected] = useState<Source | null>(null);
-  const [globalQuery, setGlobalQuery] = useState("");
+  const [globalSearch, dispatchGlobalSearch] = useReducer(librarySearchReducer, initialLibrarySearchState);
+  const globalQuery = globalSearch.query;
   const [documentQuery, setDocumentQuery] = useState("");
   const [documentType, setDocumentType] = useState("All records");
   const [permitQuery, setPermitQuery] = useState("");
@@ -3229,15 +3234,8 @@ export default function Home() {
     .map(([year, items]) => ({ year, items: [...items].sort((a, b) => (a.isoDate ?? a.date).localeCompare(b.isoDate ?? b.date)) }))
     .sort((a, b) => Number(a.year) - Number(b.year));
   const sourceCount = events.reduce((count, event) => count + event.sources.length, 0);
-  const globalSearchTerms = globalQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
-  const globalSearchResults = globalSearchTerms.length === 0
-    ? []
-    : librarySearchRecords.filter((document) => {
-        const matchingSourceNames = document.matchingSources?.map((source) => source.name).join(" ") ?? "";
-        const searchable = `${document.name} ${matchingSourceNames} ${document.year ?? ""} ${document.category ?? ""} ${document.type} ${document.format ?? ""} ${document.description ?? ""} ${document.archive}`.toLowerCase();
-        return globalSearchTerms.every((term) => searchable.includes(term));
-      });
-  const visibleGlobalResults = globalSearchResults.slice(0, 100);
+  const globalSearchResults = searchLibrary(librarySearchIndex, globalQuery);
+  const { visible: visibleGlobalResults, remaining: remainingGlobalResults } = librarySearchWindow(globalSearchResults, globalSearch.limit);
   const documentTypes = ["All records", ...Array.from(new Set(dmrDocuments.map((document) => document.type)))];
   const normalizedQuery = documentQuery.trim().toLowerCase();
   const filteredDocuments = dmrDocuments.filter((document) => {
@@ -3359,7 +3357,7 @@ export default function Home() {
         <section className="global-search-panel" id="record-search" aria-labelledby="record-search-title">
           <div className="global-search-heading">
             <div><p className="eyebrow">COMPLETE EVIDENCE LIBRARY</p><h2 id="record-search-title">Search all {librarySearchRecords.length.toLocaleString()} records</h2></div>
-            <p>Search every archive at once by filename, year, category, record type, format or finding.</p>
+            <p>Search all catalog names, verified uploaded filenames, years, categories and finding summaries. This searches the catalog, not the full text inside each document.</p>
           </div>
           <label className="global-search-input">
             <Search aria-hidden="true" />
@@ -3367,19 +3365,19 @@ export default function Home() {
             <input
               type="search"
               value={globalQuery}
-              onChange={(event) => setGlobalQuery(event.target.value)}
+              onChange={(event) => dispatchGlobalSearch({ type: "query", query: event.target.value })}
               placeholder="Search all records — try PFAS, spill, cyanide, 2024…"
               autoComplete="off"
             />
           </label>
-          {globalSearchTerms.length > 0 && (
+          {normalizeLibrarySearch(globalQuery).length > 0 && (
             <div className="global-search-results" aria-live="polite">
               <p className="global-search-summary">
                 <strong>{globalSearchResults.length.toLocaleString()}</strong> matching {globalSearchResults.length === 1 ? "record" : "records"}
-                {globalSearchResults.length > visibleGlobalResults.length && <span> · showing the first {visibleGlobalResults.length}</span>}
+                {globalSearchResults.length > 0 && <span> · showing {visibleGlobalResults.length.toLocaleString()} of {globalSearchResults.length.toLocaleString()}</span>}
               </p>
               {visibleGlobalResults.length > 0 ? (
-                <div className="global-search-grid">
+                <div className="global-search-grid" id="global-search-records">
                   {visibleGlobalResults.map((document) => (
                     <article className="global-search-card" key={`${document.archiveId}-${document.id}`}>
                       <div className="archive-meta"><Badge variant="outline">{document.archive}</Badge><span>{document.type}</span>{document.year && <span>{document.year}</span>}{document.format && <span>{document.format}</span>}</div>
@@ -3390,6 +3388,14 @@ export default function Home() {
                   ))}
                 </div>
               ) : <p className="document-empty">No records match this search.</p>}
+              {remainingGlobalResults > 0 && (
+                <div className="global-search-more">
+                  <Button type="button" variant="outline" aria-controls="global-search-records" onClick={() => dispatchGlobalSearch({ type: "more" })}>
+                    Show {Math.min(SEARCH_BATCH_SIZE, remainingGlobalResults).toLocaleString()} more records
+                  </Button>
+                  <span>{remainingGlobalResults.toLocaleString()} more matching records available</span>
+                </div>
+              )}
             </div>
           )}
         </section>

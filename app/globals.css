@@ -116,6 +116,8 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .global-search-input input { width: 100%; min-height: 56px; border: 0; outline: 0; background: transparent; color: var(--brand-white); font-size: 17.6px; }
 .global-search-input input::placeholder { color: var(--brand-gray); }
 .global-search-results { margin-top: 18px; }
+.global-search-more { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 14px; color: var(--brand-gray); font-size: var(--font-11pt); }
+.global-search-more button { min-height: 44px; max-width: 100%; white-space: normal; }
 .global-search-summary { margin: 0 0 12px; color: var(--brand-gray); font-family: var(--font-mono); font-size: var(--font-11pt); }
 .global-search-summary strong { color: var(--primary); font-size: 17.6px; }
 .global-search-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-height: clamp(560px, 68dvh, 820px); padding-right: 6px; overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }

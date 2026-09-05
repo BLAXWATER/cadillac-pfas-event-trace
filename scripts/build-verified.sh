@@ -33,6 +33,9 @@ run_node_script() {
 echo "Verifying every document catalog entry and delivery path..."
 run_node_script "scripts/document-download-integrity.mjs"
 
+echo "Checking uploaded filename matching and complete search-result access..."
+run_node_script "tests/library-search.test.mjs"
+
 echo "Verifying every public archive download without authentication..."
 run_node_script "scripts/verify-anonymous-downloads.mjs"
 

@@ -5,6 +5,7 @@ import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
+import { loadDownloadDeliveryPlan } from "../scripts/document-download-integrity.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const appDirectory = path.join(root, "app");
@@ -1771,6 +1772,7 @@ test("batch 31 adds only distinct official records and leaves unsupported gaps o
   const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
   const bundledSource = await readFile(path.join(appDirectory, "bundled-public-assets.ts"), "utf8");
   const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const deliveries = await loadDownloadDeliveryPlan();
 
   assert.equal(audit.stats.receivedFileInstances, 48);
   assert.equal(audit.stats.distinctInputHashes, 46);
@@ -1797,7 +1799,13 @@ test("batch 31 adds only distinct official records and leaves unsupported gaps o
     assert.equal(record.size, added.size);
     const source = await readFile(path.join(publicDirectory, added.asset.replace(/^\//, "")));
     assert.equal(createHash("sha256").update(source).digest("hex"), added.sha256);
-    assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    if (added.asset.endsWith(".html")) {
+      const delivery = deliveries.find(({ row }) => row.id === record.id);
+      assert.equal(delivery?.kind, "archive");
+      assert.equal(new URL(delivery.source.rawUrl).hostname, "raw.githubusercontent.com");
+    } else {
+      assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    }
     if (added.asset.endsWith(".pdf")) assert.ok(previewManifest[added.asset], added.asset);
   }
 

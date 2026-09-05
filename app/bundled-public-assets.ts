@@ -234,27 +234,14 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/reference-data/120-83295aef8621.html", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/reference-data/121-22691dcca74e.html", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
+  // Preserve HTML originals through the pinned raw archive: hosted HTML can
+  // receive platform redirects and injected markup that change its bytes.
   ...import.meta.glob("../public/reference-data/122-c8b0b8e50f92.csv", {
     eager: true,
     import: "default",
     query: "?url",
   }),
   ...import.meta.glob("../public/reference-data/109-ae6fb2bf0688.geojson", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/reference-data/110-c1db81fc64d9.html", {
     eager: true,
     import: "default",
     query: "?url",

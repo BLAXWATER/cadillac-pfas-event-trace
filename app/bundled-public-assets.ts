@@ -594,7 +594,7 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/compliance-docs/018-234577b7fcb4.pdf", {
+  ...import.meta.glob("../public/compliance-docs/018-d38fe00fd269.pdf", {
     eager: true,
     import: "default",
     query: "?url",

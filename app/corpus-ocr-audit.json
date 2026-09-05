@@ -1,5 +1,14 @@
 {
-  "catalogFingerprint": "bbc716bea58f4fe88723a88833515ea0d66efbfc234024b76068030aa277bd8c",
+  "catalogFingerprint": "b1b1c9d7c1f32fc35b9e439ac3bfe5d7b3cd322db1bffe1f09dc4b52b1a54f7c",
+  "cedarCreekAIntake": {
+    "date": "2026-09-05",
+    "recordsAdded": 9,
+    "pdfPagesAdded": 80,
+    "embeddedTextPagesAdded": 51,
+    "previouslyVerifiedOcrPagesReused": 29,
+    "scope": "Incremental verification of original hashes, sizes and page counts; embedded text or hash-matched prior OCR for new pages, with key-page visual checks. Historical methods and manual-review resolution below refer to earlier corpus audits.",
+    "audit": "batch101-cedar-creek-a-intake-audit.json"
+  },
   "method": [
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
@@ -8,14 +17,14 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1585,
-    "verifiedRecords": 1585,
-    "pdfRecords": 1427,
-    "pdfPages": 22170,
+    "catalogRecords": 1594,
+    "verifiedRecords": 1594,
+    "pdfRecords": 1436,
+    "pdfPages": 22250,
     "imageRecords": 13,
-    "embeddedTextPages": 18228,
-    "ocrPages": 3955,
-    "ocrPagesWithText": 3601,
+    "embeddedTextPages": 18279,
+    "ocrPages": 3984,
+    "ocrPagesWithText": 3630,
     "manualReviewPages": 139,
     "missingHashes": 0,
     "hashFailures": 0,

@@ -259,5 +259,83 @@
     "size": 7634969,
     "sha256": "7eb2900b520dbfc0e83d0d63d66fd49038e70fd1e49124b4d6b3219b0bf69b0d",
     "description": "One-sheet 11×17 aerial map of Cadillac's sanitary utility network with pipe-material symbology. The source does not state a reliable preparation or revision date, so it is retained as undated infrastructure context rather than assigned to a chronology event."
+  },
+  {
+    "id": "process-site-018-26f79914deae",
+    "name": "City Council Meeting Minutes - April 18, 2016.pdf",
+    "url": "/process-site-docs/process-site-018-26f79914deae.pdf",
+    "year": "2016",
+    "category": "Process & site documents",
+    "type": "Purchase awards; not delivery receipt",
+    "format": "PDF",
+    "pages": 7,
+    "size": 309468,
+    "sha256": "26f79914deaeb45725961047baebd4d294153e7eeadc9fe991a52873d77e7a2b",
+    "description": "Cadillac council minutes awarding a $52,100 Channel Monster grinder purchase to JWC Environmental and two automatic refrigerated wastewater samplers to HESCO of Warren; staff recommended $17,118.96 for the samplers. These are purchase authorizations, not delivery or receiving records."
+  },
+  {
+    "id": "process-site-019-1376a072059f",
+    "name": "Council Communication: Channel Monster Grinder Purchase, with JWC Environmental Quote 32331.pdf",
+    "url": "/process-site-docs/process-site-019-1376a072059f.pdf",
+    "year": "2016",
+    "category": "Process & site documents",
+    "type": "Recommendation and supplier quotation; not order, invoice or delivery receipt",
+    "format": "PDF",
+    "pages": 4,
+    "size": 132903,
+    "sha256": "1376a072059f6d4912035ef0699e75e1cdda5577715aefcf9543d8fd020b7888",
+    "description": "April 18, 2016 council recommendation with JWC Environmental quote 32331 dated March 29, 2016 for a $52,100 Channel Monster system, controller, frame, manuals and shipping/handling. Includes proposed lead times and sale terms; does not document shipment or receipt."
+  },
+  {
+    "id": "process-site-020-28d1cb87cb36",
+    "name": "City Council Meeting Minutes - February 6, 2023.pdf",
+    "url": "/process-site-docs/process-site-020-28d1cb87cb36.pdf",
+    "year": "2023",
+    "category": "Process & site documents",
+    "type": "Retrospective installation confirmation, plus new 2023 purchase award",
+    "format": "PDF",
+    "pages": 3,
+    "size": 135349,
+    "sha256": "28d1cb87cb365073a789ab39ca46ab3347af69468901a7f582e9b72cda262fc5",
+    "description": "Final Cadillac council minutes, pages 2-3, state that the same Channel Monster equipment was installed in 2016 and authorize a separate $46,315.80 replacement purchase from JWC Environmental in 2023. Dietlin clarifies that the failed unit was purchased in 1997, not the 2016 unit. Corroborates the earlier installation, but gives no 2016 delivery date or carrier."
+  },
+  {
+    "id": "process-site-021-6c2e73d85da0",
+    "name": "City Council Meeting Minutes - January 19, 2016.pdf",
+    "url": "/process-site-docs/process-site-021-6c2e73d85da0.pdf",
+    "year": "2016",
+    "category": "Process & site documents",
+    "type": "Purchase-authorization extension; not delivery receipt",
+    "format": "PDF",
+    "pages": 7,
+    "size": 110300,
+    "sha256": "6c2e73d85da00db6690645c8d68b445992eccb97b1324d6afbc7a8459d9b0a3e",
+    "description": "Cadillac council minutes extending Water and Sewer purchase authorizations through December 31, 2017, including ferric chloride from Kemira Water Solutions. The action extends an existing procurement arrangement; it supplies no dated delivery, quantity or invoice."
+  },
+  {
+    "id": "process-site-022-fe153aeaa6d9",
+    "name": "City Council Meeting Minutes - February 18, 2019.pdf",
+    "url": "/process-site-docs/process-site-022-fe153aeaa6d9.pdf",
+    "year": "2019",
+    "category": "Process & site documents",
+    "type": "Equipment purchase award; not delivery receipt",
+    "format": "PDF",
+    "pages": 12,
+    "size": 644828,
+    "sha256": "fe153aeaa6d9565b44fb37bb94cdc102ca2cc5696eadfc5dffd984e15a280d96",
+    "description": "Cadillac council minutes awarding Mattoon & Lee a $9,300 purchase of three replacement peristaltic chemical metering pumps for the wastewater treatment plant. Records authorization of the purchase, not actual delivery or installation."
+  },
+  {
+    "id": "process-site-023-0fcc5cbb1c14",
+    "name": "City Council Work Session Minutes - May 9, 2016, with 2016-2017 Operating Budget Attachments.pdf",
+    "url": "/process-site-docs/process-site-023-0fcc5cbb1c14.pdf",
+    "year": "2016",
+    "category": "Process & site documents",
+    "type": "Work-session and budget-policy context; not delivery or financial transaction record",
+    "format": "PDF",
+    "pages": 29,
+    "size": 3239670,
+    "sha256": "0fcc5cbb1c14f1152de79e830c57f8a202cf7b9f6457abdacc505d0c9f03531c",
+    "description": "Cadillac work-session minutes and budget attachments: page 19 identifies accepting additional hauled waste as a possible revenue opportunity, and page 21 states that leachate revenue continued above budget. These passages provide policy and aggregate revenue context, not a hauled-waste supplier, load-level delivery date, quantity or invoice."
   }
 ]

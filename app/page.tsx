@@ -129,6 +129,7 @@ type MatchingSource = {
 
 type LibraryDocument = {
   id: string;
+  sha256?: string;
   name: string;
   url: string;
   type: string;
@@ -148,6 +149,7 @@ type LibrarySearchRecord = LibraryDocument & {
 type EvidenceRequirement = {
   id: string;
   label: string;
+  verifiedEvidence?: readonly { recordId: string; sha256: string; reviewBasis: string }[];
   termGroups: readonly (readonly string[])[];
   excludeTerms?: readonly string[];
   minPages?: number;
@@ -214,6 +216,11 @@ const evidenceTrackingRecordTerms = [
 ];
 
 const evidenceRequirementMet = (requirement: EvidenceRequirement, record: LibrarySearchRecord) => {
+  // Search terms can nominate candidates, but cannot establish that evidence exists.
+  // Require a reviewed match to the exact original; negative descriptions also contain keywords.
+  if (!requirement.verifiedEvidence?.some((evidence) =>
+    evidence.recordId === record.id && evidence.sha256 === record.sha256 && evidence.reviewBasis.trim(),
+  )) return false;
   if (requirement.minPages && (record.pages ?? 0) < requirement.minPages) return false;
   const searchable = evidenceRecordText(record);
   if (evidenceTrackingRecordTerms.some((term) => searchable.includes(normalizeEvidenceText(term)))) return false;
@@ -355,6 +362,25 @@ const events: Event[] = [
     }],
   },
   {
+    year: "2011",
+    date: "2011-02-03",
+    isoDate: "2011-02-03",
+    time: noTime,
+    timeBasis: "Historical inspection entry 43653 dated February 3, 2011",
+    phase: "Regulatory inspection",
+    kind: "regulatory",
+    category: "08 · Compliance & enforcement",
+    title: "DEQ records County Landfill leachate at the WWTP equalization tank",
+    finding: "A February 3, 2011 inspection entry preserved on page 2 of the pre-inspection export describes the equalization tank as the receiving point for hauled waste identified as County Landfill leachate. The inspector noted no apparent screens or flow meter in that area and recommended flow-proportioned sampling and influent flow metering/screens. The entry also describes the main treatment units as operating normally.",
+    significance: "Documents a historical receiving location and the inspector's observations, not individual deliveries or their volumes. The ten-page export does not establish the previously assigned September-October 2013 inspection dates or aging-facility narrative.",
+    sources: [archivedSource("Cadillac WWTP Pre-Inspection Report - Inspection ID 50407 - Historical Entries.pdf", "/compliance-docs/059-72e0d17a78ae.pdf", 10, "Page 2, inspection entry 43653: County Landfill leachate receiving location, apparent absence of screens/flow meter, and sampling recommendations.", {
+      eventStamp: "2011-02-03 · time not stated",
+      basis: "Date printed beside historical inspection entry 43653 on page 2",
+      created: "2015-08-28 06:33:16 EDT",
+      note: "The PDF creation timestamp is a later export date, not the historical inspection date. The report-completion date field on page 10 is blank.",
+    })],
+  },
+  {
     year: "2012",
     date: "2012-03-26",
     isoDate: "2012-03-26",
@@ -382,24 +408,6 @@ const events: Event[] = [
         note: "OCR was used to locate the scanned page; every reported field was checked against the rendered image.",
       },
     }],
-  },
-  {
-    year: "2013",
-    date: "2013-09-30",
-    isoDate: "2013-09-30",
-    time: noTime,
-    timeBasis: "Inspection start date stated in the report",
-    phase: "Regulatory inspection",
-    kind: "regulatory",
-    category: "08 · Compliance & enforcement",
-    title: "DEQ inspection documents aging infrastructure at the WWTP",
-    finding: "The compliance evaluation inspection began September 30 and was completed October 4, 2013. The report describes the plant as generally well operated and maintained while documenting aging infrastructure and deteriorated septage and equalization facilities. It also preserves the earlier inspection statement that the equalization basin accepted hauled County Landfill leachate.",
-    significance: "Establishes a pre-2014 regulatory and operational baseline while distinguishing the 2013 inspection dates from later file metadata.",
-    sources: [archivedSource("2013-09-30 - Cadillac WWTP NPDES CEI Pre-Inspection Report.pdf", "/compliance-docs/059-72e0d17a78ae.pdf", 10, "Complete ten-page pre-inspection record with facility history, inspection narrative, compliance history and completion details.", {
-      eventStamp: "2013-09-30 · time not stated",
-      basis: "Inspection start date stated in the report",
-      note: "The report states that the inspection began September 30 and was completed October 4, 2013.",
-    })],
   },
   {
     year: "2014",
@@ -2964,7 +2972,7 @@ export default function Home() {
   const [supplementalQuery, setSupplementalQuery] = useState("");
   const [supplementalType, setSupplementalType] = useState("All added records");
   const [referenceQuery, setReferenceQuery] = useState("");
-  const [referenceType, setReferenceType] = useState("All datasets");
+  const [referenceType, setReferenceType] = useState("All reference records");
   const groups = Array.from(events.reduce<Map<string, Event[]>>((acc, event) => {
     const group = acc.get(event.year) ?? [];
     group.push(event);
@@ -3068,11 +3076,11 @@ export default function Home() {
     const matchesQuery = !normalizedSupplementalQuery || `${document.name} ${document.year} ${document.category} ${document.type} ${document.description}`.toLowerCase().includes(normalizedSupplementalQuery);
     return matchesType && matchesQuery;
   });
-  const referenceTypes = ["All datasets", ...Array.from(new Set(referenceDocuments.map((document) => document.type)))];
+  const referenceTypes = ["All reference records", ...Array.from(new Set(referenceDocuments.map((document) => document.type)))];
   const normalizedReferenceQuery = referenceQuery.trim().toLowerCase();
   const filteredReferenceDocuments = referenceDocuments.filter((document) => {
-    const matchesType = referenceType === "All datasets" || document.type === referenceType;
-    const matchesQuery = !normalizedReferenceQuery || `${document.name} ${document.format} ${document.type}`.toLowerCase().includes(normalizedReferenceQuery);
+    const matchesType = referenceType === "All reference records" || document.type === referenceType;
+    const matchesQuery = !normalizedReferenceQuery || `${document.name} ${document.format} ${document.type} ${"description" in document ? document.description : ""}`.toLowerCase().includes(normalizedReferenceQuery);
     return matchesType && matchesQuery;
   });
   const selectedDownloadUrl = selected?.url
@@ -3656,8 +3664,8 @@ export default function Home() {
 
         <section className="document-library reference-library" data-archive-id="reference" aria-labelledby="reference-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CATEGORY 00 · REFERENCE DATA</p><h2 id="reference-library-title">Search {referenceDocuments.length} verified datasets</h2></div>
-            <p>CSV exports, workbooks, manifests and research indexes are preserved as direct downloads. Each file was compared by content and structure before publishing.</p>
+            <div><p className="eyebrow">CATEGORY 00 · REFERENCE DATA</p><h2 id="reference-library-title">Search {referenceDocuments.length} reference records</h2></div>
+            <p>CSV exports, workbooks, manifests, research indexes and historical guidance are preserved as direct downloads. Guidance documents are labeled separately from measurements and transaction records.</p>
           </div>
           <div className="reference-summary" aria-label="Reference data audit summary">
             <div><Database /><span><strong>{referenceDocuments.length}</strong> distinct files</span></div>
@@ -3674,14 +3682,16 @@ export default function Home() {
           <div className="document-controls">
             <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search reference datasets</span><input value={referenceQuery} onChange={(event) => setReferenceQuery(event.target.value)} placeholder="Search filename, export or dataset type" /></label>
             <label className="document-filter"><span className="sr-only">Filter by dataset type</span><select value={referenceType} onChange={(event) => setReferenceType(event.target.value)}>{referenceTypes.map((type) => <option key={type}>{type}</option>)}</select></label>
-            <span className="document-result-count"><strong>{filteredReferenceDocuments.length}</strong> matching datasets</span>
+            <span className="document-result-count"><strong>{filteredReferenceDocuments.length}</strong> matching records</span>
           </div>
           <div className="document-grid reference-grid">
             {filteredReferenceDocuments.map((document) => (
               <article className="archive-card reference-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{formatBytes(document.size)}</span></div>
-                <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <div className="dataset-shape">
+                  <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
+                  {"description" in document && document.description && <p className="document-description">{document.description}</p>}
+                  <div className="dataset-shape">
+                    {"pages" in document && document.pages && <span>{document.pages} PDF pages</span>}
                   {document.rows !== null && <span>{document.rows.toLocaleString()} rows</span>}
                   {document.columns > 0 && <span>{document.columns} columns</span>}
                   {document.sheets !== null && <span>{document.sheets} {document.sheets === 1 ? "sheet" : "sheets"}</span>}
@@ -3691,13 +3701,13 @@ export default function Home() {
               </article>
             ))}
           </div>
-          {filteredReferenceDocuments.length === 0 && <p className="document-empty">No reference datasets match this search.</p>}
+          {filteredReferenceDocuments.length === 0 && <p className="document-empty">No reference records match this search.</p>}
         </section>
 
         <section className="evidence-queue" aria-labelledby="evidence-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">EVIDENCE REQUEST QUEUE</p><h2 id="evidence-title">Potentially missing or hidden documents</h2></div>
-            <p>Only requirements not matched by the current evidence catalog are shown. When a supplied source satisfies a requirement, that line is removed automatically; completed blocks disappear.</p>
+            <p>Requirements remain open until a source review confirms that the exact record satisfies them. Missing paperwork does not establish that deliveries or other events did not occur; this list tracks documentation still needed.</p>
           </div>
           {evidenceRequests.length > 0 ? (
             <div className="request-grid">

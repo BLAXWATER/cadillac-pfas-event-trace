@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1585,
+  "recordCount": 1594,
   "archiveCount": 13,
   "archives": [
     {
@@ -50,7 +50,7 @@
       "label": "Wexford landfill",
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
-      "count": 104
+      "count": 105
     },
     {
       "archiveId": "compliance",
@@ -71,7 +71,7 @@
       "label": "Process & site documents",
       "catalog": "process-site-documents.json",
       "sectionId": "process-site-library-title",
-      "count": 17
+      "count": 23
     },
     {
       "archiveId": "form-submissions",
@@ -92,7 +92,7 @@
       "label": "Reference data",
       "catalog": "reference-documents.json",
       "sectionId": "reference-library-title",
-      "count": 134
+      "count": 136
     }
   ],
   "records": [
@@ -3050,7 +3050,7 @@
       "archiveLabel": "Compliance & enforcement",
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
-      "name": "2013-09-30 - Cadillac WWTP NPDES CEI Pre-Inspection Report.pdf",
+      "name": "Cadillac WWTP Pre-Inspection Report - Inspection ID 50407 - Historical Entries.pdf",
       "url": "/compliance-docs/059-72e0d17a78ae.pdf",
       "sha256": "72e0d17a78aecc8973b70cded4666fbb4c7ba1a4df1d7f56a72f1b9ece7b5b67",
       "size": 115896
@@ -13011,6 +13011,72 @@
       "size": 7634969
     },
     {
+      "id": "process-site-018-26f79914deae",
+      "archiveId": "process-site",
+      "archiveLabel": "Process & site documents",
+      "catalog": "process-site-documents.json",
+      "sectionId": "process-site-library-title",
+      "name": "City Council Meeting Minutes - April 18, 2016.pdf",
+      "url": "/process-site-docs/process-site-018-26f79914deae.pdf",
+      "sha256": "26f79914deaeb45725961047baebd4d294153e7eeadc9fe991a52873d77e7a2b",
+      "size": 309468
+    },
+    {
+      "id": "process-site-019-1376a072059f",
+      "archiveId": "process-site",
+      "archiveLabel": "Process & site documents",
+      "catalog": "process-site-documents.json",
+      "sectionId": "process-site-library-title",
+      "name": "Council Communication: Channel Monster Grinder Purchase, with JWC Environmental Quote 32331.pdf",
+      "url": "/process-site-docs/process-site-019-1376a072059f.pdf",
+      "sha256": "1376a072059f6d4912035ef0699e75e1cdda5577715aefcf9543d8fd020b7888",
+      "size": 132903
+    },
+    {
+      "id": "process-site-020-28d1cb87cb36",
+      "archiveId": "process-site",
+      "archiveLabel": "Process & site documents",
+      "catalog": "process-site-documents.json",
+      "sectionId": "process-site-library-title",
+      "name": "City Council Meeting Minutes - February 6, 2023.pdf",
+      "url": "/process-site-docs/process-site-020-28d1cb87cb36.pdf",
+      "sha256": "28d1cb87cb365073a789ab39ca46ab3347af69468901a7f582e9b72cda262fc5",
+      "size": 135349
+    },
+    {
+      "id": "process-site-021-6c2e73d85da0",
+      "archiveId": "process-site",
+      "archiveLabel": "Process & site documents",
+      "catalog": "process-site-documents.json",
+      "sectionId": "process-site-library-title",
+      "name": "City Council Meeting Minutes - January 19, 2016.pdf",
+      "url": "/process-site-docs/process-site-021-6c2e73d85da0.pdf",
+      "sha256": "6c2e73d85da00db6690645c8d68b445992eccb97b1324d6afbc7a8459d9b0a3e",
+      "size": 110300
+    },
+    {
+      "id": "process-site-022-fe153aeaa6d9",
+      "archiveId": "process-site",
+      "archiveLabel": "Process & site documents",
+      "catalog": "process-site-documents.json",
+      "sectionId": "process-site-library-title",
+      "name": "City Council Meeting Minutes - February 18, 2019.pdf",
+      "url": "/process-site-docs/process-site-022-fe153aeaa6d9.pdf",
+      "sha256": "fe153aeaa6d9565b44fb37bb94cdc102ca2cc5696eadfc5dffd984e15a280d96",
+      "size": 644828
+    },
+    {
+      "id": "process-site-023-0fcc5cbb1c14",
+      "archiveId": "process-site",
+      "archiveLabel": "Process & site documents",
+      "catalog": "process-site-documents.json",
+      "sectionId": "process-site-library-title",
+      "name": "City Council Work Session Minutes - May 9, 2016, with 2016-2017 Operating Budget Attachments.pdf",
+      "url": "/process-site-docs/process-site-023-0fcc5cbb1c14.pdf",
+      "sha256": "0fcc5cbb1c14f1152de79e830c57f8a202cf7b9f6457abdacc505d0c9f03531c",
+      "size": 3239670
+    },
+    {
       "id": "001-73384fdc4a46",
       "archiveId": "reference",
       "archiveLabel": "Reference data",
@@ -14485,6 +14551,28 @@
       "size": 111104
     },
     {
+      "id": "135-5f86ea369b77",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "Michigan Part 121 Liquid Industrial By-Product FAQ — May 2017.pdf",
+      "url": "/reference-data/135-5f86ea369b77.pdf",
+      "sha256": "5f86ea369b770cc502bcb63ddc6a1ec2314c516fac172daa18b83b886a051699",
+      "size": 244537
+    },
+    {
+      "id": "136-d6661d1949a4",
+      "archiveId": "reference",
+      "archiveLabel": "Reference data",
+      "catalog": "reference-documents.json",
+      "sectionId": "reference-library-title",
+      "name": "Michigan DNR ITSL Memo — 2-Diethylaminoethylamine (CAS 100-36-7) — April 22, 1994.pdf",
+      "url": "/reference-data/136-d6661d1949a4.pdf",
+      "sha256": "d6661d1949a4093f177e603343eb95a4adac7804c0ae551a18848a77dbd3b1a5",
+      "size": 217410
+    },
+    {
       "id": "001-d8496c7348a6",
       "archiveId": "supplemental",
       "archiveLabel": "Added evidence",
@@ -15909,7 +15997,7 @@
       "archiveLabel": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "name": "EPA Fact Sheet — Wexford Water Technologies Class I Injection Well Permit.pdf",
+      "name": "EPA February 2018 Public-Hearing Fact Sheet - Wexford Water Technologies Draft Injection-Well Permit.pdf",
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/9994ed932ee1600ea10fecb2b3ad80a9595bb3b5/public/findings-docs/131-0cbb4e491791.pdf",
       "sha256": "0cbb4e4917919bc323d7a0c618636d728324bd4af24975f01b226c94e3f065a3",
       "size": 340023
@@ -16602,7 +16690,7 @@
       "archiveLabel": "Wexford landfill",
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
-      "name": "01-01-2017 - mi-165-1i-0002_draft_permit_october_2017.pdf",
+      "name": "October 2017 EPA Draft Class I Injection-Well Permit MI-165-1I-0002 - WWT Well 1.pdf",
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/020-9ad6d46eb20b.pdf",
       "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
       "size": 5200399
@@ -16646,7 +16734,7 @@
       "archiveLabel": "Wexford landfill",
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
-      "name": "05_EPA_Wexford_Water_Technologies_Fact_Sheet.pdf",
+      "name": "October 2017 EPA Wexford Water Technologies Proposed Injection-Well Fact Sheet.pdf",
       "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/024-069dda9efa5b.pdf",
       "sha256": "069dda9efa5b9c615dcbfaac75f59fe1fa9acdcf11b309401f005c45fc021caf",
       "size": 350012
@@ -17530,6 +17618,17 @@
       "url": "/wexford-docs/104-6815e2f8b48e.pdf",
       "sha256": "6815e2f8b48e20bcdb90b61f3927e32ee50bd4c06fac77cb3bb16790d0c2a6d8",
       "size": 6567502
+    },
+    {
+      "id": "105-b03fe8433176",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "Wexford County Board Minutes — October 21, 2015.pdf",
+      "url": "/wexford-docs/105-b03fe8433176.pdf",
+      "sha256": "b03fe84331764fcb983d090470568354ec6eb80ac59dbe812d5fae10dae308f2",
+      "size": 76165
     }
   ]
 }

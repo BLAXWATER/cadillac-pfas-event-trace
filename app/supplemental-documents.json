@@ -101,7 +101,7 @@
     "pages": 6,
     "size": 21817,
     "sha256": "5b67e1ed1d5cef4fb50cca40560307f5befeff4e602f5229b0bf1422d803a9dd",
-    "description": "Official special-meeting minutes record unanimous approval of a two-year agreement for Cadillac to accept and treat Wexford County Landfill leachate, effective July 1, 2009 through June 30, 2011. The minutes also address separate municipal well-field planning; that material is not treated as PFAS evidence."
+    "description": "Official special-meeting minutes, page 2: motion 2009.216 unanimously approves Cadillac's agreement to accept and treat Wexford County Landfill leachate, July 1, 2009 through June 30, 2011, and identifies Miscellaneous File No. 842. The discussion describes a pretreatment-based reduced rate and sliding scale, but supplies neither rate amounts nor an executed agreement or signed schedule. Separate municipal well-field planning is not treated as PFAS evidence."
   },
   {
     "id": "009-ef4cb426969a",
@@ -1678,7 +1678,7 @@
   },
   {
     "id": "131-0cbb4e491791",
-    "name": "EPA Fact Sheet — Wexford Water Technologies Class I Injection Well Permit.pdf",
+    "name": "EPA February 2018 Public-Hearing Fact Sheet - Wexford Water Technologies Draft Injection-Well Permit.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/9994ed932ee1600ea10fecb2b3ad80a9595bb3b5/public/findings-docs/131-0cbb4e491791.pdf",
     "year": "2018",
     "category": "Wexford landfill & leachate",
@@ -1687,7 +1687,7 @@
     "pages": 2,
     "size": 340023,
     "sha256": "0cbb4e4917919bc323d7a0c618636d728324bd4af24975f01b226c94e3f065a3",
-    "description": "EPA Region 5 fact sheet for draft permit MI-165-1I-0002 concerning the proposed Wexford Water Technologies Class I injection well. It is permit-process context, not evidence the well operated."
+    "description": "EPA February 2018 fact sheet for draft permit MI-165-1I-0002 and the proposed Wexford Water Technologies Class I injection well near Manton. PDF page 1 announces a March 21, 2018 public meeting and hearing at Cadillac Senior High School and a March 23 comment deadline. The agency describes tentative approval of a draft, not final issuance. Page 2 explains public participation and EPA's limited role regarding relocation of the proposed surface site. This is permit-process context, not evidence the well operated, a particular load was injected, or deliveries to Cadillac ended on a specified date."
   },
   {
     "id": "132-d5dd57fe9c94",
@@ -2116,7 +2116,7 @@
     "pages": 9,
     "size": 203476,
     "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
-    "description": "Official November 20, 2017 Cadillac City Council minutes. Pages 6–8 record that Cadillac was paid to treat landfill leachate, that a deep injection well would remove that revenue, that the City treated the waste and discharged the treated water, and that landfill liquid was collected in cells, pumped to a tank and hauled to the WWTP. The minutes also record unanimous approval of motion 2017-232 opposing draft injection-well permit MI-165-1I-0002. The record does not provide load-level dates, quantities, invoices, the exact final delivery date or PFAS migration proof."
+    "description": "Official November 20, 2017 Cadillac City Council minutes. Pages 2-3 record motion 2017-225 awarding Webb Chemical Service Corporation the January 2018-December 2020 ferric-chloride contract at $0.245 per dry pound for WWTP phosphorus removal; this is a purchase authorization, not a delivery receipt. The separate phosphate purchase serves the municipal water supply. Pages 6-8 record officials' statements that Cadillac was paid to treat landfill leachate, a deep injection well would remove that revenue, and landfill liquid was collected in cells, pumped to a tank and hauled to the WWTP for treatment and discharge. Motion 2017-232 unanimously opposes draft injection-well permit MI-165-1I-0002. No load-level dates, quantities, invoices, exact final delivery date or PFAS migration proof are supplied."
   },
   {
     "id": "165-676065b15331",

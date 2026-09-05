@@ -9,14 +9,14 @@
     "exactDuplicateGroupsWithinSource": 0,
     "renderIdenticalByteDifferentGroupsWithinSource": 4,
     "crossCategoryCopiesReferencedElsewhere": 3,
-    "finalDistinctRecords": 17,
+    "finalDistinctRecords": 23,
     "matchingSourceFilesPreserved": 4,
     "matchingSourcePagesPreserved": 12,
     "sourceRenderMatchedPages": 12,
-    "publishedPages": 67,
-    "publishedOcrPages": 25,
-    "publishedOcrPagesWithText": 22,
-    "publishedBytes": 22184997,
+    "publishedPages": 129,
+    "publishedOcrPages": 54,
+    "publishedOcrPagesWithText": 51,
+    "publishedBytes": 26757515,
     "duplicateLikeLabelsRemoved": 3
   },
   "methods": [
@@ -103,5 +103,11 @@
       "existing": "Flow Rate - Days.pdf",
       "catalog": "wexford-documents.json"
     }
-  ]
+  ],
+  "cedarCreekAIntake": {
+    "date": "2026-09-05",
+    "recordsAdded": 6,
+    "audit": "batch101-cedar-creek-a-intake-audit.json",
+    "note": "Earlier review metrics above describe the historical intake. This addendum records newly supplied originals."
+  }
 }

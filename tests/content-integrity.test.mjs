@@ -67,7 +67,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 769);
+  assert.equal(localFiles, 778);
   assert.equal(externalFiles, 816);
 });
 
@@ -150,7 +150,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1585);
+  assert.equal(recordCount, 1594);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -182,6 +182,9 @@ test("evidence request queue shows only unmatched, independently closable requir
     ...(record.matchingSources ?? []).flatMap((item) => [item.name, item.relationship]),
   ].filter(Boolean).join(" "));
   const requirementMet = (requirement, record) => {
+    if (!requirement.verifiedEvidence?.some((evidence) =>
+      evidence.recordId === record.id && evidence.sha256 === record.sha256 && evidence.reviewBasis.trim(),
+    )) return false;
     if (requirement.minPages && (record.pages ?? 0) < requirement.minPages) return false;
     const searchable = recordText(record);
     if (["evidence intake manifest", "evidence recovery inventory", "evidence package records index", "evidence package hash manifest", "not yet recovered"].some((term) => searchable.includes(normalize(term)))) return false;
@@ -191,7 +194,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1585);
+  assert.equal(records.length, 1594);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -237,6 +240,8 @@ test("evidence request queue shows only unmatched, independently closable requir
   const wellogic = records.find((record) => record.id === "116-b3871d88915e");
   assert.ok(localConstruction && wellogic);
   assert.equal(requirementMet(localConstruction, wellogic), true);
+  assert.equal(requirementMet(localConstruction, { ...wellogic, sha256: 'changed-original' }), false);
+  assert.equal(requirementMet(localConstruction, { ...wellogic, id: 'unreviewed-copy' }), false);
 
   for (const requirement of requirements) {
     const syntheticRecord = {
@@ -246,10 +251,19 @@ test("evidence request queue shows only unmatched, independently closable requir
       archive: "Added evidence",
       archiveId: "supplemental",
     };
-    assert.equal(requirementMet(requirement, syntheticRecord), true, `${requirement.id} cannot close when matching evidence is added`);
+    assert.equal(requirementMet(requirement, syntheticRecord), false, `${requirement.id} must not close on keywords without a source-backed review`);
+  }
+
+  const recheck = JSON.parse(await readFile(path.join(appDirectory, 'batch102-cedar-creek-17-recheck-audit.json'), 'utf8'));
+  for (const supplied of recheck.dispositions) {
+    const record = records.find(row => row.id === supplied.recordId && row.sha256 === supplied.sha256);
+    assert.ok(record);
+    for (const requirement of requirements) assert.equal(requirementMet(requirement, record), false, `${record.id} must not close ${requirement.id}`);
   }
 
   assert.match(source, /import evidenceRequestQueue from "\.\/evidence-request-queue\.json"/);
+  assert.match(source, /requirement\.verifiedEvidence\?\.some/);
+  assert.match(source, /evidence\.recordId === record\.id && evidence\.sha256 === record\.sha256 && evidence\.reviewBasis\.trim\(\)/);
   assert.match(source, /request\.requirements\.filter/);
   assert.match(source, /\.filter\(\(request\) => request\.remaining\.length > 0\)/);
   assert.match(source, /request\.remaining\.map/);
@@ -272,8 +286,8 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1427);
-  assert.equal(audit.stats.pdfPages, 22170);
+  assert.equal(audit.stats.pdfRecords, 1436);
+  assert.equal(audit.stats.pdfPages, 22250);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages, audit.stats.pdfPages + audit.stats.imageRecords);
   assert.equal(audit.stats.missingHashes, 0);
@@ -335,7 +349,7 @@ test("process and site archive audits every page and reuses only verified cross-
   assert.equal(audit.stats.reviewedPages, 78);
   assert.equal(audit.stats.sourceOcrPages, 28);
   assert.equal(audit.stats.manuallyVerifiedMapAndAerialPages, 4);
-  assert.equal(audit.stats.finalDistinctRecords, 17);
+  assert.equal(audit.stats.finalDistinctRecords, 23);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.crossCategoryCopiesReferencedElsewhere, 3);
   assert.equal(audit.stats.exactDuplicateGroupsWithinSource, 0);
@@ -389,7 +403,7 @@ test("Wexford archive OCRs every page and excludes only verified copies or non-p
   assert.equal(audit.stats.sourceEmbeddedTextPages + audit.stats.sourceOcrPages, audit.stats.sourcePagesAndImagesReviewed);
   assert.equal(audit.stats.sourceOcrPagesWithText, 424);
   assert.equal(audit.stats.sourceManualReviewPages, 8);
-  assert.equal(audit.stats.finalDistinctRecords, 104);
+  assert.equal(audit.stats.finalDistinctRecords, 105);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.recordsAddedThisPass, 85);
   assert.equal(audit.stats.exactExistingRecordsReused, 17);
@@ -397,7 +411,7 @@ test("Wexford archive OCRs every page and excludes only verified copies or non-p
   assert.equal(audit.stats.actualDuplicateFilesRemoved, 5);
   assert.equal(audit.stats.nonPrimaryRecordsExcluded, 9);
   assert.equal(audit.stats.duplicateLikeLabelsRemoved, 12);
-  assert.equal(audit.stats.publishedPages, 1679);
+  assert.equal(audit.stats.publishedPages, 1686);
   assert.equal(audit.stats.latestRepeatIntakeFilesReviewed, 42);
   assert.equal(audit.stats.latestRepeatIntakePagesReviewed, 230);
   assert.equal(audit.stats.latestRepeatIntakeDistinctContentHashes, 41);

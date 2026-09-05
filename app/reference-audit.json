@@ -1,8 +1,8 @@
 {
-  "sourceFileCount": 140,
-  "publishedFileCount": 134,
+  "sourceFileCount": 142,
+  "publishedFileCount": 136,
   "excludedFileCount": 6,
-  "includedBytes": 27858390,
+  "includedBytes": 28320337,
   "methods": [
     "Read-only Microsoft Word render, VBA-project check and complete page review of the January 2014 compliance letter and May 2015 pretreatment pre-inspection source documents",
     "Read-only Microsoft Word render and content review of the 2018 groundwater-permit termination letter and April 2018 compliance-monitoring field worksheet",
@@ -16,7 +16,8 @@
     "ZIP-entry comparison against loose source files",
     "GeoJSON feature and property-schema validation",
     "HTML and TXT byte-integrity verification",
-    "Wellogic well-to-lithology linkage and 1,000-meter spatial check"
+    "Wellogic well-to-lithology linkage and 1,000-meter spatial check",
+    "September 5, 2026 Cedar Creek/A intake: original PDF hash and size comparison, page-count verification, source review and content-deduplicated first-page previews."
   ],
   "exclusions": [
     {

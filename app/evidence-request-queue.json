@@ -91,6 +91,11 @@
       {
         "id": "local-boring-well-construction",
         "label": "Local boring, lithology and monitoring-well construction logs for the Wexford–Cadillac–Plett area.",
+        "verifiedEvidence": [{
+          "recordId": "116-b3871d88915e",
+          "sha256": "b3871d88915e5510dd0caf105b8be9cfe8dd5101aa4bc419c00ad67b478e4398",
+          "reviewBasis": "Existing September 1 queue audit verified the official Wexford Wellogic package: 9,273 well records and 42,844 linked lithology rows, including 45 wells with linked lithology within 1,000 meters of the geocoded 1121 Plett point. This satisfies local construction/lithology only, not the separate certified Plett well record, synoptic elevations, hydraulic testing or flow-map requirements."
+        }],
         "termGroups": [["wexford", "cadillac", "plett"], ["boring log", "lithology log", "monitoring well log", "well construction log"]]
       },
       {

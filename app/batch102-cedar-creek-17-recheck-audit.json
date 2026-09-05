@@ -1,0 +1,267 @@
+{
+  "batch": "September 5, 2026 — Cedar Creek/A 17-file repeat review",
+  "status": "Local review and evidence-description changes; not a deployment record",
+  "checklistValidation": {
+    "defect": "Keyword-only matching read negative caveats as affirmative evidence and hid five still-unmet receiving-history requirements.",
+    "falseRequirementIds": ["wexford-leachate-load-tickets", "cadillac-wexford-receiving-logs", "wexford-leachate-invoices", "cadillac-leachate-receivables", "final-leachate-delivery-record"],
+    "affectedRecordIds": ["039-c677de7c10e6", "164-519d4faa6c33", "form-submission-034-00d98416b456"],
+    "fix": "A requirement can close only when verifiedEvidence identifies the reviewed canonical record ID, exact SHA-256 and a nonempty source-based review rationale. Search terms alone cannot establish completion.",
+    "result": "22 of 23 requirements remain open; only the previously verified local Wellogic construction/lithology requirement remains satisfied. All seven receiving-history requirements remain open. No new requirement closed in this batch."
+  },
+  "stats": {
+    "suppliedFiles": 17,
+    "uniqueOriginals": 16,
+    "fileInstancePages": 144,
+    "uniquePdfPages": 143,
+    "recordsAdded": 0,
+    "recordsAfter": 1594,
+    "descriptionsUpdated": 11,
+    "requirementsClosed": 0
+  },
+  "methods": [
+    "Fresh complete SHA-256, byte-size and page-count comparison of all 17 originals to one canonical catalog record per original hash; originals rehashed after extraction.",
+    "All 51 pages of the four EPA/FAQ originals reviewed from beginning to end, including visual review of technical image pages.",
+    "All 21 pages of the five remaining unique source-status, spill, pre-inspection, SIU-profile and 2009-minutes originals read; key original pages visually checked. The pre-inspection attribution correction received independent review.",
+    "Seven unchanged procurement and financial originals (71 pages) reconciled against the prior review using fresh matching hashes. Prior native extraction and relevant-page review reused; no claim of a fresh word-for-word reread of all 71 pages.",
+    "The 29-page May 9 scan uses prior hash-matched OCR with complete page mapping. The one-page spill scan was visually read in full. Blank EPA separator pages are not OCR failures.",
+    "No original PDF was changed, no duplicate record was added, and no receiving-history requirement was closed."
+  ],
+  "reviewCoverage": {
+    "freshCompleteReadUniquePages": 72,
+    "priorReviewReconciledUniquePages": 71,
+    "hashMatchedPriorOcrPages": 29,
+    "newOcrRun": false,
+    "substantiveUnreadablePagesIdentified": [],
+    "epaDraftBlankSeparatorPages": [
+      26,
+      30,
+      32,
+      34
+    ]
+  },
+  "updatedRecordIds": [
+    "039-c677de7c10e6",
+    "059-72e0d17a78ae",
+    "form-submission-034-00d98416b456",
+    "008-5b67e1ed1d5c",
+    "164-519d4faa6c33",
+    "131-0cbb4e491791",
+    "process-site-020-28d1cb87cb36",
+    "process-site-023-0fcc5cbb1c14",
+    "020-9ad6d46eb20b",
+    "024-069dda9efa5b",
+    "135-5f86ea369b77"
+  ],
+  "displayNameCorrections": [
+    "059-72e0d17a78ae",
+    "020-9ad6d46eb20b",
+    "024-069dda9efa5b",
+    "131-0cbb4e491791"
+  ],
+  "sourceCorrection": {
+    "recordId": "059-72e0d17a78ae",
+    "previousClaim": "September 30–October 4, 2013 inspection and aging/deteriorated-facility narrative attributed to this ten-page PDF.",
+    "disposition": "Removed from this source's catalog description and replaced its timeline item with the documented historical receiving observation.",
+    "supportedEventDate": "2011-02-03",
+    "supportedPdfPage": 2,
+    "historicalInspectionEntry": "43653",
+    "documentInspectionId": "50407",
+    "catalogYear": "Undated",
+    "pdfCreationMetadataDate": "2015-08-28",
+    "completionDateField": "Blank on PDF page 10",
+    "limitation": "The export date is not an inspection date. This correction does not determine what a separate 2013/2014 inspection or correspondence source establishes."
+  },
+  "dispositions": [
+    {
+      "sourceName": "05_2019-06-28_Cadillac_Leachate_Source_Status.pdf",
+      "recordId": "form-submission-034-00d98416b456",
+      "catalog": "form-submission-documents.json",
+      "url": "/docs/2019-06-28-source-status.pdf",
+      "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+      "size": 47218,
+      "pages": 3,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "06_2017-11-20_Webb_Ferric_Chloride_Purchase_Award.pdf",
+      "recordId": "164-519d4faa6c33",
+      "catalog": "supplemental-documents.json",
+      "url": "/findings-docs/164-519d4faa6c33.pdf",
+      "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+      "size": 203476,
+      "pages": 9,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "06_EPA_2017-10_Wexford_Injection_Well_Fact_Sheet.pdf",
+      "recordId": "024-069dda9efa5b",
+      "catalog": "wexford-documents.json",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/024-069dda9efa5b.pdf",
+      "sha256": "069dda9efa5b9c615dcbfaac75f59fe1fa9acdcf11b309401f005c45fc021caf",
+      "size": 350012,
+      "pages": 2,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "07_2019-02-18_Mattoon_Lee_Metering_Pump_Purchase_Award.pdf",
+      "recordId": "process-site-022-fe153aeaa6d9",
+      "catalog": "process-site-documents.json",
+      "url": "/process-site-docs/process-site-022-fe153aeaa6d9.pdf",
+      "sha256": "fe153aeaa6d9565b44fb37bb94cdc102ca2cc5696eadfc5dffd984e15a280d96",
+      "size": 644828,
+      "pages": 12,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "07_EPA_2017-10_Wexford_Injection_Well_DRAFT_Permit.pdf",
+      "recordId": "020-9ad6d46eb20b",
+      "catalog": "wexford-documents.json",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/020-9ad6d46eb20b.pdf",
+      "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
+      "size": 5200399,
+      "pages": 37,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "08_2016-05-09_Work_Session_Hauled_Waste_and_Leachate_Revenue.pdf",
+      "recordId": "process-site-023-0fcc5cbb1c14",
+      "catalog": "process-site-documents.json",
+      "url": "/process-site-docs/process-site-023-0fcc5cbb1c14.pdf",
+      "sha256": "0fcc5cbb1c14f1152de79e830c57f8a202cf7b9f6457abdacc505d0c9f03531c",
+      "size": 3239670,
+      "pages": 29,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "08_EPA_2018-02_Wexford_Public_Hearing_Fact_Sheet.pdf",
+      "recordId": "131-0cbb4e491791",
+      "catalog": "supplemental-documents.json",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/9994ed932ee1600ea10fecb2b3ad80a9595bb3b5/public/findings-docs/131-0cbb4e491791.pdf",
+      "sha256": "0cbb4e4917919bc323d7a0c618636d728324bd4af24975f01b226c94e3f065a3",
+      "size": 340023,
+      "pages": 2,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "09_Michigan_2017-05_Part121_Shipping_Record_FAQ.pdf",
+      "recordId": "135-5f86ea369b77",
+      "catalog": "reference-documents.json",
+      "url": "/reference-data/135-5f86ea369b77.pdf",
+      "sha256": "5f86ea369b770cc502bcb63ddc6a1ec2314c516fac172daa18b83b886a051699",
+      "size": 244537,
+      "pages": 10,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "01_2016-01-12_American_Waste_Offloading_Spill_Letter.pdf",
+      "recordId": "039-c677de7c10e6",
+      "catalog": "compliance-documents.json",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/039-c677de7c10e6.pdf",
+      "sha256": "c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d",
+      "size": 74053,
+      "pages": 1,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "01_2016-01-12_Cadillac_Leachate_Offloading_Spill_Letter.pdf",
+      "recordId": "039-c677de7c10e6",
+      "catalog": "compliance-documents.json",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/039-c677de7c10e6.pdf",
+      "sha256": "c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d",
+      "size": 74053,
+      "pages": 1,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "02_2016-04-18_JWC_and_HESCO_Purchase_Awards.pdf",
+      "recordId": "process-site-018-26f79914deae",
+      "catalog": "process-site-documents.json",
+      "url": "/process-site-docs/process-site-018-26f79914deae.pdf",
+      "sha256": "26f79914deaeb45725961047baebd4d294153e7eeadc9fe991a52873d77e7a2b",
+      "size": 309468,
+      "pages": 7,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "02_Cadillac_PreInspection_Report_Historical_2011_Receiving_Entry.pdf",
+      "recordId": "059-72e0d17a78ae",
+      "catalog": "compliance-documents.json",
+      "url": "/compliance-docs/059-72e0d17a78ae.pdf",
+      "sha256": "72e0d17a78aecc8973b70cded4666fbb4c7ba1a4df1d7f56a72f1b9ece7b5b67",
+      "size": 115896,
+      "pages": 10,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "03_2016-04-18_JWC_Channel_Monster_Quotation_Attachment.pdf",
+      "recordId": "process-site-019-1376a072059f",
+      "catalog": "process-site-documents.json",
+      "url": "/process-site-docs/process-site-019-1376a072059f.pdf",
+      "sha256": "1376a072059f6d4912035ef0699e75e1cdda5577715aefcf9543d8fd020b7888",
+      "size": 132903,
+      "pages": 4,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "03_2017_Wexford_Landfill_SIU_Profile.pdf",
+      "recordId": "037-1f7e70d66b30",
+      "catalog": "ipp-documents.json",
+      "url": "/ipp-docs/037-1f7e70d66b30.pdf",
+      "sha256": "1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3",
+      "size": 56579,
+      "pages": 1,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "04_2009-09-08_Cadillac_Agreement_Approval_Minutes.pdf",
+      "recordId": "008-5b67e1ed1d5c",
+      "catalog": "supplemental-documents.json",
+      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/008-5b67e1ed1d5c.pdf",
+      "sha256": "5b67e1ed1d5cef4fb50cca40560307f5befeff4e602f5229b0bf1422d803a9dd",
+      "size": 21817,
+      "pages": 6,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "04_2023-02-06_Final_Minutes_Confirming_2016_Installation.pdf",
+      "recordId": "process-site-020-28d1cb87cb36",
+      "catalog": "process-site-documents.json",
+      "url": "/process-site-docs/process-site-020-28d1cb87cb36.pdf",
+      "sha256": "28d1cb87cb365073a789ab39ca46ab3347af69468901a7f582e9b72cda262fc5",
+      "size": 135349,
+      "pages": 3,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    },
+    {
+      "sourceName": "05_2016-01-19_Kemira_Purchase_Authorization_Extension.pdf",
+      "recordId": "process-site-021-6c2e73d85da0",
+      "catalog": "process-site-documents.json",
+      "url": "/process-site-docs/process-site-021-6c2e73d85da0.pdf",
+      "sha256": "6c2e73d85da00db6690645c8d68b445992eccb97b1324d6afbc7a8459d9b0a3e",
+      "size": 110300,
+      "pages": 7,
+      "decision": "existing exact match",
+      "originalUnchanged": true
+    }
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "Evidence supports a reported offloading incident, receiving practices, source status, procurement, policy and proposed permit conditions. It does not supply the requested load-level manifests/logs, delivery-linked billing, executed agreements/rate schedules or a dated final delivery."
+  }
+}

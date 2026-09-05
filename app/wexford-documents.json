@@ -229,7 +229,7 @@
   },
   {
     "id": "020-9ad6d46eb20b",
-    "name": "01-01-2017 - mi-165-1i-0002_draft_permit_october_2017.pdf",
+    "name": "October 2017 EPA Draft Class I Injection-Well Permit MI-165-1I-0002 - WWT Well 1.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/020-9ad6d46eb20b.pdf",
     "year": "2017",
     "type": "Permit and licensing",
@@ -237,7 +237,7 @@
     "pages": 37,
     "size": 5200399,
     "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
-    "description": "Wexford Water Technologies, LLC October 2017. Verified as a distinct permit and licensing after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Unsigned draft permit for Wexford Water Technologies WWT Well 1 associated with EPA's October 2017 public-comment package. PDF page 5 is marked DRAFT; effective, expiration, signed-date and EPA-signature fields are blank. Proposed conditions include a Traverse injection interval of 3,166–3,799 feet relative to the Kelly bushing (p. 5), prior written EPA authorization before injection (p. 16), and ceilings of 1,038 psig and 84 gallons per minute (p. 23), not actual operating measurements. Attachment F (p. 37) restricts injected wastewater to nonhazardous wastewater generated at Wexford County Landfill and reports a January 22, 2015 representative leachate sample: total dissolved solids 6,800 mg/L, chloride 1,500 mg/L and benzene 276 µg/L; PFAS are not listed in that table. The sample table is not a complete native laboratory package or evidence of a particular delivery to Cadillac or actual injection. The signed plugging plan in the attachments is not a signed EPA permit."
   },
   {
     "id": "021-0ec05df175b2",
@@ -277,7 +277,7 @@
   },
   {
     "id": "024-069dda9efa5b",
-    "name": "05_EPA_Wexford_Water_Technologies_Fact_Sheet.pdf",
+    "name": "October 2017 EPA Wexford Water Technologies Proposed Injection-Well Fact Sheet.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/024-069dda9efa5b.pdf",
     "year": "2017",
     "type": "Landfill record",
@@ -285,7 +285,7 @@
     "pages": 2,
     "size": 350012,
     "sha256": "069dda9efa5b9c615dcbfaac75f59fe1fa9acdcf11b309401f005c45fc021caf",
-    "description": "Wexford Water Technologies, LLC October 2017 Factsheet. Verified as a distinct landfill record after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "EPA October 2017 fact sheet for proposed Class I permit MI-165-1I-0002 at 990 N US 131, described by this sheet as in Manton. Page 1 describes tentative approval and a November 22, 2017 comment deadline, not final authorization or an operating well. Page 2 describes a proposed Traverse injection zone 3,166–3,799 feet below the surface, the Bayport drinking-water formation at about 890 feet, the Antrim confining layer and a proposed 1,038 psig pressure limit. These are EPA's proposed design and preliminary review statements; this fact sheet supplies neither actual injected volumes nor Wexford-to-Cadillac shipment records."
   },
   {
     "id": "025-f8dae6313684",
@@ -1246,5 +1246,18 @@
     "size": 6567502,
     "sha256": "6815e2f8b48e20bcdb90b61f3927e32ee50bd4c06fac77cb3bb16790d0c2a6d8",
     "description": "Eighty-eight-page Wexford County Board agenda packet for February 3, 2021. Correspondence on PDF page 88 is EGLE's January 22, 2021 acceptance of the landfill's 2020 Annual Long-Term Monitoring Program Report for the Remedial Action Plan area north of the current landfill. The letter authorizes monitoring to continue under the RAP but does not include the underlying monitoring data, PFAS results or a Plett Road migration analysis."
+  },
+  {
+    "id": "105-b03fe8433176",
+    "name": "Wexford County Board Minutes — October 21, 2015.pdf",
+    "url": "/wexford-docs/105-b03fe8433176.pdf",
+    "year": "2015",
+    "category": "Wexford landfill & leachate",
+    "type": "County board minutes",
+    "format": "PDF",
+    "pages": 7,
+    "size": 76165,
+    "sha256": "b03fe84331764fcb983d090470568354ec6eb80ac59dbe812d5fae10dae308f2",
+    "description": "October 21, 2015 Wexford County Board minutes. Public comment on page 2 records Cedar Creek Township Treasurer Mary Hallett’s statements about RAP-area water service, host-agreement duties, DPW recordkeeping and access to legal documents. These are attributed public comments, not the executed host agreement, an adjudication of its terms, or leachate delivery records."
   }
 ]

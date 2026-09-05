@@ -9,7 +9,7 @@
     "sourceOcrPages": 441,
     "sourceOcrPagesWithText": 424,
     "sourceManualReviewPages": 8,
-    "finalDistinctRecords": 104,
+    "finalDistinctRecords": 105,
     "existingCatalogRecordsPreserved": 19,
     "recordsAddedThisPass": 85,
     "exactExistingRecordsReused": 17,
@@ -17,8 +17,8 @@
     "actualDuplicateFilesRemoved": 5,
     "nonPrimaryRecordsExcluded": 9,
     "duplicateLikeLabelsRemoved": 12,
-    "publishedPages": 1679,
-    "publishedBytes": 163628148,
+    "publishedPages": 1686,
+    "publishedBytes": 163704313,
     "latestRepeatIntakeFilesReviewed": 42,
     "latestRepeatIntakePagesReviewed": 230,
     "latestRepeatIntakeDistinctContentHashes": 41,
@@ -88,5 +88,11 @@
       "name": "Operating License 9758 renamed copy",
       "reason": "The supplied filename adds the November 19, 2024 through November 19, 2029 date range, but its bytes exactly match Wexford record 017 and those dates are already stated in the established title and description. The existing record was reused as a cross-reference and no duplicate was added."
     }
-  ]
+  ],
+  "cedarCreekAIntake": {
+    "date": "2026-09-05",
+    "recordsAdded": 1,
+    "audit": "batch101-cedar-creek-a-intake-audit.json",
+    "note": "Earlier review metrics above describe the historical intake. This addendum records newly supplied originals."
+  }
 }

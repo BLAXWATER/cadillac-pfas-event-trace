@@ -1,5 +1,17 @@
 {
   "auditDate": "2026-09-01",
+  "lastRecheckDate": "2026-09-05",
+  "closurePolicy": "Closure requires an explicit source-reviewed record ID, SHA-256 and review basis in verifiedEvidence. Keywords can identify candidates but never establish that a requirement is met.",
+  "lastRecheck": {
+    "batch": "Cedar Creek/A 17-file repeat review",
+    "localCatalogRecords": 1594,
+    "suppliedFileInstances": 17,
+    "uniqueOriginals": 16,
+    "newClosures": 0,
+    "falseKeywordClosuresPrevented": 5,
+    "remainingRequirements": 22,
+    "note": "Negative descriptions of missing tickets, logs and invoices previously matched five requirements. The reviewed-evidence gate preserves all seven receiving-history gaps and the existing Wellogic-only closure."
+  },
   "catalogRecordsReviewed": 1554,
   "priorCards": 6,
   "activeUniqueBlocks": 5,
@@ -18,7 +30,7 @@
   ],
   "heldEvidence": {
     "receivingHistory": [
-      "2009 treatment agreement",
+      "2009 treatment-agreement approval minutes identifying Miscellaneous File No. 842; executed agreement and signed rate schedule still needed",
       "2013–2014 receiving-point inspection records",
       "2016 spill/tanker correspondence",
       "FY2019 leachate-treatment revenue evidence",

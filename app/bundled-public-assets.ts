@@ -49,6 +49,51 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/process-site-docs/process-site-018-26f79914deae.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("../public/process-site-docs/process-site-019-1376a072059f.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("../public/process-site-docs/process-site-020-28d1cb87cb36.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("../public/process-site-docs/process-site-021-6c2e73d85da0.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("../public/process-site-docs/process-site-022-fe153aeaa6d9.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("../public/process-site-docs/process-site-023-0fcc5cbb1c14.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("../public/reference-data/135-5f86ea369b77.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("../public/reference-data/136-d6661d1949a4.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+  ...import.meta.glob("../public/wexford-docs/105-b03fe8433176.pdf", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
   ...import.meta.glob("../public/wexford-docs/104-6815e2f8b48e.pdf", {
     eager: true,
     import: "default",

@@ -1712,5 +1712,37 @@
         "relationship": "Seven-page PDF rendition indexed as industrial-pretreatment record 002-3da57e8018fb; page-level text and content match, with only rendering and extraction-order differences"
       }
     ]
+  },
+  {
+    "id": "135-5f86ea369b77",
+    "name": "Michigan Part 121 Liquid Industrial By-Product FAQ — May 2017.pdf",
+    "url": "/reference-data/135-5f86ea369b77.pdf",
+    "year": "2017",
+    "category": "Historical regulatory guidance",
+    "type": "Shipping-record guidance",
+    "format": "PDF",
+    "pages": 10,
+    "size": 244537,
+    "sha256": "5f86ea369b770cc502bcb63ddc6a1ec2314c516fac172daa18b83b886a051699",
+    "description": "Michigan DEQ FAQ revised May 2017. PDF pages 1–2 explain that shipping records may be logs, invoices, bills of lading or written/electronic records, identifying the generator, transporter, waste type and volume, shipment date and designated facility. The guidance describes records kept by generators, transporters and receiving facilities, generally for three years, and explains that routine submission to DEQ was no longer required. Pages 6–7 discuss receipt confirmation through invoices, emails, receipts or documented phone calls; pages 8–9 distinguish annual quantity summaries from shipping records identifying origin. These are useful record types and custodian leads. Historical guidance only: this is not a completed shipment record, proof of any delivery, evidence that a record still exists today, or a statement of current legal requirements.",
+    "rows": null,
+    "columns": 0,
+    "sheets": null
+  },
+  {
+    "id": "136-d6661d1949a4",
+    "name": "Michigan DNR ITSL Memo — 2-Diethylaminoethylamine (CAS 100-36-7) — April 22, 1994.pdf",
+    "url": "/reference-data/136-d6661d1949a4.pdf",
+    "year": "1994",
+    "category": "Historical air-screening reference",
+    "type": "Chemical screening memorandum",
+    "format": "PDF",
+    "pages": 1,
+    "size": 217410,
+    "sha256": "d6661d1949a4093f177e603343eb95a4adac7804c0ae551a18848a77dbd3b1a5",
+    "description": "April 22, 1994 Michigan DNR memorandum deriving an annual-average initial threshold screening level of 9 µg/m³ for 2-diethylaminoethylamine (CAS 100-36-7). A historical air-screening reference, not a water result or shipment record. The memo does not identify Cadillac, Wexford County Landfill or a local detection of this chemical.",
+    "rows": null,
+    "columns": 0,
+    "sheets": null
   }
 ]

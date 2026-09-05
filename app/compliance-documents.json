@@ -247,7 +247,7 @@
     "pages": 1,
     "size": 74053,
     "sha256": "c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d",
-    "description": "Source record documenting a reported spill, bypass or treatment-system incident."
+    "description": "January 12, 2016 City letter documents an actual American Waste leachate-truck offloading spill reported at 9:22 a.m. by driver Larry Springberg. Douglas Langworthy describes leachate along the asphalt and ponding; snow berms and a sandbagged storm drain; and removal of contaminated snow and soil to the WWTP drying beds. The stated 10,000 gallons is truck capacity, not measured load or spill volume. The proposed hose-displacement explanation is the writer's belief, not a proven cause. The typed body does not name the originating landfill; the handwritten Wexford County notation has unstated provenance. Both uploaded aliases are the same one-page original; no load ticket or invoice is included."
   },
   {
     "id": "041-37ac85d03cbb",
@@ -707,15 +707,15 @@
   },
   {
     "id": "059-72e0d17a78ae",
-    "name": "2013-09-30 - Cadillac WWTP NPDES CEI Pre-Inspection Report.pdf",
+    "name": "Cadillac WWTP Pre-Inspection Report - Inspection ID 50407 - Historical Entries.pdf",
     "url": "/compliance-docs/059-72e0d17a78ae.pdf",
-    "year": "2013",
+    "year": "Undated",
     "type": "Compliance evaluation pre-inspection report",
     "format": "PDF",
     "pages": 10,
     "size": 115896,
     "sha256": "72e0d17a78aecc8973b70cded4666fbb4c7ba1a4df1d7f56a72f1b9ece7b5b67",
-    "description": "NPDES compliance evaluation pre-inspection record for the Cadillac WWTP inspection begun September 30 and completed October 4, 2013. It describes a generally well-operated plant while documenting aging infrastructure, deteriorated septage and equalization facilities, and the earlier use of the equalization basin for hauled County Landfill leachate."
+    "description": "Ten-page DEQ pre-inspection database export for Cadillac WWTP, 1121 Plett Road, inspection ID 50407. Page 2 preserves inspection entry 43653 dated February 3, 2011: the equalization tank accepted hauled waste described as County Landfill leachate, with no apparent screens or flow meter in that receiving area; the inspector recommended flow-proportioned sampling and influent flow metering/screens. A separate July 2012 entry describes the facility as well maintained. Pages 3 and 6-8 preserve historical compliance entries, not new PFAS laboratory results. The report's completion date is blank; embedded creation metadata is August 28, 2015, not an inspection date. This PDF does not establish the previously assigned September-October 2013 inspection dates or aging-facility narrative, and contains no per-load receiving log."
   },
   {
     "id": "060-dd5fb72d29bd",

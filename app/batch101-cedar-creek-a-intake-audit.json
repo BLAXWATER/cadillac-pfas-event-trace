@@ -1,0 +1,352 @@
+{
+  "batch": "September 5, 2026 — Cedar Creek/A original-document intake",
+  "stats": {
+    "suppliedFiles": 24,
+    "exactCatalogMatchInstances": 14,
+    "sameBatchDuplicateInstances": 1,
+    "recordsAdded": 9,
+    "recordsAfter": 1594,
+    "requirementsClosed": 0
+  },
+  "methods": [
+    "Independent SHA-256, byte-size and PDF page-count comparison of all 24 uploads.",
+    "Exact catalog duplicates retained as one record; the second April 18, 2016 copy is also suppressed.",
+    "New originals copied without edits, OCR layers or markup; first-page previews generated separately.",
+    "Source text and key-page visual review distinguish procurement awards, estimated shipment terms, retrospective installation, public comments and historical guidance from actual delivery records.",
+    "The 29-page May 9, 2016 scan uses prior OCR only after matching original hashes and page mappings; relevant pages were visually rechecked."
+  ],
+  "canonicalRecords": [
+    {
+      "recordId": "process-site-018-26f79914deae",
+      "sourceName": "02_2016-04-18_JWC_and_HESCO_Purchase_Awards.pdf",
+      "catalog": "process-site-documents.json",
+      "asset": "/process-site-docs/process-site-018-26f79914deae.pdf",
+      "preview": "/first-page-previews/by-sha256/06cba34ccac3a1d5e3616c6d527a787d772e29d701a0f46cb449b5d0743b3a33.webp",
+      "sha256": "26f79914deaeb45725961047baebd4d294153e7eeadc9fe991a52873d77e7a2b",
+      "size": 309468,
+      "pages": 7,
+      "relevantPages": [
+        5
+      ],
+      "description": "Cadillac council minutes awarding a $52,100 Channel Monster grinder purchase to JWC Environmental and two automatic refrigerated wastewater samplers to HESCO of Warren; staff recommended $17,118.96 for the samplers. These are purchase authorizations, not delivery or receiving records."
+    },
+    {
+      "recordId": "process-site-019-1376a072059f",
+      "sourceName": "03_2016-04-18_JWC_Channel_Monster_Quotation_Attachment.pdf",
+      "catalog": "process-site-documents.json",
+      "asset": "/process-site-docs/process-site-019-1376a072059f.pdf",
+      "preview": "/first-page-previews/by-sha256/8aa941f3decf0387457463d7e3d49057762b8b56c7b5d65f1c71899a5a134f68.webp",
+      "sha256": "1376a072059f6d4912035ef0699e75e1cdda5577715aefcf9543d8fd020b7888",
+      "size": 132903,
+      "pages": 4,
+      "relevantPages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "description": "April 18, 2016 council recommendation with JWC Environmental quote 32331 dated March 29, 2016 for a $52,100 Channel Monster system, controller, frame, manuals and shipping/handling. Includes proposed lead times and sale terms; does not document shipment or receipt."
+    },
+    {
+      "recordId": "process-site-020-28d1cb87cb36",
+      "sourceName": "04_2023-02-06_Final_Minutes_Confirming_2016_Installation.pdf",
+      "catalog": "process-site-documents.json",
+      "asset": "/process-site-docs/process-site-020-28d1cb87cb36.pdf",
+      "preview": "/first-page-previews/by-sha256/d6169ed9f301570bf93ab7c17b03f3bfb0bcf06d7704b110d603927c659bf82a.webp",
+      "sha256": "28d1cb87cb365073a789ab39ca46ab3347af69468901a7f582e9b72cda262fc5",
+      "size": 135349,
+      "pages": 3,
+      "relevantPages": [
+        2,
+        3
+      ],
+      "description": "Final Cadillac council minutes state that the same Channel Monster equipment was installed in 2016 and authorize a new $46,315.80 replacement purchase from JWC Environmental. Corroborates the earlier installation, but gives no 2016 delivery date or carrier."
+    },
+    {
+      "recordId": "process-site-021-6c2e73d85da0",
+      "sourceName": "05_2016-01-19_Kemira_Purchase_Authorization_Extension.pdf",
+      "catalog": "process-site-documents.json",
+      "asset": "/process-site-docs/process-site-021-6c2e73d85da0.pdf",
+      "preview": "/first-page-previews/by-sha256/0f7f299d4977975ff429797d0eaf59f64ab3d420690a773bdf5f6647e2d380e6.webp",
+      "sha256": "6c2e73d85da00db6690645c8d68b445992eccb97b1324d6afbc7a8459d9b0a3e",
+      "size": 110300,
+      "pages": 7,
+      "relevantPages": [
+        4,
+        5
+      ],
+      "description": "Cadillac council minutes extending Water and Sewer purchase authorizations through December 31, 2017, including ferric chloride from Kemira Water Solutions. The action extends an existing procurement arrangement; it supplies no dated delivery, quantity or invoice."
+    },
+    {
+      "recordId": "process-site-022-fe153aeaa6d9",
+      "sourceName": "07_2019-02-18_Mattoon_Lee_Metering_Pump_Purchase_Award.pdf",
+      "catalog": "process-site-documents.json",
+      "asset": "/process-site-docs/process-site-022-fe153aeaa6d9.pdf",
+      "preview": "/first-page-previews/by-sha256/7ba4125dfb17bdbc3a2e015a6b5d0a566cd007d5f947851e42197d299f3d5837.webp",
+      "sha256": "fe153aeaa6d9565b44fb37bb94cdc102ca2cc5696eadfc5dffd984e15a280d96",
+      "size": 644828,
+      "pages": 12,
+      "relevantPages": [
+        4
+      ],
+      "description": "Cadillac council minutes awarding Mattoon & Lee a $9,300 purchase of three replacement peristaltic chemical metering pumps for the wastewater treatment plant. Records authorization of the purchase, not actual delivery or installation."
+    },
+    {
+      "recordId": "process-site-023-0fcc5cbb1c14",
+      "sourceName": "08_2016-05-09_Work_Session_Hauled_Waste_and_Leachate_Revenue.pdf",
+      "catalog": "process-site-documents.json",
+      "asset": "/process-site-docs/process-site-023-0fcc5cbb1c14.pdf",
+      "preview": "/first-page-previews/by-sha256/1932a5f4f949ecd3c4c5476eb230c9f9d8a1f3f3f3416b41621dee3e50372c40.webp",
+      "sha256": "0fcc5cbb1c14f1152de79e830c57f8a202cf7b9f6457abdacc505d0c9f03531c",
+      "size": 3239670,
+      "pages": 29,
+      "relevantPages": [
+        1,
+        19,
+        21
+      ],
+      "description": "Cadillac work-session minutes and budget attachments identify accepting additional hauled waste as a possible revenue opportunity and state that leachate revenue continued above budget. General policy and revenue context only; no supplier, load, delivery date, quantity or invoice is listed."
+    },
+    {
+      "recordId": "135-5f86ea369b77",
+      "sourceName": "09_Michigan_2017-05_Part121_Shipping_Record_FAQ.pdf",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/135-5f86ea369b77.pdf",
+      "preview": "/first-page-previews/by-sha256/1bc6304e21ec299ea3a4c30087878bd894067270a4299a61aa476d75f5b3df62.webp",
+      "sha256": "5f86ea369b770cc502bcb63ddc6a1ec2314c516fac172daa18b83b886a051699",
+      "size": 244537,
+      "pages": 10,
+      "relevantPages": [
+        1,
+        2
+      ],
+      "description": "Michigan DEQ FAQ marked revised May 2017. Pages 1–2 describe shipping documents, receipts, required shipment fields and recordkeeping by generators, transporters and receiving facilities. Historical guidance only: this is not a completed shipping document, evidence that a particular load was delivered, or a statement of current legal requirements."
+    },
+    {
+      "recordId": "136-d6661d1949a4",
+      "sourceName": "100-36-7_annual_ITSL.pdf",
+      "catalog": "reference-documents.json",
+      "asset": "/reference-data/136-d6661d1949a4.pdf",
+      "preview": "/first-page-previews/by-sha256/bbef018d53c1c9831e9108c1df6badffcbd3d4badef07a26089a7af7dc49ddf1.webp",
+      "sha256": "d6661d1949a4093f177e603343eb95a4adac7804c0ae551a18848a77dbd3b1a5",
+      "size": 217410,
+      "pages": 1,
+      "relevantPages": [
+        1
+      ],
+      "description": "April 22, 1994 Michigan DNR memorandum deriving an annual-average initial threshold screening level of 9 µg/m³ for 2-diethylaminoethylamine (CAS 100-36-7). A historical air-screening reference, not a water result or shipment record. The memo does not identify Cadillac, Wexford County Landfill or a local detection of this chemical."
+    },
+    {
+      "recordId": "105-b03fe8433176",
+      "sourceName": "2015-10-21_Wexford_County_Board_Minutes.pdf",
+      "catalog": "wexford-documents.json",
+      "asset": "/wexford-docs/105-b03fe8433176.pdf",
+      "preview": "/first-page-previews/by-sha256/74369ff120d7285561627e86bcaf3a9f8eb0987542449abe84147ccf93517a80.webp",
+      "sha256": "b03fe84331764fcb983d090470568354ec6eb80ac59dbe812d5fae10dae308f2",
+      "size": 76165,
+      "pages": 7,
+      "relevantPages": [
+        2
+      ],
+      "description": "October 21, 2015 Wexford County Board minutes. Public comment on page 2 records Cedar Creek Township Treasurer Mary Hallett’s statements about RAP-area water service, host-agreement duties, DPW recordkeeping and access to legal documents. These are attributed public comments, not the executed host agreement, an adjudication of its terms, or leachate delivery records."
+    }
+  ],
+  "dispositions": [
+    {
+      "sourceName": "01_2016-01-12_American_Waste_Offloading_Spill_Letter.pdf",
+      "sha256": "c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d",
+      "size": 74053,
+      "pages": 1,
+      "recordId": "039-c677de7c10e6",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "01_2016-01-12_Cadillac_Leachate_Offloading_Spill_Letter.pdf",
+      "sha256": "c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d",
+      "size": 74053,
+      "pages": 1,
+      "recordId": "039-c677de7c10e6",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "02_2016-04-18_JWC_and_HESCO_Purchase_Awards.pdf",
+      "sha256": "26f79914deaeb45725961047baebd4d294153e7eeadc9fe991a52873d77e7a2b",
+      "size": 309468,
+      "pages": 7,
+      "recordId": "process-site-018-26f79914deae",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "02_Cadillac_PreInspection_Report_Historical_2011_Receiving_Entry.pdf",
+      "sha256": "72e0d17a78aecc8973b70cded4666fbb4c7ba1a4df1d7f56a72f1b9ece7b5b67",
+      "size": 115896,
+      "pages": 10,
+      "recordId": "059-72e0d17a78ae",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "03_2016-04-18_JWC_Channel_Monster_Quotation_Attachment.pdf",
+      "sha256": "1376a072059f6d4912035ef0699e75e1cdda5577715aefcf9543d8fd020b7888",
+      "size": 132903,
+      "pages": 4,
+      "recordId": "process-site-019-1376a072059f",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "03_2017_Wexford_Landfill_SIU_Profile.pdf",
+      "sha256": "1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3",
+      "size": 56579,
+      "pages": 1,
+      "recordId": "037-1f7e70d66b30",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "04_2009-09-08_Cadillac_Agreement_Approval_Minutes.pdf",
+      "sha256": "5b67e1ed1d5cef4fb50cca40560307f5befeff4e602f5229b0bf1422d803a9dd",
+      "size": 21817,
+      "pages": 6,
+      "recordId": "008-5b67e1ed1d5c",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "04_2023-02-06_Final_Minutes_Confirming_2016_Installation.pdf",
+      "sha256": "28d1cb87cb365073a789ab39ca46ab3347af69468901a7f582e9b72cda262fc5",
+      "size": 135349,
+      "pages": 3,
+      "recordId": "process-site-020-28d1cb87cb36",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "05_2016-01-19_Kemira_Purchase_Authorization_Extension.pdf",
+      "sha256": "6c2e73d85da00db6690645c8d68b445992eccb97b1324d6afbc7a8459d9b0a3e",
+      "size": 110300,
+      "pages": 7,
+      "recordId": "process-site-021-6c2e73d85da0",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "05_2019-06-28_Cadillac_Leachate_Source_Status.pdf",
+      "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+      "size": 47218,
+      "pages": 3,
+      "recordId": "form-submission-034-00d98416b456",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "06_2017-11-20_Webb_Ferric_Chloride_Purchase_Award.pdf",
+      "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+      "size": 203476,
+      "pages": 9,
+      "recordId": "164-519d4faa6c33",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "06_EPA_2017-10_Wexford_Injection_Well_Fact_Sheet.pdf",
+      "sha256": "069dda9efa5b9c615dcbfaac75f59fe1fa9acdcf11b309401f005c45fc021caf",
+      "size": 350012,
+      "pages": 2,
+      "recordId": "024-069dda9efa5b",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "07_2019-02-18_Mattoon_Lee_Metering_Pump_Purchase_Award.pdf",
+      "sha256": "fe153aeaa6d9565b44fb37bb94cdc102ca2cc5696eadfc5dffd984e15a280d96",
+      "size": 644828,
+      "pages": 12,
+      "recordId": "process-site-022-fe153aeaa6d9",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "07_EPA_2017-10_Wexford_Injection_Well_DRAFT_Permit.pdf",
+      "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
+      "size": 5200399,
+      "pages": 37,
+      "recordId": "020-9ad6d46eb20b",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "08_2016-05-09_Work_Session_Hauled_Waste_and_Leachate_Revenue.pdf",
+      "sha256": "0fcc5cbb1c14f1152de79e830c57f8a202cf7b9f6457abdacc505d0c9f03531c",
+      "size": 3239670,
+      "pages": 29,
+      "recordId": "process-site-023-0fcc5cbb1c14",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "08_EPA_2018-02_Wexford_Public_Hearing_Fact_Sheet.pdf",
+      "sha256": "0cbb4e4917919bc323d7a0c618636d728324bd4af24975f01b226c94e3f065a3",
+      "size": 340023,
+      "pages": 2,
+      "recordId": "131-0cbb4e491791",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "09_Michigan_2017-05_Part121_Shipping_Record_FAQ.pdf",
+      "sha256": "5f86ea369b770cc502bcb63ddc6a1ec2314c516fac172daa18b83b886a051699",
+      "size": 244537,
+      "pages": 10,
+      "recordId": "135-5f86ea369b77",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "100-36-7_annual_ITSL.pdf",
+      "sha256": "d6661d1949a4093f177e603343eb95a4adac7804c0ae551a18848a77dbd3b1a5",
+      "size": 217410,
+      "pages": 1,
+      "recordId": "136-d6661d1949a4",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "2015-10-21_Wexford_County_Board_Minutes.pdf",
+      "sha256": "b03fe84331764fcb983d090470568354ec6eb80ac59dbe812d5fae10dae308f2",
+      "size": 76165,
+      "pages": 7,
+      "recordId": "105-b03fe8433176",
+      "decision": "new canonical record"
+    },
+    {
+      "sourceName": "2017-04-05_Wexford_County_Board_Minutes.pdf",
+      "sha256": "3dc615cfcf9ce5e8252c0d536a755cb548ed6c290ebed1f773ca5bb9356f72a0",
+      "size": 268663,
+      "pages": 9,
+      "recordId": "134-3dc615cfcf9c",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "2017-11-01_Wexford_County_Board_Minutes.pdf",
+      "sha256": "7c628f229e98599ab13a0152d8a06d797175a026199dece5bc1d34fc2115df96",
+      "size": 288002,
+      "pages": 8,
+      "recordId": "044-7c628f229e98",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "2018-03-28 - IPP Annual Report Submission HNB-J69X-W1FHA v1.pdf",
+      "sha256": "120dbeb59d521dfe4b204dc7473c6d58b6c250fe77a1c0925ce1475cdc2ebbee",
+      "size": 288966,
+      "pages": 2,
+      "recordId": "form-submission-074-120dbeb59d52",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "2020-10-13_Wexford_Executive_Committee_Packet.pdf",
+      "sha256": "990955a02a90f01cdb9c8007db2e9056fd217c571a6b7af11bc54048b3c4a91f",
+      "size": 976468,
+      "pages": 15,
+      "recordId": "014-990955a02a90",
+      "decision": "existing exact match"
+    },
+    {
+      "sourceName": "April 18 2016.pdf",
+      "sha256": "26f79914deaeb45725961047baebd4d294153e7eeadc9fe991a52873d77e7a2b",
+      "size": 309468,
+      "pages": 7,
+      "recordId": "process-site-018-26f79914deae",
+      "decision": "same-batch exact duplicate"
+    }
+  ],
+  "queueResolution": {
+    "closedRequirementIds": []
+  },
+  "evidentiaryBoundary": "No per-load manifests, WWTP receiving logs, delivery-linked invoices, executed agreements or final-delivery date are supplied. The 2023 minutes corroborate 2016 equipment installation but do not give its delivery date or carrier. The chemical memorandum is not site-specific contamination evidence."
+}

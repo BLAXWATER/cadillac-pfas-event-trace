@@ -1,18 +1,17 @@
 {
   "auditDate": "2026-09-01",
-  "lastRecheckDate": "2026-09-05",
+  "lastRecheckDate": "2026-09-06",
   "closurePolicy": "Closure requires an explicit source-reviewed record ID, SHA-256 and review basis in verifiedEvidence. Keywords can identify candidates but never establish that a requirement is met.",
   "lastRecheck": {
-    "batch": "Cedar Creek/A 17-file repeat review",
-    "localCatalogRecords": 1594,
-    "suppliedFileInstances": 17,
-    "uniqueOriginals": 16,
+    "batch": "September 6 five 2010 Council originals plus pending September 5 verified-context update",
+    "localCatalogRecords": 1599,
     "newClosures": 0,
-    "falseKeywordClosuresPrevented": 5,
     "remainingRequirements": 22,
-    "note": "Negative descriptions of missing tickets, logs and invoices previously matched five requirements. The reviewed-evidence gate preserves all seven receiving-history gaps and the existing Wellogic-only closure."
+    "previouslySatisfiedRequirements": 1,
+    "visibleUpdatesFile": "evidence-request-queue-updates.json",
+    "note": "Five newly read Council originals add landfill and municipal context but no closures. Previous source-linked queue findings and the existing Wellogic closure are retained; no fresh full-corpus reread is claimed."
   },
-  "catalogRecordsReviewed": 1554,
+  "catalogRecordsReviewed": 1594,
   "priorCards": 6,
   "activeUniqueBlocks": 5,
   "activeRequirements": 22,
@@ -26,20 +25,30 @@
     "Reconciled six supplied AOI address-table screenshots to pages in the complete MPART comparability report and one annotated Plett heat-map image to the official AECOM map set. These strengthen receptor/AOI context but close no requirement because the report says the study was not intended as a PFAS source investigation.",
     "Rechecked the 24-page 1140 Plett source packet and linked it directly to the AOI event as multi-agency testing by EGLE, Merit and Cyclopure. The packet preserves repeated results and collection times but does not close a queue requirement because it lacks chain-of-custody forms and 25 pages of EGLE Work Order 2509147.",
     "Reconciled the supplied 26-page EGLE Complete Results PDF to the exact existing A13 compilation by SHA-256. The canonical record is now hosted locally with its full download and first-page preview, and a conservative timeline event links the address and LDFA result rounds. No request closes because the address labels are anonymized and the compilation lacks the coordinate crosswalk, COCs and synchronized source-to-receptor field package.",
-    "Verified the three supplied USGS station 04121241 CSVs as exact members of the established Clam River at Plett Road ZIP export and exposed each table for direct review. No request closes because the ten discrete surface-water discharge observations contain no PFAS results, groundwater gradient, hydraulic tests, receptor field/QC package or delivery history."
+    "Verified the three supplied USGS station 04121241 CSVs as exact members of the established Clam River at Plett Road ZIP export and exposed each table for direct review. No request closes because the ten discrete surface-water discharge observations contain no PFAS results, groundwater gradient, hydraulic tests, receptor field/QC package or delivery history.",
+    "Added source-linked verified context beside each active request block, distinguishing actual offloading, reported cessation, agreement approval, procurement, county deliberations and historical shipping guidance from the specific still-missing evidence. Displayed remaining and previously satisfied counts are calculated from the queue.",
+    "Read all five supplied 2010 Council-minute originals; retained all as searchable dated context, distinguished discussion from plan-amendment approval and completed transactions, and closed no requirement."
   ],
   "heldEvidence": {
     "receivingHistory": [
-      "2009 treatment-agreement approval minutes identifying Miscellaneous File No. 842; executed agreement and signed rate schedule still needed",
-      "2013–2014 receiving-point inspection records",
-      "2016 spill/tanker correspondence",
-      "FY2019 leachate-treatment revenue evidence",
-      "2022 inspection describing cessation of trucking/evaporation"
+      "2009 approval minutes: motion 2009.216 and Miscellaneous File No. 842; executed agreement and signed rate schedule still needed",
+      "February 3, 2011 historical equalization-tank receiving observation in pre-inspection export ID 50407, not a 2013 inspection or individual truckload",
+      "January 12, 2016 American Waste offloading spill: actual activity; notification time and tanker capacity are not load time or measured volume; typed letter does not establish originating landfill",
+      "Wexford Landfill SIU profile: 33,000 gpd intermittent aggregate process wastewater, not per-load quantities; 2017 is metadata rather than a printed sampling date",
+      "November 2017 City minutes: landfill liquid hauled to WWTP and payment for treatment",
+      "May 2016 budget and FY2019 revenue evidence: aggregate revenue, not delivery-linked invoices",
+      "June 28, 2019 City-reported deep-well transition and statement that landfill would no longer bring leachate; exact final-delivery/effective cessation date remains unresolved",
+      "2015/2017 County comments and November 2017 resolution-preparation vote; record-custody/policy leads, not transactions or executed agreements",
+      "October 2020 packet: RAP invoice references, proposed soil disposal and drinking-water sampling requirement; not Cadillac leachate deliveries, original invoices, payments or completed PFAS results",
+      "2017–2018 EPA draft-permit process and May 2017 DEQ shipping-record FAQ; historical context/custodian leads, not completed shipments or current legal advice",
+      "October/November 2010 landfill-sale and solid-waste-plan discussion and Council amendment approval; conditional obligations and future flow-control options, not WWTP deliveries."
     ],
     "wwtpTreatmentDischarge": [
       "72 DMR Daily records",
       "Cadillac WWTP effluent PFAS analytical packages",
-      "Biosolids PFAS laboratory and QC packages"
+      "Biosolids PFAS laboratory and QC packages",
+      "Recent JWC quotation, April 2016 JWC/HESCO awards, February 2023 corroboration of 2016 installation, Kemira/Webb ferric-chloride authorizations and Mattoon & Lee pump award; not paired-media PFAS data or operating logs",
+      "June 2019 form reports effluent PFAS but explicitly no influent sampling; source status is not a claim of zero effluent PFOS or measured removal efficiency"
     ],
     "subsurfacePathway": [
       "Regional USGS groundwater-flow reports",
@@ -65,6 +74,24 @@
     "Evidence intake manifests and not-yet-recovered inventories are tracking records; their descriptions cannot satisfy the evidence requests they enumerate.",
     "The AOI address-table screenshots and annotated heat map do not satisfy the source-to-receptor confirmation request: they do not provide a site-specific gradient, an explicit upgradient/cross-gradient/downgradient transect, synchronized candidate-source samples, a coordinate-to-sample-ID table or the matching field/QC package.",
     "The 26-page EGLE Complete Results compilation preserves address and LDFA analytical tables but does not identify the anonymized addresses by coordinates, supply COCs or align a synchronized Plett/source transect; it therefore strengthens context without closing a receptor or pathway requirement.",
-    "The USGS station 04121241 CSV tables document ten discrete Clam River surface-water discharge observations and station metadata; they do not satisfy requests for site-specific groundwater gradients, hydraulic testing, synchronized PFAS sampling or source-to-receptor confirmation."
-  ]
+    "The USGS station 04121241 CSV tables document ten discrete Clam River surface-water discharge observations and station metadata; they do not satisfy requests for site-specific groundwater gradients, hydraulic testing, synchronized PFAS sampling or source-to-receptor confirmation.",
+    "Equipment procurement and retrospective installation corroborate activity but do not close the sampling, operating-log or leachate transaction requirements.",
+    "The June 28, 2019 source-status form provides affirmative reported transition/cessation context but no exact effective cessation date or final-load entry.",
+    "County RAP invoice references and proposed soil-disposal fees must not be substituted for original Wexford-to-Cadillac leachate invoices, payment records or receipts.",
+    "New filename aliases improve access to the same verified originals; aliases, catalog counts and supporting context do not close requests without source-reviewed closure evidence."
+  ],
+  "previousRechecks": [
+    {
+      "batch": "Cedar Creek/A 17-file repeat review",
+      "localCatalogRecords": 1594,
+      "suppliedFileInstances": 17,
+      "uniqueOriginals": 16,
+      "newClosures": 0,
+      "falseKeywordClosuresPrevented": 5,
+      "remainingRequirements": 22,
+      "note": "Negative descriptions of missing tickets, logs and invoices previously matched five requirements. The reviewed-evidence gate preserves all seven receiving-history gaps and the existing Wellogic-only closure."
+    }
+  ],
+  "initialCatalogRecordsReviewed": 1554,
+  "catalogReviewScope": "Current catalog identity/placement reconciliation, plus the bounded source reviews described in evidence-request-queue-updates.json and prior batch audits; not a fresh content reread of every record."
 }

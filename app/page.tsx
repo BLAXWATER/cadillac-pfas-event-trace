@@ -30,6 +30,7 @@ import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import dmrAudit from "./dmr-audit.json";
 import evidenceRequestQueue from "./evidence-request-queue.json";
+import evidenceQueueUpdates from "./evidence-request-queue-updates.json";
 import formSubmissionAudit from "./form-submission-audit.json";
 import formSubmissionDocuments from "./form-submission-documents.json";
 import ippAudit from "./ipp-audit.json";
@@ -240,6 +241,20 @@ const evidenceRequests = evidenceRequestDefinitions.map((request) => ({
     !librarySearchRecords.some((record) => evidenceRequirementMet(requirement, record)),
   ),
 })).filter((request) => request.remaining.length > 0);
+
+// Held context is intentionally separate from verifiedEvidence used for closure.
+const queueUpdatesByRequest = new Map(evidenceQueueUpdates.blocks.map((update) => [update.requestId, {
+  ...update,
+  held: update.held.flatMap((item) => {
+    const sources = item.sources.map((reference) => ({
+      ...reference,
+      document: librarySearchRecords.find((record) => record.id === reference.recordId && record.sha256 === reference.sha256),
+    }));
+    return sources.every((source) => source.document) ? [{ ...item, sources }] : [];
+  }),
+}]));
+const remainingEvidenceRequirements = evidenceRequests.reduce((total, request) => total + request.remaining.length, 0);
+const satisfiedEvidenceRequirements = evidenceRequestDefinitions.reduce((total, request) => total + request.requirements.length, 0) - remainingEvidenceRequirements;
 
 const repositoryAssetUrl = (path: string) =>
   `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/be4c2d5dadbb16835a539e8509ac065d560bb055/public/${path.replace(/^\//, "")}`;
@@ -2043,6 +2058,77 @@ const events: Event[] = [
       basis: "Report date printed in the EPA QNCR header",
       note: "The report period is October 1 through December 31, 2009; the underlying listed violation date is July 31, 2005.",
     })],
+  },
+  {
+    year: "2010",
+    date: "2010-04-19",
+    isoDate: "2010-04-19",
+    time: noTime,
+    timeBasis: "Council meeting date; individual motion times not stated",
+    phase: "Utility finance and environmental-service procurement",
+    kind: "regulatory",
+    category: "10 · Public finance & environmental services",
+    title: "Council raises water and sewer rates and awards hazardous-waste collection",
+    finding: "April 19, 2010 minutes record unanimous adoption of 4.5% water and sewer rate increases effective July 1, 2010 (motions 2010.088 and 2010.089). Motion 2010.096 awards Environmental Recycling Group household-hazardous-waste collection at a $725 site fee plus $0.83 per pound for 2010–2011, with a two-year option and County/City cost shares of 60%/40%.",
+    significance: "Establishes adopted utility rates and a service award, not leachate revenue, payment, actual material delivery or disposal at Cadillac WWTP. The same minutes' Miscellaneous File No. 869 concerns delinquent taxes, not leachate-treatment File No. 842.",
+    sources: [{
+      ...archivedSource("Cadillac City Council Minutes — April 19, 2010.pdf", "/findings-docs/175-1abad5ad01bd.pdf", 7, "Rates: PDF pp2–3; household-hazardous-waste award: pp4–5. Final page is blank.", {
+        eventStamp: "2010-04-19 · time not stated",
+        basis: "Meeting date printed on page 1",
+        note: "The rate increases take effect July 1, 2010; this is not a delivery date.",
+      }),
+      page: 3,
+    }],
+  },
+  {
+    year: "2010",
+    date: "2010-10-18",
+    isoDate: "2010-10-18",
+    time: noTime,
+    timeBasis: "Council meeting date",
+    phase: "Landfill-sale and solid-waste-plan deliberation",
+    kind: "regulatory",
+    category: "12 · Landfill governance & financial context",
+    title: "Council hears landfill-sale, waste-import and tipping-fee proposals",
+    finding: "October 18, 2010 minutes continue the Wexford Solid Waste Management Plan amendment hearing. Speakers discuss American Waste, the proposed landfill sale, expanded waste imports, tipping fees and landfill life. County Administrator Ken Hinton describes increased imports as potentially lowering tipping fees while shortening landfill life. These minutes contain no plan-amendment adoption.",
+    significance: "Documents attributed policy and financial statements, not completed transactions. November 1 minutes subsequently correct the earlier discussion to future flow-control options upon sale or after a set period. Solid-waste flow control is not wastewater flow; neither record supplies a leachate load ticket.",
+    sources: [{
+      ...archivedSource("Cadillac City Council Minutes — October 18, 2010.pdf", "/findings-docs/177-b1426df447ba.pdf", 6, "Landfill hearing and attributed statements: PDF pp2–4; final page is blank.", {
+        eventStamp: "2010-10-18 · time not stated",
+        basis: "Meeting date printed on page 1",
+        note: "The hearing continuation begins at 7:13 p.m.; subsequent corrections are preserved in the November 1 original.",
+      }),
+      page: 2,
+    }, {
+      ...archivedSource("Cadillac City Council Minutes — November 1, 2010.pdf", "/findings-docs/178-d632a7779e92.pdf", 7, "PDF pp1–2, motion 2010.239, approve corrections to the October 18 discussion; this does not enact the described options.", {
+        eventStamp: "2010-11-01 · time not stated",
+        basis: "Date of Council approval of corrected prior minutes",
+        note: "Both immutable originals are retained; the earlier file has not been overwritten.",
+      }),
+      page: 1,
+      role: "Cross-reference",
+    }],
+  },
+  {
+    year: "2010",
+    date: "2010-11-01",
+    isoDate: "2010-11-01",
+    time: noTime,
+    timeBasis: "Council meeting date; vote time not stated",
+    phase: "Solid-waste-plan amendment approval",
+    kind: "regulatory",
+    category: "12 · Landfill governance & environmental obligations",
+    title: "Council approves solid-waste-plan amendment after landfill-sale discussion",
+    finding: "November 1, 2010 minutes, PDF pp4–5, discuss American Waste’s proposed landfill acquisition and conditional rate decreases. County financial consultant Bob Joseph describes anticipated transfer of equipment, cells and buildings, assumption of closure/post-closure costs, and required relocation of trash from an unlined cell. Motion 2010.248 approves the 2009 Solid Waste Management Plan amendment by 3–2.",
+    significance: "Establishes this Council vote and the attributed obligations—not all required approvals, a completed sale, completed waste relocation, or delivery to Cadillac WWTP. Corrected page 5 attributes the County’s future flow-control pledge to John Divozzo, not Bob Joseph. No per-load records or PFAS results are supplied.",
+    sources: [{
+      ...archivedSource("Cadillac City Council Minutes — November 1, 2010.pdf", "/findings-docs/178-d632a7779e92.pdf", 7, "PDF pp4–5 contain the sale discussion, obligations and motion 2010.248. Final page is blank.", {
+        eventStamp: "2010-11-01 · time not stated",
+        basis: "Meeting date printed on page 1",
+        note: "The vote approves the 2009 amendment; 2010 is the Council action year, not a renamed amendment year.",
+      }),
+      page: 5,
+    }],
   },
   {
     year: "2014",
@@ -3882,11 +3968,11 @@ export default function Home() {
 
         <section className="document-library permit-library" data-archive-id="supplemental" aria-labelledby="supplemental-library-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · VERIFIED AUGUST 29, 2026</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} added records</h2></div>
+            <div><p className="eyebrow">CROSS-CATEGORY ADDITIONS · SOURCE-LINKED RECORDS</p><h2 id="supplemental-library-title">Search {supplementalDocuments.length} added records</h2></div>
             <p>These additions span federal compliance, landfill operations, civic actions, audited finances, historical groundwater context and response planning. Primary records, historical context and secondary research are explicitly distinguished; related records remain separate when their official edition, content or evidentiary role differs.</p>
           </div>
           <div className="reference-summary" aria-label="Cross-category additions audit summary">
-            <div><FileText /><span><strong>{supplementalAudit.stats.newDistinctRecords}</strong> distinct additions</span></div>
+            <div><FileText /><span><strong>{supplementalDocuments.length}</strong> distinct additions</span></div>
             <div><CheckCircle2 /><span><strong>{supplementalAudit.stats.exactExistingRecordsReused + supplementalAudit.stats.duplicateCopiesSuppressed}</strong> copies not republished</span></div>
             <div><FileSearch /><span><strong>{formatBytes(supplementalAudit.stats.publishedBytes)}</strong> preserved</span></div>
           </div>
@@ -3957,25 +4043,43 @@ export default function Home() {
           {filteredReferenceDocuments.length === 0 && <p className="document-empty">No reference records match this search.</p>}
         </section>
 
-        <section className="evidence-queue" aria-labelledby="evidence-title">
+        <section className="evidence-queue" id="evidence-request-queue" aria-labelledby="evidence-title">
           <div className="evidence-heading">
-            <div><p className="eyebrow">EVIDENCE REQUEST QUEUE</p><h2 id="evidence-title">Potentially missing or hidden documents</h2></div>
+            <div><p className="eyebrow">EVIDENCE REQUEST QUEUE</p><h2 id="evidence-title">Verified evidence and remaining requests</h2></div>
             <p>Requirements remain open until a source review confirms that the exact record satisfies them. Missing paperwork does not establish that deliveries or other events did not occur; this list tracks documentation still needed.</p>
+          </div>
+          <div className="queue-review" aria-label="Latest evidence queue review">
+            <p><strong>Updated <time dateTime={evidenceQueueUpdates.reviewDate}>{evidenceQueueUpdates.reviewDateLabel}</time></strong> · {remainingEvidenceRequirements} requests still needed across {evidenceRequests.length} blocks · {satisfiedEvidenceRequirements} previously satisfied</p>
+            <p>{evidenceQueueUpdates.note}</p>
           </div>
           {evidenceRequests.length > 0 ? (
             <div className="request-grid">
-              {evidenceRequests.map((request, index) => (
-                <article className="request-card" key={request.id}>
+              {evidenceRequests.map((request, index) => {
+                const update = queueUpdatesByRequest.get(request.id);
+                return (
+                <article className="request-card" key={request.id} id={`request-${request.id}`}>
                   <div className="request-index"><span>{String(index + 1).padStart(2, "0")}</span><Badge variant="outline">{request.priority}</Badge></div>
                   <p className="request-category">{request.category}</p>
                   <h3>{request.block}</h3>
+                  {update && <div className="request-update">
+                    <p className="request-update-label">Verified context now held</p>
+                    <p>{update.summary}</p>
+                    <details className="request-held">
+                      <summary>Review {update.held.length} evidence {update.held.length === 1 ? "note" : "notes"} and originals</summary>
+                      <ul>{update.held.map((item) => <li key={item.id}>
+                        <p>{item.finding}</p>
+                        <p className="request-limitation"><strong>Still unresolved:</strong> {item.limitation}</p>
+                        <div className="request-source-links">{item.sources.map((source) => source.document && <DocumentPopoutButton key={`${item.id}-${source.recordId}`} document={source.document} label={source.label} open={setSelected} />)}</div>
+                      </li>)}</ul>
+                    </details>
+                  </div>}
                   <dl>
                     <div><dt>Still needed</dt><dd><ul className="request-items">{request.remaining.map((requirement) => <li key={requirement.id}>{requirement.label}</li>)}</ul></dd></div>
                     <div><dt>Completes</dt><dd>{request.completes}</dd></div>
                     <div><dt>Preferred evidence</dt><dd>{request.provide}</dd></div>
                   </dl>
                 </article>
-              ))}
+              );})}
             </div>
           ) : <p className="request-empty">No outstanding evidence requests remain in the current queue.</p>}
         </section>

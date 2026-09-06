@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "b1b1c9d7c1f32fc35b9e439ac3bfe5d7b3cd322db1bffe1f09dc4b52b1a54f7c",
+  "catalogFingerprint": "72d67d84802f4c2e8d8028c235a8b45931f5b98c9e4f1324383df6298ffd4e3d",
   "cedarCreekAIntake": {
     "date": "2026-09-05",
     "recordsAdded": 9,
@@ -17,12 +17,12 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1594,
-    "verifiedRecords": 1594,
-    "pdfRecords": 1436,
-    "pdfPages": 22250,
+    "catalogRecords": 1599,
+    "verifiedRecords": 1599,
+    "pdfRecords": 1441,
+    "pdfPages": 22280,
     "imageRecords": 13,
-    "embeddedTextPages": 18279,
+    "embeddedTextPages": 18304,
     "ocrPages": 3984,
     "ocrPagesWithText": 3630,
     "manualReviewPages": 139,
@@ -33,7 +33,8 @@
     "pageCountFailures": 0,
     "exactHashDuplicateGroups": 0,
     "renderIdenticalByteDifferentGroups": 0,
-    "normalizedTextCandidateGroups": 1
+    "normalizedTextCandidateGroups": 1,
+    "visuallyVerifiedBlankPagesWithoutOcr": 5
   },
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
@@ -589,5 +590,16 @@
         ]
       }
     ]
+  },
+  "cedarCreekBIntake": {
+    "date": "2026-09-06",
+    "recordsAdded": 5,
+    "pdfPagesAdded": 30,
+    "embeddedTextPagesAdded": 25,
+    "visuallyVerifiedBlankPagesWithoutOcr": 5,
+    "ocrPagesAdded": 0,
+    "audit": "cedar-creek-b-five-minutes-audit.json",
+    "scope": "Incremental original hash, size and page-count checks. All 30 new pages read; substantive text required no OCR, and five trailing pages visually verified blank. Prior full-corpus methods and manual-review results remain historical. New normalized-text and rendered-sequence fingerprints compared with the available hash-matched cache, not a fresh rendering of the entire current corpus.",
+    "cachedBaselineRecordsCompared": 1585
   }
 }

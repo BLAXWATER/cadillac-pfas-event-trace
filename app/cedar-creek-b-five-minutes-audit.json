@@ -1,0 +1,379 @@
+{
+  "reviewDate": "2026-09-06",
+  "stats": {
+    "suppliedFiles": 5,
+    "recordsBefore": 1594,
+    "recordsAdded": 5,
+    "recordsAfter": 1599,
+    "pdfPagesRead": 30,
+    "embeddedTextPages": 25,
+    "visuallyVerifiedBlankPages": 5,
+    "ocrPages": 0,
+    "requirementsClosed": 0
+  },
+  "methods": [
+    "Read all pages; native text was sufficient. Visually checked key pages and each trailing blank page.",
+    "Originals copied byte-for-byte with matching SHA-256, byte size and page count; previews generated separately.",
+    "All five hashes are absent from the 1,594-record baseline. Compared new normalized text and rendered-page sequence fingerprints with the available hash-matched historical cache; no candidate duplicates found.",
+    "Source corrections are described, not applied to the originals. Generic upload names preserved as hash-verified search aliases."
+  ],
+  "duplicateCheck": {
+    "baselineCatalogHashCount": 1594,
+    "cachedBaselineRecordsCompared": 1585,
+    "cachedFingerprintMatches": [],
+    "scope": "No fresh full-corpus re-render; historical cache coverage is explicit."
+  },
+  "canonicalRecords": [
+    {
+      "recordId": "175-1abad5ad01bd",
+      "sourceName": "city-minutes-scan-202.pdf",
+      "meetingDate": "2010-04-19",
+      "sha256": "1abad5ad01bd3c10a09eb2be6f5bd14ba66e309f7f4d2990bbe9af266e3d28fd",
+      "size": 28216,
+      "pages": 7,
+      "relevantPages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "catalog": "supplemental-documents.json",
+      "asset": "/findings-docs/175-1abad5ad01bd.pdf",
+      "preview": "/first-page-previews/by-sha256/eb028626448e9349d7e76fab25d6ff675853f5c41b19cc2b38caec8d6362cb3f.webp",
+      "decision": "new canonical original; municipal or landfill context",
+      "description": "Cadillac City Council minutes, April 19, 2010. Page 3, motions 2010.088 and 2010.089, adopt 4.5% water and sewer rate increases effective July 1, 2010. Pages 4–5, motion 2010.096, award Environmental Recycling Group household-hazardous-waste collection at a $725 site fee plus $0.83 per pound for 2010–2011, with a two-year option; County/City shares are 60%/40%. These are rate and service-award records, not leachate revenue, payment or delivery to Cadillac WWTP. Page 5 Miscellaneous File No. 869 concerns delinquent taxes, not the leachate agreement File No. 842. Seven pages, including a blank final page."
+    },
+    {
+      "recordId": "176-9a98818ae0fe",
+      "sourceName": "city-minutes-scan-238.pdf",
+      "meetingDate": "2010-08-16",
+      "sha256": "9a98818ae0fe51e41f1c4bf9b71a32b0f99bec4e6d9c0eaf545ddfdfa5d24f24",
+      "size": 120367,
+      "pages": 5,
+      "relevantPages": [
+        4
+      ],
+      "catalog": "supplemental-documents.json",
+      "asset": "/findings-docs/176-9a98818ae0fe.pdf",
+      "preview": "/first-page-previews/by-sha256/556ce0f7713d59d618b4c8ac7286b2430a4c203fd016bba4074c540968ccf2f2.webp",
+      "decision": "new canonical original; municipal or landfill context",
+      "description": "Cadillac City Council minutes, August 16, 2010. Page 4, motion 2010.203, substitutes Foster, Swift, Collins & Smith as counsel for the Haring Township litigation appeal; these minutes do not describe its substantive issues. Other actions concern compensation, zoning and routine council business. Preserved as municipal context, not WWTP, leachate, plant-procurement, sampling or delivery evidence. Five pages, including a blank final page."
+    },
+    {
+      "recordId": "177-b1426df447ba",
+      "sourceName": "city-minutes-scan-267.pdf",
+      "meetingDate": "2010-10-18",
+      "sha256": "b1426df447bac4aa88ebe9a7a1544efb459c752cb7efb8c54c238183d283cfad",
+      "size": 106056,
+      "pages": 6,
+      "relevantPages": [
+        2,
+        3,
+        4
+      ],
+      "catalog": "supplemental-documents.json",
+      "asset": "/findings-docs/177-b1426df447ba.pdf",
+      "preview": "/first-page-previews/by-sha256/0283c5c43f4c914cb1718955549aa0067acad7e34770b2b488c3e1373b8b19cf.webp",
+      "decision": "new canonical original; municipal or landfill context",
+      "description": "Cadillac City Council minutes, October 18, 2010. Pages 2–4 continue the Wexford Solid Waste Management Plan amendment hearing, discussing American Waste, proposed landfill sale, expanded waste imports, flow control, tipping fees and landfill life. Speakers describe potential economic effects; this file contains no plan-amendment adoption. November 1 minutes, pp1–2, subsequently approve corrections describing future flow-control options upon sale or after a set period. Solid-waste flow control is not wastewater flow. No completed sale, leachate delivery, carrier ticket, invoice or PFAS result is supplied. Six pages, including a blank final page."
+    },
+    {
+      "recordId": "178-d632a7779e92",
+      "sourceName": "city-minutes-scan-262.pdf",
+      "meetingDate": "2010-11-01",
+      "sha256": "d632a7779e92e386b30aa2fb846fde8d813425c89f6846b2dfd1b6498ec410e6",
+      "size": 27607,
+      "pages": 7,
+      "relevantPages": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "catalog": "supplemental-documents.json",
+      "asset": "/findings-docs/178-d632a7779e92.pdf",
+      "preview": "/first-page-previews/by-sha256/3f7583352906a0984aa955bd36ccc304fdf51f856a207ac96296d839911219b4.webp",
+      "decision": "new canonical original; municipal or landfill context",
+      "description": "Cadillac City Council minutes, November 1, 2010. Pages 4–5 record discussion of American Waste’s proposed acquisition of Wexford County Landfill, conditional rate decreases, closure/post-closure obligations and required relocation of trash from an unlined cell. Page 5, motion 2010.248, approves the 2009 Solid Waste Management Plan amendment 3–2. This establishes Council action and attributed statements, not a completed sale, waste relocation, actual tipping payment or delivery to Cadillac WWTP. Pages 1–2 approve corrected October 18 minutes describing future flow-control options; corrected p5 attributes the County’s flow-control pledge to John Divozzo. Seven pages, including a blank final page."
+    },
+    {
+      "recordId": "179-9c328775dc31",
+      "sourceName": "city-minutes-scan-265.pdf",
+      "meetingDate": "2010-12-06",
+      "sha256": "9c328775dc31324811a641aed0bfd736ff0504e5396d0d274155d3e5f3ccdd77",
+      "size": 95932,
+      "pages": 5,
+      "relevantPages": [
+        2,
+        3,
+        4
+      ],
+      "catalog": "supplemental-documents.json",
+      "asset": "/findings-docs/179-9c328775dc31.pdf",
+      "preview": "/first-page-previews/by-sha256/81dfee7892ffca423cfb8094ca09e9ef9a04a4f2584299bdc672771014b91e75.webp",
+      "decision": "new canonical original; municipal or landfill context",
+      "description": "Cadillac City Council minutes, December 6, 2010. Page 2 discusses curbside recycling as an option in the City’s Allied Waste contract. Page 3, motion 2010.267 / Resolution 1957, approves invasive-aquatic-species millage ballot language for February 22, 2011 by 3–2; a preceding discussion paragraph says 2010, while the operative motion says 2011. Page 4 records a public commenter’s concern about potentially duplicated legal bills and the City Manager’s promise to look into it, not verified duplicate billing or original invoices. This is municipal recycling/milfoil context, not Allied Waste leachate hauling or a WWTP delivery. Five pages, including a blank final page."
+    }
+  ],
+  "pageFingerprints": [
+    {
+      "recordId": "175-1abad5ad01bd",
+      "normalizedContentSha256": "a08b7956665241ec2b333a6092b47b0d7598a68cccf46dd83590509ee35b9076",
+      "visualSequenceSha256": "e49e0d21769aad4d6a21d53f06a09bc61c4efa92200b921a4ed0407767ea52b7",
+      "pages": [
+        {
+          "page": 1,
+          "embeddedChars": 1671,
+          "classification": "embedded text",
+          "thumbnailSha256": "5198d7332381c7b47d3b05732d60ab03dff35aa6ab57ded0f343807b9073dc06",
+          "dhash": "0814006018e61d9c0dba1f9607b608261784175618560676003e15361d1e0818"
+        },
+        {
+          "page": 2,
+          "embeddedChars": 2243,
+          "classification": "embedded text",
+          "thumbnailSha256": "eff606c95a64f1e6546e23b9ddc7ae72d484695d7b065528752f7a205736e9a5",
+          "dhash": "0010060016d61f120c8c168f066705463ea70a5e13660cee074c034f28660484"
+        },
+        {
+          "page": 3,
+          "embeddedChars": 2087,
+          "classification": "embedded text",
+          "thumbnailSha256": "578bd48b0a410d09cc53020ab5c905a3b53e839433f587b317d1e8c56a6c968f",
+          "dhash": "0000096a0bea0bea028e0fb6065621ae1bce1af603b60ba711a717d61d2e0000"
+        },
+        {
+          "page": 4,
+          "embeddedChars": 2072,
+          "classification": "embedded text",
+          "thumbnailSha256": "bdf8e129d4aace8ba3e04ffc459d7036685b95146c474bb20506fa32c424f1d5",
+          "dhash": "00000876026e0cc60fe20b160d3605ae0dce0b6203e628460d860bce030e0086"
+        },
+        {
+          "page": 5,
+          "embeddedChars": 2071,
+          "classification": "embedded text",
+          "thumbnailSha256": "4e348b0244bbe6bc9663b7e3e4ebd31e1c15ca8d774634b3fa3280835fdf4a9d",
+          "dhash": "0000260406b61aee1f46304613c6170a02a703af0aec1bf6172e1b3e0a702000"
+        },
+        {
+          "page": 6,
+          "embeddedChars": 1772,
+          "classification": "embedded text",
+          "thumbnailSha256": "b803b365041fd7abefbd04e74c494a6d4b82e0f2e8e1a3069a7f01528aee47f9",
+          "dhash": "0000048c19ce1ac606e607ee02c606a606161ed606e3106f0c8e0e5c165c0000"
+        },
+        {
+          "page": 7,
+          "embeddedChars": 0,
+          "classification": "visually verified blank",
+          "thumbnailSha256": "2a32d9a94209e87b46358ff2151efee07dea13d3171a3dfb4331dede6e060479",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "recordId": "176-9a98818ae0fe",
+      "normalizedContentSha256": "ffaf663800f822857e2e4bffec6922a9de5994ffb003a01ce04ee6d1ff5ecc6c",
+      "visualSequenceSha256": "51d1ea9d1fd4c5b7e707391aaddf99556ca3f6378dbb62b9ce3da63734ea2069",
+      "pages": [
+        {
+          "page": 1,
+          "embeddedChars": 1142,
+          "classification": "embedded text",
+          "thumbnailSha256": "406ff6aff311237f4e706a42ff330e2b1676adee1895621ff595c98acee82272",
+          "dhash": "1014006018f61d061d1e1e9e17a60706078006c601de02be0e000e0006000000"
+        },
+        {
+          "page": 2,
+          "embeddedChars": 2122,
+          "classification": "embedded text",
+          "thumbnailSha256": "db0663aeed50cad11f2385af6aa718f28a6ee2e66877dbcf8b1482c291eb3ee4",
+          "dhash": "00000b020b9613de131e140606f60b57192602561ace0b9e06fe07de00002002"
+        },
+        {
+          "page": 3,
+          "embeddedChars": 1499,
+          "classification": "embedded text",
+          "thumbnailSha256": "2ba9a8f195e48b8ac742126eccc52edcca9b940e87006af1510f8bb4741cc8fa",
+          "dhash": "000008320bb70fcf07e706e000d60fa60e000d8603a60616161617e221400000"
+        },
+        {
+          "page": 4,
+          "embeddedChars": 1476,
+          "classification": "embedded text",
+          "thumbnailSha256": "5c598c7840eb7e3f1228b6942149d0bec7303e8b14a2fd19958a3a6bd2f8da29",
+          "dhash": "00000e860cc605a6098e09ae03ae126606e606d60ece0f131a5e064c00000000"
+        },
+        {
+          "page": 5,
+          "embeddedChars": 0,
+          "classification": "visually verified blank",
+          "thumbnailSha256": "2a32d9a94209e87b46358ff2151efee07dea13d3171a3dfb4331dede6e060479",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "recordId": "177-b1426df447ba",
+      "normalizedContentSha256": "0f0b6912eac0c4a3b48141ceb945a9850d40ce125048779a72628268d70cae69",
+      "visualSequenceSha256": "fc4e35392a10c3866d8a42fff60da55c3b111a86b26e742f6e632a6b6c3dc282",
+      "pages": [
+        {
+          "page": 1,
+          "embeddedChars": 1335,
+          "classification": "embedded text",
+          "thumbnailSha256": "4d933669d4c8f146320882a53fb91ce32e178ff1291c2048836d97c321bf6986",
+          "dhash": "00000060007b05861d961eb607a6070406c21adb0c000ec71e130d2729240000"
+        },
+        {
+          "page": 2,
+          "embeddedChars": 2582,
+          "classification": "embedded text",
+          "thumbnailSha256": "360bc9a78177d12056bb87ada0ec5e95f5b28a94f0240880339ffdbe443726b7",
+          "dhash": "00000200036734672a5716971b170b4f085f1acb0fc614de0358072734170000"
+        },
+        {
+          "page": 3,
+          "embeddedChars": 3021,
+          "classification": "embedded text",
+          "thumbnailSha256": "6fa3fea46ee189637ccbf826ff9cac2e5e679dd08ca96a5598da539d77a3dde5",
+          "dhash": "00003002092f09af02b716af092f12d32d4703cb09e305270ee7064310a20000"
+        },
+        {
+          "page": 4,
+          "embeddedChars": 2426,
+          "classification": "embedded text",
+          "thumbnailSha256": "2fbce0e94276932a57064720a915d5d2eab05e3a8fcdbe990a9fa1e425f0d8fe",
+          "dhash": "0000028b12a715db08971ca704bf0c5f0b9b0bbf1e0f0b7004f004ec312c0000"
+        },
+        {
+          "page": 5,
+          "embeddedChars": 1607,
+          "classification": "embedded text",
+          "thumbnailSha256": "8d012746063affab8dde21087e3e39400ea1944d641d644ba3bb6a959aabb4fc",
+          "dhash": "02000c000e46032718470e00062f009306870e2f39c70dc60e52160c020c0000"
+        },
+        {
+          "page": 6,
+          "embeddedChars": 0,
+          "classification": "visually verified blank",
+          "thumbnailSha256": "2a32d9a94209e87b46358ff2151efee07dea13d3171a3dfb4331dede6e060479",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "recordId": "178-d632a7779e92",
+      "normalizedContentSha256": "47499f2447584821e33275906ed3d3dfd04d89e7e146b97ce6905cacb36bd265",
+      "visualSequenceSha256": "12167aeecace4c9fa32111dff0a524213bb76a4b0800621fc8973d2ed9370be4",
+      "pages": [
+        {
+          "page": 1,
+          "embeddedChars": 1527,
+          "classification": "embedded text",
+          "thumbnailSha256": "10edb5a4d8bdf4815613d9203514690d8d63250362d91780f6b920b35bb78cd5",
+          "dhash": "0000006000fb05061d9e1f9c17e307071e52192706e603d3221f076f1a020000"
+        },
+        {
+          "page": 2,
+          "embeddedChars": 1724,
+          "classification": "embedded text",
+          "thumbnailSha256": "8ae730fff12adf825ca9cc9e04cc1b4c91100d3fd72037d650fefe7c7939efb3",
+          "dhash": "000003000e00042f08271adf0e000db61bae0b9314f7091f0def1be71a000024"
+        },
+        {
+          "page": 3,
+          "embeddedChars": 2076,
+          "classification": "embedded text",
+          "thumbnailSha256": "a08efce712cc14304a3a3893e0aa1c6b3beb5724e3b22d32ff559cce107c142f",
+          "dhash": "00000caa1a4f07be0df60fdb079b2c630ac70afa0c271bc708f70f0f02002002"
+        },
+        {
+          "page": 4,
+          "embeddedChars": 1977,
+          "classification": "embedded text",
+          "thumbnailSha256": "11e47f52cfb818c190add42bb30b82497f7311852b851f5ebd26658af43ef1e3",
+          "dhash": "000000d31bd71707063702f006ce387f0e421fa60d53356735270c6701e20000"
+        },
+        {
+          "page": 5,
+          "embeddedChars": 2176,
+          "classification": "embedded text",
+          "thumbnailSha256": "ef385cb64a34f7a4c1efd9f1257e66a0e5094903c5de03a4345cb1a44f9136fb",
+          "dhash": "0000222703b709b31e271e470cb703730be20fb7027606eb06b30b3f02000010"
+        },
+        {
+          "page": 6,
+          "embeddedChars": 1244,
+          "classification": "embedded text",
+          "thumbnailSha256": "27307e68e6fdc530d8d075ca26d9780d68f0e15aa443a9a178766071728dce62",
+          "dhash": "01080600068f00ef0ab3102707a70af71c470f47164c060c0000000000000000"
+        },
+        {
+          "page": 7,
+          "embeddedChars": 0,
+          "classification": "visually verified blank",
+          "thumbnailSha256": "2a32d9a94209e87b46358ff2151efee07dea13d3171a3dfb4331dede6e060479",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "recordId": "179-9c328775dc31",
+      "normalizedContentSha256": "9cc19e28dcf8cc857494c5b80e576e13414e866bb759e43dca4bd9cc73ce79d6",
+      "visualSequenceSha256": "a40269866a1edc5215f75084d051f9aa7b23e371edcb9f603316d7f45814c4e9",
+      "pages": [
+        {
+          "page": 1,
+          "embeddedChars": 1344,
+          "classification": "embedded text",
+          "thumbnailSha256": "6d1e939ef637d2635693b9b0492e3b206d03db4e97f974e537ea1e642efc3f9c",
+          "dhash": "0000006000fb05861db21b1607861da716a60e9f17371f3f0c000a4f294b0000"
+        },
+        {
+          "page": 2,
+          "embeddedChars": 1961,
+          "classification": "embedded text",
+          "thumbnailSha256": "0ccb3fa65a6efc3d941ba14abcf9a723813f1840f761538cfbfb5d15218cf34c",
+          "dhash": "00002db209a70f271e4610a70b0a0b570fe30fcb29570b0702fa093b350b0000"
+        },
+        {
+          "page": 3,
+          "embeddedChars": 1991,
+          "classification": "embedded text",
+          "thumbnailSha256": "41cdd85ff982694b1b1cf0081bbe453814e9f62286caf6e0b374f9c225abc15f",
+          "dhash": "000032070a6f08670e870b960a9e07261f820cc014df0f3b0c6f16eb07000002"
+        },
+        {
+          "page": 4,
+          "embeddedChars": 945,
+          "classification": "embedded text",
+          "thumbnailSha256": "44b0e98b6d5539158702354b3d742be2e0359aa900534ee09efe345a6d380114",
+          "dhash": "0002060006d729370e001f9709ec043e0cb70e471e42164c0040000000000000"
+        },
+        {
+          "page": 5,
+          "embeddedChars": 0,
+          "classification": "visually verified blank",
+          "thumbnailSha256": "2a32d9a94209e87b46358ff2151efee07dea13d3171a3dfb4331dede6e060479",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    }
+  ],
+  "timelineMeetingDates": [
+    "2010-04-19",
+    "2010-10-18",
+    "2010-11-01"
+  ],
+  "archiveOnlyMeetingDates": [
+    "2010-08-16",
+    "2010-12-06"
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "remainingRequirements": 22
+  },
+  "evidentiaryBoundary": "Solid-waste flow control is not wastewater flow. Proposed sale, conditional rate decreases and waste-relocation obligations are not completed transactions. Retail utility rates and household-hazardous-waste awards are not leachate receipts. No new original supplies a per-load ticket, receiving log, delivery-linked billing, executed treatment agreement or exact last delivery."
+}

@@ -1,0 +1,373 @@
+{
+  "reviewDate": "2026-09-06",
+  "reviewDateLabel": "September 6, 2026",
+  "scope": "Recent Cedar Creek delivery/procurement records, County originals, filename reconciliation and five newly reviewed 2010 Cadillac Council minutes. Existing well, receptor and pathway dispositions are carried forward; this is not a fresh reread of all 1,599 records.",
+  "note": "Five distinct 2010 Council originals add historical context; all are searchable by their uploaded filenames. The new minutes close no request. Filename corrections alone do not add originals or satisfy a requirement.",
+  "blocks": [
+    {
+      "requestId": "receiving-history",
+      "summary": "Actual leachate offloading and the landfill–WWTP relationship are documented. Seven requests remain for individual transactions, signed agreements and the exact cessation date.",
+      "held": [
+        {
+          "id": "actual-offloading",
+          "finding": "January 12, 2016: the City letter documents actual American Waste leachate offloading and a spill at Cadillac WWTP. Missing tickets do not negate this documented activity.",
+          "limitation": "9:22 a.m. is the notification-call time; 10,000 gallons is tanker capacity, not a measured load or spill. The typed letter does not identify the originating landfill.",
+          "sources": [
+            {
+              "recordId": "039-c677de7c10e6",
+              "sha256": "c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d",
+              "label": "Spill letter · p1",
+              "pages": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "receiving-relationship",
+          "finding": "A February 3, 2011 inspection entry describes County Landfill leachate received at the equalization tank. The SIU profile reports Wexford County Landfill wastewater averaging 33,000 gallons per day, intermittently. November 2017 City minutes describe landfill liquid hauled to the WWTP and payment for treatment.",
+          "limitation": "The 2011 observation predates the 2012–2019 search period. The SIU page has no printed date (2017 comes from file metadata); its average is not an individual delivery quantity. These are not per-load logs or receipts.",
+          "sources": [
+            {
+              "recordId": "059-72e0d17a78ae",
+              "sha256": "72e0d17a78aecc8973b70cded4666fbb4c7ba1a4df1d7f56a72f1b9ece7b5b67",
+              "label": "Inspection entry · p2",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "recordId": "037-1f7e70d66b30",
+              "sha256": "1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3",
+              "label": "SIU profile · p1",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "recordId": "164-519d4faa6c33",
+              "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+              "label": "City minutes · pp6–8",
+              "pages": [
+                6,
+                7,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agreement-approval",
+          "finding": "September 8, 2009: motion 2009.216 approves the leachate-treatment arrangement for July 1, 2009–June 30, 2011 and identifies Miscellaneous File No. 842.",
+          "limitation": "Approval minutes are held; the fully executed agreement, signed numerical rate schedule and later signed renewals are still needed.",
+          "sources": [
+            {
+              "recordId": "008-5b67e1ed1d5c",
+              "sha256": "5b67e1ed1d5cef4fb50cca40560307f5befeff4e602f5229b0bf1422d803a9dd",
+              "label": "Agreement approval · p2",
+              "pages": [
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reported-cessation",
+          "finding": "June 28, 2019: Cadillac reports that Wexford County Landfill moved to deep-well injection and told the City it would no longer bring leachate.",
+          "limitation": "This is affirmative City-reported transition/cessation context, not the exact effective cessation date or final receiving-log entry.",
+          "sources": [
+            {
+              "recordId": "form-submission-034-00d98416b456",
+              "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+              "label": "Source-status form · pp1–2",
+              "pages": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "revenue-and-record-leads",
+          "finding": "May 2016 budget material pursues additional hauled-waste revenue alongside pollution-control goals and reports above-budget leachate revenue. The May 2017 DEQ FAQ identifies alternative shipping/receipt records and generator, transporter and receiving-facility custodians.",
+          "limitation": "Aggregate revenue is not a delivery-linked invoice or ledger. The FAQ is historical guidance, not a completed shipping record, proof records still exist, or a statement of current law.",
+          "sources": [
+            {
+              "recordId": "process-site-023-0fcc5cbb1c14",
+              "sha256": "0fcc5cbb1c14f1152de79e830c57f8a202cf7b9f6457abdacc505d0c9f03531c",
+              "label": "Budget context · pp19, 21",
+              "pages": [
+                19,
+                21
+              ]
+            },
+            {
+              "recordId": "135-5f86ea369b77",
+              "sha256": "5f86ea369b770cc502bcb63ddc6a1ec2314c516fac172daa18b83b886a051699",
+              "label": "Historical shipping FAQ · pp1–2, 6–7",
+              "pages": [
+                1,
+                2,
+                6,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "id": "county-and-epa-context",
+          "finding": "2015 and April 2017 County minutes preserve Cedar Creek record-access and fee-discussion comments. November 2017 County minutes direct preparation of an injection-well opposition resolution. EPA’s 2017–2018 fact sheets and draft permit document the proposed alternative.",
+          "limitation": "Public comments, a resolution-preparation vote and draft permitting do not supply executed treatment agreements, original billing, operational injection records or a final Cadillac delivery date.",
+          "sources": [
+            {
+              "recordId": "105-b03fe8433176",
+              "sha256": "b03fe84331764fcb983d090470568354ec6eb80ac59dbe812d5fae10dae308f2",
+              "label": "County comments · p2",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "recordId": "134-3dc615cfcf9c",
+              "sha256": "3dc615cfcf9ce5e8252c0d536a755cb548ed6c290ebed1f773ca5bb9356f72a0",
+              "label": "County comments · p8",
+              "pages": [
+                8
+              ]
+            },
+            {
+              "recordId": "044-7c628f229e98",
+              "sha256": "7c628f229e98599ab13a0152d8a06d797175a026199dece5bc1d34fc2115df96",
+              "label": "County vote · p6",
+              "pages": [
+                6
+              ]
+            },
+            {
+              "recordId": "024-069dda9efa5b",
+              "sha256": "069dda9efa5b9c615dcbfaac75f59fe1fa9acdcf11b309401f005c45fc021caf",
+              "label": "EPA fact sheet · pp1–2",
+              "pages": [
+                1,
+                2
+              ]
+            },
+            {
+              "recordId": "020-9ad6d46eb20b",
+              "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
+              "label": "EPA draft permit · pp5, 16",
+              "pages": [
+                5,
+                16
+              ]
+            },
+            {
+              "recordId": "131-0cbb4e491791",
+              "sha256": "0cbb4e4917919bc323d7a0c618636d728324bd4af24975f01b226c94e3f065a3",
+              "label": "EPA hearing fact sheet · pp1–2",
+              "pages": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "county-2020-boundary",
+          "finding": "The October 2020 Executive packet contains RAP budget invoice references, a proposal to bring contaminated soil to Wexford landfill, and a separate Cedar Creek drinking-water sampling requirement.",
+          "limitation": "These are not original leachate invoices, proof of payment, completed soil deliveries, Cadillac WWTP deliveries or completed PFAS tests.",
+          "sources": [
+            {
+              "recordId": "014-990955a02a90",
+              "sha256": "990955a02a90f01cdb9c8007db2e9056fd217c571a6b7af11bc54048b3c4a91f",
+              "label": "2020 packet · pp6–8, 13–15",
+              "pages": [
+                6,
+                7,
+                8,
+                13,
+                14,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "id": "landfill-2010-context",
+          "finding": "October 18 and November 1, 2010: City minutes record American Waste landfill-sale discussions and Council approval of the 2009 Solid Waste Management Plan amendment by 3–2. November’s minutes correct the earlier discussion to future flow-control options and describe anticipated closure/post-closure obligations and required relocation of trash from an unlined cell.",
+          "limitation": "These are solid-waste governance records from before the 2012–2019 delivery search period, not wastewater-flow logs, proof of a completed sale or relocation, leachate receipts, or the executed treatment agreement.",
+          "sources": [
+            {
+              "recordId": "177-b1426df447ba",
+              "sha256": "b1426df447bac4aa88ebe9a7a1544efb459c752cb7efb8c54c238183d283cfad",
+              "label": "October discussion · pp2–4",
+              "pages": [
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "recordId": "178-d632a7779e92",
+              "sha256": "d632a7779e92e386b30aa2fb846fde8d813425c89f6846b2dfd1b6498ec410e6",
+              "label": "November corrections and vote · pp1–2, 4–5",
+              "pages": [
+                1,
+                2,
+                4,
+                5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requestId": "wwtp-treatment-discharge",
+      "summary": "Treatment-equipment purchasing and a 2016 installation are corroborated. These records do not replace the missing main-WWTP influent, paired-media PFAS samples or matching operating logs.",
+      "held": [
+        {
+          "id": "equipment-chain",
+          "finding": "The JWC quotation, April 2016 award of $52,100 for JWC equipment and two HESCO samplers, and February 2023 minutes corroborating installation in 2016 establish distinct quotation, authorization and installation evidence.",
+          "limitation": "The quotation gives estimated lead times, not an actual shipment date or carrier. Retrospective installation evidence does not supply the requested synchronized PFAS sampling or operating logs.",
+          "sources": [
+            {
+              "recordId": "process-site-019-1376a072059f",
+              "sha256": "1376a072059f6d4912035ef0699e75e1cdda5577715aefcf9543d8fd020b7888",
+              "label": "JWC quotation · pp2–3",
+              "pages": [
+                2,
+                3
+              ]
+            },
+            {
+              "recordId": "process-site-018-26f79914deae",
+              "sha256": "26f79914deaeb45725961047baebd4d294153e7eeadc9fe991a52873d77e7a2b",
+              "label": "Purchase awards · p5",
+              "pages": [
+                5
+              ]
+            },
+            {
+              "recordId": "process-site-020-28d1cb87cb36",
+              "sha256": "28d1cb87cb365073a789ab39ca46ab3347af69468901a7f582e9b72cda262fc5",
+              "label": "Installation corroboration · pp2–3",
+              "pages": [
+                2,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chemical-pump-purchases",
+          "finding": "Minutes document the Kemira ferric-chloride purchasing extension through December 2017, Webb’s 2018–2020 contract at $0.245 per dry pound, and a $9,300 award for three Mattoon & Lee WWTP pumps.",
+          "limitation": "These are purchasing authorizations, not individual delivery receipts or measurements of PFAS treatment performance.",
+          "sources": [
+            {
+              "recordId": "process-site-021-6c2e73d85da0",
+              "sha256": "6c2e73d85da00db6690645c8d68b445992eccb97b1324d6afbc7a8459d9b0a3e",
+              "label": "Kemira authorization · pp4–5",
+              "pages": [
+                4,
+                5
+              ]
+            },
+            {
+              "recordId": "164-519d4faa6c33",
+              "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+              "label": "Webb contract · pp2–3",
+              "pages": [
+                2,
+                3
+              ]
+            },
+            {
+              "recordId": "process-site-022-fe153aeaa6d9",
+              "sha256": "fe153aeaa6d9565b44fb37bb94cdc102ca2cc5696eadfc5dffd984e15a280d96",
+              "label": "Pump award · p4",
+              "pages": [
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "id": "influent-still-unmeasured",
+          "finding": "The June 2019 source-status form reports outfall PFOS and PFOA results but explicitly marks influent sampling “NO”. Effluent and biosolids packages already held remain useful independent records.",
+          "limitation": "The form’s source-status selection does not mean zero effluent PFOS or demonstrate treatment-removal efficiency. LDFA influent is not main-WWTP influent.",
+          "sources": [
+            {
+              "recordId": "form-submission-034-00d98416b456",
+              "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+              "label": "Sampling status · pp1–2",
+              "pages": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requestId": "subsurface-pathway",
+      "summary": "Already satisfied: local well-construction and lithology records. The recent delivery and County records do not resolve the four remaining site-specific groundwater requests.",
+      "held": [
+        {
+          "id": "wellogic-held",
+          "finding": "The official Wexford Wellogic package supplies local construction and lithology data; the existing review identified 45 wells with linked lithology within 1,000 meters of the geocoded 1121 Plett point.",
+          "limitation": "This prior closure does not supply the certified 1140 Plett record, surveyed synoptic elevations/water levels, hydraulic tests or a source-to-Plett groundwater-flow map.",
+          "sources": [
+            {
+              "recordId": "116-b3871d88915e",
+              "sha256": "b3871d88915e5510dd0caf105b8be9cfe8dd5101aa4bc419c00ad67b478e4398",
+              "label": "Wellogic original package"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requestId": "plett-receptor-series",
+      "summary": "The Plett analytical records and 24-page comparability source packet are already held. The complete 49-page EGLE work order and the three sample-specific custody/field records remain requested.",
+      "held": [
+        {
+          "id": "plett-packet-held",
+          "finding": "The existing 24-page source packet preserves the September 10, 2025 side-by-side results, available EGLE Work Order 2509147 pages, and Merit/Cyclopure material.",
+          "limitation": "It is not the complete 49-page EGLE work order and does not close the separate chain-of-custody/field-sheet requests. Recent receiving-history uploads add none of those missing records.",
+          "sources": [
+            {
+              "recordId": "098-044977305e5f",
+              "sha256": "044977305e5fd34cdf638d762200c3d6832c29d0101e30ee8313013897dfa4d1",
+              "label": "Plett source packet · 24 pages"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requestId": "source-receptor-confirmation",
+      "summary": "AOI results, maps and the comparability study provide context, not a completed source-to-receptor attribution package. All four confirmation requests remain open.",
+      "held": [
+        {
+          "id": "aoi-context-held",
+          "finding": "The complete MPART comparability study and 26-page EGLE results compilation are held and remain separate from leachate receiving records.",
+          "limitation": "The study is not a PFAS source investigation. Anonymized address/LDFA results do not replace a source/receptor coordinate crosswalk, an explicit transect, synchronized source samples or matching field/QC records.",
+          "sources": [
+            {
+              "recordId": "056-ae1a7fc25cfe",
+              "sha256": "ae1a7fc25cfe1448b8303c3f05624c2461ee3b7348827ecaf836bdaef92aa7c3",
+              "label": "MPART comparability report"
+            },
+            {
+              "recordId": "082-18e25560cde6",
+              "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
+              "label": "EGLE results compilation"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

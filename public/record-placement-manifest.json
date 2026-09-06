@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1594,
+  "recordCount": 1599,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 173
+      "count": 178
     },
     {
       "archiveId": "reference",
@@ -16474,6 +16474,61 @@
       "url": "/findings-docs/174-f091763d0d37.pdf",
       "sha256": "f091763d0d3739ffa98bfed87e4a79a076a7df76d0bf2342d910e723d6fcd121",
       "size": 17184330
+    },
+    {
+      "id": "175-1abad5ad01bd",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac City Council Minutes — April 19, 2010.pdf",
+      "url": "/findings-docs/175-1abad5ad01bd.pdf",
+      "sha256": "1abad5ad01bd3c10a09eb2be6f5bd14ba66e309f7f4d2990bbe9af266e3d28fd",
+      "size": 28216
+    },
+    {
+      "id": "176-9a98818ae0fe",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac City Council Minutes — August 16, 2010.pdf",
+      "url": "/findings-docs/176-9a98818ae0fe.pdf",
+      "sha256": "9a98818ae0fe51e41f1c4bf9b71a32b0f99bec4e6d9c0eaf545ddfdfa5d24f24",
+      "size": 120367
+    },
+    {
+      "id": "177-b1426df447ba",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac City Council Minutes — October 18, 2010.pdf",
+      "url": "/findings-docs/177-b1426df447ba.pdf",
+      "sha256": "b1426df447bac4aa88ebe9a7a1544efb459c752cb7efb8c54c238183d283cfad",
+      "size": 106056
+    },
+    {
+      "id": "178-d632a7779e92",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac City Council Minutes — November 1, 2010.pdf",
+      "url": "/findings-docs/178-d632a7779e92.pdf",
+      "sha256": "d632a7779e92e386b30aa2fb846fde8d813425c89f6846b2dfd1b6498ec410e6",
+      "size": 27607
+    },
+    {
+      "id": "179-9c328775dc31",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac City Council Minutes — December 6, 2010.pdf",
+      "url": "/findings-docs/179-9c328775dc31.pdf",
+      "sha256": "9c328775dc31324811a641aed0bfd736ff0504e5396d0d274155d3e5f3ccdd77",
+      "size": 95932
     },
     {
       "id": "001-7c991baaf1e9",

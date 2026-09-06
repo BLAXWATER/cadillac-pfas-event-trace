@@ -43,5 +43,30 @@
     "filename": "08_EPA_2018-02_Wexford_Public_Hearing_Fact_Sheet.pdf",
     "id": "131-0cbb4e491791",
     "sha256": "0cbb4e4917919bc323d7a0c618636d728324bd4af24975f01b226c94e3f065a3"
+  },
+  {
+    "filename": "city-minutes-scan-202.pdf",
+    "id": "175-1abad5ad01bd",
+    "sha256": "1abad5ad01bd3c10a09eb2be6f5bd14ba66e309f7f4d2990bbe9af266e3d28fd"
+  },
+  {
+    "filename": "city-minutes-scan-238.pdf",
+    "id": "176-9a98818ae0fe",
+    "sha256": "9a98818ae0fe51e41f1c4bf9b71a32b0f99bec4e6d9c0eaf545ddfdfa5d24f24"
+  },
+  {
+    "filename": "city-minutes-scan-267.pdf",
+    "id": "177-b1426df447ba",
+    "sha256": "b1426df447bac4aa88ebe9a7a1544efb459c752cb7efb8c54c238183d283cfad"
+  },
+  {
+    "filename": "city-minutes-scan-262.pdf",
+    "id": "178-d632a7779e92",
+    "sha256": "d632a7779e92e386b30aa2fb846fde8d813425c89f6846b2dfd1b6498ec410e6"
+  },
+  {
+    "filename": "city-minutes-scan-265.pdf",
+    "id": "179-9c328775dc31",
+    "sha256": "9c328775dc31324811a641aed0bfd736ff0504e5396d0d274155d3e5f3ccdd77"
   }
 ]

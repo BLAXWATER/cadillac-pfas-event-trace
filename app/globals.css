@@ -300,6 +300,21 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .evidence-queue { margin-top: var(--section-space); padding-top: clamp(32px, 4vw, 48px); border-top: 1px solid var(--border); }
 .evidence-heading { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr); gap: 42px; align-items: end; margin-bottom: 24px; }
 .evidence-heading > p { margin: 0; color: var(--brand-gray); line-height: 1.65; }
+.queue-review { margin-bottom: 24px; padding: 16px 20px; border-left: 3px solid var(--primary); background: rgba(0, 188, 235, .06); font-size: 1rem; line-height: 1.6; }
+.queue-review p { margin: 0; }
+.queue-review p + p { margin-top: 8px; color: var(--brand-gray); }
+.request-update { margin-bottom: 18px; font-size: 1rem; line-height: 1.6; overflow-wrap: anywhere; }
+.request-update p { margin: 0; }
+.request-update .request-update-label { margin-bottom: 6px; color: var(--brand-cyan); font: 700 .875rem/1.5 var(--font-mono); text-transform: uppercase; }
+.request-held { margin-top: 12px; }
+.request-held summary { color: var(--brand-cyan); cursor: pointer; font-size: .875rem; padding-block: 6px; }
+.request-held summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+.request-held ul { list-style: none; margin: 0; padding: 0; }
+.request-held li { padding-block: 14px; border-top: 1px solid var(--border); }
+.request-held p + p { margin-top: 8px; }
+.request-limitation { color: var(--brand-gray); }
+.request-source-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; min-width: 0; }
+.request-source-links button { max-width: 100%; height: auto; min-height: 36px; white-space: normal; text-align: left; overflow-wrap: anywhere; font-size: .875rem; }
 .request-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .request-card { padding: 21px; border: 1px solid var(--border); background: linear-gradient(140deg, #002b3b, #050708); }
 .request-card:first-child, .request-card:nth-child(2) { border-color: rgba(0, 188, 235, .5); }

@@ -1,11 +1,11 @@
 {
   "stats": {
     "suppliedFiles": 869,
-    "newDistinctRecords": 173,
+    "newDistinctRecords": 178,
     "exactExistingRecordsReused": 259,
     "duplicateCopiesSuppressed": 51,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 518163561,
+    "publishedBytes": 523722422,
     "latestBatch88FilesReviewed": 4,
     "latestBatch88DistinctInputHashes": 4,
     "latestBatch88PdfPagesReviewed": 301,
@@ -621,7 +621,9 @@
     "latestBatch14ManualReviewPages": 690,
     "latestBatch14BlankFirstPages": 0,
     "latestBatch14RecordsAdded": 1,
-    "latestBatch14TimelineEventsAdded": 0
+    "latestBatch14TimelineEventsAdded": 0,
+    "finalDistinctRecords": 178,
+    "publishedPages": 8764
   },
   "methods": [
     "September 4 intake 86: all 11 supplied PDFs and 1,150 page instances were hash-checked against every catalog. Nine unique binaries resolved to six exact established records and three distinct additions; two extra duplicate filenames were suppressed. The three added PDFs total 385 pages, with 370 embedded-text pages and GPU OCR checks on all 15 sparse-text pages. Their evidentiary pages were rendered and visually inspected, and no missing or corrupt page was found.",
@@ -940,5 +942,11 @@
       "name": "August 30 expanded Wexford landfill, compliance and infrastructure intake",
       "reason": "All 25 PDFs and 368 pages passed the integrity audit. Fifteen records exactly match established library or standalone timeline sources, including the December 2019 PFAS status record. Two additional files are same-content derivatives of retained records, and two are unrelated to the Cadillac environmental record. Six distinct records were retained: the 2026–2031 initial capital-program draft, the 2026 cyanide correspondence sequence, the 2025–2026 wastewater asset report, the August 20 local-limits approval request, the 2017 IPP annual-report portal submission and the July 2026 asset-report portal submission. The one OCR-manual-review page is a complete rotated table, not a missing or corrupt page."
     }
-  ]
+  ],
+  "cedarCreekBIntake": {
+    "date": "2026-09-06",
+    "recordsAdded": 5,
+    "audit": "cedar-creek-b-five-minutes-audit.json",
+    "note": "Incremental addition; earlier batch metrics remain historical."
+  }
 }

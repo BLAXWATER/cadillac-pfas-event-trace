@@ -70,7 +70,11 @@ test('source limitations survive publication and do not close transaction reques
   assert.match(all,/corrected executed exhibit/);
   assert.match(all,/Estimated\/proposed zeros are not verified final actuals/);
   assert.match(all,/not a verified total paid by one customer/);
-  assert.match(all,/Missing tickets do not negate/);
+  const revenueSummary=finance.events.find(e=>e.title==='City reports nearly $3 million in leachate revenue, FY2011–FY2019');
+  assert.equal(revenueSummary.isoDate,'2019-06-30');
+  assert.ok(revenueSummary.significance.startsWith('Missing tickets, missing documents doesn’t mean missing events.'));
+  assert.match(revenueSummary.significance,/not cash receipts, profit, per-load tickets or gallons/);
+  assert.ok(revenueSummary.sources.every(s=>!s.result.includes('Missing tickets, missing documents')),'Reader clarification must not be presented as a source quotation');
   assert.deepEqual(finance.compliance.map(r=>[r.fiscalYear,r.count]),[[2014,8],[2015,38],[2016,6],[2017,7],[2018,5],[2019,12]]);
   assert.doesNotMatch(source,/Audited report documents FY201[678] landfill-leachate revenue variance/);
   const queue=await json('../app/evidence-request-queue-updates.json');
@@ -87,5 +91,7 @@ test('built public page renders every new finding in the proper year band',async
   assert.match(html,/Search all 1,613 records/);
   for(const event of finance.events)assert.ok(html.includes(event.title),event.title);
   assert.match(html,/\$2,996,632/);
+  const year2019=html.match(/<section class="year-group" id="year-2019"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(year2019?.includes('Missing tickets, missing documents doesn’t mean missing events.'));
   assert.match(html,/22 requests still needed across 5 blocks/);
 });

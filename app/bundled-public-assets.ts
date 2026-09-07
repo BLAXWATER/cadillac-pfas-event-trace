@@ -49,6 +49,20 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/findings-docs/193-c1fd49ce87b7.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/192-fa26ae6e44ab.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/191-82bfe8b8928e.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/190-c5ff637bb359.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/189-dcf0b6c8a088.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/188-979ad88f1240.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/187-d206785ff744.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/186-7f29198ab87d.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/185-710379d9664c.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/184-fbee0873f184.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/183-f3142342184f.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/182-4d3eb8cccf14.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/181-ca634234c53f.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/180-eb9d0123f72e.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/179-9c328775dc31.pdf", {
     eager: true,
     import: "default",

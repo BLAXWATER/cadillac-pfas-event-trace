@@ -36,10 +36,10 @@ const ids=(query)=>search.searchLibrary(index,query).map(r=>r.id);
 
 test('search registry includes each catalog row exactly once; aliases do not inflate count',()=>{
   assert.equal(registry.elements.length,catalogs.size);
-  assert.equal(records.length,1599);
+  assert.equal(records.length,1613);
   assert.equal(index.length,records.length);
-  assert.equal(new Set(records.map(r=>r.id)).size,1599);
-  assert.equal(new Set(records.map(r=>r.sha256)).size,1599);
+  assert.equal(new Set(records.map(r=>r.id)).size,1613);
+  assert.equal(new Set(records.map(r=>r.sha256)).size,1613);
 });
 
 test('all stored canonical and displayed filenames retrieve their own record',()=>{

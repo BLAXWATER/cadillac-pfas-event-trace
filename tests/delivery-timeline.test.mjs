@@ -12,7 +12,7 @@ function visit(node) {
   ts.forEachChild(node, visit);
 }
 visit(ast);
-const property = (node, name) => node.properties.find(p => p.name?.getText(ast) === name)?.initializer;
+const property = (node, name) => node.properties?.find(p => p.name?.getText(ast) === name)?.initializer;
 const value = (node, name) => property(node, name)?.text;
 const findEvent = (date, titlePart) => {
   const found = events.filter(e => value(e, 'date') === date && value(e, 'title').includes(titlePart));

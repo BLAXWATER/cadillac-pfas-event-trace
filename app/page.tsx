@@ -47,6 +47,7 @@ import referenceAudit from "./reference-audit.json";
 import referenceDocuments from "./reference-documents.json";
 import supplementalAudit from "./supplemental-audit.json";
 import supplementalDocuments from "./supplemental-documents.json";
+import leachateFinance from "./leachate-finance-findings.json";
 import wexfordAudit from "./wexford-audit.json";
 import wexfordDocuments from "./wexford-documents.json";
 import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } from "./bundled-public-assets";
@@ -323,6 +324,18 @@ const formatBytes = (bytes: number) => {
 };
 
 const events: Event[] = [
+  ...leachateFinance.events.map((event): Event => ({
+    ...event,
+    kind: event.kind as Kind,
+    sources: event.sources.map((source): Source => ({
+      ...archivedSource(source.name, source.url, source.pages, source.result, {
+        eventStamp: event.date,
+        basis: event.timeBasis,
+        note: event.significance,
+      }),
+      page: source.page,
+    })),
+  })),
   {
     year: "2005",
     date: "2005",
@@ -1242,60 +1255,6 @@ const events: Event[] = [
       }),
       page: 65,
     }],
-  },
-  {
-    year: "2016",
-    date: "2016-06-30",
-    isoDate: "2016-06-30",
-    time: noTime,
-    timeBasis: "Fiscal-year end",
-    phase: "Audited financial reporting",
-    kind: "operation",
-    category: "10 / 12 · Process, landfill & leachate",
-    title: "Audited report documents FY2016 landfill-leachate revenue variance",
-    finding: <>Cadillac&apos;s FY2016 comprehensive annual financial report states that revenue for treatment of Wexford County Landfill leachate exceeded budget by <strong>$93,147</strong>.</>,
-    significance: "Financially corroborates paid leachate treatment during the fiscal year. The figure is a budget variance, not total leachate revenue, and the report does not provide load dates, gallons, invoices, PFAS concentrations or treatment effectiveness.",
-    sources: [archivedSource("City of Cadillac FY2016 Comprehensive Annual Financial Report.pdf", "/findings-docs/169-1dfb7b3336af.pdf", 172, "Management's discussion and analysis on PDF page 25 reports the landfill-leachate treatment revenue variance.", {
-      eventStamp: "Fiscal year ended 2016-06-30 · time not stated",
-      basis: "Audited-report fiscal period",
-      note: "The $93,147 figure is the amount above budget, not total leachate revenue or treatment volume.",
-    })],
-  },
-  {
-    year: "2017",
-    date: "2017-06-30",
-    isoDate: "2017-06-30",
-    time: noTime,
-    timeBasis: "Fiscal-year end",
-    phase: "Audited financial reporting",
-    kind: "operation",
-    category: "10 / 12 · Process, landfill & leachate",
-    title: "Audited report documents FY2017 landfill-leachate revenue variance",
-    finding: <>Cadillac&apos;s FY2017 comprehensive annual financial report states that revenue for treatment of Wexford County Landfill leachate exceeded budget by <strong>$307,683</strong>.</>,
-    significance: "Adds audited financial evidence of paid treatment while preserving the distinction between aggregate fiscal reporting and delivery-level records. It does not provide load dates, gallons, invoices, PFAS concentrations or treatment effectiveness.",
-    sources: [archivedSource("FY2017 City of Cadillac Comprehensive Annual Financial Report.pdf", "/findings-docs/146-6b4e98f4c779.pdf", 182, "Management's discussion and analysis on PDF page 25 reports the landfill-leachate treatment revenue variance.", {
-      eventStamp: "Fiscal year ended 2017-06-30 · time not stated",
-      basis: "Audited-report fiscal period",
-      note: "The $307,683 figure is the amount above budget, not total leachate revenue or treatment volume.",
-    })],
-  },
-  {
-    year: "2018",
-    date: "2018-06-30",
-    isoDate: "2018-06-30",
-    time: noTime,
-    timeBasis: "Fiscal-year end",
-    phase: "Audited financial reporting",
-    kind: "operation",
-    category: "10 / 12 · Process, landfill & leachate",
-    title: "Audited report documents FY2018 landfill-leachate revenue variance",
-    finding: <>Cadillac&apos;s FY2018 comprehensive annual financial report states that landfill-leachate treatment revenue exceeded budget by <strong>$31,105</strong>.</>,
-    significance: "Financially corroborates paid leachate treatment during the fiscal year. The figure is a budget variance, not total leachate revenue, and the report does not provide load dates, gallons, invoices, PFAS concentrations or treatment effectiveness.",
-    sources: [archivedSource("City of Cadillac FY2018 Comprehensive Annual Financial Report.pdf", "/findings-docs/170-641352fc860b.pdf", 183, "Management's discussion and analysis on PDF page 25 reports the landfill-leachate treatment revenue variance.", {
-      eventStamp: "Fiscal year ended 2018-06-30 · time not stated",
-      basis: "Audited-report fiscal period",
-      note: "The $31,105 figure is the amount above budget, not total leachate revenue or treatment volume.",
-    })],
   },
   {
     year: "2019",
@@ -2556,24 +2515,6 @@ const events: Event[] = [
       eventStamp: "2009-11-19 · time not stated",
       basis: "Inspection start and end date printed on the report",
       note: "The report records the plant superintendent's source identification; it is not treated as a PFAS finding or independent chemical-source adjudication.",
-    })],
-  },
-  {
-    year: "2019",
-    date: "2019-06-30",
-    isoDate: "2019-06-30",
-    time: noTime,
-    timeBasis: "Fiscal-year end",
-    phase: "Audited financial reporting",
-    kind: "operation",
-    category: "10 / 12 · Process, landfill & leachate",
-    title: "Audited report corroborates landfill-leachate treatment revenue",
-    finding: "Cadillac's FY2019 comprehensive annual financial report states that revenue from treatment of Wexford County Landfill leachate exceeded budget by $44,691.",
-    significance: "Financially corroborates that leachate treatment was occurring in the fiscal year. The report does not provide gallons received, PFAS concentrations or treatment effectiveness.",
-    sources: [archivedSource("City of Cadillac FY2019 CAFR.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/013-f756ecea1687.pdf", 187, "Management's discussion and analysis on PDF page 25 reports the landfill-leachate treatment revenue variance.", {
-      eventStamp: "Fiscal year ended 2019-06-30 · time not stated",
-      basis: "Audited-report fiscal period",
-      note: "The dollar amount is a budget variance, not total leachate revenue or treatment volume.",
     })],
   },
   {

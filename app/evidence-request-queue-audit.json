@@ -3,13 +3,13 @@
   "lastRecheckDate": "2026-09-06",
   "closurePolicy": "Closure requires an explicit source-reviewed record ID, SHA-256 and review basis in verifiedEvidence. Keywords can identify candidates but never establish that a requirement is met.",
   "lastRecheck": {
-    "batch": "September 6 five 2010 Council originals plus pending September 5 verified-context update",
-    "localCatalogRecords": 1599,
+    "batch": "Twenty financial/policy originals and annual leachate Actual series",
+    "localCatalogRecords": 1613,
     "newClosures": 0,
     "remainingRequirements": 22,
     "previouslySatisfiedRequirements": 1,
     "visibleUpdatesFile": "evidence-request-queue-updates.json",
-    "note": "Five newly read Council originals add landfill and municipal context but no closures. Previous source-linked queue findings and the existing Wellogic closure are retained; no fresh full-corpus reread is claimed."
+    "note": "Validated source sections and financial columns, duplicate dispositions and public indexing. No new queue closure and no fresh full-corpus reread."
   },
   "catalogRecordsReviewed": 1594,
   "priorCards": 6,
@@ -27,7 +27,8 @@
     "Reconciled the supplied 26-page EGLE Complete Results PDF to the exact existing A13 compilation by SHA-256. The canonical record is now hosted locally with its full download and first-page preview, and a conservative timeline event links the address and LDFA result rounds. No request closes because the address labels are anonymized and the compilation lacks the coordinate crosswalk, COCs and synchronized source-to-receptor field package.",
     "Verified the three supplied USGS station 04121241 CSVs as exact members of the established Clam River at Plett Road ZIP export and exposed each table for direct review. No request closes because the ten discrete surface-water discharge observations contain no PFAS results, groundwater gradient, hydraulic tests, receptor field/QC package or delivery history.",
     "Added source-linked verified context beside each active request block, distinguishing actual offloading, reported cessation, agreement approval, procurement, county deliberations and historical shipping guidance from the specific still-missing evidence. Displayed remaining and previously satisfied counts are calculated from the queue.",
-    "Read all five supplied 2010 Council-minute originals; retained all as searchable dated context, distinguished discussion from plan-amendment approval and completed transactions, and closed no requirement."
+    "Read all five supplied 2010 Council-minute originals; retained all as searchable dated context, distinguished discussion from plan-amendment approval and completed transactions, and closed no requirement.",
+    "Added source-linked FY2011–FY2019 Actual leachate revenue and retained transaction-level and signed-exhibit gaps."
   ],
   "heldEvidence": {
     "receivingHistory": [

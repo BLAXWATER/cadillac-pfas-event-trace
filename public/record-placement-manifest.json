@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1599,
+  "recordCount": 1613,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 178
+      "count": 192
     },
     {
       "archiveId": "reference",
@@ -16529,6 +16529,160 @@
       "url": "/findings-docs/179-9c328775dc31.pdf",
       "sha256": "9c328775dc31324811a641aed0bfd736ff0504e5396d0d274155d3e5f3ccdd77",
       "size": 95932
+    },
+    {
+      "id": "180-eb9d0123f72e",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "3693.pdf",
+      "url": "/findings-docs/180-eb9d0123f72e.pdf",
+      "sha256": "eb9d0123f72ea934a6f72502189a562d4ae78c477d24a743cebe29dff8a77d3c",
+      "size": 266147
+    },
+    {
+      "id": "181-ca634234c53f",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac FY2018 Annual Operating Budget.pdf",
+      "url": "/findings-docs/181-ca634234c53f.pdf",
+      "sha256": "ca634234c53f4b0996a68dd3cc457379838e94c64f743fccc58053e06be65d36",
+      "size": 4713019
+    },
+    {
+      "id": "182-4d3eb8cccf14",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac FY2021 Annual Operating Budget.pdf",
+      "url": "/findings-docs/182-4d3eb8cccf14.pdf",
+      "sha256": "4d3eb8cccf148290640f64e67e98a1e65c3beef6c74f4e8e8970c8352cdded0e",
+      "size": 6606173
+    },
+    {
+      "id": "183-f3142342184f",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac CAFR June 30 2020.pdf",
+      "url": "/findings-docs/183-f3142342184f.pdf",
+      "sha256": "f3142342184f29231b27b692abdb44887552752547e31f0f3b50f7e068aa8d19",
+      "size": 3294474
+    },
+    {
+      "id": "184-fbee0873f184",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac FY14 Budget Web Version.pdf",
+      "url": "/findings-docs/184-fbee0873f184.pdf",
+      "sha256": "fbee0873f184b26ce053485567814250abb118d20bd58d335c796620a54c6189",
+      "size": 5124403
+    },
+    {
+      "id": "185-710379d9664c",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac FY2015 Annual Operating Budget.pdf",
+      "url": "/findings-docs/185-710379d9664c.pdf",
+      "sha256": "710379d9664cec7ce863561b925c025e69dac99cce3e50edceaf88ef95ea9c83",
+      "size": 2605092
+    },
+    {
+      "id": "186-7f29198ab87d",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac FY2017 Annual Operating Budget.pdf",
+      "url": "/findings-docs/186-7f29198ab87d.pdf",
+      "sha256": "7f29198ab87d96e87ab29cd3de9ddf408fad06abcaf2c18c37e36932c62763ca",
+      "size": 4930283
+    },
+    {
+      "id": "187-d206785ff744",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac FY2020 Annual Operating Budget.pdf",
+      "url": "/findings-docs/187-d206785ff744.pdf",
+      "sha256": "d206785ff744be96b8de578f5b0b4aef908b61e2a3b494b57347af3917a30877",
+      "size": 6449847
+    },
+    {
+      "id": "188-979ad88f1240",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "FY2013 City of Cadillac Annual Operating Budget.pdf",
+      "url": "/findings-docs/188-979ad88f1240.pdf",
+      "sha256": "979ad88f12408b434469c4b08623cf3760a60c8895057fafe7caf9928ba3f5ac",
+      "size": 4506372
+    },
+    {
+      "id": "189-dcf0b6c8a088",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "FY2014 City of Cadillac CAFR.pdf",
+      "url": "/findings-docs/189-dcf0b6c8a088.pdf",
+      "sha256": "dcf0b6c8a088ebd7ff27374b1dec9cd39562542046260730d62643c93e397b24",
+      "size": 1753665
+    },
+    {
+      "id": "190-c5ff637bb359",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "FY2015 City of Cadillac CAFR.pdf",
+      "url": "/findings-docs/190-c5ff637bb359.pdf",
+      "sha256": "c5ff637bb35960f0f43011978eab689ba94ecb2106f20f9a5ca20a6e1605d05f",
+      "size": 3700152
+    },
+    {
+      "id": "191-82bfe8b8928e",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "FY2016 City of Cadillac Operating Budget.pdf",
+      "url": "/findings-docs/191-82bfe8b8928e.pdf",
+      "sha256": "82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca",
+      "size": 9027857
+    },
+    {
+      "id": "192-fa26ae6e44ab",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "FY2018_Budget_Amendment_3.pdf",
+      "url": "/findings-docs/192-fa26ae6e44ab.pdf",
+      "sha256": "fa26ae6e44ab24568073660bc4ea3fe75254c0118dc1881a86448c078a38437e",
+      "size": 168549
+    },
+    {
+      "id": "193-c1fd49ce87b7",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "May_21_2018_Council_Minutes.pdf",
+      "url": "/findings-docs/193-c1fd49ce87b7.pdf",
+      "sha256": "c1fd49ce87b7d391e60a850266f0b98ef4397dace2d08b525dea5b657eb51edf",
+      "size": 2195612
     },
     {
       "id": "001-7c991baaf1e9",

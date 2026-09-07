@@ -1,0 +1,269 @@
+{
+  "reviewDate": "2026-09-06",
+  "stats": {
+    "suppliedFiles": 20,
+    "suppliedPages": 3490,
+    "recordsBefore": 1599,
+    "recordsAdded": 14,
+    "recordsAfter": 1613,
+    "exactExisting": 3,
+    "renderIdenticalExisting": 3,
+    "requirementsClosed": 0
+  },
+  "sources": [
+    {
+      "sourceId": 1,
+      "filename": "3693.pdf",
+      "sourceSha256": "eb9d0123f72ea934a6f72502189a562d4ae78c477d24a743cebe29dff8a77d3c",
+      "sourcePages": 6,
+      "recordId": "180-eb9d0123f72e",
+      "sha256": "eb9d0123f72ea934a6f72502189a562d4ae78c477d24a743cebe29dff8a77d3c",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/180-eb9d0123f72e.pdf"
+    },
+    {
+      "sourceId": 2,
+      "filename": "Cadillac FY2018 Annual Operating Budget.pdf",
+      "sourceSha256": "ca634234c53f4b0996a68dd3cc457379838e94c64f743fccc58053e06be65d36",
+      "sourcePages": 238,
+      "recordId": "181-ca634234c53f",
+      "sha256": "ca634234c53f4b0996a68dd3cc457379838e94c64f743fccc58053e06be65d36",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/181-ca634234c53f.pdf"
+    },
+    {
+      "sourceId": 3,
+      "filename": "Cadillac FY2021 Annual Operating Budget.pdf",
+      "sourceSha256": "4d3eb8cccf148290640f64e67e98a1e65c3beef6c74f4e8e8970c8352cdded0e",
+      "sourcePages": 241,
+      "recordId": "182-4d3eb8cccf14",
+      "sha256": "4d3eb8cccf148290640f64e67e98a1e65c3beef6c74f4e8e8970c8352cdded0e",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/182-4d3eb8cccf14.pdf"
+    },
+    {
+      "sourceId": 4,
+      "filename": "City of Cadillac CAFR June 30 2020.pdf",
+      "sourceSha256": "f3142342184f29231b27b692abdb44887552752547e31f0f3b50f7e068aa8d19",
+      "sourcePages": 184,
+      "recordId": "183-f3142342184f",
+      "sha256": "f3142342184f29231b27b692abdb44887552752547e31f0f3b50f7e068aa8d19",
+      "relationship": "new canonical original",
+      "category": "Process & site financial context",
+      "asset": "/findings-docs/183-f3142342184f.pdf"
+    },
+    {
+      "sourceId": 5,
+      "filename": "City of Cadillac FY14 Budget Web Version.pdf",
+      "sourceSha256": "fbee0873f184b26ce053485567814250abb118d20bd58d335c796620a54c6189",
+      "sourcePages": 246,
+      "recordId": "184-fbee0873f184",
+      "sha256": "fbee0873f184b26ce053485567814250abb118d20bd58d335c796620a54c6189",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/184-fbee0873f184.pdf"
+    },
+    {
+      "sourceId": 6,
+      "filename": "City of Cadillac FY2015 Annual Operating Budget.pdf",
+      "sourceSha256": "710379d9664cec7ce863561b925c025e69dac99cce3e50edceaf88ef95ea9c83",
+      "sourcePages": 238,
+      "recordId": "185-710379d9664c",
+      "sha256": "710379d9664cec7ce863561b925c025e69dac99cce3e50edceaf88ef95ea9c83",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/185-710379d9664c.pdf"
+    },
+    {
+      "sourceId": 7,
+      "filename": "City of Cadillac FY2016 CAFR.pdf",
+      "sourceSha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
+      "sourcePages": 172,
+      "recordId": "169-1dfb7b3336af",
+      "sha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
+      "relationship": "byte-identical existing original",
+      "category": "Public finance & leachate treatment",
+      "asset": "/findings-docs/169-1dfb7b3336af.pdf"
+    },
+    {
+      "sourceId": 8,
+      "filename": "City of Cadillac FY2017 Annual Operating Budget.pdf",
+      "sourceSha256": "7f29198ab87d96e87ab29cd3de9ddf408fad06abcaf2c18c37e36932c62763ca",
+      "sourcePages": 247,
+      "recordId": "186-7f29198ab87d",
+      "sha256": "7f29198ab87d96e87ab29cd3de9ddf408fad06abcaf2c18c37e36932c62763ca",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/186-7f29198ab87d.pdf"
+    },
+    {
+      "sourceId": 9,
+      "filename": "City of Cadillac FY2019 CAFR.pdf",
+      "sourceSha256": "f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241",
+      "sourcePages": 187,
+      "recordId": "013-f756ecea1687",
+      "sha256": "f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241",
+      "relationship": "byte-identical existing original",
+      "category": "Municipal finance & operations",
+      "asset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/013-f756ecea1687.pdf"
+    },
+    {
+      "sourceId": 10,
+      "filename": "City of Cadillac FY2020 Annual Operating Budget.pdf",
+      "sourceSha256": "d206785ff744be96b8de578f5b0b4aef908b61e2a3b494b57347af3917a30877",
+      "sourcePages": 231,
+      "recordId": "187-d206785ff744",
+      "sha256": "d206785ff744be96b8de578f5b0b4aef908b61e2a3b494b57347af3917a30877",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/187-d206785ff744.pdf"
+    },
+    {
+      "sourceId": 11,
+      "filename": "FY2013 City of Cadillac Annual Operating Budget.pdf",
+      "sourceSha256": "979ad88f12408b434469c4b08623cf3760a60c8895057fafe7caf9928ba3f5ac",
+      "sourcePages": 262,
+      "recordId": "188-979ad88f1240",
+      "sha256": "979ad88f12408b434469c4b08623cf3760a60c8895057fafe7caf9928ba3f5ac",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/188-979ad88f1240.pdf"
+    },
+    {
+      "sourceId": 12,
+      "filename": "FY2014 City of Cadillac CAFR.pdf",
+      "sourceSha256": "dcf0b6c8a088ebd7ff27374b1dec9cd39562542046260730d62643c93e397b24",
+      "sourcePages": 174,
+      "recordId": "189-dcf0b6c8a088",
+      "sha256": "dcf0b6c8a088ebd7ff27374b1dec9cd39562542046260730d62643c93e397b24",
+      "relationship": "new canonical original",
+      "category": "Process & site financial context",
+      "asset": "/findings-docs/189-dcf0b6c8a088.pdf"
+    },
+    {
+      "sourceId": 13,
+      "filename": "FY2015 City of Cadillac CAFR.pdf",
+      "sourceSha256": "c5ff637bb35960f0f43011978eab689ba94ecb2106f20f9a5ca20a6e1605d05f",
+      "sourcePages": 174,
+      "recordId": "190-c5ff637bb359",
+      "sha256": "c5ff637bb35960f0f43011978eab689ba94ecb2106f20f9a5ca20a6e1605d05f",
+      "relationship": "new canonical original",
+      "category": "Process & site financial context",
+      "asset": "/findings-docs/190-c5ff637bb359.pdf"
+    },
+    {
+      "sourceId": 14,
+      "filename": "FY2016 City of Cadillac Operating Budget.pdf",
+      "sourceSha256": "82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca",
+      "sourcePages": 250,
+      "recordId": "191-82bfe8b8928e",
+      "sha256": "82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/191-82bfe8b8928e.pdf"
+    },
+    {
+      "sourceId": 15,
+      "filename": "FY2017 City of Cadillac CAFR.pdf",
+      "sourceSha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
+      "sourcePages": 182,
+      "recordId": "146-6b4e98f4c779",
+      "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
+      "relationship": "byte-identical existing original",
+      "category": "Public finance & leachate treatment",
+      "asset": "/findings-docs/146-6b4e98f4c779.pdf"
+    },
+    {
+      "sourceId": 16,
+      "filename": "FY2018_Annual_Financial_Report.pdf",
+      "sourceSha256": "a3b57291d69aa353cb386136f8ce13e360eca63f739092b3a0abebad13416717",
+      "sourcePages": 183,
+      "recordId": "170-641352fc860b",
+      "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb",
+      "relationship": "render-identical existing original; all 183 pages pixel- and normalized-text-identical at 108dpi",
+      "category": "Public finance & leachate treatment",
+      "asset": "/findings-docs/170-641352fc860b.pdf"
+    },
+    {
+      "sourceId": 17,
+      "filename": "FY2018_Budget_Amendment_3.pdf",
+      "sourceSha256": "fa26ae6e44ab24568073660bc4ea3fe75254c0118dc1881a86448c078a38437e",
+      "sourcePages": 6,
+      "recordId": "192-fa26ae6e44ab",
+      "sha256": "fa26ae6e44ab24568073660bc4ea3fe75254c0118dc1881a86448c078a38437e",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/192-fa26ae6e44ab.pdf"
+    },
+    {
+      "sourceId": 18,
+      "filename": "FY2019_Annual_Operating_Budget.pdf",
+      "sourceSha256": "24eb6d128285ab9c09930e15597c23b0d0de212f94df9effc164421dc4fa6194",
+      "sourcePages": 235,
+      "recordId": "165-676065b15331",
+      "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
+      "relationship": "render-identical existing original; all 235 pages pixel- and normalized-text-identical at 108dpi",
+      "category": "Municipal finance, WWTP operations & leachate",
+      "asset": "/findings-docs/165-676065b15331.pdf"
+    },
+    {
+      "sourceId": 19,
+      "filename": "May_21_2018_Council_Minutes.pdf",
+      "sourceSha256": "c1fd49ce87b7d391e60a850266f0b98ef4397dace2d08b525dea5b657eb51edf",
+      "sourcePages": 29,
+      "recordId": "193-c1fd49ce87b7",
+      "sha256": "c1fd49ce87b7d391e60a850266f0b98ef4397dace2d08b525dea5b657eb51edf",
+      "relationship": "new canonical original",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/193-c1fd49ce87b7.pdf"
+    },
+    {
+      "sourceId": 20,
+      "filename": "Nov_20_2017_Wexford_Leachate_Resolution.pdf",
+      "sourceSha256": "a4d3eec33111962cb4bc32fc8716241feb7651b086f9f1df3f7d9f9c16ccc074",
+      "sourcePages": 5,
+      "recordId": "100-850f00b27330",
+      "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+      "relationship": "render-identical existing original; all 5 pages pixel- and normalized-text-identical at 108dpi",
+      "category": "Wexford landfill & leachate",
+      "asset": "/findings-docs/100-850f00b27330.pdf"
+    }
+  ],
+  "duplicateComparisons": {
+    "16": {
+      "recordId": "170-641352fc860b",
+      "sourceSha256": "a3b57291d69aa353cb386136f8ce13e360eca63f739092b3a0abebad13416717",
+      "relationship": "render-identical existing original; all 183 pages pixel- and normalized-text-identical at 108dpi"
+    },
+    "18": {
+      "recordId": "165-676065b15331",
+      "sourceSha256": "24eb6d128285ab9c09930e15597c23b0d0de212f94df9effc164421dc4fa6194",
+      "relationship": "render-identical existing original; all 235 pages pixel- and normalized-text-identical at 108dpi"
+    },
+    "20": {
+      "recordId": "100-850f00b27330",
+      "sourceSha256": "a4d3eec33111962cb4bc32fc8716241feb7651b086f9f1df3f7d9f9c16ccc074",
+      "relationship": "render-identical existing original; all 5 pages pixel- and normalized-text-identical at 108dpi"
+    }
+  },
+  "scope": "Source-linked financial review, not an accounting audit or per-load reconstruction. Retained separate actual/budget/estimate statuses. No originals edited.",
+  "newRecordIds": [
+    "180-eb9d0123f72e",
+    "181-ca634234c53f",
+    "182-4d3eb8cccf14",
+    "183-f3142342184f",
+    "184-fbee0873f184",
+    "185-710379d9664c",
+    "186-7f29198ab87d",
+    "187-d206785ff744",
+    "188-979ad88f1240",
+    "189-dcf0b6c8a088",
+    "190-c5ff637bb359",
+    "191-82bfe8b8928e",
+    "192-fa26ae6e44ab",
+    "193-c1fd49ce87b7"
+  ]
+}

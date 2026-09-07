@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "72d67d84802f4c2e8d8028c235a8b45931f5b98c9e4f1324383df6298ffd4e3d",
+  "catalogFingerprint": "447a2b9d1bfbc9b36b5acbb93bfcf5ff6abb0f48becf8fab94b5f734428f7295",
   "cedarCreekAIntake": {
     "date": "2026-09-05",
     "recordsAdded": 9,
@@ -17,12 +17,12 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1599,
-    "verifiedRecords": 1599,
-    "pdfRecords": 1441,
-    "pdfPages": 22280,
+    "catalogRecords": 1613,
+    "verifiedRecords": 1613,
+    "pdfRecords": 1455,
+    "pdfPages": 24806,
     "imageRecords": 13,
-    "embeddedTextPages": 18304,
+    "embeddedTextPages": 20776,
     "ocrPages": 3984,
     "ocrPagesWithText": 3630,
     "manualReviewPages": 139,
@@ -34,7 +34,8 @@
     "exactHashDuplicateGroups": 0,
     "renderIdenticalByteDifferentGroups": 0,
     "normalizedTextCandidateGroups": 1,
-    "visuallyVerifiedBlankPagesWithoutOcr": 5
+    "visuallyVerifiedBlankPagesWithoutOcr": 5,
+    "visuallyScreenedSparsePagesWithoutOcr": 54
   },
   "duplicatePolicy": "Remove only records that are byte-identical or byte-different but render identically page-for-page after text/OCR, metadata and page-count review. Retain revisions, annotations, signatures, cover messages, excerpts and compiled packages.",
   "manualReviewResolution": {
@@ -601,5 +602,12 @@
     "audit": "cedar-creek-b-five-minutes-audit.json",
     "scope": "Incremental original hash, size and page-count checks. All 30 new pages read; substantive text required no OCR, and five trailing pages visually verified blank. Prior full-corpus methods and manual-review results remain historical. New normalized-text and rendered-sequence fingerprints compared with the available hash-matched cache, not a fresh rendering of the entire current corpus.",
     "cachedBaselineRecordsCompared": 1585
+  },
+  "leachateFinanceIntake": {
+    "date": "2026-09-06",
+    "recordsAdded": 14,
+    "embeddedTextPagesAdded": 2472,
+    "visuallyScreenedSparsePagesWithoutOcr": 54,
+    "scope": "Original byte/size/page verification and existing extraction used. Relevant sections and key values/headers visually checked; low-native pages visually screened. No successful new OCR or line-by-line review of unrelated pages is claimed. Historical corpus-audit methods remain historical."
   }
 }

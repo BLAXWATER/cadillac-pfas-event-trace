@@ -5,7 +5,7 @@
     "exactExistingRecordsReused": 259,
     "duplicateCopiesSuppressed": 51,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 523722422,
+    "publishedBytes": 579064067,
     "latestBatch88FilesReviewed": 4,
     "latestBatch88DistinctInputHashes": 4,
     "latestBatch88PdfPagesReviewed": 301,
@@ -622,8 +622,8 @@
     "latestBatch14BlankFirstPages": 0,
     "latestBatch14RecordsAdded": 1,
     "latestBatch14TimelineEventsAdded": 0,
-    "finalDistinctRecords": 178,
-    "publishedPages": 8764
+    "finalDistinctRecords": 192,
+    "publishedPages": 11290
   },
   "methods": [
     "September 4 intake 86: all 11 supplied PDFs and 1,150 page instances were hash-checked against every catalog. Nine unique binaries resolved to six exact established records and three distinct additions; two extra duplicate filenames were suppressed. The three added PDFs total 385 pages, with 370 embedded-text pages and GPU OCR checks on all 15 sparse-text pages. Their evidentiary pages were rendered and visually inspected, and no missing or corrupt page was found.",
@@ -948,5 +948,11 @@
     "recordsAdded": 5,
     "audit": "cedar-creek-b-five-minutes-audit.json",
     "note": "Incremental addition; earlier batch metrics remain historical."
+  },
+  "leachateFinanceIntake": {
+    "date": "2026-09-06",
+    "recordsAdded": 14,
+    "suppliedFiles": 20,
+    "audit": "leachate-finance-intake-audit.json"
   }
 }

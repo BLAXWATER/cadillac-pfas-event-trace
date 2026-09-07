@@ -49,4 +49,4 @@ timeout \
   "${SITES_BUILD_TIMEOUT:-3m}" \
   "${vinext}" build
 
-"${script_dir}/prune-worker-assets.sh" "${SITES_PROJECT_ROOT}/dist"
+run_node_script "scripts/prune-worker-assets.mjs"

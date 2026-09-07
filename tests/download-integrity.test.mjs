@@ -5,8 +5,8 @@ import { verifyCatalogIntegrity, loadDownloadDeliveryPlan } from "../scripts/doc
 test("every document download has valid metadata and a direct delivery path", async () => {
   const result = await verifyCatalogIntegrity();
   assert.deepEqual(result.failures, []);
-  assert.equal(result.records.length, 1599);
-  assert.equal(result.local.length, 783);
+  assert.equal(result.records.length, 1613);
+  assert.equal(result.local.length, 797);
   assert.equal(result.external.length, 816);
   assert.equal(result.bundledDeliveries.length + result.archiveDeliveries.length, result.records.length);
 });

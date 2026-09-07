@@ -166,7 +166,7 @@
     "pages": 187,
     "size": 1870493,
     "sha256": "f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241",
-    "description": "The audited report for the fiscal year ended June 30, 2019 states that revenue from treatment of Wexford County Landfill leachate exceeded budget by $44,691. It corroborates treatment activity but does not state total gallons, PFAS content or treatment performance."
+    "description": "Management discussion on PDF p25 identifies Wexford landfill treatment revenue $44,691 above budget. This matches $494,691 Actual less $450,000 in the separately supplied amendment exhibit; arithmetic does not cure that exhibit’s execution/correction issues. MD&A has limited auditor procedures, not an opinion or assurance, and supplies no final delivery date."
   },
   {
     "id": "014-cd6caa7bcb4d",
@@ -1284,7 +1284,7 @@
     "pages": 5,
     "size": 344611,
     "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
-    "description": "Five-page resolution text opposing the proposed Class I injection-well permit for Wexford landfill leachate. Pages 3–4 state that Cadillac treated the landfill's leachate for over 20 years, treated and discharged 14 million gallons in 2016, had capacity for up to 20 million gallons annually, treated eleven named contaminants and removed contaminants before NPDES-compliant discharge. The resolution number, mover, seconder, vote, adoption date and certification fields are blank, so this file remains cataloged as draft text; the separate November 20, 2017 official minutes establish unanimous adoption of motion 2017-232 for a resolution bearing the same title and permit number."
+    "description": "Pages3–4 state the City treated Wexford DPW/American Waste landfill leachate for over 20 years, treated/discharged 14 million gallons in calendar2016 and claimed capacity of 20 million gallons annually. The eleven listed contaminants are not PFAS. Safe removal is the City’s claim, not laboratory verification. Page5 vote/certification fields are blank; adoption rests on separate minutes."
   },
   {
     "id": "101-17f377c7d731",
@@ -1882,7 +1882,7 @@
     "pages": 182,
     "size": 3929791,
     "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
-    "description": "City of Cadillac comprehensive annual financial report for the fiscal year ended June 30, 2017. Page 19 of the printed report (PDF page 25) states that revenue for treating Wexford County Landfill leachate exceeded budget by $307,683. This is aggregate audited financial context; it does not provide individual deliveries, gallons, invoices, receipts or the final delivery date."
+    "description": "Management discussion on PDF p25 reports Wexford landfill leachate revenue $307,683 above budget. The separately reported $447,684 actual less $140,000 adopted budget equals $307,684; the $1 source discrepancy is retained. MD&A is subject to limited auditor procedures, not an opinion or assurance on the narrative."
   },
   {
     "id": "147-501cb6326dac",
@@ -2129,7 +2129,7 @@
     "pages": 235,
     "size": 4584959,
     "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
-    "description": "Cadillac's FY2019 operating budget, approved May 21, 2018. The Water and Sewer Fund table reports leachate revenue of $447,684 actual for FY2017, $350,000 estimated for FY2018 and $150,000 proposed for FY2019. The Water Resources goals include evaluating additional hauled waste as a new-revenue opportunity while also maintaining NPDES-compliant discharges, limiting industrial waste through active monitoring and preserving Class A EQ biosolids. These adjacent goals document a policy tension but do not prove that the goals conflicted in practice or establish a violation."
+    "description": "PDF p105 / printed93 reports FY2017 Actual Leachate revenue $447,684, FY2018 Estimated $350,000 and FY2019 Proposed $150,000. Page110 reports seven FY2017 NPDES violations. Hauled-waste revenue goals coexist with industrial controls, NPDES and Class A EQ biosolids goals, not proof of achieved performance or improper motive."
   },
   {
     "id": "166-fd889bd49fef",
@@ -2181,7 +2181,7 @@
     "pages": 172,
     "size": 3816435,
     "sha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
-    "description": "City of Cadillac comprehensive annual financial report for the fiscal year ended June 30, 2016. Page 14 of the printed report (PDF page 25) states that revenue for treatment of Wexford County Landfill leachate exceeded budget by $93,147. This is an aggregate audited budget variance, not total leachate revenue, and it does not provide individual deliveries, gallons, invoices, receipts or the final delivery date."
+    "description": "Management discussion on PDF p25 reports Wexford County Landfill leachate-treatment revenue $93,147 above budget. This is a favorable variance, not total revenue; the comparable final budget baseline remains unverified. The MD&A has limited auditor procedures, not an opinion or assurance on its narrative."
   },
   {
     "id": "170-641352fc860b",
@@ -2194,7 +2194,7 @@
     "pages": 183,
     "size": 3803130,
     "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb",
-    "description": "City of Cadillac comprehensive annual financial report for the fiscal year ended June 30, 2018. Page 19 of the printed report (PDF page 25) states that landfill-leachate treatment revenue exceeded budget by $31,105. This is an aggregate audited budget variance, not total leachate revenue, and it does not provide individual deliveries, gallons, invoices, receipts or the final delivery date."
+    "description": "Management discussion on PDF p25 reports Wexford landfill leachate revenue $31,105 above budget, reconciling with $431,105 Actual less $400,000 amended budget. This is a variance, not another receipt. MD&A is supplementary information with limited auditor procedures, not an audit opinion or assurance on its narrative."
   },
   {
     "id": "171-165d76b4138d",
@@ -2312,5 +2312,187 @@
     "size": 95932,
     "sha256": "9c328775dc31324811a641aed0bfd736ff0504e5396d0d274155d3e5f3ccdd77",
     "description": "Cadillac City Council minutes, December 6, 2010. Page 2 discusses curbside recycling as an option in the City’s Allied Waste contract. Page 3, motion 2010.267 / Resolution 1957, approves invasive-aquatic-species millage ballot language for February 22, 2011 by 3–2; a preceding discussion paragraph says 2010, while the operative motion says 2011. Page 4 records a public commenter’s concern about potentially duplicated legal bills and the City Manager’s promise to look into it, not verified duplicate billing or original invoices. This is municipal recycling/milfoil context, not Allied Waste leachate hauling or a WWTP delivery. Five pages, including a blank final page."
+  },
+  {
+    "id": "180-eb9d0123f72e",
+    "name": "3693.pdf",
+    "url": "/findings-docs/180-eb9d0123f72e.pdf",
+    "year": "2019",
+    "category": "Wexford landfill & leachate",
+    "type": "Budget amendment exhibit",
+    "format": "PDF",
+    "pages": 6,
+    "size": 266147,
+    "sha256": "eb9d0123f72ea934a6f72502189a562d4ae78c477d24a743cebe29dff8a77d3c",
+    "description": "PDF p5 increases FY2019 Leachate budget from $150,000 to $450,000, separate from $15,000 interest. This June 3, 2019 Amendment #2 copy has blank execution fields and an apparent copied Interest Income error in its Administration subsection. It is not a corrected executed exhibit, receipt or load ticket."
+  },
+  {
+    "id": "181-ca634234c53f",
+    "name": "Cadillac FY2018 Annual Operating Budget.pdf",
+    "url": "/findings-docs/181-ca634234c53f.pdf",
+    "year": "2018",
+    "category": "Wexford landfill & leachate",
+    "type": "Annual operating budget",
+    "format": "PDF",
+    "pages": 238,
+    "size": 4713019,
+    "sha256": "ca634234c53f4b0996a68dd3cc457379838e94c64f743fccc58053e06be65d36",
+    "description": "PDF p101 / printed89 reports FY2016 Actual Leachate revenue $314,984. The performance table on p106 reports six FY2016 NPDES violations. Revenue is an annual account total, not delivery-linked receipts; the performance count is City-reported, not PFAS-specific."
+  },
+  {
+    "id": "182-4d3eb8cccf14",
+    "name": "Cadillac FY2021 Annual Operating Budget.pdf",
+    "url": "/findings-docs/182-4d3eb8cccf14.pdf",
+    "year": "2021",
+    "category": "Wexford landfill & leachate",
+    "type": "Annual operating budget",
+    "format": "PDF",
+    "pages": 241,
+    "size": 6606173,
+    "sha256": "4d3eb8cccf148290640f64e67e98a1e65c3beef6c74f4e8e8970c8352cdded0e",
+    "description": "PDF p107 / printed95 reports FY2019 Actual Leachate revenue $494,691, FY2020 Estimated $0, FY2020 Adopted $100,000 and FY2021 Proposed $0. Page112 reports 12 FY2019 NPDES violations. Estimated/proposed zeros are not final actuals or the final delivery date; continued hauled-waste objectives do not establish resumed Wexford deliveries."
+  },
+  {
+    "id": "183-f3142342184f",
+    "name": "City of Cadillac CAFR June 30 2020.pdf",
+    "url": "/findings-docs/183-f3142342184f.pdf",
+    "year": "2020",
+    "category": "Process & site financial context",
+    "type": "Annual financial report",
+    "format": "PDF",
+    "pages": 184,
+    "size": 3294474,
+    "sha256": "f3142342184f29231b27b692abdb44887552752547e31f0f3b50f7e068aa8d19",
+    "description": "PDF p25 discusses a $427,621 combined Water and Sewer Fund revenue shortfall, principally attributed to pandemic-related industrial shutdowns. This is not a quantified leachate-cessation loss. Management discussion is supplementary information subject to limited auditor procedures, not an audit opinion on this narrative."
+  },
+  {
+    "id": "184-fbee0873f184",
+    "name": "City of Cadillac FY14 Budget Web Version.pdf",
+    "url": "/findings-docs/184-fbee0873f184.pdf",
+    "year": "2014",
+    "category": "Wexford landfill & leachate",
+    "type": "Annual operating budget",
+    "format": "PDF",
+    "pages": 246,
+    "size": 5124403,
+    "sha256": "fbee0873f184b26ce053485567814250abb118d20bd58d335c796620a54c6189",
+    "description": "PDF p113 / printed101 reports FY2012 Actual Leachate revenue $199,680. The book preserves separate actual, estimated, adopted and proposed columns and recurring hauled-waste and pollution-control goals. Annual revenue is not a transaction-level delivery record or an all-Wexford customer breakdown."
+  },
+  {
+    "id": "185-710379d9664c",
+    "name": "City of Cadillac FY2015 Annual Operating Budget.pdf",
+    "url": "/findings-docs/185-710379d9664c.pdf",
+    "year": "2015",
+    "category": "Wexford landfill & leachate",
+    "type": "Annual operating budget",
+    "format": "PDF",
+    "pages": 238,
+    "size": 2605092,
+    "sha256": "710379d9664cec7ce863561b925c025e69dac99cce3e50edceaf88ef95ea9c83",
+    "description": "PDF p109 / printed97 reports FY2013 Actual Leachate revenue $270,678. Hauled-waste revenue and pollution-control objectives are planning statements, not proof of actual additional acceptance or achieved treatment performance. The Leachate account is separate from Wexford County DPW contract revenue."
+  },
+  {
+    "id": "186-7f29198ab87d",
+    "name": "City of Cadillac FY2017 Annual Operating Budget.pdf",
+    "url": "/findings-docs/186-7f29198ab87d.pdf",
+    "year": "2017",
+    "category": "Wexford landfill & leachate",
+    "type": "Annual operating budget",
+    "format": "PDF",
+    "pages": 247,
+    "size": 4930283,
+    "sha256": "7f29198ab87d96e87ab29cd3de9ddf408fad06abcaf2c18c37e36932c62763ca",
+    "description": "PDF p103 / printed91 reports FY2015 Actual Leachate revenue $328,211. Page108 reports 38 FY2015 NPDES violations and attributes issues to treatment components, reporting correction and no violations since August 2015. This historical City statement is not future assurance or leachate causation; copied forward-looking performance-year labels remain as printed."
+  },
+  {
+    "id": "187-d206785ff744",
+    "name": "City of Cadillac FY2020 Annual Operating Budget.pdf",
+    "url": "/findings-docs/187-d206785ff744.pdf",
+    "year": "2020",
+    "category": "Wexford landfill & leachate",
+    "type": "Annual operating budget",
+    "format": "PDF",
+    "pages": 231,
+    "size": 6449847,
+    "sha256": "d206785ff744be96b8de578f5b0b4aef908b61e2a3b494b57347af3917a30877",
+    "description": "PDF p103 / printed91 reports FY2018 Actual Leachate revenue $431,105; $400,000 amended budget plus the $31,105 management-reported variance reconciles exactly. Page108 reports five FY2018 NPDES violations. Budget, actual and variance must not be added together; these are not individual receipts or PFAS-specific violations."
+  },
+  {
+    "id": "188-979ad88f1240",
+    "name": "FY2013 City of Cadillac Annual Operating Budget.pdf",
+    "url": "/findings-docs/188-979ad88f1240.pdf",
+    "year": "2013",
+    "category": "Wexford landfill & leachate",
+    "type": "Annual operating budget",
+    "format": "PDF",
+    "pages": 262,
+    "size": 4506372,
+    "sha256": "979ad88f12408b434469c4b08623cf3760a60c8895057fafe7caf9928ba3f5ac",
+    "description": "PDF p115 / printed103 reports FY2011 Actual Leachate revenue $262,970. This provides the earliest historical actual in the reviewed nine-year series. It does not identify every payer, load, hauler, gallon quantity or cash receipt. Hauled-waste and pollution-control objectives remain planning statements."
+  },
+  {
+    "id": "189-dcf0b6c8a088",
+    "name": "FY2014 City of Cadillac CAFR.pdf",
+    "url": "/findings-docs/189-dcf0b6c8a088.pdf",
+    "year": "2014",
+    "category": "Process & site financial context",
+    "type": "Annual financial report",
+    "format": "PDF",
+    "pages": 174,
+    "size": 1753665,
+    "sha256": "dcf0b6c8a088ebd7ff27374b1dec9cd39562542046260730d62643c93e397b24",
+    "description": "FY2014 annual financial report provides aggregate municipal and Water and Sewer Fund context. No leachate-specific account total was located in the reviewed native text. Combined fund revenue is not substituted for leachate revenue; the FY2014 Actual leachate amount is sourced separately to the FY2016 budget."
+  },
+  {
+    "id": "190-c5ff637bb359",
+    "name": "FY2015 City of Cadillac CAFR.pdf",
+    "url": "/findings-docs/190-c5ff637bb359.pdf",
+    "year": "2015",
+    "category": "Process & site financial context",
+    "type": "Annual financial report",
+    "format": "PDF",
+    "pages": 174,
+    "size": 3700152,
+    "sha256": "c5ff637bb35960f0f43011978eab689ba94ecb2106f20f9a5ca20a6e1605d05f",
+    "description": "FY2015 annual financial report provides aggregate municipal and Water and Sewer Fund context. No leachate-specific account total was located in the reviewed native text. Combined fund revenue is not substituted for leachate revenue; the FY2015 Actual leachate amount is sourced separately to the FY2017 budget."
+  },
+  {
+    "id": "191-82bfe8b8928e",
+    "name": "FY2016 City of Cadillac Operating Budget.pdf",
+    "url": "/findings-docs/191-82bfe8b8928e.pdf",
+    "year": "2016",
+    "category": "Wexford landfill & leachate",
+    "type": "Annual operating budget",
+    "format": "PDF",
+    "pages": 250,
+    "size": 9027857,
+    "sha256": "82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca",
+    "description": "PDF p101 / printed89 reports FY2014 Actual Leachate revenue $246,629. Page106 reports eight FY2014 NPDES violations. Page119 anticipates FY2016 Channel Monster replacement $75,000 and sampler replacement $10,000: planned capital amounts, not actual awards, shipments or installation dates."
+  },
+  {
+    "id": "192-fa26ae6e44ab",
+    "name": "FY2018_Budget_Amendment_3.pdf",
+    "url": "/findings-docs/192-fa26ae6e44ab.pdf",
+    "year": "2018",
+    "category": "Wexford landfill & leachate",
+    "type": "Budget amendment exhibit",
+    "format": "PDF",
+    "pages": 6,
+    "size": 168549,
+    "sha256": "fa26ae6e44ab24568073660bc4ea3fe75254c0118dc1881a86448c078a38437e",
+    "description": "PDF p6 increases FY2018 Leachate budget from $150,000 to $400,000 explicitly for Wexford landfill treatment revenue. The standalone certification fields are blank; May 21, 2018 minutes separately record unanimous adoption as presented under motion 2018-117. The $250,000 increase is a budget change, not a separate receipt."
+  },
+  {
+    "id": "193-c1fd49ce87b7",
+    "name": "May_21_2018_Council_Minutes.pdf",
+    "url": "/findings-docs/193-c1fd49ce87b7.pdf",
+    "year": "2018",
+    "category": "Wexford landfill & leachate",
+    "type": "City council minutes and attachments",
+    "format": "PDF",
+    "pages": 29,
+    "size": 2195612,
+    "sha256": "c1fd49ce87b7d391e60a850266f0b98ef4397dace2d08b525dea5b657eb51edf",
+    "description": "May 21, 2018 minutes p9 record unanimous motion 2018-117 adopting Amendment #3 as presented; p4 motion 2018-107 adopts the FY2019 budget ordinance. This 29-page supplied package includes unrelated Lofts planning attachments on pp15–29. It is council-action evidence, not a delivery receipt."
   }
 ]

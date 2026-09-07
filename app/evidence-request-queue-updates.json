@@ -1,8 +1,8 @@
 {
   "reviewDate": "2026-09-06",
   "reviewDateLabel": "September 6, 2026",
-  "scope": "Recent Cedar Creek delivery/procurement records, County originals, filename reconciliation and five newly reviewed 2010 Cadillac Council minutes. Existing well, receptor and pathway dispositions are carried forward; this is not a fresh reread of all 1,599 records.",
-  "note": "Five distinct 2010 Council originals add historical context; all are searchable by their uploaded filenames. The new minutes close no request. Filename corrections alone do not add originals or satisfy a requirement.",
+  "scope": "September 6 review of 20 financial/policy originals, with canonical-copy reconciliation and source-linked year findings. Earlier queue dispositions are retained; this is not a fresh reread of the whole repository.",
+  "note": "Historical Actual leachate revenue now spans FY2011–FY2019. Financial corroboration does not close delivery-level, signed-agreement or exact-cessation requests. Alternate filenames do not inflate the record count.",
   "blocks": [
     {
       "requestId": "receiving-history",
@@ -216,6 +216,85 @@
                 2,
                 4,
                 5
+              ]
+            }
+          ]
+        },
+        {
+          "id": "financial-actuals-2011-2019",
+          "finding": "City budgets report $2,996,632 in FY2011–FY2019 Actual Leachate revenue. FY2018 actual $431,105 reconciles to amended budget $400,000 plus $31,105; FY2019 actual $494,691 matches the $450,000 exhibit plus $44,691.",
+          "limitation": "Annual account totals do not identify every payer or delivery. FY2017 retains a $1 variance discrepancy; FY2016’s comparable final budget and FY2019’s corrected executed amendment remain unresolved. Delivery-linked invoices, receipts, ledgers, signed treatment agreements and the exact final delivery remain needed. MD&A statements are not independently audited receipts.",
+          "sources": [
+            {
+              "recordId": "188-979ad88f1240",
+              "sha256": "979ad88f12408b434469c4b08623cf3760a60c8895057fafe7caf9928ba3f5ac",
+              "label": "FY2011 Actual · PDF p115",
+              "pages": [
+                115
+              ]
+            },
+            {
+              "recordId": "184-fbee0873f184",
+              "sha256": "fbee0873f184b26ce053485567814250abb118d20bd58d335c796620a54c6189",
+              "label": "FY2012 Actual · PDF p113",
+              "pages": [
+                113
+              ]
+            },
+            {
+              "recordId": "185-710379d9664c",
+              "sha256": "710379d9664cec7ce863561b925c025e69dac99cce3e50edceaf88ef95ea9c83",
+              "label": "FY2013 Actual · PDF p109",
+              "pages": [
+                109
+              ]
+            },
+            {
+              "recordId": "191-82bfe8b8928e",
+              "sha256": "82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca",
+              "label": "FY2014 Actual · PDF p101",
+              "pages": [
+                101
+              ]
+            },
+            {
+              "recordId": "186-7f29198ab87d",
+              "sha256": "7f29198ab87d96e87ab29cd3de9ddf408fad06abcaf2c18c37e36932c62763ca",
+              "label": "FY2015 Actual · PDF p103",
+              "pages": [
+                103
+              ]
+            },
+            {
+              "recordId": "181-ca634234c53f",
+              "sha256": "ca634234c53f4b0996a68dd3cc457379838e94c64f743fccc58053e06be65d36",
+              "label": "FY2016 Actual · PDF p101",
+              "pages": [
+                101
+              ]
+            },
+            {
+              "recordId": "165-676065b15331",
+              "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
+              "label": "FY2017 Actual · PDF p105",
+              "pages": [
+                105
+              ]
+            },
+            {
+              "recordId": "187-d206785ff744",
+              "sha256": "d206785ff744be96b8de578f5b0b4aef908b61e2a3b494b57347af3917a30877",
+              "label": "FY2018 Actual · PDF p103",
+              "pages": [
+                103
+              ]
+            },
+            {
+              "recordId": "182-4d3eb8cccf14",
+              "sha256": "4d3eb8cccf148290640f64e67e98a1e65c3beef6c74f4e8e8970c8352cdded0e",
+              "label": "FY2019 Actual · PDF p107",
+              "pages": [
+                107
               ]
             }
           ]

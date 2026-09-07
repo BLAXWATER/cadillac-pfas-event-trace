@@ -133,11 +133,6 @@ const bundledDocumentDownloads = {
     query: "?url",
     import: "default",
   }),
-  ...import.meta.glob("../public/wexford-docs/104-6815e2f8b48e.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/findings-docs/007-238cf9655b70.pdf", {
     eager: true,
     import: "default",
@@ -446,11 +441,6 @@ const bundledDocumentDownloads = {
     query: "?url",
   }),
   ...import.meta.glob("../public/ipp-docs/125-9e67bc822d9c.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/ipp-docs/140-3db93feeaf81.pdf", {
     eager: true,
     import: "default",
     query: "?url",

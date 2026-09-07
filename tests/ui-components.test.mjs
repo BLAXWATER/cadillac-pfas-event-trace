@@ -183,7 +183,10 @@ test("opens document records in the reader and exposes a dedicated download acti
     "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/c8cbace229e1c034abf26a5774e3cd85bc786de0/public/ipp-docs/007-9aecbfcf4abc.pdf",
   );
   assert.match(bundledAssets, /ipp-docs\/125-9e67bc822d9c\.pdf/);
-  assert.match(bundledAssets, /ipp-docs\/140-3db93feeaf81\.pdf/);
+  assert.equal(
+    sourceDownloadUrl("/ipp-docs/140-3db93feeaf81.pdf", "PDF", (url) => withPdfStartPage(url, 1)),
+    "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/c8cbace229e1c034abf26a5774e3cd85bc786de0/public/ipp-docs/140-3db93feeaf81.pdf",
+  );
   assert.match(bundledAssets, /ipp-docs\/151-774fbfdfab32\.pdf/);
   assert.match(bundledAssets, /compliance-docs\/012-16dae2e386d4\.pdf/);
   assert.match(bundledAssets, /export function bundledDocumentDownload/);

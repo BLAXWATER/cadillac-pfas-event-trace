@@ -282,7 +282,13 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .document-dialog-header { width: 100%; min-width: 0; min-height: 92px; box-sizing: border-box; display: flex !important; flex-direction: row !important; justify-content: space-between; align-items: center; gap: 18px; padding: 16px 54px 16px 20px; border-bottom: 1px solid var(--border); }
 .document-dialog-header > div:first-child { flex: 1 1 auto; min-width: 0; }
 .document-dialog-header h2 { width: 100%; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.document-dialog-actions { flex: 0 0 auto; display: flex; align-items: center; gap: 10px; }
+.document-dialog-actions { flex: 0 1 auto; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; max-width: 50%; }
+.document-share-control { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
+.document-share-status { flex-basis: 100%; color: var(--brand-cyan); font-size: var(--font-11pt); line-height: 1.4; }
+.document-share-status:empty { display: none; }
+.document-share-link { display: grid; gap: 4px; width: 100%; min-width: 0; color: var(--brand-gray); font-size: var(--font-11pt); }
+.document-share-link input { width: 100%; min-width: 0; padding: 8px; border: 1px solid var(--border); border-radius: 4px; background: #050708; color: white; font: inherit; }
+.document-share-link input:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 .document-preview-status { padding: 6px 10px; border: 1px solid #235263; border-radius: 999px; color: var(--primary); font-family: var(--font-mono); font-size: var(--font-11pt); letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
 .document-meta { max-width: 1040px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .document-frame { min-height: 0; height: calc(94vh - 93px); display: grid; place-items: center; background: var(--brand-white); }
@@ -413,11 +419,13 @@ footer p { margin: 0; }
     line-height: 1.2;
   }
   .document-dialog-actions {
-    width: 100%;
-    min-width: 0;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
     justify-content: flex-start;
   }
   .document-dialog-actions a { min-height: 44px; padding-inline: 14px; }
+  .document-dialog-actions button { min-height: 44px; padding-inline: 14px; }
   .document-meta {
     width: 100%;
     max-width: 100%;
@@ -521,6 +529,8 @@ footer p { margin: 0; }
   .request-card h3 { font-size: clamp(20px, 6vw, 23.1px); }
   .document-dialog-actions { flex-wrap: wrap; }
   .document-dialog-actions a { flex: 1 1 100%; justify-content: center; }
+  .document-share-control { width: 100%; }
+  .document-share-control button { width: 100%; }
   .document-preview-page { padding-inline: 4px; }
   footer { gap: 9px; padding-bottom: max(24px, env(safe-area-inset-bottom)); }
 }

@@ -53,6 +53,7 @@ import wexfordDocuments from "./wexford-documents.json";
 import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } from "./bundled-public-assets";
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
+import { DocumentShareButton } from "./document-share-button";
 import verifiedFilenameAliases from "./verified-filename-aliases.json";
 import { createLibrarySearchIndex, initialLibrarySearchState, librarySearchReducer, librarySearchWindow, normalizeLibrarySearch, searchLibrary, SEARCH_BATCH_SIZE } from "./library-search";
 import {
@@ -3180,7 +3181,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
             {source.clock.modified && <div><span>{source.format} modified</span><strong>{source.clock.modified}</strong></div>}
             <p>{source.clock.note}</p>
           </div>
-          <p className="source-hint">{linked ? "Click to read the source in a document pop-out. A download control is provided inside." : "Exact filename preserved; source acquisition required."}</p>
+          <p className="source-hint">{linked ? "Click to read the source in a document pop-out, then download or share the document." : "Exact filename preserved; source acquisition required."}</p>
         </div>
       </TooltipContent>
     </Tooltip>
@@ -4050,6 +4051,7 @@ export default function Home() {
                 <div className="document-dialog-actions">
                   <span className="document-preview-status">{selected.preview ? "First-page preview" : "File details"}</span>
                   {selectedDownloadUrl && <Button asChild variant="outline" size="sm"><a href={selectedDownloadUrl} target="_blank" rel="noreferrer" download={selected.name} aria-label={`Download ${selected.name}`}><Download aria-hidden="true" />Download</a></Button>}
+                  {selectedDownloadUrl && <DocumentShareButton key={`${selectedDownloadUrl}-${selected.name}`} name={selected.name} downloadUrl={selectedDownloadUrl} />}
                 </div>
               </DialogHeader>
               <div className="document-frame">

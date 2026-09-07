@@ -49,6 +49,11 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/wexford-docs/106-99937cdc748b.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/wexford-docs/107-099e4487d07d.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/wexford-docs/108-797f5a3db89e.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/wexford-docs/109-5cc3c1841ff9.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/wexford-docs/110-fb263b3ea6c1.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/193-c1fd49ce87b7.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/192-fa26ae6e44ab.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/191-82bfe8b8928e.pdf", { eager: true, import: "default", query: "?url" }),
@@ -178,11 +183,6 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/findings-docs/151-5a0d25ca941a.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/findings-docs/152-4335077ddaf4.pdf", {
     eager: true,
     import: "default",
@@ -253,22 +253,12 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/findings-docs/165-676065b15331.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/findings-docs/166-fd889bd49fef.pdf", {
     eager: true,
     import: "default",
     query: "?url",
   }),
   ...import.meta.glob("../public/findings-docs/167-322217e52758.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/findings-docs/168-cdc906173203.pdf", {
     eager: true,
     import: "default",
     query: "?url",
@@ -375,11 +365,6 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/findings-docs/146-6b4e98f4c779.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/reference-data/107-d777daf8d23d.csv", {
     eager: true,
     import: "default",
@@ -436,11 +421,6 @@ const bundledDocumentDownloads = {
     query: "?url",
   }),
   ...import.meta.glob("../public/ipp-docs/013-3d6cd5e0a57b.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/ipp-docs/125-9e67bc822d9c.pdf", {
     eager: true,
     import: "default",
     query: "?url",
@@ -591,11 +571,6 @@ const bundledDocumentDownloads = {
     query: "?url",
   }),
   ...import.meta.glob("../public/npdes-docs/080-6a540cadcdc6.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/pfas-docs/098-044977305e5f.pdf", {
     eager: true,
     import: "default",
     query: "?url",

@@ -15,7 +15,7 @@ const note = id => allNotes.find(item => item.id === id);
 test('queue update covers all five blocks with exact canonical sources and valid PDF pages', () => {
   assert.deepEqual(updates.blocks.map(block => block.requestId).sort(), definitions.map(block => block.id).sort());
   assert.equal(new Set(allNotes.map(item => item.id)).size, allNotes.length);
-  assert.equal(allNotes.length, 18);
+  assert.equal(allNotes.length, 21);
   const ids = new Set();
   for (const item of allNotes) {
     assert.ok(item.finding.trim() && item.limitation.trim());
@@ -28,7 +28,7 @@ test('queue update covers all five blocks with exact canonical sources and valid
       ids.add(source.recordId);
     }
   }
-  assert.equal(ids.size, 45);
+  assert.equal(ids.size, 50);
 });
 
 test('every note ties to defined requests, and every requirement has a tie-back and a block follow-up', () => {
@@ -77,7 +77,7 @@ test('held context cannot silently close any requirement or inflate the catalog 
   assert.deepEqual(closed.map(r => r.id), ['local-boring-well-construction']);
   assert.equal(definitions.flatMap(d => d.requirements).length - closed.length, 22);
   assert.equal(definitions.find(d => d.id === 'receiving-history').requirements.length, 7);
-  assert.equal(records.length, 1613);
+  assert.equal(records.length, 1618);
   assert.equal(audit.lastRecheck.localCatalogRecords, records.length);
   assert.equal(audit.lastRecheck.newClosures, 0);
   assert.equal(audit.lastRecheck.remainingRequirements, 22);

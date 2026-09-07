@@ -1,0 +1,149 @@
+{
+  "reviewDate": "2026-09-07",
+  "scope": "Five user-supplied solid-waste-plan originals; bounded text screening and visual verification of the cited approval, agreement, table and map pages. Not a full page-by-page OCR review of every page or the whole repository.",
+  "stats": {
+    "recordsBefore": 1613,
+    "suppliedFiles": 5,
+    "suppliedPages": 651,
+    "recordsAdded": 5,
+    "recordsAfter": 1618,
+    "filenameAliasesAdded": 7,
+    "newTimelineEvents": 8,
+    "newQueueNotes": 3,
+    "newClosures": 0,
+    "remainingRequirements": 22
+  },
+  "preservation": "Five full PDFs retained byte-for-byte. Repeated maps and embedded amendment copies are not counted as independent corroboration. The 347-page source is accurately titled as a compilation, with its original map-labelled filename searchable.",
+  "sources": [
+    {
+      "sha": "99937cdc748bbc426b2dac9376cd4f3791471fcc59c44a531dbdbf12ca9d97cc",
+      "pages": 47,
+      "size": 2764397,
+      "year": "2011",
+      "name": "Wexford Solid Waste Management Plan Amendment — State Approval April 19, 2011.pdf",
+      "original": "Wexford-2011-Amendment Wexford County 2009-2011 Solid Waste Management Plan Amendment.pdf",
+      "type": "Solid-waste planning approval",
+      "description": "State approval dated April 19, 2011, with modifications (PDF pp1–4), of the internally named 2009 amendment. Import tables list 22 counties with primary agreements and negotiated quantities (pp14–15); five export destinations appear on p16. The September 15, 2010 County vote was 7–2 (p46). The approval letter controls over enclosed replacement text; the sample ordinance is not an executed ordinance. Facility acreage/capacity and contamination-remediation history are planning context, not PFAS results, leachate deliveries or a construction permit.",
+      "id": "106-99937cdc748b",
+      "url": "/wexford-docs/106-99937cdc748b.pdf"
+    },
+    {
+      "sha": "099e4487d07d810272256786a076ccfa8f067c8dbd171cce835c788a16e22cde",
+      "pages": 8,
+      "size": 224158,
+      "year": "2012",
+      "name": "Wexford Solid Waste Management Plan Amendment — State Approval May 1, 2012.pdf",
+      "original": "Wexford-2012-Amendment  - removes the prior agreement and negotiated-volume requirements.pdf",
+      "type": "Solid-waste import/export amendment",
+      "description": "May 1, 2012 state approval of the internally named 2011 amendment (PDF pp1–2). The same 22 import counties move from agreement-required/negotiated-volume entries to primary/unrestricted entries, and the negotiated executed-agreement prerequisite is removed (p4). Export destinations expand from five to 22 (pp7–8), retaining receiving-county approved-plan authorization and licensed-facility conditions. This does not prove actual shipments, cancel existing contracts, waive shipping records or authorize all waste from every county.",
+      "id": "107-099e4487d07d",
+      "url": "/wexford-docs/107-099e4487d07d.pdf"
+    },
+    {
+      "sha": "797f5a3db89ea139d0d45814f31bfd887d5edc60c38ae2ee7838eed24bf6bcb8",
+      "pages": 100,
+      "size": 5575060,
+      "year": "2016",
+      "name": "Lake County Solid Waste Plan Amendment — Wexford Disposal Authorization, 2016.pdf",
+      "original": "Lake-2016-Amendment - May 14, 2014 American Waste original letter requesting Lake County authorization to send waste to Wexford County Landfill.pdf",
+      "type": "Intercounty disposal authorization",
+      "description": "August 31, 2016 signed DEQ approval (PDF p1; amended table p4), following American Waste Co-President Edward Ascione’s signed May 14, 2014 request (pp95–96). Wexford quantity cells are blank, not 100%. The November 5, 2013 Golder map (pp30, 98) depicts wells, leachate storage, secondary containment, a 20,000-gallon backup tank and dual-contained force main; it does not show an actual delivery to Cadillac. Facility capacity estimates on p97 are not Lake shipment totals. Conflicting local tally/minutes entries on pp64–65 and 85 are retained in the original, not silently reconciled.",
+      "id": "108-797f5a3db89e",
+      "url": "/wexford-docs/108-797f5a3db89e.pdf"
+    },
+    {
+      "sha": "5cc3c1841ff95287a75e9b1c91c70eb9e6719ec87cc3fac6091c3e8c362730b3",
+      "pages": 149,
+      "size": 6186125,
+      "year": "1995",
+      "name": "Missaukee Solid Waste Plan Compilation — Signed 1995 Wexford DPW Disposal Agreement.pdf",
+      "original": "Missaukee & Wexford County Public Works - Wexford County Landfill as disposal site.pdf",
+      "type": "County governance and contracting",
+      "description": "Full 149-page plan compilation, including the executed September 19, 1995 Missaukee–Wexford Board of Public Works solid-waste agreement (PDF pp136–143). Section 2.3 requires an authorized commercial-hauler list (p140); payment-on-delivery terms, separately set tipping fees and a five-year mutually renewable term appear on p141. These are not numeric rate schedules, receipts or executed renewals. A signed October 13, 1998 letter certifies ten years of capacity at then-current volumes (p64). December 12, 2007 minutes attribute contamination/pricing remarks to a landfill representative (p5). The compilation also retains a July 30, 2009 siting-amendment approval; it is not the 2009 Cadillac leachate-treatment agreement.",
+      "id": "109-5cc3c1841ff9",
+      "url": "/wexford-docs/109-5cc3c1841ff9.pdf"
+    },
+    {
+      "sha": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+      "pages": 347,
+      "size": 10119631,
+      "year": "2007",
+      "name": "Wexford Solid Waste Management Plan Compilation — Including February 2007 CTI Facility Map.pdf",
+      "original": "Wexford February 2007 CTI facility map - Project No. 75010002-2.pdf",
+      "type": "Site history and mapping",
+      "description": "The supplied file is a complete 347-page historical solid-waste-plan compilation, not a one-page map. PDF pp28 and 83 repeat the February 2007 CTI facility map, project 75010002.2, Drawing 1, scale 1 inch = 600 feet, depicting boundaries and landfill cells. Unlike the separate Golder 2013 map, this map does not label wells, tanks or a force main and does not establish groundwater direction. Historical facility profiles list wastewater-treatment sludge among accepted waste types (pp27, 82), not specific generators or deliveries. Repeated maps and embedded amendment copies are not independent corroboration.",
+      "id": "110-fb263b3ea6c1",
+      "url": "/wexford-docs/110-fb263b3ea6c1.pdf"
+    }
+  ],
+  "reviewedPages": {
+    "106-99937cdc748b": [
+      1,
+      2,
+      3,
+      4,
+      10,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      41,
+      46
+    ],
+    "107-099e4487d07d": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "108-797f5a3db89e": [
+      1,
+      4,
+      30,
+      64,
+      65,
+      85,
+      92,
+      95,
+      96,
+      97,
+      98
+    ],
+    "109-5cc3c1841ff9": [
+      1,
+      5,
+      35,
+      64,
+      129,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143
+    ],
+    "110-fb263b3ea6c1": [
+      27,
+      28,
+      82,
+      83
+    ]
+  },
+  "boundaries": [
+    "Signed 1995 Missaukee solid-waste agreement is not the outstanding signed 2009 Cadillac leachate agreement.",
+    "2011 approval modifies enclosed plan text; an enclosed sample ordinance is not enacted law.",
+    "2012 planning changes retain receiving-plan and licensed-facility conditions; no existing contract cancellation or shipment-record waiver inferred.",
+    "Lake Wexford quantity cells are blank, not 100%; its request and state approval are separate events.",
+    "Golder backup tank is 20,000 gallons; the separate CTI map has no wells/tank/force-main labels.",
+    "2007 contamination/pricing comments are attributed, not independent causation findings.",
+    "Filename Item_149.pdf matches September 8, 2009 minutes. Filename 842.pdf matches January 19, 2016 minutes, not Miscellaneous File No. 842."
+  ]
+}

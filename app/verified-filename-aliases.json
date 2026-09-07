@@ -1,4 +1,34 @@
 {
+  "106-99937cdc748b": {
+    "sha256": "99937cdc748bbc426b2dac9376cd4f3791471fcc59c44a531dbdbf12ca9d97cc",
+    "aliases": [
+      "Wexford-2011-Amendment Wexford County 2009-2011 Solid Waste Management Plan Amendment.pdf"
+    ]
+  },
+  "107-099e4487d07d": {
+    "sha256": "099e4487d07d810272256786a076ccfa8f067c8dbd171cce835c788a16e22cde",
+    "aliases": [
+      "Wexford-2012-Amendment  - removes the prior agreement and negotiated-volume requirements.pdf"
+    ]
+  },
+  "108-797f5a3db89e": {
+    "sha256": "797f5a3db89ea139d0d45814f31bfd887d5edc60c38ae2ee7838eed24bf6bcb8",
+    "aliases": [
+      "Lake-2016-Amendment - May 14, 2014 American Waste original letter requesting Lake County authorization to send waste to Wexford County Landfill.pdf"
+    ]
+  },
+  "109-5cc3c1841ff9": {
+    "sha256": "5cc3c1841ff95287a75e9b1c91c70eb9e6719ec87cc3fac6091c3e8c362730b3",
+    "aliases": [
+      "Missaukee & Wexford County Public Works - Wexford County Landfill as disposal site.pdf"
+    ]
+  },
+  "110-fb263b3ea6c1": {
+    "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+    "aliases": [
+      "Wexford February 2007 CTI facility map - Project No. 75010002-2.pdf"
+    ]
+  },
   "039-c677de7c10e6": {
     "sha256": "c677de7c10e6deadf6820c52b05e3ac45ff9dffd54d0296af2d99ad80dc0725d",
     "aliases": [
@@ -35,7 +65,8 @@
   "008-5b67e1ed1d5c": {
     "sha256": "5b67e1ed1d5cef4fb50cca40560307f5befeff4e602f5229b0bf1422d803a9dd",
     "aliases": [
-      "04_2009-09-08_Cadillac_Agreement_Approval_Minutes.pdf"
+        "04_2009-09-08_Cadillac_Agreement_Approval_Minutes.pdf",
+        "Item_149.pdf"
     ]
   },
   "process-site-020-28d1cb87cb36": {
@@ -49,7 +80,8 @@
     "sha256": "6c2e73d85da00db6690645c8d68b445992eccb97b1324d6afbc7a8459d9b0a3e",
     "aliases": [
       "05_2016-01-19_Kemira_Purchase_Authorization_Extension.pdf",
-      "January 19 2016.pdf"
+        "January 19 2016.pdf",
+        "842.pdf"
     ]
   },
   "form-submission-034-00d98416b456": {

@@ -1,0 +1,198 @@
+{
+  "reviewDate": "2026-09-07",
+  "scope": "Five supplied full originals with targeted page and visual checks. Embedded repeats are not independent corroboration. No new evidence-request closures.",
+  "events": [
+    {
+      "year": "1995",
+      "date": "1995-09-19",
+      "isoDate": "1995-09-19",
+      "time": "Time not stated",
+      "timeBasis": "Dated source record; time of day not stated",
+      "phase": "Executed intercounty agreement",
+      "kind": "regulatory",
+      "category": "12 · Landfill & leachate",
+      "title": "Signed Missaukee–Wexford agreement identifies the landfill as a primary disposal site",
+      "finding": "Missaukee County and the Wexford County Board of Public Works executed a reciprocal solid-waste disposal agreement. Section 2.3 requires an authorized commercial-hauler list; tipping fees are generally payable on delivery and set by separate DPW resolution. The initial five-year term requires mutual agreement for renewal.",
+      "significance": "This is Missaukee solid waste → Wexford landfill, not Wexford leachate → Cadillac WWTP. It identifies hauler-list and fee-record leads but supplies no actual load tickets, numerical rate schedule or later executed renewals.",
+      "sources": [
+        {
+          "recordId": "109-5cc3c1841ff9",
+          "sha256": "5cc3c1841ff95287a75e9b1c91c70eb9e6719ec87cc3fac6091c3e8c362730b3",
+          "name": "Missaukee Solid Waste Plan Compilation — Signed 1995 Wexford DPW Disposal Agreement.pdf",
+          "url": "/wexford-docs/109-5cc3c1841ff9.pdf",
+          "pages": 149,
+          "page": 136,
+          "result": "PDF pp136–143 contain the signed September 19, 1995 agreement; p140 §2.3 covers hauler lists and p141 §§4.1–4.2 covers fees and payment."
+        }
+      ]
+    },
+    {
+      "year": "1998",
+      "date": "1998-10-13",
+      "isoDate": "1998-10-13",
+      "time": "Time not stated",
+      "timeBasis": "Dated source record; time of day not stated",
+      "phase": "Historical capacity certification",
+      "kind": "regulatory",
+      "category": "12 · Landfill & leachate",
+      "title": "Wexford DPW certifies capacity for Missaukee at then-current volumes",
+      "finding": "In a signed October 13, 1998 letter, Wexford DPW Director Gary R. Fuller states that the landfill has sufficient capacity for Missaukee County’s use for the next ten years at then-current solid-waste volumes.",
+      "significance": "A dated historical capacity assurance, not a transaction ledger, a modern capacity estimate or proof of individual deliveries.",
+      "sources": [
+        {
+          "recordId": "109-5cc3c1841ff9",
+          "sha256": "5cc3c1841ff95287a75e9b1c91c70eb9e6719ec87cc3fac6091c3e8c362730b3",
+          "name": "Missaukee Solid Waste Plan Compilation — Signed 1995 Wexford DPW Disposal Agreement.pdf",
+          "url": "/wexford-docs/109-5cc3c1841ff9.pdf",
+          "pages": 149,
+          "page": 64,
+          "result": "PDF p64 (printed III-30) is the signed capacity certification."
+        }
+      ]
+    },
+    {
+      "year": "2007",
+      "date": "2007-02",
+      "isoDate": "2007-02",
+      "time": "Time not stated",
+      "timeBasis": "Month and year printed on the map; day and time not stated",
+      "phase": "Historical facility map",
+      "kind": "operation",
+      "category": "12 · Landfill & leachate",
+      "title": "CTI map locates Wexford landfill boundaries and disposal cells",
+      "finding": "The February 2007 CTI facility map, project 75010002.2, Drawing 1, depicts landfill boundaries and cells at 1 inch = 600 feet. The same map is repeated on PDF pages 28 and 83 of this full 347-page compilation.",
+      "significance": "The map supplies spatial site history, not groundwater-flow direction, a PFAS pathway or proof of any shipment. The two copies are the same map, not separate corroboration. No exact day is printed.",
+      "sources": [
+        {
+          "recordId": "110-fb263b3ea6c1",
+          "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+          "name": "Wexford Solid Waste Management Plan Compilation — Including February 2007 CTI Facility Map.pdf",
+          "url": "/wexford-docs/110-fb263b3ea6c1.pdf",
+          "pages": 347,
+          "page": 28,
+          "result": "PDF pp28 and 83 contain repeated CTI maps. Nearby profiles pp27 and 82 list waste types, not delivered-load records."
+        }
+      ]
+    },
+    {
+      "year": "2007",
+      "date": "2007-12-12",
+      "isoDate": "2007-12-12",
+      "time": "Time not stated",
+      "timeBasis": "Dated source record; time of day not stated",
+      "phase": "Attributed committee discussion",
+      "kind": "regulatory",
+      "category": "12 · Landfill & leachate",
+      "title": "Meeting minutes connect landfill pricing discussion with contamination issues",
+      "finding": "December 12, 2007 committee minutes attribute to Wexford landfill representative Richard Leszcz a statement that contamination issues contributed to higher Wexford prices, alongside discussion of attracting more waste and supporting recycling.",
+      "significance": "This preserves the participant’s statement. It is not an independent causation finding, contaminant identification, PFAS result or delivery record.",
+      "sources": [
+        {
+          "recordId": "109-5cc3c1841ff9",
+          "sha256": "5cc3c1841ff95287a75e9b1c91c70eb9e6719ec87cc3fac6091c3e8c362730b3",
+          "name": "Missaukee Solid Waste Plan Compilation — Signed 1995 Wexford DPW Disposal Agreement.pdf",
+          "url": "/wexford-docs/109-5cc3c1841ff9.pdf",
+          "pages": 149,
+          "page": 5,
+          "result": "PDF p5 preserves the December 12, 2007 discussion and attribution."
+        }
+      ]
+    },
+    {
+      "year": "2011",
+      "date": "2011-04-19",
+      "isoDate": "2011-04-19",
+      "time": "Time not stated",
+      "timeBasis": "Dated source record; time of day not stated",
+      "phase": "State planning approval",
+      "kind": "regulatory",
+      "category": "12 · Landfill & leachate",
+      "title": "State approves Wexford plan amendment with modifications",
+      "finding": "The April 19, 2011 state letter approves the internally named 2009 amendment with modifications. Import tables list 22 counties with primary agreements and negotiated quantities; the export table lists five destinations. The County approved the amendment 7–2 on September 15, 2010.",
+      "significance": "Read the approval letter together with the amended pages. Plan consistency is not a construction permit. These are planning authorizations, not actual waste or leachate delivery totals; the enclosed sample ordinance is not an executed ordinance.",
+      "sources": [
+        {
+          "recordId": "106-99937cdc748b",
+          "sha256": "99937cdc748bbc426b2dac9376cd4f3791471fcc59c44a531dbdbf12ca9d97cc",
+          "name": "Wexford Solid Waste Management Plan Amendment — State Approval April 19, 2011.pdf",
+          "url": "/wexford-docs/106-99937cdc748b.pdf",
+          "pages": 47,
+          "page": 1,
+          "result": "PDF pp1–4: controlling approval/modifications; pp14–16: import/export tables; p46: County vote."
+        }
+      ]
+    },
+    {
+      "year": "2012",
+      "date": "2012-05-01",
+      "isoDate": "2012-05-01",
+      "time": "Time not stated",
+      "timeBasis": "Dated source record; time of day not stated",
+      "phase": "Import/export rule amendment",
+      "kind": "regulatory",
+      "category": "12 · Landfill & leachate",
+      "title": "Wexford plan removes the negotiated-agreement prerequisite",
+      "finding": "The May 1, 2012 approval keeps the same 22 import counties but changes agreement-required/negotiated-volume entries to primary/unrestricted entries. It removes the negotiated executed-agreement prerequisite and expands export destinations from five to 22.",
+      "significance": "Receiving-county approved-plan authorization and licensed-facility conditions remain. This historical planning change does not establish actual deliveries, cancel existing contracts or waive shipping documentation.",
+      "sources": [
+        {
+          "recordId": "107-099e4487d07d",
+          "sha256": "099e4487d07d810272256786a076ccfa8f067c8dbd171cce835c788a16e22cde",
+          "name": "Wexford Solid Waste Management Plan Amendment — State Approval May 1, 2012.pdf",
+          "url": "/wexford-docs/107-099e4487d07d.pdf",
+          "pages": 8,
+          "page": 1,
+          "result": "PDF pp1–2: approval; p4: deletion of D6 agreement prerequisite; pp7–8: replacement import/export tables."
+        }
+      ]
+    },
+    {
+      "year": "2014",
+      "date": "2014-05-14",
+      "isoDate": "2014-05-14",
+      "time": "Time not stated",
+      "timeBasis": "Dated source record; time of day not stated",
+      "phase": "Operator authorization request",
+      "kind": "regulatory",
+      "category": "12 · Landfill & leachate",
+      "title": "American Waste requests Lake County authorization for Wexford disposal",
+      "finding": "American Waste Co-President Edward Ascione signs a May 14, 2014 request to add Wexford County to Lake County’s authorized solid-waste export destinations without conditions.",
+      "significance": "This is the operator’s request, not state approval or a completed shipment. Lake’s 2016 approval is shown separately. It does not establish transport to Cadillac WWTP.",
+      "sources": [
+        {
+          "recordId": "108-797f5a3db89e",
+          "sha256": "797f5a3db89ea139d0d45814f31bfd887d5edc60c38ae2ee7838eed24bf6bcb8",
+          "name": "Lake County Solid Waste Plan Amendment — Wexford Disposal Authorization, 2016.pdf",
+          "url": "/wexford-docs/108-797f5a3db89e.pdf",
+          "pages": 100,
+          "page": 95,
+          "result": "PDF pp95–96 contain the original signed American Waste request."
+        }
+      ]
+    },
+    {
+      "year": "2016",
+      "date": "2016-08-31",
+      "isoDate": "2016-08-31",
+      "time": "Time not stated",
+      "timeBasis": "Dated source record; time of day not stated",
+      "phase": "State intercounty approval",
+      "kind": "regulatory",
+      "category": "12 · Landfill & leachate",
+      "title": "DEQ approves Lake County’s Wexford disposal authorization",
+      "finding": "On August 31, 2016, DEQ approves Lake County’s amendment adding Wexford as a primary solid-waste disposal authorization; DEQ received the amendment June 7, 2016. The Wexford quantity cells are blank, not 100%.",
+      "significance": "This completes the request-to-approval sequence, not a delivery sequence. The included Golder map depicts leachate infrastructure, including a 20,000-gallon backup tank, but not actual flow or hauling to Cadillac.",
+      "sources": [
+        {
+          "recordId": "108-797f5a3db89e",
+          "sha256": "797f5a3db89ea139d0d45814f31bfd887d5edc60c38ae2ee7838eed24bf6bcb8",
+          "name": "Lake County Solid Waste Plan Amendment — Wexford Disposal Authorization, 2016.pdf",
+          "url": "/wexford-docs/108-797f5a3db89e.pdf",
+          "pages": 100,
+          "page": 1,
+          "result": "PDF p1: signed approval; p4: amended table; p98: November 5, 2013 Golder map. Blank quantity cells and conflicting local tally/minutes entries remain preserved as printed."
+        }
+      ]
+    }
+  ]
+}

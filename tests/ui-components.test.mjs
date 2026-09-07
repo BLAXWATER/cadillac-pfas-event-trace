@@ -182,7 +182,10 @@ test("opens document records in the reader and exposes a dedicated download acti
     sourceDownloadUrl("/ipp-docs/007-9aecbfcf4abc.pdf", "PDF", (url) => withPdfStartPage(url, 1)),
     "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/c8cbace229e1c034abf26a5774e3cd85bc786de0/public/ipp-docs/007-9aecbfcf4abc.pdf",
   );
-  assert.match(bundledAssets, /ipp-docs\/125-9e67bc822d9c\.pdf/);
+  assert.equal(
+    sourceDownloadUrl("/ipp-docs/125-9e67bc822d9c.pdf", "PDF", (url) => withPdfStartPage(url, 1)),
+    "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/c8cbace229e1c034abf26a5774e3cd85bc786de0/public/ipp-docs/125-9e67bc822d9c.pdf",
+  );
   assert.equal(
     sourceDownloadUrl("/ipp-docs/140-3db93feeaf81.pdf", "PDF", (url) => withPdfStartPage(url, 1)),
     "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/c8cbace229e1c034abf26a5774e3cd85bc786de0/public/ipp-docs/140-3db93feeaf81.pdf",
@@ -205,7 +208,7 @@ test("removes exactly the first period from every multi-period library filename"
     typeof record.name === "string" && (record.name.match(/\./g) ?? []).length > 1,
   );
 
-  assert.equal(records.length, 1613);
+  assert.equal(records.length, 1618);
   assert.equal(multiPeriodRecords.length, 196);
 
   for (const record of multiPeriodRecords) {

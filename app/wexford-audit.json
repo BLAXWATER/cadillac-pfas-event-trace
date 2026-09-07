@@ -9,7 +9,7 @@
     "sourceOcrPages": 441,
     "sourceOcrPagesWithText": 424,
     "sourceManualReviewPages": 8,
-    "finalDistinctRecords": 105,
+    "finalDistinctRecords": 110,
     "existingCatalogRecordsPreserved": 19,
     "recordsAddedThisPass": 85,
     "exactExistingRecordsReused": 17,
@@ -17,8 +17,8 @@
     "actualDuplicateFilesRemoved": 5,
     "nonPrimaryRecordsExcluded": 9,
     "duplicateLikeLabelsRemoved": 12,
-    "publishedPages": 1686,
-    "publishedBytes": 163704313,
+    "publishedPages": 2337,
+    "publishedBytes": 188573684,
     "latestRepeatIntakeFilesReviewed": 42,
     "latestRepeatIntakePagesReviewed": 230,
     "latestRepeatIntakeDistinctContentHashes": 41,
@@ -28,6 +28,7 @@
     "latestRepeatIntakeRecordsAdded": 0
   },
   "methods": [
+    "September 7, 2026 solid-waste-plan intake: five full originals added (651 pages), with bounded text screening and visual checks of cited approval, agreement, table and map pages. This is not a claim of complete new page-by-page OCR; details are retained in solid-waste-plan-intake-audit.json. Earlier source/OCR/pass statistics below describe their original historical reviews.",
     "SHA-256 comparison across every supplied file, all existing evidence catalogs and the previously linked timeline source",
     "Rendered-page comparison for visually identical but byte-different PDFs, with metadata, creation-time, page-count and normalized OCR-text cross-checks",
     "Page-by-page text extraction followed by OCR for every page without sufficient embedded text: 401 pages were OCR processed and 384 yielded text",

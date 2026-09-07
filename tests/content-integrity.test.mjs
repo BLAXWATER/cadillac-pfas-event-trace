@@ -19,6 +19,24 @@ async function loadCatalogs() {
   })));
 }
 
+// Delivery can be bundled or an immutable archive, but the original bytes must match.
+async function assertDeliveredOriginal(asset) {
+  const plans = await loadDownloadDeliveryPlan();
+  const delivery = plans.find(p => (p.publicPath.startsWith("/") ? p.publicPath : "/" + p.publicPath) === asset);
+  assert.ok(delivery, asset);
+  const local = await readFile(path.join(publicDirectory, asset.replace(/^\//, "")));
+  assert.equal(local.length, delivery.row.size);
+  assert.equal(createHash("sha256").update(local).digest("hex"), delivery.row.sha256);
+  if (delivery.kind === "archive") {
+    assert.match(delivery.source.rawUrl, /^https:\/\/raw\.githubusercontent\.com\/BLAXWATER\/cadillac-pfas-event-trace\/[a-f0-9]{40}\/public\//);
+    const archived = spawnSync("git", ["show", delivery.source.spec], { cwd: root, maxBuffer: 32 * 1024 * 1024 });
+    assert.equal(archived.status, 0);
+    assert.ok(local.equals(archived.stdout), asset);
+  } else {
+    assert.equal(delivery.kind, "bundled");
+  }
+}
+
 async function walkFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const nested = await Promise.all(entries.map(async (entry) => {
@@ -67,7 +85,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 797);
+  assert.equal(localFiles, 802);
   assert.equal(externalFiles, 816);
 });
 
@@ -152,7 +170,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1613);
+  assert.equal(recordCount, 1618);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -196,7 +214,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1613);
+  assert.equal(records.length, 1618);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -271,7 +289,7 @@ test("evidence request queue shows only unmatched, independently closable requir
   assert.match(source, /request\.remaining\.map/);
 });
 
-test("corpus OCR audit covers every record and leaves no verified duplicate", async () => {
+test("corpus audit reconciles prior OCR coverage and explicitly bounded new-page review", async () => {
   const catalogs = await loadCatalogs();
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
   const audit = JSON.parse(await readFile(path.join(appDirectory, "corpus-ocr-audit.json"), "utf8"));
@@ -288,10 +306,12 @@ test("corpus OCR audit covers every record and leaves no verified duplicate", as
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1455);
-  assert.equal(audit.stats.pdfPages, 24806);
+  assert.equal(audit.stats.pdfRecords, 1460);
+  assert.equal(audit.stats.pdfPages, 25457);
   assert.equal(audit.stats.imageRecords, 13);
-  assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages + (audit.stats.visuallyVerifiedBlankPagesWithoutOcr ?? 0) + (audit.stats.visuallyScreenedSparsePagesWithoutOcr ?? 0), audit.stats.pdfPages + audit.stats.imageRecords);
+  assert.equal(audit.stats.boundedReviewPagesWithoutFullOcr, 651);
+  assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages + (audit.stats.visuallyVerifiedBlankPagesWithoutOcr ?? 0) + (audit.stats.visuallyScreenedSparsePagesWithoutOcr ?? 0) + audit.stats.boundedReviewPagesWithoutFullOcr, audit.stats.pdfPages + audit.stats.imageRecords);
+  assert.match(audit.solidWastePlanIntake.scope, /not a full page-by-page OCR/);
   assert.equal(audit.stats.missingHashes, 0);
   assert.equal(audit.stats.hashFailures, 0);
   assert.equal(audit.stats.sizeFailures, 0);
@@ -396,7 +416,7 @@ test("online form submissions retain real revisions and exclude only verified du
   assert.equal(catalog.some((row) => row.name.includes("HPD-MWSX-Y48BC")), true);
 });
 
-test("Wexford archive OCRs every page and excludes only verified copies or non-primary derivatives", async () => {
+test("Wexford archive preserves prior OCR audit and explicitly bounded new-plan review", async () => {
   const catalog = JSON.parse(await readFile(path.join(appDirectory, "wexford-documents.json"), "utf8"));
   const audit = JSON.parse(await readFile(path.join(appDirectory, "wexford-audit.json"), "utf8"));
 
@@ -405,7 +425,7 @@ test("Wexford archive OCRs every page and excludes only verified copies or non-p
   assert.equal(audit.stats.sourceEmbeddedTextPages + audit.stats.sourceOcrPages, audit.stats.sourcePagesAndImagesReviewed);
   assert.equal(audit.stats.sourceOcrPagesWithText, 424);
   assert.equal(audit.stats.sourceManualReviewPages, 8);
-  assert.equal(audit.stats.finalDistinctRecords, 105);
+  assert.equal(audit.stats.finalDistinctRecords, 110);
   assert.equal(catalog.length, audit.stats.finalDistinctRecords);
   assert.equal(audit.stats.recordsAddedThisPass, 85);
   assert.equal(audit.stats.exactExistingRecordsReused, 17);
@@ -413,7 +433,7 @@ test("Wexford archive OCRs every page and excludes only verified copies or non-p
   assert.equal(audit.stats.actualDuplicateFilesRemoved, 5);
   assert.equal(audit.stats.nonPrimaryRecordsExcluded, 9);
   assert.equal(audit.stats.duplicateLikeLabelsRemoved, 12);
-  assert.equal(audit.stats.publishedPages, 1686);
+  assert.equal(audit.stats.publishedPages, 2337);
   assert.equal(audit.stats.latestRepeatIntakeFilesReviewed, 42);
   assert.equal(audit.stats.latestRepeatIntakePagesReviewed, 230);
   assert.equal(audit.stats.latestRepeatIntakeDistinctContentHashes, 41);
@@ -1599,7 +1619,7 @@ test("batch 25 preserves the draft fact sheet once and publishes the distinct EG
     const source = await readFile(path.join(publicDirectory, matched.asset.replace(/^\//, "")));
     assert.equal(createHash("sha256").update(source).digest("hex"), matched.sha256);
     assert.ok(previewManifest[matched.asset], `Missing preview for ${matched.asset}`);
-    assert.match(bundledSource, new RegExp(matched.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    await assertDeliveredOriginal(matched.asset);
   }
 
   assert.match(audit.resolution, /No repeated catalog record or timeline event was added/i);
@@ -1742,7 +1762,7 @@ test("batch 28 preserves distinct receiving-history context without closing tran
     assert.equal(record.size, added.size);
     const source = await readFile(path.join(publicDirectory, added.asset.replace(/^\//, "")));
     assert.equal(createHash("sha256").update(source).digest("hex"), added.sha256);
-    assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    await assertDeliveredOriginal(added.asset);
   }
 
   assert.ok(previewManifest["/findings-docs/146-6b4e98f4c779.pdf"]);
@@ -1832,7 +1852,7 @@ test("batch 31 adds only distinct official records and leaves unsupported gaps o
       assert.equal(delivery?.kind, "archive");
       assert.equal(new URL(delivery.source.rawUrl).hostname, "raw.githubusercontent.com");
     } else {
-      assert.match(bundledSource, new RegExp(added.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+      await assertDeliveredOriginal(added.asset);
     }
     if (added.asset.endsWith(".pdf")) assert.ok(previewManifest[added.asset], added.asset);
   }
@@ -2147,7 +2167,7 @@ test("batch 40 keeps the FY2019 adopted budget separate and bounds the revenue-p
   assert.equal(added.size, audit.addedRecord.size);
   const source = await readFile(path.join(publicDirectory, audit.addedRecord.asset.replace(/^\//, "")));
   assert.equal(createHash("sha256").update(source).digest("hex"), audit.addedRecord.sha256);
-  assert.match(bundledSource, new RegExp(audit.addedRecord.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  await assertDeliveredOriginal(audit.addedRecord.asset);
   assert.ok(previewManifest[audit.addedRecord.asset]);
 
   assert.match(pageSource, /Cadillac adopts FY2019 budget with leachate revenue and hauled-waste goals/);
@@ -2428,7 +2448,7 @@ test("batch 46 retains the historical groundwater records and signed LDFA resolu
     assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
     assert.equal(previewManifest[expected.asset], expected.preview);
     assert.ok((await stat(path.join(publicDirectory, expected.preview.replace(/^\//, "")))).size > 0);
-    assert.match(bundledSource, new RegExp(expected.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    await assertDeliveredOriginal(expected.asset);
   }
 
   assert.match(pageSource, /DNR calls for a broader Cadillac-area groundwater study/);

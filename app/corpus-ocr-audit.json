@@ -1,5 +1,12 @@
 {
-  "catalogFingerprint": "447a2b9d1bfbc9b36b5acbb93bfcf5ff6abb0f48becf8fab94b5f734428f7295",
+  "catalogFingerprint": "173021f58ea66c4d77ea260c3da56798314c4f5073ae6fd575d09773e8decea2",
+  "solidWastePlanIntake": {
+    "date": "2026-09-07",
+    "recordsAdded": 5,
+    "pdfPagesAdded": 651,
+    "scope": "Original byte, size and page-count checks, bounded text screening and cited-page visual verification; not a full page-by-page OCR or rendered-sequence duplicate audit of the new 651 pages. Earlier OCR and manual-review results below remain historical.",
+    "audit": "solid-waste-plan-intake-audit.json"
+  },
   "cedarCreekAIntake": {
     "date": "2026-09-05",
     "recordsAdded": 9,
@@ -10,6 +17,7 @@
     "audit": "batch101-cedar-creek-a-intake-audit.json"
   },
   "method": [
+    "Scope clarification: aggregate catalog verification covers identity, bytes and page counts. Full-page OCR/render methods and manual resolutions below describe prior audits, not every later intake. Five new solid-waste compilations have explicitly bounded content review; embedded repeats are disclosed rather than counted as independent corroboration.",
     "Verified every catalog record against its stored SHA-256 hash and declared byte size.",
     "Opened every PDF and verified its actual page count against the catalog.",
     "Read embedded text from every PDF page; OCR was applied to every page with fewer than 40 normalized embedded characters.",
@@ -17,10 +25,11 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1613,
-    "verifiedRecords": 1613,
-    "pdfRecords": 1455,
-    "pdfPages": 24806,
+    "catalogRecords": 1618,
+    "verifiedRecords": 1618,
+    "pdfRecords": 1460,
+    "pdfPages": 25457,
+    "boundedReviewPagesWithoutFullOcr": 651,
     "imageRecords": 13,
     "embeddedTextPages": 20776,
     "ocrPages": 3984,

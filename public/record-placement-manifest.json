@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1613,
+  "recordCount": 1618,
   "archiveCount": 13,
   "archives": [
     {
@@ -50,7 +50,7 @@
       "label": "Wexford landfill",
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
-      "count": 105
+      "count": 110
     },
     {
       "archiveId": "compliance",
@@ -17838,6 +17838,61 @@
       "url": "/wexford-docs/105-b03fe8433176.pdf",
       "sha256": "b03fe84331764fcb983d090470568354ec6eb80ac59dbe812d5fae10dae308f2",
       "size": 76165
+    },
+    {
+      "id": "106-99937cdc748b",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "Wexford Solid Waste Management Plan Amendment — State Approval April 19, 2011.pdf",
+      "url": "/wexford-docs/106-99937cdc748b.pdf",
+      "sha256": "99937cdc748bbc426b2dac9376cd4f3791471fcc59c44a531dbdbf12ca9d97cc",
+      "size": 2764397
+    },
+    {
+      "id": "107-099e4487d07d",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "Wexford Solid Waste Management Plan Amendment — State Approval May 1, 2012.pdf",
+      "url": "/wexford-docs/107-099e4487d07d.pdf",
+      "sha256": "099e4487d07d810272256786a076ccfa8f067c8dbd171cce835c788a16e22cde",
+      "size": 224158
+    },
+    {
+      "id": "108-797f5a3db89e",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "Lake County Solid Waste Plan Amendment — Wexford Disposal Authorization, 2016.pdf",
+      "url": "/wexford-docs/108-797f5a3db89e.pdf",
+      "sha256": "797f5a3db89ea139d0d45814f31bfd887d5edc60c38ae2ee7838eed24bf6bcb8",
+      "size": 5575060
+    },
+    {
+      "id": "109-5cc3c1841ff9",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "Missaukee Solid Waste Plan Compilation — Signed 1995 Wexford DPW Disposal Agreement.pdf",
+      "url": "/wexford-docs/109-5cc3c1841ff9.pdf",
+      "sha256": "5cc3c1841ff95287a75e9b1c91c70eb9e6719ec87cc3fac6091c3e8c362730b3",
+      "size": 6186125
+    },
+    {
+      "id": "110-fb263b3ea6c1",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "Wexford Solid Waste Management Plan Compilation — Including February 2007 CTI Facility Map.pdf",
+      "url": "/wexford-docs/110-fb263b3ea6c1.pdf",
+      "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+      "size": 10119631
     }
   ]
 }

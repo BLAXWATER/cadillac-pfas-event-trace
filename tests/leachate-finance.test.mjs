@@ -16,7 +16,7 @@ const source=await readFile(new URL('../app/page.tsx',import.meta.url),'utf8');
 
 test('20 financial originals reconcile to 14 additions and six existing canonical records',async()=>{
   assert.deepEqual([audit.stats.suppliedFiles,audit.stats.suppliedPages,audit.stats.recordsBefore,audit.stats.recordsAdded,audit.stats.recordsAfter],[20,3490,1599,14,1613]);
-  assert.equal(records.length,1613);
+  assert.equal(records.length,1618);
   assert.equal(audit.sources.filter(s=>s.relationship.startsWith('byte-identical')).length,3);
   assert.equal(audit.sources.filter(s=>s.relationship.startsWith('render-identical')).length,3);
   assert.equal(new Set(audit.sources.map(s=>s.recordId)).size,20);
@@ -90,7 +90,7 @@ test('built public page renders every new finding in the proper year band',async
   const response=await worker.fetch(new Request('http://localhost/',{headers:{accept:'text/html'}}),{ASSETS:{fetch:async()=>new Response('Not found',{status:404})}},{waitUntil(){},passThroughOnException(){}});
   assert.equal(response.status,200);
   const html=(await response.text()).replaceAll('<!-- -->','').replaceAll('&amp;','&').replaceAll('&#x27;',"'").replaceAll('&quot;','"');
-  assert.match(html,/Search all 1,613 records/);
+  assert.match(html,/Search all 1,618 records/);
   for(const event of finance.events)assert.ok(html.includes(event.title),event.title);
   assert.match(html,/\$2,996,632/);
   const year2019=html.match(/<section class="year-group" id="year-2019"[\s\S]*?<\/section>/)?.[0];

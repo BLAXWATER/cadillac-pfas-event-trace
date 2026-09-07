@@ -48,6 +48,7 @@ import referenceDocuments from "./reference-documents.json";
 import supplementalAudit from "./supplemental-audit.json";
 import supplementalDocuments from "./supplemental-documents.json";
 import leachateFinance from "./leachate-finance-findings.json";
+import solidWastePlans from "./solid-waste-plan-findings.json";
 import wexfordAudit from "./wexford-audit.json";
 import wexfordDocuments from "./wexford-documents.json";
 import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } from "./bundled-public-assets";
@@ -330,6 +331,18 @@ const formatBytes = (bytes: number) => {
 };
 
 const events: Event[] = [
+  ...solidWastePlans.events.map((event): Event => ({
+    ...event,
+    kind: event.kind as Kind,
+    sources: event.sources.map((source): Source => ({
+      ...archivedSource(source.name, source.url, source.pages, source.result, {
+        eventStamp: event.date,
+        basis: event.timeBasis,
+        note: event.significance,
+      }),
+      page: source.page,
+    })),
+  })),
   ...leachateFinance.events.map((event): Event => ({
     ...event,
     kind: event.kind as Kind,
@@ -3729,7 +3742,7 @@ export default function Home() {
             <p>This source set preserves the groundwater-discharge, landfill-gas, air-permit, compliance, county, leachate, stormwater and site-history record. Exact matches already indexed elsewhere are reused instead of republished, while substantive revisions remain available separately.</p>
           </div>
           <div className="reference-summary" aria-label="Wexford landfill archive audit summary">
-            <div><FileText /><span><strong>{wexfordAudit.stats.recordsAddedThisPass}</strong> added in this pass</span></div>
+            <div><FileText /><span><strong>{solidWastePlans.events.length}</strong> latest dated findings · 5 new originals</span></div>
             <div><CheckCircle2 /><span><strong>{wexfordAudit.stats.exactExistingRecordsReused}</strong> exact record(s) reused as cross reference(s)</span></div>
             <div><FileSearch /><span><strong>{formatBytes(wexfordAudit.stats.publishedBytes)}</strong> preserved</span></div>
           </div>

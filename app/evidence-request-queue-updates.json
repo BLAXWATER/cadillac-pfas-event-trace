@@ -1,13 +1,88 @@
 {
   "reviewDate": "2026-09-07",
   "reviewDateLabel": "September 7, 2026",
-  "scope": "September 7 cross-reference and completion review of all 23 defined requirements across five blocks, using existing reviewed sources and focused checks of the 2019 cessation sequence, financial reconciliation, separate PFAS media and Plett sampling records. This is not a fresh reread of the whole repository.",
+  "scope": "September 7 cross-reference and completion review of all 23 defined requirements across five blocks, plus five reviewed solid-waste-plan originals. Added signed intercounty-agreement, planning-authorization and facility-map tie-backs. Existing cessation, financial, PFAS-media and Plett findings remain; this is not a fresh reread of the whole repository.",
   "note": "All five blocks have source-linked tie-backs and specific follow-ups. One local construction/lithology requirement was already satisfied; no additional request closes in this review. Missing tickets, missing documents doesn’t mean missing events. Supporting notes and alternate filenames do not increase the searchable record count.",
   "blocks": [
     {
       "requestId": "receiving-history",
       "summary": "Actual leachate offloading and the landfill–WWTP relationship are documented. Seven requests remain for individual transactions, signed agreements and the exact cessation date.",
       "held": [
+        {
+          "id": "solid-waste-agreement-held",
+          "finding": "The signed September 19, 1995 Missaukee–Wexford DPW solid-waste disposal agreement requires authorized commercial-hauler lists and provides for tipping fees on delivery, with fees separately set by resolution.",
+          "limitation": "This agreement concerns solid waste into Wexford landfill, not the 2009 Wexford–Cadillac leachate-treatment agreement. No numerical rate schedule, actual payments, individual loads or signed later renewals are supplied.",
+          "sources": [
+            {
+              "recordId": "109-5cc3c1841ff9",
+              "sha256": "5cc3c1841ff95287a75e9b1c91c70eb9e6719ec87cc3fac6091c3e8c362730b3",
+              "label": "Signed agreement · pp136–143",
+              "pages": [
+                136,
+                140,
+                141,
+                143
+              ]
+            }
+          ],
+          "requirementIds": [
+            "wexford-leachate-load-tickets",
+            "wexford-leachate-invoices",
+            "executed-2009-leachate-agreement",
+            "leachate-agreement-renewals"
+          ]
+        },
+        {
+          "id": "solid-waste-authorizations-held",
+          "finding": "Wexford’s April 19, 2011 approval and May 1, 2012 amendment document changing import/export conditions. American Waste’s May 14, 2014 Lake County request is followed by DEQ approval August 31, 2016.",
+          "limitation": "These concern solid waste authorized into the landfill, not actual leachate deliveries from it to Cadillac WWTP. Planning authorization is not a receiving log, invoice, fee payment or evidence of a final leachate delivery.",
+          "sources": [
+            {
+              "recordId": "106-99937cdc748b",
+              "sha256": "99937cdc748bbc426b2dac9376cd4f3791471fcc59c44a531dbdbf12ca9d97cc",
+              "label": "2011 approval and tables · pp1–4, 14–16",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                14,
+                15,
+                16
+              ]
+            },
+            {
+              "recordId": "107-099e4487d07d",
+              "sha256": "099e4487d07d810272256786a076ccfa8f067c8dbd171cce835c788a16e22cde",
+              "label": "2012 approval and changes · pp1–2, 4, 7–8",
+              "pages": [
+                1,
+                2,
+                4,
+                7,
+                8
+              ]
+            },
+            {
+              "recordId": "108-797f5a3db89e",
+              "sha256": "797f5a3db89ea139d0d45814f31bfd887d5edc60c38ae2ee7838eed24bf6bcb8",
+              "label": "Lake request and approval · pp1, 4, 95–96",
+              "pages": [
+                1,
+                4,
+                95,
+                96
+              ]
+            }
+          ],
+          "requirementIds": [
+            "wexford-leachate-load-tickets",
+            "cadillac-wexford-receiving-logs",
+            "wexford-leachate-invoices",
+            "cadillac-leachate-receivables",
+            "final-leachate-delivery-record"
+          ]
+        },
         {
           "id": "actual-offloading",
           "finding": "January 12, 2016: the City letter documents actual American Waste leachate offloading and a spill at Cadillac WWTP. Missing tickets do not negate this documented activity.",
@@ -69,7 +144,7 @@
         {
           "id": "agreement-approval",
           "finding": "September 8, 2009: motion 2009.216 approves the leachate-treatment arrangement for July 1, 2009–June 30, 2011 and identifies Miscellaneous File No. 842.",
-          "limitation": "Approval minutes are held; the fully executed agreement, signed numerical rate schedule and later signed renewals are still needed.",
+          "limitation": "Approval minutes are held; the fully executed agreement, signed numerical rate schedule and later signed renewals are still needed. Item_149.pdf is the same approval-minutes original. The separately supplied filename 842.pdf contains January 19, 2016 Council minutes, not Miscellaneous File No. 842.",
           "sources": [
             {
               "recordId": "008-5b67e1ed1d5c",
@@ -396,7 +471,7 @@
           ]
         }
       ],
-      "followUp": "Seek the 2009–July 2019 generator, hauler and Cadillac receiving records, and reconcile surviving delivery rows to City receivables and landfill billing. Use Miscellaneous File No. 842 to locate the signed 2009 agreement/rate schedule and later renewals. Seek the last receiving entry or dated operational cessation notice to resolve the March–June–December 2019 sequence; do not infer an exact last load from it."
+      "followUp": "Seek the 2009–July 2019 generator, hauler and Cadillac receiving records, and reconcile surviving delivery rows to City receivables and landfill billing. Use Miscellaneous File No. 842 to locate the signed 2009 agreement/rate schedule and later renewals. Seek the last receiving entry or dated operational cessation notice to resolve the March–June–December 2019 sequence; do not infer an exact last load from it. Separately, pursue Missaukee hauler rosters supplied to Wexford DPW under the 1995 agreement §2.3, related tipping-fee resolutions/payment records under §§4.1–4.2 and executed renewals. Keep these upstream landfill records separate from Cadillac leachate transactions."
     },
     {
       "requestId": "wwtp-treatment-discharge",
@@ -567,6 +642,36 @@
       "requestId": "subsurface-pathway",
       "summary": "Already satisfied: local well-construction and lithology records. The remaining four requests concern the specific Plett well and measured local groundwater conditions; regional or delivery context does not complete them.",
       "held": [
+        {
+          "id": "landfill-maps-held",
+          "finding": "The February 2007 CTI facility map locates boundaries and landfill cells. The separate November 5, 2013 Golder map depicts wells and leachate infrastructure, including a 20,000-gallon backup tank.",
+          "limitation": "Repeated CTI pages are the same map. Neither figure supplies surveyed synoptic water levels, local hydraulic-test results or a source-to-Plett groundwater-flow map; infrastructure depiction is not actual flow or delivery proof.",
+          "sources": [
+            {
+              "recordId": "110-fb263b3ea6c1",
+              "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+              "label": "CTI map, repeated · pp28, 83",
+              "pages": [
+                28,
+                83
+              ]
+            },
+            {
+              "recordId": "108-797f5a3db89e",
+              "sha256": "797f5a3db89ea139d0d45814f31bfd887d5edc60c38ae2ee7838eed24bf6bcb8",
+              "label": "Golder map · pp30, 98",
+              "pages": [
+                30,
+                98
+              ]
+            }
+          ],
+          "requirementIds": [
+            "surveyed-elevations-water-levels",
+            "local-hydraulic-tests",
+            "site-specific-groundwater-map"
+          ]
+        },
         {
           "id": "wellogic-held",
           "finding": "The official Wexford Wellogic package supplies local construction and lithology data; the existing review identified 45 wells with linked lithology within 1,000 meters of the geocoded 1121 Plett point.",

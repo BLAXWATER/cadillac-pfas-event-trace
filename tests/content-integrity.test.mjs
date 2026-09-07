@@ -1415,7 +1415,7 @@ test("batch 21 reconciles laboratory reports and retains both 2015 interview rec
   assert.match(audit.resolution, /no source PDF was modified/i);
 });
 
-test("batch 22 reconciles six Cadillac core sources and keeps their previews and downloads local", async () => {
+test("batch 22 retains six reconciled originals, local previews and verified direct downloads", async () => {
   const audit = JSON.parse(await readFile(path.join(appDirectory, "batch22-core-source-reconciliation-audit.json"), "utf8"));
   const catalogRows = (await loadCatalogs()).flatMap((catalog) => catalog.rows);
   const previewManifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
@@ -1449,6 +1449,7 @@ test("batch 22 reconciles six Cadillac core sources and keeps their previews and
     })),
   ];
 
+  const deliveryPlan = await loadDownloadDeliveryPlan();
   for (const matched of reconciled) {
     const record = catalogRows.find((row) => row.id === matched.recordId);
     assert.ok(record, matched.recordId);
@@ -1459,7 +1460,13 @@ test("batch 22 reconciles six Cadillac core sources and keeps their previews and
     const source = await readFile(path.join(publicDirectory, matched.asset.replace(/^\//, "")));
     assert.equal(createHash("sha256").update(source).digest("hex"), matched.sha256);
     assert.ok(previewManifest[matched.asset], `Missing preview for ${matched.asset}`);
-    assert.match(bundledSource, new RegExp(matched.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    if (matched.recordId === "010-1aba682de0b8") {
+      const delivery = deliveryPlan.find((entry) => entry.row.id === matched.recordId);
+      assert.equal(delivery.kind, "archive");
+      assert.equal(delivery.source.rawUrl, "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/010-1aba682de0b8.pdf");
+    } else {
+      assert.match(bundledSource, new RegExp(matched.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    }
   }
 
   assert.match(audit.alternateSourceExports[0].classification, /same official 62-page meeting packet source/i);

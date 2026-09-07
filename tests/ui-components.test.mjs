@@ -167,6 +167,8 @@ test("uses independent media handlers for document and image formats", async () 
 test("opens document records in the reader and exposes a dedicated download action", async () => {
   const page = await readFile(path.join(root, "app", "page.tsx"), "utf8");
   const bundledAssets = await readFile(path.join(root, "app", "bundled-public-assets.ts"), "utf8");
+  const { sourceDownloadUrl } = await vite.ssrLoadModule("/app/source-media.ts");
+  const { withPdfStartPage } = await vite.ssrLoadModule("/app/pdf-source-url.ts");
 
   assert.match(page, /className="source-button"[^>]*onClick=\{\(\) => linked && open\(source\)\}/);
   assert.match(page, /function DocumentPopoutButton/);
@@ -176,7 +178,10 @@ test("opens document records in the reader and exposes a dedicated download acti
   assert.match(page, /download=\{selected\.name\}/);
   assert.match(bundledAssets, /import\.meta\.glob\("\.\.\/public\/first-page-previews\/\*\*\/\*\.webp"/);
   assert.match(bundledAssets, /export function bundledFirstPagePreview/);
-  assert.match(bundledAssets, /ipp-docs\/007-9aecbfcf4abc\.pdf/);
+  assert.equal(
+    sourceDownloadUrl("/ipp-docs/007-9aecbfcf4abc.pdf", "PDF", (url) => withPdfStartPage(url, 1)),
+    "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/c8cbace229e1c034abf26a5774e3cd85bc786de0/public/ipp-docs/007-9aecbfcf4abc.pdf",
+  );
   assert.match(bundledAssets, /ipp-docs\/125-9e67bc822d9c\.pdf/);
   assert.match(bundledAssets, /ipp-docs\/140-3db93feeaf81\.pdf/);
   assert.match(bundledAssets, /ipp-docs\/151-774fbfdfab32\.pdf/);

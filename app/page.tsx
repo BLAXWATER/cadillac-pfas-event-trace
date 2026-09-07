@@ -238,6 +238,10 @@ const evidenceRequirementMet = (requirement: EvidenceRequirement, record: Librar
 
 const evidenceRequests = evidenceRequestDefinitions.map((request) => ({
   ...request,
+  satisfied: request.requirements.flatMap((requirement) => {
+    const document = librarySearchRecords.find((record) => evidenceRequirementMet(requirement, record));
+    return document ? [{ ...requirement, document }] : [];
+  }),
   remaining: request.requirements.filter((requirement) =>
     !librarySearchRecords.some((record) => evidenceRequirementMet(requirement, record)),
   ),
@@ -256,6 +260,7 @@ const queueUpdatesByRequest = new Map(evidenceQueueUpdates.blocks.map((update) =
 }]));
 const remainingEvidenceRequirements = evidenceRequests.reduce((total, request) => total + request.remaining.length, 0);
 const satisfiedEvidenceRequirements = evidenceRequestDefinitions.reduce((total, request) => total + request.requirements.length, 0) - remainingEvidenceRequirements;
+const completedEvidenceBlocks = evidenceRequestDefinitions.length - evidenceRequests.length;
 
 const repositoryAssetUrl = (path: string) =>
   `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/be4c2d5dadbb16835a539e8509ac065d560bb055/public/${path.replace(/^\//, "")}`;
@@ -1581,22 +1586,22 @@ const events: Event[] = [
   },
   {
     year: "2025",
-    date: "2025-03-04",
-    isoDate: "2025-03-04",
-    time: noTime,
-    timeBasis: "Collection date carried in source filename/result",
+    date: "2025-03-07",
+    isoDate: "2025-03-07",
+    time: "09:30 · timezone unspecified",
+    timeBasis: "Sampling Date printed in the report; original filename differs",
     phase: "Receptor discovery",
     kind: "receptor",
     category: "13 · Groundwater & wells",
     title: "PFAS detected at 1140 Plett Road",
     finding: "The owner-commissioned Cyclopure result documents a multi-compound pattern in warehouse well water, including PFOA, PFOS, PFHxS and PFBS.",
     significance: "Creates the receptor-side result for comparison with source and pathway records.",
-    sources: [pdf("TEST #1 - 3-4-2025 CYCLOPURE - SELF TESTING.pdf", "2025-03-cyclopure-property", 3, "Original Cyclopure property-water result from March 4, 2025.", {
-      eventStamp: "2025-03-04 · time not stated",
-      basis: "Collection date carried in source filename/result",
+    sources: [pdf("TEST #1 - 3-4-2025 CYCLOPURE - SELF TESTING.pdf", "2025-03-cyclopure-property", 3, "Cyclopure kit WTK_PFAS_16874: Sampling Date March 7, 2025 at 09:30 as printed; report dated March 19. Original filename retained despite its March 4 date.", {
+      eventStamp: "2025-03-07 · 09:30 · timezone unspecified",
+      basis: "Printed Sampling Date, corroborated by the comparability source packet",
       created: "2025-11-08 08:32:41 CST",
       modified: "2025-11-08 08:32:41 CST",
-      note: "The embedded timestamp reflects a later scan and is not the sampling time.",
+      note: "The embedded timestamp reflects a later scan and is not the sampling time. The original filename says March 4; the report prints March 7, 09:30, with no timezone.",
     })],
   },
   {
@@ -3990,8 +3995,9 @@ export default function Home() {
             <p>Requirements remain open until a source review confirms that the exact record satisfies them. Missing paperwork does not establish that deliveries or other events did not occur; this list tracks documentation still needed.</p>
           </div>
           <div className="queue-review" aria-label="Latest evidence queue review">
-            <p><strong>Updated <time dateTime={evidenceQueueUpdates.reviewDate}>{evidenceQueueUpdates.reviewDateLabel}</time></strong> · {remainingEvidenceRequirements} requests still needed across {evidenceRequests.length} blocks · {satisfiedEvidenceRequirements} previously satisfied</p>
+            <p><strong>Updated <time dateTime={evidenceQueueUpdates.reviewDate}>{evidenceQueueUpdates.reviewDateLabel}</time></strong> · {remainingEvidenceRequirements} requests still needed across {evidenceRequests.length} blocks · {satisfiedEvidenceRequirements} previously satisfied · {completedEvidenceBlocks} fully completed blocks</p>
             <p>{evidenceQueueUpdates.note}</p>
+            <p className="queue-scope">{evidenceQueueUpdates.scope}</p>
           </div>
           {evidenceRequests.length > 0 ? (
             <div className="request-grid">
@@ -4010,12 +4016,21 @@ export default function Home() {
                       <ul>{update.held.map((item) => <li key={item.id}>
                         <p>{item.finding}</p>
                         <p className="request-limitation"><strong>Still unresolved:</strong> {item.limitation}</p>
+                        <p className="request-tiebacks">Related requests: {item.requirementIds.map((id, index) => {
+                          const requirement = request.requirements.find((candidate) => candidate.id === id);
+                          return requirement && <span key={id}>{index > 0 ? ", " : ""}<a href={`#requirement-${id}`} aria-label={requirement.label}>{request.requirements.indexOf(requirement) + 1}</a></span>;
+                        })}</p>
                         <div className="request-source-links">{item.sources.map((source) => source.document && <DocumentPopoutButton key={`${item.id}-${source.recordId}`} document={source.document} label={source.label} open={setSelected} />)}</div>
                       </li>)}</ul>
                     </details>
                   </div>}
                   <dl>
-                    <div><dt>Still needed</dt><dd><ul className="request-items">{request.remaining.map((requirement) => <li key={requirement.id}>{requirement.label}</li>)}</ul></dd></div>
+                    {request.satisfied.length > 0 && <div className="request-satisfied"><dt>Already satisfied</dt><dd><ul className="request-items">{request.satisfied.map((requirement) => <li key={requirement.id} id={`requirement-${requirement.id}`}>
+                      <p><strong>{request.requirements.findIndex((item) => item.id === requirement.id) + 1}.</strong> {requirement.label}</p>
+                      <DocumentPopoutButton document={requirement.document} label="Review completion evidence" open={setSelected} />
+                    </li>)}</ul></dd></div>}
+                    <div><dt>Still needed</dt><dd><ul className="request-items">{request.remaining.map((requirement) => <li key={requirement.id} id={`requirement-${requirement.id}`}><strong>{request.requirements.indexOf(requirement) + 1}.</strong> {requirement.label}</li>)}</ul></dd></div>
+                    {update && <div className="request-followup"><dt>Next follow-up</dt><dd>{update.followUp}</dd></div>}
                     <div><dt>Completes</dt><dd>{request.completes}</dd></div>
                     <div><dt>Preferred evidence</dt><dd>{request.provide}</dd></div>
                   </dl>

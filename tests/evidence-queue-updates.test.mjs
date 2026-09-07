@@ -15,7 +15,7 @@ const note = id => allNotes.find(item => item.id === id);
 test('queue update covers all five blocks with exact canonical sources and valid PDF pages', () => {
   assert.deepEqual(updates.blocks.map(block => block.requestId).sort(), definitions.map(block => block.id).sort());
   assert.equal(new Set(allNotes.map(item => item.id)).size, allNotes.length);
-  assert.equal(allNotes.length, 15);
+  assert.equal(allNotes.length, 18);
   const ids = new Set();
   for (const item of allNotes) {
     assert.ok(item.finding.trim() && item.limitation.trim());
@@ -28,7 +28,48 @@ test('queue update covers all five blocks with exact canonical sources and valid
       ids.add(source.recordId);
     }
   }
-  assert.equal(ids.size, 35);
+  assert.equal(ids.size, 45);
+});
+
+test('every note ties to defined requests, and every requirement has a tie-back and a block follow-up', () => {
+  for (const block of updates.blocks) {
+    const definition = definitions.find(d => d.id === block.requestId);
+    const linked = new Set();
+    assert.ok(block.followUp.trim());
+    for (const item of block.held) {
+      assert.ok(item.requirementIds.length, item.id);
+      assert.equal(new Set(item.requirementIds).size, item.requirementIds.length);
+      for (const id of item.requirementIds) {
+        assert.ok(definition.requirements.some(r => r.id === id), `${item.id}: ${id}`);
+        linked.add(id);
+      }
+    }
+    assert.deepEqual([...linked].sort(), definition.requirements.map(r => r.id).sort());
+  }
+  assert.equal(audit.lastRecheck.fullyCompletedBlocks, 0);
+});
+
+test('source boundaries preserve the 2009 period, cessation sequence, separate PFAS media and corrected Plett date', async () => {
+  assert.doesNotMatch(note('receiving-relationship').limitation, /predates/);
+  assert.doesNotMatch(note('landfill-2010-context').limitation, /before the 2012/);
+  assert.match(note('reported-cessation').finding, /March 18, 2019/);
+  assert.match(note('reported-cessation').finding, /December 18/);
+  assert.equal(note('reported-cessation').sources.length, 3);
+  assert.match(note('leachate-pfas-held').limitation, /not mixed main-WWTP influent/);
+  assert.match(note('digester-pfas-held').limitation, /Water\/ng\/L/);
+  assert.match(note('digester-pfas-held').limitation, /estimated values and matrix-interference/);
+  assert.match(note('effluent-series-held').limitation, /not a paired treatment study/);
+  const march = definitions.flatMap(d => d.requirements).find(r => r.id === 'plett-coc-2025-03-07');
+  assert.match(march.label, /March 7, 2025/);
+  assert.match(march.label, /WTK_PFAS_16874/);
+  assert.match(march.label, /timezone unspecified/);
+  assert.ok(!definitions.flatMap(d => d.requirements).some(r => r.id === 'plett-coc-2025-03-04'));
+  assert.match(page, /date: "2025-03-07"/);
+  assert.match(page, /Original filename retained despite its March 4 date/);
+  assert.match(note('plett-packet-held').limitation, /subtracting 24 from 49 does not establish/);
+  assert.doesNotMatch(JSON.stringify(audit), /lacks chain-of-custody forms and 25 pages/);
+  const oldAudit = await readJson('batch33-egle-aoi-multi-agency-audit');
+  assert.doesNotMatch(JSON.stringify(oldAudit), /only 24 of 49 work-order pages/);
 });
 
 test('held context cannot silently close any requirement or inflate the catalog count', () => {
@@ -88,14 +129,23 @@ test('production queue renders current counts, all context notes and every outst
   const plain = queue.replaceAll('<!-- -->', '').replaceAll('&amp;', '&').replaceAll('&#x27;', "'").replaceAll('&quot;', '"');
   assert.ok(plain.includes('22 requests still needed across 5 blocks'));
   assert.ok(plain.includes('1 previously satisfied'));
+  assert.ok(plain.includes('0 fully completed blocks'));
+  assert.ok(plain.includes('Already satisfied'));
+  assert.ok(plain.includes('Review completion evidence'));
+  assert.ok(plain.includes(updates.scope));
   assert.ok(plain.includes(updates.reviewDateLabel));
   for (const block of updates.blocks) {
     assert.ok(plain.includes(`id="request-${block.requestId}"`));
     assert.ok(plain.includes(block.summary));
+    assert.ok(plain.includes(block.followUp));
     for (const item of block.held) {
       assert.ok(plain.includes(item.finding), item.id);
       assert.ok(plain.includes(item.limitation), item.id);
       for (const ref of item.sources) assert.ok(plain.includes(ref.label), ref.recordId);
+      for (const id of item.requirementIds) {
+        assert.ok(plain.includes(`href="#requirement-${id}"`), id);
+        assert.equal((plain.match(new RegExp(`id="requirement-${id}"`, 'g')) ?? []).length, 1, `${id}: one target`);
+      }
     }
   }
   for (const req of definitions.flatMap(d => d.requirements).filter(r => !r.verifiedEvidence?.length)) assert.ok(plain.includes(req.label), req.id);

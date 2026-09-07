@@ -78,7 +78,9 @@ test('source limitations survive publication and do not close transaction reques
   assert.deepEqual(finance.compliance.map(r=>[r.fiscalYear,r.count]),[[2014,8],[2015,38],[2016,6],[2017,7],[2018,5],[2019,12]]);
   assert.doesNotMatch(source,/Audited report documents FY201[678] landfill-leachate revenue variance/);
   const queue=await json('../app/evidence-request-queue-updates.json');
-  assert.ok(queue.blocks[0].held.some(n=>n.id==='financial-actuals-2011-2019'&&n.sources.length===9));
+  const financialNote=queue.blocks[0].held.find(n=>n.id==='financial-actuals-2011-2019');
+  assert.equal(financialNote.sources.length,14);
+  for (const id of ['170-641352fc860b','192-fa26ae6e44ab','193-c1fd49ce87b7','013-f756ecea1687','180-eb9d0123f72e']) assert.ok(financialNote.sources.some(s=>s.recordId===id));
   const requirements=(await json('../app/evidence-request-queue.json')).flatMap(q=>q.requirements);
   assert.equal(requirements.filter(r=>!r.verifiedEvidence?.length).length,22);
 });

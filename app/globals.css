@@ -313,6 +313,15 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .request-held li { padding-block: 14px; border-top: 1px solid var(--border); }
 .request-held p + p { margin-top: 8px; }
 .request-limitation { color: var(--brand-gray); }
+.request-tiebacks { color: var(--brand-gray); font-size: .875rem; }
+.request-tiebacks a { display: inline-block; min-width: 28px; padding: 4px 6px; color: var(--brand-cyan); text-align: center; text-decoration: underline; text-underline-offset: 3px; }
+.request-tiebacks a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.request-items li { scroll-margin-top: 100px; }
+.request-items li:target { outline: 2px solid var(--primary); outline-offset: 5px; }
+.request-items li p { margin: 0 0 8px; }
+.request-card .request-satisfied dt { color: var(--brand-cyan); }
+.request-satisfied button { max-width: 100%; height: auto; min-height: 36px; white-space: normal; }
+.queue-scope { font-size: .875rem; }
 .request-source-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; min-width: 0; }
 .request-source-links button { max-width: 100%; height: auto; min-height: 36px; white-space: normal; text-align: left; overflow-wrap: anywhere; font-size: .875rem; }
 .request-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }

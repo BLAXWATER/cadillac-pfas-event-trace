@@ -131,9 +131,9 @@
         "minPages": 49
       },
       {
-        "id": "plett-coc-2025-03-04",
-        "label": "Chain-of-custody or field sheet with the exact sample metadata for the March 4, 2025 Plett Road sample.",
-        "termGroups": [["plett", "1140"], ["chain of custody", "coc", "field sheet"], ["2025 03 04", "march 4 2025"]]
+        "id": "plett-coc-2025-03-07",
+        "label": "Chain-of-custody or field sheet for the March 7, 2025 Plett Road sample, kit WTK_PFAS_16874 (09:30 printed; timezone unspecified). The original filename says March 4.",
+        "termGroups": [["plett", "1140"], ["chain of custody", "coc", "field sheet"], ["2025 03 07", "march 7 2025", "WTK_PFAS_16874"]]
       },
       {
         "id": "plett-coc-2025-09-10",

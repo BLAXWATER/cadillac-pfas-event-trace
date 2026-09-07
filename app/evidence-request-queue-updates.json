@@ -1,8 +1,8 @@
 {
-  "reviewDate": "2026-09-06",
-  "reviewDateLabel": "September 6, 2026",
-  "scope": "September 6 review of 20 financial/policy originals, with canonical-copy reconciliation and source-linked year findings. Earlier queue dispositions are retained; this is not a fresh reread of the whole repository.",
-  "note": "Historical Actual leachate revenue now spans FY2011–FY2019. Financial corroboration does not close delivery-level, signed-agreement or exact-cessation requests. Alternate filenames do not inflate the record count.",
+  "reviewDate": "2026-09-07",
+  "reviewDateLabel": "September 7, 2026",
+  "scope": "September 7 cross-reference and completion review of all 23 defined requirements across five blocks, using existing reviewed sources and focused checks of the 2019 cessation sequence, financial reconciliation, separate PFAS media and Plett sampling records. This is not a fresh reread of the whole repository.",
+  "note": "All five blocks have source-linked tie-backs and specific follow-ups. One local construction/lithology requirement was already satisfied; no additional request closes in this review. Missing tickets, missing documents doesn’t mean missing events. Supporting notes and alternate filenames do not increase the searchable record count.",
   "blocks": [
     {
       "requestId": "receiving-history",
@@ -21,12 +21,16 @@
                 1
               ]
             }
+          ],
+          "requirementIds": [
+            "wexford-leachate-load-tickets",
+            "cadillac-wexford-receiving-logs"
           ]
         },
         {
           "id": "receiving-relationship",
           "finding": "A February 3, 2011 inspection entry describes County Landfill leachate received at the equalization tank. The SIU profile reports Wexford County Landfill wastewater averaging 33,000 gallons per day, intermittently. November 2017 City minutes describe landfill liquid hauled to the WWTP and payment for treatment.",
-          "limitation": "The 2011 observation predates the 2012–2019 search period. The SIU page has no printed date (2017 comes from file metadata); its average is not an individual delivery quantity. These are not per-load logs or receipts.",
+          "limitation": "The 2011 observation falls within the requested 2009–July 2019 period but does not provide a continuous receiving series. The SIU page has no printed date (2017 comes from file metadata); its average is not an individual delivery quantity. These are not per-load logs or receipts.",
           "sources": [
             {
               "recordId": "059-72e0d17a78ae",
@@ -54,6 +58,12 @@
                 8
               ]
             }
+          ],
+          "requirementIds": [
+            "wexford-leachate-load-tickets",
+            "cadillac-wexford-receiving-logs",
+            "wexford-leachate-invoices",
+            "cadillac-leachate-receivables"
           ]
         },
         {
@@ -69,13 +79,25 @@
                 2
               ]
             }
+          ],
+          "requirementIds": [
+            "executed-2009-leachate-agreement",
+            "leachate-agreement-renewals"
           ]
         },
         {
           "id": "reported-cessation",
-          "finding": "June 28, 2019: Cadillac reports that Wexford County Landfill moved to deep-well injection and told the City it would no longer bring leachate.",
+          "finding": "March 18, 2019: the City expected leachate revenue to end when the injection well went online. June 28: Cadillac reports the landfill moved to deep-well injection and told the City it would no longer bring leachate. December 18: the IPP report states “No longer accepting leachate” and reports deep-well injection.",
           "limitation": "This is affirmative City-reported transition/cessation context, not the exact effective cessation date or final receiving-log entry.",
           "sources": [
+            {
+              "recordId": "152-4335077ddaf4",
+              "sha256": "4335077ddaf4c19d138cd8e6648d1f0253b052ab69e7e672aa9685d879917133",
+              "label": "Expected transition · March 18, p3",
+              "pages": [
+                3
+              ]
+            },
             {
               "recordId": "form-submission-034-00d98416b456",
               "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
@@ -84,7 +106,18 @@
                 1,
                 2
               ]
+            },
+            {
+              "recordId": "form-submission-036-1873afe1dd72",
+              "sha256": "1873afe1dd72faba2066ef0163012c2feb727ca7dbd92726fd0f45c8935e6697",
+              "label": "Cessation reported · December 18, p2",
+              "pages": [
+                2
+              ]
             }
+          ],
+          "requirementIds": [
+            "final-leachate-delivery-record"
           ]
         },
         {
@@ -112,6 +145,12 @@
                 7
               ]
             }
+          ],
+          "requirementIds": [
+            "wexford-leachate-load-tickets",
+            "cadillac-wexford-receiving-logs",
+            "wexford-leachate-invoices",
+            "cadillac-leachate-receivables"
           ]
         },
         {
@@ -170,6 +209,11 @@
                 2
               ]
             }
+          ],
+          "requirementIds": [
+            "executed-2009-leachate-agreement",
+            "leachate-agreement-renewals",
+            "final-leachate-delivery-record"
           ]
         },
         {
@@ -190,12 +234,16 @@
                 15
               ]
             }
+          ],
+          "requirementIds": [
+            "wexford-leachate-invoices",
+            "cadillac-leachate-receivables"
           ]
         },
         {
           "id": "landfill-2010-context",
           "finding": "October 18 and November 1, 2010: City minutes record American Waste landfill-sale discussions and Council approval of the 2009 Solid Waste Management Plan amendment by 3–2. November’s minutes correct the earlier discussion to future flow-control options and describe anticipated closure/post-closure obligations and required relocation of trash from an unlined cell.",
-          "limitation": "These are solid-waste governance records from before the 2012–2019 delivery search period, not wastewater-flow logs, proof of a completed sale or relocation, leachate receipts, or the executed treatment agreement.",
+          "limitation": "These are solid-waste governance records within the requested 2009–July 2019 period, not wastewater-flow logs, proof of a completed sale or relocation, leachate receipts, or the executed treatment agreement.",
           "sources": [
             {
               "recordId": "177-b1426df447ba",
@@ -218,6 +266,10 @@
                 5
               ]
             }
+          ],
+          "requirementIds": [
+            "executed-2009-leachate-agreement",
+            "leachate-agreement-renewals"
           ]
         },
         {
@@ -296,14 +348,59 @@
               "pages": [
                 107
               ]
+            },
+            {
+              "recordId": "170-641352fc860b",
+              "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb",
+              "label": "FY2018 management variance · PDF p25",
+              "pages": [
+                25
+              ]
+            },
+            {
+              "recordId": "192-fa26ae6e44ab",
+              "sha256": "fa26ae6e44ab24568073660bc4ea3fe75254c0118dc1881a86448c078a38437e",
+              "label": "FY2018 amended budget · p6",
+              "pages": [
+                6
+              ]
+            },
+            {
+              "recordId": "193-c1fd49ce87b7",
+              "sha256": "c1fd49ce87b7d391e60a850266f0b98ef4397dace2d08b525dea5b657eb51edf",
+              "label": "FY2018 amendment adoption · p9",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "recordId": "013-f756ecea1687",
+              "sha256": "f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241",
+              "label": "FY2019 management variance · PDF p25",
+              "pages": [
+                25
+              ]
+            },
+            {
+              "recordId": "180-eb9d0123f72e",
+              "sha256": "eb9d0123f72ea934a6f72502189a562d4ae78c477d24a743cebe29dff8a77d3c",
+              "label": "FY2019 exhibit, execution unresolved · p5",
+              "pages": [
+                5
+              ]
             }
+          ],
+          "requirementIds": [
+            "wexford-leachate-invoices",
+            "cadillac-leachate-receivables"
           ]
         }
-      ]
+      ],
+      "followUp": "Seek the 2009–July 2019 generator, hauler and Cadillac receiving records, and reconcile surviving delivery rows to City receivables and landfill billing. Use Miscellaneous File No. 842 to locate the signed 2009 agreement/rate schedule and later renewals. Seek the last receiving entry or dated operational cessation notice to resolve the March–June–December 2019 sequence; do not infer an exact last load from it."
     },
     {
       "requestId": "wwtp-treatment-discharge",
-      "summary": "Treatment-equipment purchasing and a 2016 installation are corroborated. These records do not replace the missing main-WWTP influent, paired-media PFAS samples or matching operating logs.",
+      "summary": "Verified records establish PFAS in leachate, WWTP effluent and a separate digester/sludge sampling round, alongside equipment purchasing and installation. All three requests remain for matched main-WWTP influent, effluent and biosolids samples with corresponding operating logs.",
       "held": [
         {
           "id": "equipment-chain",
@@ -336,6 +433,10 @@
                 3
               ]
             }
+          ],
+          "requirementIds": [
+            "paired-wwtp-pfas-media",
+            "paired-round-operating-logs"
           ]
         },
         {
@@ -369,12 +470,15 @@
                 4
               ]
             }
+          ],
+          "requirementIds": [
+            "paired-round-operating-logs"
           ]
         },
         {
           "id": "influent-still-unmeasured",
-          "finding": "The June 2019 source-status form reports outfall PFOS and PFOA results but explicitly marks influent sampling “NO”. Effluent and biosolids packages already held remain useful independent records.",
-          "limitation": "The form’s source-status selection does not mean zero effluent PFOS or demonstrate treatment-removal efficiency. LDFA influent is not main-WWTP influent.",
+          "finding": "The June 2019 source-status form reports outfall PFOS and PFOA results but explicitly marks influent sampling “NO” for that reporting period. This is a specific reporting-period statement, not proof that influent was never sampled.",
+          "limitation": "The form’s source-status selection does not mean zero effluent PFOS or demonstrate treatment-removal efficiency. LDFA influent is not main-WWTP influent. Sample timestamps and the single 2 MGD value are not time-of-day operator and flow logs.",
           "sources": [
             {
               "recordId": "form-submission-034-00d98416b456",
@@ -385,13 +489,83 @@
                 2
               ]
             }
+          ],
+          "requirementIds": [
+            "cadillac-main-wwtp-influent-pfas",
+            "paired-wwtp-pfas-media",
+            "paired-round-operating-logs"
+          ]
+        },
+        {
+          "id": "leachate-pfas-held",
+          "finding": "October 3, 2018 leachate sampling reports primary PFOS 120 and PFOA 590 ng/L, with duplicate results of 140 and 700 ng/L. The source report preserves separate sample identities and laboratory context.",
+          "limitation": "Leachate-source chemistry is not mixed main-WWTP influent. These samples are not synchronized with the later effluent or digester round; they cannot establish a treatment-removal percentage.",
+          "sources": [
+            {
+              "recordId": "lab-041-b6acc1cf09fd",
+              "sha256": "b6acc1cf09fd453c965e2b6e12dbd0ff444f6dc9fe95816a30f510163054e4b3",
+              "label": "Leachate primary/duplicate · pp3–5, 7",
+              "pages": [
+                3,
+                4,
+                5,
+                7
+              ]
+            }
+          ],
+          "requirementIds": [
+            "cadillac-main-wwtp-influent-pfas",
+            "paired-wwtp-pfas-media"
+          ]
+        },
+        {
+          "id": "digester-pfas-held",
+          "finding": "The laboratory tables and chain of custody document Digester #4 primary/duplicate sampling on December 26, 2018 at 13:35. This independently supports PFAS testing of the sludge/digester stream.",
+          "limitation": "The covering email says December 27; the laboratory tables and custody record say December 26. The lab reports Water/ng/L with estimated values and matrix-interference qualifications. Do not relabel these as directly reported dry-weight concentrations or a paired influent/effluent/biosolids round.",
+          "sources": [
+            {
+              "recordId": "032-58c5fd24e5f9",
+              "sha256": "58c5fd24e5f9b0e5181d170b801fe84693faee742aecbddbb85fa82c0b4803a6",
+              "label": "Digester report and custody · pp1, 6, 12–14, 28",
+              "pages": [
+                1,
+                6,
+                12,
+                13,
+                14,
+                28
+              ]
+            }
+          ],
+          "requirementIds": [
+            "paired-wwtp-pfas-media"
+          ]
+        },
+        {
+          "id": "effluent-series-held",
+          "finding": "The statewide report’s Table 3 lists Cadillac WWTP effluent PFAS results for November 2018, June 2019 and October 2019, corroborating a repeated effluent record.",
+          "limitation": "Those Cadillac rows do not supply main-WWTP influent, synchronized sludge/biosolids measurements or the matching operating logs. Separate sampling dates and matrices are not a paired treatment study.",
+          "sources": [
+            {
+              "recordId": "102-03b43f8e8597",
+              "sha256": "03b43f8e859721d74882c546b2e0e76933e02cc7ea33b49d64127056b69aa6a4",
+              "label": "Cadillac effluent rows · Table 3, PDF p83",
+              "pages": [
+                83
+              ]
+            }
+          ],
+          "requirementIds": [
+            "paired-wwtp-pfas-media",
+            "paired-round-operating-logs"
           ]
         }
-      ]
+      ],
+      "followUp": "Seek native main-WWTP influent PFAS reports first, then align sample IDs and collection times with effluent and sludge/biosolids results, full QC and corresponding operator/flow logs. Keep leachate-source, LDFA, effluent and digester records separate until a documented pairing exists."
     },
     {
       "requestId": "subsurface-pathway",
-      "summary": "Already satisfied: local well-construction and lithology records. The recent delivery and County records do not resolve the four remaining site-specific groundwater requests.",
+      "summary": "Already satisfied: local well-construction and lithology records. The remaining four requests concern the specific Plett well and measured local groundwater conditions; regional or delivery context does not complete them.",
       "held": [
         {
           "id": "wellogic-held",
@@ -403,27 +577,53 @@
               "sha256": "b3871d88915e5510dd0caf105b8be9cfe8dd5101aa4bc419c00ad67b478e4398",
               "label": "Wellogic original package"
             }
+          ],
+          "requirementIds": [
+            "plett-certified-well-log",
+            "local-boring-well-construction",
+            "surveyed-elevations-water-levels",
+            "local-hydraulic-tests",
+            "site-specific-groundwater-map"
           ]
         }
-      ]
+      ],
+      "followUp": "Use the held local well inventory to identify candidate wells, then seek the certified 1140 Plett completion/screen record, surveyed wellhead elevations, one dated synoptic water-level round, identified-well hydraulic tests and a site-specific source-to-Plett flow map. Construction data alone cannot establish gradient or travel direction."
     },
     {
       "requestId": "plett-receptor-series",
-      "summary": "The Plett analytical records and 24-page comparability source packet are already held. The complete 49-page EGLE work order and the three sample-specific custody/field records remain requested.",
+      "summary": "Repeated Plett analytical results and a 24-page mixed-source packet are held. Selected EGLE work-order pages are only part of that packet. The complete 49-page original and three sample-specific custody/field records remain requested.",
       "held": [
         {
           "id": "plett-packet-held",
-          "finding": "The existing 24-page source packet preserves the September 10, 2025 side-by-side results, available EGLE Work Order 2509147 pages, and Merit/Cyclopure material.",
-          "limitation": "It is not the complete 49-page EGLE work order and does not close the separate chain-of-custody/field-sheet requests. Recent receiving-history uploads add none of those missing records.",
+          "finding": "The 24-page mixed-source packet preserves the September 10, 2025 side-by-side results, selected EGLE Work Order 2509147 pages, Merit/Cyclopure material and an EGLE letter. Its first-page comparison table identifies the initial Cyclopure collection date as March 7, 2025, consistent with the original report rather than its March 4 filename.",
+          "limitation": "The packet is not 24 of the 49 work-order pages: it combines different records, so subtracting 24 from 49 does not establish how many work-order pages are missing. The complete work order and separate sample-specific custody/field sheets are still needed.",
           "sources": [
             {
               "recordId": "098-044977305e5f",
               "sha256": "044977305e5fd34cdf638d762200c3d6832c29d0101e30ee8313013897dfa4d1",
-              "label": "Plett source packet · 24 pages"
+              "label": "Mixed-source packet · comparison p1; selected EGLE pages pp2–9",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
             }
+          ],
+          "requirementIds": [
+            "work-order-2509147-complete",
+            "plett-coc-2025-03-07",
+            "plett-coc-2025-09-10",
+            "plett-coc-2026-04-09"
           ]
         }
-      ]
+      ],
+      "followUp": "Seek the complete original 49-page EGLE Work Order 2509147 rather than another copy of the mixed-source packet. Seek sample-specific custody/field records for March 7, 2025 (kit WTK_PFAS_16874; 09:30 printed, timezone unspecified), September 10, 2025 and April 9, 2026. Preserve March 4 as an original filename alias, not the sampling date."
     },
     {
       "requestId": "source-receptor-confirmation",
@@ -444,9 +644,16 @@
               "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
               "label": "EGLE results compilation"
             }
+          ],
+          "requirementIds": [
+            "pfas-transect-plan",
+            "sample-coordinate-table",
+            "synchronized-source-receptor-round",
+            "transect-field-qc-package"
           ]
         }
-      ]
+      ],
+      "followUp": "Seek a documented upgradient/cross-gradient/downgradient sampling plan, a complete source/receptor coordinate-to-sample-ID table, one synchronized source/receptor sampling round and its field/QC package. AOI maps and receptor comparability results guide the search but do not establish source attribution."
     }
   ]
 }

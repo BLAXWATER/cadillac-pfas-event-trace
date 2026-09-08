@@ -6,7 +6,7 @@
   "blocks": [
     {
       "requestId": "receiving-history",
-      "summary": "Actual leachate offloading, the landfill–WWTP relationship and a written City cessation/transition report are documented. Seven requests remain for individual transactions, signed agreements and the exact final-load details or effective stop date.",
+      "summary": "Verified and held: actual leachate offloading, the landfill–WWTP relationship and the submitted June 28, 2019 City source-status and cessation/transition report. Review of HNQ-VZP8-TWNRX version 1 is complete: page 2 reports Wexford County Landfill’s source status as “PFOS eliminated” using “Other: Deep Well injection”; page 3 records Jeffrey Dietlin’s Submitted status. This is not a laboratory finding of zero PFOS throughout the WWTP. That written statement is not missing. Seven narrower requests remain for individual transactions, signed agreements and the exact final-load details or effective stop date.",
       "held": [
         {
           "id": "solid-waste-agreement-held",

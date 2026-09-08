@@ -12,6 +12,16 @@ const page = await readFile(new URL('../app/page.tsx', import.meta.url), 'utf8')
 const allNotes = updates.blocks.flatMap(block => block.held);
 const note = id => allNotes.find(item => item.id === id);
 
+test('June 28 submission is visibly complete as a document review, not as final-load proof', () => {
+  const summary = updates.blocks.find(b => b.requestId === 'receiving-history').summary;
+  assert.match(summary, /Review of HNQ-VZP8-TWNRX version 1 is complete/);
+  assert.match(summary, /That written statement is not missing/);
+  assert.match(summary, /Seven narrower requests remain/);
+  assert.match(page, /not a laboratory finding that all PFOS was eliminated from the WWTP/);
+  assert.match(page, /Draft at 15:19:42 to Submitted at 15:46:11 EDT/);
+  assert.match(page, /no separate agency-approval status is shown/);
+});
+
 test('53-page compilation preserves independent testing dates without closing custody or work-order requests', () => {
   const block = updates.blocks.find(item => item.requestId === 'plett-receptor-series');
   const requirements = definitions.find(item => item.id === block.requestId).requirements;

@@ -55,6 +55,7 @@ import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } 
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
 import { DocumentShareButton } from "./document-share-button";
+import { documentSummary } from "./document-summary.mjs";
 import verifiedFilenameAliases from "./verified-filename-aliases.json";
 import { createLibrarySearchIndex, initialLibrarySearchState, librarySearchReducer, librarySearchWindow, normalizeLibrarySearch, searchLibrary, SEARCH_BATCH_SIZE } from "./library-search";
 import {
@@ -3483,7 +3484,7 @@ export default function Home() {
                     <article className="global-search-card" key={`${document.archiveId}-${document.id}`}>
                       <div className="archive-meta"><Badge variant="outline">{document.archive}</Badge><span>{document.type}</span>{document.year && <span>{document.year}</span>}{document.format && <span>{document.format}</span>}</div>
                       <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                      {document.description && <p>{document.description}</p>}
+                      <p>{documentSummary(document)}</p>
                       <DocumentPopoutButton document={document} label="Read record" open={setSelected} />
                     </article>
                   ))}
@@ -3611,6 +3612,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
+                <p className="archive-description">{documentSummary(document)}</p>
               </article>
             ))}
           </div>
@@ -3645,6 +3647,7 @@ export default function Home() {
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View MSG"} open={setSelected} />
+                <p className="archive-description">{documentSummary(document)}</p>
               </article>
             ))}
           </div>
@@ -3678,7 +3681,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
               </article>
             ))}
@@ -3713,7 +3716,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : document.format === "PNG" ? "View image" : document.format === "XLSX" ? "View workbook" : "View MSG"} open={setSelected} />
               </article>
             ))}
@@ -3748,7 +3751,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />
               </article>
             ))}
@@ -3783,7 +3786,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
               </article>
             ))}
@@ -3818,7 +3821,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : "View source"} open={setSelected} />
               </article>
             ))}
@@ -3853,7 +3856,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />
               </article>
             ))}
@@ -3888,7 +3891,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span>{document.pages !== null && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />
               </article>
             ))}
@@ -3923,7 +3926,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 {document.matchingSources?.length ? (
                   <div className="archive-matching-sources">
                     <strong>{document.matchingSources.length === 1 ? "Matching supplied source" : "Matching supplied sources"}</strong>
@@ -3973,7 +3976,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label="Read PDF" open={setSelected} />
               </article>
             ))}
@@ -4008,7 +4011,7 @@ export default function Home() {
               <article className="archive-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                <p className="archive-description">{document.description}</p>
+                <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />
               </article>
             ))}
@@ -4043,7 +4046,7 @@ export default function Home() {
               <article className="archive-card reference-card" data-record-id={document.id} key={document.id}>
                 <div className="archive-meta"><Badge variant="outline">{document.type}</Badge><Badge variant="outline">{document.format}</Badge><span>{formatBytes(document.size)}</span></div>
                   <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
-                  {"description" in document && document.description && <p className="document-description">{document.description}</p>}
+                  <p className="archive-description">{documentSummary(document)}</p>
                   <div className="dataset-shape">
                     {"pages" in document && document.pages && <span>{document.pages} PDF pages</span>}
                   {document.rows !== null && <span>{document.rows.toLocaleString()} rows</span>}

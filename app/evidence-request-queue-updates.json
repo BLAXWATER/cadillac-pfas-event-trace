@@ -853,12 +853,12 @@
     },
     {
       "requestId": "plett-receptor-series",
-      "summary": "Repeated Plett analytical results and a 24-page mixed-source packet are held. Selected EGLE work-order pages are only part of that packet. The complete 49-page original and three sample-specific custody/field records remain requested.",
+      "summary": "Repeated analytical results and reported collection details for 1140 Plett Road are held. The submitter confirms that the reports' “Kitchen sink” and “Break Room Sink” labels refer to the same indoor sampling location; this is a submitter clarification, not an independent laboratory determination. Original labels, testing dates, laboratories and flushing conditions remain separate. The complete EGLE work order and underlying custody/field records remain requested. All four remain open.",
       "held": [
         {
           "id": "plett-packet-held",
-          "finding": "The 24-page mixed-source packet preserves the September 10, 2025 side-by-side results, selected EGLE Work Order 2509147 pages, Merit/Cyclopure material and an EGLE letter. Its first-page comparison table identifies the initial Cyclopure collection date as March 7, 2025, consistent with the original report rather than its March 4 filename.",
-          "limitation": "The packet is not 24 of the 49 work-order pages: it combines different records, so subtracting 24 from 49 does not establish how many work-order pages are missing. The complete work order and separate sample-specific custody/field sheets are still needed.",
+          "finding": "The preferred TESTING WITH REDACTED - NAMES -Test_Results.pdf is the same 53-page file as the earlier supplied compilation, verified by SHA-256. Pages 1–3 preserve Cyclopure kit WTK_PFAS_16874, collected March 7, 2025 at 09:30 (timezone unspecified). Pages 4–27 preserve the September 10, 2025 comparison round involving EGLE, Merit and Cyclopure; October 15, 2025 is the EGLE letter date, not the sample date. Pages 28–53 preserve separate TapScore panels collected April 6, April 9 and April 13, 2026. March 31, 2026 is the dioxane test's request date, not its collection date. These rounds and individual panels remain distinct; repackaging their reports does not create additional tests. The linked 24-page comparison packet supplies the September-round originals already held.",
+          "limitation": "The packet is not 24 of the 49 work-order pages: it combines different records, so subtracting 24 from 49 does not establish how many work-order pages are missing. The 53-page compilation contains eight selected EGLE Work Order 2509147 pages, not the complete 49-page work order. Neither its overall page count nor its reported sample metadata supplies the requested chain-of-custody or field sheets. The complete work order and separate sample-specific custody/field sheets are still needed. Laboratory findings alone do not establish a landfill or WWTP source-to-Plett migration pathway.",
           "sources": [
             {
               "recordId": "098-044977305e5f",

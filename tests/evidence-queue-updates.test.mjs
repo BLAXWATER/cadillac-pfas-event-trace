@@ -12,6 +12,25 @@ const page = await readFile(new URL('../app/page.tsx', import.meta.url), 'utf8')
 const allNotes = updates.blocks.flatMap(block => block.held);
 const note = id => allNotes.find(item => item.id === id);
 
+test('53-page compilation preserves independent testing dates without closing custody or work-order requests', () => {
+  const block = updates.blocks.find(item => item.requestId === 'plett-receptor-series');
+  const requirements = definitions.find(item => item.id === block.requestId).requirements;
+  assert.equal(requirements.length, 4);
+  assert.ok(requirements.every(item => !item.verifiedEvidence?.length));
+  assert.match(block.summary, /All four remain open/);
+  assert.match(block.summary, /submitter confirms.*“Kitchen sink” and “Break Room Sink”.*same indoor sampling location/);
+  assert.match(block.summary, /not an independent laboratory determination/);
+  assert.match(block.summary, /Original labels, testing dates, laboratories and flushing conditions remain separate/);
+  const evidence = note('plett-packet-held');
+  assert.match(evidence.finding, /March 7, 2025 at 09:30/);
+  assert.match(evidence.finding, /September 10, 2025 comparison round/);
+  assert.match(evidence.finding, /October 15, 2025 is the EGLE letter date, not the sample date/);
+  assert.match(evidence.finding, /April 6, April 9 and April 13, 2026/);
+  assert.match(evidence.finding, /March 31, 2026 is.*request date, not its collection date/);
+  assert.match(evidence.limitation, /eight selected EGLE Work Order 2509147 pages/);
+  assert.match(evidence.limitation, /not the complete 49-page/);
+});
+
 test('queue update covers all five blocks with exact canonical sources and valid PDF pages', () => {
   assert.deepEqual(updates.blocks.map(block => block.requestId).sort(), definitions.map(block => block.id).sort());
   assert.equal(new Set(allNotes.map(item => item.id)).size, allNotes.length);

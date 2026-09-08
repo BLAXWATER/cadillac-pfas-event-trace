@@ -126,7 +126,7 @@
     "requirements": [
       {
         "id": "work-order-2509147-complete",
-        "label": "The complete original 49-page EGLE Work Order 2509147, not the current 24-page source packet.",
+        "label": "The complete original 49-page EGLE Work Order 2509147, not the 24-page mixed-source packet or the 53-page testing compilation containing selected work-order pages.",
         "termGroups": [["2509147"], ["work order"]],
         "minPages": 49
       },

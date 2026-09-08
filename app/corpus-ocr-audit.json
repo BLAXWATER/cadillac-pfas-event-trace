@@ -1,5 +1,13 @@
 {
-  "catalogFingerprint": "d924fe272866da9a3b4010c38cf7351efc7479d929463160c745dbb7a205e07b",
+  "catalogFingerprint": "909d187980685e3e9c967180898e7eeca3d2ec51b87596b4e96d91dad7c41a24",
+  "adidPart2Intake": {
+    "date": "2026-09-08",
+    "recordsAdded": 2,
+    "pdfPagesAdded": 10,
+    "embeddedTextPagesAdded": 10,
+    "scope": "Twenty supplied originals reconciled by hash, size and page count: eighteen already held and two new five-page work-session originals. All ten new pages have embedded text; cited findings and page references checked. Existing corpus OCR statistics are historical, not a claim of a fresh whole-corpus reread. A separate three-page source-status recheck adds no record or page count.",
+    "audit": "adid-part2-intake-audit.json"
+  },
   "ldfaN3862Intake": {
     "date": "2026-09-08",
     "recordsAdded": 2,
@@ -33,13 +41,13 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1620,
-    "verifiedRecords": 1620,
-    "pdfRecords": 1462,
-    "pdfPages": 25462,
+    "catalogRecords": 1622,
+    "verifiedRecords": 1622,
+    "pdfRecords": 1464,
+    "pdfPages": 25472,
     "boundedReviewPagesWithoutFullOcr": 651,
     "imageRecords": 13,
-    "embeddedTextPages": 20781,
+    "embeddedTextPages": 20791,
     "ocrPages": 3984,
     "ocrPagesWithText": 3630,
     "manualReviewPages": 139,

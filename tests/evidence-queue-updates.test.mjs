@@ -28,7 +28,7 @@ test('queue update covers all five blocks with exact canonical sources and valid
       ids.add(source.recordId);
     }
   }
-  assert.equal(ids.size, 57);
+  assert.equal(ids.size, 59);
 });
 
 test('every note ties to defined requests, and every requirement has a tie-back and a block follow-up', () => {
@@ -77,7 +77,7 @@ test('held context cannot silently close any requirement or inflate the catalog 
   assert.deepEqual(closed.map(r => r.id), ['local-boring-well-construction']);
   assert.equal(definitions.flatMap(d => d.requirements).length - closed.length, 22);
   assert.equal(definitions.find(d => d.id === 'receiving-history').requirements.length, 7);
-  assert.equal(records.length, 1620);
+  assert.equal(records.length, 1622);
   assert.equal(audit.lastRecheck.localCatalogRecords, records.length);
   assert.equal(audit.lastRecheck.newClosures, 0);
   assert.equal(audit.lastRecheck.remainingRequirements, 22);
@@ -97,7 +97,7 @@ test('queue retains affirmative offloading and cessation findings with exact lim
   assert.match(note('actual-offloading').limitation, /tanker capacity, not a measured load/);
   assert.match(note('actual-offloading').limitation, /does not identify the originating landfill/);
   assert.match(note('reported-cessation').finding, /would no longer bring leachate/);
-  assert.match(note('reported-cessation').limitation, /not the exact effective cessation date/);
+  assert.match(note('reported-cessation').limitation, /do not state the exact final-load date\/time/);
   assert.match(note('agreement-approval').finding, /2009\.216/);
   assert.match(note('agreement-approval').finding, /842/);
   assert.match(note('agreement-approval').limitation, /fully executed agreement/);

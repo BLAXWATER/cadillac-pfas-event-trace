@@ -1,4 +1,5 @@
 {
+  "adidPart2Intake": {"date": "2026-09-08", "suppliedOriginals": 20, "existingIdentities": 18, "recordsAdded": 2, "pagesAdded": 10, "scope": "Two standalone work-session originals added; eighteen existing originals reused with exact uploaded-filename aliases. No duplicate financial actuals or repeated packet events added.", "audit": "adid-part2-intake-audit.json"},
   "ldfaN3862Intake": {"date": "2026-09-08", "newLdfaRecordPages": 2, "existingStaffReportPagesRechecked": 8, "exactDuplicateStaffReportReused": true, "scope": "Complete text and rendered-page review; printed dates and reported agency statements distinguished from filename labels and agency determinations.", "audit": "ldfa-n3862-sept08-review.json"},
   "stats": {
     "suppliedFiles": 869,
@@ -6,7 +7,7 @@
     "exactExistingRecordsReused": 259,
     "duplicateCopiesSuppressed": 51,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 579166252,
+    "publishedBytes": 579509954,
     "latestBatch88FilesReviewed": 4,
     "latestBatch88DistinctInputHashes": 4,
     "latestBatch88PdfPagesReviewed": 301,
@@ -623,7 +624,7 @@
     "latestBatch14BlankFirstPages": 0,
     "latestBatch14RecordsAdded": 1,
     "latestBatch14TimelineEventsAdded": 0,
-    "finalDistinctRecords": 193,
+    "finalDistinctRecords": 195,
     "publishedPages": 11292
   },
   "methods": [

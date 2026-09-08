@@ -12,7 +12,7 @@ const previews = await json('first-page-preview-manifest');
 const records = await loadDocumentRecords();
 
 test('five complete solid-waste originals are distinct, preserved and searchable without duplicate aliases',async()=>{
-  assert.equal(records.length,1620);
+  assert.equal(records.length,1622);
   assert.equal(audit.sources.length,5);
   assert.equal(audit.sources.reduce((n,r)=>n+r.pages,0),651);
   assert.equal(findings.events.length,8);
@@ -76,7 +76,7 @@ test('built public page exposes eight findings in their year blocks and the expa
   const response=await worker.fetch(new Request('http://localhost/',{headers:{accept:'text/html'}}),{ASSETS:{fetch:async()=>new Response('Not found',{status:404})}},{waitUntil(){},passThroughOnException(){}});
   assert.equal(response.status,200);
   const html=(await response.text()).replaceAll('<!-- -->','').replaceAll('&amp;','&').replaceAll('&#x27;',"'").replaceAll('&quot;','"');
-  assert.match(html,/Search all 1,620 records/);
+  assert.match(html,/Search all 1,622 records/);
   for(const event of findings.events){
     const section=html.match(new RegExp('<section class="year-group" id="year-'+event.year+'"[\\s\\S]*?</section>'))?.[0];
     assert.ok(section?.includes(event.title),event.title);

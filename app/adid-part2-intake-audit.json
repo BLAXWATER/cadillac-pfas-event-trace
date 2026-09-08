@@ -1,0 +1,214 @@
+{
+  "reviewDate": "2026-09-08",
+  "scope": "Twenty ADID Part2 originals and a separate June28, 2019 source-status recheck. Existing financial totals retained; no new final-load date inferred.",
+  "stats": {
+    "suppliedFiles": 20,
+    "suppliedPages": 2869,
+    "recordsBefore": 1620,
+    "recordsAdded": 2,
+    "existingIdentities": 18,
+    "recordsAfter": 1622
+  },
+  "records": [
+    {
+      "adid": 583,
+      "filename": "ADID_583_2013-2014_Annual_Operating_Budget.pdf",
+      "recordId": "184-fbee0873f184",
+      "sha256": "fbee0873f184b26ce053485567814250abb118d20bd58d335c796620a54c6189",
+      "pages": 246,
+      "bytes": 5124403,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 703,
+      "filename": "ADID_703_2014-2015_Annual_Operating_Budget.pdf",
+      "recordId": "185-710379d9664c",
+      "sha256": "710379d9664cec7ce863561b925c025e69dac99cce3e50edceaf88ef95ea9c83",
+      "pages": 238,
+      "bytes": 2605092,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 804,
+      "filename": "ADID_804_2015-2016_Annual_Operating_Budget.pdf",
+      "recordId": "191-82bfe8b8928e",
+      "sha256": "82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca",
+      "pages": 250,
+      "bytes": 9027857,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 863,
+      "filename": "ADID_863_April_14_2016_Work_Session_Minutes.pdf",
+      "recordId": "195-ab25bfa3b3c4",
+      "sha256": "ab25bfa3b3c4b86e0b2294e80a2f444c7fcc898bcb3692d416290a5e6f82f5e7",
+      "pages": 5,
+      "bytes": 235758,
+      "disposition": "new original"
+    },
+    {
+      "adid": 886,
+      "filename": "ADID_886_2016-2017_Annual_Operating_Budget.pdf",
+      "recordId": "186-7f29198ab87d",
+      "sha256": "7f29198ab87d96e87ab29cd3de9ddf408fad06abcaf2c18c37e36932c62763ca",
+      "pages": 247,
+      "bytes": 4930283,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 909,
+      "filename": "ADID_909_2016_City_of_Cadillac_CAFR.pdf",
+      "recordId": "169-1dfb7b3336af",
+      "sha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
+      "pages": 172,
+      "bytes": 3816435,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 983,
+      "filename": "ADID_983_2017-2018_Annual_Operating_Budget.pdf",
+      "recordId": "181-ca634234c53f",
+      "sha256": "ca634234c53f4b0996a68dd3cc457379838e94c64f743fccc58053e06be65d36",
+      "pages": 238,
+      "bytes": 4713019,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 992,
+      "filename": "ADID_992_November_20_2017_City_Council_Packet.pdf",
+      "recordId": "016-6ed7900b4952",
+      "sha256": "6ed7900b4952e238eda7baa37379cfc2d3293a25b2271abd0dcf72185a758194",
+      "pages": 102,
+      "bytes": 7433697,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 994,
+      "filename": "ADID_994_December_4_2017_City_Council_Packet.pdf",
+      "recordId": "017-b0276675116f",
+      "sha256": "b0276675116fd81b39148452cf196c745ddd067fec7967d094399c0ae1d5a462",
+      "pages": 38,
+      "bytes": 6250039,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 996,
+      "filename": "ADID_996_November_20_2017_City_Council_Minutes.pdf",
+      "recordId": "164-519d4faa6c33",
+      "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+      "pages": 9,
+      "bytes": 203476,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1041,
+      "filename": "ADID_1041_April_2_2018_Work_Session_Minutes.pdf",
+      "recordId": "196-fa41c0f607d9",
+      "sha256": "fa41c0f607d919398d2d9affd75083dd9a05b657065fa501c38ce3521a55a46b",
+      "pages": 5,
+      "bytes": 107944,
+      "disposition": "new original"
+    },
+    {
+      "adid": 1043,
+      "filename": "ADID_1043_2017_City_of_Cadillac_CAFR.pdf",
+      "recordId": "146-6b4e98f4c779",
+      "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
+      "pages": 182,
+      "bytes": 3929791,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1047,
+      "filename": "ADID_1047_May_21_2018_City_Council_Packet.pdf",
+      "recordId": "045-25d3c10b9ea8",
+      "sha256": "25d3c10b9ea8697bb69779ea5341633f7c3326eca5f8130278188bd1cb388d88",
+      "pages": 166,
+      "bytes": 7201375,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1059,
+      "filename": "ADID_1059_2018-2019_Annual_Operating_Budget.pdf",
+      "recordId": "165-676065b15331",
+      "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
+      "pages": 235,
+      "bytes": 4584959,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1092,
+      "filename": "ADID_1092_FY2018_Cadillac_Comprehensive_Annual_Financial_Report.pdf",
+      "recordId": "170-641352fc860b",
+      "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb",
+      "pages": 183,
+      "bytes": 3803130,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1123,
+      "filename": "ADID_1123_April_1_2019_City_Council_Packet.pdf",
+      "recordId": "018-be4038bf5cd5",
+      "sha256": "be4038bf5cd5438457ddcd05756514c877d2ab530720e37e670bb80f3eb75b80",
+      "pages": 49,
+      "bytes": 2634450,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1124,
+      "filename": "ADID_1124_March_18_2019_Work_Sessions_Minutes.pdf",
+      "recordId": "152-4335077ddaf4",
+      "sha256": "4335077ddaf4c19d138cd8e6648d1f0253b052ab69e7e672aa9685d879917133",
+      "pages": 4,
+      "bytes": 197413,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1142,
+      "filename": "ADID_1142_June_3_2019_City_Council_Packet.pdf",
+      "recordId": "046-0fcfc8c9921f",
+      "sha256": "0fcfc8c9921f0ae0ae2957d5a2df3b2064a8a407c7ed5b8bea541f3fed215385",
+      "pages": 82,
+      "bytes": 2821876,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1178,
+      "filename": "ADID_1178_2019-2020_Annual_Operating_Budget.pdf",
+      "recordId": "187-d206785ff744",
+      "sha256": "d206785ff744be96b8de578f5b0b4aef908b61e2a3b494b57347af3917a30877",
+      "pages": 231,
+      "bytes": 6449847,
+      "disposition": "byte-identical existing record; filename alias added"
+    },
+    {
+      "adid": 1238,
+      "filename": "ADID_1238_FY2019_Comprehensive_Annual_Financial_Report.pdf",
+      "recordId": "013-f756ecea1687",
+      "sha256": "f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241",
+      "pages": 187,
+      "bytes": 1870493,
+      "disposition": "byte-identical existing record; filename alias added"
+    }
+  ],
+  "newRecordIds": [
+    "195-ab25bfa3b3c4",
+    "196-fa41c0f607d9"
+  ],
+  "cessationRecheck": {
+    "recordId": "form-submission-034-00d98416b456",
+    "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "writtenReport": "held",
+    "finalLoadDetails": "unresolved",
+    "submissionTimestamp": "2019-06-28T15:46:11-04:00",
+    "systemSignatureTimestamp": "2019-06-28T15:46:12-04:00",
+    "systemSigner": "nForm_nCore_MiWaters_Cert",
+    "signatureFieldPresent": true,
+    "certificateTrustIndependentlyValidated": false
+  }
+}

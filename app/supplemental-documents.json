@@ -2507,5 +2507,31 @@
     "size": 102185,
     "sha256": "e0ad50e1248bf45c679e1bcd4e06713fa144486917654eabfa5d26314e2260e0",
     "description": "Printed December 8, 2020, despite supplied filename LDFA Minutes 12-8-21 - Fight being held accountable.pdf. Page 2 records Northernaire closeout discussion: Jeff reports differing EGLE/EPA accountability positions and EPA requiring a PFAS test before closure; Mike Hamner agrees to 'fight being held accountable' for a test outside the current list. The Board recommends consulting the City Attorney. These are minutes of reported conversations, not attached agency determinations, a voted refusal to test or a liability finding. Page 1 authorizes a Tetra Tech annual-report award not to exceed $12,850 and projects shallow-well shutdown January 2026, intermediate-well shutdown January 2044 and 15–20% annual savings; these are forecasts, not completed shutdowns or realized savings. No analytical PFAS results or source-to-Plett pathway are supplied."
+  },
+  {
+    "id": "195-ab25bfa3b3c4",
+    "name": "ADID_863_April_14_2016_Work_Session_Minutes.pdf",
+    "url": "/findings-docs/195-ab25bfa3b3c4.pdf",
+    "year": "2016",
+    "category": "Public finance & leachate treatment",
+    "type": "City council work-session minutes and budget material",
+    "format": "PDF",
+    "pages": 5,
+    "size": 235758,
+    "sha256": "ab25bfa3b3c4b86e0b2294e80a2f444c7fcc898bcb3692d416290a5e6f82f5e7",
+    "description": "April 14, 2016 work-session minutes review the draft FY2017 budget. PDF p3 reports leachate revenue continuing above budget, cautions against excessive reliance and directs additional revenue toward system reinvestment. Pages4–5 separately append April18 Council notes; they are not all April14 proceedings. The proposed 2.5% water/sewer increase is not a signed leachate rate schedule. This is financial-policy context, not an adopted budget, delivery ticket or individual receipt."
+  },
+  {
+    "id": "196-fa41c0f607d9",
+    "name": "ADID_1041_April_2_2018_Work_Session_Minutes.pdf",
+    "url": "/findings-docs/196-fa41c0f607d9.pdf",
+    "year": "2018",
+    "category": "Public finance & leachate treatment",
+    "type": "City council work-session minutes and budget material",
+    "format": "PDF",
+    "pages": 5,
+    "size": 107944,
+    "sha256": "fa41c0f607d919398d2d9affd75083dd9a05b657065fa501c38ce3521a55a46b",
+    "description": "April 2, 2018 work-session minutes and FY2019 budget material. PDF p4 reports leachate revenue continuing above budget, cautions against excessive reliance and identifies additional revenue for system reinvestment. The proposed 3% general water/sewer increase on p3 is not a signed leachate treatment rate. Budget discussion is not a per-load receiving record, customer invoice or proof of a completed delivery."
   }
 ]

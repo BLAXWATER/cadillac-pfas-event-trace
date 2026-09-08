@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1620,
+  "recordCount": 1622,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 193
+      "count": 195
     },
     {
       "archiveId": "reference",
@@ -16694,6 +16694,28 @@
       "url": "/findings-docs/194-e0ad50e1248b.pdf",
       "sha256": "e0ad50e1248bf45c679e1bcd4e06713fa144486917654eabfa5d26314e2260e0",
       "size": 102185
+    },
+    {
+      "id": "195-ab25bfa3b3c4",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "ADID_863_April_14_2016_Work_Session_Minutes.pdf",
+      "url": "/findings-docs/195-ab25bfa3b3c4.pdf",
+      "sha256": "ab25bfa3b3c4b86e0b2294e80a2f444c7fcc898bcb3692d416290a5e6f82f5e7",
+      "size": 235758
+    },
+    {
+      "id": "196-fa41c0f607d9",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "ADID_1041_April_2_2018_Work_Session_Minutes.pdf",
+      "url": "/findings-docs/196-fa41c0f607d9.pdf",
+      "sha256": "fa41c0f607d919398d2d9affd75083dd9a05b657065fa501c38ce3521a55a46b",
+      "size": 107944
     },
     {
       "id": "001-7c991baaf1e9",

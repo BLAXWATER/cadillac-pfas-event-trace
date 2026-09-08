@@ -1393,15 +1393,15 @@ const events: Event[] = [
     phase: "Source confirmation",
     kind: "regulatory",
     category: "11 · Form submission",
-    title: "Cadillac identifies Wexford County Landfill as the source",
-    finding: "The MiWaters form states: “We have determined Wexford county landfill is our source.” It records a move to deep-well injection and an end to WWTP deliveries.",
-    significance: "Directly identifies the landfill as originator and Cadillac WWTP as historical receiver.",
-    sources: [pdf("HNQ-VZP8-TWNRX V1.pdf", "2019-06-28-source-status", 3, "MiWaters status form naming Wexford County Landfill as the confirmed source.", {
+    title: "Cadillac submits a source-confirmation and leachate cessation report",
+    finding: "Cadillac’s submitted MiWaters form identifies Wexford County Landfill as its source and states that the landfill had gone to deep-well injection and told the City it would no longer bring leachate. The written cessation/transition report is held; June28 is the submission date, not a stated final-truckload date.",
+    significance: "The original contains a State of Michigan system digital signature dated June28, 2019 at 15:46:12 EDT, reason Copy Of Record. Page3 separately records Jeffrey Dietlin’s submission at 15:46:11 EDT; certificate trust was not independently validated. Exact final-load date/time, carrier and gallons remain unresolved. The City’s PFOS eliminated source-status field is not proof of zero PFOS in effluent or PFAS destruction.",
+    sources: [pdf("HNQ-VZP8-TWNRX V1.pdf", "2019-06-28-source-status", 3, "Pages1–2 contain the City’s source and cessation/transition report; p1 has the system digital signature and p3 the submission history. These dates do not identify the final load.", {
       eventStamp: "2019-06-28 15:46:11 EDT",
       basis: "MiWaters submission-history entry",
-      created: "2019-06-28 14:46:12 CDT",
-      modified: "2019-06-28 14:46:12 CDT",
-      note: "The page and embedded metadata express the same approximate instant using different UTC offsets.",
+      created: "2019-06-28 15:46:12 EDT",
+      modified: "2019-06-28 15:46:12 EDT",
+      note: "The nForm_nCore_MiWaters_Cert system Copy Of Record signature follows the submission-history entry by one second. Signature-field presence was checked; certificate trust was not independently validated. Neither timestamp states the final delivery date.",
     })],
   },
   {

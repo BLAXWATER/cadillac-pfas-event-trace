@@ -1,12 +1,12 @@
 {
   "reviewDate": "2026-09-08",
   "reviewDateLabel": "September 8, 2026",
-  "scope": "September 8 manifest reconciliation: all 16 official downloads match their manifest fingerprints and existing catalog records. Fresh review of the 15 PDFs and eleven-sheet workbook adds LDFA, intermediate-aquifer map and Cadillac biosolids tie-backs. A subsequent three-PDF review adds the 2022 N3862 report's early-2019 injection statement to the transition evidence. The 2020 LDFA minutes and signed 2015 air-inspection scan add historical context, not missing analytical or leachate transaction packages. All 23 requirement dispositions were checked; this is not a fresh reread of the whole repository.",
-  "note": "All 16 manifest documents are already accounted for; repeat downloads do not create new records. The later batch adds one LDFA record and a materially distinct signed inspection version, retaining one exact staff-report duplicate under its existing record. These additions close no additional request. One local construction/lithology requirement remains satisfied, with 22 requests still open. Missing tickets, missing documents doesn’t mean missing events.",
+  "scope": "September 8 manifest reconciliation: all 16 official downloads match their manifest fingerprints and existing catalog records. Fresh review of the 15 PDFs and eleven-sheet workbook adds LDFA, intermediate-aquifer map and Cadillac biosolids tie-backs. A subsequent three-PDF review adds the 2022 N3862 report's early-2019 injection statement to the transition evidence. The 2020 LDFA minutes and signed 2015 air-inspection scan add historical context, not missing analytical or leachate transaction packages. All 23 requirement dispositions were checked; this is not a fresh reread of the whole repository. The subsequent 20-file ADID Part2 review reconciles 18 existing originals and two new work-session originals; a separate three-page June28, 2019 form recheck distinguishes the written cessation/transition report and system signature from final-load details.",
+  "note": "All 16 manifest documents are already accounted for; repeat downloads do not create new records. The later batch adds one LDFA record and a materially distinct signed inspection version, retaining one exact staff-report duplicate under its existing record. These additions close no additional request. One local construction/lithology requirement remains satisfied, with 22 requests still open. Missing tickets, missing documents doesn’t mean missing events. ADID filename aliases preserve the same original identities; only the two standalone work-session originals increase the catalog count. The written cessation/transition report is accounted for, while the exact final-load/effective-stop-date request remains open.",
   "blocks": [
     {
       "requestId": "receiving-history",
-      "summary": "Actual leachate offloading and the landfill–WWTP relationship are documented. Seven requests remain for individual transactions, signed agreements and the exact cessation date.",
+      "summary": "Actual leachate offloading, the landfill–WWTP relationship and a written City cessation/transition report are documented. Seven requests remain for individual transactions, signed agreements and the exact final-load details or effective stop date.",
       "held": [
         {
           "id": "solid-waste-agreement-held",
@@ -162,8 +162,8 @@
         },
         {
           "id": "reported-cessation",
-          "finding": "March 18, 2019: the City expected leachate revenue to end when the injection well went online. June 28: Cadillac reports the landfill moved to deep-well injection and told the City it would no longer bring leachate. December 18: the IPP report states “No longer accepting leachate” and reports deep-well injection. The August 15, 2022 N3862 staff report separately states that injection began in early 2019 (p4).",
-          "limitation": "This is affirmative City-reported transition/cessation context with later agency history, not the exact effective cessation date or final receiving-log entry. Beginning injection does not by itself establish when all off-site hauling stopped.",
+          "finding": "March 18, 2019: the City expected leachate revenue to end when the injection well went online. June 28: Cadillac reports the landfill moved to deep-well injection and told the City it would no longer bring leachate. December 18: the IPP report states “No longer accepting leachate” and reports deep-well injection. The August 15, 2022 N3862 staff report separately states that injection began in early 2019 (p4). Written cessation/transition report: held. The June28 form has the State of Michigan system Copy Of Record digital signature at 15:46:12 EDT and records Dietlin’s submission at 15:46:11 EDT on p3.",
+          "limitation": "The written report is accounted for; its submission/signature timestamps do not state the exact final-load date/time, hauler, gallons or effective stop date. The system certificate is not Dietlin’s personal digital signature, and certificate trust was not independently validated. Beginning injection does not by itself establish when all off-site hauling stopped.",
           "sources": [
             {
               "recordId": "152-4335077ddaf4",
@@ -176,10 +176,11 @@
             {
               "recordId": "form-submission-034-00d98416b456",
               "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
-              "label": "Source-status form · pp1–2",
+              "label": "Written cessation/transition report, system signature and submission history · pp1–3",
               "pages": [
                 1,
-                2
+                2,
+                3
               ]
             },
             {
@@ -203,9 +204,25 @@
         },
         {
           "id": "revenue-and-record-leads",
-          "finding": "May 2016 budget material pursues additional hauled-waste revenue alongside pollution-control goals and reports above-budget leachate revenue. The May 2017 DEQ FAQ identifies alternative shipping/receipt records and generator, transporter and receiving-facility custodians.",
+          "finding": "April14, 2016 and April2, 2018 work-session originals report above-budget leachate revenue, caution against excessive reliance and identify additional revenue for system reinvestment (pp3 and4 respectively). May 2016 budget material pursues additional hauled-waste revenue alongside pollution-control goals and reports above-budget leachate revenue. The May 2017 DEQ FAQ identifies alternative shipping/receipt records and generator, transporter and receiving-facility custodians.",
           "limitation": "Aggregate revenue is not a delivery-linked invoice or ledger. The FAQ is historical guidance, not a completed shipping record, proof records still exist, or a statement of current law.",
           "sources": [
+            {
+              "recordId": "195-ab25bfa3b3c4",
+              "sha256": "ab25bfa3b3c4b86e0b2294e80a2f444c7fcc898bcb3692d416290a5e6f82f5e7",
+              "label": "April14, 2016 work session · p3",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "recordId": "196-fa41c0f607d9",
+              "sha256": "fa41c0f607d919398d2d9affd75083dd9a05b657065fa501c38ce3521a55a46b",
+              "label": "April2, 2018 work session · p4",
+              "pages": [
+                4
+              ]
+            },
             {
               "recordId": "process-site-023-0fcc5cbb1c14",
               "sha256": "0fcc5cbb1c14f1152de79e830c57f8a202cf7b9f6457abdacc505d0c9f03531c",

@@ -3,8 +3,8 @@
   "lastRecheckDate": "2026-09-08",
   "closurePolicy": "Closure requires an explicit source-reviewed record ID, SHA-256 and review basis in verifiedEvidence. Keywords can identify candidates but never establish that a requirement is met.",
   "lastRecheck": {
-    "batch": "Sixteen-document manifest reconciliation followed by three-file LDFA/N3862 source review",
-    "localCatalogRecords": 1620,
+    "batch": "ADID Part2 twenty-original reconciliation and separate June28 source-status signature recheck",
+    "localCatalogRecords": 1622,
     "newCatalogRecords": 2,
     "manifestDocuments": 16,
     "newClosures": 0,
@@ -13,11 +13,12 @@
     "fullyCompletedBlocks": 0,
     "definedRequirements": 23,
     "evidenceNotes": 24,
-    "uniqueCitedRecords": 57,
+    "uniqueCitedRecords": 59,
     "visibleUpdatesFile": "evidence-request-queue-updates.json",
     "manifestAuditFile": "manifest-a12-a24-recheck.json",
     "subsequentBatchAuditFile": "ldfa-n3862-sept08-review.json",
-    "note": "All 16 official manifest files re-downloaded and reconciled. The subsequent three PDFs were fully read (13 pages): one new LDFA record, one signed version of the same 2015 inspection and one exact duplicate. Added a source-linked early-2019 injection tie-back without substituting it for a final-load date. All 22 requests remain open; no fresh full-corpus reread."
+    "latestBatchAuditFile": "adid-part2-intake-audit.json",
+    "note": "Twenty ADID originals reconcile to eighteen already-held documents and two new work-session originals. The written June28, 2019 cessation/transition report is accounted for, including its system digital signature and separate submission history; exact final-load details or effective stop date remain unresolved. Previously reviewed manifest and LDFA/N3862 tie-backs are retained. All 22 requests remain open; no fresh full-corpus reread."
   },
   "catalogRecordsReviewed": 1594,
   "priorCards": 6,

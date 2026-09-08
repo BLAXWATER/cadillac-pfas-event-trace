@@ -42,7 +42,7 @@
       },
       {
         "id": "final-leachate-delivery-record",
-        "label": "The dated final Wexford leachate delivery, receiving-log entry or cessation record identifying when deliveries ended.",
+        "label": "The exact final Wexford leachate delivery date/time and load details, or a dated record stating the effective stop date. The June28, 2019 written cessation/transition report is already held; it does not state the final-load date.",
         "termGroups": [["wexford"], ["leachate"], ["final delivery", "last delivery", "cessation record", "receiving log"], ["date", "dated"]],
         "excludeTerms": ["aggregate audited financial context", "does not provide"]
       }

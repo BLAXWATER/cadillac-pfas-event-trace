@@ -13,7 +13,8 @@ const page = await readFile(new URL('../app/page.tsx',import.meta.url),'utf8');
 test('three reviewed originals yield two additions, with an exact duplicate and same-inspection variant distinguished',async()=>{
   assert.equal(audit.counts.sourcePagesReviewed,13);
   assert.equal(audit.counts.catalogRecordsAfter-audit.counts.catalogRecordsBefore,2);
-  assert.equal(records.length,audit.counts.catalogRecordsAfter);
+  assert.equal(audit.counts.catalogRecordsAfter,1620,'Historical intake count remains unchanged');
+  assert.equal(records.length,1622);
   for(const row of audit.records){
     assert.equal(byId(row.recordId).sha256,row.sha256);
     assert.equal(byId(row.recordId).size,row.size);
@@ -54,7 +55,7 @@ test('additional agency injection history strengthens context without closing th
   const queue=await json('evidence-request-queue-updates');
   const note=queue.blocks.flatMap(b=>b.held).find(n=>n.id==='reported-cessation');
   assert.ok(note.sources.some(s=>s.recordId==='006-0f46024ab583' && s.pages.includes(4)));
-  assert.match(note.limitation,/not the exact effective cessation date/);
+  assert.match(note.limitation,/do not state the exact final-load date\/time/);
   assert.match(note.limitation,/Beginning injection does not by itself establish/);
   const definitions=await json('evidence-request-queue');
   const requirements=definitions.flatMap(b=>b.requirements);
@@ -66,7 +67,7 @@ test('production HTML includes both new chronology findings and the current sear
   const response=await worker.fetch(new Request('http://localhost/',{headers:{accept:'text/html'}}),{ASSETS:{fetch:async()=>new Response('Not found',{status:404})}},{waitUntil(){},passThroughOnException(){}});
   assert.equal(response.status,200);
   const html=(await response.text()).replaceAll('<!-- -->','');
-  assert.match(html,/Search all 1,620 records/);
+  assert.match(html,/Search all 1,622 records/);
   assert.match(html,/LDFA discusses PFAS testing before closeout and seeks legal advice/);
   assert.match(html,/Signed landfill inspection preserves asbestos-record review and pond non-use/);
   assert.match(html,/22 requests still needed across 5 blocks/);

@@ -14,7 +14,7 @@ const source = await readFile(new URL('../app/page.tsx', import.meta.url), 'utf8
 const queue = await json('../app/evidence-request-queue-updates.json');
 
 test('five original minutes add five distinct records with dates from their contents', async () => {
-  assert.equal(records.length, 1620);
+  assert.equal(records.length, 1622);
   assert.match(source, /supplementalDocuments\.length\}<\/strong> distinct additions/);
   assert.equal(audit.stats.recordsBefore + audit.stats.recordsAdded, audit.stats.recordsAfter);
   assert.deepEqual(audit.canonicalRecords.map(r => [r.sourceName, r.meetingDate, r.pages]), [
@@ -76,14 +76,14 @@ test('main year events distinguish retail rates, proposals, corrected minutes an
   assert.match(note.limitation, /executed treatment agreement/);
 });
 
-test('built public page exposes the 1620 total and all three reviewed 2010 events', async () => {
+test('built public page exposes the 1622 total and all three reviewed 2010 events', async () => {
   const { default: worker } = await import('../dist/server/index.js');
   const response = await worker.fetch(new Request('http://localhost/', { headers: { accept: 'text/html' } }),
     { ASSETS: { fetch: async () => new Response('Not found', { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} });
   assert.equal(response.status, 200);
   const html = (await response.text()).replaceAll('<!-- -->', '');
-  assert.match(html, /Search all 1,620 records/);
+  assert.match(html, /Search all 1,622 records/);
   assert.match(html, /Council raises water and sewer rates and awards hazardous-waste collection/);
   assert.match(html, /Council hears landfill-sale, waste-import and tipping-fee proposals/);
   assert.match(html, /Council approves solid-waste-plan amendment after landfill-sale discussion/);

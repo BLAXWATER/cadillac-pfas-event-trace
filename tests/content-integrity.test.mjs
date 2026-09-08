@@ -85,7 +85,7 @@ test("catalog records are unique and source metadata matches local files", async
     }
   }
 
-  assert.equal(localFiles, 804);
+  assert.equal(localFiles, 806);
   assert.equal(externalFiles, 816);
 });
 
@@ -170,7 +170,7 @@ test("site-wide search covers every evidence catalog", async () => {
   const source = await readFile(path.join(appDirectory, "page.tsx"), "utf8");
   const recordCount = catalogs.reduce((total, catalog) => total + catalog.rows.length, 0);
 
-  assert.equal(recordCount, 1620);
+  assert.equal(recordCount, 1622);
   assert.match(source, /id="record-search"/);
   assert.match(source, /Search all \{librarySearchRecords\.length\.toLocaleString\(\)\} records/);
   assert.match(source, /placeholder="Search all records/);
@@ -214,7 +214,7 @@ test("evidence request queue shows only unmatched, independently closable requir
 
   const requirements = definitions.flatMap((definition) => definition.requirements);
   const remaining = requirements.filter((requirement) => !records.some((record) => requirementMet(requirement, record)));
-  assert.equal(records.length, 1620);
+  assert.equal(records.length, 1622);
   assert.equal(definitions.length, 5);
   assert.equal(requirements.length, 23);
   assert.equal(remaining.length, 22);
@@ -306,8 +306,8 @@ test("corpus audit reconciles prior OCR coverage and explicitly bounded new-page
   assert.equal(audit.stats.catalogRecords, recordCount);
   assert.equal(audit.stats.verifiedRecords, recordCount);
   assert.equal(audit.catalogFingerprint, catalogFingerprint);
-  assert.equal(audit.stats.pdfRecords, 1462);
-  assert.equal(audit.stats.pdfPages, 25462);
+  assert.equal(audit.stats.pdfRecords, 1464);
+  assert.equal(audit.stats.pdfPages, 25472);
   assert.equal(audit.stats.imageRecords, 13);
   assert.equal(audit.stats.boundedReviewPagesWithoutFullOcr, 651);
   assert.equal(audit.stats.embeddedTextPages + audit.stats.ocrPages + (audit.stats.visuallyVerifiedBlankPagesWithoutOcr ?? 0) + (audit.stats.visuallyScreenedSparsePagesWithoutOcr ?? 0) + audit.stats.boundedReviewPagesWithoutFullOcr, audit.stats.pdfPages + audit.stats.imageRecords);
@@ -677,7 +677,7 @@ test("August 28 archive intake distinguishes exact copies from evidentiary exclu
   const dumpAudit = JSON.parse(await readFile(path.join(appDirectory, "dump-intake-audit.json"), "utf8"));
 
   assert.equal(pfasCatalog.length, 102);
-  assert.equal(supplementalCatalog.length, 193);
+  assert.equal(supplementalCatalog.length, 195);
   assert.equal(pfasCatalog.length, pfasAudit.stats.newDistinctRecords);
   assert.equal(supplementalCatalog.length, supplementalAudit.stats.finalDistinctRecords);
   assert.equal(supplementalAudit.stats.latestCategory1819RepeatFilesReviewed, 12);

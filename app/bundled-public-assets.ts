@@ -49,6 +49,8 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/findings-docs/194-e0ad50e1248b.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/wexford-docs/111-d8141f278b56.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/wexford-docs/106-99937cdc748b.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/wexford-docs/107-099e4487d07d.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/wexford-docs/108-797f5a3db89e.pdf", { eager: true, import: "default", query: "?url" }),

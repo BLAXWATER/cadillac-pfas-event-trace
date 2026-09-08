@@ -1,5 +1,13 @@
 {
-  "catalogFingerprint": "173021f58ea66c4d77ea260c3da56798314c4f5073ae6fd575d09773e8decea2",
+  "catalogFingerprint": "d924fe272866da9a3b4010c38cf7351efc7479d929463160c745dbb7a205e07b",
+  "ldfaN3862Intake": {
+    "date": "2026-09-08",
+    "recordsAdded": 2,
+    "pdfPagesAdded": 5,
+    "embeddedTextPagesAdded": 5,
+    "scope": "All 13 supplied PDF pages read in text and rendered visuals. Five newly archived pages have existing extractable text; signed scan execution details were checked visually. The staff report is an exact existing file. Different signed and reflowed inspection versions share one event, not independent corroboration. No fresh whole-corpus OCR claimed.",
+    "audit": "ldfa-n3862-sept08-review.json"
+  },
   "solidWastePlanIntake": {
     "date": "2026-09-07",
     "recordsAdded": 5,
@@ -25,13 +33,13 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1618,
-    "verifiedRecords": 1618,
-    "pdfRecords": 1460,
-    "pdfPages": 25457,
+    "catalogRecords": 1620,
+    "verifiedRecords": 1620,
+    "pdfRecords": 1462,
+    "pdfPages": 25462,
     "boundedReviewPagesWithoutFullOcr": 651,
     "imageRecords": 13,
-    "embeddedTextPages": 20776,
+    "embeddedTextPages": 20781,
     "ocrPages": 3984,
     "ocrPagesWithText": 3630,
     "manualReviewPages": 139,

@@ -1,8 +1,8 @@
 {
   "reviewDate": "2026-09-08",
   "reviewDateLabel": "September 8, 2026",
-  "scope": "September 8 manifest reconciliation: all 16 official downloads match their manifest fingerprints and existing catalog records. Fresh review of the 15 PDFs and eleven-sheet workbook adds LDFA, intermediate-aquifer map and Cadillac biosolids tie-backs. All 23 requirement dispositions were checked; this is not a fresh reread of the whole repository.",
-  "note": "All 16 manifest documents are already accounted for; repeat downloads do not create new records. Three additional source-linked context notes strengthen existing blocks but close no additional request. One local construction/lithology requirement remains satisfied, with 22 requests still open. Missing tickets, missing documents doesn’t mean missing events.",
+  "scope": "September 8 manifest reconciliation: all 16 official downloads match their manifest fingerprints and existing catalog records. Fresh review of the 15 PDFs and eleven-sheet workbook adds LDFA, intermediate-aquifer map and Cadillac biosolids tie-backs. A subsequent three-PDF review adds the 2022 N3862 report's early-2019 injection statement to the transition evidence. The 2020 LDFA minutes and signed 2015 air-inspection scan add historical context, not missing analytical or leachate transaction packages. All 23 requirement dispositions were checked; this is not a fresh reread of the whole repository.",
+  "note": "All 16 manifest documents are already accounted for; repeat downloads do not create new records. The later batch adds one LDFA record and a materially distinct signed inspection version, retaining one exact staff-report duplicate under its existing record. These additions close no additional request. One local construction/lithology requirement remains satisfied, with 22 requests still open. Missing tickets, missing documents doesn’t mean missing events.",
   "blocks": [
     {
       "requestId": "receiving-history",
@@ -162,8 +162,8 @@
         },
         {
           "id": "reported-cessation",
-          "finding": "March 18, 2019: the City expected leachate revenue to end when the injection well went online. June 28: Cadillac reports the landfill moved to deep-well injection and told the City it would no longer bring leachate. December 18: the IPP report states “No longer accepting leachate” and reports deep-well injection.",
-          "limitation": "This is affirmative City-reported transition/cessation context, not the exact effective cessation date or final receiving-log entry.",
+          "finding": "March 18, 2019: the City expected leachate revenue to end when the injection well went online. June 28: Cadillac reports the landfill moved to deep-well injection and told the City it would no longer bring leachate. December 18: the IPP report states “No longer accepting leachate” and reports deep-well injection. The August 15, 2022 N3862 staff report separately states that injection began in early 2019 (p4).",
+          "limitation": "This is affirmative City-reported transition/cessation context with later agency history, not the exact effective cessation date or final receiving-log entry. Beginning injection does not by itself establish when all off-site hauling stopped.",
           "sources": [
             {
               "recordId": "152-4335077ddaf4",
@@ -189,6 +189,12 @@
               "pages": [
                 2
               ]
+            },
+            {
+              "recordId": "006-0f46024ab583",
+              "sha256": "0f46024ab58339fb3ee92e00ae3afb01c8d92a6c1c87906116491a8ad025635b",
+              "label": "2022 staff report: early-2019 injection · p4",
+              "pages": [4]
             }
           ],
           "requirementIds": [

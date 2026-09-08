@@ -331,6 +331,55 @@ const formatBytes = (bytes: number) => {
 };
 
 const events: Event[] = [
+  {
+    year: "2020",
+    date: "2020-12-08",
+    isoDate: "2020-12-08",
+    time: "11:03 AM",
+    timeBasis: "Meeting opening time printed on p1; time zone not stated",
+    phase: "Northernaire closeout and LDFA governance",
+    kind: "regulatory",
+    category: "04 / 13 · PFAS response & groundwater cleanup",
+    title: "LDFA discusses PFAS testing before closeout and seeks legal advice",
+    finding: <>Under Northernaire Closeout, the minutes record Jeff reporting that EGLE said the LDFA would have no accountability if PFAS was found, while EPA said it would, and that EPA would not allow closure without a PFAS test. Mike Hamner agrees with Marcus <strong>“to fight being held accountable”</strong> when PFAS is not on the current test list. The Board recommends checking with the City Attorney. Separately, p1 authorizes a Tetra Tech annual-report award not to exceed <strong>$12,850</strong>, projects shallow-well shutdown in January 2026 and intermediate-well shutdown in January 2044, and estimates 15–20% annual savings from shallow-well shutdown.</>,
+    significance: "Direct minutes of the LDFA's PFAS-testing and closeout discussion, not attached written EPA/EGLE determinations, an established liability finding or a recorded vote refusing PFAS testing. The forecasts do not establish completed shutdowns or achieved savings, and the award is not proof of payment. No PFAS concentrations, main-WWTP samples or proven source-to-Plett pathway are supplied.",
+    sources: [{
+      ...archivedSource("Cadillac LDFA Board Minutes - December 8, 2020.pdf", "/findings-docs/194-e0ad50e1248b.pdf", 2, "Page 2 preserves the Northernaire closeout discussion and recommendation for legal consultation; page 1 supplies the annual-report award and projected operating dates.", {
+        eventStamp: "2020-12-08 11:03 AM · meeting opening; zone not stated",
+        basis: "December 8, 2020 printed at the top of p1; the minutes also approve November 10, 2020 minutes",
+        note: "The supplied filename says LDFA Minutes 12-8-21 - Fight being held accountable.pdf. The printed document date controls this placement; the filename discrepancy remains visible. Agency positions are reported in the minutes, not independently established by attached agency correspondence.",
+      }),
+      page: 2,
+    }],
+  },
+  {
+    year: "2015",
+    date: "2015-11-18",
+    isoDate: "2015-11-18",
+    time: noTime,
+    timeBasis: "Activity date on p1; no inspection time printed",
+    phase: "Landfill air inspection and recordkeeping",
+    kind: "compliance",
+    category: "08 / 12 · Compliance, landfill & leachate",
+    title: "Signed landfill inspection preserves asbestos-record review and pond non-use",
+    finding: "The signed DEQ/MACES N386232267 report notes a recent late-reporting violation notice, while concluding compliance with applicable air permitting at the inspection. Page 2 reports review of asbestos shipment records containing generator/transporter identity, quantity and receipt details, with no discrepancies noted. It also states that the aeration pond had not been used in the preceding 12 months and removal from the permit would be requested at renewal. Page 3 preserves signature marks and a handwritten November 24, 2015 date.",
+    significance: "The signed scan and existing reflowed export are versions of the same November 18 inspection, not independent corroboration or two inspection events. Asbestos shipment-record review does not supply the original shipment records or Wexford leachate-to-Cadillac tickets. Reported pond non-use and a future permit-removal request do not establish physical closure or the final leachate delivery. Air-permit compliance at this visit does not mean no violations or comprehensive environmental compliance.",
+    sources: [{
+      ...archivedSource("N3862_SAR_20151118.pdf", "/wexford-docs/111-d8141f278b56.pdf", 3, "Signed DEQ/MACES scan: p1 activity and reporting context, p2 asbestos records and aeration pond, p3 signature marks and date.", {
+        eventStamp: "2015-11-18 · inspection date; time not stated",
+        basis: "Activity date printed on p1",
+        note: "The handwritten November 24 date on p3 is separate from the November 18 inspection. The original header lists 990 US 131 NORTH, MANTON and contact Don Suchocki; different address wording in the later export is not evidence of relocation.",
+      }),
+      page: 2,
+    }, {
+      ...archivedSource("2015-11-18 - N3862 On-Site Inspection - Wexford County Landfill.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/wexford-docs/102-9011dd4b0fe6.pdf", 3, "Existing reflowed EGLE export of the same inspection; signature/date fields are blank and pagination differs from the signed scan.", {
+        eventStamp: "2015-11-18 · same inspection event",
+        basis: "Activity date printed in the export",
+        note: "Retained for readable comparison, not counted as an additional inspection. The signed scan preserves materially different header and execution evidence.",
+      }),
+      role: "Cross-reference",
+    }],
+  },
   ...solidWastePlans.events.map((event): Event => ({
     ...event,
     kind: event.kind as Kind,
@@ -2355,11 +2404,11 @@ const events: Event[] = [
     category: "12 · Landfill & leachate",
     title: "ROP staff report updates leachate and air-control history",
     finding: "The N3862 staff report states that deep-well leachate injection began in early 2019, the former contaminated-groundwater aeration ponds had been dismantled and removed since 2017, and the active gas collection system routes gas to a flare. It also reports 2021 emissions and March 2022 Tier 2 NMOC calculations.",
-    significance: "Provides a later agency synthesis of facility systems and changes while distinguishing permit history from direct sampling evidence.",
+    significance: "Provides a later agency synthesis of facility changes, not the final Cadillac leachate delivery date, proof that all groundwater remediation ended, PFAS clearance or comprehensive environmental compliance. AQD's expected air-permit compliance and proposed permit approval remain qualified statements.",
     sources: [archivedSource("N3862 Renewable Operating Permit Staff Report.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/005-0f46024ab583.pdf", 8, "August 15 staff report with September 15 addendum for MI-ROP-N3862-2022.", {
       eventStamp: "2022-08-15 · time not stated",
       basis: "Staff-report date printed on the title page",
-      note: "The September 15 addendum states no pertinent public comments were received and makes no changes to the draft ROP.",
+      note: "The September 15 addendum states no pertinent public comments were received and makes no changes to the draft ROP. The supplied N3862 Staff Report 11-01-22.pdf is an exact duplicate; November 1 in its filename is not the staff-report date. Page 4 supplies the historical injection and pond statements, not an exact cessation date or final signed permit.",
     })],
   },
   {
@@ -3742,7 +3791,7 @@ export default function Home() {
             <p>This source set preserves the groundwater-discharge, landfill-gas, air-permit, compliance, county, leachate, stormwater and site-history record. Exact matches already indexed elsewhere are reused instead of republished, while substantive revisions remain available separately.</p>
           </div>
           <div className="reference-summary" aria-label="Wexford landfill archive audit summary">
-            <div><FileText /><span><strong>{solidWastePlans.events.length}</strong> latest dated findings · 5 new originals</span></div>
+            <div><FileText /><span><strong>{solidWastePlans.events.length}</strong> solid-waste-plan findings · September 7 intake: 5 originals</span></div>
             <div><CheckCircle2 /><span><strong>{wexfordAudit.stats.exactExistingRecordsReused}</strong> exact record(s) reused as cross reference(s)</span></div>
             <div><FileSearch /><span><strong>{formatBytes(wexfordAudit.stats.publishedBytes)}</strong> preserved</span></div>
           </div>

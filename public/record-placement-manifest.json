@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1618,
+  "recordCount": 1620,
   "archiveCount": 13,
   "archives": [
     {
@@ -50,7 +50,7 @@
       "label": "Wexford landfill",
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
-      "count": 110
+      "count": 111
     },
     {
       "archiveId": "compliance",
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 192
+      "count": 193
     },
     {
       "archiveId": "reference",
@@ -16685,6 +16685,17 @@
       "size": 2195612
     },
     {
+      "id": "194-e0ad50e1248b",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac LDFA Board Minutes - December 8, 2020.pdf",
+      "url": "/findings-docs/194-e0ad50e1248b.pdf",
+      "sha256": "e0ad50e1248bf45c679e1bcd4e06713fa144486917654eabfa5d26314e2260e0",
+      "size": 102185
+    },
+    {
       "id": "001-7c991baaf1e9",
       "archiveId": "wexford",
       "archiveLabel": "Wexford landfill",
@@ -17893,6 +17904,17 @@
       "url": "/wexford-docs/110-fb263b3ea6c1.pdf",
       "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
       "size": 10119631
+    },
+    {
+      "id": "111-d8141f278b56",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "N3862_SAR_20151118.pdf",
+      "url": "/wexford-docs/111-d8141f278b56.pdf",
+      "sha256": "d8141f278b56cfe7c2b3a0aa06c6264c381fdf44db6860dd52e31a53f4a3c81f",
+      "size": 113571
     }
   ]
 }

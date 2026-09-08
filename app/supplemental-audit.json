@@ -1,11 +1,12 @@
 {
+  "ldfaN3862Intake": {"date": "2026-09-08", "newLdfaRecordPages": 2, "existingStaffReportPagesRechecked": 8, "exactDuplicateStaffReportReused": true, "scope": "Complete text and rendered-page review; printed dates and reported agency statements distinguished from filename labels and agency determinations.", "audit": "ldfa-n3862-sept08-review.json"},
   "stats": {
     "suppliedFiles": 869,
     "newDistinctRecords": 178,
     "exactExistingRecordsReused": 259,
     "duplicateCopiesSuppressed": 51,
     "outOfScopeExcluded": 367,
-    "publishedBytes": 579064067,
+    "publishedBytes": 579166252,
     "latestBatch88FilesReviewed": 4,
     "latestBatch88DistinctInputHashes": 4,
     "latestBatch88PdfPagesReviewed": 301,
@@ -622,8 +623,8 @@
     "latestBatch14BlankFirstPages": 0,
     "latestBatch14RecordsAdded": 1,
     "latestBatch14TimelineEventsAdded": 0,
-    "finalDistinctRecords": 192,
-    "publishedPages": 11290
+    "finalDistinctRecords": 193,
+    "publishedPages": 11292
   },
   "methods": [
     "September 4 intake 86: all 11 supplied PDFs and 1,150 page instances were hash-checked against every catalog. Nine unique binaries resolved to six exact established records and three distinct additions; two extra duplicate filenames were suppressed. The three added PDFs total 385 pages, with 370 embedded-text pages and GPU OCR checks on all 15 sparse-text pages. Their evidentiary pages were rendered and visually inspected, and no missing or corrupt page was found.",

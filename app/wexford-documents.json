@@ -1221,7 +1221,7 @@
     "pages": 3,
     "size": 100123,
     "sha256": "9011dd4b0fe6edbea6b5e3e6b5792b0fa6359a9ddd5afa54e3cfb6f406537eb4",
-    "description": "Air Quality Division on-site inspection record for Wexford County Landfill. It is preserved as distinct landfill-operations and regulatory context and is not characterized as a PFAS sampling result."
+    "description": "Reflowed EGLE export of the November 18, 2015 N3862 air inspection. The signed DEQ/MACES scan is separately retained as record 111-d8141f278b56; these are versions of the same inspection, not independent events. This export has blank contact and signature/date fields. The narrative reports a recent late-reporting VN, asbestos shipment-record review, aeration-pond non-use and compliance with applicable air permitting at the visit. Not a PFAS result or leachate-to-Cadillac delivery record."
   },
   {
     "id": "103-5114323584bd",
@@ -1324,5 +1324,18 @@
     "category": "Wexford landfill & leachate",
     "format": "PDF",
     "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0"
+  },
+  {
+    "id": "111-d8141f278b56",
+    "name": "N3862_SAR_20151118.pdf",
+    "url": "/wexford-docs/111-d8141f278b56.pdf",
+    "year": "2015",
+    "category": "Wexford landfill & air compliance",
+    "type": "Signed air-inspection scan",
+    "format": "PDF",
+    "pages": 3,
+    "size": 113571,
+    "sha256": "d8141f278b56cfe7c2b3a0aa06c6264c381fdf44db6860dd52e31a53f4a3c81f",
+    "description": "Signed DEQ/MACES report N386232267, activity November 18, 2015, with handwritten November 24, 2015 date and signature marks on p3. Same inspection narrative as record 102-9011dd4b0fe6, but this scan preserves original header/contact and execution evidence; not a second inspection or independent corroboration. Page 1 mentions a recent late-reporting VN. Page 2 reports reviewed asbestos shipment records with generator/transporter, quantity and receipt details and no discrepancies; the actual records are not attached and are not leachate-to-WWTP tickets. The aeration pond had not been used in the preceding 12 months and removal from the permit would be requested, not already approved or physically completed. The conclusion concerns applicable air permitting at the visit, not all environmental compliance or PFAS clearance."
   }
 ]

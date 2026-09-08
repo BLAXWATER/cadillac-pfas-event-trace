@@ -75,7 +75,7 @@
     "pages": 8,
     "size": 156024,
     "sha256": "0f46024ab58339fb3ee92e00ae3afb01c8d92a6c1c87906116491a8ad025635b",
-    "description": "August 15, 2022 staff report and September 15 addendum for MI-ROP-N3862-2022. It records leachate injection beginning in early 2019, closure/removal of the aeration ponds since 2017, 2021 emissions, March 2022 Tier 2 NMOC calculations and AQD's expected-compliance finding."
+    "description": "August 15, 2022 staff report and September 15 addendum for MI-ROP-N3862-2022; the supplied filename N3862 Staff Report 11-01-22.pdf is an exact duplicate, not the report date. Page 4 reports injection beginning in early 2019 and former contaminated-groundwater aeration ponds certified closed, dismantled and removed since 2017. This does not establish the last Cadillac delivery or completion of all groundwater remediation. Page 5 separately reports 2021 MAERS emissions and March 2022 Tier 2 NMOC calculations. AQD expected air-permit compliance; the addendum reports no pertinent comments or draft changes. Not a final signed permit, PFAS clearance or comprehensive environmental-compliance finding."
   },
   {
     "id": "007-238cf9655b70",
@@ -2494,5 +2494,18 @@
     "size": 2195612,
     "sha256": "c1fd49ce87b7d391e60a850266f0b98ef4397dace2d08b525dea5b657eb51edf",
     "description": "May 21, 2018 minutes p9 record unanimous motion 2018-117 adopting Amendment #3 as presented; p4 motion 2018-107 adopts the FY2019 budget ordinance. This 29-page supplied package includes unrelated Lofts planning attachments on pp15–29. It is council-action evidence, not a delivery receipt."
+  },
+  {
+    "id": "194-e0ad50e1248b",
+    "name": "Cadillac LDFA Board Minutes - December 8, 2020.pdf",
+    "url": "/findings-docs/194-e0ad50e1248b.pdf",
+    "year": "2020",
+    "category": "LDFA governance & Superfund groundwater cleanup",
+    "type": "LDFA board minutes",
+    "format": "PDF",
+    "pages": 2,
+    "size": 102185,
+    "sha256": "e0ad50e1248bf45c679e1bcd4e06713fa144486917654eabfa5d26314e2260e0",
+    "description": "Printed December 8, 2020, despite supplied filename LDFA Minutes 12-8-21 - Fight being held accountable.pdf. Page 2 records Northernaire closeout discussion: Jeff reports differing EGLE/EPA accountability positions and EPA requiring a PFAS test before closure; Mike Hamner agrees to 'fight being held accountable' for a test outside the current list. The Board recommends consulting the City Attorney. These are minutes of reported conversations, not attached agency determinations, a voted refusal to test or a liability finding. Page 1 authorizes a Tetra Tech annual-report award not to exceed $12,850 and projects shallow-well shutdown January 2026, intermediate-well shutdown January 2044 and 15–20% annual savings; these are forecasts, not completed shutdowns or realized savings. No analytical PFAS results or source-to-Plett pathway are supplied."
   }
 ]

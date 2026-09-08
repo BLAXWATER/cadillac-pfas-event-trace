@@ -14,7 +14,7 @@ const note = id => notes.find(n => n.id === id);
 test('all sixteen official originals are accounted for once, with unchanged full hashes and filenames', async () => {
   assert.equal(audit.records.length, 16);
   assert.equal(new Set(audit.records.map(r => r.recordId)).size, 16);
-  assert.equal(records.length, 1618);
+  assert.equal(records.length, 1620);
   assert.equal(audit.counts.newRecords, 0);
   for (const row of audit.records) {
     const matches = records.filter(r => r.id === row.recordId && r.sha256 === row.sha256);

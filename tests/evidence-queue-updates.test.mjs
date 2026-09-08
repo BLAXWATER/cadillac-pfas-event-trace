@@ -28,7 +28,7 @@ test('queue update covers all five blocks with exact canonical sources and valid
       ids.add(source.recordId);
     }
   }
-  assert.equal(ids.size, 56);
+  assert.equal(ids.size, 57);
 });
 
 test('every note ties to defined requests, and every requirement has a tie-back and a block follow-up', () => {
@@ -54,7 +54,7 @@ test('source boundaries preserve the 2009 period, cessation sequence, separate P
   assert.doesNotMatch(note('landfill-2010-context').limitation, /before the 2012/);
   assert.match(note('reported-cessation').finding, /March 18, 2019/);
   assert.match(note('reported-cessation').finding, /December 18/);
-  assert.equal(note('reported-cessation').sources.length, 3);
+  assert.equal(note('reported-cessation').sources.length, 4);
   assert.match(note('leachate-pfas-held').limitation, /not mixed main-WWTP influent/);
   assert.match(note('digester-pfas-held').limitation, /Water\/ng\/L/);
   assert.match(note('digester-pfas-held').limitation, /estimated values and matrix-interference/);
@@ -77,7 +77,7 @@ test('held context cannot silently close any requirement or inflate the catalog 
   assert.deepEqual(closed.map(r => r.id), ['local-boring-well-construction']);
   assert.equal(definitions.flatMap(d => d.requirements).length - closed.length, 22);
   assert.equal(definitions.find(d => d.id === 'receiving-history').requirements.length, 7);
-  assert.equal(records.length, 1618);
+  assert.equal(records.length, 1620);
   assert.equal(audit.lastRecheck.localCatalogRecords, records.length);
   assert.equal(audit.lastRecheck.newClosures, 0);
   assert.equal(audit.lastRecheck.remainingRequirements, 22);

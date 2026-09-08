@@ -1,8 +1,8 @@
 {
-  "reviewDate": "2026-09-07",
-  "reviewDateLabel": "September 7, 2026",
-  "scope": "September 7 cross-reference and completion review of all 23 defined requirements across five blocks, plus five reviewed solid-waste-plan originals. Added signed intercounty-agreement, planning-authorization and facility-map tie-backs. Existing cessation, financial, PFAS-media and Plett findings remain; this is not a fresh reread of the whole repository.",
-  "note": "All five blocks have source-linked tie-backs and specific follow-ups. One local construction/lithology requirement was already satisfied; no additional request closes in this review. Missing tickets, missing documents doesn’t mean missing events. Supporting notes and alternate filenames do not increase the searchable record count.",
+  "reviewDate": "2026-09-08",
+  "reviewDateLabel": "September 8, 2026",
+  "scope": "September 8 manifest reconciliation: all 16 official downloads match their manifest fingerprints and existing catalog records. Fresh review of the 15 PDFs and eleven-sheet workbook adds LDFA, intermediate-aquifer map and Cadillac biosolids tie-backs. All 23 requirement dispositions were checked; this is not a fresh reread of the whole repository.",
+  "note": "All 16 manifest documents are already accounted for; repeat downloads do not create new records. Three additional source-linked context notes strengthen existing blocks but close no additional request. One local construction/lithology requirement remains satisfied, with 22 requests still open. Missing tickets, missing documents doesn’t mean missing events.",
   "blocks": [
     {
       "requestId": "receiving-history",
@@ -634,9 +634,73 @@
             "paired-wwtp-pfas-media",
             "paired-round-operating-logs"
           ]
+        },
+        {
+          "id": "ldfa-same-date-context",
+          "finding": "LDFA Special Investigation tables identify I-5 Influent 50385014001 and I-5 Effluent 50385014002/003 collected October 14, 2024. Influent PFOA/PFOS are 5.9/2.4 ppt; effluent and duplicate are each <2.0/<2.0 ppt. These are same-calendar-date LDFA entries, not established main-WWTP samples.",
+          "limitation": "No exact sampling times, hydraulic pairing, synchronized sludge/biosolids, operating logs or complete field/custody/QC package is supplied. Do not calculate main-WWTP removal efficiency. A15/A17 duplicate A13 pages 22/24, not independent corroboration. For November 18, 2024 samples 2411198-01/-02/-03, A18 prints analysis November 27, 2025 where A16/A17 print 2024; retain the unresolved date conflict.",
+          "sources": [
+            {
+              "recordId": "084-e7eec959f10a",
+              "sha256": "e7eec959f10a411b1b9b0212136d672b33b981edf9271f705c370b47dcf1a373",
+              "label": "LDFA effluent · A15 p1",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "recordId": "086-1079589f75b1",
+              "sha256": "1079589f75b181182cddc43fea5e7088653eb02a12ba31bd3a10b712bcb0175d",
+              "label": "LDFA I-5 influent · A17 p1",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "recordId": "085-3704b6477aba",
+              "sha256": "3704b6477abab548745a9c9c74e9c63fc41a271634979e6ad9f52e012ae64ea7",
+              "label": "Shallow-well analysis date · A16 p1",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "recordId": "087-aa1a20bd287e",
+              "sha256": "aa1a20bd287eac809dc4de47befb2ff493364897515babfcf441ab8094617696",
+              "label": "Conflicting analysis year · A18 pp1–2",
+              "pages": [
+                1,
+                2
+              ]
+            }
+          ],
+          "requirementIds": [
+            "cadillac-main-wwtp-influent-pfas",
+            "paired-wwtp-pfas-media",
+            "paired-round-operating-logs"
+          ]
+        },
+        {
+          "id": "cadillac-biosolids-summary-held",
+          "finding": "EGLE’s May 2025 FAQ includes Cadillac-specific biosolids results under Land Application Years: PFOS/PFOA 5.1/2.3 ppb for 2024 and 3.5/3.5 ppb for 2025; the 2021–2023 bounds are <5.5, <6.3 and <7.5 for both analytes. EGLE then stated it had no evidence of industrially impacted biosolids applied locally or land application as a groundwater-contamination source in this area.",
+          "limitation": "Blank Cadillac 2018 cells are missing, not nondetects; censored bounds are not zero. The table supplies no sample IDs, collection times, custody/QC package or paired influent/effluent/sludge round. Preserve EGLE’s statement as its May 2025 assessment, not categorical exclusion of all historical releases or pathways.",
+          "sources": [
+            {
+              "recordId": "096-032a2e728f83",
+              "sha256": "032a2e728f83ff129eb97bf736da87db1d6e7e3ebcf5c9676743035f21ecfc38",
+              "label": "Cadillac biosolids table and agency assessment · A24 pp4–5",
+              "pages": [
+                4,
+                5
+              ]
+            }
+          ],
+          "requirementIds": [
+            "paired-wwtp-pfas-media"
+          ]
         }
       ],
-      "followUp": "Seek native main-WWTP influent PFAS reports first, then align sample IDs and collection times with effluent and sludge/biosolids results, full QC and corresponding operator/flow logs. Keep leachate-source, LDFA, effluent and digester records separate until a documented pairing exists."
+      "followUp": "Seek native main-WWTP influent PFAS reports first, then align sample IDs and collection times with effluent and sludge/biosolids results, full QC and corresponding operator/flow logs. Keep leachate-source, LDFA, effluent and digester records separate until a documented pairing exists. Obtain the original I-5 work-order reports, sample-point definitions, timestamps and QC, and resolve the conflicting analysis year for samples 2411198-01/-02/-03. Seek the underlying Cadillac biosolids laboratory reports summarized in the May 2025 FAQ; do not join different media by year alone."
     },
     {
       "requestId": "subsurface-pathway",
@@ -690,9 +754,31 @@
             "local-hydraulic-tests",
             "site-specific-groundwater-map"
           ]
+        },
+        {
+          "id": "intermediate-aquifer-map-held",
+          "finding": "The February 26, 2025 MPART update includes AECOM Figure 4 dated February 24, 2025: a PFAS criteria map with groundwater-flow arrows using existing intermediate-aquifer data and approximate historic LDFA/Rexair capture zones. It supplies local directional context beyond a generic regional map.",
+          "limitation": "The figure does not identify 1140 Plett, provide surveyed hydraulic heads, contours or water-level measurement dates, or demonstrate a source-to-Plett connection. Page 27 labels the aquifer diagram an example rather than an accurate rendering; flow varies by aquifer. Intermediate-aquifer arrows do not establish flow in every aquifer or PFAS source attribution.",
+          "sources": [
+            {
+              "recordId": "092-6fa34f7c9b0d",
+              "sha256": "6fa34f7c9b0dcb59c47d00a87eafaba5628917216ad4058f7e2dc8411dbc51c1",
+              "label": "Existing-data flow map and aquifer caveat · A20 pp27–30",
+              "pages": [
+                27,
+                28,
+                29,
+                30
+              ]
+            }
+          ],
+          "requirementIds": [
+            "surveyed-elevations-water-levels",
+            "site-specific-groundwater-map"
+          ]
         }
       ],
-      "followUp": "Use the held local well inventory to identify candidate wells, then seek the certified 1140 Plett completion/screen record, surveyed wellhead elevations, one dated synoptic water-level round, identified-well hydraulic tests and a site-specific source-to-Plett flow map. Construction data alone cannot establish gradient or travel direction."
+      "followUp": "Use the held local well inventory to identify candidate wells, then seek the certified 1140 Plett completion/screen record, surveyed wellhead elevations, one dated synoptic water-level round, identified-well hydraulic tests and a site-specific source-to-Plett flow map. Construction data alone cannot establish gradient or travel direction. Request the underlying AECOM existing-data basis for Figure 4, including surveyed elevations, dated heads, aquifer/screen assignments and capture-zone assumptions, then determine whether it can be extended to the identified Plett receptor."
     },
     {
       "requestId": "plett-receptor-series",
@@ -736,8 +822,8 @@
       "held": [
         {
           "id": "aoi-context-held",
-          "finding": "The complete MPART comparability study and 26-page EGLE results compilation are held and remain separate from leachate receiving records.",
-          "limitation": "The study is not a PFAS source investigation. Anonymized address/LDFA results do not replace a source/receptor coordinate crosswalk, an explicit transect, synchronized source samples or matching field/QC records.",
+          "finding": "The complete MPART comparability study and 26-page EGLE results compilation are held. The fresh manifest review confirms A14–A18 are standalone copies of A13 pages 21–26, while AOI address numbering restarts between collection rounds; repeated views are not additional samples.",
+          "limitation": "The study is not a PFAS source investigation. Anonymized address/LDFA results do not replace a source/receptor coordinate crosswalk, an explicit transect, synchronized source samples or matching field/QC records. A13 page 19 has an undated, unnumbered TBA column; it must not be counted as a verified sample. Named field blanks in table notes are not a complete blank-results/QC package.",
           "sources": [
             {
               "recordId": "056-ae1a7fc25cfe",
@@ -747,7 +833,25 @@
             {
               "recordId": "082-18e25560cde6",
               "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
-              "label": "EGLE results compilation"
+              "label": "EGLE results compilation · pp1–8, 19–26",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ]
             }
           ],
           "requirementIds": [
@@ -758,7 +862,7 @@
           ]
         }
       ],
-      "followUp": "Seek a documented upgradient/cross-gradient/downgradient sampling plan, a complete source/receptor coordinate-to-sample-ID table, one synchronized source/receptor sampling round and its field/QC package. AOI maps and receptor comparability results guide the search but do not establish source attribution."
+      "followUp": "Seek a documented upgradient/cross-gradient/downgradient sampling plan, a complete source/receptor coordinate-to-sample-ID table, one synchronized source/receptor sampling round and its field/QC package. AOI maps and receptor comparability results guide the search but do not establish source attribution. Seek the original address/sample crosswalk and field-blank reports before joining numbered addresses across rounds; do not treat heat-map dates as shared sampling dates."
     }
   ]
 }

@@ -1,19 +1,22 @@
 {
   "auditDate": "2026-09-01",
-  "lastRecheckDate": "2026-09-07",
+  "lastRecheckDate": "2026-09-08",
   "closurePolicy": "Closure requires an explicit source-reviewed record ID, SHA-256 and review basis in verifiedEvidence. Keywords can identify candidates but never establish that a requirement is met.",
   "lastRecheck": {
-    "batch": "Five-block tie-back review with five solid-waste-plan originals",
+    "batch": "Sixteen-document A12–A24 official-link manifest reconciliation and bounded source review",
     "localCatalogRecords": 1618,
+    "newCatalogRecords": 0,
+    "manifestDocuments": 16,
     "newClosures": 0,
     "remainingRequirements": 22,
     "previouslySatisfiedRequirements": 1,
     "fullyCompletedBlocks": 0,
     "definedRequirements": 23,
-    "evidenceNotes": 21,
-    "uniqueCitedRecords": 50,
+    "evidenceNotes": 24,
+    "uniqueCitedRecords": 56,
     "visibleUpdatesFile": "evidence-request-queue-updates.json",
-    "note": "Reviewed all requirement dispositions and exact source cross-references, with focused cessation, finance, PFAS-media and Plett-page checks. No fresh full-corpus reread. Previously satisfied Wellogic construction/lithology is made visible; all other requests remain open."
+    "manifestAuditFile": "manifest-a12-a24-recheck.json",
+    "note": "All 16 official files re-downloaded, full hashes and byte sizes reconciled to existing records. Fifteen PDFs and the eleven-sheet workbook freshly reviewed. Added three partial tie-backs with facility, media, date and source-attribution boundaries; no new closure and no fresh full-corpus reread."
   },
   "catalogRecordsReviewed": 1594,
   "priorCards": 6,
@@ -36,7 +39,8 @@
     "September 7: tied all 18 held-evidence notes to specific requirements, added block-specific follow-ups and displayed the previously satisfied Wellogic item with its exact original. All five blocks remain partially fulfilled, not completed.",
     "Added March 18 and December 18, 2019 sources to the June 28 cessation account and five direct finance/adoption sources to annual revenue comparisons. No exact final load or transaction series inferred.",
     "Added distinct leachate, digester and effluent PFAS tie-backs with sample/date/matrix qualifications. These do not close the main-influent, paired-media or operating-log requirements.",
-    "Corrected March Plett sample date to March 7, 2025, 09:30 as printed (timezone unspecified), retaining the March 4 original filename; corrected mixed-source work-order page arithmetic."
+    "Corrected March Plett sample date to March 7, 2025, 09:30 as printed (timezone unspecified), retaining the March 4 original filename; corrected mixed-source work-order page arithmetic.",
+    "September 8: re-downloaded all 16 A12–A24 manifest originals and verified identical catalog hashes; added LDFA same-date analytical context, the A20 intermediate-aquifer flow map, and A24 Cadillac-specific biosolids summary. Preserved source date conflicts and all 22 outstanding requirements; no duplicate record-count increase."
   ],
   "heldEvidence": {
     "receivingHistory": [
@@ -59,12 +63,14 @@
       "Biosolids PFAS laboratory and QC packages",
       "Recent JWC quotation, April 2016 JWC/HESCO awards, February 2023 corroboration of 2016 installation, Kemira/Webb ferric-chloride authorizations and Mattoon & Lee pump award; not paired-media PFAS data or operating logs",
       "June 2019 form reports effluent PFAS but explicitly no influent sampling; source status is not a claim of zero effluent PFOS or measured removal efficiency",
-      "October 3, 2018 leachate primary/duplicate, December 26, 2018 Digester #4 primary/duplicate and statewide Cadillac effluent rows: independent evidence, not synchronized treatment data."
+      "October 3, 2018 leachate primary/duplicate, December 26, 2018 Digester #4 primary/duplicate and statewide Cadillac effluent rows: independent evidence, not synchronized treatment data.",
+      "LDFA same-calendar-date I-5 influent/effluent and May 2025 Cadillac biosolids summary: partial context only; no main-WWTP synchronized multi-media/operating/QC package."
     ],
     "subsurfacePathway": [
       "Regional USGS groundwater-flow reports",
       "Wexford site plan and north/south topographic figures",
-      "A secondary 1140 Plett Road well summary that is not driller-certified"
+      "A secondary 1140 Plett Road well summary that is not driller-certified",
+      "A20 page 28 AECOM February 24, 2025 existing-data intermediate-aquifer flow arrows and approximate historic capture zones; no demonstrated source-to-1140-Plett hydraulic link."
     ],
     "plettRoad": [
       "March 7, 2025 Cyclopure sample (09:30 printed; report March 19); original filename says March 4",
@@ -111,6 +117,20 @@
       "previouslySatisfiedRequirements": 1,
       "visibleUpdatesFile": "evidence-request-queue-updates.json",
       "note": "Validated source sections and financial columns, duplicate dispositions and public indexing. No new queue closure and no fresh full-corpus reread."
+    },
+    {
+      "date": "2026-09-07",
+      "batch": "Five-block tie-back review with five solid-waste-plan originals",
+      "localCatalogRecords": 1618,
+      "newClosures": 0,
+      "remainingRequirements": 22,
+      "previouslySatisfiedRequirements": 1,
+      "fullyCompletedBlocks": 0,
+      "definedRequirements": 23,
+      "evidenceNotes": 21,
+      "uniqueCitedRecords": 50,
+      "visibleUpdatesFile": "evidence-request-queue-updates.json",
+      "note": "Reviewed all requirement dispositions and exact source cross-references, with focused cessation, finance, PFAS-media and Plett-page checks. No fresh full-corpus reread. Previously satisfied Wellogic construction/lithology is made visible; all other requests remain open."
     }
   ],
   "initialCatalogRecordsReviewed": 1554,

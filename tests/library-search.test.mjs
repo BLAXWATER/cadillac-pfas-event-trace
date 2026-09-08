@@ -34,6 +34,11 @@ const records=registry.elements.flatMap(entry=>{
 const index=search.createLibrarySearchIndex(records,aliases);
 const ids=(query)=>search.searchLibrary(index,query).map(r=>r.id);
 
+test('every filename in the reconciled A12–A24 manifest finds its existing document', async()=>{
+  const manifest=JSON.parse(await readFile(new URL('../app/manifest-a12-a24-recheck.json',import.meta.url),'utf8'));
+  for(const row of manifest.records) assert.equal(ids(row.filename)[0],row.recordId,row.filename);
+});
+
 test('search registry includes each catalog row exactly once; aliases do not inflate count',()=>{
   assert.equal(registry.elements.length,catalogs.size);
   assert.equal(records.length,1618);

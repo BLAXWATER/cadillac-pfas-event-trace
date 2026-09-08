@@ -1,0 +1,448 @@
+{
+  "reviewDate": "2026-09-08",
+  "manifestName": "manifest.csv",
+  "manifestSha256": "d240fed0f916b299080edf496df9236b2407d8b66b69522e689b3371f8c08dae",
+  "scope": "All sixteen official URLs fetched anew, signatures/full SHA-256/byte sizes checked, catalog and public delivery reconciled. Fifteen PDFs (160 pages) and all eleven workbook sheets read; rendered key PDF pages checked against text. Text was extractable; OCR was not needed for this batch.",
+  "counts": {
+    "manifestRows": 16,
+    "verifiedOfficialDownloads": 16,
+    "verifiedPublicDownloads": 16,
+    "alreadyCataloged": 16,
+    "newRecords": 0,
+    "catalogTotal": 1618,
+    "newQueueClosures": 0,
+    "remainingRequirements": 22
+  },
+  "duplicateViews": [
+    {
+      "manifestId": "A14",
+      "compilation": "A13",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "manifestId": "A15",
+      "compilation": "A13",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "manifestId": "A16",
+      "compilation": "A13",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "manifestId": "A17",
+      "compilation": "A13",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "manifestId": "A18",
+      "compilation": "A13",
+      "pages": [
+        25,
+        26
+      ]
+    }
+  ],
+  "boundaries": [
+    "LDFA influent/effluent is not established main-WWTP influent/effluent. Same date alone does not establish hydraulic pairing or treatment removal.",
+    "A18 and A12 LDFA-only views print November 27, 2025 analysis dates for 2411198-01/-02/-03; A16/A17 and workbook shallow/intermediate views print 2024. Unresolved original discrepancy, not silently corrected.",
+    "A20 page28 existing-data intermediate-aquifer flow arrows and historic capture zones are partial context, not a demonstrated source-to-1140-Plett pathway.",
+    "A24 page4 supplies Cadillac biosolids summary data in ppb, not a full paired-media lab/QC package. Blank2018 is not nondetect; May2025 no-evidence statement is date-bounded.",
+    "A13 page19 TBA column lacks sample number/date and is not a verified sample; address numbering restarts across rounds.",
+    "A19a cyan=pending results; A19b cyan=proposed sample; A19d shapes distinguish residential/extraction/monitoring. Map dates are not common sampling dates."
+  ],
+  "records": [
+    {
+      "manifestId": "A12",
+      "filename": "A12 - PFAS Testing Results Summary Updated 2025-03-19.xlsx",
+      "recordId": "081-2093796f4fbe",
+      "catalog": "pfas-documents.json",
+      "sha256": "2093796f4fbe23a53e0a6e07225eaa5d4107b47ca2a86852f7df3b233309fc0e",
+      "size": 77635,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3060/Summary-Table-PFAS",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3060/Summary-Table-PFAS",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3060/Summary-Table-PFAS",
+      "sourceRetrievedAt": "2026-09-08T16:09:42.385427+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "2093796f4fbe23a53e0a6e07225eaa5d4107b47ca2a86852f7df3b233309fc0e",
+      "downloadedSize": 77635,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/081-2093796f4fbe.xlsx",
+        "status": 200,
+        "sha256": "2093796f4fbe23a53e0a6e07225eaa5d4107b47ca2a86852f7df3b233309fc0e",
+        "size": 77635,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A13",
+      "filename": "A13 - Complete Test Results.pdf",
+      "recordId": "082-18e25560cde6",
+      "catalog": "pfas-documents.json",
+      "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
+      "size": 221882,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3049/Complete-Results",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3049/Complete-Results",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3049/Complete-Results",
+      "sourceRetrievedAt": "2026-09-08T16:09:42.295154+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
+      "downloadedSize": 221882,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "bundled",
+        "url": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site/assets/082-18e25560cde6-BtSkmC49.pdf",
+        "status": 200,
+        "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
+        "size": 221882,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A14",
+      "filename": "A14 - Monitoring Wells.pdf",
+      "recordId": "083-3cf0ceaa3602",
+      "catalog": "pfas-documents.json",
+      "sha256": "3cf0ceaa360219dfba2d08e8f7b1cdfddefef83f6c2188b839f2acc4e2d5b8ee",
+      "size": 73401,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3054/Monitoring-Wells",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3054/Monitoring-Wells",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3054/Monitoring-Wells",
+      "sourceRetrievedAt": "2026-09-08T16:09:42.382427+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "3cf0ceaa360219dfba2d08e8f7b1cdfddefef83f6c2188b839f2acc4e2d5b8ee",
+      "downloadedSize": 73401,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/083-3cf0ceaa3602.pdf",
+        "status": 200,
+        "sha256": "3cf0ceaa360219dfba2d08e8f7b1cdfddefef83f6c2188b839f2acc4e2d5b8ee",
+        "size": 73401,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A15",
+      "filename": "A15 - Effluent.pdf",
+      "recordId": "084-e7eec959f10a",
+      "catalog": "pfas-documents.json",
+      "sha256": "e7eec959f10a411b1b9b0212136d672b33b981edf9271f705c370b47dcf1a373",
+      "size": 75333,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3050/Effluent",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3050/Effluent",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3050/Effluent",
+      "sourceRetrievedAt": "2026-09-08T16:09:42.387933+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "e7eec959f10a411b1b9b0212136d672b33b981edf9271f705c370b47dcf1a373",
+      "downloadedSize": 75333,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/084-e7eec959f10a.pdf",
+        "status": 200,
+        "sha256": "e7eec959f10a411b1b9b0212136d672b33b981edf9271f705c370b47dcf1a373",
+        "size": 75333,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A16",
+      "filename": "A16 - Shallow Wells.pdf",
+      "recordId": "085-3704b6477aba",
+      "catalog": "pfas-documents.json",
+      "sha256": "3704b6477abab548745a9c9c74e9c63fc41a271634979e6ad9f52e012ae64ea7",
+      "size": 75872,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3048/Shallow-Wells",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3048/Shallow-Wells",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3048/Shallow-Wells",
+      "sourceRetrievedAt": "2026-09-08T16:09:42.697203+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "3704b6477abab548745a9c9c74e9c63fc41a271634979e6ad9f52e012ae64ea7",
+      "downloadedSize": 75872,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/085-3704b6477aba.pdf",
+        "status": 200,
+        "sha256": "3704b6477abab548745a9c9c74e9c63fc41a271634979e6ad9f52e012ae64ea7",
+        "size": 75872,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A17",
+      "filename": "A17 - Intermediate Wells.pdf",
+      "recordId": "086-1079589f75b1",
+      "catalog": "pfas-documents.json",
+      "sha256": "1079589f75b181182cddc43fea5e7088653eb02a12ba31bd3a10b712bcb0175d",
+      "size": 76553,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3051/Intermediate-wells",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3051/Intermediate-wells",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3051/Intermediate-wells",
+      "sourceRetrievedAt": "2026-09-08T16:09:43.426892+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "1079589f75b181182cddc43fea5e7088653eb02a12ba31bd3a10b712bcb0175d",
+      "downloadedSize": 76553,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/086-1079589f75b1.pdf",
+        "status": 200,
+        "sha256": "1079589f75b181182cddc43fea5e7088653eb02a12ba31bd3a10b712bcb0175d",
+        "size": 76553,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A18",
+      "filename": "A18 - LDFA Results Only.pdf",
+      "recordId": "087-aa1a20bd287e",
+      "catalog": "pfas-documents.json",
+      "sha256": "aa1a20bd287eac809dc4de47befb2ff493364897515babfcf441ab8094617696",
+      "size": 74347,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3052/LDFA-results-only",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3052/LDFA-results-only",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3052/LDFA-results-only",
+      "sourceRetrievedAt": "2026-09-08T16:09:42.772068+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "aa1a20bd287eac809dc4de47befb2ff493364897515babfcf441ab8094617696",
+      "downloadedSize": 74347,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/087-aa1a20bd287e.pdf",
+        "status": 200,
+        "sha256": "aa1a20bd287eac809dc4de47befb2ff493364897515babfcf441ab8094617696",
+        "size": 74347,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A19a",
+      "filename": "A19a - PFAS Heat Map 2024-11-21.pdf",
+      "recordId": "088-6031f1171433",
+      "catalog": "pfas-documents.json",
+      "sha256": "6031f1171433d1e8533aad3360d0a2abe1d3c3bad8c2cf29c3e2155b6808abbe",
+      "size": 567687,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2959/PFAS-Heat-Map-11212024",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2959/PFAS-Heat-Map-11212024",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2959/PFAS-Heat-Map-11212024",
+      "sourceRetrievedAt": "2026-09-08T16:09:42.732825+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "6031f1171433d1e8533aad3360d0a2abe1d3c3bad8c2cf29c3e2155b6808abbe",
+      "downloadedSize": 567687,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/088-6031f1171433.pdf",
+        "status": 200,
+        "sha256": "6031f1171433d1e8533aad3360d0a2abe1d3c3bad8c2cf29c3e2155b6808abbe",
+        "size": 567687,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A19b",
+      "filename": "A19b - PFAS Heat Map 2024-12-17.pdf",
+      "recordId": "089-ca112f31eb2f",
+      "catalog": "pfas-documents.json",
+      "sha256": "ca112f31eb2fd99441ca70006939f44915ba28d1671fb7492327709f4f0b34e4",
+      "size": 578381,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2968/PFAS-Heat-Map-12172024",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2968/PFAS-Heat-Map-12172024",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2968/PFAS-Heat-Map-12172024",
+      "sourceRetrievedAt": "2026-09-08T16:09:43.046420+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "ca112f31eb2fd99441ca70006939f44915ba28d1671fb7492327709f4f0b34e4",
+      "downloadedSize": 578381,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/089-ca112f31eb2f.pdf",
+        "status": 200,
+        "sha256": "ca112f31eb2fd99441ca70006939f44915ba28d1671fb7492327709f4f0b34e4",
+        "size": 578381,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A19c",
+      "filename": "A19c - PFAS Heat Map 2025-01-31.pdf",
+      "recordId": "090-68769693ffef",
+      "catalog": "pfas-documents.json",
+      "sha256": "68769693ffef3569a81cd47554beb7c1f6495911ea86c0115133c92765b891a0",
+      "size": 574889,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3001",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3001/PFAS-Heat-Map-01312025?bidId=",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3001/PFAS-Heat-Map-01312025?bidId=",
+      "sourceRetrievedAt": "2026-09-08T16:09:43.290262+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "68769693ffef3569a81cd47554beb7c1f6495911ea86c0115133c92765b891a0",
+      "downloadedSize": 574889,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/090-68769693ffef.pdf",
+        "status": 200,
+        "sha256": "68769693ffef3569a81cd47554beb7c1f6495911ea86c0115133c92765b891a0",
+        "size": 574889,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A19d",
+      "filename": "A19d - PFAS Heat Map 2025-03-12.pdf",
+      "recordId": "091-5777febb616e",
+      "catalog": "pfas-documents.json",
+      "sha256": "5777febb616ee234cc64463f32a6ba530708bfa7033a5372a781f8b313aa0fa3",
+      "size": 562419,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3062/2025-03-12-Figure_3_Cadillac_AOI-Sampling-Heatmap_criteria",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3062/2025-03-12-Figure_3_Cadillac_AOI-Sampling-Heatmap_criteria",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3062/2025-03-12-Figure_3_Cadillac_AOI-Sampling-Heatmap_criteria",
+      "sourceRetrievedAt": "2026-09-08T16:09:43.149617+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "5777febb616ee234cc64463f32a6ba530708bfa7033a5372a781f8b313aa0fa3",
+      "downloadedSize": 562419,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/091-5777febb616e.pdf",
+        "status": 200,
+        "sha256": "5777febb616ee234cc64463f32a6ba530708bfa7033a5372a781f8b313aa0fa3",
+        "size": 562419,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A20",
+      "filename": "A20 - MPART Cadillac AOI Community Update 2025-02-26.pdf",
+      "recordId": "092-6fa34f7c9b0d",
+      "catalog": "pfas-documents.json",
+      "sha256": "6fa34f7c9b0dcb59c47d00a87eafaba5628917216ad4058f7e2dc8411dbc51c1",
+      "size": 2261474,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3027/MPART-2025-02-26-Cadillac-AoI-Update-Session",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3027/MPART-2025-02-26-Cadillac-AoI-Update-Session",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3027/MPART-2025-02-26-Cadillac-AoI-Update-Session",
+      "sourceRetrievedAt": "2026-09-08T16:09:43.460932+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "6fa34f7c9b0dcb59c47d00a87eafaba5628917216ad4058f7e2dc8411dbc51c1",
+      "downloadedSize": 2261474,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/092-6fa34f7c9b0d.pdf",
+        "status": 200,
+        "sha256": "6fa34f7c9b0dcb59c47d00a87eafaba5628917216ad4058f7e2dc8411dbc51c1",
+        "size": 2261474,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A21",
+      "filename": "A21 - MPART PFAS Community Meeting Cadillac AOI Slide Presentation.pdf",
+      "recordId": "093-f00398219857",
+      "catalog": "pfas-documents.json",
+      "sha256": "f003982198571107124dba827b4f51af485602caf374c255dd6f59a4145bf434",
+      "size": 5253280,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2958/PFAS-Town-Hall-Meeting-for-the-Cadillac-Industrial-Park-Area-of-Interest",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2958/PFAS-Town-Hall-Meeting-for-the-Cadillac-Industrial-Park-Area-of-Interest",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2958/PFAS-Town-Hall-Meeting-for-the-Cadillac-Industrial-Park-Area-of-Interest",
+      "sourceRetrievedAt": "2026-09-08T16:09:44.302862+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "f003982198571107124dba827b4f51af485602caf374c255dd6f59a4145bf434",
+      "downloadedSize": 5253280,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/093-f00398219857.pdf",
+        "status": 200,
+        "sha256": "f003982198571107124dba827b4f51af485602caf374c255dd6f59a4145bf434",
+        "size": 5253280,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A22",
+      "filename": "A22 - Water Availability and Additional PFAS Resources.pdf",
+      "recordId": "094-36f80ad42952",
+      "catalog": "pfas-documents.json",
+      "sha256": "36f80ad429526ca9769ca4dba8f2cc6115969f71e5cacad68cc3b851c12bbca2",
+      "size": 211836,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2973/News-Release---Water-Available--Additional-PFAS-Resource-Information---12-23-24",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2973/News-Release---Water-Available--Additional-PFAS-Resource-Information---12-23-24",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/2973/News-Release---Water-Available--Additional-PFAS-Resource-Information---12-23-24",
+      "sourceRetrievedAt": "2026-09-08T16:09:43.544979+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "36f80ad429526ca9769ca4dba8f2cc6115969f71e5cacad68cc3b851c12bbca2",
+      "downloadedSize": 211836,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/094-36f80ad42952.pdf",
+        "status": 200,
+        "sha256": "36f80ad429526ca9769ca4dba8f2cc6115969f71e5cacad68cc3b851c12bbca2",
+        "size": 211836,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A23",
+      "filename": "A23 - Cadillac PFAS Management Plan.pdf",
+      "recordId": "095-bc6d3b44f310",
+      "catalog": "pfas-documents.json",
+      "sha256": "bc6d3b44f31006edc17d7c4a3a3a46b17ba74f66901a87a81cfdc9d8fc0ea966",
+      "size": 689570,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3086/Cadillac-PFAS-Management-Plan",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3086/Cadillac-PFAS-Management-Plan",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3086/Cadillac-PFAS-Management-Plan",
+      "sourceRetrievedAt": "2026-09-08T16:09:43.964242+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "bc6d3b44f31006edc17d7c4a3a3a46b17ba74f66901a87a81cfdc9d8fc0ea966",
+      "downloadedSize": 689570,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/095-bc6d3b44f310.pdf",
+        "status": 200,
+        "sha256": "bc6d3b44f31006edc17d7c4a3a3a46b17ba74f66901a87a81cfdc9d8fc0ea966",
+        "size": 689570,
+        "verified": true
+      }
+    },
+    {
+      "manifestId": "A24",
+      "filename": "A24 - PFAS and Biosolids EGLE.pdf",
+      "recordId": "096-032a2e728f83",
+      "catalog": "pfas-documents.json",
+      "sha256": "032a2e728f83ff129eb97bf736da87db1d6e7e3ebcf5c9676743035f21ecfc38",
+      "size": 359976,
+      "sourceUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3095/2025-05-29-PFAS-and-Biosolids-FAQ",
+      "manifestResolvedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3095/2025-05-29-PFAS-and-Biosolids-FAQ",
+      "retrievedUrl": "https://www.cadillac-mi.net/DocumentCenter/View/3095/2025-05-29-PFAS-and-Biosolids-FAQ",
+      "sourceRetrievedAt": "2026-09-08T16:09:43.775016+00:00",
+      "sourceStatus": 200,
+      "downloadedSha256": "032a2e728f83ff129eb97bf736da87db1d6e7e3ebcf5c9676743035f21ecfc38",
+      "downloadedSize": 359976,
+      "disposition": "Already cataloged — reused unchanged original",
+      "publicDelivery": {
+        "kind": "archive",
+        "url": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/6270442d983214a178cc50c72412dadbac53d593/public/pfas-docs/096-032a2e728f83.pdf",
+        "status": 200,
+        "sha256": "032a2e728f83ff129eb97bf736da87db1d6e7e3ebcf5c9676743035f21ecfc38",
+        "size": 359976,
+        "verified": true
+      }
+    }
+  ]
+}

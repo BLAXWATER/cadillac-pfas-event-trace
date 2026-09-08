@@ -15,7 +15,7 @@ const note = id => allNotes.find(item => item.id === id);
 test('queue update covers all five blocks with exact canonical sources and valid PDF pages', () => {
   assert.deepEqual(updates.blocks.map(block => block.requestId).sort(), definitions.map(block => block.id).sort());
   assert.equal(new Set(allNotes.map(item => item.id)).size, allNotes.length);
-  assert.equal(allNotes.length, 21);
+  assert.equal(allNotes.length, 24);
   const ids = new Set();
   for (const item of allNotes) {
     assert.ok(item.finding.trim() && item.limitation.trim());
@@ -28,7 +28,7 @@ test('queue update covers all five blocks with exact canonical sources and valid
       ids.add(source.recordId);
     }
   }
-  assert.equal(ids.size, 50);
+  assert.equal(ids.size, 56);
 });
 
 test('every note ties to defined requests, and every requirement has a tie-back and a block follow-up', () => {
@@ -126,7 +126,7 @@ test('production queue renders current counts, all context notes and every outst
   const html = await response.text();
   const queue = html.match(/<section class="evidence-queue"[\s\S]*?<\/section>/)?.[0];
   assert.ok(queue);
-  const plain = queue.replaceAll('<!-- -->', '').replaceAll('&amp;', '&').replaceAll('&#x27;', "'").replaceAll('&quot;', '"');
+  const plain = queue.replaceAll('<!-- -->', '').replaceAll('&amp;', '&').replaceAll('&#x27;', "'").replaceAll('&quot;', '"').replaceAll('&lt;', '<').replaceAll('&gt;', '>');
   assert.ok(plain.includes('22 requests still needed across 5 blocks'));
   assert.ok(plain.includes('1 previously satisfied'));
   assert.ok(plain.includes('0 fully completed blocks'));

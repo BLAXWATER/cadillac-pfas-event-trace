@@ -1052,7 +1052,7 @@
     "rows": 612,
     "sheets": 11,
     "sha256": "2093796f4fbe23a53e0a6e07225eaa5d4107b47ca2a86852f7df3b233309fc0e",
-    "description": "Eleven-sheet EGLE and City of Cadillac PFAS results workbook updated March 19, 2025. It preserves municipal, residential, monitoring-well, effluent, shallow-well, intermediate-well and LDFA result tables in their original spreadsheet structure."
+    "description": "Eleven-sheet City of Cadillac-hosted PFAS results workbook, supplied as the March 19, 2025 summary. It preserves AOI address, residential, monitoring-well and LDFA investigation tables, including effluent and shallow/intermediate wells. LDFA influent is not identified as main-WWTP influent. The LDFA-only sheet prints November 27, 2025 analysis dates for three November 18, 2024 samples, conflicting with November 27, 2024 in the shallow/intermediate sheets; original values are preserved pending laboratory clarification."
   },
   {
     "id": "082-18e25560cde6",
@@ -1065,7 +1065,7 @@
     "pages": 26,
     "size": 221882,
     "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
-    "description": "Twenty-six-page EGLE compilation of Cadillac Industrial Park address results and LDFA special-investigation tables. It preserves sample IDs and collection dates for address rounds from October 30, 2024 through February 7, 2025, plus plant-effluent, I-5, S-series and I-series results. Address labels are anonymized and the compilation does not include the coordinate-to-sample crosswalk or chain-of-custody package needed to prove a source-to-receptor pathway.",
+    "description": "Twenty-six-page EGLE compilation of Cadillac Industrial Park address results and LDFA Special Investigation tables. Pages 21–26 are also supplied as the A14–A18 standalone views, not independent samples. Address numbering restarts between rounds; there is no coordinate crosswalk or complete field/custody/QC package. Page 19 contains an undated, unnumbered TBA column, not a verified sample. Pages 25–26 print a November 2025 analysis year for three November 2024 samples where pages 23–24 print 2024. LDFA results must not be relabeled main-WWTP samples.",
     "matchingSources": [
       {
         "name": "A13 - Complete Test Results.pdf",
@@ -1084,7 +1084,7 @@
     "pages": 1,
     "size": 73401,
     "sha256": "3cf0ceaa360219dfba2d08e8f7b1cdfddefef83f6c2188b839f2acc4e2d5b8ee",
-    "description": "One-page monitoring-well PFAS results subset drawn from the verified test-results source. It remains distinct as the supplied well-specific analytical view."
+    "description": "One-page monitoring-well PFAS table, identical to page 21 of A13 Complete Results. Seven columns cover September 1, 2021 and October 19, 2022. Sample-number and sample-depth rows are blank, and the two MW-1 columns are not explicitly labeled duplicates. This is analytical context, not a construction log, surveyed water-level round or coordinate/sample crosswalk."
   },
   {
     "id": "084-e7eec959f10a",
@@ -1097,7 +1097,7 @@
     "pages": 1,
     "size": 75333,
     "sha256": "e7eec959f10a411b1b9b0212136d672b33b981edf9271f705c370b47dcf1a373",
-    "description": "One-page Cadillac treatment-plant and I-5 effluent PFAS results table covering the supplied 2024-2025 sampling entries."
+    "description": "One-page LDFA Special Investigation effluent table, identical to A13 page 22. It lists Plant Effluent samples from September 10, 2024 and February 4, 2025, and I-5 Effluent/duplicate samples from October 14, 2024. These are LDFA investigation entries; the table does not establish main sewage-WWTP sample identity. No matching sludge round, sample times, operating logs or full custody/QC package is supplied."
   },
   {
     "id": "085-3704b6477aba",
@@ -1110,7 +1110,7 @@
     "pages": 1,
     "size": 75872,
     "sha256": "3704b6477abab548745a9c9c74e9c63fc41a271634979e6ad9f52e012ae64ea7",
-    "description": "One-page shallow-well PFAS results subset preserving the supplied 2024 analytical entries."
+    "description": "One-page LDFA Special Investigation shallow-well table, identical to A13 page 23. S-2 PFOA is 10.8 ppt on October 14, 2024 and 14 ppt on November 18, 2024; PFOS is <2.0 ppt in both entries. Methods differ (537.1(M) and 8327). The November sample's analysis date is printed as November 27, 2024, unlike A18's 2025 entry. Coordinates, construction and field/QC records are not supplied."
   },
   {
     "id": "086-1079589f75b1",
@@ -1123,7 +1123,7 @@
     "pages": 1,
     "size": 76553,
     "sha256": "1079589f75b181182cddc43fea5e7088653eb02a12ba31bd3a10b712bcb0175d",
-    "description": "One-page intermediate-well PFAS results subset preserving the supplied 2024-2025 analytical entries."
+    "description": "One-page LDFA Special Investigation intermediate-well table, identical to A13 page 24. I-5 Influent sample 50385014001, collected October 14, 2024, reports PFOA 5.9 ppt and PFOS 2.4 ppt. A15 lists I-5 effluent on that calendar date, but absent exact times, hydraulic pairing, sludge and operating/QC records this is not a main-WWTP treatment-removal study. The I-6 November analysis year differs from A18."
   },
   {
     "id": "087-aa1a20bd287e",
@@ -1136,7 +1136,7 @@
     "pages": 2,
     "size": 74347,
     "sha256": "aa1a20bd287eac809dc4de47befb2ff493364897515babfcf441ab8094617696",
-    "description": "Two-page LDFA-only compilation of influent, effluent and intermediate-well PFAS results. It is retained as the supplied project-specific analytical view."
+    "description": "Two-page LDFA-only investigation compilation, identical to A13 pages 25–26, covering I-series and S-series results plus I-5 influent/effluent. For samples 2411198-01, -02 and -03, November 18, 2024 collection is paired with a printed November 27, 2025 analysis date; A16/A17 instead print November 27, 2024. This unresolved source discrepancy is preserved, not silently corrected. These are alternate analytical views, not independent corroboration or main-WWTP influent identification."
   },
   {
     "id": "088-6031f1171433",
@@ -1149,7 +1149,7 @@
     "pages": 1,
     "size": 567687,
     "sha256": "6031f1171433d1e8533aad3360d0a2abe1d3c3bad8c2cf29c3e2155b6808abbe",
-    "description": "Cadillac-area PFAS heat map dated November 21, 2024. The map is preserved as a dated spatial snapshot and is not treated as a substitute for the underlying laboratory tables."
+    "description": "AECOM Figure 2 PFAS heat map dated November 21, 2024. Cyan marks sampled locations with results pending. Other colors distinguish nondetects, detections and results at or above the displayed Michigan criteria. This dated categorical map is not a measured plume boundary, groundwater-flow contour map or underlying laboratory package."
   },
   {
     "id": "089-ca112f31eb2f",
@@ -1162,7 +1162,7 @@
     "pages": 1,
     "size": 578381,
     "sha256": "ca112f31eb2fd99441ca70006939f44915ba28d1671fb7492327709f4f0b34e4",
-    "description": "Cadillac-area PFAS heat map dated December 17, 2024. It is a distinct dated spatial update, not a duplicate of the November map."
+    "description": "AECOM Figure 2 PFAS heat map dated December 17, 2024. Cyan marks proposed sample locations, unlike November's pending-results meaning; a proposed additional sampling area is outlined. Do not compare cyan counts across the two maps as a sampling-progress series. Map date does not establish a common sampling date."
   },
   {
     "id": "090-68769693ffef",
@@ -1175,7 +1175,7 @@
     "pages": 1,
     "size": 574889,
     "sha256": "68769693ffef3569a81cd47554beb7c1f6495911ea86c0115133c92765b891a0",
-    "description": "Cadillac-area PFAS heat map dated January 31, 2025. It is retained as a distinct dated spatial update."
+    "description": "AECOM Figure 3 PFAS criteria heat map dated January 31, 2025. It distinguishes the sampling-request area, proposed additional sampling and an Area Evaluated, no wells category; that category is not a nondetect result. It provides investigation geography, not hydraulic measurements, a complete coordinate/sample-ID table or source attribution."
   },
   {
     "id": "091-5777febb616e",
@@ -1188,7 +1188,7 @@
     "pages": 1,
     "size": 562419,
     "sha256": "5777febb616ee234cc64463f32a6ba530708bfa7033a5372a781f8b313aa0fa3",
-    "description": "Cadillac-area PFAS heat map dated March 12, 2025. It is retained as the latest spatial snapshot in the supplied four-map sequence."
+    "description": "AECOM Figure 3 PFAS criteria heat map dated March 12, 2025. Circles represent residential wells, squares extraction wells and triangles monitoring wells; extraction-well symbols must not be counted as residential exceedances. This is the latest dated map in this four-map set, not a demonstrated PFAS plume boundary or synchronized transect."
   },
   {
     "id": "092-6fa34f7c9b0d",
@@ -1201,7 +1201,7 @@
     "pages": 44,
     "size": 2261474,
     "sha256": "6fa34f7c9b0dcb59c47d00a87eafaba5628917216ad4058f7e2dc8411dbc51c1",
-    "description": "MPART Cadillac Area of Interest community update dated February 26, 2025. The 44-page agency record presents the investigation status, sampling information, maps and response context available on that date."
+    "description": "Forty-four-page MPART Cadillac AOI update dated February 26, 2025. Page 28 contains AECOM Figure 4 dated February 24: groundwater-flow arrows using existing intermediate-aquifer data and approximate historic LDFA/Rexair capture zones. It is a local partial tie-back, not a measured source-to-1140-Plett pathway. Page 30 concerns LDFA recovered-groundwater sampling; page 37 says definitive PFAS sources were unknown. Surveyed heads, water-level measurement dates, a complete coordinate crosswalk and full field/QC package are not supplied."
   },
   {
     "id": "093-f00398219857",
@@ -1214,7 +1214,7 @@
     "pages": 67,
     "size": 5253280,
     "sha256": "f003982198571107124dba827b4f51af485602caf374c255dd6f59a4145bf434",
-    "description": "Sixty-seven-page MPART Cadillac Area of Interest PFAS community-meeting slide deck from November 6, 2024. It preserves the agency presentation, maps and public-response material as delivered."
+    "description": "Sixty-seven-page MPART community-meeting presentation titled November 6, 2024; slide footers also show November 7. Pages 62–65 describe LDFA extraction wells, recovered-groundwater treatment and discharge, not the main sewage WWTP. Page 54 arrows concern surface-water flow, not groundwater. Page 45 states information was insufficient to determine the PFAS source; historical VOC/chromium attribution does not establish PFAS attribution."
   },
   {
     "id": "094-36f80ad42952",
@@ -1227,7 +1227,7 @@
     "pages": 1,
     "size": 211836,
     "sha256": "36f80ad429526ca9769ca4dba8f2cc6115969f71e5cacad68cc3b851c12bbca2",
-    "description": "December 23, 2024 City of Cadillac notice describing water availability and additional PFAS resources for properties in the study area."
+    "description": "December 23, 2024 City notice announcing bottled-water availability beginning December 24 for the study area and discussing interim assistance and possible municipal extensions. The approximately 100-or-fewer-property estimate is not an exceedance count. The notice does not document individual water receipt, completed connections, completed sampling or contamination-source attribution."
   },
   {
     "id": "095-bc6d3b44f310",
@@ -1240,7 +1240,7 @@
     "pages": 6,
     "size": 689570,
     "sha256": "bc6d3b44f31006edc17d7c4a3a3a46b17ba74f66901a87a81cfdc9d8fc0ea966",
-    "description": "City of Cadillac PFAS management plan updated October 27, 2025. It describes the municipal approach to private-well connections, coordination and funding; plan statements are not presented as proof that every project element was completed."
+    "description": "Six-page City of Cadillac PFAS management plan updated October 27, 2025. Proposed water-service phases total $7.925 million; funding and completion are not established. Narrative estimates of 150 properties with service available and 70 needing extensions differ from map legends showing 138/65. Map colors concern service availability, not contamination. This is mitigation planning, not a sampling transect or completed-connection record."
   },
   {
     "id": "096-032a2e728f83",
@@ -1253,7 +1253,7 @@
     "pages": 6,
     "size": 359976,
     "sha256": "032a2e728f83ff129eb97bf736da87db1d6e7e3ebcf5c9676743035f21ecfc38",
-    "description": "May 2025 EGLE PFAS-and-biosolids information record. It is retained as agency guidance and regulatory context rather than as a Cadillac-specific laboratory result."
+    "description": "Six-page May 2025 EGLE PFAS and Biosolids FAQ with Cadillac-specific summary data on page 4, not just general guidance. Under Land Application Years, Cadillac PFOS/PFOA are 5.1/2.3 ppb for 2024 and 3.5/3.5 ppb for 2025; 2021–2023 entries are <5.5, <6.3 and <7.5 for each analyte. Blank 2018 cells are not nondetects. Page 5 states EGLE then had no evidence of industrially impacted biosolids applied locally or land application as a local groundwater-contamination source. That historical assessment is not a universal source exclusion or a paired WWTP laboratory/QC package."
   },
   {
     "id": "097-e13fc785334f",

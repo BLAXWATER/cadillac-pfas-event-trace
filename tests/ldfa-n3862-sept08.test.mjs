@@ -14,7 +14,7 @@ test('three reviewed originals yield two additions, with an exact duplicate and 
   assert.equal(audit.counts.sourcePagesReviewed,13);
   assert.equal(audit.counts.catalogRecordsAfter-audit.counts.catalogRecordsBefore,2);
   assert.equal(audit.counts.catalogRecordsAfter,1620,'Historical intake count remains unchanged');
-  assert.equal(records.length,1622);
+  assert.equal(records.length,1623);
   for(const row of audit.records){
     assert.equal(byId(row.recordId).sha256,row.sha256);
     assert.equal(byId(row.recordId).size,row.size);
@@ -67,7 +67,7 @@ test('production HTML includes both new chronology findings and the current sear
   const response=await worker.fetch(new Request('http://localhost/',{headers:{accept:'text/html'}}),{ASSETS:{fetch:async()=>new Response('Not found',{status:404})}},{waitUntil(){},passThroughOnException(){}});
   assert.equal(response.status,200);
   const html=(await response.text()).replaceAll('<!-- -->','');
-  assert.match(html,/Search all 1,622 records/);
+  assert.match(html,/Search all 1,623 records/);
   assert.match(html,/LDFA discusses PFAS testing before closeout and seeks legal advice/);
   assert.match(html,/Signed landfill inspection preserves asbestos-record review and pond non-use/);
   assert.match(html,/22 requests still needed across 5 blocks/);

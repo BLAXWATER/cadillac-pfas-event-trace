@@ -1168,5 +1168,18 @@
     "size": 179840,
     "sha256": "cb4bdb5ff6aa40744ac7c08197e2d8d8aa08b4d4bbbae82482bdba5a4645a23f",
     "description": "1-page biosolids, fecal-coliform, pathogen, metals or nutrient analytical record for 2018."
+  },
+  {
+    "id": "lab-091-c2427c56e094",
+    "name": "ORIGINAL-J19915-1 UDS Level 2 Report Final Report.pdf",
+    "url": "/lab-docs/091-c2427c56e094.pdf",
+    "year": "2019",
+    "category": "Lab results & sampling",
+    "type": "PFAS effluent laboratory report",
+    "format": "PDF",
+    "pages": 22,
+    "size": 1978694,
+    "sha256": "c2427c56e09404188eb126a71c8e1bdca7a183dc7f43ea669a5a9970e06ce3e5",
+    "description": "Eurofins TestAmerica job 190-19915-1, released June 25, 2019; Lancaster subcontract report dated June 21. EPA 537 Version 1.1 Modified, 24 PFAS, water matrix. Primary Effluent 190-19915-1 / 1074244, collected June 4, 2019 at 13:15 EDT: PFOS 7.8 ng/L and PFOA 16 ng/L (PDF p8). Effluent Duplicate 190-19915-2 / 1074245 at 13:17 EDT: PFOS 7.1 ng/L and PFOA 15 ng/L (p9). The June 28 City status form’s 7.1/15 values match the duplicate; the statewide Table 3 values of 7.8/16 match the primary. These are two samples in one sampling event, not conflicting versions of a single sample. Equipment and field blanks (pp10–11) and method blank (p12) report nondetections, not zero. The package discloses an opening-CCV d5-NEtFOSAA recovery exception and high labeled fluorotelomer extraction-standard recoveries attributed to sample matrix (pp8–14); PFOS/PFOA results have no result qualifier. Chain-of-custody and receipt records are held (pp15–16, 21–22). No influent, landfill leachate, biosolids or groundwater sample is included. This does not establish treatment-removal efficiency, source causation or a final leachate delivery date. Custody shipping details concern laboratory samples, not leachate loads into the WWTP. The uploaded original is preserved byte-for-byte. Its PDF p16 receipt-log scan is clipped at the right edge; the existing timeline copy of the same report retains the complete page and remains available. Different renditions are not independent corroboration."
   }
 ]

@@ -34,6 +34,11 @@ const records=registry.elements.flatMap(entry=>{
 const index=search.createLibrarySearchIndex(records,aliases);
 const ids=(query)=>search.searchLibrary(index,query).map(r=>r.id);
 
+test('J19915 uploaded filename and laboratory job retrieve one newly indexed existing report',()=>{
+ for(const q of ['ORIGINAL-J19915-1 UDS Level 2 Report Final Report.pdf','J19915-1 UDS Level 2 Report Final Report.pdf','190-19915-1'])assert.equal(ids(q)[0],'lab-091-c2427c56e094',q);
+ assert.equal(ids('ORIGINAL-J19915-1 UDS Level 2 Report Final Report.pdf').filter(id=>id==='lab-091-c2427c56e094').length,1);
+});
+
 test('September 8 LDFA and N3862 upload filenames retrieve the reviewed originals',()=>{
   assert.equal(ids('LDFA Minutes 12-8-21 - Fight being held accountable.pdf')[0],'194-e0ad50e1248b');
   assert.equal(ids('N3862 Staff Report 11-01-22.pdf')[0],'006-0f46024ab583');
@@ -47,10 +52,10 @@ test('every filename in the reconciled A12–A24 manifest finds its existing doc
 
 test('search registry includes each catalog row exactly once; aliases do not inflate count',()=>{
   assert.equal(registry.elements.length,catalogs.size);
-  assert.equal(records.length,1622);
+  assert.equal(records.length,1623);
   assert.equal(index.length,records.length);
-  assert.equal(new Set(records.map(r=>r.id)).size,1622);
-  assert.equal(new Set(records.map(r=>r.sha256)).size,1622);
+  assert.equal(new Set(records.map(r=>r.id)).size,1623);
+  assert.equal(new Set(records.map(r=>r.sha256)).size,1623);
 });
 
 test('all stored canonical and displayed filenames retrieve their own record',()=>{

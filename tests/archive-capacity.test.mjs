@@ -9,7 +9,7 @@ import {root,loadDownloadDeliveryPlan} from '../scripts/document-download-integr
 const archivedIds=['149-e4e6ac86e7bc','007-9aecbfcf4abc','010-1aba682de0b8','104-6815e2f8b48e','140-3db93feeaf81','125-9e67bc822d9c','168-cdc906173203','151-5a0d25ca941a','165-676065b15331','098-044977305e5f','146-6b4e98f4c779'];
 test('large originals reuse identical pinned public copies without changing the library',async()=>{
   const plans=await loadDownloadDeliveryPlan();
-  assert.equal(plans.length,1622);
+  assert.equal(plans.length,1623);
   for(const id of archivedIds){
     const p=plans.find(p=>p.row.id===id);
     assert.equal(p.kind,'archive');
@@ -26,7 +26,7 @@ test('release omits only the redundant bundled copies of the eleven archived ori
   const assets=await readdir(path.join(root,'dist/client/assets'));
   for(const id of archivedIds)assert.ok(!assets.some(n=>n.startsWith(id+'-')&&n.endsWith('.pdf')));
   const plans=await loadDownloadDeliveryPlan();
-  assert.equal(plans.filter(p=>p.kind==='bundled').length,156);
+  assert.equal(plans.filter(p=>p.kind==='bundled').length,157);
   assert.equal(plans.filter(p=>p.kind==='archive').length,1466);
 });
 

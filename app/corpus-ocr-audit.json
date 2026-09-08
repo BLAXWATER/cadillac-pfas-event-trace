@@ -1,5 +1,5 @@
 {
-  "catalogFingerprint": "909d187980685e3e9c967180898e7eeca3d2ec51b87596b4e96d91dad7c41a24",
+  "catalogFingerprint": "e936ecd51da044fa4abdd34e08a581ec3ebaea9cfe6d09be21a1d959d43fa58c",
   "adidPart2Intake": {
     "date": "2026-09-08",
     "recordsAdded": 2,
@@ -41,15 +41,15 @@
     "Compared byte hashes, normalized selected text, rendered-page fingerprints, OCR evidence, page counts and metadata before duplicate classification."
   ],
   "stats": {
-    "catalogRecords": 1622,
-    "verifiedRecords": 1622,
-    "pdfRecords": 1464,
-    "pdfPages": 25472,
+    "catalogRecords": 1623,
+    "verifiedRecords": 1623,
+    "pdfRecords": 1465,
+    "pdfPages": 25494,
     "boundedReviewPagesWithoutFullOcr": 651,
     "imageRecords": 13,
-    "embeddedTextPages": 20791,
-    "ocrPages": 3984,
-    "ocrPagesWithText": 3630,
+    "embeddedTextPages": 20809,
+    "ocrPages": 3988,
+    "ocrPagesWithText": 3634,
     "manualReviewPages": 139,
     "missingHashes": 0,
     "hashFailures": 0,
@@ -634,5 +634,14 @@
     "embeddedTextPagesAdded": 2472,
     "visuallyScreenedSparsePagesWithoutOcr": 54,
     "scope": "Original byte/size/page verification and existing extraction used. Relevant sections and key values/headers visually checked; low-native pages visually screened. No successful new OCR or line-by-line review of unrelated pages is claimed. Historical corpus-audit methods remain historical."
+  },
+  "j19915Intake": {
+    "date": "2026-09-08",
+    "catalogRecordsAdded": 1,
+    "pdfPagesAddedToCatalog": 22,
+    "embeddedTextPagesAdded": 18,
+    "scannedPagesReviewedWithOcr": 4,
+    "scope": "All 22 supplied pages reviewed, including visual/OCR review of custody and receipt forms. Same laboratory job as existing timeline rendition, now indexed once. No new sampling event or fresh whole-corpus reread.",
+    "audit": "j19915-intake-audit.json"
   }
 }

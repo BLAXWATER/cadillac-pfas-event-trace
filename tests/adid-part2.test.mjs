@@ -13,7 +13,7 @@ const source=await readFile(new URL('../app/page.tsx',import.meta.url),'utf8');
 
 test('ADID Part2 reconciles 20 originals to two new records and 18 existing identities',async()=>{
  assert.deepEqual(audit.stats,{suppliedFiles:20,suppliedPages:2869,recordsBefore:1620,recordsAdded:2,existingIdentities:18,recordsAfter:1622});
- assert.equal(records.length,1622);
+ assert.equal(records.length,1623);
  assert.equal(audit.records.length,20);
  assert.equal(new Set(audit.records.map(r=>r.recordId)).size,20);
  assert.equal(audit.records.filter(r=>r.disposition==='new original').length,2);
@@ -70,7 +70,7 @@ test('production page exposes both new events, updated report and narrowed outst
  const response=await worker.fetch(new Request('http://localhost/',{headers:{accept:'text/html'}}),{ASSETS:{fetch:async()=>new Response('Not found',{status:404})}},{waitUntil(){},passThroughOnException(){}});
  assert.equal(response.status,200);
  const html=(await response.text()).replaceAll('<!-- -->','').replaceAll('&amp;','&').replaceAll('&#x27;',"'").replaceAll('&quot;','"');
- assert.match(html,/Search all 1,622 records/);
+ assert.match(html,/Search all 1,623 records/);
  for(const id of audit.newRecordIds){const e=finance.events.find(e=>e.sources.some(s=>s.recordId===id));assert.ok(html.includes(e.title));}
  assert.match(html,/Cadillac submits a source-confirmation and leachate cessation report/);
  assert.match(html,/Written cessation\/transition report: held/);

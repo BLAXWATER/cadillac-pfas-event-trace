@@ -3,8 +3,8 @@
     "suppliedFiles": 100,
     "suppliedPdfs": 100,
     "suppliedPdfPages": 1401,
-    "finalDistinctRecords": 98,
-    "newDistinctRecords": 90,
+    "finalDistinctRecords": 99,
+    "newDistinctRecords": 91,
     "existingRecordsReused": 8,
     "duplicateCopiesSuppressed": 2,
     "ocrPagesAttempted": 75,
@@ -12,7 +12,7 @@
     "visuallyFingerprintedPages": 1401,
     "existingPdfsTextCompared": 816,
     "existingPdfsVisuallyCompared": 586,
-    "publishedBytes": 70658074
+    "publishedBytes": 72636768
   },
   "methods": [
     "SHA-256 comparison across all 100 supplied PDFs and every existing catalog record",
@@ -50,6 +50,10 @@
     {
       "name": "Scan-based laboratory packages",
       "reason": "OCR was used for image-only or extraction-resistant pages, including encrypted WET reports, Trace revisions, toxicity studies and photographed field records."
+    },
+    {
+      "name": "J19915-1 searchable reconciliation — September 8, 2026",
+      "reason": "One laboratory record added to search for the existing June 4, 2019 sampling event. The supplied original is a previously reviewed rendition of the timeline report, not a new monitoring event. Preserve the complete receipt-log copy and the exact uploaded bytes; count the report once."
     }
   ]
 }

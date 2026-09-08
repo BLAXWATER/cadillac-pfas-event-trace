@@ -1,7 +1,7 @@
 {
   "reviewDate": "2026-09-08",
   "reviewDateLabel": "September 8, 2026",
-  "scope": "September 8 manifest reconciliation: all 16 official downloads match their manifest fingerprints and existing catalog records. Fresh review of the 15 PDFs and eleven-sheet workbook adds LDFA, intermediate-aquifer map and Cadillac biosolids tie-backs. A subsequent three-PDF review adds the 2022 N3862 report's early-2019 injection statement to the transition evidence. The 2020 LDFA minutes and signed 2015 air-inspection scan add historical context, not missing analytical or leachate transaction packages. All 23 requirement dispositions were checked; this is not a fresh reread of the whole repository. The subsequent 20-file ADID Part2 review reconciles 18 existing originals and two new work-session originals; a separate three-page June28, 2019 form recheck distinguishes the written cessation/transition report and system signature from final-load details.",
+  "scope": "September 8 manifest reconciliation: all 16 official downloads match their manifest fingerprints and existing catalog records. Fresh review of the 15 PDFs and eleven-sheet workbook adds LDFA, intermediate-aquifer map and Cadillac biosolids tie-backs. A subsequent three-PDF review adds the 2022 N3862 report's early-2019 injection statement to the transition evidence. The 2020 LDFA minutes and signed 2015 air-inspection scan add historical context, not missing analytical or leachate transaction packages. All 23 requirement dispositions were checked; this is not a fresh reread of the whole repository. The subsequent 20-file ADID Part2 review reconciles 18 existing originals and two new work-session originals; a separate three-page June28, 2019 form recheck distinguishes the written cessation/transition report and system signature from final-load details. J19915-1 is reconciled with its existing timeline rendition and indexed once in the laboratory archive; primary/duplicate results, custody and QC caveats are cross-linked without closing an unrelated request.",
   "note": "All 16 manifest documents are already accounted for; repeat downloads do not create new records. The later batch adds one LDFA record and a materially distinct signed inspection version, retaining one exact staff-report duplicate under its existing record. These additions close no additional request. One local construction/lithology requirement remains satisfied, with 22 requests still open. Missing tickets, missing documents doesn’t mean missing events. ADID filename aliases preserve the same original identities; only the two standalone work-session originals increase the catalog count. The written cessation/transition report is accounted for, while the exact final-load/effective-stop-date request remains open.",
   "blocks": [
     {
@@ -195,7 +195,9 @@
               "recordId": "006-0f46024ab583",
               "sha256": "0f46024ab58339fb3ee92e00ae3afb01c8d92a6c1c87906116491a8ad025635b",
               "label": "2022 staff report: early-2019 injection · p4",
-              "pages": [4]
+              "pages": [
+                4
+              ]
             }
           ],
           "requirementIds": [
@@ -720,6 +722,52 @@
           ],
           "requirementIds": [
             "paired-wwtp-pfas-media"
+          ]
+        },
+        {
+          "id": "j19915-effluent-package-held",
+          "finding": "Primary Effluent 190-19915-1 / 1074244, collected June 4, 2019 at 13:15 EDT: PFOS 7.8 ng/L and PFOA 16 ng/L (PDF p8). Effluent Duplicate 190-19915-2 / 1074245 at 13:17 EDT: PFOS 7.1 ng/L and PFOA 15 ng/L (p9). The June 28 City status form’s 7.1/15 values match the duplicate; the statewide Table 3 values of 7.8/16 match the primary. These are two samples in one sampling event, not conflicting versions of a single sample. The underlying analytical package, blanks and custody forms are held.",
+          "limitation": "Equipment and field blanks (pp10–11) and method blank (p12) report nondetections, not zero. The package discloses an opening-CCV d5-NEtFOSAA recovery exception and high labeled fluorotelomer extraction-standard recoveries attributed to sample matrix (pp8–14); PFOS/PFOA results have no result qualifier. No influent, landfill leachate, biosolids or groundwater sample is included. This does not establish treatment-removal efficiency, source causation or a final leachate delivery date. Custody shipping details concern laboratory samples, not leachate loads into the WWTP. The uploaded original is preserved byte-for-byte. Its PDF p16 receipt-log scan is clipped at the right edge; the existing timeline copy of the same report retains the complete page and remains available. Different renditions are not independent corroboration.",
+          "sources": [
+            {
+              "recordId": "lab-091-c2427c56e094",
+              "sha256": "c2427c56e09404188eb126a71c8e1bdca7a183dc7f43ea669a5a9970e06ce3e5",
+              "label": "J19915-1 results, QC and custody · pp8–16, 21–22",
+              "pages": [
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                21,
+                22
+              ]
+            },
+            {
+              "recordId": "form-submission-034-00d98416b456",
+              "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+              "label": "City submission · p1",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "recordId": "102-03b43f8e8597",
+              "sha256": "03b43f8e859721d74882c546b2e0e76933e02cc7ea33b49d64127056b69aa6a4",
+              "label": "Statewide Cadillac row · Table 3, PDF p83",
+              "pages": [
+                83
+              ]
+            }
+          ],
+          "requirementIds": [
+            "cadillac-main-wwtp-influent-pfas",
+            "paired-wwtp-pfas-media",
+            "paired-round-operating-logs"
           ]
         }
       ],

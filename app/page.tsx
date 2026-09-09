@@ -51,6 +51,7 @@ import leachateFinance from "./leachate-finance-findings.json";
 import solidWastePlans from "./solid-waste-plan-findings.json";
 import wexfordAudit from "./wexford-audit.json";
 import wexfordDocuments from "./wexford-documents.json";
+import hearingRecords from "./hearing-sept09-records.json";
 import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } from "./bundled-public-assets";
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
@@ -332,6 +333,24 @@ const formatBytes = (bytes: number) => {
 };
 
 const events: Event[] = [
+  {
+    year: "2018", date: "2018-03-21", isoDate: "2018-03-21", time: "7:30–9:00 PM",
+    timeBasis: "Formal hearing opening and closing in the transcript",
+    phase: "Public hearing and paid leachate treatment", kind: "regulatory", category: "12 · Landfill & leachate",
+    title: "Hearing records paid leachate treatment and earlier daily deliveries",
+    finding: "Jeff Dietlin states that Cadillac received payment to treat leachate (transcript PDF p26). He recalls an earlier seven-day delivery schedule of 70,000–80,000 gallons per day, contrasting weekday-only deliveries and the need for steady feeding rather than slugs (p27). Marcus Peccia reports approximately 14 million gallons treated in 2016 (p22). The transcript establishes March 21, 2018 as the hearing date.",
+    significance: "Direct testimony corroborates the receiving and paid-treatment relationship, but does not date the earlier daily-volume period, reconstruct every delivery, or prove PFAS removal. Do not annualize the recalled daily volumes. Smith's 95% statement concerns claimed water-volume recovery at another landfill, not chemical similarity. The exact final load remains unverified.",
+    sources: [0].map(i => ({...archivedSource(hearingRecords[i].name, hearingRecords[i].url, hearingRecords[i].pages, hearingRecords[i].description, {eventStamp: "2018-03-21 7:30–9:00 PM", basis: "Transcript opening, closing and certification", note: "69 physical PDF pages include cover, certification and index. Certification graphics were visually inspected; no cryptographic validation claimed."}), page:26})),
+  },
+  {
+    year: "2018", date: "2018-03-21", isoDate: "2018-03-21", time: noTime,
+    timeBasis: "Hearing materials; written comments extend February–April 2018", phase: "Proposed safeguards and public participation",
+    kind: "regulatory", category: "12 · Landfill & leachate",
+    title: "DEQ explains relocation and casing safeguards; written comments preserve both viewpoints",
+    finding: "DEQ's presentation describes moving the proposed well to avoid existing contamination and extra casing to prevent carry-down during drilling (hearing packet p7). Its aquifer drawing is a general schematic, not a measured cross-section. Written comments question monitoring and financial assurance; the collection also includes a signed supporting letter (p19). The mayor's letter is duplicated, not two independent statements. Sign-in Yes/No entries indicate intent to speak, not support or opposition.",
+    significance: "The separate OGMD response addresses updated analyses, relocation and a $33,000 plugging/restoration bond, and recommends permit issuance. These are agency statements and proposed requirements, not proof of subsequent compliance or injection commencement. Its March 19 hearing reference conflicts with the March 21 transcript. Additional insurance, final delivery and actual injection-start records are not established here.",
+    sources: [2,1,3].map(i => ({...archivedSource(hearingRecords[i].name, hearingRecords[i].url, hearingRecords[i].pages, hearingRecords[i].description, {eventStamp: i === 3 ? "Response date not established" : "2018 hearing record", basis: "Document content; separate component dates preserved", note: "Public comments remain attributed; proposed safeguards are not completed inspections. Personal contact details are not reproduced in this summary."}), page:i===2?7:i===1?10:2})),
+  },
   {
     year: "2020",
     date: "2020-12-08",

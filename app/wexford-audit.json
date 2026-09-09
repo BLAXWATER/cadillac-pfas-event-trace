@@ -9,7 +9,7 @@
     "sourceOcrPages": 441,
     "sourceOcrPagesWithText": 424,
     "sourceManualReviewPages": 8,
-    "finalDistinctRecords": 111,
+    "finalDistinctRecords": 115,
     "existingCatalogRecordsPreserved": 19,
     "recordsAddedThisPass": 85,
     "exactExistingRecordsReused": 17,
@@ -17,8 +17,8 @@
     "actualDuplicateFilesRemoved": 5,
     "nonPrimaryRecordsExcluded": 9,
     "duplicateLikeLabelsRemoved": 12,
-    "publishedPages": 2340,
-    "publishedBytes": 188687255,
+    "publishedPages": 2457,
+    "publishedBytes": 192157625,
     "latestRepeatIntakeFilesReviewed": 42,
     "latestRepeatIntakePagesReviewed": 230,
     "latestRepeatIntakeDistinctContentHashes": 41,
@@ -28,6 +28,7 @@
     "latestRepeatIntakeRecordsAdded": 0
   },
   "methods": [
+    "September 9, 2026: four hearing originals (117 pages) reviewed. Transcript read fully with key-page visual checks; written comments and hearing packet visually read in full, with uncertain handwriting excluded from claims. OGMD response fully read with key-page visual checks. Earlier OCR statistics remain historical.",
     "September 8, 2026: all three pages of the signed November 18, 2015 DEQ/MACES inspection and the existing three-page reflowed export were read in text and rendered visuals. Added the materially distinct signed version, not a new inspection event; prior source/OCR statistics below remain historical. See ldfa-n3862-sept08-review.json.",
     "September 7, 2026 solid-waste-plan intake: five full originals added (651 pages), with bounded text screening and visual checks of cited approval, agreement, table and map pages. This is not a claim of complete new page-by-page OCR; details are retained in solid-waste-plan-intake-audit.json. Earlier source/OCR/pass statistics below describe their original historical reviews.",
     "SHA-256 comparison across every supplied file, all existing evidence catalogs and the previously linked timeline source",

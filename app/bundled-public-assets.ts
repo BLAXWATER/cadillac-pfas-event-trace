@@ -50,6 +50,10 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/wexford-docs/112-dacaccbf5061.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/wexford-docs/113-84ca68576d11.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/wexford-docs/114-302cac40449a.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/wexford-docs/115-1a26b8e7ef8d.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/1988-cadillac-ri-234880.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/lab-docs/091-c2427c56e094.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/195-ab25bfa3b3c4.pdf", { eager: true, import: "default", query: "?url" }),

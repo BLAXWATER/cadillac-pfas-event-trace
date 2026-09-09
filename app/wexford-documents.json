@@ -1337,5 +1337,57 @@
     "size": 113571,
     "sha256": "d8141f278b56cfe7c2b3a0aa06c6264c381fdf44db6860dd52e31a53f4a3c81f",
     "description": "Signed DEQ/MACES report N386232267, activity November 18, 2015, with handwritten November 24, 2015 date and signature marks on p3. Same inspection narrative as record 102-9011dd4b0fe6, but this scan preserves original header/contact and execution evidence; not a second inspection or independent corroboration. Page 1 mentions a recent late-reporting VN. Page 2 reports reviewed asbestos shipment records with generator/transporter, quantity and receipt details and no discrepancies; the actual records are not attached and are not leachate-to-WWTP tickets. The aeration pond had not been used in the preceding 12 months and removal from the permit would be requested, not already approved or physically completed. The conclusion concerns applicable air permitting at the visit, not all environmental compliance or PFAS clearance."
+  },
+  {
+    "id": "112-dacaccbf5061",
+    "name": "61366 Hearing - Transcript.PDF",
+    "url": "/wexford-docs/112-dacaccbf5061.pdf",
+    "year": "2018",
+    "category": "Wexford landfill & leachate",
+    "type": "Public hearing and permit review",
+    "format": "PDF",
+    "pages": 69,
+    "size": 610746,
+    "sha256": "dacaccbf50614b5703e8b1ee44e19d02de6dd40774d1f18043e3cd7e09cc856e",
+    "description": "March 21, 2018 transcript: Dietlin states Cadillac received payment for leachate treatment (PDF p26), recalling earlier 70,000–80,000 gallons/day during seven-day deliveries (p27), without specifying that period. Peccia reports approximately 14 million gallons in 2016 (p22). Testimony is not a receiving log or PFAS-removal measurement."
+  },
+  {
+    "id": "113-84ca68576d11",
+    "name": "61366 Hearing - Written Comments.PDF",
+    "url": "/wexford-docs/113-84ca68576d11.pdf",
+    "year": "2018",
+    "category": "Wexford landfill & leachate",
+    "type": "Public hearing and permit review",
+    "format": "PDF",
+    "pages": 19,
+    "size": 614721,
+    "sha256": "84ca68576d11988435610877cd26cd86057387d0fdd32ad079ad7882b5ea6d28",
+    "description": "February–April 2018 written comments question sampling, financial assurance and historical water impacts; a signed supporting letter is also preserved (p19). The mayoral letter on pp14 and16 is duplicated. Comments are attributed statements, not agency findings or new laboratory results."
+  },
+  {
+    "id": "114-302cac40449a",
+    "name": "61366 Hearing 2018-03-21.PDF",
+    "url": "/wexford-docs/114-302cac40449a.pdf",
+    "year": "2018",
+    "category": "Wexford landfill & leachate",
+    "type": "Public hearing and permit review",
+    "format": "PDF",
+    "pages": 23,
+    "size": 2193732,
+    "sha256": "302cac40449aa16d9e105cbec02ecc7495ba72a5ceb552ab3f6dd8e20266636b",
+    "description": "DEQ hearing materials describe moving the proposed well to avoid existing contamination and extra casing to prevent carry-down during drilling (p7). Includes a general aquifer schematic, proposed containment/monitoring, informal notes and EPA-transmitted sign-in sheets. Proposed safeguards are not proof of subsequent compliance."
+  },
+  {
+    "id": "115-1a26b8e7ef8d",
+    "name": "61366 Hearing - OGMD Response.PDF",
+    "url": "/wexford-docs/115-1a26b8e7ef8d.pdf",
+    "year": "2018",
+    "category": "Wexford landfill & leachate",
+    "type": "Public hearing and permit review",
+    "format": "PDF",
+    "pages": 6,
+    "size": 51171,
+    "sha256": "1a26b8e7ef8d45dd9788291ec79de706e495b3c34faa2bb58b5d03a7abc68dee",
+    "description": "Substantive OGMD response describes updated waste analyses, relocation to avoid carrying shallow contamination downward, containment and monitoring expectations, and a $33,000 plugging/restoration bond. Recommends issuance; not proof injection began. Its March19 hearing date conflicts with the March21 transcript."
   }
 ]

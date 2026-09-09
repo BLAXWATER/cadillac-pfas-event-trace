@@ -673,7 +673,7 @@
     "pages": 16,
     "size": 948370,
     "sha256": "760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51",
-    "description": "Sixteen-page Cadillac WWTP application attachment addressing septage and nondomestic wastewater. The record identifies 33,600 gallons per day of landfill leachate and documents the plant's industrial pretreatment framework. The supplied 'original' PDF is byte-different but renders identically on every page."
+    "description": "Sixteen-page Cadillac WWTP application attachment. Page 1 checks No for septage acceptance and separately lists landfill leachate as 33,600 under a printed MGD heading; the apparent unit mismatch remains unresolved and is not a verified gallons-per-day figure. Includes biosolids analyses and land-application site information. Page 8 has a handwritten note reporting resampling because low solids raised concerns about the results. This is not a receiving log."
   },
   {
     "id": "053-a42a24d25774",

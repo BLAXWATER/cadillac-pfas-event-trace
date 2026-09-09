@@ -9,6 +9,18 @@
       "summary": "Verified and held: actual leachate offloading, the landfill–WWTP relationship and the submitted June 28, 2019 City source-status and cessation/transition report. Review of HNQ-VZP8-TWNRX version 1 is complete: page 2 reports Wexford County Landfill’s source status as “PFOS eliminated” using “Other: Deep Well injection”; page 3 records Jeffrey Dietlin’s Submitted status. This is not a laboratory finding of zero PFOS throughout the WWTP. That written statement is not missing. Seven narrower requests remain for individual transactions, signed agreements and the exact final-load details or effective stop date.",
       "held": [
         {
+          "id": "september9-ipp-flow-review",
+          "finding": "The 2011 annual IPP report lists Wexford copper-related Technical Review Criteria noncompliance and return to compliance Pending (pp24–25). The 2012 application attachment checks No for septage while separately listing leachate. The 2017 application reports 0.04 MGD (40,000 gallons/day), distinct from the SIU sheet's 33,000 gallons/day intermittent entry.",
+          "limitation": "The 2012 entry reads 33,600 under an MGD heading, an unresolved unit mismatch. These are historical compliance and reported average-flow records, not per-load tickets, invoices or evidence of the exact final delivery. No request is closed by this review; the receiving-history workbook remains withheld pending corrections.",
+          "sources": [
+            {"recordId":"038-8191c7e18aac","sha256":"8191c7e18aac4f155de74b11e2233529db07192506e5b38ba238ae3e5a3a44fa","label":"2011 annual IPP report · pp24–25","pages":[24,25]},
+            {"recordId":"052-760656b79f1f","sha256":"760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51","label":"Application attachment · pp1,8","pages":[1,8]},
+            {"recordId":"080-6a540cadcdc6","sha256":"6a540cadcdc6fb9200560fcfd59897410932872fa6e48ca880ee5a8266642960","label":"2017 application · p14","pages":[14]},
+            {"recordId":"037-1f7e70d66b30","sha256":"1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3","label":"Wexford SIU sheet · p1","pages":[1]}
+          ],
+          "requirementIds": ["wexford-leachate-load-tickets","cadillac-wexford-receiving-logs","final-leachate-delivery-record"]
+        },
+        {
           "id": "solid-waste-agreement-held",
           "finding": "The signed September 19, 1995 Missaukee–Wexford DPW solid-waste disposal agreement requires authorized commercial-hauler lists and provides for tipping fees on delivery, with fees separately set by resolution.",
           "limitation": "This agreement concerns solid waste into Wexford landfill, not the 2009 Wexford–Cadillac leachate-treatment agreement. No numerical rate schedule, actual payments, individual loads or signed later renewals are supplied.",

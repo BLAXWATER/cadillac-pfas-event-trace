@@ -26,7 +26,7 @@ async function inspect(delivery) {
   }
   const length = Number(response.headers.get("content-length"));
   if (!Number.isFinite(length)) return `${row.catalog}:${row.id} omitted Content-Length`;
-  if (length !== row.size) {
+  if (length !== row.size || process.env.DOWNLOAD_AUDIT_FULL === "1") {
     const bodyResponse = await fetch(source.rawUrl, {
       redirect: "manual",
       signal: AbortSignal.timeout(timeoutMs),

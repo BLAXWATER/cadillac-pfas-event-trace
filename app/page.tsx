@@ -3238,7 +3238,7 @@ const meta: Record<Kind, { label: string; icon: typeof Factory }> = {
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
   const [previewFailed, setPreviewFailed] = useState(false);
-  const previewUrl = sourcePreviewUrl(source);
+  const previewUrl = sourcePreviewUrl(source) ?? (source.url ? bundledFirstPagePreview(source.url) : undefined);
   const previewAvailable = Boolean(previewUrl && !previewFailed);
   const displayName = formatSourceDisplayName(source.displayName ?? source.name, source.format, linked);
   const mediaKind = sourceMediaKind(source.format);
@@ -3304,7 +3304,7 @@ function catalogSource(document: CatalogDocument): Source {
   return {
     name: document.name,
     url: document.url,
-    preview: format === "PDF" ? bundledFirstPagePreview(document.url) : undefined,
+    preview: bundledFirstPagePreview(document.url),
     pages: document.pages ?? undefined,
     format,
     role: "Primary source",
@@ -3466,6 +3466,7 @@ export default function Home() {
     const matchesQuery = !normalizedReferenceQuery || `${document.name} ${document.format} ${document.type} ${"description" in document ? document.description : ""}`.toLowerCase().includes(normalizedReferenceQuery);
     return matchesType && matchesQuery;
   });
+  const selectedPreviewUrl = selected ? sourcePreviewUrl(selected) ?? (selected.url ? bundledFirstPagePreview(selected.url) : undefined) : undefined;
   const selectedDownloadUrl = selected?.url
     ? bundledDocumentDownload(selected.url)
       ?? sourceDownloadUrl(selected.url, selected.format, (url) => withPdfStartPage(url, selected.page))
@@ -4156,16 +4157,16 @@ export default function Home() {
               <DialogHeader className="document-dialog-header">
                 <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <div className="document-dialog-actions">
-                  <span className="document-preview-status">{selected.preview ? "First-page preview" : "File details"}</span>
+                  <span className="document-preview-status">{selectedPreviewUrl ? (selected.format === "PDF" ? "First-page preview" : "Source content preview") : "File details"}</span>
                   {selectedDownloadUrl && <Button asChild variant="outline" size="sm"><a href={selectedDownloadUrl} target="_blank" rel="noreferrer" download={selected.name} aria-label={`Download ${selected.name}`}><Download aria-hidden="true" />Download</a></Button>}
                   {selectedDownloadUrl && <DocumentShareButton key={`${selectedDownloadUrl}-${selected.name}`} name={selected.name} downloadUrl={selectedDownloadUrl} />}
                 </div>
               </DialogHeader>
               <div className="document-frame">
-                {selected.preview ? (
+                {selectedPreviewUrl ? (
                   <figure className="document-preview-page">
-                    <img src={selected.preview} alt={`First-page preview of ${selected.name}`} />
-                    <figcaption>Page 1 preview{selected.pages ? ` · ${selected.pages} total pages in the download` : ""}</figcaption>
+                    <img src={selectedPreviewUrl} alt={`Document preview of ${selected.name}`} />
+                    <figcaption>{selected.format === "PDF" ? "Page 1 preview" : sourceMediaKind(selected.format) === "image" ? "Original source image" : "Content excerpt from the original file; not original page layout. Download for the complete file."}{selected.pages ? ` · ${selected.pages} total pages in the download` : ""}</figcaption>
                   </figure>
                 ) : (
                   <div className="unsupported-document">

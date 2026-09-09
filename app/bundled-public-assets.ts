@@ -1,4 +1,5 @@
 import firstPagePreviewManifest from "./first-page-preview-manifest.json";
+import nonPdfPreviewManifest from "./nonpdf-preview-manifest.json";
 
 const bundledAssets = {
   ...import.meta.glob("../public/optimized-source-previews/*.webp", {
@@ -49,6 +50,7 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/findings-docs/1988-cadillac-ri-234880.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/lab-docs/091-c2427c56e094.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/195-ab25bfa3b3c4.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/196-fa41c0f607d9.pdf", { eager: true, import: "default", query: "?url" }),
@@ -790,8 +792,8 @@ function publicDocumentPath(sourceUrl: string): string | undefined {
 
 export function bundledFirstPagePreview(sourceUrl: string): string | undefined {
   const path = publicDocumentPath(sourceUrl);
-  if (!path || !/\.pdf$/i.test(path)) return undefined;
-  const firstPagePath = (firstPagePreviewManifest as Record<string, string>)[path];
+  if (!path) return undefined;
+  const firstPagePath = (firstPagePreviewManifest as Record<string, string>)[path] ?? (nonPdfPreviewManifest as Record<string, {preview: string}>)[path]?.preview;
   if (!firstPagePath) return undefined;
   return bundledAssets[`../public${firstPagePath}`];
 }

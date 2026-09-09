@@ -41,7 +41,9 @@ export function sourcePreviewUrl(source: {
   url?: string;
 }): string | undefined {
   if (source.preview) return source.preview;
-  return sourceMediaKind(source.format) === "image" ? source.url : undefined;
+  return sourceMediaKind(source.format) === "image" && source.url
+    ? sourceDownloadUrl(source.url, source.format, (url) => url)
+    : undefined;
 }
 
 export function sourceDocumentUrl(

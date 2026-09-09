@@ -13,8 +13,10 @@ const vite = await createServer({
   appType: "custom",
   configFile: false,
   root,
+  cacheDir: `${root}/.sites-runtime/test-cache/ui-components`,
+  optimizeDeps: { noDiscovery: true, include: [] },
   resolve: { alias: { "@": root } },
-  server: { middlewareMode: true },
+  server: { middlewareMode: true, hmr: false },
 });
 
 after(async () => {
@@ -70,6 +72,14 @@ test("keeps explicit application text at or above the 11pt minimum", async () =>
   assert.match(css, /\.kind-badge\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
   assert.match(css, /\.site-shell small\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
   assert.match(css, /\.site-shell \[data-slot="badge"\]\s*\{[^}]*font-size:\s*var\(--font-11pt\)/);
+});
+
+test("enlarges only the document preview close icon by 20 percent", async () => {
+  const css = await readFile(path.join(root, "app", "globals.css"), "utf8");
+  const dialog = await readFile(path.join(root, "components", "ui", "dialog.tsx"), "utf8");
+
+  assert.match(dialog, /:size-4/);
+  assert.match(css, /\.document-dialog > \[data-slot="dialog-close"\] > svg\s*\{\s*width:\s*1\.2rem;\s*height:\s*1\.2rem;\s*\}/);
 });
 
 test("contains the document reader and primary controls on mobile screens", async () => {
@@ -152,7 +162,7 @@ test("uses independent media handlers for document and image formats", async () 
   assert.equal(sourceMediaKind("PNG"), "image");
   assert.equal(sourceMediaKind("CSV"), "spreadsheet");
   assert.equal(sourceMediaKind("DOCX"), "office");
-  assert.equal(sourcePreviewUrl({ format: "PNG", url: "/evidence/page.png" }), "/evidence/page.png");
+  assert.equal(sourcePreviewUrl({ format: "PNG", url: "/evidence/page.png" }), "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/c8cbace229e1c034abf26a5774e3cd85bc786de0/public/evidence/page.png");
   assert.equal(sourcePreviewUrl({ format: "PDF", url: "/evidence/report.pdf" }), undefined);
   assert.equal(sourceDocumentUrl("/evidence/page.html", "HTML", () => "wrong"), `${repositoryAssetBase}/evidence/page.html`);
   assert.equal(sourceDocumentUrl("/evidence/photo.jpg", "JPG", () => "wrong"), `${repositoryAssetBase}/evidence/photo.jpg`);
@@ -172,10 +182,10 @@ test("opens document records in the reader and exposes a dedicated download acti
 
   assert.match(page, /className="source-button"[^>]*onClick=\{\(\) => linked && open\(source\)\}/);
   assert.match(page, /function DocumentPopoutButton/);
-  assert.match(page, /className="document-preview-status">[^\n]*"First-page preview"/);
-  assert.match(page, /<figcaption>Page 1 preview/);
+  assert.match(page, /className="document-preview-status">[^\n]*documentPreviewCaption\(selected\)/);
+  assert.match(page, /<figcaption>\{documentPreviewCaption\(selected\)\}/);
   assert.doesNotMatch(page, /<iframe src=\{selectedViewerUrl\}/);
-  assert.match(page, /download=\{selected\.name\}/);
+  assert.match(page, /<DocumentDownloadButton[^\n]*downloadUrl=\{selectedDownloadUrl\}/);
   assert.match(bundledAssets, /import\.meta\.glob\("\.\.\/public\/first-page-previews\/\*\*\/\*\.webp"/);
   assert.match(bundledAssets, /export function bundledFirstPagePreview/);
   assert.equal(
@@ -194,7 +204,7 @@ test("opens document records in the reader and exposes a dedicated download acti
   assert.match(bundledAssets, /compliance-docs\/012-16dae2e386d4\.pdf/);
   assert.match(bundledAssets, /export function bundledDocumentDownload/);
   assert.match(page, /bundledDocumentDownload\(selected\.url\)/);
-  assert.equal((page.match(/target="_blank"/g) ?? []).length, 1);
+  assert.equal((page.match(/target="_blank"/g) ?? []).length, 0);
 });
 
 test("removes exactly the first period from every multi-period library filename", async () => {
@@ -208,7 +218,7 @@ test("removes exactly the first period from every multi-period library filename"
     typeof record.name === "string" && (record.name.match(/\./g) ?? []).length > 1,
   );
 
-  assert.equal(records.length, 1623);
+  assert.equal(records.length, 1627);
   assert.equal(multiPeriodRecords.length, 196);
 
   for (const record of multiPeriodRecords) {

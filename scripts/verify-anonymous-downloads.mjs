@@ -21,6 +21,11 @@ async function inspect(delivery) {
     return `${row.catalog}:${row.id} redirects (${response.status}) to ${response.headers.get("location") ?? "an unknown location"}`;
   }
   if (!response.ok) return `${row.catalog}:${row.id} returned HTTP ${response.status}`;
+  // Download fetches the immutable original anonymously before invoking Save.
+  // Wildcard CORS keeps this valid on both the public site and local previews.
+  if (response.headers.get("access-control-allow-origin") !== "*") {
+    return `${row.catalog}:${row.id} does not allow anonymous browser downloads (CORS)`;
+  }
   if (response.url && new URL(response.url).hostname !== "raw.githubusercontent.com") {
     return `${row.catalog}:${row.id} resolved to an unexpected host: ${response.url}`;
   }

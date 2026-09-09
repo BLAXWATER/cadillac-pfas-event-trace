@@ -50,3 +50,4 @@ timeout \
   "${vinext}" build
 
 run_node_script "scripts/prune-worker-assets.mjs"
+run_node_script "scripts/verify-built-previews.mjs"

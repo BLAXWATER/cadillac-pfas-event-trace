@@ -48,6 +48,8 @@ export default defineConfig(async () => {
     // instead of relying on root-level public files that the production asset
     // uploader does not publish.
     publicDir: false,
+    // Every original needs an HTTP URL for Share, including tiny CSV/GeoJSON files.
+    build: { assetsInlineLimit: 0 },
     server: {
       host: "0.0.0.0",
       allowedHosts: ["terminal.local"],

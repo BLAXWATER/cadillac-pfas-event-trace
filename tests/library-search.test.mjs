@@ -9,7 +9,7 @@ import ts from 'typescript';
 import { documentSummary } from '../app/document-summary.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
-const vite = await createServer({ appType:'custom', configFile:false, root, server:{middlewareMode:true} });
+const vite = await createServer({ appType:'custom', configFile:false, root, cacheDir:`${root}/.sites-runtime/test-cache/library-search`, optimizeDeps:{noDiscovery:true,include:[]}, server:{middlewareMode:true,hmr:false} });
 after(() => vite.close());
 const search = await vite.ssrLoadModule('/app/library-search.ts');
 const { formatSourceDisplayName } = await vite.ssrLoadModule('/app/source-display-name.ts');

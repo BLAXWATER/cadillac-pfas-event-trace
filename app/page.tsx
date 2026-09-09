@@ -8,7 +8,6 @@ import {
   ArrowDown,
   CheckCircle2,
   Database,
-  Download,
   FileArchive,
   FileCode2,
   FileImage,
@@ -56,6 +55,9 @@ import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } 
 import { withPdfStartPage } from "./pdf-source-url";
 import { formatSourceDisplayName } from "./source-display-name";
 import { DocumentShareButton } from "./document-share-button";
+import { documentPreviewCaption } from "./document-controls";
+import { DocumentDownloadButton } from "./document-download-button";
+import { DocumentPreviewImage } from "./document-preview-image";
 import { documentSummary } from "./document-summary.mjs";
 import verifiedFilenameAliases from "./verified-filename-aliases.json";
 import { createLibrarySearchIndex, initialLibrarySearchState, librarySearchReducer, librarySearchWindow, normalizeLibrarySearch, searchLibrary, SEARCH_BATCH_SIZE } from "./library-search";
@@ -87,6 +89,7 @@ type Source = {
   displayName?: string;
   url?: string;
   preview?: string;
+  previewPage?: number;
   renderedPages?: string[];
   pages?: number;
   page?: number;
@@ -2769,6 +2772,7 @@ const events: Event[] = [
       }),
       page: 2,
       preview: bundledPublicAsset("/source-previews/056-7c7c68a98555-p2.jpg"),
+      previewPage: 2,
     }],
   },
   {
@@ -2791,6 +2795,7 @@ const events: Event[] = [
       }),
       page: 5,
       preview: bundledPublicAsset("/source-previews/056-7c7c68a98555-p5.jpg"),
+      previewPage: 5,
     }],
   },
   {
@@ -2813,6 +2818,7 @@ const events: Event[] = [
       }),
       page: 13,
       preview: bundledPublicAsset("/source-previews/056-7c7c68a98555-p13.jpg"),
+      previewPage: 13,
     }],
   },
   {
@@ -2835,6 +2841,7 @@ const events: Event[] = [
       }),
       page: 22,
       preview: bundledPublicAsset("/source-previews/056-7c7c68a98555-p22.jpg"),
+      previewPage: 22,
     }],
   },
   {
@@ -3323,7 +3330,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
         <button type="button" className="source-button" aria-disabled={!linked} disabled={!linked} onClick={() => linked && open(source)}>{triggerContents}</button>
       </TooltipTrigger>
       <TooltipContent side="right" sideOffset={12} className="source-tooltip">
-        {previewAvailable ? <img src={previewUrl} alt={`First-page preview of ${displayName}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className={`missing-preview missing-preview--${mediaKind}`}>{formatIcon}<span>{source.format} preview not available</span><small>The complete source can still be downloaded below.</small></div>}
+        {previewAvailable ? <img src={previewUrl} alt={`${documentPreviewCaption(source)} of ${displayName}`} className="source-preview" onError={() => setPreviewFailed(true)} /> : <div className={`missing-preview missing-preview--${mediaKind}`}>{formatIcon}<span>{source.format} preview not available</span><small>The complete source can still be downloaded below.</small></div>}
         <div className="source-tooltip-copy">
           <p className="source-role">{source.role}</p>
           <p className="source-full-name" title={source.name}>{displayName}</p>
@@ -4206,16 +4213,16 @@ export default function Home() {
               <DialogHeader className="document-dialog-header">
                 <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <div className="document-dialog-actions">
-                  <span className="document-preview-status">{selectedPreviewUrl ? (selected.format === "PDF" ? "First-page preview" : "Source content preview") : "File details"}</span>
-                  {selectedDownloadUrl && <Button asChild variant="outline" size="sm"><a href={selectedDownloadUrl} target="_blank" rel="noreferrer" download={selected.name} aria-label={`Download ${selected.name}`}><Download aria-hidden="true" />Download</a></Button>}
+                  <span className="document-preview-status">{selectedPreviewUrl ? (selected.format === "PDF" ? documentPreviewCaption(selected) : "Source content preview") : "File details"}</span>
+                  {selectedDownloadUrl && <DocumentDownloadButton key={`${selectedDownloadUrl}-${selected.name}`} name={selected.name} downloadUrl={selectedDownloadUrl} />}
                   {selectedDownloadUrl && <DocumentShareButton key={`${selectedDownloadUrl}-${selected.name}`} name={selected.name} downloadUrl={selectedDownloadUrl} />}
                 </div>
               </DialogHeader>
               <div className="document-frame">
                 {selectedPreviewUrl ? (
                   <figure className="document-preview-page">
-                    <img src={selectedPreviewUrl} alt={`Document preview of ${selected.name}`} />
-                    <figcaption>{selected.format === "PDF" ? "Page 1 preview" : sourceMediaKind(selected.format) === "image" ? "Original source image" : "Content excerpt from the original file; not original page layout. Download for the complete file."}{selected.pages ? ` · ${selected.pages} total pages in the download` : ""}</figcaption>
+                    <DocumentPreviewImage key={selectedPreviewUrl} src={selectedPreviewUrl} name={selected.name} caption={documentPreviewCaption(selected)} />
+                    <figcaption>{documentPreviewCaption(selected)}{selected.pages ? ` · ${selected.pages} total pages in the download` : ""}</figcaption>
                   </figure>
                 ) : (
                   <div className="unsupported-document">

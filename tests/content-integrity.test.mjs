@@ -37,6 +37,16 @@ async function assertDeliveredOriginal(asset) {
   }
 }
 
+async function assertVerifiedPreview(asset, sourceSha256) {
+  const manifest = JSON.parse(await readFile(path.join(appDirectory, "first-page-preview-manifest.json"), "utf8"));
+  const proof = JSON.parse(await readFile(path.join(appDirectory, "document-preview-provenance.json"), "utf8"))[asset];
+  assert.equal(proof.sourceSha256, sourceSha256);
+  assert.equal(proof.page, 1);
+  assert.equal(proof.preview, manifest[asset]);
+  const bytes = await readFile(path.join(publicDirectory, manifest[asset].replace(/^\//, "")));
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), proof.previewSha256);
+}
+
 async function walkFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const nested = await Promise.all(entries.map(async (entry) => {
@@ -2446,7 +2456,7 @@ test("batch 46 retains the historical groundwater records and signed LDFA resolu
 
     const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
     assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
-    assert.equal(previewManifest[expected.asset], expected.preview);
+    await assertVerifiedPreview(expected.asset, expected.sha256);
     assert.ok((await stat(path.join(publicDirectory, expected.preview.replace(/^\//, "")))).size > 0);
     await assertDeliveredOriginal(expected.asset);
   }
@@ -2495,7 +2505,7 @@ test("batch 47 localizes the complete TestAmerica package and preserves the limi
 
   const bytes = await readFile(path.join(publicDirectory, expected.asset.replace(/^\//, "")));
   assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256);
-  assert.equal(previewManifest[expected.asset], expected.preview);
+  await assertVerifiedPreview(expected.asset, expected.sha256);
   assert.ok((await stat(path.join(publicDirectory, expected.preview.replace(/^\//, "")))).size > 0);
   assert.match(bundledSource, new RegExp(expected.asset.replace(/^\//, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
 

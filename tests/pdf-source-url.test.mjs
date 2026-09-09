@@ -9,8 +9,10 @@ const vite = await createServer({
   appType: "custom",
   configFile: false,
   root,
+  cacheDir: `${root}/.sites-runtime/test-cache/pdf-source-url`,
+  optimizeDeps: { noDiscovery: true, include: [] },
   resolve: { alias: { "@": root } },
-  server: { middlewareMode: true },
+  server: { middlewareMode: true, hmr: false },
 });
 
 after(async () => {

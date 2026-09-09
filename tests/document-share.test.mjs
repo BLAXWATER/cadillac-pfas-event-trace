@@ -7,7 +7,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { createServer } from 'vite';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
-const vite = await createServer({ appType: 'custom', configFile: false, root, resolve: { alias: { '@': root } }, server: { middlewareMode: true, hmr: false } });
+const vite = await createServer({ appType: 'custom', configFile: false, root, cacheDir: `${root}/.sites-runtime/test-cache/document-share`, optimizeDeps: { noDiscovery: true, include: [] }, resolve: { alias: { '@': root } }, server: { middlewareMode: true, hmr: false } });
 after(() => vite.close());
 const { documentShareUrl, shareDocumentLink } = await vite.ssrLoadModule('/app/document-share.ts');
 const { sourceDownloadUrl } = await vite.ssrLoadModule('/app/source-media.ts');
@@ -67,8 +67,10 @@ test('one shared, accessible viewer control covers every existing Download locat
   assert.match(html,/aria-label="Share Report.pdf"/);
   assert.match(html,/type="button"/);
   assert.match(html,/role="status" aria-live="polite"/);
-  assert.equal((page.match(/download=\{/g)??[]).length,1,'all downloads use the single viewer');
-  assert.match(page,/href=\{selectedDownloadUrl\}[\s\S]*?<DocumentShareButton key=\{`\$\{selectedDownloadUrl\}-\$\{selected.name\}`\} name=\{selected.name\} downloadUrl=\{selectedDownloadUrl\}/);
+  assert.equal((page.match(/<DocumentDownloadButton /g)??[]).length,1,'all downloads use the single viewer');
+  for (const control of ['DocumentDownloadButton','DocumentShareButton']) {
+    assert.match(page,new RegExp(`<${control}[^\\n]+name=\\{selected.name\\} downloadUrl=\\{selectedDownloadUrl\\}`));
+  }
   assert.match(component,/if \(busy.current\) return/);
   assert.match(component,/disabled=\{pending\}/);
   assert.match(component,/readOnly value=\{manualUrl\}/);

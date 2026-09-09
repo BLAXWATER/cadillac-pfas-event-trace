@@ -278,7 +278,8 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .dataset-shape span + span::before { content: "·"; position: absolute; left: -8px; color: var(--brand-gray); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-.document-dialog { width: min(1500px, 96vw) !important; max-width: none !important; height: 94vh; padding: 0 !important; gap: 0 !important; overflow: hidden; border-color: var(--border) !important; background: #050708 !important; }
+.document-dialog { width: min(1500px, 96vw) !important; max-width: none !important; height: 94vh; padding: 0 !important; gap: 0 !important; grid-template-rows: auto minmax(0, 1fr); overflow: hidden; border-color: var(--border) !important; background: #050708 !important; }
+.document-dialog > [data-slot="dialog-close"] > svg { width: 1.2rem; height: 1.2rem; }
 .document-dialog-header { width: 100%; min-width: 0; min-height: 92px; box-sizing: border-box; display: flex !important; flex-direction: row !important; justify-content: space-between; align-items: center; gap: 18px; padding: 16px 54px 16px 20px; border-bottom: 1px solid var(--border); }
 .document-dialog-header > div:first-child { flex: 1 1 auto; min-width: 0; }
 .document-dialog-header h2 { width: 100%; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -286,17 +287,21 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .document-share-control { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
 .document-share-status { flex-basis: 100%; color: var(--brand-cyan); font-size: var(--font-11pt); line-height: 1.4; }
 .document-share-status:empty { display: none; }
+.document-download-control { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
+.document-download-status { flex-basis: 100%; color: var(--brand-cyan); font-size: var(--font-11pt); line-height: 1.4; }
+.document-download-status:empty { display: none; }
 .document-share-link { display: grid; gap: 4px; width: 100%; min-width: 0; color: var(--brand-gray); font-size: var(--font-11pt); }
 .document-share-link input { width: 100%; min-width: 0; padding: 8px; border: 1px solid var(--border); border-radius: 4px; background: #050708; color: white; font: inherit; }
 .document-share-link input:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 .document-preview-status { padding: 6px 10px; border: 1px solid #235263; border-radius: 999px; color: var(--primary); font-family: var(--font-mono); font-size: var(--font-11pt); letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
 .document-meta { max-width: 1040px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.document-frame { min-height: 0; height: calc(94vh - 93px); display: grid; place-items: center; background: var(--brand-white); }
+.document-frame { min-height: 0; height: auto; display: grid; place-items: center; background: var(--brand-white); }
 .document-frame iframe { width: 100%; height: 100%; border: 0; background: white; }
 .document-frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .document-preview-page { width: 100%; height: 100%; min-height: 0; margin: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 12px; padding: 20px; overflow: hidden; background: #8d969c; }
 .document-preview-page img { justify-self: center; min-height: 0; border: 1px solid #cfd5d8; background: white; box-shadow: 0 18px 45px rgb(0 0 0 / .3); }
 .document-preview-page figcaption { color: #050708; font-family: var(--font-mono); font-size: var(--font-11pt); font-weight: 700; text-align: center; }
+.document-preview-page .unsupported-document { min-height: 0; overflow: auto; background: #050708; color: #e8eef5; }
 .rendered-document-frame { display: block; overflow: auto; padding: 24px; background: #8d969c; }
 .document-pages { display: grid; justify-items: center; gap: 24px; width: 100%; }
 .document-page { width: min(100%, 1050px); margin: 0; background: white; box-shadow: 0 10px 34px rgba(5, 7, 8, .3); }

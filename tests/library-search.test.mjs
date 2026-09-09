@@ -6,6 +6,7 @@ import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { createServer } from 'vite';
 import ts from 'typescript';
+import { documentSummary } from '../app/document-summary.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const vite = await createServer({ appType:'custom', configFile:false, root, server:{middlewareMode:true} });
@@ -129,7 +130,7 @@ test('all broad-query matches are reachable with no duplicates or skipped final 
 
 // Execute the actual JSX and its event handlers from page.tsx, not a duplicate test UI.
 const jsx=searchSection.getText(ast);
-const body=`function view(React, props) { const {librarySearchRecords,globalQuery,dispatchGlobalSearch,globalSearchResults,visibleGlobalResults,remainingGlobalResults,normalizeLibrarySearch,SEARCH_BATCH_SIZE,formatSourceDisplayName,Search,Badge,Button,DocumentPopoutButton,setSelected}=props; return (${jsx}); }`;
+const body=`function view(React, props) { const {librarySearchRecords,globalQuery,dispatchGlobalSearch,globalSearchResults,visibleGlobalResults,remainingGlobalResults,normalizeLibrarySearch,SEARCH_BATCH_SIZE,formatSourceDisplayName,documentSummary,Search,Badge,Button,DocumentPopoutButton,setSelected}=props; return (${jsx}); }`;
 const view=new Function('React',ts.transpileModule(body,{compilerOptions:{jsx:ts.JsxEmit.React,target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText+'; return view;')(React);
 const Badge=({children})=>React.createElement('span',null,children);
 const Button=({children,variant,...props})=>React.createElement('button',props,children);
@@ -139,7 +140,7 @@ function ui(state,onAction) {
   const window=search.librarySearchWindow(matches,state.limit);
   return view(React,{librarySearchRecords:records,globalQuery:state.query,dispatchGlobalSearch:onAction,
     globalSearchResults:matches,visibleGlobalResults:window.visible,remainingGlobalResults:window.remaining,
-    ...search,formatSourceDisplayName,Search:()=>null,Badge,Button,DocumentPopoutButton:()=>null,setSelected:()=>{}});
+    ...search,formatSourceDisplayName,documentSummary,Search:()=>null,Badge,Button,DocumentPopoutButton:()=>null,setSelected:()=>{}});
 }
 
 test('real search UI exposes and executes Show more, reaches the last result, and resets on typing',()=>{

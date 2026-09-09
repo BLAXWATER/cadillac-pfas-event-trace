@@ -525,7 +525,7 @@
     "pages": 22,
     "size": 2609068,
     "sha256": "c1b8c7e5c6e09b0163825967f7da96f8c3886424a77757774844f2178ac87a27",
-    "description": "22-page ipp/industrial pretreatment record record associated with 2018. Retained as materially distinct after SHA-256, normalized-text, metadata and page-overlap comparison."
+    "description": "TestAmerica job 190-18036-1, IPP - Avon: samples collected November 7, 2018; report released December 10, 2018. Lancaster reports Avon Auto PFBS 660, PFOS 7.1 and PFOA 0.94 J ng/L; Avon 5th Street PFOS 1.8 ng/L. The field blank contains PFOS 1.4 J and 6:2 FTS 3.5 ng/L, limiting interpretation of low detections. Avon Auto has matrix interference and internal/extraction-standard QC exceptions. Avon Duplic. is nondetect for all listed analytes, but its paired location and collection time are not identified. J means estimated; nondetect is not zero. Documents source investigation, not quantified contribution to WWTP PFAS or a leachate delivery."
   },
   {
     "id": "045-8c39a23ed761",

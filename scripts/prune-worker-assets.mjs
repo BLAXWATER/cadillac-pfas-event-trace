@@ -16,7 +16,7 @@ async function visit(dir){
     if(e.isSymbolicLink())throw new Error('Unexpected symlink in server build');
     const p=path.join(dir,e.name);
     if(e.isDirectory())await visit(p);
-    else if(e.isFile()&&/\.(webp|pdf|geojson|zip|html|txt|csv)$/i.test(e.name))candidates.push(p);
+    else if(e.isFile()&&(/\.(webp|pdf|geojson|zip|html|txt|csv|xlsx|xls|doc|docx|msg|svg)$/i.test(e.name)||/^record-placement-manifest-[\w-]+\.json$/i.test(e.name)))candidates.push(p);
   }
 }
 await visit(server);

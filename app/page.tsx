@@ -2575,6 +2575,24 @@ const events: Event[] = [
     })],
   },
   {
+    year: "1988",
+    date: "August 1988",
+    isoDate: "1988-08",
+    time: noTime,
+    timeBasis: "Publication month; report marked FINAL DRAFT",
+    phase: "Historical groundwater pathways",
+    kind: "receptor",
+    category: "14 · Hydrogeology & mapping",
+    title: "Sand aquifers, clay barriers and groundwater pathways",
+    finding: "The August 1988 E.C. Jordan investigation for Michigan DNR describes three predominantly sandy aquifers. Shallow sands are well-rounded, well-sorted, fine- to medium-grained quartz with some feldspar (USCS SP), generally with less than 3% fines but locally up to 17%. Gravel, silt and clay lenses create local variation. The upper clay aquitard thins and pinches out near the middle of the study area, where shallow and intermediate aquifers merge. The lower barrier is a variable clay–sand–clay sequence: at MB-4 the upper clay member is absent and only 3 feet of bottom clay was encountered. Its horizontal continuity could not be reliably assessed everywhere. The study describes shallow groundwater moving predominantly northeast, intermediate groundwater north-northwest, and lower-aquifer water east of the municipal wellfield moving west toward the wells. Downward hydraulic gradients, thin clay and pumping provide mechanisms for movement between aquifers.",
+    significance: "Historical pathway context, not a confirmed PFAS route to Plett Road. Estimated average groundwater movement of about 200 feet/year shallow and 80 feet/year intermediate is not a PFAS travel-time calculation. A dense gravel-and-silt drilling zone is not automatically an impermeable barrier. Modern water levels, well-screen depths, pumping conditions and chemical data are needed to establish a present-day source-to-receptor connection. The upper clay pinch-out is documented; the lower barrier is not proven absent everywhere.",
+    sources: [archivedSource("CADILLAC - WATER- 234880.pdf", "/findings-docs/1988-cadillac-ri-234880.pdf", 169, "August 1988 remedial investigation, FINAL DRAFT. Sand and clay profile: PDF pp. 58–59 and 63 (printed 4-7, 4-8, 4-12); groundwater movement and vertical pathways: PDF p. 98 (printed 6-1). The contents list supporting appendices, but this copy ends with the glossary.", {
+      eventStamp: "August 1988 · exact day/time not stated",
+      basis: "Title-page publication month",
+      note: "Historical VOC/chromium investigation. Groundwater-flow estimates are not contaminant-specific velocities or proof of present-day PFAS transport.",
+    })],
+  },
+  {
     year: "2009",
     date: "2009-09-08",
     isoDate: "2009-09-08",
@@ -2586,7 +2604,7 @@ const events: Event[] = [
     title: "Council approves Wexford leachate agreement as Miscellaneous File No. 842",
     finding: "The September 8, 2009 special-meeting minutes record unanimous approval of motion 2009.216 for Cadillac to accept and treat Wexford County Landfill leachate. The approved agreement, identified as Cadillac Miscellaneous File No. 842, was effective July 1, 2009 through June 30, 2011 and used a reduced sliding-scale rate based on pretreatment.",
     significance: "Provides direct official evidence that the City formally approved the landfill-to-WWTP treatment relationship years before the PFAS source investigation. The minutes identify the agreement but do not contain the fully executed agreement or its signed rate schedule.",
-    sources: [archivedSource("September 8 2009 Special Meeting Minutes.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/008-5b67e1ed1d5c.pdf", 6, "Motion 2009.216 approves miscellaneous file 842 on PDF page 2.", {
+    sources: [archivedSource("Miscellaneous File 842 — September 8 2009 Approval Minutes.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/e792937dad5338952723a5b79b1a2f51f9ddae5e/public/findings-docs/008-5b67e1ed1d5c.pdf", 6, "Motion 2009.216 approves miscellaneous file 842 on PDF page 2. These are approval minutes, not the executed agreement.", {
       eventStamp: "2009-09-08 · time not stated",
       basis: "Date of the official special-meeting minutes",
       note: "Separate well-field planning in the same minutes is not characterized as PFAS evidence.",

@@ -318,8 +318,8 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .evidence-chain-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .85fr); gap: 28px; align-items: end; margin-bottom: 18px; }
 .evidence-chain-heading h3 { margin: 0; color: var(--brand-white); font-size: clamp(23px, 3vw, 31px); line-height: 1.1; }
 .evidence-chain-heading > p { margin: 0; color: var(--brand-gray); line-height: 1.55; }
-.evidence-chain-list { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
-.evidence-chain-node { position: relative; min-width: 0; display: grid; align-content: start; gap: 12px; padding: 15px; border: 1px solid var(--border); background: rgba(5, 7, 8, .8); scroll-margin-top: 100px; }
+.evidence-chain-list { display: flex; gap: 14px; overflow-x: auto; margin: 0 -4px; padding: 0 4px 12px; list-style: none; scroll-snap-type: x proximity; scrollbar-color: rgba(0, 188, 235, .65) rgba(5, 7, 8, .72); }
+.evidence-chain-node { position: relative; flex: 0 0 clamp(300px, 29vw, 360px); min-width: 0; display: grid; align-content: start; gap: 12px; padding: 17px; border: 1px solid var(--border); background: rgba(5, 7, 8, .8); scroll-margin-top: 100px; scroll-snap-align: start; }
 .evidence-chain-node.chain-held { border-top: 3px solid #62a9ff; }
 .evidence-chain-node.chain-handoff { border-top: 3px solid #26e6f7; }
 .evidence-chain-node.chain-open { border-top: 3px solid #ffbf47; }
@@ -493,9 +493,9 @@ footer p { margin: 0; }
   .hierarchy-steps > svg { transform: none; }
   .evidence-chain { padding: 16px; }
   .evidence-chain-heading { grid-template-columns: 1fr; gap: 12px; }
-  .evidence-chain-list { grid-template-columns: 1fr; gap: 12px; }
-  .evidence-chain-node { padding: 14px; }
-  .evidence-chain-arrow { top: auto; right: auto; bottom: -14px; left: 50%; transform: none; }
+  .evidence-chain-list { gap: 12px; }
+  .evidence-chain-node { flex-basis: min(86vw, 360px); padding: 15px; }
+  .evidence-chain-arrow { top: 50%; right: -10px; bottom: auto; left: auto; transform: rotate(-90deg); }
   .year-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .year-nav a { min-height: 72px; padding: 10px; }
   .year-marker { grid-template-columns: 38px minmax(0, 1fr); gap: 0 10px; min-height: 70px; }

@@ -4128,11 +4128,11 @@ export default function Home() {
         <section className="document-library permit-library" data-archive-id="form-submissions" aria-labelledby="form-submission-library-title">
           <div className="evidence-heading">
             <div><p className="eyebrow">CATEGORY 11 · ONLINE FORM SUBMISSIONS · VERIFIED AUGUST 28, 2026</p><h2 id="form-submission-library-title">Search {formSubmissionDocuments.length} verified portal submissions</h2></div>
-            <p>MiWaters and MiEnviro copies of record are organized by submission date, form title, submission ID and version. The archive includes PFAS effluent and biosolids monitoring, IPP and biosolids annual reports, compliance responses, certifications, approvals, stormwater forms and a discharge report. Every supplied page was read through embedded text or OCR, and corrected versions remain separate from true duplicate exports.</p>
+            <p>MiWaters and MiEnviro copies of record are organized by submission date, form title, submission ID and version. Each record has been reviewed and placed in a content-based subtype within this Category 11 catalog: PFAS effluent and biosolids monitoring, IPP and biosolids annual reports, compliance responses, certifications, approvals, stormwater forms and a discharge report. Every supplied page was read through embedded text or OCR, and corrected versions remain separate from true duplicate exports.</p>
           </div>
           <div className="reference-summary" aria-label="Online form submissions archive audit summary">
             <div><FileText /><span><strong>{formSubmissionAudit.stats.finalDistinctRecords}</strong> distinct records</span></div>
-            <div><Database /><span><strong>Early-stage uploads</strong> pending catalog review</span></div>
+            <div><CheckCircle2 /><span><strong>Reviewed and cataloged</strong> {formSubmissionAudit.stats.finalDistinctRecords} records</span></div>
             <div><FileSearch /><span><strong>{formatBytes(formSubmissionAudit.stats.publishedBytes)}</strong> published</span></div>
           </div>
           <details className="audit-details archive-audit">

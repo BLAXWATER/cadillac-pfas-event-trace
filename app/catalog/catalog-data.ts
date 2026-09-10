@@ -35,6 +35,41 @@ export type CatalogPageConfig = {
   documents: readonly CatalogRecord[];
 };
 
+const supplementalRecords = supplementalDocuments as readonly CatalogRecord[];
+const processSiteRecords = processSiteDocuments as readonly CatalogRecord[];
+
+const uniqueRecords = (...groups: readonly CatalogRecord[][]): readonly CatalogRecord[] => {
+  const seen = new Set<string>();
+  return groups.flatMap((group) => group).filter((record) => {
+    if (seen.has(record.id)) return false;
+    seen.add(record.id);
+    return true;
+  });
+};
+
+const groundwaterRecords = supplementalRecords.filter((record) => {
+  const category = record.category?.toLowerCase() ?? "";
+  return category.includes("groundwater") || category.includes("watershed");
+});
+
+const leachateRecords = supplementalRecords.filter((record) => {
+  const category = record.category?.toLowerCase() ?? "";
+  return category.includes("leachate") || category.includes("landfill receiving") || category.includes("waste-disposal");
+});
+
+const operationsRecords = supplementalRecords.filter((record) => {
+  const category = record.category?.toLowerCase() ?? "";
+  return [
+    "infrastructure",
+    "wastewater agreements",
+    "process & site",
+    "wwtp",
+    "municipal utility",
+  ].some((term) => category.includes(term));
+});
+
+const chemicalRecords = supplementalRecords.filter((record) => record.category === "SDS & chemical product data");
+
 const categoryPages = [
   {
     slug: "pfas",
@@ -139,6 +174,38 @@ const categoryPages = [
     title: "Reference records",
     description: "Reference exports, tables and supporting datasets used to cross-check the documentary archive.",
     documents: referenceDocuments,
+  },
+  {
+    slug: "groundwater-hydrogeology",
+    buttonLabel: "GROUNDWATER & HYDROGEOLOGY",
+    eyebrow: "GROUNDWATER & HYDROGEOLOGY",
+    title: "Groundwater, wells and hydrogeology",
+    description: "Groundwater and well records, historical investigations, Superfund cleanup, watershed context and pathway studies.",
+    documents: groundwaterRecords,
+  },
+  {
+    slug: "leachate-receiving-finance",
+    buttonLabel: "LEACHATE, RECEIVING & FINANCE",
+    eyebrow: "LEACHATE, RECEIVING & FINANCE",
+    title: "Leachate receiving, hauling and finance",
+    description: "Receiving history, invoices, hauling records, leachate-treatment revenue, contracts and capacity agreements.",
+    documents: leachateRecords,
+  },
+  {
+    slug: "wwtp-operations-infrastructure",
+    buttonLabel: "WWTP OPERATIONS & INFRASTRUCTURE",
+    eyebrow: "WWTP OPERATIONS & INFRASTRUCTURE",
+    title: "WWTP operations and infrastructure",
+    description: "Process-flow records, facility upgrades, maintenance, operating capacity and technical plant records.",
+    documents: uniqueRecords(operationsRecords, processSiteRecords),
+  },
+  {
+    slug: "chemicals-sds",
+    buttonLabel: "CHEMICALS & SDS",
+    eyebrow: "CHEMICALS & SDS",
+    title: "Chemical products and SDS records",
+    description: "Safety data sheets and chemical-product records retained for source, handling and process context.",
+    documents: chemicalRecords,
   },
 ] as const satisfies readonly CatalogPageConfig[];
 

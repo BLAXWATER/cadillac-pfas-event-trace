@@ -7,7 +7,7 @@ import { ArrowLeft, ExternalLink, FileSearch, Search } from "lucide-react";
 import { bundledDocumentDownload, bundledFirstPagePreview } from "../bundled-public-assets";
 import { documentSummary } from "../document-summary.mjs";
 import { formatSourceDisplayName } from "../source-display-name";
-import type { CatalogPageConfig, CatalogRecord } from "./catalog-data";
+import { catalogPageList, type CatalogPageConfig, type CatalogRecord } from "./catalog-data";
 
 type Props = { config: CatalogPageConfig };
 
@@ -84,12 +84,7 @@ export default function CatalogPageClient({ config }: Props) {
 
       <nav className="catalog-page-nav" aria-label="Source catalog pages">
         <div className="category-jump-links">
-          {[
-            ["PFAS RECORDS", "pfas"], ["DMR & QA", "dmr"], ["PERMITS & RECORDS", "permits"], ["IPP RECORDS", "ipp"],
-            ["BIOSOLIDS", "biosolids"], ["LABORATORY RECORDS", "laboratory"], ["COMPLIANCE", "compliance"], ["VERIFIED RECORDS", "verified"],
-            ["CORRESPONDENCE", "correspondence"], ["PROCESS & SITE", "process-site"], ["PORTAL SUBMISSIONS", "portal-submissions"],
-            ["ADDITIONAL RECORDS", "additional"], ["REFERENCE RECORDS", "reference"],
-          ].map(([label, slug]) => <a className={`category-jump-link${slug === config.slug ? " is-active" : ""}`} href={`/catalog/${slug}`} key={slug}>{label}</a>)}
+          {catalogPageList.map((page) => <a className={`category-jump-link${page.slug === config.slug ? " is-active" : ""}`} href={`/catalog/${page.slug}`} key={page.slug}>{page.buttonLabel}</a>)}
         </div>
       </nav>
 

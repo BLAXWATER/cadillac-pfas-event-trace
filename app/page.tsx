@@ -208,6 +208,10 @@ const categoryJumpLinks = [
   { label: "PORTAL SUBMISSIONS", href: "/catalog/portal-submissions" },
   { label: "ADDITIONAL RECORDS", href: "/catalog/additional" },
   { label: "REFERENCE RECORDS", href: "/catalog/reference" },
+  { label: "GROUNDWATER & HYDROGEOLOGY", href: "/catalog/groundwater-hydrogeology" },
+  { label: "LEACHATE, RECEIVING & FINANCE", href: "/catalog/leachate-receiving-finance" },
+  { label: "WWTP OPERATIONS & INFRASTRUCTURE", href: "/catalog/wwtp-operations-infrastructure" },
+  { label: "CHEMICALS & SDS", href: "/catalog/chemicals-sds" },
 ] as const;
 
 const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((archive) =>

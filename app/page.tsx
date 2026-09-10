@@ -28,7 +28,6 @@ import correspondenceDocuments from "./correspondence-documents.json";
 import biosolidsAudit from "./biosolids-audit.json";
 import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
-import dmrAudit from "./dmr-audit.json";
 import evidenceRequestQueue from "./evidence-request-queue.json";
 import evidenceQueueUpdates from "./evidence-request-queue-updates.json";
 import formSubmissionAudit from "./form-submission-audit.json";
@@ -3771,13 +3770,6 @@ export default function Home() {
             <div><p className="eyebrow">DISCHARGE MONITORING ARCHIVE</p><h2 id="document-library-title">Search {dmrDocuments.length} DMR and QA records</h2></div>
             <p>The supplied Cadillac WWTP collection is preserved here as downloadable source files. Original filenames remain visible for provenance, while only confirmed content duplicates are suppressed.</p>
           </div>
-          <details className="audit-details archive-audit">
-            <summary>Review DMR duplicate audit history</summary>
-            <div className="audit-panel">
-              <p>{dmrAudit.methods.join(" · ")}</p>
-              <ul>{dmrAudit.batches.map((batch) => <li key={batch.label}><strong>{batch.label}: {batch.added} added, {batch.duplicates} duplicates</strong><span>{batch.note}</span></li>)}</ul>
-            </div>
-          </details>
           <div className="document-controls">
             <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search documents</span><input value={documentQuery} onChange={(event) => setDocumentQuery(event.target.value)} placeholder="Search filename, year or record type" /></label>
             <label className="document-filter"><span className="sr-only">Filter by record type</span><select value={documentType} onChange={(event) => setDocumentType(event.target.value)}>{documentTypes.map((type) => <option key={type}>{type}</option>)}</select></label>

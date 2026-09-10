@@ -2,7 +2,7 @@
   {
     "id": "001-391d2cff96ef",
     "name": "0330_2018-09-19_RE_ Cadillac WWTP - IPP PFAS Interim Report Review.msg",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/8d7d759d5377b74e9aee5c7b13da2252fc1cde53/public/pfas-docs/001-391d2cff96ef.msg",
+    "url": "/pfas-docs/001-391d2cff96ef.msg",
     "year": "2018",
     "category": "PFAS monitoring",
     "type": "Native email message",
@@ -10,7 +10,37 @@
     "pages": null,
     "size": 12988416,
     "sha256": "391d2cff96ef63efa02cb2ff6dff500c3fbe9a7f0a40340e4edb55e97b300ffe",
-    "description": "Native September 19, 2018 Cadillac-to-DEQ email answering follow-up questions about AAR, Rec Boat, Michigan Rubber, Avon, ARVCO and Hutchinson. Five embedded attachment packages are preserved with the message."
+    "description": "Native September 19, 2018 Cadillac-to-DEQ PFAS interim-report email with five embedded attachment packages. Strict audit complete: native MSG body/HTML, 26 PDFs and 26 full internal ZIP paths/hashes preserved; all 153 attached and nested-PDF pages rendered, with OCR applied to all 104 sparse pages.",
+    "status": "strict-fully-verified",
+    "strictFullyVerified": true,
+    "msgAudit": {
+      "reviewedAt": "2026-09-10",
+      "status": "strict-fully-verified",
+      "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+      "nativeMessage": {
+        "sha256": "391d2cff96ef63efa02cb2ff6dff500c3fbe9a7f0a40340e4edb55e97b300ffe",
+        "bytes": 12988416,
+        "subject": "RE: Cadillac WWTP - IPP PFAS Interim Report Review",
+        "date": "2018-09-19T15:36:06-04:00",
+        "sender": "Jeff Dietlin <utilities@Cadillac-MI.net>",
+        "bodyBytes": 7276,
+        "htmlBytes": 18343,
+        "attachmentCount": 5
+      },
+      "pdfCoverage": {
+        "pdfCount": 26,
+        "pages": 153,
+        "renderedPages": 153,
+        "ocrNeededPages": 104,
+        "ocrCompletedPages": 104,
+        "allPagesReadable": true
+      },
+      "zipInventory": {
+        "entryCount": 26,
+        "fullInternalPathsAndHashes": true
+      },
+      "openItems": []
+    }
   },
   {
     "id": "002-aca419b24a35",
@@ -106,7 +136,7 @@
   {
     "id": "009-c720082b6790",
     "name": "04 - PFAS Monitoring_FW_ Biosolids PFAS - Cadillac.msg",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/8d7d759d5377b74e9aee5c7b13da2252fc1cde53/public/pfas-docs/009-c720082b6790.msg",
+    "url": "/pfas-docs/009-c720082b6790.msg",
     "year": "2019",
     "category": "PFAS monitoring",
     "type": "Native email message",
@@ -114,7 +144,37 @@
     "pages": null,
     "size": 329728,
     "sha256": "c720082b6790a3df34474afc604ae50f40abb3288a6bb3060b86a482b0be8b2b",
-    "description": "Native Outlook message preserved with its embedded attachments and transport metadata. It remains separate from related letters and laboratory files when those records carry distinct content."
+    "description": "Native February 28, 2019 biosolids PFAS email with its attached dry-weight results PDF. Strict audit complete: native MSG body/HTML and the four-page attachment were rendered and text-checked.",
+    "status": "strict-fully-verified",
+    "strictFullyVerified": true,
+    "msgAudit": {
+      "reviewedAt": "2026-09-10",
+      "status": "strict-fully-verified",
+      "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+      "nativeMessage": {
+        "sha256": "c720082b6790a3df34474afc604ae50f40abb3288a6bb3060b86a482b0be8b2b",
+        "bytes": 329728,
+        "subject": "FW: Biosolids PFAS - Cadillac",
+        "date": "2019-02-28T11:01:52-05:00",
+        "sender": "Cindy Tomaszewski <ctomaszewski@Cadillac-MI.net>",
+        "bodyBytes": 3303,
+        "htmlBytes": 8547,
+        "attachmentCount": 1
+      },
+      "pdfCoverage": {
+        "pdfCount": 1,
+        "pages": 4,
+        "renderedPages": 4,
+        "ocrNeededPages": 0,
+        "ocrCompletedPages": 0,
+        "allPagesReadable": true
+      },
+      "zipInventory": {
+        "entryCount": 0,
+        "fullInternalPathsAndHashes": false
+      },
+      "openItems": []
+    }
   },
   {
     "id": "010-bd4ea07f130c",

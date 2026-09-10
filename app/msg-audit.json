@@ -1,0 +1,248 @@
+{
+  "title": "Native Outlook MSG strict audit",
+  "reviewedAt": "2026-09-10",
+  "rule": "Strict verification requires native-message extraction, attachment inventory, full ordered page rendering, OCR where needed, and preserved source/hash provenance.",
+  "summary": {
+    "messages": 7,
+    "pdfs": 33,
+    "pages": 218,
+    "renderedPages": 218,
+    "ocrNeededPages": 104,
+    "ocrCompletedPages": 104,
+    "allReadable": true,
+    "strictGapsRemaining": 0
+  },
+  "records": [
+    {
+      "id": "004-044b89235b40",
+      "category": "compliance",
+      "name": "EGLE WRD Correspondence:  SVN-01952_Cadillac WWTP",
+      "audit": {
+        "reviewedAt": "2026-09-10",
+        "status": "strict-fully-verified",
+        "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+        "nativeMessage": {
+          "sha256": "044b89235b4074c9d6914906a322fa178fd3a031b8b2e481f11ce7f5711a55f1",
+          "bytes": 486400,
+          "subject": "EGLE WRD Correspondence:  SVN-01952_Cadillac WWTP",
+          "date": "2026-05-22T09:45:30.164283-04:00",
+          "sender": "Simon, Stevi (EGLE)",
+          "bodyBytes": 223,
+          "htmlBytes": 2100,
+          "attachmentCount": 1
+        },
+        "pdfCoverage": {
+          "pdfCount": 1,
+          "pages": 14,
+          "renderedPages": 14,
+          "ocrNeededPages": 0,
+          "ocrCompletedPages": 0,
+          "allPagesReadable": true
+        },
+        "zipInventory": {
+          "entryCount": 0,
+          "fullInternalPathsAndHashes": false
+        },
+        "openItems": []
+      }
+    },
+    {
+      "id": "006-bd78c5e76142",
+      "category": "compliance",
+      "name": "EGLE FILE Violation Notice - VN No. VN-019184",
+      "audit": {
+        "reviewedAt": "2026-09-10",
+        "status": "strict-fully-verified",
+        "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+        "nativeMessage": {
+          "sha256": "bd78c5e7614238ca9d6b5fdbcff9910cda0fe1d757992ab2891cd33b5fa2e344",
+          "bytes": 142848,
+          "subject": "EGLE FILE Violation Notice - VN No. VN-019184",
+          "date": "2026-06-10T11:24:41.242000-04:00",
+          "sender": "Hudson, Sonya (EGLE)",
+          "bodyBytes": 2296,
+          "htmlBytes": 5930,
+          "attachmentCount": 1
+        },
+        "pdfCoverage": {
+          "pdfCount": 1,
+          "pages": 2,
+          "renderedPages": 2,
+          "ocrNeededPages": 0,
+          "ocrCompletedPages": 0,
+          "allPagesReadable": true
+        },
+        "zipInventory": {
+          "entryCount": 0,
+          "fullInternalPathsAndHashes": false
+        },
+        "openItems": []
+      }
+    },
+    {
+      "id": "093-b1303c851748",
+      "category": "npdes",
+      "name": "National Pollutant Discharge Elimination System NPDES Individual Permit No. MI0020257 Designated Name:  Cadillac WWTP",
+      "audit": {
+        "reviewedAt": "2026-09-10",
+        "status": "strict-fully-verified",
+        "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+        "nativeMessage": {
+          "sha256": "b1303c85174801e85daa074b70aeb57bf5994fe69a9437d4a82e6ee34d2075d0",
+          "bytes": 1093120,
+          "subject": "National Pollutant Discharge Elimination System NPDES Individual Permit No. MI0020257 Designated Name:  Cadillac WWTP",
+          "date": "2019-02-27T12:58:52.630000-05:00",
+          "sender": "Popovich, Bradley (DEQ)",
+          "bodyBytes": 1880,
+          "htmlBytes": 4093,
+          "attachmentCount": 4
+        },
+        "pdfCoverage": {
+          "pdfCount": 4,
+          "pages": 45,
+          "renderedPages": 45,
+          "ocrNeededPages": 0,
+          "ocrCompletedPages": 0,
+          "allPagesReadable": true
+        },
+        "zipInventory": {
+          "entryCount": 0,
+          "fullInternalPathsAndHashes": false
+        },
+        "openItems": []
+      }
+    },
+    {
+      "id": "094-ae1ccc6dc411",
+      "category": "npdes",
+      "name": "Public Notice of National Pollutant Discharge Elimination System (NPDES) Permit No. MI0020257",
+      "audit": {
+        "reviewedAt": "2026-09-10",
+        "status": "strict-fully-verified",
+        "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+        "nativeMessage": {
+          "sha256": "ae1ccc6dc411917771b3fe6f364e3a5ecd9d00d919cdc5e884bbfa0a1770b636",
+          "bytes": 152064,
+          "subject": "Public Notice of National Pollutant Discharge Elimination System (NPDES) Permit No. MI0020257",
+          "date": "2019-06-06T08:21:29.746963-04:00",
+          "sender": "Popovich, Bradley (EGLE)",
+          "bodyBytes": 851,
+          "htmlBytes": 2728,
+          "attachmentCount": 0
+        },
+        "pdfCoverage": {
+          "pdfCount": 0,
+          "pages": 0,
+          "renderedPages": 0,
+          "ocrNeededPages": 0,
+          "ocrCompletedPages": 0,
+          "allPagesReadable": true
+        },
+        "zipInventory": {
+          "entryCount": 0,
+          "fullInternalPathsAndHashes": false
+        },
+        "openItems": []
+      }
+    },
+    {
+      "id": "095-8e1b05a622e4",
+      "category": "npdes",
+      "name": "Public Notice",
+      "audit": {
+        "reviewedAt": "2026-09-10",
+        "status": "strict-fully-verified",
+        "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+        "nativeMessage": {
+          "sha256": "8e1b05a622e4886453c3f75e4a7c602d7ed940a38e68d3e7521c1481675a3888",
+          "bytes": 127488,
+          "subject": "Public Notice",
+          "date": "2019-06-06T11:00:43-04:00",
+          "sender": "Jeff Dietlin <utilities@cadillac-mi.net>",
+          "bodyBytes": 554,
+          "htmlBytes": 3885,
+          "attachmentCount": 0
+        },
+        "pdfCoverage": {
+          "pdfCount": 0,
+          "pages": 0,
+          "renderedPages": 0,
+          "ocrNeededPages": 0,
+          "ocrCompletedPages": 0,
+          "allPagesReadable": true
+        },
+        "zipInventory": {
+          "entryCount": 0,
+          "fullInternalPathsAndHashes": false
+        },
+        "openItems": []
+      }
+    },
+    {
+      "id": "001-391d2cff96ef",
+      "category": "pfas",
+      "name": "RE: Cadillac WWTP - IPP PFAS Interim Report Review",
+      "audit": {
+        "reviewedAt": "2026-09-10",
+        "status": "strict-fully-verified",
+        "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+        "nativeMessage": {
+          "sha256": "391d2cff96ef63efa02cb2ff6dff500c3fbe9a7f0a40340e4edb55e97b300ffe",
+          "bytes": 12988416,
+          "subject": "RE: Cadillac WWTP - IPP PFAS Interim Report Review",
+          "date": "2018-09-19T15:36:06-04:00",
+          "sender": "Jeff Dietlin <utilities@Cadillac-MI.net>",
+          "bodyBytes": 7276,
+          "htmlBytes": 18343,
+          "attachmentCount": 5
+        },
+        "pdfCoverage": {
+          "pdfCount": 26,
+          "pages": 153,
+          "renderedPages": 153,
+          "ocrNeededPages": 104,
+          "ocrCompletedPages": 104,
+          "allPagesReadable": true
+        },
+        "zipInventory": {
+          "entryCount": 26,
+          "fullInternalPathsAndHashes": true
+        },
+        "openItems": []
+      }
+    },
+    {
+      "id": "009-c720082b6790",
+      "category": "pfas",
+      "name": "FW: Biosolids PFAS - Cadillac",
+      "audit": {
+        "reviewedAt": "2026-09-10",
+        "status": "strict-fully-verified",
+        "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+        "nativeMessage": {
+          "sha256": "c720082b6790a3df34474afc604ae50f40abb3288a6bb3060b86a482b0be8b2b",
+          "bytes": 329728,
+          "subject": "FW: Biosolids PFAS - Cadillac",
+          "date": "2019-02-28T11:01:52-05:00",
+          "sender": "Cindy Tomaszewski <ctomaszewski@Cadillac-MI.net>",
+          "bodyBytes": 3303,
+          "htmlBytes": 8547,
+          "attachmentCount": 1
+        },
+        "pdfCoverage": {
+          "pdfCount": 1,
+          "pages": 4,
+          "renderedPages": 4,
+          "ocrNeededPages": 0,
+          "ocrCompletedPages": 0,
+          "allPagesReadable": true
+        },
+        "zipInventory": {
+          "entryCount": 0,
+          "fullInternalPathsAndHashes": false
+        },
+        "openItems": []
+      }
+    }
+  ]
+}

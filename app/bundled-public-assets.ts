@@ -50,6 +50,10 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/compliance-docs/004-044b89235b40.msg", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/compliance-docs/006-bd78c5e76142.msg", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/pfas-docs/001-391d2cff96ef.msg", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/pfas-docs/009-c720082b6790.msg", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/wexford-docs/112-dacaccbf5061.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/wexford-docs/113-84ca68576d11.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/wexford-docs/114-302cac40449a.pdf", { eager: true, import: "default", query: "?url" }),

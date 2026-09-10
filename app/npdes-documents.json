@@ -1023,7 +1023,38 @@
     "format": "MSG",
     "pages": null,
     "size": 1093120,
-    "sha256": "b1303c85174801e85daa074b70aeb57bf5994fe69a9437d4a82e6ee34d2075d0"
+    "sha256": "b1303c85174801e85daa074b70aeb57bf5994fe69a9437d4a82e6ee34d2075d0",
+    "description": "EGLE draft NPDES permit transmittal with the draft basis memo, permit, public notice and fact sheet. Strict audit complete: native MSG body, four attachment hashes and all 45 attached-PDF pages rendered and text-checked.",
+    "status": "strict-fully-verified",
+    "strictFullyVerified": true,
+    "msgAudit": {
+      "reviewedAt": "2026-09-10",
+      "status": "strict-fully-verified",
+      "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+      "nativeMessage": {
+        "sha256": "b1303c85174801e85daa074b70aeb57bf5994fe69a9437d4a82e6ee34d2075d0",
+        "bytes": 1093120,
+        "subject": "National Pollutant Discharge Elimination System NPDES Individual Permit No. MI0020257 Designated Name:  Cadillac WWTP",
+        "date": "2019-02-27T12:58:52.630000-05:00",
+        "sender": "Popovich, Bradley (DEQ)",
+        "bodyBytes": 1880,
+        "htmlBytes": 4093,
+        "attachmentCount": 4
+      },
+      "pdfCoverage": {
+        "pdfCount": 4,
+        "pages": 45,
+        "renderedPages": 45,
+        "ocrNeededPages": 0,
+        "ocrCompletedPages": 0,
+        "allPagesReadable": true
+      },
+      "zipInventory": {
+        "entryCount": 0,
+        "fullInternalPathsAndHashes": false
+      },
+      "openItems": []
+    }
   },
   {
     "id": "094-ae1ccc6dc411",
@@ -1034,7 +1065,38 @@
     "format": "MSG",
     "pages": null,
     "size": 152064,
-    "sha256": "ae1ccc6dc411917771b3fe6f364e3a5ecd9d00d919cdc5e884bbfa0a1770b636"
+    "sha256": "ae1ccc6dc411917771b3fe6f364e3a5ecd9d00d919cdc5e884bbfa0a1770b636",
+    "description": "EGLE public-notice notification for NPDES Permit MI0020257. Strict audit complete: native MSG body fully extracted; no attachments were present.",
+    "status": "strict-fully-verified",
+    "strictFullyVerified": true,
+    "msgAudit": {
+      "reviewedAt": "2026-09-10",
+      "status": "strict-fully-verified",
+      "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+      "nativeMessage": {
+        "sha256": "ae1ccc6dc411917771b3fe6f364e3a5ecd9d00d919cdc5e884bbfa0a1770b636",
+        "bytes": 152064,
+        "subject": "Public Notice of National Pollutant Discharge Elimination System (NPDES) Permit No. MI0020257",
+        "date": "2019-06-06T08:21:29.746963-04:00",
+        "sender": "Popovich, Bradley (EGLE)",
+        "bodyBytes": 851,
+        "htmlBytes": 2728,
+        "attachmentCount": 0
+      },
+      "pdfCoverage": {
+        "pdfCount": 0,
+        "pages": 0,
+        "renderedPages": 0,
+        "ocrNeededPages": 0,
+        "ocrCompletedPages": 0,
+        "allPagesReadable": true
+      },
+      "zipInventory": {
+        "entryCount": 0,
+        "fullInternalPathsAndHashes": false
+      },
+      "openItems": []
+    }
   },
   {
     "id": "095-8e1b05a622e4",
@@ -1045,7 +1107,38 @@
     "format": "MSG",
     "pages": null,
     "size": 127488,
-    "sha256": "8e1b05a622e4886453c3f75e4a7c602d7ed940a38e68d3e7521c1481675a3888"
+    "sha256": "8e1b05a622e4886453c3f75e4a7c602d7ed940a38e68d3e7521c1481675a3888",
+    "description": "Cadillac public-notice posting verification for NPDES Permit MI0020257. Strict audit complete: native MSG body fully extracted; no attachments were present.",
+    "status": "strict-fully-verified",
+    "strictFullyVerified": true,
+    "msgAudit": {
+      "reviewedAt": "2026-09-10",
+      "status": "strict-fully-verified",
+      "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+      "nativeMessage": {
+        "sha256": "8e1b05a622e4886453c3f75e4a7c602d7ed940a38e68d3e7521c1481675a3888",
+        "bytes": 127488,
+        "subject": "Public Notice",
+        "date": "2019-06-06T11:00:43-04:00",
+        "sender": "Jeff Dietlin <utilities@cadillac-mi.net>",
+        "bodyBytes": 554,
+        "htmlBytes": 3885,
+        "attachmentCount": 0
+      },
+      "pdfCoverage": {
+        "pdfCount": 0,
+        "pages": 0,
+        "renderedPages": 0,
+        "ocrNeededPages": 0,
+        "ocrCompletedPages": 0,
+        "allPagesReadable": true
+      },
+      "zipInventory": {
+        "entryCount": 0,
+        "fullInternalPathsAndHashes": false
+      },
+      "openItems": []
+    }
   },
   {
     "id": "096-62893e0607dd",

@@ -21,6 +21,7 @@ import {
   Waves,
 } from "lucide-react";
 import complianceAudit from "./compliance-audit.json";
+import msgAudit from "./msg-audit.json";
 import complianceDocuments from "./compliance-documents.json";
 import correspondenceAudit from "./correspondence-audit.json";
 import correspondenceDocuments from "./correspondence-documents.json";
@@ -3932,6 +3933,13 @@ export default function Home() {
             <div><CheckCircle2 /><span><strong>{complianceAudit.stats.ocrPages}</strong> OCR pages verified</span></div>
             <div><FileSearch /><span><strong>{formatBytes(complianceAudit.stats.publishedBytes)}</strong> published</span></div>
           </div>
+          <details className="audit-details archive-audit" data-audit="native-msg-strict">
+            <summary>Strict native MSG audit · {msgAudit.summary.messages} messages · {msgAudit.summary.pages} attached pages</summary>
+            <div className="audit-panel">
+              <p>All seven previously open native Outlook messages are now strict-fully-verified. The audit rendered all {msgAudit.summary.renderedPages} attached-PDF pages, applied OCR to {msgAudit.summary.ocrCompletedPages} sparse pages, and found no unreadable page or remaining strict gap.</p>
+              <ul>{msgAudit.records.map((item) => <li key={item.id}><strong title={item.name}>{item.name}</strong><span>{item.audit.pdfCoverage.pdfCount} attached PDF{item.audit.pdfCoverage.pdfCount === 1 ? "" : "s"} · {item.audit.pdfCoverage.pages} pages · {item.audit.pdfCoverage.ocrCompletedPages} OCR pages · {item.audit.zipInventory.entryCount} hashed ZIP entries</span></li>)}</ul>
+            </div>
+          </details>
           <details className="audit-details archive-audit">
             <summary>Review Category 08 duplicate, OCR and overlap decisions</summary>
             <div className="audit-panel">

@@ -516,14 +516,44 @@
   {
     "id": "004-044b89235b40",
     "name": "05-22-2026 - EGLE WRD Correspondence_ SVN-01952_Cadillac WWTP.msg",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/004-044b89235b40.msg",
+    "url": "/compliance-docs/004-044b89235b40.msg",
     "year": "2026",
     "type": "Compliance correspondence",
     "format": "MSG",
     "pages": null,
     "size": 486400,
     "sha256": "044b89235b4074c9d6914906a322fa178fd3a031b8b2e481f11ce7f5711a55f1",
-    "description": "Agency, municipal or related correspondence concerning compliance and corrective action. Preserved in its original Outlook message format."
+    "description": "EGLE WRD correspondence transmitting the 14-page SVN-01952 Cadillac WWTP record. Strict audit complete: native MSG body and attachment inventory preserved; all 14 attached-PDF pages rendered and text-checked.",
+    "status": "strict-fully-verified",
+    "strictFullyVerified": true,
+    "msgAudit": {
+      "reviewedAt": "2026-09-10",
+      "status": "strict-fully-verified",
+      "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+      "nativeMessage": {
+        "sha256": "044b89235b4074c9d6914906a322fa178fd3a031b8b2e481f11ce7f5711a55f1",
+        "bytes": 486400,
+        "subject": "EGLE WRD Correspondence:  SVN-01952_Cadillac WWTP",
+        "date": "2026-05-22T09:45:30.164283-04:00",
+        "sender": "Simon, Stevi (EGLE)",
+        "bodyBytes": 223,
+        "htmlBytes": 2100,
+        "attachmentCount": 1
+      },
+      "pdfCoverage": {
+        "pdfCount": 1,
+        "pages": 14,
+        "renderedPages": 14,
+        "ocrNeededPages": 0,
+        "ocrCompletedPages": 0,
+        "allPagesReadable": true
+      },
+      "zipInventory": {
+        "entryCount": 0,
+        "fullInternalPathsAndHashes": false
+      },
+      "openItems": []
+    }
   },
   {
     "id": "005-db630dddf5ca",
@@ -540,14 +570,44 @@
   {
     "id": "006-bd78c5e76142",
     "name": "06-10-2026 - EGLE FILE Violation Notice - VN No_ VN-019184.msg",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/006-bd78c5e76142.msg",
+    "url": "/compliance-docs/006-bd78c5e76142.msg",
     "year": "2026",
     "type": "Violation notice",
     "format": "MSG",
     "pages": null,
     "size": 142848,
     "sha256": "bd78c5e7614238ca9d6b5fdbcff9910cda0fe1d757992ab2891cd33b5fa2e344",
-    "description": "Formal notice or supporting record concerning an identified compliance violation. Preserved in its original Outlook message format."
+    "description": "EGLE violation notice VN-019184 for Cadillac WWTP. Strict audit complete: native MSG body and attachment inventory preserved; both attached-PDF pages rendered and text-checked.",
+    "status": "strict-fully-verified",
+    "strictFullyVerified": true,
+    "msgAudit": {
+      "reviewedAt": "2026-09-10",
+      "status": "strict-fully-verified",
+      "reviewMethod": "Native MSG body and HTML extracted; attachments inventoried by full name, byte size and SHA-256; every attached PDF page rendered in order; OCR applied where embedded text was missing or unreliable; representative rendered pages visually checked.",
+      "nativeMessage": {
+        "sha256": "bd78c5e7614238ca9d6b5fdbcff9910cda0fe1d757992ab2891cd33b5fa2e344",
+        "bytes": 142848,
+        "subject": "EGLE FILE Violation Notice - VN No. VN-019184",
+        "date": "2026-06-10T11:24:41.242000-04:00",
+        "sender": "Hudson, Sonya (EGLE)",
+        "bodyBytes": 2296,
+        "htmlBytes": 5930,
+        "attachmentCount": 1
+      },
+      "pdfCoverage": {
+        "pdfCount": 1,
+        "pages": 2,
+        "renderedPages": 2,
+        "ocrNeededPages": 0,
+        "ocrCompletedPages": 0,
+        "allPagesReadable": true
+      },
+      "zipInventory": {
+        "entryCount": 0,
+        "fullInternalPathsAndHashes": false
+      },
+      "openItems": []
+    }
   },
   {
     "id": "007-5e26c04f42e1",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1623,
+  "recordCount": 1627,
   "archiveCount": 13,
   "archives": [
     {
@@ -50,7 +50,7 @@
       "label": "Wexford landfill",
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
-      "count": 111
+      "count": 115
     },
     {
       "archiveId": "compliance",
@@ -2446,7 +2446,7 @@
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "05-22-2026 - EGLE WRD Correspondence_ SVN-01952_Cadillac WWTP.msg",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/004-044b89235b40.msg",
+      "url": "/compliance-docs/004-044b89235b40.msg",
       "sha256": "044b89235b4074c9d6914906a322fa178fd3a031b8b2e481f11ce7f5711a55f1",
       "size": 486400
     },
@@ -2468,7 +2468,7 @@
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "06-10-2026 - EGLE FILE Violation Notice - VN No_ VN-019184.msg",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/006-bd78c5e76142.msg",
+      "url": "/compliance-docs/006-bd78c5e76142.msg",
       "sha256": "bd78c5e7614238ca9d6b5fdbcff9910cda0fe1d757992ab2891cd33b5fa2e344",
       "size": 142848
     },
@@ -11719,7 +11719,7 @@
       "catalog": "pfas-documents.json",
       "sectionId": "pfas-library-title",
       "name": "0330_2018-09-19_RE_ Cadillac WWTP - IPP PFAS Interim Report Review.msg",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/8d7d759d5377b74e9aee5c7b13da2252fc1cde53/public/pfas-docs/001-391d2cff96ef.msg",
+      "url": "/pfas-docs/001-391d2cff96ef.msg",
       "sha256": "391d2cff96ef63efa02cb2ff6dff500c3fbe9a7f0a40340e4edb55e97b300ffe",
       "size": 12988416
     },
@@ -11807,7 +11807,7 @@
       "catalog": "pfas-documents.json",
       "sectionId": "pfas-library-title",
       "name": "04 - PFAS Monitoring_FW_ Biosolids PFAS - Cadillac.msg",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/8d7d759d5377b74e9aee5c7b13da2252fc1cde53/public/pfas-docs/009-c720082b6790.msg",
+      "url": "/pfas-docs/009-c720082b6790.msg",
       "sha256": "c720082b6790a3df34474afc604ae50f40abb3288a6bb3060b86a482b0be8b2b",
       "size": 329728
     },
@@ -17948,6 +17948,50 @@
       "url": "/wexford-docs/111-d8141f278b56.pdf",
       "sha256": "d8141f278b56cfe7c2b3a0aa06c6264c381fdf44db6860dd52e31a53f4a3c81f",
       "size": 113571
+    },
+    {
+      "id": "112-dacaccbf5061",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "61366 Hearing - Transcript.PDF",
+      "url": "/wexford-docs/112-dacaccbf5061.pdf",
+      "sha256": "dacaccbf50614b5703e8b1ee44e19d02de6dd40774d1f18043e3cd7e09cc856e",
+      "size": 610746
+    },
+    {
+      "id": "113-84ca68576d11",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "61366 Hearing - Written Comments.PDF",
+      "url": "/wexford-docs/113-84ca68576d11.pdf",
+      "sha256": "84ca68576d11988435610877cd26cd86057387d0fdd32ad079ad7882b5ea6d28",
+      "size": 614721
+    },
+    {
+      "id": "114-302cac40449a",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "61366 Hearing 2018-03-21.PDF",
+      "url": "/wexford-docs/114-302cac40449a.pdf",
+      "sha256": "302cac40449aa16d9e105cbec02ecc7495ba72a5ceb552ab3f6dd8e20266636b",
+      "size": 2193732
+    },
+    {
+      "id": "115-1a26b8e7ef8d",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "61366 Hearing - OGMD Response.PDF",
+      "url": "/wexford-docs/115-1a26b8e7ef8d.pdf",
+      "sha256": "1a26b8e7ef8d45dd9788291ec79de706e495b3c34faa2bb58b5d03a7abc68dee",
+      "size": 51171
     }
   ]
 }

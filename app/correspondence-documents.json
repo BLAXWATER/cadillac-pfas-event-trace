@@ -580,5 +580,18 @@
     "size": 101035,
     "sha256": "b0440ae9e001fac873727208551d12fb6ab0c8fb4d5d8f5d44b48d3e7058e2b8",
     "description": "Three-page January-through-September 2018 City/MDEQ email chain about Cadillac WWTP disinfection equipment and outdated process diagrams. On September 20, City staff state that UV had completely replaced chlorine, that the obsolete chlorine and sulfur-dioxide equipment had been removed, and that the available flow diagram remained unchanged except for those systems. The correspondence documents the City's process-configuration representation; it contains no PFAS analytical result, leachate delivery record, treatment-effectiveness measurement or source-to-receptor pathway evidence."
+  },
+  {
+    "id": "corr-045-cfaee79bdc7e",
+    "name": "2020-12-17 - Permit Modification Review Correspondence.pdf",
+    "url": "/correspondence-docs/corr-045-cfaee79bdc7e.pdf",
+    "year": "2020",
+    "category": "Correspondence & letters",
+    "type": "Pretreatment compliance correspondence",
+    "format": "PDF",
+    "pages": 3,
+    "size": 197550,
+    "sha256": "cfaee79bdc7e9c6e0d79b9a2929cb7156afaac48a14ab9a479a8a93cea63df54",
+    "description": "December 17, 2020 email chain in which EGLE states it reviewed Cadillac's modified pretreatment permit submitted in response to VN-011108 and asks to schedule a call; Doug Langworthy replies with his availability. The PDF includes an attachment descriptor and EGLE logo page but not the modified permit or an approval/closure letter."
   }
 ]

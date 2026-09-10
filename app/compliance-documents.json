@@ -846,5 +846,17 @@
     "size": 168712,
     "sha256": "b2448afb1ecd0403bf8938667954786bff972d0ef71695c3a9ea3046a869dcc7",
     "description": "EGLE's September 2, 2026 follow-up to Second Violation Notice SVN-01952. WRD finds Cadillac's proposed daily maximum local limits for benzidine (0.6 µg/L), beryllium (17 µg/L) and phenol (1,737 µg/L) approvable, but requires an attorney certification and certified adopted legal authorities by December 31, 2026 before final approval. The letter also states that WRD's review did not include worker-health-and-safety compliance under 40 CFR 403.5(b)(7)."
+  },
+  {
+    "id": "066-637b27ce2526",
+    "name": "2020-10-22 - Read Receipt for EGLE WRD VN-011108.pdf",
+    "url": "/compliance-docs/066-637b27ce2526.pdf",
+    "year": "2020",
+    "type": "Compliance transmission record",
+    "format": "PDF",
+    "pages": 1,
+    "size": 82929,
+    "sha256": "637b27ce2526b58991831e674f3a847c46986e86edafc0bcaedc7ada8e486b2e",
+    "description": "Administrative read receipt showing that the October 22, 2020 EGLE WRD VN-011108 message was read at 3:46:58 PM. It confirms transmission/read status only and is not a second violation notice or a finding that corrective action was complete."
   }
 ]

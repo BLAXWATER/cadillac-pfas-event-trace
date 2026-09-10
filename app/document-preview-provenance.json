@@ -16984,5 +16984,15 @@
       "postprocessing": "Open generated WEBP; convert RGB; thumbnail((900,1200)) with Pillow default resampling; save WEBP quality=60 method=6"
     },
     "scope": "First-page preview provenance only; not whole-document evidence review."
+  },
+  "/compliance-docs/066-637b27ce2526.pdf": {
+    "sourceSha256": "637b27ce2526b58991831e674f3a847c46986e86edafc0bcaedc7ada8e486b2e",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/637b27ce2526b58991831e674f3a847c46986e86edafc0bcaedc7ada8e486b2e.webp"
+  },
+  "/correspondence-docs/corr-045-cfaee79bdc7e.pdf": {
+    "sourceSha256": "cfaee79bdc7e9c6e0d79b9a2929cb7156afaac48a14ab9a479a8a93cea63df54",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/cfaee79bdc7e9c6e0d79b9a2929cb7156afaac48a14ab9a479a8a93cea63df54.webp"
   }
 }

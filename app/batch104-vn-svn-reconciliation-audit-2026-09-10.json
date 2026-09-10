@@ -1,0 +1,170 @@
+{
+  "batch": "September 10, 2026 — VNs/SVNs compliance and permit-review intake",
+  "sourceDirectory": "C:/Users/casey/OneDrive/Desktop/Already in portal",
+  "reviewStatus": "fully reviewed",
+  "methods": [
+    "Resolved the stale nested attachment path to the supplied originals in the local Already in portal folder.",
+    "Computed SHA-256, byte size and page count for all ten supplied PDFs before catalog comparison.",
+    "Extracted embedded text page-by-page in document order and recorded sparse or image-dominant pages separately from page-review status.",
+    "Rendered all 166 pages at 72 DPI and visually reviewed the image-only 2016 notice and response pages, all flagged 2019 attachment pages, and the sparse 2020 permit-review and terminal pages.",
+    "Compared the two 2019 65-page variants by normalized text and rendered-page hashes; every rendered page matched the retained canonical variant.",
+    "Compared the 2020-09-29 and 2020-10-22 VN-011108 copies by normalized text and page content; the notice text and visible pages are content-equivalent despite different PDF containers and metadata.",
+    "Preserved source-level differences and filenames in this audit rather than deduplicating by filename alone."
+  ],
+  "stats": {
+    "suppliedFiles": 10,
+    "distinctInputHashes": 10,
+    "pdfPagesReviewed": 166,
+    "embeddedTextPages": 149,
+    "imageDominantOrSparsePages": 17,
+    "renderedPagesReviewed": 166,
+    "ocrEngineAvailable": false,
+    "visualRecoveryPages": 17,
+    "existingCanonicalRecordsReused": 7,
+    "duplicateSourceVariantsSuppressed": 2,
+    "newRecordsAdded": 2,
+    "newTimelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "unreadablePages": 0
+  },
+  "records": [
+    {
+      "suppliedName": "2016-02-04_-5228663365988565838_Violation Letter.Cadillac WWTP-Dietlin.pdf",
+      "sha256": "37ac85d03cbbe59e1302a27d68055f905cdb0053f7b18f1fdc9ebaa61a575483",
+      "bytes": 737118,
+      "pages": 12,
+      "catalog": "compliance-documents.json",
+      "recordId": "041-37ac85d03cbb",
+      "status": "existing canonical record reused",
+      "pageCoverage": "all 12 pages rendered and visually reviewed",
+      "finding": "The February 1, 2016 DEQ notice VN-006346 identifies reported TSS, CBOD5, ammonia-nitrogen, fecal-coliform and total-phosphorus monitoring violations between October 21, 2014 and June 23, 2015 (pages 1-7). Pages 8-10 preserve a Class A facility/operator material and signed operator designation; pages 11-12 are permit excerpts.",
+      "boundary": "This is a formal agency notice and supporting package; it is not a PFAS source finding, per-load leachate record, final disposal record or groundwater determination."
+    },
+    {
+      "suppliedName": "2016-02-29_-6168521012883685018_VN response from City.Feb 29 2016.pdf",
+      "sha256": "e1b7446e4226eca442de365224878a4232a6798f99a9887f488387322a23b3e4",
+      "bytes": 1286177,
+      "pages": 5,
+      "catalog": "compliance-documents.json",
+      "recordId": "040-e1b7446e4226",
+      "status": "existing canonical record reused",
+      "pageCoverage": "all 5 pages rendered and visually reviewed",
+      "finding": "Cadillac's February 26, 2016 response (agency-stamped February 29) attributes the two violation periods to solids carryover, clarifier bulking, altered RAS/WAS, tertiary-filter loading and reduced UV dose, and lists proposed operating controls (pages 1-3). The signed operator-designation form names Jeffrey Dietlin and lists the certified operators (page 5).",
+      "boundary": "These are municipal explanations and planned corrective actions, not an independent agency finding that each asserted cause was proven."
+    },
+    {
+      "suppliedName": "2019-02-05_-3784595676221306480_Cadillac WWTP 2018 CSI Trnsmt & VN Crrspnd 020519.pdf",
+      "sha256": "0a15737862f45abd572747212ec004802fd94f9d3e1f0ccbdd18f07e4d827b5e",
+      "bytes": 674293,
+      "pages": 65,
+      "catalog": "compliance-documents.json",
+      "recordId": "050-8681b59f46b5",
+      "status": "variant suppressed; canonical record reused",
+      "pageCoverage": "all 65 pages rendered; sparse attachment pages 40, 42, 44, 46, 52 and 61-65 visually checked",
+      "finding": "The February 5, 2019 DEQ transmittal asks Cadillac to correct No Exposure Certification item 9 in MiWaters, discusses outdoor liquid/leachate offloading and stormwater contact, lists past NPDES violations and requests additional asset-management information (pages 1-7). The embedded 2018 inspection and sampling material reports a 1.975 MGD survey flow, conventional/cyanide/metals results and no PFAS analytes (pages 10-18 and 37-52). The draft permit basis memo presents proposed seasonal CBOD/ammonia and additional chemical monitoring limits (pages 54-59); pages 61-65 are the asset-management submittal.",
+      "boundary": "The outdoor-offloading discussion is a regulatory correspondence statement, not a measured leachate load, receiving-log entry or proof of stormwater contamination."
+    },
+    {
+      "suppliedName": "2019-02-05_-4332928990444746313_Cadillac WWTP 2018 CSI Trnsmt & VN Crrspnd 020519.pdf",
+      "sha256": "8681b59f46b5197decd00b49b0d31127fe0e6d9898970c84b8a86aebbda270ed",
+      "bytes": 674293,
+      "pages": 65,
+      "catalog": "compliance-documents.json",
+      "recordId": "050-8681b59f46b5",
+      "status": "existing canonical record reused",
+      "pageCoverage": "all 65 pages rendered and visually reviewed",
+      "finding": "Byte-different container, but normalized text and all 65 rendered pages match the retained canonical 2018 CSI/transmittal package.",
+      "boundary": "The copy is retained as provenance in this audit and does not create a second compliance event."
+    },
+    {
+      "suppliedName": "2020-09-29_4788344121194106771_Violation Notice.pdf",
+      "sha256": "31eb5b7d404ee8f5b1a22205d97bc8aecb1106db8f4f75e3f2c5806adea2839a",
+      "bytes": 91104,
+      "pages": 5,
+      "catalog": "compliance-documents.json",
+      "recordId": "008-5fff30df4912",
+      "status": "content-equivalent source variant suppressed",
+      "pageCoverage": "all 5 pages rendered and visually reviewed",
+      "finding": "The file is dated October 22, 2020 on its pages and contains the same VN-011108 notice as the retained 2020-10-22 canonical copy; the filename date is not the notice date.",
+      "boundary": "The filename must not be used as a separate September 29 enforcement date."
+    },
+    {
+      "suppliedName": "2020-10-22 VN-011108 Cadillac WWTP.pdf",
+      "sha256": "5fff30df4912f649583326f3400e168647efa2d598af82a36b1d111ab10b5649",
+      "bytes": 128337,
+      "pages": 5,
+      "catalog": "compliance-documents.json",
+      "recordId": "008-5fff30df4912",
+      "status": "existing canonical record reused",
+      "pageCoverage": "all 5 pages rendered and text-checked",
+      "finding": "EGLE's October 22, 2020 VN-011108 follows the September 25, 2020 IPP reconnaissance evaluation of the AAR Rinse Tank file and identifies eleven deficiencies involving legal authority, permit limits, sampling locations and composite methods, reporting and notification requirements, analytical methods, enforcement-response procedures and monitoring-method definitions (pages 1-5).",
+      "boundary": "The notice is an agency compliance finding about the control authority and AAR file; it does not independently establish PFAS occurrence, a leachate delivery or a final disposition."
+    },
+    {
+      "suppliedName": "2020-10-22_- EGLE WRD VN-011108 Cadillac WWTP.pdf",
+      "sha256": "637b27ce2526b58991831e674f3a847c46986e86edafc0bcaedc7ada8e486b2e",
+      "bytes": 82929,
+      "pages": 1,
+      "catalog": "compliance-documents.json",
+      "recordId": "066-637b27ce2526",
+      "status": "new source record added",
+      "pageCoverage": "page 1 rendered and visually reviewed",
+      "finding": "Read receipt timestamped October 22, 2020 at 3:46:58 PM confirms that the VN-011108 email was read; it is administrative transmission evidence, not a second notice.",
+      "boundary": "A read receipt does not establish agreement with the notice or completion of corrective action."
+    },
+    {
+      "suppliedName": "2020-11-25 RE_ EGLE WRD VN-011108 Cadillac WWTP.pdf",
+      "sha256": "caef07e3ea35e45c70d17c4abe0c2ac16db32b82b609a679b22f8c461c5a1e7f",
+      "bytes": 152900,
+      "pages": 3,
+      "catalog": "compliance-documents.json",
+      "recordId": "009-caef07e3ea35",
+      "status": "existing canonical record reused",
+      "pageCoverage": "all 3 pages rendered; terminal page 3 confirmed blank",
+      "finding": "Claire Lowe's November 25 email grants Cadillac's requested extension of the VN-011108 response due date to December 15, 2020 (pages 1-2).",
+      "boundary": "The extension changes timing only; it is not an agency closure or finding that the deficiencies were corrected."
+    },
+    {
+      "suppliedName": "2020-12-15 - DEQ Letter Violation Notice - Claire Lowe - 12152020.pdf",
+      "sha256": "82185208b76d9ae1e820878e13edf8015b6bec11c478872c6ccbf950b83b2620",
+      "bytes": 115001,
+      "pages": 2,
+      "catalog": "compliance-documents.json",
+      "recordId": "014-82185208b76d",
+      "status": "existing canonical record reused",
+      "pageCoverage": "all 2 pages rendered and text-checked",
+      "finding": "Cadillac's December 15 response says the City recodified Chapter 23 to Chapter 42, modified permits, would use approved analytical methods, would review industrial-user reports and added a monitoring-method definition for the eleven deficiencies (pages 1-2).",
+      "boundary": "This is the City's response; no EGLE acceptance or final closure is present in the supplied document."
+    },
+    {
+      "suppliedName": "2020-12-17-Re-Permit modification review.pdf",
+      "sha256": "cfaee79bdc7e9c6e0d79b9a2929cb7156afaac48a14ab9a479a8a93cea63df54",
+      "bytes": 197550,
+      "pages": 3,
+      "catalog": "correspondence-documents.json",
+      "recordId": "corr-045-cfaee79bdc7e",
+      "status": "new source record added",
+      "pageCoverage": "all 3 pages rendered; page 1 email, page 2 attachment descriptor and page 3 EGLE logo visually checked",
+      "finding": "On December 17, 2020 Claire Lowe states that she reviewed the modified pretreatment permit submitted in response to VN-011108 and requests a call; Doug Langworthy replies with his availability. The PDF preserves an attachment descriptor and EGLE logo page, but not the modified permit itself.",
+      "boundary": "The correspondence proves review was being arranged, not that EGLE approved the modified permit or closed VN-011108."
+    }
+  ],
+  "leadTrace": [
+    {
+      "lead": "The 2019 DEQ email discusses outdoor liquid/leachate offloading and directs correction of MiWaters NEC item 9.",
+      "sourcePages": "2019 package pages 1-3",
+      "targetRecord": "HNH-YJTD-MY6A8 No Exposure Certification submission and the existing leachate/PFAS chronology",
+      "tieBack": "Cross-reference the form submission and PFAS records when assessing what was reported about offloading; do not treat the email as a load ticket or receiving log.",
+      "remainingUncertainty": "No per-load date, time, gallons, driver, truck or invoice is supplied here."
+    },
+    {
+      "lead": "VN-011108 required a modified AAR permit and the December 17 email shows EGLE was reviewing that submission.",
+      "sourcePages": "2020 notice pages 1-5; December 15 response pages 1-2; December 17 email page 1",
+      "targetRecord": "Any executed modified AAR permit or later EGLE approval/closure correspondence",
+      "tieBack": "Search the permit and correspondence catalogs for the actual modified permit and agency disposition.",
+      "remainingUncertainty": "The supplied December 17 PDF contains only an attachment descriptor, not the modified permit or an approval letter."
+    }
+  ],
+  "queueDecision": "No receiving-history, final-leachate-load or source-to-receptor requirement is closed. Two administrative/compliance support records were added; all other supplied files reuse established canonical records or are content-equivalent variants.",
+  "evidentiaryBoundary": "The batch strengthens the 2016 VN-006346 and 2020 VN-011108 compliance chronology and documents a 2019 regulatory discussion of outdoor leachate offloading. It does not establish a per-load receiving series, a final delivery date, PFAS source attribution or a groundwater pathway."
+}

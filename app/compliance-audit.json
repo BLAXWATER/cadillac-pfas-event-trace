@@ -12,16 +12,16 @@
     "Manual visual review of low-confidence aerial-image and rotated-table pages"
   ],
   "stats": {
-    "sourceFilesReviewed": 120,
+    "sourceFilesReviewed": 130,
     "exactDuplicateGroupsWithinSource": 1,
     "renderIdenticalByteDifferentGroupsWithinSource": 0,
     "crossCategoryCopiesReferencedElsewhere": 6,
     "analystAuthoredReportsExcluded": 4,
     "existingComplianceRecordsRetained": 3,
-    "finalDistinctRecords": 65,
-    "reviewedPages": 798,
+    "finalDistinctRecords": 66,
+    "reviewedPages": 964,
     "ocrPages": 327,
-    "publishedBytes": 61690338,
+    "publishedBytes": 61773267,
     "latestSVN01952FollowupIntakeFiles": 1,
     "latestSVN01952FollowupPdfPages": 2,
     "latestSVN01952FollowupNewComplianceRecords": 1,
@@ -59,7 +59,15 @@
     "latestPOTWOversightNewComplianceRecords": 2,
     "latestPOTWMonitoringIntakeFiles": 10,
     "latestPOTWMonitoringExactExistingRecords": 9,
-    "latestPOTWMonitoringNewComplianceRecords": 1
+    "latestPOTWMonitoringNewComplianceRecords": 1,
+    "latestVNSVNIntakeFiles": 10,
+    "latestVNSVNPdfPages": 166,
+    "latestVNSVNDistinctInputHashes": 10,
+    "latestVNSVNExistingCanonicalRecordsReused": 7,
+    "latestVNSVNDuplicateVariantsSuppressed": 2,
+    "latestVNSVNNewComplianceRecords": 1,
+    "latestVNSVNNewCorrespondenceRecords": 1,
+    "latestVNSVNRequirementsClosed": 0
   },
   "decisions": [
     {
@@ -153,6 +161,10 @@
     {
       "name": "August 31 POTW monitoring and post-inspection intake",
       "reason": "Ten supplied PDFs totaling 37 pages were checked by SHA-256, page count, embedded text, rendered-page sequence and full visual review. Nine annual monitoring summaries exactly match established IPP records. The distinct four-page November 19, 2009 post-inspection export was retained once in the compliance library and linked to one dated event."
+    },
+    {
+      "name": "September 10 VNs/SVNs compliance and permit-review intake",
+      "reason": "Ten supplied PDFs totaling 166 pages were hashed, extracted, rendered and reviewed in page order. The 2016 VN-006346 notice and response, the 2019 CSI/transmittal package, VN-011108, its extension and December 15 response were reused as established canonical records. The two 2019 variants matched every rendered page; the filename-dated September 29, 2020 notice was content-equivalent to the October 22 VN-011108 record. A distinct October 22 read receipt and December 17 permit-review email were added with complete first-page previews and downloads. No supplied document closes the receiving-log, final-leachate-load, PFAS source-attribution or groundwater-pathway requirements."
     }
   ]
 }

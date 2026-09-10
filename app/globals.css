@@ -318,12 +318,12 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .evidence-chain-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .85fr); gap: 28px; align-items: end; margin-bottom: 18px; }
 .evidence-chain-heading h3 { margin: 0; color: var(--brand-white); font-size: clamp(23px, 3vw, 31px); line-height: 1.1; }
 .evidence-chain-heading > p { margin: 0; color: var(--brand-gray); line-height: 1.55; }
-.evidence-chain-list { display: flex; flex-direction: row; align-items: stretch; gap: 14px; min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; margin: 0 -4px; padding: 0 4px 12px; list-style: none; scroll-snap-type: x proximity; overscroll-behavior-inline: contain; scrollbar-color: rgba(0, 188, 235, .65) rgba(5, 7, 8, .72); }
-.evidence-chain-node { position: relative; flex: 0 0 clamp(300px, 29vw, 360px); min-width: 0; display: grid; align-content: start; gap: 12px; padding: 17px; border: 1px solid var(--border); background: rgba(5, 7, 8, .8); scroll-margin-top: 100px; scroll-snap-align: start; }
+.evidence-chain-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; min-width: 0; max-width: 100%; max-height: min(72vh, 780px); overflow-x: hidden; overflow-y: auto; margin: 0 -4px; padding: 0 12px 18px 4px; list-style: none; scroll-snap-type: y proximity; overscroll-behavior-block: contain; scrollbar-color: rgba(0, 188, 235, .65) rgba(5, 7, 8, .72); }
+.evidence-chain-node { position: relative; min-width: 0; display: grid; grid-template-columns: clamp(52px, 8vw, 86px) minmax(0, 1fr); align-items: start; gap: 16px; padding: 17px; border: 1px solid var(--border); background: rgba(5, 7, 8, .8); scroll-margin-top: 100px; scroll-snap-align: start; }
 .evidence-chain-node.chain-held { border-top: 3px solid #62a9ff; }
 .evidence-chain-node.chain-handoff { border-top: 3px solid #26e6f7; }
 .evidence-chain-node.chain-open { border-top: 3px solid #ffbf47; }
-.evidence-chain-marker { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--primary); }
+.evidence-chain-marker { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; color: var(--primary); }
 .evidence-chain-marker span { font-family: var(--font-mono); font-size: var(--font-11pt); }
 .evidence-chain-marker svg { width: 18px; color: var(--brand-cyan); }
 .evidence-chain-topline { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
@@ -337,7 +337,7 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .evidence-chain-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .evidence-chain-links a { color: var(--brand-cyan); font-size: .78rem; text-decoration: underline; text-underline-offset: 3px; }
 .evidence-chain-links a:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
-.evidence-chain-arrow { position: absolute; top: 50%; right: -12px; z-index: 2; width: 16px; color: var(--brand-gray); }
+.evidence-chain-arrow { position: absolute; right: auto; bottom: -16px; left: 50%; z-index: 2; width: 16px; color: var(--brand-gray); transform: translateX(-50%); }
 .request-update { margin-bottom: 18px; font-size: 1rem; line-height: 1.6; overflow-wrap: anywhere; }
 .request-update p { margin: 0; }
 .request-update .request-update-label { margin-bottom: 6px; color: var(--brand-cyan); font: 700 .875rem/1.5 var(--font-mono); text-transform: uppercase; }
@@ -493,9 +493,9 @@ footer p { margin: 0; }
   .hierarchy-steps > svg { transform: none; }
   .evidence-chain { padding: 16px; }
   .evidence-chain-heading { grid-template-columns: 1fr; gap: 12px; }
-  .evidence-chain-list { gap: 12px; }
-  .evidence-chain-node { flex-basis: min(86vw, 360px); padding: 15px; }
-  .evidence-chain-arrow { top: 50%; right: -10px; bottom: auto; left: auto; }
+  .evidence-chain-list { gap: 12px; max-height: min(68vh, 640px); padding-right: 8px; }
+  .evidence-chain-node { grid-template-columns: 44px minmax(0, 1fr); gap: 12px; padding: 15px; }
+  .evidence-chain-arrow { right: auto; bottom: -14px; left: 50%; }
   .year-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .year-nav a { min-height: 72px; padding: 10px; }
   .year-marker { grid-template-columns: 38px minmax(0, 1fr); gap: 0 10px; min-height: 70px; }

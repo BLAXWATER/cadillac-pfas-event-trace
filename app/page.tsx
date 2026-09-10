@@ -6,7 +6,6 @@ import { useReducer, useState, type CSSProperties, type ReactNode } from "react"
 import {
   AlertTriangle,
   ArrowDown,
-  ArrowRight,
   CheckCircle2,
   Database,
   FileArchive,
@@ -4265,7 +4264,7 @@ export default function Home() {
                     <p className="evidence-chain-boundary"><strong>Boundary:</strong> {node.boundary}</p>
                     <div className="evidence-chain-links"><a href={`#${eventAnchor(node.eventTitle)}`}>Open timeline event</a><a href={`#request-${node.requestId}`}>Open WIP block</a></div>
                   </div>
-                  {index < evidenceChain.length - 1 && <ArrowRight className="evidence-chain-arrow" aria-hidden="true" />}
+                  {index < evidenceChain.length - 1 && <ArrowDown className="evidence-chain-arrow" aria-hidden="true" />}
                 </li>;
               })}
             </ol>

@@ -516,7 +516,7 @@
   {
     "id": "004-044b89235b40",
     "name": "05-22-2026 - EGLE WRD Correspondence_ SVN-01952_Cadillac WWTP.msg",
-    "url": "/compliance-docs/004-044b89235b40.msg",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1af5a37af4b30bd8d70d80799312499b3d4050ea/public/compliance-docs/004-044b89235b40.msg",
     "year": "2026",
     "type": "Compliance correspondence",
     "format": "MSG",
@@ -570,7 +570,7 @@
   {
     "id": "006-bd78c5e76142",
     "name": "06-10-2026 - EGLE FILE Violation Notice - VN No_ VN-019184.msg",
-    "url": "/compliance-docs/006-bd78c5e76142.msg",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1af5a37af4b30bd8d70d80799312499b3d4050ea/public/compliance-docs/006-bd78c5e76142.msg",
     "year": "2026",
     "type": "Violation notice",
     "format": "MSG",

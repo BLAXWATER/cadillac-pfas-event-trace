@@ -2446,7 +2446,7 @@
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "05-22-2026 - EGLE WRD Correspondence_ SVN-01952_Cadillac WWTP.msg",
-      "url": "/compliance-docs/004-044b89235b40.msg",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1af5a37af4b30bd8d70d80799312499b3d4050ea/public/compliance-docs/004-044b89235b40.msg",
       "sha256": "044b89235b4074c9d6914906a322fa178fd3a031b8b2e481f11ce7f5711a55f1",
       "size": 486400
     },
@@ -2468,7 +2468,7 @@
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
       "name": "06-10-2026 - EGLE FILE Violation Notice - VN No_ VN-019184.msg",
-      "url": "/compliance-docs/006-bd78c5e76142.msg",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1af5a37af4b30bd8d70d80799312499b3d4050ea/public/compliance-docs/006-bd78c5e76142.msg",
       "sha256": "bd78c5e7614238ca9d6b5fdbcff9910cda0fe1d757992ab2891cd33b5fa2e344",
       "size": 142848
     },
@@ -11719,7 +11719,7 @@
       "catalog": "pfas-documents.json",
       "sectionId": "pfas-library-title",
       "name": "0330_2018-09-19_RE_ Cadillac WWTP - IPP PFAS Interim Report Review.msg",
-      "url": "/pfas-docs/001-391d2cff96ef.msg",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1af5a37af4b30bd8d70d80799312499b3d4050ea/public/pfas-docs/001-391d2cff96ef.msg",
       "sha256": "391d2cff96ef63efa02cb2ff6dff500c3fbe9a7f0a40340e4edb55e97b300ffe",
       "size": 12988416
     },
@@ -11807,7 +11807,7 @@
       "catalog": "pfas-documents.json",
       "sectionId": "pfas-library-title",
       "name": "04 - PFAS Monitoring_FW_ Biosolids PFAS - Cadillac.msg",
-      "url": "/pfas-docs/009-c720082b6790.msg",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1af5a37af4b30bd8d70d80799312499b3d4050ea/public/pfas-docs/009-c720082b6790.msg",
       "sha256": "c720082b6790a3df34474afc604ae50f40abb3288a6bb3060b86a482b0be8b2b",
       "size": 329728
     },

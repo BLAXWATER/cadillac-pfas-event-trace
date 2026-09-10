@@ -314,11 +314,11 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .queue-review { margin-bottom: 24px; padding: 16px 20px; border-left: 3px solid var(--primary); background: rgba(0, 188, 235, .06); font-size: 1rem; line-height: 1.6; }
 .queue-review p { margin: 0; }
 .queue-review p + p { margin-top: 8px; color: var(--brand-gray); }
-.evidence-chain { margin: 0 0 26px; padding: 20px; border: 1px solid rgba(0, 188, 235, .28); background: linear-gradient(145deg, rgba(0, 43, 59, .72), rgba(5, 7, 8, .9)); }
+.evidence-chain { min-width: 0; max-width: 100%; margin: 0 0 26px; padding: 20px; border: 1px solid rgba(0, 188, 235, .28); background: linear-gradient(145deg, rgba(0, 43, 59, .72), rgba(5, 7, 8, .9)); }
 .evidence-chain-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .85fr); gap: 28px; align-items: end; margin-bottom: 18px; }
 .evidence-chain-heading h3 { margin: 0; color: var(--brand-white); font-size: clamp(23px, 3vw, 31px); line-height: 1.1; }
 .evidence-chain-heading > p { margin: 0; color: var(--brand-gray); line-height: 1.55; }
-.evidence-chain-list { display: flex; gap: 14px; overflow-x: auto; margin: 0 -4px; padding: 0 4px 12px; list-style: none; scroll-snap-type: x proximity; scrollbar-color: rgba(0, 188, 235, .65) rgba(5, 7, 8, .72); }
+.evidence-chain-list { display: flex; flex-direction: row; align-items: stretch; gap: 14px; min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; margin: 0 -4px; padding: 0 4px 12px; list-style: none; scroll-snap-type: x proximity; overscroll-behavior-inline: contain; scrollbar-color: rgba(0, 188, 235, .65) rgba(5, 7, 8, .72); }
 .evidence-chain-node { position: relative; flex: 0 0 clamp(300px, 29vw, 360px); min-width: 0; display: grid; align-content: start; gap: 12px; padding: 17px; border: 1px solid var(--border); background: rgba(5, 7, 8, .8); scroll-margin-top: 100px; scroll-snap-align: start; }
 .evidence-chain-node.chain-held { border-top: 3px solid #62a9ff; }
 .evidence-chain-node.chain-handoff { border-top: 3px solid #26e6f7; }
@@ -337,7 +337,7 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .evidence-chain-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .evidence-chain-links a { color: var(--brand-cyan); font-size: .78rem; text-decoration: underline; text-underline-offset: 3px; }
 .evidence-chain-links a:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
-.evidence-chain-arrow { position: absolute; top: 50%; right: -12px; z-index: 2; width: 16px; color: var(--brand-gray); transform: rotate(-90deg); }
+.evidence-chain-arrow { position: absolute; top: 50%; right: -12px; z-index: 2; width: 16px; color: var(--brand-gray); }
 .request-update { margin-bottom: 18px; font-size: 1rem; line-height: 1.6; overflow-wrap: anywhere; }
 .request-update p { margin: 0; }
 .request-update .request-update-label { margin-bottom: 6px; color: var(--brand-cyan); font: 700 .875rem/1.5 var(--font-mono); text-transform: uppercase; }
@@ -495,7 +495,7 @@ footer p { margin: 0; }
   .evidence-chain-heading { grid-template-columns: 1fr; gap: 12px; }
   .evidence-chain-list { gap: 12px; }
   .evidence-chain-node { flex-basis: min(86vw, 360px); padding: 15px; }
-  .evidence-chain-arrow { top: 50%; right: -10px; bottom: auto; left: auto; transform: rotate(-90deg); }
+  .evidence-chain-arrow { top: 50%; right: -10px; bottom: auto; left: auto; }
   .year-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .year-nav a { min-height: 72px; padding: 10px; }
   .year-marker { grid-template-columns: 38px minmax(0, 1fr); gap: 0 10px; min-height: 70px; }

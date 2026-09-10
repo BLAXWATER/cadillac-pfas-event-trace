@@ -3292,6 +3292,89 @@ const meta: Record<Kind, { label: string; icon: typeof Factory }> = {
   gap: { label: "Evidence gap", icon: AlertTriangle },
 };
 
+type EvidenceChainNode = {
+  id: string;
+  kind: Kind;
+  heading: string;
+  authority: string;
+  handoff: string;
+  eventTitle: string;
+  requestId: string;
+  boundary: string;
+  status: "held" | "handoff" | "open";
+};
+
+const eventAnchor = (title: string) => `event-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+
+const evidenceChain: readonly EvidenceChainNode[] = [
+  {
+    id: "source-direction",
+    kind: "regulatory",
+    heading: "Agency direction",
+    authority: "EGLE directs PFAS source evaluation and reduction",
+    handoff: "Directs the City’s screening and source-sampling work.",
+    eventTitle: "EGLE directs PFAS source evaluation and reduction",
+    requestId: "wwtp-treatment-discharge",
+    boundary: "Direction is not itself a sample result or a source determination.",
+    status: "held",
+  },
+  {
+    id: "source-receiving",
+    kind: "sampling",
+    heading: "Source and receiving record",
+    authority: "Wexford leachate shows a strong PFAS burden",
+    handoff: "Links the source sample to the existing landfill-to-WWTP receiving record.",
+    eventTitle: "Wexford leachate shows a strong PFAS burden",
+    requestId: "receiving-history",
+    boundary: "Source chemistry is not mixed main-WWTP influent and does not reconstruct loads.",
+    status: "held",
+  },
+  {
+    id: "agency-determination",
+    kind: "regulatory",
+    heading: "Agency determination",
+    authority: "DEQ approves reports and acknowledges a confirmed source",
+    handoff: "Carries the screened-source record into corrective-action and cessation reporting.",
+    eventTitle: "DEQ approves reports and acknowledges a confirmed source",
+    requestId: "wwtp-treatment-discharge",
+    boundary: "The determination does not close the paired influent/effluent/sludge or operating-log requests.",
+    status: "handoff",
+  },
+  {
+    id: "cessation-transition",
+    kind: "operation",
+    heading: "Cessation and transition",
+    authority: "Submitted report: landfill source status “PFOS eliminated” through deep-well injection",
+    handoff: "Moves the record from source-status reporting to the later receptor-monitoring question.",
+    eventTitle: "Submitted report: landfill source status “PFOS eliminated” through deep-well injection",
+    requestId: "receiving-history",
+    boundary: "This is a submitted source-status statement, not a laboratory finding that all WWTP PFOS was eliminated; the final load remains open.",
+    status: "handoff",
+  },
+  {
+    id: "receptor-series",
+    kind: "receptor",
+    heading: "Receptor series",
+    authority: "PFAS detected at 1140 Plett Road",
+    handoff: "Connects the receptor result to the separate AOI comparability and custody requests.",
+    eventTitle: "PFAS detected at 1140 Plett Road",
+    requestId: "plett-receptor-series",
+    boundary: "Repeated receptor results do not establish a source-to-Plett pathway without coordinates, custody and hydrogeologic measurements.",
+    status: "open",
+  },
+  {
+    id: "pathway-handoff",
+    kind: "gap",
+    heading: "Hydrogeologic handoff",
+    authority: "Sand aquifers, clay barriers and groundwater pathways",
+    handoff: "Defines the historical framework for the still-needed local gradient, hydraulic tests and flow map.",
+    eventTitle: "Sand aquifers, clay barriers and groundwater pathways",
+    requestId: "subsurface-pathway",
+    boundary: "Historical pathway context is not a current site-specific potentiometric map or proof of migration.",
+    status: "open",
+  },
+];
+
 function SourceButton({ source, open }: { source: Source; open: (source: Source) => void }) {
   const linked = Boolean(source.url);
   const [previewFailed, setPreviewFailed] = useState(false);
@@ -3652,7 +3735,7 @@ export default function Home() {
                   const Icon = item.icon;
                   const index = events.indexOf(event);
                   return (
-                    <article className="trace-row" data-kind={event.kind} key={`${event.date}-${event.title}`}>
+                    <article className="trace-row" data-kind={event.kind} id={eventAnchor(event.title)} key={`${event.date}-${event.title}`}>
                       <div className="trace-date">
                         <time dateTime={event.isoDate}>{event.date}</time>
                         <span className="event-time">{event.time}</span>
@@ -4172,6 +4255,28 @@ export default function Home() {
             <p>{evidenceQueueUpdates.note}</p>
             <p className="queue-scope">{evidenceQueueUpdates.scope}</p>
           </div>
+          <section className="evidence-chain" aria-labelledby="evidence-chain-title">
+            <div className="evidence-chain-heading">
+              <div><p className="eyebrow">WORK-IN-PROCESS HANDOFF MAP</p><h3 id="evidence-chain-title">Authority → record → next verification</h3></div>
+              <p>This is a documentary chain of command: each block shows which record directs or supports the next review step. It is not an organizational chart or a causal conclusion.</p>
+            </div>
+            <ol className="evidence-chain-list">
+              {evidenceChain.map((node, index) => {
+                const Icon = meta[node.kind].icon;
+                return <li className={`evidence-chain-node chain-${node.status}`} key={node.id}>
+                  <div className="evidence-chain-marker"><span>{String(index + 1).padStart(2, "0")}</span><Icon aria-hidden="true" /></div>
+                  <div className="evidence-chain-copy">
+                    <div className="evidence-chain-topline"><strong>{node.heading}</strong><Badge variant="outline">{node.status === "held" ? "Held" : node.status === "handoff" ? "Handoff" : "Still open"}</Badge></div>
+                    <p className="evidence-chain-authority">{node.authority}</p>
+                    <p>{node.handoff}</p>
+                    <p className="evidence-chain-boundary"><strong>Boundary:</strong> {node.boundary}</p>
+                    <div className="evidence-chain-links"><a href={`#${eventAnchor(node.eventTitle)}`}>Open timeline event</a><a href={`#request-${node.requestId}`}>Open WIP block</a></div>
+                  </div>
+                  {index < evidenceChain.length - 1 && <ArrowDown className="evidence-chain-arrow" aria-hidden="true" />}
+                </li>;
+              })}
+            </ol>
+          </section>
           {evidenceRequests.length > 0 ? (
             <div className="request-grid">
               {evidenceRequests.map((request, index) => {

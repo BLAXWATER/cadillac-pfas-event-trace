@@ -1221,7 +1221,7 @@
     "pages": 3,
     "size": 100123,
     "sha256": "9011dd4b0fe6edbea6b5e3e6b5792b0fa6359a9ddd5afa54e3cfb6f406537eb4",
-    "description": "Reflowed EGLE export of the November 18, 2015 N3862 air inspection. The signed DEQ/MACES scan is separately retained as record 111-d8141f278b56; these are versions of the same inspection, not independent events. This export has blank contact and signature/date fields. The narrative reports a recent late-reporting VN, asbestos shipment-record review, aeration-pond non-use and compliance with applicable air permitting at the visit. Not a PFAS result or leachate-to-Cadillac delivery record."
+    "description": "Reflowed EGLE export of the November 18, 2015 N3862 air inspection. The signed DEQ/MACES scan is separately retained as record 111-d8141f278b56; these are versions of the same inspection, not independent events. This export has blank contact and signature/date fields. Pages 1-3 report MI-ROP-N3862-2012, light easterly winds with no downwind odors, April 2011 Tier 2/LandGEM testing, a projected 11.34 Mg/year NMOC rate, no recent landfill expansion, a late-reporting VN reference, asbestos shipment-record review with no discrepancies, an unused aeration pond proposed for removal at renewal, and compliance with applicable air permitting at the visit. Not a PFAS result, WWTP receiving log or leachate-to-Cadillac delivery record."
   },
   {
     "id": "103-5114323584bd",
@@ -1233,7 +1233,7 @@
     "pages": 4,
     "size": 102694,
     "sha256": "5114323584bd9f2b98c09145c4c1941ba7beb059abdc4b2f8a7b0f3f76e4e4b4",
-    "description": "Air Quality Division on-site inspection record for Wexford County Landfill, including gas-collection and leachate-evaporation operating context. It is distinct from the one-page compliance-evaluation record and is not characterized as a PFAS sampling result."
+    "description": "Air Quality Division on-site inspection record for Wexford County Landfill, distinct from the one-page compliance-evaluation record. Pages 1-4 report MI-ROP-N3862-2017, Type II MSW landfill status, 3.45-million-Mg design capacity, active gas collection and flare, post-closure groundwater-remediation aeration ponds, a Rule 285(aa)-exempt leachate evaporation system, March 2016 Tier 2/LandGEM NMOC emissions of 31.04 Mg for 2017, complete/up-to-date waste and design-capacity records, and no discrepancies in asbestos shipment records; applicable air permitting was recorded compliant at the inspection. This is landfill operations and regulatory context, not a PFAS sampling result, WWTP receiving log or proof of the final leachate load."
   },
   {
     "id": "104-6815e2f8b48e",

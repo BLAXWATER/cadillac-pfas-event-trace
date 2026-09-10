@@ -1,0 +1,94 @@
+{
+  "batch": "2026-09-10 N3862 on-site inspection re-review",
+  "scope": "Two user-supplied Air Quality Division On-Site Inspection PDFs were reread from page 1 through the final page, rendered for visual verification, hash-matched against the published Wexford library, and reconciled without duplicate publication.",
+  "method": [
+    "Read every page in order with pypdf text extraction and checked the rendered page image for headings, tables, section transitions, footer marks and legibility.",
+    "Native text was present and coherent on all seven pages; no page required OCR. The page images were used to verify the extracted reading rather than treating extraction alone as page review.",
+    "Compared byte length, SHA-256, page count and substantive identity with the canonical Wexford assets and the existing N3862 catalog records.",
+    "Classified statements as inspection observations, reported facility statements, permit requirements or agency conclusions; no PFAS, WWTP-receiving or final-load conclusion was inferred from these air-program records."
+  ],
+  "sourceFiles": [
+    {
+      "suppliedFilename": "2015-11-18__-7708436501529552797__N3862_On-Site Inspection_11-18-2015.pdf",
+      "receivedPath": "C:/Users/casey/AppData/Local/Temp/2015-11-18__-7708436501529552797__N3862_On-Site Inspection_11-18-2015.pdf",
+      "sha256": "9011dd4b0fe6edbea6b5e3e6b5792b0fa6359a9ddd5afa54e3cfb6f406537eb4",
+      "bytes": 100123,
+      "pages": 3,
+      "nativeTextPages": 3,
+      "ocrPages": 0,
+      "renderedPagesReviewed": 3,
+      "catalogRecordId": "102-9011dd4b0fe6",
+      "publishedAsset": "/wexford-docs/102-9011dd4b0fe6.pdf",
+      "disposition": "Exact existing source reused; no duplicate record added."
+    },
+    {
+      "suppliedFilename": "2017-11-06__-7145165304305963063__N3862_On-Site Inspection_11-06-2017.pdf",
+      "receivedPath": "C:/Users/casey/AppData/Local/Temp/2017-11-06__-7145165304305963063__N3862_On-Site Inspection_11-06-2017.pdf",
+      "sha256": "5114323584bd9f2b98c09145c4c1941ba7beb059abdc4b2f8a7b0f3f76e4e4b4",
+      "bytes": 102694,
+      "pages": 4,
+      "nativeTextPages": 4,
+      "ocrPages": 0,
+      "renderedPagesReviewed": 4,
+      "catalogRecordId": "103-5114323584bd",
+      "publishedAsset": "/wexford-docs/103-5114323584bd.pdf",
+      "disposition": "Exact existing source reused; no duplicate record added."
+    }
+  ],
+  "pageReview": [
+    {"recordId":"102-9011dd4b0fe6","page":1,"status":"fully reviewed","coverage":"Facility header, November 18, 2015 activity date, ROP MI-ROP-N3862-2012, light easterly winds and no downwind odors; Tier 2/LandGEM history, 2011 testing, 2013 MAERS value, EULANDFILL<50, projected 11.34 Mg/year NMOC, design-capacity and waste-in-place recordkeeping."},
+    {"recordId":"102-9011dd4b0fe6","page":2,"status":"fully reviewed","coverage":"Reporting and late-reporting VN reference; no stack/vent restrictions; conditional 40 CFR 60 Subpart WWW capture/control requirement; voluntary gas collection; asbestos acceptance, scheduling, immediate cover, mapping, security and equipment statements."},
+    {"recordId":"102-9011dd4b0fe6","page":3,"status":"fully reviewed","coverage":"Per-shipment asbestos generator/transporter/quantity/packaging/date records; agency review found no discrepancies; no disturbance reporting in the prior 12 months; aeration pond unused and proposed for removal at renewal; applicable air permitting recorded compliant."},
+    {"recordId":"103-5114323584bd","page":1,"status":"fully reviewed","coverage":"Facility header, November 6, 2017 activity date, ROP MI-ROP-N3862-2017; Type II MSW landfill; accepted waste types; 3.45-million-Mg design capacity; active gas collection and flare; post-closure groundwater-remediation aeration ponds; Rule 285(aa)-exempt leachate evaporation; no odors or visible emissions; March 2016 Tier 2 testing."},
+    {"recordId":"103-5114323584bd","page":2,"status":"fully reviewed","coverage":"EULANDFILL<50 limits/parameters; March 2016 Tier 2 result of 31.04 Mg for 2017; complete/up-to-date design-capacity, waste-in-place and acceptance records; LandGEM requirement; timely semiannual/annual deviation reporting and annual MAERS NMOC reporting; no stack parameters."},
+    {"recordId":"103-5114323584bd","page":3,"status":"fully reviewed","coverage":"Conditional collection/control requirement at >=50 Mg/year; Subpart A/WWW compliance for flare; asbestos acceptance schedule, immediate cover, GPS-mapped placement, job-number forms, fencing/signage and no segregation; page continues equipment statement."},
+    {"recordId":"103-5114323584bd","page":4,"status":"fully reviewed","coverage":"Continuation of asbestos equipment statement; no testing parameters; per-shipment records and no discrepancies; immediate cover and no disturbance reporting; no stack/other requirements; applicable air permitting recorded compliant."}
+  ],
+  "findings": [
+    {
+      "finding": "The 2015 inspection reports a scheduled air-permit inspection under MI-ROP-N3862-2012, with no downwind odors, projected NMOC below the 50-Mg/year threshold, no recent landfill expansion, and an agency conclusion of compliance with applicable air permitting at the visit.",
+      "sourcePages": "2015 PDF pp.1-3",
+      "classification": "agency inspection observation and conclusion",
+      "boundary": "This is an air-permitting record, not a PFAS analytical result, WWTP receiving log, leachate ticket or proof of a final Cadillac delivery."
+    },
+    {
+      "finding": "The 2017 inspection reports a 3.45-million-Mg landfill design capacity, active gas collection and flare, post-closure aeration ponds for contaminated-groundwater remediation, and a Rule 285(aa)-exempt leachate evaporation system; it reports 31.04 Mg NMOC for 2017 from March 2016 Tier 2/LandGEM work and concludes applicable air permitting was compliant at the inspection.",
+      "sourcePages": "2017 PDF pp.1-4",
+      "classification": "agency inspection observation and conclusion",
+      "boundary": "The leachate evaporation statement is operational air-program context. It does not establish when Cadillac stopped receiving Wexford leachate, whether every load was evaporated, or the final truck/load date."
+    },
+    {
+      "finding": "Both inspections say asbestos shipment records were maintained with generator, transporter, quantity, packaging/coverage and receipt-date information and that no discrepancies were noted.",
+      "sourcePages": "2015 PDF p.3; 2017 PDF pp.3-4",
+      "classification": "reported record-review result",
+      "boundary": "The underlying shipment records are not attached to these PDFs and are not leachate-to-WWTP tickets."
+    }
+  ],
+  "leadTrace": [
+    {
+      "lead": "The 2017 air inspection references an exempt leachate evaporation system and post-closure groundwater-remediation aeration ponds.",
+      "sourcePages": "2017 PDF p.1",
+      "targetRecord": "N3862 air-permit and groundwater/remediation records in Category 12, including the existing N3862 staff-report and permit family",
+      "tieBack": "Use as operational context when reading the landfill injection/groundwater and leachate records; it does not close the WWTP final-load question.",
+      "remainingUncertainty": "These inspection pages do not identify a Cadillac receiving date, volume, transporter, ticket or invoice."
+    },
+    {
+      "lead": "Both inspections refer to a recent or prior late-reporting violation notice.",
+      "sourcePages": "2015 PDF pp.2-3; 2017 PDF p.4",
+      "targetRecord": "Existing N3862 compliance/violation records in Category 08 and Category 12",
+      "tieBack": "Cross-reference the violation-notice series for reporting history; do not treat the reference as a new violation finding.",
+      "remainingUncertainty": "The inspection PDFs do not identify the notice number or attach the notice."
+    }
+  ],
+  "reconciliation": {
+    "catalog": "wexford-documents.json",
+    "exactExistingRecordsReused": 2,
+    "newRecordsAdded": 0,
+    "duplicateCopiesSuppressed": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "reason": "Both supplied files are byte-identical to records 102-9011dd4b0fe6 and 103-5114323584bd already preserved with first-page previews and download links. The supplied filenames are retained here as provenance; the clean canonical display names remain unchanged."
+  },
+  "reviewStatus": "fully reviewed and verified; published source records reused",
+  "published": true
+}

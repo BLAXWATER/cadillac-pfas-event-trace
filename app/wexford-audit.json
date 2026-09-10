@@ -25,7 +25,13 @@
     "latestRepeatIntakeDistinctContentPages": 200,
     "latestRepeatIntakeExactExistingFileMatches": 42,
     "latestRepeatIntakeIntraBatchDuplicateFiles": 1,
-    "latestRepeatIntakeRecordsAdded": 0
+    "latestRepeatIntakeRecordsAdded": 0,
+    "latestN3862InspectionReReviewFiles": 2,
+    "latestN3862InspectionReReviewPages": 7,
+    "latestN3862InspectionReReviewRenderedPages": 7,
+    "latestN3862InspectionReReviewOcrPages": 0,
+    "latestN3862InspectionReReviewExactExistingMatches": 2,
+    "latestN3862InspectionReReviewRecordsAdded": 0
   },
   "methods": [
     "September 9, 2026: four hearing originals (117 pages) reviewed. Transcript read fully with key-page visual checks; written comments and hearing packet visually read in full, with uncertain handwriting excluded from claims. OGMD response fully read with key-page visual checks. Earlier OCR statistics remain historical.",
@@ -40,7 +46,8 @@
     "Immutable GitHub preservation verification: the original 81 blobs were reread from commit b4705928d16ccaac9701ee43cba04369982c5ab6 and the three supplemental on-site inspections from commit 49922c706588f236e1edbad5fa8996e4c249e330, with recorded byte counts and SHA-256 hashes matched",
     "MiEnviro repeat-intake verification: all 42 supplied PDFs (230 pages) were SHA-256 checked against every evidence catalog and the timeline source; the 41 unique content hashes totaling 200 unique pages were already preserved. The image-only three-page leachate-request source was also rendered and visually rechecked against its existing timeline copy.",
     "September 2026 follow-up intake: the three-page Wexford construction permit was hash-matched to the existing NPDES record, while the complete 88-page February 2021 county packet was checked page by page; 40 sparse or image-only pages were OCR processed on the GPU and all yielded readable text.",
-    "Operating License 9758 renamed-copy recheck: the supplied eight-page PDF was matched byte for byte to record 017, all pages were rendered and reviewed, and anonymous delivery of the immutable canonical source returned HTTP 200 with the expected byte count and SHA-256 hash."
+    "Operating License 9758 renamed-copy recheck: the supplied eight-page PDF was matched byte for byte to record 017, all pages were rendered and reviewed, and anonymous delivery of the immutable canonical source returned HTTP 200 with the expected byte count and SHA-256 hash.",
+    "September 10, 2026 N3862 inspection re-review: the supplied 2015 three-page and 2017 four-page On-Site Inspection PDFs were read from top to bottom, all seven pages were rendered and visually checked, native text was coherent on every page so OCR was not required, and both SHA-256 hashes matched the canonical Wexford records 102-9011dd4b0fe6 and 103-5114323584bd."
   ],
   "decisions": [
     {
@@ -90,6 +97,10 @@
     {
       "name": "Operating License 9758 renamed copy",
       "reason": "The supplied filename adds the November 19, 2024 through November 19, 2029 date range, but its bytes exactly match Wexford record 017 and those dates are already stated in the established title and description. The existing record was reused as a cross-reference and no duplicate was added."
+    },
+    {
+      "name": "2015 and 2017 N3862 inspection re-review",
+      "reason": "The supplied files are exact byte matches to existing multi-page air-inspection records. Their page-by-page reread confirms the 2015 Tier 2/LandGEM, asbestos-record and aeration-pond findings and the 2017 3.45-million-Mg capacity, 31.04-Mg NMOC, leachate-evaporation and groundwater-remediation context. They remain Category 12 regulatory/operations context, not PFAS analytical evidence or proof of a final Cadillac leachate delivery; no duplicate cards or timeline events were added. See batch105-n3862-inspection-reconciliation-audit-2026-09-10.json."
     }
   ],
   "cedarCreekAIntake": {

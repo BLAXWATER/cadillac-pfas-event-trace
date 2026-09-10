@@ -3,9 +3,11 @@
 /* eslint-disable @next/next/no-img-element -- previews are local evidence assets */
 
 import { useMemo, useState } from "react";
-import { ArrowLeft, ExternalLink, FileSearch, Search } from "lucide-react";
+import { ArrowLeft, FileSearch, Search } from "lucide-react";
 import { bundledDocumentDownload, bundledFirstPagePreview } from "../bundled-public-assets";
 import { documentSummary } from "../document-summary.mjs";
+import { DocumentDownloadButton } from "../document-download-button";
+import { DocumentShareButton } from "../document-share-button";
 import { formatSourceDisplayName } from "../source-display-name";
 import { catalogPageList, type CatalogPageConfig, type CatalogRecord } from "./catalog-data";
 
@@ -55,9 +57,10 @@ function RecordCard({ record }: { record: CatalogRecord }) {
             <div><dt>File size</dt><dd>{formatBytes(record.size)}</dd></div>
             {record.sha256 && <div><dt>SHA-256</dt><dd className="catalog-page-hash">{record.sha256}</dd></div>}
           </dl>
-          <a className="catalog-page-source-link" href={sourceHref} target="_blank" rel="noreferrer">
-            Open original source <ExternalLink size={14} aria-hidden="true" />
-          </a>
+          <div className="catalog-page-card-actions" aria-label={`Actions for ${title}`}>
+            <DocumentDownloadButton name={title} downloadUrl={sourceHref} />
+            <DocumentShareButton name={title} downloadUrl={sourceHref} />
+          </div>
         </div>
       </div>
     </article>

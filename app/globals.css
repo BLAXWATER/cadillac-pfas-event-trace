@@ -189,6 +189,8 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .catalog-page-card-meta div { display: flex; gap: 7px; min-width: 0; color: #899da7; font-size: 11px; line-height: 1.35; }
 .catalog-page-card-meta dt { flex: 0 0 auto; color: #5eabb5; font-family: var(--mono); }
 .catalog-page-card-meta dd { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.catalog-page-card-actions { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px; margin-top: 16px; }
+.catalog-page-card-actions .document-download-control, .catalog-page-card-actions .document-share-control { min-width: 0; }
 .catalog-page-hash { color: #748993; font-family: var(--mono); font-size: 9px; }
 .catalog-page-source-link { display: inline-flex; align-items: center; gap: 6px; color: #26e6f7; font-family: var(--mono); font-size: 11px; text-decoration: none; }
 .catalog-page-source-link:hover { color: #fff; text-decoration: underline; }

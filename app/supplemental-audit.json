@@ -1,6 +1,7 @@
 {
   "adidPart2Intake": {"date": "2026-09-08", "suppliedOriginals": 20, "existingIdentities": 18, "recordsAdded": 2, "pagesAdded": 10, "scope": "Two standalone work-session originals added; eighteen existing originals reused with exact uploaded-filename aliases. No duplicate financial actuals or repeated packet events added.", "audit": "adid-part2-intake-audit.json"},
   "ldfaN3862Intake": {"date": "2026-09-08", "newLdfaRecordPages": 2, "existingStaffReportPagesRechecked": 8, "exactDuplicateStaffReportReused": true, "scope": "Complete text and rendered-page review; printed dates and reported agency statements distinguished from filename labels and agency determinations.", "audit": "ldfa-n3862-sept08-review.json"},
+  "last11ReRead": {"date": "2026-09-10", "suppliedFiles": 11, "freshFiles": 6, "carrierFilesReconciled": 5, "freshPagesRead": 61, "freshPagesRendered": 61, "recordsAdded": 0, "requirementsClosed": 0, "scope": "Six accessible PDFs were freshly read and rendered in page order; the two carrier parent PDFs and three derivative images were reconciled to the prior complete carrier audit without duplicate publication.", "audit": "batch103-last11-reread-2026-09-10-audit.json"},
   "stats": {
     "suppliedFiles": 869,
     "newDistinctRecords": 178,
@@ -943,6 +944,10 @@
     {
       "name": "August 30 expanded Wexford landfill, compliance and infrastructure intake",
       "reason": "All 25 PDFs and 368 pages passed the integrity audit. Fifteen records exactly match established library or standalone timeline sources, including the December 2019 PFAS status record. Two additional files are same-content derivatives of retained records, and two are unrelated to the Cadillac environmental record. Six distinct records were retained: the 2026–2031 initial capital-program draft, the 2026 cyanide correspondence sequence, the 2025–2026 wastewater asset report, the August 20 local-limits approval request, the 2017 IPP annual-report portal submission and the July 2026 asset-report portal submission. The one OCR-manual-review page is a complete rotated table, not a missing or corrupt page."
+    },
+    {
+      "name": "September 10, 2026 last eleven uploads re-review",
+      "reason": "Six accessible PDFs were freshly read and rendered across 61 pages, with all six sparse/attachment pages visually checked. The Wexford SIU sheet, biosolids-hauling email/Pace report, three IPP/PFAS submissions and their hashes were matched to canonical records; no duplicate was added. The carrier/PCB/Oscoda parent PDFs and three derivative images were reconciled to the prior complete carrier audit. The review adds no proof of a 2009-July 2019 per-load Wexford-to-Cadillac delivery and leaves the receiving-history requirement open. See batch103-last11-reread-2026-09-10-audit.json."
     }
   ],
   "cedarCreekBIntake": {

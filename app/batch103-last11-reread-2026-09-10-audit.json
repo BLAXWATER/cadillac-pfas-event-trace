@@ -1,0 +1,60 @@
+{
+  "batch": "September 10, 2026 - last eleven uploads re-review",
+  "reviewDate": "2026-09-10",
+  "scope": "Six accessible PDFs were freshly read in page order and rendered. Two carrier parent PDFs and three derivative images were reconciled to the existing complete batch-99 review because the originals are not present at the current local paths.",
+  "methods": [
+    "SHA-256, byte size and page count checked before catalog comparison.",
+    "All 61 pages of the six accessible PDFs were extracted in order and all 61 were rendered. The six sparse/attachment pages in EM_Hauling_Info_2018.pdf were visually checked, including both photos, attachment cover sheets, rotated chain-of-custody page and sample receiving/log-in page.",
+    "The prior complete batch-99 carrier review was retained for EPA_PCB_2014.pdf, Oscoda_2022.pdf and their three derivative images; no derivative was treated as a new record.",
+    "Existing canonical records were reused; no source file was overwritten and no duplicate catalog record was created."
+  ],
+  "stats": {
+    "suppliedFiles": 11,
+    "accessibleFilesFreshlyReRead": 6,
+    "carrierFilesReconciledToPriorFullAudit": 5,
+    "freshPdfPagesRead": 61,
+    "freshPdfPagesRendered": 61,
+    "freshEmbeddedTextPages": 55,
+    "freshLowTextPages": 6,
+    "freshLowTextPagesVisuallyInspected": 6,
+    "freshOcrPagesRequired": 0,
+    "recordsAdded": 0,
+    "existingCanonicalRecordsReused": 8,
+    "derivativeImagesSuppressed": 3,
+    "receivingHistoryRequirementsClosed": 0,
+    "unreadablePages": 0,
+    "missingParentFilesForFreshCarrierRead": 2
+  },
+  "freshFiles": [
+    {"name":"WEXFORD_LANDFILL_2017.pdf","recordId":"037-1f7e70d66b30","catalog":"ipp-documents.json","sha256":"1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3","pages":1,"status":"freshly read and rendered"},
+    {"name":"EM_Hauling_Info_2018.pdf","recordId":"142-f78183d826bf","catalog":"biosolids-documents.json","sha256":"f78183d826bf8b56009928a072b365e44c25c6d6ff3145d39a580bd95897a084","pages":50,"status":"freshly read and rendered; six sparse/attachment pages visually inspected"},
+    {"name":"-8585248556278470835.pdf","recordId":"form-submission-004-511f0e56cb9d","catalog":"form-submission-documents.json","sha256":"511f0e56cb9dd841dad39f0b87e002c21512745cf79e869bab6096a53071d77a","pages":2,"status":"freshly read and rendered"},
+    {"name":"2793559677356639638.pdf","recordId":"form-submission-034-00d98416b456","catalog":"form-submission-documents.json","sha256":"00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5","pages":3,"status":"freshly read and rendered"},
+    {"name":"-2838228056125865720.pdf","recordId":"form-submission-073-c84ac8484363","catalog":"form-submission-documents.json","sha256":"c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77","pages":3,"status":"freshly read and rendered"},
+    {"name":"3092683663291337793.pdf","recordId":"form-submission-030-7cac269c4207","catalog":"form-submission-documents.json","sha256":"7cac269c4207f212eae8b5587cda7a9c38ed8db720560a4b9c803041f383cc97","pages":2,"status":"freshly read and rendered"}
+  ],
+  "carrierReconciliation": [
+    {"name":"EPA_PCB_2014.pdf","recordId":"173-87cc40ccea58","priorAudit":"batch99-carrier-context-reconciliation-audit.json","status":"prior complete 635-page review retained; original unavailable for a new local read"},
+    {"name":"Oscoda_2022.pdf","recordId":"174-f091763d0d37","priorAudit":"batch99-carrier-context-reconciliation-audit.json","status":"prior complete 416-page review retained; original unavailable for a new local read"},
+    {"name":"pcb-page198.png","canonicalRecordId":"173-87cc40ccea58","status":"derivative of EPA PDF page 199 / printed page 198; not a separate record"},
+    {"name":"bol2022.png","canonicalRecordId":"174-f091763d0d37","status":"derivative of Oscoda PDF page 61; not a separate record"},
+    {"name":"lastpages.png","canonicalRecordId":"174-f091763d0d37","status":"contact-sheet derivative of Oscoda PDF pages 397-416; not a separate record"}
+  ],
+  "contentFindings": [
+    {"recordId":"037-1f7e70d66b30","pages":"PDF page 1","finding":"The Cadillac NPDES SIU information sheet identifies Wexford County Landfill LLC, permit 590-13, at 990 U.S. 131 N., and reports process wastewater averaging 33,000 gallons per day with intermittent discharge.","boundary":"Aggregate SIU-profile estimate only; no load date/time, actual load gallons, hauler, receiving entry, invoice, agreement or cessation date."},
+    {"recordId":"142-f78183d826bf","pages":"PDF pages 1-6 and 49-50; embedded Pace report pages 1-44","finding":"The May 8, 2018 email concerns photos from an application site and a Pace biosolids analysis, naming fields 20N7W7-RJ01, 21N9W19TC01, 21N9W20TC01 and 21N9W30GR01. Pace project 4610111 covers Holding Tank 4 solid and water samples collected 03/28/18 13:40 and received 03/29/18 12:40. The reviewed photos show a Midwest Injection Inc. tanker and GEA Houle land-application equipment. The receiving checklist records 1.9, 2.7 and 2.1 C and notes biosolids were more aqueous than solids.","boundary":"Outbound biosolids land application and laboratory custody, not inbound Wexford-leachate delivery; no Wexford manifest, Cadillac receiving log, invoice or final-load date."},
+    {"recordId":"form-submission-073-c84ac8484363","pages":"PDF pages 1-3","finding":"The July 30, 2018 IPP PFAS interim report lists Wexford County Landfill LLC at 990 N. US Hwy 131 as a probable source, says it was in the DEQ WMRPD initiative, and says POTW effluent monitoring was deferred while industrial-user results were pending.","boundary":"Screening/progress submission, not a laboratory result or delivery record; listed attachments were not part of this batch."},
+    {"recordId":"form-submission-030-7cac269c4207","pages":"PDF pages 1-2","finding":"The November 29, 2018 IPP PFAS summary says Wexford landfill sampling was completed by the POTW and received, identifies J17646-1 as the leachate report, records Cadillac's contact with the landfill, and states that the landfill refused to invest in cleanup. It reports no PFAS biosolids monitoring in that submission.","boundary":"Submitted summary and reported statement only; not an independent load-by-load history or final-delivery date."},
+    {"recordId":"form-submission-034-00d98416b456","pages":"PDF pages 1-3","finding":"The June 28, 2019 status report links J17646-1, identifies Wexford as the confirmed source, says Wexford had gone to deep-well injection and would not bring leachate anymore, and records a June 4, 2019 effluent result at 2 MGD with PFOS 7.1 ng/L and PFOA 15 ng/L. The status is 'PFOS eliminated'; Jeffrey Dietlin's draft/submitted times are 3:19:42 PM and 3:46:11 PM, with signed copy-of-record at 3:46:12 PM.","boundary":"Source and cessation context plus one effluent result; no final-load date, time, gallons, driver, truck, manifest or invoice."},
+    {"recordId":"form-submission-004-511f0e56cb9d","pages":"PDF pages 1-2","finding":"The 2020 IPP annual-report summary addresses approved-method influent, effluent and biosolids analyses, pass-through, permit-limit problems and biosolids disposal.","boundary":"Summary form only; no Wexford receiving entry, leachate load, invoice or source-specific PFAS result."},
+    {"recordId":"173-87cc40ccea58","pages":"Prior full review: PDF page 199 / printed page 198","finding":"EPA's 2014 PCB handler report lists Northern A-1 Services, EPA ID MID020906814, as a transporter and names American Waste as the owner facility.","boundary":"Registry entry, not a shipment record; no PFAS handling or proof of Wexford-to-Cadillac leachate transport."},
+    {"recordId":"174-f091763d0d37","pages":"Prior full review: PDF pages 5, 61 and 397-416","finding":"The Oscoda report and bill of lading 05032-22 document a separate 2022 movement of three drums of investigation-derived PFAS soil, quantity 1,500 UOM P, with Northern A-1, truck 817 and trailer 193. Later pages are QC, receipt and isotope-dilution support.","boundary":"Outside 2009-July 2019 and neither landfill leachate nor a Cadillac WWTP receipt; disposal-facility field names Northern A-1 Services."}
+  ],
+  "leadTrace": [
+    {"lead":"Midwest Injection Inc. tanker visible in the May 2018 hauling attachments","source":"142-f78183d826bf, PDF pages 3 and 5","target":"biosolids record 142-f78183d826bf and Pace 4610111 pages 1-44","tieBack":"The same package names application-site fields and Holding Tank 4 biosolids samples; it belongs in biosolids/land-application records.","remainingUncertainty":"Photos do not establish material origin, route or a connection to Wexford leachate."},
+    {"lead":"Northern A-1 appears in later PCB and Oscoda PFAS-soil records","source":"173-87cc40ccea58 and 174-f091763d0d37","target":"Open 2009-July 2019 Cadillac leachate receiving-history requirement","tieBack":"Later carrier/ownership context only; earlier receiving-history gap remains open.","remainingUncertainty":"No original 2009-2019 Cadillac receiving log, per-load manifest, invoice or final-delivery record was supplied."}
+  ],
+  "queueDecision":"No receiving-history requirement is closed. This batch strengthens the distinction between outbound biosolids land application, IPP/PFAS reporting and the unresolved Wexford-to-Cadillac load history. Carrier/PCB/Oscoda materials remain later context, not proof of Cadillac leachate deliveries.",
+  "missingSourceNotice":"EPA_PCB_2014.pdf and Oscoda_2022.pdf, plus their derivative PNGs, are not currently present at the supplied carrier path. Their prior batch-99 full review and canonical records remain authoritative for this turn; a new physical reread of the parent PDFs should be performed if the originals are re-uploaded.",
+  "evidentiaryBoundary":"The eleven-file batch supports source identification, cessation context, biosolids custody/land application and later carrier/PFAS-soil context. It does not establish the exact final Wexford leachate delivery date, time, gallons, driver, truck, manifest number or invoice."
+}

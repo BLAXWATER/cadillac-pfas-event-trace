@@ -194,6 +194,22 @@ const libraryArchives: { id: string; label: string; documents: readonly LibraryD
   { id: "reference", label: "Reference data", documents: referenceDocuments },
 ];
 
+const categoryJumpLinks = [
+  { label: "PFAS RECORDS", href: "/catalog/pfas" },
+  { label: "DMR & QA", href: "/catalog/dmr" },
+  { label: "PERMITS & RECORDS", href: "/catalog/permits" },
+  { label: "IPP RECORDS", href: "/catalog/ipp" },
+  { label: "BIOSOLIDS", href: "/catalog/biosolids" },
+  { label: "LABORATORY RECORDS", href: "/catalog/laboratory" },
+  { label: "COMPLIANCE", href: "/catalog/compliance" },
+  { label: "VERIFIED RECORDS", href: "/catalog/verified" },
+  { label: "CORRESPONDENCE", href: "/catalog/correspondence" },
+  { label: "PROCESS & SITE", href: "/catalog/process-site" },
+  { label: "PORTAL SUBMISSIONS", href: "/catalog/portal-submissions" },
+  { label: "ADDITIONAL RECORDS", href: "/catalog/additional" },
+  { label: "REFERENCE RECORDS", href: "/catalog/reference" },
+] as const;
+
 const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((archive) =>
   archive.documents.map((document) => ({
     ...document,
@@ -3713,6 +3729,13 @@ export default function Home() {
           <div><p className="eyebrow">CHRONOLOGICAL EVENT TRACE</p><h2>Year Over Year, Multiple Events, One source trail</h2></div>
           <p><strong>Missing tickets do not negate documented activity.</strong> The source-linked records below corroborate leachate offloading, purchasing and equipment installation without reconstructing every delivery. Regulatory records do not independently prove contaminant migration; groundwater attribution remains subject to hydrogeologic confirmation.</p>
         </section>
+
+        <nav className="category-jump-nav" aria-label="Independent source catalog links">
+          <div className="category-jump-heading"><p className="eyebrow">SOURCE CATALOG TABS</p><strong>Open each category on its own page</strong><span>Each button opens an independent catalog page with its complete record set.</span></div>
+          <div className="category-jump-links">
+            {categoryJumpLinks.map((link) => <a className="category-jump-link" href={link.href} key={link.href}>{link.label}</a>)}
+          </div>
+        </nav>
 
         <section className="trace" aria-label="Source-linked event timeline">
           {groups.map((group) => {

@@ -69,7 +69,57 @@ const operationsRecords = supplementalRecords.filter((record) => {
 });
 
 const chemicalRecords = supplementalRecords.filter((record) => record.category === "SDS & chemical product data");
-const violationNoticeRecords = (complianceDocuments as readonly CatalogRecord[]).filter((record) => record.type === "Violation notice");
+
+/**
+ * The Violation Notices page is the enforcement/noncompliance view, not just a
+ * list of files whose type happens to be "Violation notice".  Keep the
+ * selection content-led: include source records that explicitly document a
+ * violation, SNC, exceedance, spill/bypass, enforcement response or the
+ * regulatory noncompliance export, while leaving ordinary compliance and
+ * contextual records in their primary catalog.
+ */
+const complianceEnforcementTypes = new Set([
+  "Compliance file compilation",
+  "Compliance monitoring report",
+  "Effluent exceedance record",
+  "Inspection and compliance correspondence",
+  "Spill or bypass notification",
+  "Violation attachment",
+  "Violation notice",
+  "Violation response",
+  "Agency notebook image",
+  "Compliance correspondence and laboratory sequence",
+  "Pretreatment compliance correspondence",
+]);
+
+const complianceEnforcementRecords = (complianceDocuments as readonly CatalogRecord[]).filter((record) => {
+  const text = `${record.name} ${record.type ?? ""} ${record.description ?? ""}`;
+  return complianceEnforcementTypes.has(record.type ?? "") || /violation|exceedance|bypass|spill|VN-|SVN-/i.test(text);
+});
+
+const sncRecords = (ippDocuments as readonly CatalogRecord[]).filter((record) => {
+  const text = `${record.name} ${record.type ?? ""} ${record.description ?? ""}`;
+  return /SNC|significant noncompliance|follow-up to VN|civil and criminal penalties|violation/i.test(text);
+});
+
+const noncomplianceRecords = (npdesDocuments as readonly CatalogRecord[]).filter((record) => {
+  const text = `${record.name} ${record.type ?? ""} ${record.description ?? ""}`;
+  return /SNC|significant noncompliance|noncompliance|violation|exceedance/i.test(text);
+});
+
+const federalNoncomplianceRecords = supplementalRecords.filter((record) => record.type === "EPA QNCR");
+const regulatoryViolationExport = referenceDocuments.filter((record) => /violation/i.test(`${record.name} ${record.type ?? ""} ${record.description ?? ""}`));
+const wexfordNoncomplianceRecords = (wexfordDocuments as readonly CatalogRecord[]).filter((record) => /violation|noncompliance|non-compliance|exceedance|bypass/i.test(`${record.name} ${record.type ?? ""} ${record.description ?? ""}`));
+const incidentRecords = (biosolidsDocuments as readonly CatalogRecord[]).filter((record) => /violation|noncompliance|non-compliance|exceedance|bypass|spill|overflow/i.test(`${record.name} ${record.type ?? ""} ${record.description ?? ""}`));
+const violationNoticeRecords = uniqueRecords(
+  complianceEnforcementRecords,
+  sncRecords,
+  noncomplianceRecords,
+  federalNoncomplianceRecords,
+  regulatoryViolationExport,
+  wexfordNoncomplianceRecords,
+  incidentRecords,
+);
 
 const categoryPages = [
   {
@@ -133,7 +183,7 @@ const categoryPages = [
     buttonLabel: "VIOLATION NOTICES",
     eyebrow: "VIOLATION NOTICES",
     title: "Violation notices",
-    description: "Formal violation notices and notice records, separated from the broader compliance archive for direct review.",
+    description: "Formal violation notices, significant-noncompliance (SNC) notices and other source records that explicitly document noncompliance, exceedances, spills, bypasses or enforcement responses.",
     documents: violationNoticeRecords,
   },
   {

@@ -202,6 +202,7 @@ const categoryJumpLinks = [
   { label: "BIOSOLIDS", href: "/catalog/biosolids" },
   { label: "LABORATORY RECORDS", href: "/catalog/laboratory" },
   { label: "COMPLIANCE", href: "/catalog/compliance" },
+  { label: "VIOLATION NOTICES", href: "/catalog/violation-notices" },
   { label: "VERIFIED RECORDS", href: "/catalog/verified" },
   { label: "CORRESPONDENCE", href: "/catalog/correspondence" },
   { label: "PROCESS & SITE", href: "/catalog/process-site" },

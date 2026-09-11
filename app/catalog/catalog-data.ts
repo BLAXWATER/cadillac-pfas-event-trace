@@ -69,6 +69,7 @@ const operationsRecords = supplementalRecords.filter((record) => {
 });
 
 const chemicalRecords = supplementalRecords.filter((record) => record.category === "SDS & chemical product data");
+const violationNoticeRecords = (complianceDocuments as readonly CatalogRecord[]).filter((record) => record.type === "Violation notice");
 
 const categoryPages = [
   {
@@ -126,6 +127,14 @@ const categoryPages = [
     title: "Compliance and enforcement records",
     description: "Inspections, notices, corrective-action correspondence and other compliance records.",
     documents: complianceDocuments,
+  },
+  {
+    slug: "violation-notices",
+    buttonLabel: "VIOLATION NOTICES",
+    eyebrow: "VIOLATION NOTICES",
+    title: "Violation notices",
+    description: "Formal violation notices and notice records, separated from the broader compliance archive for direct review.",
+    documents: violationNoticeRecords,
   },
   {
     slug: "verified",

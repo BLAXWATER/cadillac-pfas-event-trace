@@ -37,7 +37,22 @@
     "latestWexfordVnResponseReReviewRenderedPages": 8,
     "latestWexfordVnResponseReReviewManualVisualPages": 3,
     "latestWexfordVnResponseReReviewExactExistingMatches": 1,
-    "latestWexfordVnResponseReReviewRecordsAdded": 0
+    "latestWexfordVnResponseReReviewRecordsAdded": 0,
+    "latestRule2210GroundwaterReReviewFiles": 19,
+    "latestRule2210GroundwaterReReviewPages": 111,
+    "latestRule2210GroundwaterReReviewRenderedPages": 111,
+    "latestRule2210GroundwaterReReviewNativeTextPages": 74,
+    "latestRule2210GroundwaterReReviewScanOnlyPages": 37,
+    "latestRule2210GroundwaterReReviewManualVisualPages": 37,
+    "latestRule2210GroundwaterReReviewOcrPages": 0,
+    "latestRule2210GroundwaterReReviewExactExistingMatches": 19,
+    "latestRule2210GroundwaterReReviewRecordsAdded": 0,
+    "latestN3862ViolationNoticeReReviewFiles": 1,
+    "latestN3862ViolationNoticeReReviewPages": 3,
+    "latestN3862ViolationNoticeReReviewRenderedPages": 3,
+    "latestN3862ViolationNoticeReReviewExactExistingMatches": 1,
+    "latestN3862ViolationNoticeReReviewRecordsAdded": 0,
+    "latestUnresolvedSuppliedFiles": 1
   },
   "methods": [
     "September 9, 2026: four hearing originals (117 pages) reviewed. Transcript read fully with key-page visual checks; written comments and hearing packet visually read in full, with uncertain handwriting excluded from claims. OGMD response fully read with key-page visual checks. Earlier OCR statistics remain historical.",
@@ -54,7 +69,9 @@
     "September 2026 follow-up intake: the three-page Wexford construction permit was hash-matched to the existing NPDES record, while the complete 88-page February 2021 county packet was checked page by page; 40 sparse or image-only pages were OCR processed on the GPU and all yielded readable text.",
     "Operating License 9758 renamed-copy recheck: the supplied eight-page PDF was matched byte for byte to record 017, all pages were rendered and reviewed, and anonymous delivery of the immutable canonical source returned HTTP 200 with the expected byte count and SHA-256 hash.",
     "September 10, 2026 N3862 inspection re-review: the supplied 2015 three-page and 2017 four-page On-Site Inspection PDFs were read from top to bottom, all seven pages were rendered and visually checked, native text was coherent on every page so OCR was not required, and both SHA-256 hashes matched the canonical Wexford records 102-9011dd4b0fe6 and 103-5114323584bd.",
-    "September 10, 2026 Wexford VN-response re-review: the supplied eight-page response dated April 2, 2025 was rendered and read in full. Pages 1-5 had native text; pages 6-8 were image-only signed attachment pages manually recovered from the render and cross-checked to the existing 2017 inspection record. Its SHA-256 matched record 066 exactly, so the '(1)' copy was not republished."
+    "September 10, 2026 Wexford VN-response re-review: the supplied eight-page response dated April 2, 2025 was rendered and read in full. Pages 1-5 had native text; pages 6-8 were image-only signed attachment pages manually recovered from the render and cross-checked to the existing 2017 inspection record. Its SHA-256 matched record 066 exactly, so the '(1)' copy was not republished.",
+    "September 10, 2026 Rule 2210 groundwater-packet re-review: all 19 locally available packet sources (111 pages) were hash-checked, opened in page order and rendered. Seventy-four pages had coherent native text; the completed certification, six maps and 30-page lagoon scan (37 pages) were manually visually recovered because no bundled OCR engine was available. Every source matched an established catalog record; no duplicate was added. The .docx and .html suffixes were preserved as provenance even though their payloads are PDFs.",
+    "September 10, 2026 N3862 violation-notice re-review: all three pages of the March 13, 2025 EGLE AQD notice were read from top to bottom, rendered and matched to compliance record 027 by SHA-256. The second supplied VN-response copy was separately hash-matched to record 066 and suppressed as an exact duplicate."
   ],
   "decisions": [
     {
@@ -112,6 +129,10 @@
     {
       "name": "2025 Wexford VN response with embedded 2017 signed inspection",
       "reason": "The supplied '(1)' filename is byte-identical to existing record 066. The full eight-page reread adds a supported operator-response summary: Wexford attributes the VN to incorrect April 2016 LandGEM defaults, reports corrected NMOC above 50 Mg/year, proposes a GCCS plan by April 30, 2025 and disputes Subpart XXX applicability for Cell H-West. Its pages 5-8 embed a signed 2017 inspection scan, which is cross-referenced to record 103 rather than counted as a second event. See batch106-wexford-vn-response-reread-2026-09-10.json."
+    },
+    {
+      "name": "Rule 2210 groundwater packet and March 2025 N3862 notice",
+      "reason": "All 19 locally available Rule 2210 packet files and the three-page EGLE notice are exact matches to established records across the Wexford, NPDES and compliance catalogs. Their reread confirms permit terms, public-notice steps, source maps, lagoon laboratory context, landfill authorization and air-compliance allegations, but none closes the exact final Cadillac load, synchronized WWTP PFAS sample, complete receiving/invoice chain or site-specific pathway request. The separately named EGLE-RRD-CADILLAC-MPART-INDUSTRIAL-PARK.pdf was not present at the supplied path and remains explicitly unresolved. See batch108-rule2210-groundwater-and-vn-reconciliation-audit-2026-09-10.json."
     }
   ],
   "cedarCreekAIntake": {

@@ -1,0 +1,112 @@
+{
+  "batch": "2026-09-10 Rule 2210 groundwater packet and N3862 VN reconciliation",
+  "scope": "Fresh reread of the supplied F: groundwater-discharge packet, the March 13, 2025 N3862 violation notice and the second duplicate of the April 2, 2025 Wexford response. The separately supplied EGLE-RRD-CADILLAC-MPART-INDUSTRIAL-PARK.pdf was not present at the supplied path and remains unresolved.",
+  "method": [
+    "Computed SHA-256 and byte size for every locally available supplied source; matched hashes against all current catalogs before deciding whether to reuse or add a record.",
+    "Opened every locally available PDF, PDF-payload DOCX and PDF-payload HTML source and verified page counts. The F: packet contains 19 files and 111 pages; the March 13, 2025 notice contains 3 pages.",
+    "Rendered all 111 packet pages and all 3 notice pages in page order and inspected the visual sequence, maps, forms, signatures, tables, attachments and appendix pages. The existing eight-page VN response was already rendered and manually recovered in batch106; its second supplied copy was hash-checked as an exact duplicate.",
+    "Native text was coherent on 74 packet pages and all 3 notice pages. Thirty-seven packet pages are scan-only (the completed certification, six maps and the 30-page lagoon package). No bundled OCR engine was available in this environment; those pages were manually visually recovered from renders and claims are limited to what the source images support. OCR was not falsely claimed.",
+    "Preserved filename/content discrepancies: two files named .docx and one file named .html are valid PDF payloads; the construction-permit PDF and operating-license PDF share a base filename but are different records.",
+    "Applied the evidence boundary: permit capacity, public-notice steps, laboratory package, landfill authorization and air-compliance allegations are not treated as proof of a Cadillac WWTP receiving transaction, an exact final load date, PFAS concentrations in the WWTP, or a site-specific migration pathway."
+  ],
+  "stats": {
+    "packetFilesReceived": 19,
+    "packetPagesReviewed": 111,
+    "packetPagesRendered": 111,
+    "packetNativeTextPages": 74,
+    "packetScanOnlyPages": 37,
+    "packetOcrPages": 0,
+    "packetManualVisualRecoveryPages": 37,
+    "packetDistinctHashes": 19,
+    "packetExactExistingMatches": 19,
+    "packetRecordsAdded": 0,
+    "noticeFilesReceived": 1,
+    "noticePagesReviewed": 3,
+    "noticePagesRendered": 3,
+    "noticeExactExistingMatches": 1,
+    "noticeRecordsAdded": 0,
+    "vnDuplicateFilesReceived": 1,
+    "vnDuplicateExactExistingMatches": 1,
+    "unresolvedSuppliedFiles": 1,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0
+  },
+  "catalogMatches": [
+    {"sourceName":"completed public notice certification form.pdf","recordId":"075-54c7e9d67d44","catalog":"npdes-documents.json","sha256":"54c7e9d67d4444970e012a81f61195786e73bc9a04b0ff298fd67239bf1a833b","pages":1,"reviewCoverage":"page 1 rendered and manually visually recovered; signed posting at Landfill Entrance, July 15, 2016, Facility Engineer."},
+    {"sourceName":"e-mail cov let-Wexford Landfill.pdf","recordId":"002-e45ebd99572b","catalog":"wexford-documents.json","sha256":"e45ebd99572bb182c93668efa939d9aff245aa0916071a5d63b683e88023a45b","pages":1,"reviewCoverage":"page 1 native text and render reviewed."},
+    {"sourceName":"email-final authorization-Wexford Landfill.pdf","recordId":"003-8ba13c7dcdf6","catalog":"wexford-documents.json","sha256":"8ba13c7dcdf6e6e0e3f2328f3cf7ad5ea6bce988b4e3131f34fd9fd6b45c05f5","pages":1,"reviewCoverage":"page 1 native text and render reviewed."},
+    {"sourceName":"Fig 1 - Site Location.pdf","recordId":"004-aaa74db2f56d","catalog":"wexford-documents.json","sha256":"aaa74db2f56d4369bf069082693a16e31d42b7944f1eaf1317c2eb4befb902b5","pages":1,"reviewCoverage":"page 1 map rendered and manually visually recovered."},
+    {"sourceName":"Fig 2 - Site Plan.pdf","recordId":"005-07d4a892d342","catalog":"wexford-documents.json","sha256":"07d4a892d34245e418de0eb57514162c659d0f65ede9dcaf8d6889e4642a2c1e","pages":1,"reviewCoverage":"page 1 map rendered and manually visually recovered."},
+    {"sourceName":"Fig 3 - Reg Water Well Location.pdf","recordId":"006-44cde488aaf4","catalog":"wexford-documents.json","sha256":"44cde488aaf41c3a0bd877fb60e4838ec4cd8c9a78240ae6695508b7fe013a66","pages":1,"reviewCoverage":"page 1 map rendered and manually visually recovered."},
+    {"sourceName":"Fig 4 - Wetland Location.pdf","recordId":"007-cc1225120bd0","catalog":"wexford-documents.json","sha256":"cc1225120bd0adefc738409fae3ff3620b43bc391f6c5af1ca14e7f0742e9a7a","pages":1,"reviewCoverage":"page 1 map rendered and manually visually recovered."},
+    {"sourceName":"Fig 5 - North Topo.pdf","recordId":"008-29d8248efbf8","catalog":"wexford-documents.json","sha256":"29d8248efbf8d2a2cff9307c244a5eacc9b49bca8098f23d7f24a1fcc200a65c","pages":1,"reviewCoverage":"page 1 map rendered and manually visually recovered."},
+    {"sourceName":"Fig 6 - South Topo.pdf","recordId":"009-34358f131b59","catalog":"wexford-documents.json","sha256":"34358f131b59bc2025f0e3b62ea9f6cc3c2205d13d95d9af46cded038de5599f","pages":1,"reviewCoverage":"page 1 map rendered and manually visually recovered."},
+    {"sourceName":"Flow Rate - Days.pdf","recordId":"010-dfae42863627","catalog":"wexford-documents.json","sha256":"dfae42863627f0273e4c61afb38f189a6a36b211b21ed161d42cdb5234bb57c9","pages":1,"reviewCoverage":"page 1 native text and render reviewed."},
+    {"sourceName":"GW Public Notice Document.html","recordId":"076-a611a75485cf","catalog":"npdes-documents.json","sha256":"a611a75485cf4e7814ccf6417e1430dc35c4584f6685a7297f818e4de39f6427","pages":1,"reviewCoverage":"PDF payload despite .html suffix; page 1 native text and render reviewed."},
+    {"sourceName":"lagoon summary.pdf","recordId":"011-ff3227a6e962","catalog":"wexford-documents.json","sha256":"ff3227a6e962f1a048076f5a9ed5c8b26c8814c94cfb6ae05ffd4410073251b5","pages":30,"reviewCoverage":"pages 1-30 rendered in order and manually visually reviewed; scan-only chain-of-custody, laboratory tables and QA/QC pages retained without guessing unreadable values."},
+    {"sourceName":"PN certification form-Wexford Landfill.pdf","recordId":"012-34bbe60fdbc2","catalog":"wexford-documents.json","sha256":"34bbe60fdbc281b587994d36c27c70be1ec7c63f21a14a505019c2541600e5f4","pages":1,"reviewCoverage":"page 1 native text and render reviewed; blank form distinguished from completed certification."},
+    {"sourceName":"public notice email-Wexford Landfill.pdf","recordId":"013-46619080fc73","catalog":"wexford-documents.json","sha256":"46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce","pages":1,"reviewCoverage":"page 1 native text and render reviewed."},
+    {"sourceName":"Rule 2210 Permit Template draft-Wexford Landfill.pdf","recordId":"014-a6e913ab7006","catalog":"wexford-documents.json","sha256":"a6e913ab7006112701a1a7760bd6d9180c413d95cb820df43540329f125aee73","pages":20,"reviewCoverage":"pages 1-20 native text and rendered pages reviewed in order, including discharge conditions and attachments."},
+    {"sourceName":"Rule 2210 Permit Template-Wexford Landfill.docx","recordId":"015-38c4dd289771","catalog":"wexford-documents.json","sha256":"38c4dd289771ab2109af0cf4a8ac198c69e58432d076683732ba20c68a9618be","pages":26,"reviewCoverage":"PDF payload despite .docx suffix; pages 1-26 native text and rendered pages reviewed in order, including site maps and monitoring attachment."},
+    {"sourceName":"Wexford Landfill Groundwater Discharge Permit Application 2210(y).docx","recordId":"016-7ee1b2c9396c","catalog":"wexford-documents.json","sha256":"7ee1b2c9396c51faa97a932b9756b0a42d0fb85cf4ad0e52d204f6cefd242dc5","pages":11,"reviewCoverage":"PDF payload despite .docx suffix; pages 1-11 native text and rendered pages reviewed in order."},
+    {"sourceName":"Wexford-County-Landfill.pdf","recordId":"039-a2b89f4b2389","catalog":"npdes-documents.json","sha256":"a2b89f4b2389a8a3681c0a571ad711063734093892d0876bca0b8b3c2063fd43","pages":3,"reviewCoverage":"pages 1-3 native text and rendered pages reviewed; exact Construction Permit 4127 cross-reference."},
+    {"sourceName":"Wexford-County-Landfill.PDF","recordId":"017-4b475079a927","catalog":"wexford-documents.json","sha256":"4b475079a927cb48147206bb617c64addaf8215f55534601f1674eacb8fb359e","pages":8,"reviewCoverage":"pages 1-8 native text and rendered pages reviewed, including Attachment A."},
+    {"sourceName":"2025-03-12__-1792203002554297877__N3862_Violation Notice 3-13-25.pdf","recordId":"027-c9b3f44aea66","catalog":"compliance-documents.json","sha256":"c9b3f44aea663f5413b2a2c02588a1600ca2eb0d5b5c1535708900a21e48cb96","pages":3,"reviewCoverage":"pages 1-3 native text and rendered pages reviewed in order, including signature and response deadline."},
+    {"sourceName":"2025-07-30__-254668554329288640__Wexford VN Response 031325 Final with Attachment (1) (1).pdf","recordId":"066-0c2f6e582533","catalog":"wexford-documents.json","sha256":"0c2f6e582533168e12a676e3a1e750ae603bc0f5696e17de172ad68de8a57e6a","pages":8,"reviewCoverage":"exact duplicate of batch106 source; hash rechecked, not republished."}
+  ],
+  "verifiedFindings": [
+    {
+      "finding": "The Rule 2210(y) application and draft/final permit package proposes a one-time discharge of diluted landfill leachate from the evaporator lagoon, with a maximum of 50,400 gallons/day and 2,000,000 gallons/year, using overland flow and a spray bar. The final permit is effective October 1, 2016 and includes a six-month-or-less drawdown condition and a prohibition on adding new leachate to the lagoon during the authorized discharge.",
+      "sources": ["016-7ee1b2c9396c", "014-a6e913ab7006", "015-38c4dd289771"],
+      "boundary": "These are application/authorization terms and capacity limits, not proof that the discharge occurred or that Cadillac received a particular load."
+    },
+    {
+      "finding": "The flow worksheet uses a 4.5-acre lagoon/spray-curtain footprint, a 35-gpm pump and approximately 900,000 gallons, with conservative precipitation assumptions; it estimates 30 April operating days or 38 May days depending on start timing.",
+      "sources": ["010-dfae42863627"],
+      "boundary": "The worksheet is a planning calculation, not a measured receiving-log or invoice record."
+    },
+    {
+      "finding": "DEQ's July 12, 2016 correspondence transmitted the public-notice package and directed the applicant to publish by July 15. The completed certification visually records posting at the landfill entrance beginning July 15, 2016 and is signed by a facility engineer; the separate certification form is blank.",
+      "sources": ["002-e45ebd99572b", "013-46619080fc73", "075-54c7e9d67d44", "012-34bbe60fdbc2"],
+      "boundary": "The certification establishes the reported posting method/date, not newspaper publication or actual discharge."
+    },
+    {
+      "finding": "The six Golder figures provide regional site orientation, registered-well and wetland locations, a facility plan, and north/south topographic context for the lagoon, spray curtain, hose and proposed overland area.",
+      "sources": ["004-aaa74db2f56d", "005-07d4a892d342", "006-44cde488aaf4", "007-cc1225120bd0", "008-29d8248efbf8", "009-34358f131b59"],
+      "boundary": "The maps do not supply measured water levels, hydraulic tests, a current flow contour or a demonstrated PFAS source-to-Plett pathway."
+    },
+    {
+      "finding": "The 30-page lagoon summary is a scan of chain-of-custody pages, December 2015 lagoon sample results, laboratory parameter tables and QA/QC material.",
+      "sources": ["011-ff3227a6e962"],
+      "boundary": "It does not itself document Cadillac WWTP receiving, billing, per-load gallons or an exact final delivery date; unreadable scan values were not guessed."
+    },
+    {
+      "finding": "Construction Permit 4127 identifies Wexford County Landfill, LLC, facility ID 470336, as a 196.40-acre municipal solid-waste and Type III industrial-waste landfill, issued August 20, 2012; Operating License 9758 is issued November 19, 2024 through November 19, 2029 and incorporates Permits 4100/4127 and later monitoring and engineering plans.",
+      "sources": ["039-a2b89f4b2389", "017-4b475079a927"],
+      "boundary": "Landfill authorization and incorporated plans do not prove a Cadillac receiving transaction or a PFAS migration route."
+    },
+    {
+      "finding": "EGLE's March 13, 2025 N3862 Violation Notice alleges failures involving annual NMOC reporting, GCCS installation, Subparts WWW/XXX notifications and MI-ROP-N3862-2022 special conditions. It requests a written response by April 3, 2025 and flare-flowrate data for January 2020 through January 2025.",
+      "sources": ["027-c9b3f44aea66"],
+      "boundary": "This is an air-compliance notice and does not establish PFAS concentrations, WWTP receipt or the outcome of the enforcement matter."
+    },
+    {
+      "finding": "The second supplied copy of Wexford's April 2, 2025 response is byte-identical to record 066. The full eight-page response and embedded signed 2017 inspection were already reviewed in batch106; no second record or event was created.",
+      "sources": ["066-0c2f6e582533", "103-5114323584bd"],
+      "boundary": "The operator's LandGEM/GCCS explanation remains attributed to Wexford and is not an EGLE final adjudication."
+    }
+  ],
+  "leadTraces": [
+    {"lead":"Rule 2210 permit caps, flow worksheet and public-notice certification","target":"Cadillac WWTP receiving logs, invoices, hauling tickets and any self-monitoring reports for 2016-2019","tieBack":"They define the proposed source, method and capacity but leave actual delivery and billing unproved.","status":"open"},
+    {"lead":"Evaporator-lagoon sample package","target":"Original laboratory report/chain-of-custody pages and any synchronized Cadillac influent/effluent sample set","tieBack":"The lagoon package is source characterization; it is not a synchronized WWTP receiving record.","status":"open"},
+    {"lead":"Registered-well and topographic figures","target":"Surveyed well construction, water-level measurements and hydraulic testing","tieBack":"The figures supply locations and orientation only.","status":"open"},
+    {"lead":"N3862 2025 VN request for flare-flowrate data","target":"Wexford's submitted January 2020-January 2025 flare-flowrate workbook and EGLE disposition","tieBack":"The requested data may clarify air-compliance history, but it is not PFAS or WWTP receiving evidence.","status":"open"}
+  ],
+  "unresolved": [
+    {"sourceName":"EGLE-RRD-CADILLAC-MPART-INDUSTRIAL-PARK.pdf","suppliedPath":"C:/Users/casey/OneDrive/Desktop/EGLE-RRD-CADILLAC-MPART-INDUSTRIAL-PARK.pdf","status":"not locally recoverable","reason":"The supplied path was checked and the file was not present; no hash, page count or content claim was made.","nextStep":"Reattach or provide the file at a readable local path before cataloging or publishing."}
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "All locally available packet and notice files are accounted for as established records; no new evidence closes the exact final Cadillac load, synchronized WWTP PFAS sample, complete receiving/invoice chain or site-specific hydrogeologic pathway request."
+  }
+}

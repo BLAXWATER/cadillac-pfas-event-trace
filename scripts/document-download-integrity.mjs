@@ -59,7 +59,7 @@ export async function loadDownloadDeliveryPlan(inputRecords) {
   if (downloadsStart < 0 || downloadsEnd < 0) throw new Error("Could not locate bundled document imports");
   const downloadSection = bundledSource.slice(downloadsStart, downloadsEnd);
   const bundledPaths = new Set(
-    [...downloadSection.matchAll(/import\.meta\.glob\("\.\.\/public\/([^"*?]+)"/g)]
+    [...downloadSection.matchAll(/"\.\.\/public\/([^"*?]+)"/g)]
       .map((match) => `/${decodeURIComponent(match[1])}`),
   );
 

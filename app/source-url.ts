@@ -1,4 +1,6 @@
-const repositoryAssetCommit = "6518864920157fa92ab9cb11063f770d659a0f1c";
+// Pin the public archive links to the current GitHub repository revision so
+// relative catalog paths resolve to downloadable raw source files.
+const repositoryAssetCommit = "07c302dfa7d4d686ef72973070bcd81667757ba3";
 const repositoryAssetBase =
   `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/${repositoryAssetCommit}/public`;
 

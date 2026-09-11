@@ -9,6 +9,8 @@ import { documentSummary } from "../document-summary.mjs";
 import { DocumentDownloadButton } from "../document-download-button";
 import { DocumentShareButton } from "../document-share-button";
 import { formatSourceDisplayName } from "../source-display-name";
+import { withPdfStartPage } from "../pdf-source-url";
+import { sourceDownloadUrl, type SourceFormat } from "../source-media";
 import { catalogPageList, type CatalogPageConfig, type CatalogRecord } from "./catalog-data";
 
 type Props = { config: CatalogPageConfig };
@@ -31,7 +33,9 @@ const searchableText = (record: CatalogRecord) => [
 
 function RecordCard({ record }: { record: CatalogRecord }) {
   const preview = bundledFirstPagePreview(record.url);
-  const sourceHref = bundledDocumentDownload(record.url) ?? record.url;
+  const sourceFormat = (record.format ?? "OTHER") as SourceFormat;
+  const sourceHref = bundledDocumentDownload(record.url)
+    ?? sourceDownloadUrl(record.url, sourceFormat, (url) => withPdfStartPage(url));
   const title = formatSourceDisplayName(record.name, record.format ?? undefined, Boolean(record.url));
 
   return (

@@ -94,7 +94,9 @@ const complianceEnforcementTypes = new Set([
 
 const complianceEnforcementRecords = (complianceDocuments as readonly CatalogRecord[]).filter((record) => {
   const text = `${record.name} ${record.type ?? ""} ${record.description ?? ""}`;
-  return complianceEnforcementTypes.has(record.type ?? "") || /violation|exceedance|bypass|spill|VN-|SVN-/i.test(text);
+  return complianceEnforcementTypes.has(record.type ?? "")
+    || /violation|exceedance|bypass|spill|VN-|SVN-/i.test(text)
+    || (record.type === "Compliance correspondence" && /\bVN\b|\bSVN\b|BOD|CBOD|ammonia|violation|exceedance|bypass|spill|noncompliance|deficien/i.test(text));
 });
 
 const sncRecords = (ippDocuments as readonly CatalogRecord[]).filter((record) => {

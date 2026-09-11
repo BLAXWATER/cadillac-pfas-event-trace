@@ -31,7 +31,13 @@
     "latestN3862InspectionReReviewRenderedPages": 7,
     "latestN3862InspectionReReviewOcrPages": 0,
     "latestN3862InspectionReReviewExactExistingMatches": 2,
-    "latestN3862InspectionReReviewRecordsAdded": 0
+    "latestN3862InspectionReReviewRecordsAdded": 0,
+    "latestWexfordVnResponseReReviewFiles": 1,
+    "latestWexfordVnResponseReReviewPages": 8,
+    "latestWexfordVnResponseReReviewRenderedPages": 8,
+    "latestWexfordVnResponseReReviewManualVisualPages": 3,
+    "latestWexfordVnResponseReReviewExactExistingMatches": 1,
+    "latestWexfordVnResponseReReviewRecordsAdded": 0
   },
   "methods": [
     "September 9, 2026: four hearing originals (117 pages) reviewed. Transcript read fully with key-page visual checks; written comments and hearing packet visually read in full, with uncertain handwriting excluded from claims. OGMD response fully read with key-page visual checks. Earlier OCR statistics remain historical.",
@@ -47,7 +53,8 @@
     "MiEnviro repeat-intake verification: all 42 supplied PDFs (230 pages) were SHA-256 checked against every evidence catalog and the timeline source; the 41 unique content hashes totaling 200 unique pages were already preserved. The image-only three-page leachate-request source was also rendered and visually rechecked against its existing timeline copy.",
     "September 2026 follow-up intake: the three-page Wexford construction permit was hash-matched to the existing NPDES record, while the complete 88-page February 2021 county packet was checked page by page; 40 sparse or image-only pages were OCR processed on the GPU and all yielded readable text.",
     "Operating License 9758 renamed-copy recheck: the supplied eight-page PDF was matched byte for byte to record 017, all pages were rendered and reviewed, and anonymous delivery of the immutable canonical source returned HTTP 200 with the expected byte count and SHA-256 hash.",
-    "September 10, 2026 N3862 inspection re-review: the supplied 2015 three-page and 2017 four-page On-Site Inspection PDFs were read from top to bottom, all seven pages were rendered and visually checked, native text was coherent on every page so OCR was not required, and both SHA-256 hashes matched the canonical Wexford records 102-9011dd4b0fe6 and 103-5114323584bd."
+    "September 10, 2026 N3862 inspection re-review: the supplied 2015 three-page and 2017 four-page On-Site Inspection PDFs were read from top to bottom, all seven pages were rendered and visually checked, native text was coherent on every page so OCR was not required, and both SHA-256 hashes matched the canonical Wexford records 102-9011dd4b0fe6 and 103-5114323584bd.",
+    "September 10, 2026 Wexford VN-response re-review: the supplied eight-page response dated April 2, 2025 was rendered and read in full. Pages 1-5 had native text; pages 6-8 were image-only signed attachment pages manually recovered from the render and cross-checked to the existing 2017 inspection record. Its SHA-256 matched record 066 exactly, so the '(1)' copy was not republished."
   ],
   "decisions": [
     {
@@ -101,6 +108,10 @@
     {
       "name": "2015 and 2017 N3862 inspection re-review",
       "reason": "The supplied files are exact byte matches to existing multi-page air-inspection records. Their page-by-page reread confirms the 2015 Tier 2/LandGEM, asbestos-record and aeration-pond findings and the 2017 3.45-million-Mg capacity, 31.04-Mg NMOC, leachate-evaporation and groundwater-remediation context. They remain Category 12 regulatory/operations context, not PFAS analytical evidence or proof of a final Cadillac leachate delivery; no duplicate cards or timeline events were added. See batch105-n3862-inspection-reconciliation-audit-2026-09-10.json."
+    },
+    {
+      "name": "2025 Wexford VN response with embedded 2017 signed inspection",
+      "reason": "The supplied '(1)' filename is byte-identical to existing record 066. The full eight-page reread adds a supported operator-response summary: Wexford attributes the VN to incorrect April 2016 LandGEM defaults, reports corrected NMOC above 50 Mg/year, proposes a GCCS plan by April 30, 2025 and disputes Subpart XXX applicability for Cell H-West. Its pages 5-8 embed a signed 2017 inspection scan, which is cross-referenced to record 103 rather than counted as a second event. See batch106-wexford-vn-response-reread-2026-09-10.json."
     }
   ],
   "cedarCreekAIntake": {

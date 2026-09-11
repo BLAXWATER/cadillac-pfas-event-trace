@@ -1,0 +1,84 @@
+{
+  "batch": "2026-09-10 Wexford VN response and attachment reread",
+  "scope": "The supplied eight-page Wexford VN response PDF was read from top to bottom, rendered page by page, and reconciled against the already published Wexford record 066 and its embedded November 6, 2017 inspection attachment.",
+  "method": [
+    "Read all eight pages in order with native text extraction where present and rendered-page visual review for every page.",
+    "Pages 1-5 contained readable native text. Pages 6-8 are image-only scans of the signed attachment; the bundled OCR engines were unavailable, so those pages were manually read from the render and cross-checked against the existing native-text 2017 inspection record. No unreadable substantive field was used for a new claim.",
+    "Compared SHA-256, byte count, page count and substantive identity with the existing Wexford catalog and attachment provenance."
+  ],
+  "sourceFile": {
+    "suppliedFilename": "2025-07-30__-254668554329288640__Wexford VN Response 031325 Final with Attachment (1).pdf",
+    "receivedPath": "C:/Users/casey/AppData/Local/Temp/2025-07-30__-254668554329288640__Wexford VN Response 031325 Final with Attachment (1).pdf",
+    "contentDate": "April 2, 2025",
+    "filenameDate": "July 30, 2025",
+    "sha256": "0c2f6e582533168e12a676e3a1e750ae603bc0f5696e17de172ad68de8a57e6a",
+    "bytes": 353711,
+    "pages": 8,
+    "nativeTextPages": [1,2,3,4,5],
+    "imageOnlyPages": [6,7,8],
+    "ocrPages": [],
+    "manualVisualRecoveryPages": [6,7,8],
+    "renderedPagesReviewed": [1,2,3,4,5,6,7,8],
+    "catalogRecordId": "066-0c2f6e582533",
+    "publishedAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/066-0c2f6e582533.pdf",
+    "disposition": "Exact existing source reused; no duplicate record added."
+  },
+  "pageReview": [
+    {"page":1,"status":"fully reviewed","coverage":"April 2, 2025 letter to Lindsey Wells; response to March 13, 2025 EGLE AQD VN; first EULANDFILL<34 alleged violation table row; ROP-MI-N3862-2022 and SRN N3862."},
+    {"page":2,"status":"fully reviewed","coverage":"Remaining alleged Subpart WWW/XXX and ROP violations; 2012 expansion and Cell J1 construction history; 2016 GCCS operation; April 2016 Tier 2 and November 6, 2017 inspection background."},
+    {"page":3,"status":"fully reviewed","coverage":"2022 Tier 2 and 2024 annual calculation history; corrected LandGEM defaults and >50-Mg/year conclusion; proposed April 30, 2025 GCCS plan; planned corrective actions; Cell H-West/Subpart XXX argument."},
+    {"page":4,"status":"fully reviewed","coverage":"Christopher Gee signature, site-manager role, Attachment 1 designation and EGLE/GFL distribution list."},
+    {"page":5,"status":"fully reviewed","coverage":"Attachment 1 divider identifying EGLE Inspection Report, November 6, 2017."},
+    {"page":6,"status":"fully reviewed by visual recovery","coverage":"Scanned DEQ/MACES Activity Report page 1: N3862, activity date 11/06/2017, staff Rob Dickman, contact Vicki Garon, source class major, 3.45-million-Mg design capacity, gas collection/flare, post-closure aeration ponds, Rule 285(aa) leachate evaporation and EULANDFILL<50 context."},
+    {"page":7,"status":"fully reviewed by visual recovery","coverage":"Scanned attachment page 2: 31.04 Mg NMOC for 2017, records/reporting, Subpart A/WWW compliance, asbestos acceptance procedures and job-number/GPS placement narrative."},
+    {"page":8,"status":"fully reviewed by visual recovery","coverage":"Scanned attachment page 3: continuation of asbestos controls and shipment records, no discrepancies, no recent disturbance reporting, applicable air permitting compliant; handwritten date 11/21/17 and signatures visible."}
+  ],
+  "findings": [
+    {
+      "finding": "Wexford's April 2, 2025 operator response acknowledges the March 13, 2025 VN and lists alleged EULANDFILL<34 failures involving NMOC reporting, GCCS installation, Subpart XXX notification/reporting and ROP special conditions.",
+      "sourcePages": "PDF pp.1-2",
+      "classification": "operator-reported response to an agency notice",
+      "boundary": "The response is not itself an EGLE adjudication or proof that every alleged violation was resolved."
+    },
+    {
+      "finding": "Wexford states that a later review found incorrect LandGEM Lo and k default values in the April 2016 Tier 2 report; it says corrected inputs pushed the NMOC rate above the 50-Mg/year threshold and that a GCCS plan should have been submitted in April 2017 with installation/testing by October 2018.",
+      "sourcePages": "PDF p.3",
+      "classification": "operator-reported recalculation and proposed corrective-action basis",
+      "boundary": "The corrected calculation and EGLE's independent acceptance are not attached in this response; treat the statement as a lead to the GCCS plan, recalculation and VN records."
+    },
+    {
+      "finding": "Pages 5-8 embed a signed November 6, 2017 DEQ/MACES inspection scan that is substantively the same inspection as canonical record 103 but preserves original execution details, including the handwritten 11/21/17 date and signatures.",
+      "sourcePages": "PDF pp.5-8",
+      "classification": "embedded agency attachment and provenance evidence",
+      "boundary": "It is not a second 2017 inspection event and does not establish PFAS, WWTP receiving or a final leachate delivery."
+    }
+  ],
+  "leadTrace": [
+    {
+      "lead": "Corrected LandGEM defaults and the asserted April 2017/October 2018 GCCS milestones.",
+      "sourcePages": "PDF p.3",
+      "targetRecord": "Existing Wexford GCCS design-plan, approval-letter, inspection and VN records in Category 12",
+      "tieBack": "Use the response to connect the 2016 Tier 2 data to later GCCS planning and enforcement records.",
+      "remainingUncertainty": "The response does not include the corrected model file, the complete GCCS plan or an EGLE final determination."
+    },
+    {
+      "lead": "Attachment 1's signed 2017 inspection scan.",
+      "sourcePages": "PDF pp.5-8",
+      "targetRecord": "Canonical Wexford record 103-5114323584bd",
+      "tieBack": "The attachment confirms the inspection identity and supplies execution provenance while the canonical record supplies readable text for cross-checking.",
+      "remainingUncertainty": "The response package does not create a separate inspection event or identify a separate source transaction."
+    }
+  ],
+  "reconciliation": {
+    "catalog": "wexford-documents.json",
+    "exactExistingRecordsReused": 1,
+    "embeddedInspectionCrossReferences": 1,
+    "newRecordsAdded": 0,
+    "duplicateCopiesSuppressed": 0,
+    "timelineEventsAdded": 0,
+    "requirementsClosed": 0,
+    "reason": "The supplied '(1)' file is byte-identical to existing record 066. Its embedded signed inspection is retained within that composite source and cross-referenced to record 103 rather than republished as a duplicate event."
+  },
+  "reviewStatus": "fully reviewed and verified; published source record reused",
+  "published": true
+}

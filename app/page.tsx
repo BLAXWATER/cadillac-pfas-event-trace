@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import complianceAudit from "./compliance-audit.json";
 import msgAudit from "./msg-audit.json";
+import foiaIntakeAudit from "./foia-response-intake-audit-2026-09-11.json";
 import complianceDocuments from "./compliance-documents.json";
 import correspondenceAudit from "./correspondence-audit.json";
 import correspondenceDocuments from "./correspondence-documents.json";
@@ -4048,6 +4049,13 @@ export default function Home() {
             <div className="audit-panel">
               <p>{complianceAudit.methods.join(" · ")}</p>
               <ul>{complianceAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <details className="audit-details archive-audit" data-audit="foia-response-intake">
+            <summary>September 11 FOIA response intake · {foiaIntakeAudit.stats.pdfPagesReviewed} pages fully reviewed</summary>
+            <div className="audit-panel">
+              <p>The supplied FOIA packet was read page-by-page and is documented here for provenance. It is a redacted personnel file, not a public environmental evidence record, so it is not added as a downloadable catalog card. Its limited plant-role context is tied to existing records without treating employment statements as independent findings. The supplied 2024 IPP notice was an exact SHA-256 match to the canonical record already published above.</p>
+              <ul>{foiaIntakeAudit.records.map((item) => <li key={item.suppliedName}><strong title={item.suppliedName}>{formatSourceDisplayName(item.suppliedName)}</strong><span>{item.status} · {item.pages} {item.pages === 1 ? "page" : "pages"} · {item.sha256.slice(0, 12)}…</span></li>)}</ul>
             </div>
           </details>
           <div className="document-controls">

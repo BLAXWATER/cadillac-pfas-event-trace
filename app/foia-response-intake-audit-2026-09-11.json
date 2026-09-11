@@ -1,0 +1,73 @@
+{
+  "batch": "September 11, 2026 — FOIA responses intake",
+  "sourceDirectory": "C:/Users/casey/OneDrive/Desktop/FOIA RESPONSES",
+  "reviewStatus": "fully reviewed",
+  "methods": [
+    "Verified SHA-256, byte size, PDF metadata and page count before catalog comparison.",
+    "Rendered every page in source order (28 FOIA pages at 120 DPI; one IPP-notice page at 180 DPI) and visually inspected the complete sequence.",
+    "Checked embedded PDF text page-by-page. The 28-page FOIA packet is image-only; rendered-page visual transcription was used where native extraction was empty. The IPP notice has embedded text and was checked against its rendered page.",
+    "Compared both supplied SHA-256 values against the published catalogs and preserved the original supplied filenames as provenance.",
+    "Kept personnel/privacy material separate from public environmental evidence and did not infer environmental findings from employment records."
+  ],
+  "stats": {
+    "suppliedFiles": 2,
+    "distinctInputHashes": 2,
+    "pdfPagesReviewed": 29,
+    "renderedPagesReviewed": 29,
+    "embeddedTextPages": 1,
+    "imageOnlyPages": 28,
+    "ocrEngineAvailable": false,
+    "visualTranscriptionPages": 28,
+    "unreadablePages": 0,
+    "existingCanonicalRecordsReused": 1,
+    "exactDuplicateSourceVariants": 1,
+    "newPublicRecordsAdded": 0,
+    "newTimelineEventsAdded": 0,
+    "privacyExcludedRecords": 1
+  },
+  "records": [
+    {
+      "suppliedName": "FOIA  Dietlin Records Redacted 1.pdf",
+      "sha256": "ad690dd38b9fe5467e2768bf105ddea9587d47af326eadb0c597927831258512",
+      "bytes": 16563516,
+      "pages": 28,
+      "status": "fully reviewed; excluded from public environmental catalog",
+      "pageCoverage": "all 28 pages rendered and visually reviewed in order; no unreadable page",
+      "contentClassification": "redacted personnel and employment file",
+      "finding": "Pages 1–24 and 27–28 are City of Cadillac personnel records for Jeffrey Dietlin: salary and compensation memoranda, payroll-change forms, training certificates, vehicle-policy acknowledgements, a performance note, promotion correspondence, a key receipt and redacted references. Page 5 is a handwritten July 10, 2018 thank-you that refers to sewage blow-back resolution during a June 26 manhole/new sewer-line project and site restoration. Pages 25–26 are an April 2, 2008 Director of Utilities application and resume. They state, as applicant/employee background, prior operation of a 3.2 MGD Class B tertiary wastewater plant and a 2.5 MGD groundwater-remediation plant, plus duties involving plant operations, wastewater laboratory work, biosolids application, capital/budget work and NPDES compliance.",
+      "boundary": "The capacity, duties and upgrade statements are self-reported employment materials, not an agency determination, permit, measured operating record, analytical result, receiving ticket, invoice, violation finding or proof of a PFAS pathway. Salary, performance, driver-license and reference material is not republished in the public environmental catalog.",
+      "leadTrace": [
+        {
+          "lead": "The application/resume references a 3.2 MGD tertiary plant, a 2.5 MGD groundwater-remediation plant and responsibility for laboratory, biosolids, capital and NPDES work.",
+          "sourcePages": "25–26",
+          "targetRecords": "Existing Process & Site, Laboratory, Biosolids and Compliance catalogs",
+          "tieBack": "Use the existing plant, laboratory, biosolids and NPDES records for independently sourced capacities, operations and compliance; this packet supplies role context only.",
+          "remainingUncertainty": "No independent dates, measurements or agency certification for the resume statements are included in this FOIA packet."
+        },
+        {
+          "lead": "The 2018 handwritten note mentions sewage blow-back and a June 26 manhole/new sewer-line project.",
+          "sourcePages": "5",
+          "targetRecords": "Existing process/infrastructure and correspondence records",
+          "tieBack": "Search the existing process/site and correspondence catalogs for project plans, inspection records or incident documentation before treating the note as an operational event.",
+          "remainingUncertainty": "The sender, exact project location and measured discharge or impact are redacted or not stated."
+        }
+      ]
+    },
+    {
+      "suppliedName": "Public Notice of IPP Violation 2024-v2.pdf",
+      "sha256": "ce602598cbb51a963077c39418b7356757b9fd222f5397afe5934a015149fdfc",
+      "bytes": 119427,
+      "pages": 1,
+      "status": "fully reviewed; exact duplicate of existing canonical IPP record",
+      "pageCoverage": "page 1 text-extracted, rendered and visually checked",
+      "catalog": "ipp-documents.json",
+      "recordId": "119-ce602598cbb5",
+      "canonicalName": "Public Notice of IPP Violation 2024.pdf",
+      "finding": "The City notice lists 2024 local Industrial Pretreatment Permit exceedances: Rec Boats Holding (Copper, Cyanide and Zinc in Q1); AAR Mobility Systems (Cyanide in Q3–Q4 and Cadmium in Q1–Q2); ARVCO Container (Copper in all four quarters); Cadillac Castings (Zinc Q1, Cadmium Q1–Q2, Silver Q1, Copper Q2 and Molybdenum all four quarters); FIAMM Technologies (Copper Q1 and Q4); Hutchinson (Copper Q1, Q2 and Q4); and MI Rubber Products (Copper all four quarters). The notice states that these categorical-industry exceedances were not known violations by the Cadillac WWTP and that no known environmental impact to the Clam River or Muskegon River watershed was identified (page 1).",
+      "boundary": "This is a municipal public notice of local IPP exceedances. It is not a finding that the WWTP violated its NPDES permit, not a PFAS result and not proof of environmental impact or no impact beyond the notice's stated knowledge.",
+      "duplicateBasis": "The supplied file is byte-identical to the existing canonical record: same 119,427 bytes and SHA-256. No second asset, catalog card or timeline event was created."
+    }
+  ],
+  "queueDecision": "The public notice is already published under the canonical IPP record. The FOIA packet is fully reviewed and retained as local provenance/audit material but is not published as an environmental evidence record because it is a redacted personnel file. Its limited plant-role context is tied to existing process, laboratory, biosolids and compliance catalogs without upgrading self-reported statements into independent findings.",
+  "evidentiaryBoundary": "This intake adds no new environmental event, receiving-history entry, invoice, analytical result, violation determination or groundwater-pathway proof."
+}

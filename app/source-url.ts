@@ -7,6 +7,8 @@ const repositoryAssetCommit = "07c302dfa7d4d686ef72973070bcd81667757ba3";
 // that still contains the original file; the two paths that have no public
 // commit remain bundled by bundled-public-assets.ts.
 const legacyRepositoryCommits: Record<string, string> = {
+  "/compliance-docs/004-044b89235b40.msg": "efa59ca098bc5d59adef6edd8705cd336b9fd601",
+  "/compliance-docs/006-bd78c5e76142.msg": "efa59ca098bc5d59adef6edd8705cd336b9fd601",
   "/compliance-docs/008-5fff30df4912.pdf": "f930d63655fe41489cb346522a9f841daaa8bd3b",
   "/compliance-docs/010-96bc79c5922b.pdf": "090f882f1898d723a41afe0a2d7956fb07c0afed",
   "/compliance-docs/011-afac7f09906b.pdf": "090f882f1898d723a41afe0a2d7956fb07c0afed",
@@ -18,6 +20,8 @@ const legacyRepositoryCommits: Record<string, string> = {
   "/form-submission-docs/form-submission-073-c84ac8484363.pdf": "a0ee86951939e0e9203f0c44829b13d89cf5d10e",
   "/pfas-docs/002-aca419b24a35.pdf": "07013e14f59eb25695c62fdf4be584fc509ad96f",
   "/pfas-docs/102-03b43f8e8597.pdf": "8b4494682914892f5ac6d80d9017e6faa6575b19",
+  "/pfas-docs/001-391d2cff96ef.msg": "8d7d759d5377b74e9aee5c7b13da2252fc1cde53",
+  "/pfas-docs/009-c720082b6790.msg": "8d7d759d5377b74e9aee5c7b13da2252fc1cde53",
   "/wexford-docs/104-6815e2f8b48e.pdf": "f0d7fddc9b8cd675768e82263f8684c860fbf3c0",
 };
 
@@ -39,9 +43,11 @@ export function repositorySourceUrl(url: string): string {
     const repositoryPath = parsed.pathname.match(repositoryBlobPath);
     if (!repositoryPath) return url;
 
+    const sourcePath = decodeURIComponent(repositoryPath[2]);
+    const commit = legacyRepositoryCommits[sourcePath] ?? repositoryPath[1].toLowerCase();
     const pinnedBase =
-      `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/${repositoryPath[1].toLowerCase()}/public`;
-    return `${pinnedBase}${encodedRepositoryPath(decodeURIComponent(repositoryPath[2]))}${fragment ? `#${fragment}` : ""}`;
+      `https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/${commit}/public`;
+    return `${pinnedBase}${encodedRepositoryPath(sourcePath)}${fragment ? `#${fragment}` : ""}`;
   }
 
   if (!base.startsWith("/")) return url;

@@ -81,7 +81,22 @@ export async function loadDownloadDeliveryPlan(inputRecords) {
         : undefined;
     if (!publicPath) return { row, kind: "invalid", publicPath, source: undefined };
     if (bundledPaths.has(publicPath)) return { row, kind: "bundled", publicPath, source: undefined };
-    if (pinned) return { row, kind: "archive", publicPath, source: pinned };
+    if (pinned) {
+      const commit = legacyCommits.get(publicPath) ?? pinned.commit;
+      if (commit === pinned.commit) return { row, kind: "archive", publicPath, source: pinned };
+      const repositoryPath = `public${publicPath}`;
+      return {
+        row,
+        kind: "archive",
+        publicPath,
+        source: {
+          commit,
+          repositoryPath,
+          spec: `${commit}:${repositoryPath}`,
+          rawUrl: `https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/${commit}/${encodeRepositoryPath(repositoryPath)}`,
+        },
+      };
+    }
 
     const repositoryPath = `public${publicPath}`;
     const commit = legacyCommits.get(publicPath) ?? defaultCommit;

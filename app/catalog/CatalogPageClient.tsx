@@ -91,7 +91,7 @@ export default function CatalogPageClient({ config }: Props) {
 
       <nav className="catalog-page-nav" aria-label="Source catalog pages">
         <div className="category-jump-links">
-          {catalogPageList.map((page) => <a className={`category-jump-link${page.slug === config.slug ? " is-active" : ""}`} href={`/catalog/${page.slug}`} key={page.slug}>{page.buttonLabel}</a>)}
+          {catalogPageList.map((page) => <a className={`category-jump-link${page.slug === config.slug ? " is-active" : ""}`} data-category={page.slug} href={`/catalog/${page.slug}`} key={page.slug}>{page.buttonLabel}</a>)}
         </div>
       </nav>
 

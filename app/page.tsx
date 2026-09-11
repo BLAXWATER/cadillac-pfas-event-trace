@@ -195,24 +195,24 @@ const libraryArchives: { id: string; label: string; documents: readonly LibraryD
 ];
 
 const categoryJumpLinks = [
-  { label: "PFAS RECORDS", href: "/catalog/pfas" },
-  { label: "DMR & QA", href: "/catalog/dmr" },
-  { label: "PERMITS & RECORDS", href: "/catalog/permits" },
-  { label: "IPP RECORDS", href: "/catalog/ipp" },
-  { label: "BIOSOLIDS", href: "/catalog/biosolids" },
-  { label: "LABORATORY RECORDS", href: "/catalog/laboratory" },
-  { label: "COMPLIANCE", href: "/catalog/compliance" },
-  { label: "VIOLATION NOTICES", href: "/catalog/violation-notices" },
-  { label: "VERIFIED RECORDS", href: "/catalog/verified" },
-  { label: "CORRESPONDENCE", href: "/catalog/correspondence" },
-  { label: "PROCESS & SITE", href: "/catalog/process-site" },
-  { label: "PORTAL SUBMISSIONS", href: "/catalog/portal-submissions" },
-  { label: "ADDITIONAL RECORDS", href: "/catalog/additional" },
-  { label: "REFERENCE RECORDS", href: "/catalog/reference" },
-  { label: "GROUNDWATER & HYDROGEOLOGY", href: "/catalog/groundwater-hydrogeology" },
-  { label: "LEACHATE, RECEIVING & FINANCE", href: "/catalog/leachate-receiving-finance" },
-  { label: "WWTP OPERATIONS & INFRASTRUCTURE", href: "/catalog/wwtp-operations-infrastructure" },
-  { label: "CHEMICALS & SDS", href: "/catalog/chemicals-sds" },
+  { slug: "pfas", label: "PFAS RECORDS", href: "/catalog/pfas" },
+  { slug: "dmr", label: "DMR & QA", href: "/catalog/dmr" },
+  { slug: "permits", label: "PERMITS & RECORDS", href: "/catalog/permits" },
+  { slug: "ipp", label: "IPP RECORDS", href: "/catalog/ipp" },
+  { slug: "biosolids", label: "BIOSOLIDS", href: "/catalog/biosolids" },
+  { slug: "laboratory", label: "LABORATORY RECORDS", href: "/catalog/laboratory" },
+  { slug: "compliance", label: "COMPLIANCE", href: "/catalog/compliance" },
+  { slug: "violation-notices", label: "VIOLATION NOTICES", href: "/catalog/violation-notices" },
+  { slug: "verified", label: "VERIFIED RECORDS", href: "/catalog/verified" },
+  { slug: "correspondence", label: "CORRESPONDENCE", href: "/catalog/correspondence" },
+  { slug: "process-site", label: "PROCESS & SITE", href: "/catalog/process-site" },
+  { slug: "portal-submissions", label: "PORTAL SUBMISSIONS", href: "/catalog/portal-submissions" },
+  { slug: "additional", label: "ADDITIONAL RECORDS", href: "/catalog/additional" },
+  { slug: "reference", label: "REFERENCE RECORDS", href: "/catalog/reference" },
+  { slug: "groundwater-hydrogeology", label: "GROUNDWATER & HYDROGEOLOGY", href: "/catalog/groundwater-hydrogeology" },
+  { slug: "leachate-receiving-finance", label: "LEACHATE, RECEIVING & FINANCE", href: "/catalog/leachate-receiving-finance" },
+  { slug: "wwtp-operations-infrastructure", label: "WWTP OPERATIONS & INFRASTRUCTURE", href: "/catalog/wwtp-operations-infrastructure" },
+  { slug: "chemicals-sds", label: "CHEMICALS & SDS", href: "/catalog/chemicals-sds" },
 ] as const;
 
 const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((archive) =>
@@ -3738,7 +3738,7 @@ export default function Home() {
         <nav className="category-jump-nav" aria-label="Independent source catalog links">
           <div className="category-jump-heading"><p className="eyebrow">SOURCE CATALOG TABS</p><strong>Open each category on its own page</strong><span>Each button opens an independent catalog page with its complete record set.</span></div>
           <div className="category-jump-links">
-            {categoryJumpLinks.map((link) => <a className="category-jump-link" href={link.href} key={link.href}>{link.label}</a>)}
+            {categoryJumpLinks.map((link) => <a className="category-jump-link" data-category={link.slug} href={link.href} key={link.href}>{link.label}</a>)}
           </div>
         </nav>
 

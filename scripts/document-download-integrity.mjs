@@ -66,6 +66,10 @@ export async function loadDownloadDeliveryPlan(inputRecords) {
   const sourceUrl = await readFile(sourceUrlSource, "utf8");
   const defaultCommit = sourceUrl.match(/const repositoryAssetCommit = "([0-9a-f]{40})";/)?.[1];
   if (!defaultCommit) throw new Error("Could not locate the default repository asset commit");
+  const legacyCommits = new Map(
+    [...sourceUrl.matchAll(/\s+"(\/[^\"]+)": "([0-9a-f]{40})",/g)]
+      .map((match) => [match[1], match[2]]),
+  );
 
   return records.map((row) => {
     const baseUrl = row.url.split("#", 1)[0];
@@ -80,15 +84,16 @@ export async function loadDownloadDeliveryPlan(inputRecords) {
     if (pinned) return { row, kind: "archive", publicPath, source: pinned };
 
     const repositoryPath = `public${publicPath}`;
+    const commit = legacyCommits.get(publicPath) ?? defaultCommit;
     return {
       row,
       kind: "archive",
       publicPath,
       source: {
-        commit: defaultCommit,
+        commit,
         repositoryPath,
-        spec: `${defaultCommit}:${repositoryPath}`,
-        rawUrl: `https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/${defaultCommit}/${encodeRepositoryPath(repositoryPath)}`,
+        spec: `${commit}:${repositoryPath}`,
+        rawUrl: `https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/${commit}/${encodeRepositoryPath(repositoryPath)}`,
       },
     };
   });

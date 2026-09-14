@@ -31,6 +31,7 @@ import biosolidsAudit from "./biosolids-audit.json";
 import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import newFolderDmrIntakeAudit from "./new-folder-dmr-intake-audit-2026-09-14.json";
+import newFolderLeachateAudit from "./new-folder-leachate-intake-audit-2026-09-14.json";
 import evidenceRequestQueue from "./evidence-request-queue.json";
 import evidenceQueueUpdates from "./evidence-request-queue-updates.json";
 import formSubmissionAudit from "./form-submission-audit.json";
@@ -4042,6 +4043,15 @@ export default function Home() {
             <div className="audit-panel">
               <p>{wexfordAudit.methods.join(" · ")}</p>
               <ul>{wexfordAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <details className="audit-details archive-audit" data-audit="new-folder-leachate-intake">
+            <summary>September 14 leachate/permit reread · {newFolderLeachateAudit.stats.pagesReviewed} pages fully reviewed · {newFolderLeachateAudit.stats.recordsAdded} new records</summary>
+            <div className="audit-panel">
+              <p>{newFolderLeachateAudit.methods.join(" · ")}</p>
+              <ul>{newFolderLeachateAudit.records.map((item) => <li key={item.suppliedName}><strong title={item.suppliedName}>{formatSourceDisplayName(item.suppliedName)}</strong><span>{item.match}. {item.catalog}; canonical: {item.canonicalAsset}</span></li>)}</ul>
+              <p><strong>Key verified findings:</strong> J17646-1 leachate reports PFOS/PFOA 120/590 ng/L primary and 140/700 duplicate; J19915-1 effluent reports 7.8/16 and 7.1/15 ng/L on June 4, 2019. The two IPP forms and Rule 2210 chain are cross-linked without inferring a load-level causal path.</p>
+              <p><strong>Boundary:</strong> Transaction-level receiving, invoice, synchronized influent and final-load evidence remain open.</p>
             </div>
           </details>
           <div className="document-controls">

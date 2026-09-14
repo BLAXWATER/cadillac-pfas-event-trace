@@ -32,6 +32,7 @@ import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
 import newFolderDmrIntakeAudit from "./new-folder-dmr-intake-audit-2026-09-14.json";
 import newFolderLeachateAudit from "./new-folder-leachate-intake-audit-2026-09-14.json";
+import newFolderCountyAgendasAudit from "./new-folder-county-agendas-audit-2026-09-14.json";
 import evidenceRequestQueue from "./evidence-request-queue.json";
 import evidenceQueueUpdates from "./evidence-request-queue-updates.json";
 import formSubmissionAudit from "./form-submission-audit.json";
@@ -4256,6 +4257,14 @@ export default function Home() {
             <div className="audit-panel">
               <p>{supplementalAudit.methods.join(" · ")}</p>
               <ul>{supplementalAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <details className="audit-details archive-audit" data-audit="new-folder-county-agendas">
+            <summary>September 14 county agenda reread · {newFolderCountyAgendasAudit.stats.pdfPagesReviewed} pages fully reviewed · {newFolderCountyAgendasAudit.stats.newPublicRecordsAdded} new records</summary>
+            <div className="audit-panel">
+              <p>{newFolderCountyAgendasAudit.methods.join(" · ")}</p>
+              <ul>{newFolderCountyAgendasAudit.records.map((item) => <li key={item.suppliedName}><strong title={item.suppliedName}>{formatSourceDisplayName(item.suppliedName)}</strong><span>{item.status}. {item.finding}</span></li>)}</ul>
+              <p><strong>Catalog decision:</strong> Both agendas remain accounted for in the review record but were not promoted as environmental evidence because their listed agenda items do not include underlying reports, permits, measurements or attachments.</p>
             </div>
           </details>
           <div className="document-controls">

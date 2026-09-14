@@ -1,0 +1,57 @@
+{
+  "batch": "September 14, 2026 New folder county board agenda review",
+  "sourceDirectory": "C:/Users/casey/AppData/Local/Temp",
+  "reviewStatus": "strict fully reviewed",
+  "methods": [
+    "Verified SHA-256, byte size, PDF metadata and page count for both supplied PDFs.",
+    "Rendered and visually inspected all four pages in source order, including headings, agenda tables, footers, meeting notices and accessibility language.",
+    "Checked native text page-by-page. Text was usable on all pages; OCR was not required and no page was unreadable.",
+    "Classified the records by actual contents rather than filenames. These are two-page Wexford County Board meeting agenda notices, not minutes, resolutions, permits, DMRs or environmental measurements.",
+    "Compared the supplied hashes and agenda content with the public catalog; neither file is an existing public asset. They were retained as reviewed provenance but not promoted because they contain no substantive environmental record or attached Wexford evidence."
+  ],
+  "stats": {
+    "suppliedFiles": 2,
+    "distinctInputHashes": 2,
+    "pdfPagesReviewed": 4,
+    "renderedPagesReviewed": 4,
+    "embeddedTextPages": 4,
+    "ocrNeededPages": 0,
+    "ocrCompletedPages": 0,
+    "unreadablePages": 0,
+    "existingCanonicalRecordsReused": 0,
+    "newPublicRecordsAdded": 0,
+    "newTimelineEventsAdded": 0
+  },
+  "records": [
+    {
+      "suppliedName": "04-06-16.pdf",
+      "sha256": "E4E195538F5C6EE83B19175BBF0A1687949C48076DAF51B90475A07A20448132",
+      "bytes": 48769,
+      "pages": 2,
+      "status": "fully reviewed; not promoted",
+      "pageCoverage": "both pages rendered, visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalogDecision": "Not cataloged as a substantive environmental record",
+      "contentClassification": "Wexford County Board meeting agenda notice",
+      "finding": "The April 6, 2016 tentative agenda schedules an Update on RAP and lists routine county business. It gives the meeting date, 5:30 p.m. location, public-comment rules and agenda sections; it does not include the RAP report, a Wexford landfill decision, a permit, a measurement or an attachment.",
+      "boundary": "An agenda entry is not the underlying report or evidence that the listed item was discussed, adopted or acted upon.",
+      "leadTrace": "The RAP agenda entry is a retrieval lead only; the underlying RAP presentation or minutes would be required before promotion."
+    },
+    {
+      "suppliedName": "04-20-16.pdf",
+      "sha256": "D772DDD2DF346E4E5CFA9635A96AE0F19B3830C496B9F94EA76CEC5B76C57C60",
+      "bytes": 51036,
+      "pages": 2,
+      "status": "fully reviewed; not promoted",
+      "pageCoverage": "both pages rendered, visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalogDecision": "Not cataloged as a substantive environmental record",
+      "contentClassification": "Wexford County Board meeting agenda notice",
+      "finding": "The April 20, 2016 tentative agenda lists a 9-1-1 feasibility presentation, consent items, budget and county business. It contains no Wexford landfill item, environmental report, permit, measurement or attachment.",
+      "boundary": "The agenda cannot establish that any listed item was discussed, approved or relevant to the landfill or WWTP.",
+      "leadTrace": "No direct environmental retrieval lead was found in the four reviewed pages."
+    }
+  ],
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "Both uploads are fully reviewed and accounted for by hash and page coverage. No substantive environmental evidence or attached source record was present, so no public card or timeline event was created."
+  }
+}

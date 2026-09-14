@@ -1,5 +1,57 @@
 [
   {
+    "id": "199-c1524e21ac46",
+    "name": "209480_Northernaire_RI_FS_Action_Memo.pdf",
+    "url": "/findings-docs/199-c1524e21ac46.pdf",
+    "year": "1983",
+    "category": "Superfund cleanup & groundwater investigation",
+    "type": "EPA RI/FS funding request memorandum",
+    "format": "PDF",
+    "pages": 2,
+    "size": 107046,
+    "sha256": "c1524e21ac4640186fa3279f606c2d3ff651b315b89f136c98f83ab9b94e405b",
+    "description": "EPA action memorandum with May 31, 1983 preparation footer and June routing marks. Page 2 requests $300,000 for a 40-week RI and $150,000 for a 10-week FS, proposed 100% EPA funding; approval/date lines are blank. Page 1 describes 1971–1981 plating operations and sandy setting southwest of the municipal well field. The stated Enforcement Release attachment is absent and some routing handwriting is unreadable. This is a request, not executed funding or completed removal. Cross-reference EPA 209451 for July–August 1983 removal and 209538 for the signed 1985 source-control decision."
+  },
+  {
+    "id": "200-07119f8b3cdf",
+    "name": "209538_Northernaire_Signed_Record_of_Decision.pdf",
+    "url": "/findings-docs/200-07119f8b3cdf.pdf",
+    "year": "1985",
+    "category": "Superfund cleanup & groundwater investigation",
+    "type": "Signed EPA source-control Record of Decision",
+    "format": "PDF",
+    "pages": 24,
+    "size": 1121333,
+    "sha256": "07119f8b3cdf21d9a7786054a6ae4d3ffb1bca65a4661860e250299e8586fef4",
+    "description": "Signed September 11, 1985 by Valdas V. Adamkus (PDF p5). Pages 4 and 22 select soil/sewer-sediment excavation, off-site disposal, limited floor modification and backfill, approximately $75,000 estimated, while groundwater RI/FS remains separate. Pages 6–9 describe historical sewer exfiltration and chromium/cadmium contamination; p24 preserves City comments and agency responses. Planned 1986 construction is not completion evidence. A masked p9 footnote and degraded p15 cost-table entries remain unresolved. EP leachate denotes a laboratory extract, not Wexford landfill deliveries. This 24-page 1985 decision is not the 120-page September 1989 regional ROD listed in index 234881."
+  },
+  {
+    "id": "201-962cc6781463",
+    "name": "209637_Northernaire_Supplemental_Remedial_Investigation.pdf",
+    "url": "/findings-docs/201-962cc6781463.pdf",
+    "year": "1987",
+    "category": "Groundwater & hydrogeology",
+    "type": "Supplemental remedial investigation and well logs",
+    "format": "PDF",
+    "pages": 118,
+    "size": 4378569,
+    "sha256": "962cc67814636a86002461817b05581d110feda3631aec691ab390cb9234c34f",
+    "description": "January 1987 E.C. Jordan/MDNR report of 1985–1986 work. Pages 30–46 describe sorted sandy aquifers, clay pinch-out/interbeds and differing heads; pp74–82 leave the exact chromium transfer pathway and deep-aquifer impact unresolved. Page 24 reports tested purge-water infiltration at drilling locations; p106 records unidentified 'second phase product' in MW16 development water at 63–68 ft, an open lead without chemical identity. All 118 supplied pages were revisited with images/OCR, but map portions on pages 15/22, cropped cells, missing MW9 log continuation and table/survey discrepancies prevent Strict Fully Verified status. Historical chromium/VOC findings are not PFAS results or a modern Wexford-to-Plett pathway."
+  },
+  {
+    "id": "202-82254e0c3a95",
+    "name": "234881_Kysor_Administrative_Record_Index_Update_1.pdf",
+    "url": "/findings-docs/202-82254e0c3a95.pdf",
+    "year": "1989",
+    "category": "Groundwater & hydrogeology — source index",
+    "type": "EPA administrative-record index",
+    "format": "PDF",
+    "pages": 2,
+    "size": 81223,
+    "sha256": "82254e0c3a951f81260926ec35bb39c2fe3d2c86d75c4ac42926a171ff46831d",
+    "description": "October 16, 1989 Update 1 lists 15 Kysor/Cadillac groundwater records. Page1 identifies City, stakeholder and agency comments. Page 2 lists the August 7, 1989 public-meeting transcript (66p), June 8, 1989 feasibility study (375p), Kysor comments (129p) and September 29, 1989 ROD (120p). These are retrieval leads, not attachments or proof of the listed documents' contents. Both index pages are legible and reviewed; the original records must be obtained separately. Distinct from the held April 1988 interim FS and September 1985 source-control ROD."
+  },
+  {
     "id": "197-16057f68d1d5",
     "name": "EPA_209451_Northernaire_On_Scene_Report.pdf",
     "url": "/findings-docs/197-16057f68d1d5.pdf",

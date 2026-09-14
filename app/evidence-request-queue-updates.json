@@ -790,6 +790,19 @@
       "summary": "Already satisfied: local well-construction and lithology records. The remaining four requests concern the specific Plett well and measured local groundwater conditions; regional or delivery context does not complete them.",
       "held": [
         {
+          "id": "september14-five-source-pathway-tieback",
+          "finding": "The 1983 funding request (209480), signed September 11, 1985 source-control ROD (209538), January 1987 supplemental RI (209637) and later 1988 regional RI form a documented investigation/remedy sequence. The supplemental RI records clay pinch-out/interbeds, differing historical heads and unresolved exact chromium transfer/deep-aquifer impact. Its p24 describes tested purge-water infiltration, and p106 records unidentified second-phase product at MW16, 63–68 ft. Index234881 identifies 15 separate 1989 records, including a 66-page hearing transcript, 375-page final FS and 120-page regional ROD.",
+          "limitation": "The memo's Enforcement Release, damaged map portions, MW9 log continuation and listed 1989 originals are not supplied here. The product's identity/source is unknown. Survey and analytical discrepancies remain open. The Wexford July2006 fact sheet concerns a different site's aquifers and onsite groundwater treatment—not proof of the same clay layer, WWTP-delivered leachate volume or a source-to-Plett PFAS route. No Plett-specific requirement is closed.",
+          "sources": [
+            {"recordId":"199-c1524e21ac46","sha256":"c1524e21ac4640186fa3279f606c2d3ff651b315b89f136c98f83ab9b94e405b","label":"RI/FS request · pp1–2","pages":[1,2]},
+            {"recordId":"200-07119f8b3cdf","sha256":"07119f8b3cdf21d9a7786054a6ae4d3ffb1bca65a4661860e250299e8586fef4","label":"Signed 1985 decision · pp4–5,22,24","pages":[4,5,22,24]},
+            {"recordId":"201-962cc6781463","sha256":"962cc67814636a86002461817b05581d110feda3631aec691ab390cb9234c34f","label":"Supplemental RI · pp24,30–46,74–83,106","pages":[24,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,74,75,76,77,78,79,80,81,82,83,106]},
+            {"recordId":"202-82254e0c3a95","sha256":"82254e0c3a951f81260926ec35bb39c2fe3d2c86d75c4ac42926a171ff46831d","label":"1989 index · pp1–2; originals not attached","pages":[1,2]},
+            {"recordId":"027-b6b5e1c0bddb","sha256":"b6b5e1c0bddbe55a3a68391e06d05ece0e1b3c97ce3184c3cfd99a80adf6d756","label":"July2006 Wexford fact sheet · pp1–4","pages":[1,2,3,4]}
+          ],
+          "requirementIds":["surveyed-elevations-water-levels","local-hydraulic-tests","site-specific-groundwater-map"]
+        },
+        {
           "id": "september14-historical-sewer-ri-tieback",
           "finding": "The Northernaire OSC report describes an open-bottom catch basin, ground seepage and a sewer connection to Cadillac's treatment plant, with removal beginning July 5, 1983 and sewer excavation July 27 (pp4,7,13). Contaminated soil remained (p11). The August 1988 RI documents sandy aquifers, variable clay, historical well levels/permeability and downward paired gradients (pp58–63,72–80).",
           "limitation": "This ties a historical removal to later groundwater investigation, not a proven PFAS route to Plett. The RI p25 instead dates similar removal actions to 1982. OSC appendices and RI references/appendices are absent; some RI map/table fine print remains unresolved. Neither record supplies the missing present-day Plett-specific hydraulic evidence. No request is closed.",

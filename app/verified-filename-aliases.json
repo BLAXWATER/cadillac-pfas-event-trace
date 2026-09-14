@@ -1,4 +1,9 @@
 {
+  "027-b6b5e1c0bddb": {
+    "sha256": "b6b5e1c0bddbe55a3a68391e06d05ece0e1b3c97ce3184c3cfd99a80adf6d756",
+    "aliases": ["06-20-2006 - 421579.pdf", "421579_Wexford_Landfill_Fact_Sheet.pdf", "421579.pdf"],
+    "comparison": "Exact SHA-256 match. Printed issue month is July2006; June20 is the draft RI/FS submission date mentioned inside."
+  },
   "017-4b475079a927": {
     "sha256": "4b475079a927cb48147206bb617c64addaf8215f55534601f1674eacb8fb359e",
     "aliases": ["EGLE_Wexford_Landfill_License_9758_2024-11-19.pdf"]

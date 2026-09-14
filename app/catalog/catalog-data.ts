@@ -47,10 +47,10 @@ const uniqueRecords = (...groups: readonly CatalogRecord[][]): readonly CatalogR
   });
 };
 
-const groundwaterRecords = supplementalRecords.filter((record) => {
+const groundwaterRecords = uniqueRecords(supplementalRecords.filter((record) => {
   const category = record.category?.toLowerCase() ?? "";
   return category.includes("groundwater") || category.includes("watershed");
-});
+}), (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "027-b6b5e1c0bddb"));
 
 const leachateRecords = supplementalRecords.filter((record) => {
   const category = record.category?.toLowerCase() ?? "";
@@ -234,7 +234,7 @@ const categoryPages = [
     eyebrow: "REFERENCE DATA",
     title: "Reference records",
     description: "Reference exports, tables and supporting datasets used to cross-check the documentary archive.",
-    documents: referenceDocuments,
+    documents: uniqueRecords(referenceDocuments, supplementalRecords.filter((record) => record.type === "EPA administrative-record index")),
   },
   {
     slug: "groundwater-hydrogeology",

@@ -1,4 +1,9 @@
 {
+  "/model-archives/2004-CadSIR04-5175.7z": {
+    "preview": "/first-page-previews/by-sha256/b33eca775071d827911eebd771aa5251427a78222e593c5a1d0bb6f4097113dc.webp",
+    "label": "Cover of the original USGS report contained in this archive",
+    "sourceSha256": "c902da6a24fb299cc771e10f6cef75d5678163b40f2c2b23f689534755f1b764"
+  },
   "/biosolids-docs/210-1b582f16b11a.jpg": {
     "preview": "/first-page-previews/nonpdf/1b582f16b11a1ef2d0038383f36da54c42a02711ee4ccb6d08c208448cc27ae3.webp",
     "label": "Original source image",

@@ -465,9 +465,9 @@ const events: Event[] = [
     category: "13 · Groundwater & wells",
     title: "USGS models groundwater flow and Cadillac well contributing areas",
     finding: "USGS regional modeling for the Clam River watershed describes deep-system groundwater flow as generally southeast to northwest and identifies land immediately south and southeast of Cadillac's production-well field as contributing water under the modeled ten-year scenarios.",
-    significance: "Supplies historical regional hydrogeologic context for the municipal wells. The reports also state that more detailed aquifer characterization would be needed to represent heterogeneous glacial deposits, so the model is not treated as proof of a modern PFAS migration route or source.",
+    significance: "The report distinguishes shallow/intermediate flow toward central lowlands from deep regional flow toward the northwest (printed pp. 7–9). Figure 4 (p. 6) shows a clay breach; p. 10 explains that interpreted clay absence was modeled with higher vertical hydraulic conductivity. Table 2 (p. 14) assigns the shallow breach 25/36 ft/day versus 0.03 ft/day for the adjacent confining unit in the optimized/alternate scenarios; these are model inputs, not new field measurements. The assumed porosity was not field-measured, and the authors call for better characterization of heterogeneous glacial deposits (pp. 13–15). This supports historical pathway review but does not establish modern PFAS migration. The supplied model archive is preserved separately; full computational verification remains pending.",
     sources: [
-      archivedSource("USGS Scientific Investigations Report 2004-5175 — Simulation of Ground-Water Flow and Areas Contributing to Cadillac Production Wells.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/677a74cff6d4945b60295221ecfac72bc5c42f4e/public/findings-docs/082-1a5758abbd59.pdf", 24, "Final Scientific Investigations Report edition, including model figures, optimized and alternate contributing-area scenarios, limitations and references.", {
+      archivedSource("USGS Scientific Investigations Report 2004-5175 — Simulation of Ground-Water Flow and Areas Contributing to Cadillac Production Wells.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/677a74cff6d4945b60295221ecfac72bc5c42f4e/public/findings-docs/082-1a5758abbd59.pdf", 24, "Fresh 24-page review: cross-section/clay breach on PDF p. 10 (printed p. 6); model representation on PDF p. 14 (printed p. 10); parameter table on PDF p. 18 (printed p. 14); contributing-area maps on PDF pp. 19–20. The table's 1.50 recharge entry is a multiplier; its footnote gives an average of 15 in/year. The narrative's southwest wording on printed p. 12 differs from the abstract/summary's south/southeast description; preserve the maps and this discrepancy.", {
         eventStamp: "2005 · time not stated",
         basis: "Publication year in the suggested citation",
         created: "2005-01-28",
@@ -481,6 +481,15 @@ const events: Event[] = [
         modified: "2024-06-14 08:13:46 EDT (archive OCR derivative)",
         note: "The 2024 timestamps record OmniPage OCR processing, not the 2005 report event. Related official editions are retained because they are not page-for-page duplicate records.",
       }),
+      {
+        name: "2004 CadSIR04-5175.7z",
+        url: "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/22bbc9b519fa4b3e7c77a4cd3b0c603ac9cb4df2/public/model-archives/2004-CadSIR04-5175.7z",
+        preview: bundledFirstPagePreview("/model-archives/2004-CadSIR04-5175.7z"),
+        format: "7Z",
+        role: "Primary source",
+        result: "157 files preserved: report/documentation, model inputs, outputs, map files and software. The report and two documentation files were read completely. Full model reproduction is pending: adjusted MODFLOW/MODPATH grid files differ, and the optimized shapefile lacks a projection sidecar. Preview shows the enclosed report cover.",
+        clock: { eventStamp: "Associated report published 2005", basis: "Printed report publication year; archive name and contents citation say 2004", note: "Individual model file headers include earlier preparation dates. No separate archive release date is established." },
+      },
     ],
   },
   {
@@ -4364,7 +4373,7 @@ export default function Home() {
           <div className="document-grid">
             {filteredSupplementalDocuments.map((document) => (
               <article className="archive-card" data-record-id={document.id} key={document.id}>
-                <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span><span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span><span>{formatBytes(document.size)}</span></div>
+                <div className="archive-meta"><Badge variant="outline">{document.category}</Badge><Badge variant="outline">{document.type}</Badge><span>{document.year}</span>{document.pages > 0 && <span>{document.pages} {document.pages === 1 ? "page" : "pages"}</span>}<span>{formatBytes(document.size)}</span></div>
                 <h3 title={document.name}>{formatSourceDisplayName(document.name, document.format, true)}</h3>
                 <p className="archive-description">{documentSummary(document)}</p>
                 <DocumentPopoutButton document={document} label={document.format === "PDF" ? "Read PDF" : ["JPG", "JPEG", "PNG"].includes(document.format) ? "View image" : "View source"} open={setSelected} />

@@ -16,6 +16,7 @@ export type SourceFormat =
   | "TSV"
   | "MSG"
   | "ZIP"
+  | "7Z"
   | "TXT"
   | "OTHER";
 
@@ -31,7 +32,7 @@ export function sourceMediaKind(format: SourceFormat): SourceMediaKind {
   if (imageFormats.has(format)) return "image";
   if (spreadsheetFormats.has(format)) return "spreadsheet";
   if (officeFormats.has(format)) return "office";
-  if (format === "ZIP") return "archive";
+  if (format === "ZIP" || format === "7Z") return "archive";
   return "other";
 }
 

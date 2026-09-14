@@ -1,5 +1,18 @@
 [
   {
+    "id": "cadsir-model-c902da6a24fb",
+    "name": "2004 CadSIR04-5175.7z",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/22bbc9b519fa4b3e7c77a4cd3b0c603ac9cb4df2/public/model-archives/2004-CadSIR04-5175.7z",
+    "year": "2005",
+    "category": "Historical groundwater context",
+    "type": "USGS groundwater model archive — computational verification pending",
+    "format": "7Z",
+    "pages": 0,
+    "size": 53219121,
+    "sha256": "c902da6a24fb299cc771e10f6cef75d5678163b40f2c2b23f689534755f1b764",
+    "description": "Original 157-file model archive supporting USGS SIR 2004-5175: report/documentation, 56 model inputs, 23 outputs/map files and 75 software files. The enclosed 24-page report was freshly read in full and matches the existing report record; its printed publication year is 2005 despite the archive's 2004 name. Contents document optimized and increased-recharge/conductivity scenarios with ten-year contributing-area shapefiles. Full model reproduction remains pending: the adjusted MODFLOW/MODPATH grid files differ, and the optimized shapefile lacks a projection sidecar. Historical modeling does not establish a current PFAS route. Preview shows the enclosed report cover."
+  },
+  {
     "id": "199-c1524e21ac46",
     "name": "209480_Northernaire_RI_FS_Action_Memo.pdf",
     "url": "/findings-docs/199-c1524e21ac46.pdf",

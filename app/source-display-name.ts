@@ -1,4 +1,4 @@
-const finalFileExtension = /\.(pdf|png|jpe?g|docx?|xlsx?|csv|tsv|html?|msg|zip|tiff?|webp|txt|md|geojson|json)$/i;
+const finalFileExtension = /\.(pdf|png|jpe?g|docx?|xlsx?|csv|tsv|html?|msg|zip|7z|tiff?|webp|txt|md|geojson|json)$/i;
 
 function cleanText(value: string): string {
   return value

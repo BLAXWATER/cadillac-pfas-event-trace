@@ -44,7 +44,7 @@ function RecordCard({ record }: { record: CatalogRecord }) {
       <div className="catalog-page-card-topline">
         <span>{record.format ?? "SOURCE"}</span>
         {record.year && <span>{record.year}</span>}
-        {record.pages && <span>{record.pages} {record.pages === 1 ? "page" : "pages"}</span>}
+        {Boolean(record.pages) && <span>{record.pages} {record.pages === 1 ? "page" : "pages"}</span>}
       </div>
       <div className="catalog-page-card-content">
         {preview ? (

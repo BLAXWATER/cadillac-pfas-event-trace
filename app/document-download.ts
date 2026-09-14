@@ -4,9 +4,9 @@ export type DocumentDownloadPlatform = {
 };
 
 export function documentDownloadFilename(name: string, sourceUrl?: string): string {
-  const supportedExtension = /\.(pdf|csv|tsv|txt|geojson|json|png|jpe?g|webp|tiff?|xlsx?|docx?|msg|zip|html?)$/i;
+  const supportedExtension = /\.(pdf|csv|tsv|txt|geojson|json|png|jpe?g|webp|tiff?|xlsx?|docx?|msg|zip|7z|html?)$/i;
   // Page citations belong in the viewer, not after the saved file extension.
-  const primaryName = name.replace(/(\.(?:pdf|csv|tsv|txt|geojson|json|png|jpe?g|webp|tiff?|xlsx?|docx?|msg|zip|html?))\s+·\s+.*$/i, "$1");
+  const primaryName = name.replace(/(\.(?:pdf|csv|tsv|txt|geojson|json|png|jpe?g|webp|tiff?|xlsx?|docx?|msg|zip|7z|html?))\s+·\s+.*$/i, "$1");
   const filename = primaryName.replace(/[\u0000-\u001f\u007f/\\<>:"|?*]/g, "_").trim().replace(/[. ]+$/, "") || "document";
   if (supportedExtension.test(filename) || !sourceUrl) return filename;
   try {

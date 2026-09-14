@@ -1,0 +1,242 @@
+{
+  "batch": "September 14, 2026 — New folder DMR, NPDES application and SIU intake",
+  "sourceDirectory": "C:/Users/casey/OneDrive/Desktop/New folder",
+  "reviewStatus": "fully reviewed",
+  "methods": [
+    "Verified SHA-256, byte size, PDF metadata and page counts for all eight supplied PDFs.",
+    "Rendered every page in source order at 120 DPI and visually inspected all 85 rendered pages; no unreadable pages were found.",
+    "Checked embedded text page-by-page. All 85 pages contained usable native text, so OCR was not required; visual inspection confirmed the SIU tables, NPDES application tables, DMR measurement grids, certification blocks and blank fields.",
+    "Compared normalized page text, page counts and rendered content against the existing canonical IPP, NPDES and DMR assets. The SIU list and NPDES application are content-equivalent byte-distinct variants; the six GW1010342 DMRs are byte-identical to their canonical assets.",
+    "Applied substantive classifications and cross-source tie-backs while preserving each supplied filename, source hash, rendered-page coverage and the distinction between reported measurements, permit/application representations and later cessation comments."
+  ],
+  "stats": {
+    "suppliedFiles": 8,
+    "distinctInputHashes": 8,
+    "pdfPagesReviewed": 85,
+    "renderedPagesReviewed": 85,
+    "embeddedTextPages": 85,
+    "imageOnlyPages": 0,
+    "ocrEngineAvailable": false,
+    "ocrNeededPages": 0,
+    "ocrCompletedPages": 0,
+    "unreadablePages": 0,
+    "existingCanonicalRecordsReused": 8,
+    "byteIdenticalRecords": 6,
+    "contentEquivalentByteDistinctVariants": 2,
+    "newPublicRecordsAdded": 0,
+    "newTimelineEventsAdded": 0
+  },
+  "records": [
+    {
+      "suppliedName": "2019_SIU-CIU_List.pdf",
+      "sha256": "1105C32F982AD6F43807C0CCC2D57EED867D8EFDBB33DD783D766265ACA32F6B",
+      "bytes": 69556,
+      "pages": 6,
+      "status": "fully reviewed; content-equivalent to existing canonical IPP record; not republished",
+      "pageCoverage": "all 6 pages rendered, visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalog": "ipp-documents.json",
+      "recordId": "005-b1f62dff2c41",
+      "canonicalName": "2019_SIU-CIU_List.pdf",
+      "canonicalAsset": "/ipp-docs/005-b1f62dff2c41.pdf",
+      "canonicalSha256": "b1f62dff2c41ae0e8d8e44deec46559e56518bb4c74a10237812493dbca44e03",
+      "duplicateBasis": "All six pages have the same normalized text and rendered table content as the published six-page canonical asset; the supplied PDF has different bytes and metadata.",
+      "contentClassification": "SIU/CIU roster, contacts and regulatory flags",
+      "finding": "The six-page 2019 roster identifies 21 industrial-user sites. Wexford County Landfill LLC is listed at 990 N US Hwy 131, Manton, Wexford County, Michigan 49663, with American Waste as the legal name, Terry Whetstone as Landfill Manager, and the landfill classified as an SIU with local limits applicable. The roster also records Cadillac-area facility addresses, SIC/NAICS fields, contacts and emails. Its category codes include CIU entries for the four AAR locations, Cadillac Castings, Cadillac Renewable Energy, Munson Healthcare and Rec Boat Trailer; the source preserves the roster’s spelling and address anomalies.",
+      "boundary": "A roster snapshot is administrative identity and program-scope evidence, not proof of a load, discharge, PFAS use, violation or source attribution. The Avon Protection ZIP shown as 46901 and spellings such as “Arvco Container Corperation” and “Munson Heath Care” are preserved rather than corrected.",
+      "leadTrace": [
+        {
+          "lead": "Wexford’s SIU identity and contact link the landfill to the 2017 NPDES application and the 2018 PFAS screening workflow.",
+          "sourcePages": "1–6",
+          "targetRecords": "2017-04-03 Cadillac WWTP NPDES application; 2018 IPP screening/update; American Waste PFAS survey; Wexford leachate and groundwater-discharge records",
+          "tieBack": "Use the roster only to reconcile entity, address and contact identity; use the dated application, survey, monitoring, DMR and analytical records for volumes, sampling and results.",
+          "remainingUncertainty": "The roster contains no transaction-level hauling data, sample result or causal determination."
+        }
+      ]
+    },
+    {
+      "suppliedName": "Application_2Q7-HQ21-P66B V1.pdf",
+      "sha256": "C447FDFAF9CD97B5A9E1C543A370B77CFF5C09C99C453F25A4B5FFE44AE30664",
+      "bytes": 137562,
+      "pages": 22,
+      "status": "fully reviewed; content-equivalent to existing canonical NPDES record; not republished",
+      "pageCoverage": "all 22 pages rendered, visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalog": "npdes-documents.json",
+      "recordId": "080-6a540cadcdc6",
+      "canonicalName": "2017-04-03_Cadillac_WWTP_NPDES_Application.pdf",
+      "canonicalAsset": "/npdes-docs/080-6a540cadcdc6.pdf",
+      "canonicalSha256": "6a540cadcdc6fb9200560fcfd59897410932872fa6e48ca880ee5a8266642960",
+      "duplicateBasis": "All 22 pages have identical normalized text and rendered content to the published canonical application; the supplied PDF is a distinct byte-level export.",
+      "contentClassification": "Cadillac WWTP NPDES permit-reissuance application and attachments index",
+      "finding": "The April 3, 2017 submission (2Q7-HQ21-P66B, permit MI0020257) identifies the Cadillac WWTP at 1121 Plett Road, a certified operator (Jeffrey Dietlin, certification 10435), an outfall to the Clam River (HUC 04060102), and continuous design flow of 3.2 MGD. It reports three prior annual-average flows of 2.034, 1.937 and 1.943 MGD with maximum daily flows of 3.719, 2.654 and 3.263 MGD. Section 10 reports 1.5 MGD total nondomestic wastewater, with 0.486 MGD each for industrial process, contact-cooling and noncontact-cooling water and 0.04 MGD landfill leachate. The form says an IPP is required, lists a 2000 sewer-use ordinance, 1993 interjurisdictional agreements, 1993 local limits, 179.73 dry tons generated/treated/applied in the biosolids section, and includes reported biosolids metals, nutrients and pathogen data. It identifies the Clam River as the storm-water receiving water, says no industrial materials are exposed, and names Jeff Dietlin as the storm-water certified operator.",
+      "boundary": "The application records applicant representations and a list of referenced attachments; it is not itself a delivery log, laboratory report, proof of permit issuance, or proof that a particular leachate load occurred. The listed SIU, process-flow, lab and biosolids attachments were not included in this upload and remain separate records to verify individually. Storage capacity is entered as 1,214,091 without a visible unit selection in the extracted field, so no unit is inferred.",
+      "leadTrace": [
+        {
+          "lead": "The 0.04 MGD landfill-leachate entry provides an application-era average-volume baseline.",
+          "sourcePages": "14",
+          "targetRecords": "GW1010342 DMR daily and summary records; Wexford receiving/hauling and leachate-finance records",
+          "tieBack": "Compare this average-volume representation with the groundwater-permit cap and the dated GW1010342 DMR flow entries; do not convert it into individual deliveries or a total without a separate log.",
+          "remainingUncertainty": "The application does not identify the measurement period or individual loads behind the 0.04 MGD entry."
+        },
+        {
+          "lead": "Section 11 lists 21 SIU attachment files and Section 12 lists two Kar Lab biosolids reports.",
+          "sourcePages": "15–18, 21–22",
+          "targetRecords": "IPP SIU profiles; biosolids laboratory records; process-flow and WET-test attachments",
+          "tieBack": "Treat the attachment list as a retrieval lead and verify each supplied attachment separately; the application does not reproduce their contents.",
+          "remainingUncertainty": "The current upload contains only the application, not the listed attachment payloads."
+        }
+      ]
+    },
+    {
+      "suppliedName": "DMR Daily - GW1010342 _10_01_2016_to_10_31_2016_V1.pdf",
+      "sha256": "36F3ABE16DD100E0681B2855D9B2C6C41DD8992EDD3DB7741F0A134E90780389",
+      "bytes": 134258,
+      "pages": 8,
+      "status": "fully reviewed; byte-identical to existing canonical DMR record",
+      "pageCoverage": "all 8 rendered pages visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalog": "dmr-documents.json",
+      "recordId": "016-36f3abe16dd1",
+      "canonicalAsset": "/dmr-docs/016-36f3abe16dd1.pdf",
+      "canonicalSha256": "36f3abe16dd100e0681b2855d9b2c6c41dd8992edd3db7741f0a134e90780389",
+      "duplicateBasis": "The supplied file has the same 134,258 bytes and SHA-256 as the canonical asset.",
+      "contentClassification": "GW1010342 groundwater-discharge daily DMR, October 2016",
+      "finding": "The daily DMR identifies Wexford County Landfill, LLC, permit GW1010342, and a 10/1/2016–10/31/2016 period certified by Edward Ascione on 12/19/2016. On 10/4/2016 it reports nitrate 0.0 mg/L, pH 7.6, total inorganic nitrogen 0.47 mg/L, ammonia 0.47 mg/L, nitrite 0.0 mg/L and sodium 5 mg/L; the same date reports chloride 7 mg/L, total phosphorus 0.0 mg/L and 50,200 GPD in the displayed measured-flow/U columns. The report-only metals grid contains values on 10/4 (including barium 10 in the first metals set and calcium 9,600, magnesium 1,400 and potassium 3,600 in the fourth set); the other dates are blank or zero as displayed. DMR instructions define U as the discharge area south of the evaporator lagoon, V as brine make-up water and W as landfill dust-control water.",
+      "boundary": "The daily form is a permittee-submitted monitoring record, not an independent laboratory report. Its eight rendered pages carry internal footer labels ending in “Page 8 of 7”; the rendered-page count is retained and the footer discrepancy is not silently corrected. Blank cells are not treated as non-detects or zero unless a value is printed.",
+      "leadTrace": [
+        {
+          "lead": "The 10/4 daily entry supplies a dated groundwater-permit monitoring point.",
+          "sourcePages": "1–7",
+          "targetRecords": "October 2016 GW1010342 DMR summary and final GW1010342 permit",
+          "tieBack": "Use the summary for its monthly/annual rollups while preserving the daily 50,200-GPD displayed flow separately from the summary’s 50,400-GPD entry.",
+          "remainingUncertainty": "The daily record does not explain the displayed flow difference from the summary and does not identify a laboratory report number."
+        }
+      ]
+    },
+    {
+      "suppliedName": "DMR Daily - GW1010342 _11_01_2016_to_11_30_2016_V1.pdf",
+      "sha256": "9A97212374642A444F5330DAE253186C45C7EE4F01326A2D41393965DA81638D",
+      "bytes": 133812,
+      "pages": 8,
+      "status": "fully reviewed; byte-identical to existing canonical DMR record",
+      "pageCoverage": "all 8 rendered pages visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalog": "dmr-documents.json",
+      "recordId": "013-9a9721237464",
+      "canonicalAsset": "/dmr-docs/013-9a9721237464.pdf",
+      "canonicalSha256": "9a97212374642a444f5330dae253186c45c7ee4f01326a2d41393965da81638d",
+      "duplicateBasis": "The supplied file has the same 133,812 bytes and SHA-256 as the canonical asset.",
+      "contentClassification": "GW1010342 groundwater-discharge daily DMR, November 2016",
+      "finding": "The November daily DMR is certified by Edward Ascione on 12/19/2016. On 11/1/2016 it reports nitrate 1.3 mg/L, pH 6.99, total inorganic nitrogen 1.3 mg/L, ammonia 0.0 mg/L, nitrite 0.0 mg/L and sodium 3 mg/L; chloride is 5 mg/L and total phosphorus 0.0 mg/L. The daily flow grid shows a 0 reading on 11/1 and repeated 49,000–50,300-GPD entries later in the month; comments identify the system as off on 11/1, 11/13 (Sunday) and 11/24 (Thanksgiving). The metal grids report, among other entries, aluminum 100, barium 14, iron 150, manganese 19, strontium 9, zinc 20, calcium 7,900, magnesium 1,300 and potassium 2,800 on 11/1.",
+      "boundary": "These are permittee-submitted daily values as displayed, not independent analytical determinations. The eight rendered pages use a last-page footer of “Page 8 of 7”; the page-count discrepancy is retained. Blank cells remain blank rather than being recoded.",
+      "leadTrace": [
+        {
+          "lead": "The daily system-off comments and later flow entries provide operational context for the November summary.",
+          "sourcePages": "2–3, 7–8",
+          "targetRecords": "November 2016 GW1010342 DMR summary and Wexford groundwater-discharge records",
+          "tieBack": "Read the three system-off dates with the summary’s 50,300-GPD measurement and 1,439,500-gallon annual calculated value; no causal explanation is added.",
+          "remainingUncertainty": "The daily form does not state whether all blank dates were non-discharge dates or simply unreported."
+        }
+      ]
+    },
+    {
+      "suppliedName": "DMR Daily - GW1010342 _12_01_2016_to_12_31_2016_V1.pdf",
+      "sha256": "38ABCC29105CFAAB46F37FA4C4B6414D85B2010739F5094DA02431741AAB22BC",
+      "bytes": 134146,
+      "pages": 8,
+      "status": "fully reviewed; byte-identical to existing canonical DMR record",
+      "pageCoverage": "all 8 rendered pages visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalog": "dmr-documents.json",
+      "recordId": "014-38abcc29105c",
+      "canonicalAsset": "/dmr-docs/014-38abcc29105c.pdf",
+      "canonicalSha256": "38abcc29105cfaab46f37fa4c4b6414d85b2010739f5094da02431741aab22bc",
+      "duplicateBasis": "The supplied file has the same 134,146 bytes and SHA-256 as the canonical asset.",
+      "contentClassification": "GW1010342 groundwater-discharge daily DMR, December 2016",
+      "finding": "The December daily DMR is certified by Edward Ascione on 12/19/2016. On 12/5/2016 it reports nitrate 0.84 mg/L, pH 6.99, total inorganic nitrogen 0.94 mg/L, ammonia 0.10 mg/L, nitrite 0.0 mg/L and sodium 3 mg/L; chloride 3 mg/L, total phosphorus 0.052 mg/L and 10,000 GPD in the displayed measured-flow/U columns. The same date’s metals grid includes barium 0.007, chromium 0.001, copper 0.004, iron 0.030, manganese 0.007, strontium 0.012, zinc 0.020, calcium 6.0, magnesium 0.80 and potassium 2.60 in the displayed report units.",
+      "boundary": "This is a permittee-submitted daily form, not an independent laboratory report. Its eight rendered pages carry a last-page footer of “Page 8 of 7”; the rendered count and printed footer are both retained. The daily form has no explanatory DMR comment for the later December cessation statement found in the summary.",
+      "leadTrace": [
+        {
+          "lead": "The 12/5 daily values precede the summary’s reported 12/9 cessation.",
+          "sourcePages": "1–7",
+          "targetRecords": "December 2016 GW1010342 DMR summary and later permit-termination correspondence",
+          "tieBack": "Use the summary’s explicit 12/9 comment for the cessation date; do not infer that the 12/5 sample itself proves the pond-emptying action.",
+          "remainingUncertainty": "The daily record does not identify the final discharge or cleaning activity date."
+        }
+      ]
+    },
+    {
+      "suppliedName": "DMR Summary - GW1010342 _10_01_2016_to_10_31_2016_V1.pdf",
+      "sha256": "E20050CC15EB297E9F3109911CFF04F7136F8AA813D739B4CAF10746E6DC1A3A",
+      "bytes": 139064,
+      "pages": 11,
+      "status": "fully reviewed; byte-identical to existing canonical DMR record",
+      "pageCoverage": "all 11 rendered pages visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalog": "dmr-documents.json",
+      "recordId": "015-e20050cc15eb",
+      "canonicalAsset": "/dmr-docs/015-e20050cc15eb.pdf",
+      "canonicalSha256": "e20050cc15eb297e9f3109911cff04f7136f8aa813d739b4caf10746e6dc1a3a",
+      "duplicateBasis": "The supplied file has the same 139,064 bytes and SHA-256 as the canonical asset.",
+      "contentClassification": "GW1010342 groundwater-discharge monthly summary DMR, October 2016",
+      "finding": "The October summary reports sample measurements of pH 7.6, total inorganic nitrogen 0.470 mg/L, ammonia 0.470 mg/L, nitrite 0.0 mg/L, sodium 5.0 mg/L, chloride 7.0 mg/L and total phosphorus 0.0 mg/L. It reports 50,400 GPD in the measured-flow/U fields and a calculated annual flow of 549,400 gallons against a 2,000,000-gallon annual requirement; the DMR comments are none. The report-only metals section includes aluminum 0, barium 10, and later grids with calcium 9,600, magnesium 1,400 and potassium 3,600 in the displayed units.",
+      "boundary": "The summary is a permittee-submitted monthly roll-up, not an independent laboratory result. Its 11 rendered pages carry a final footer of “Page 11 of 10”; this document-structure discrepancy is preserved. The summary’s 50,400-GPD value is not substituted for the daily form’s displayed 50,200-GPD value.",
+      "leadTrace": [
+        {
+          "lead": "The monthly roll-up provides an annualized volume check for the final groundwater permit.",
+          "sourcePages": "3–4",
+          "targetRecords": "Final GW1010342 permit; October daily DMR; leachate receiving and finance records",
+          "tieBack": "Use the permit for the legal cap, the daily record for the dated row, and the summary for the reported annual calculation; do not treat any one field as a transaction ledger.",
+          "remainingUncertainty": "The summary does not explain the difference between its 50,400-GPD flow and the daily form’s 50,200-GPD row."
+        }
+      ]
+    },
+    {
+      "suppliedName": "DMR Summary - GW1010342 _11_01_2016_to_11_30_2016_V1.pdf",
+      "sha256": "6A73E78AE28DB7DF8C9859302D2F302FFE2A97F5C64652C97432367C72BDCC52",
+      "bytes": 139135,
+      "pages": 11,
+      "status": "fully reviewed; byte-identical to existing canonical DMR record",
+      "pageCoverage": "all 11 rendered pages visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalog": "dmr-documents.json",
+      "recordId": "018-6a73e78ae28d",
+      "canonicalAsset": "/dmr-docs/018-6a73e78ae28d.pdf",
+      "canonicalSha256": "6a73e78ae28db7df8c9859302d2f302ffe2a97f5c64652c97432367c72bdcc52",
+      "duplicateBasis": "The supplied file has the same 139,135 bytes and SHA-256 as the canonical asset.",
+      "contentClassification": "GW1010342 groundwater-discharge monthly summary DMR, November 2016",
+      "finding": "The November summary reports nitrate 1.3 mg/L, pH 6.99, total inorganic nitrogen 1.3 mg/L, ammonia 0.0 mg/L, nitrite 0.0 mg/L, sodium 3.0 mg/L, chloride 5.0 mg/L and total phosphorus 0.0 mg/L. It reports 50,300 GPD in the measured-flow/U fields and a calculated annual flow of 1,439,500 gallons against the 2,000,000-gallon annual requirement; DMR comments are none. The report-only metals grids show aluminum 100, barium 14, iron 150, manganese 19, strontium 9, zinc 20, calcium 7,900, magnesium 1,300 and potassium 2,800 in the displayed units.",
+      "boundary": "The summary is a permittee-submitted roll-up, not an independent laboratory determination. Its 11 rendered pages carry a final footer of “Page 11 of 10”; the printed page-count discrepancy is retained. The calculated annual value is not treated as a complete lifetime or calendar-year receiving total.",
+      "leadTrace": [
+        {
+          "lead": "The November roll-up can be cross-checked against daily system-off comments and the permit’s annual cap.",
+          "sourcePages": "3–4, 6–10",
+          "targetRecords": "November daily GW1010342 DMR; final GW1010342 permit; leachate receiving history",
+          "tieBack": "Preserve the monthly calculated value, the daily comments and the permit cap as separate clocks and record types.",
+          "remainingUncertainty": "The summary does not identify how the calculated annual value was accumulated or reconcile every blank daily field."
+        }
+      ]
+    },
+    {
+      "suppliedName": "DMR Summary - GW1010342 _12_01_2016_to_12_31_2016_V1.pdf",
+      "sha256": "FF2A91F0F3B9893D3972FA6D8ED0CF305C02D792D97716423FCB7FAD09C184EC",
+      "bytes": 139240,
+      "pages": 11,
+      "status": "fully reviewed; byte-identical to existing canonical DMR record",
+      "pageCoverage": "all 11 rendered pages visually inspected and text-checked in order; no OCR needed; no unreadable content",
+      "catalog": "dmr-documents.json",
+      "recordId": "017-ff2a91f0f3b9",
+      "canonicalAsset": "/dmr-docs/017-ff2a91f0f3b9.pdf",
+      "canonicalSha256": "ff2a91f0f3b9893d3972fa6d8ed0cf305c02d792d97716423fcb7fad09c184ec",
+      "duplicateBasis": "The supplied file has the same 139,240 bytes and SHA-256 as the canonical asset.",
+      "contentClassification": "GW1010342 groundwater-discharge monthly summary DMR, December 2016",
+      "finding": "The December summary reports nitrate 0.840 mg/L, pH 6.99, total inorganic nitrogen 0.940 mg/L, ammonia 0.100 mg/L, nitrite 0.0 mg/L, sodium 3.0 mg/L, chloride 3.0 mg/L and total phosphorus 0.052 mg/L. It reports 30,000 GPD in the measured-flow/U fields and a calculated annual flow of 1,509,500 gallons. The DMR comment states: “Ceased overall discharge on 12-9-2016. Pond empty.” The report-only metals grids show barium 0.007, chromium 0.001, copper 0.004, iron 0.030, manganese 0.007, strontium 0.012, zinc 0.020, calcium 6.0, magnesium 0.80 and potassium 2.60 in the displayed units.",
+      "boundary": "The cessation language is a permittee DMR comment and is not itself an independent field observation or a permit-termination order. The 11 rendered pages carry a final footer of “Page 11 of 10”; both the rendered count and printed footer are retained. The comment does not establish the last individual leachate delivery or explain the 30,000-GPD versus daily 10,000-GPD displayed entries.",
+      "leadTrace": [
+        {
+          "lead": "The 12/9/2016 cessation statement is the strongest dated operational lead in this batch.",
+          "sourcePages": "4",
+          "targetRecords": "GW1010342 permit, later termination correspondence, leachate receiving history and finance records",
+          "tieBack": "Use this statement to anchor a cessation-status question; require receiving logs or correspondence for the final load and agency records for legal termination.",
+          "remainingUncertainty": "The DMR does not supply a last-load date, cleaning log, independent inspection or agency acceptance of cessation."
+        }
+      ]
+    }
+  ],
+  "queueDecision": "All eight uploads are already represented by canonical public records. Six GW1010342 DMR PDFs are byte-identical; the 2019 SIU/CIU list and 2017 NPDES application are content-equivalent byte-distinct variants. The reread adds no new source asset or independent event, so no duplicate cards or timeline events were created. The supplied filenames, hashes, page coverage and substantive findings are retained here for provenance and verification.",
+  "evidentiaryBoundary": "This batch strengthens the documented chain from SIU identity and NPDES representations to permittee-submitted groundwater-discharge monitoring. It does not independently prove a leachate load, PFAS concentration, permit violation, causal source attribution, or legal termination beyond what each source reports."
+}

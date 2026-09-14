@@ -30,6 +30,7 @@ import correspondenceDocuments from "./correspondence-documents.json";
 import biosolidsAudit from "./biosolids-audit.json";
 import biosolidsDocuments from "./biosolids-documents.json";
 import dmrDocuments from "./dmr-documents.json";
+import newFolderDmrIntakeAudit from "./new-folder-dmr-intake-audit-2026-09-14.json";
 import evidenceRequestQueue from "./evidence-request-queue.json";
 import evidenceQueueUpdates from "./evidence-request-queue-updates.json";
 import formSubmissionAudit from "./form-submission-audit.json";
@@ -3800,6 +3801,23 @@ export default function Home() {
             <div><p className="eyebrow">DISCHARGE MONITORING ARCHIVE</p><h2 id="document-library-title">Search {dmrDocuments.length} DMR and QA records</h2></div>
             <p>The supplied Cadillac WWTP collection is preserved here as downloadable source files. Original filenames remain visible for provenance, while only confirmed content duplicates are suppressed.</p>
           </div>
+          <details className="audit-details archive-audit" data-audit="new-folder-dmr-intake">
+            <summary>September 14 DMR/application intake · 85 pages fully reviewed · 8 existing records reused</summary>
+            <div className="audit-panel">
+              <p>{newFolderDmrIntakeAudit.queueDecision}</p>
+              <p>{newFolderDmrIntakeAudit.methods.join(" · ")}</p>
+              <ul>
+                {newFolderDmrIntakeAudit.records.map((item) => (
+                  <li key={item.suppliedName}>
+                    <strong title={item.suppliedName}>{formatSourceDisplayName(item.suppliedName)}</strong>
+                    <span>{item.status}. Catalog: {item.catalog}; canonical source: {item.canonicalAsset}.</span>
+                  </li>
+                ))}
+              </ul>
+              <p><strong>Key reread findings:</strong> the 2017 application reports 0.04 MGD landfill leachate within 1.5 MGD nondomestic flow, a 3.2 MGD design flow and a 12/9/2016 cessation comment in the December GW1010342 summary; October–December daily and summary measurements are preserved with their distinct displayed values.</p>
+              <p><strong>Boundary:</strong> {newFolderDmrIntakeAudit.evidentiaryBoundary}</p>
+            </div>
+          </details>
           <div className="document-controls">
             <label className="document-search"><Search aria-hidden="true" /><span className="sr-only">Search documents</span><input value={documentQuery} onChange={(event) => setDocumentQuery(event.target.value)} placeholder="Search filename, year or record type" /></label>
             <label className="document-filter"><span className="sr-only">Filter by record type</span><select value={documentType} onChange={(event) => setDocumentType(event.target.value)}>{documentTypes.map((type) => <option key={type}>{type}</option>)}</select></label>

@@ -191,11 +191,6 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/findings-docs/122-e9b5255695c3.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/findings-docs/147-501cb6326dac.pdf", {
     eager: true,
     import: "default",
@@ -584,11 +579,6 @@ const bundledDocumentDownloads = {
     query: "?url",
   }),
   ...import.meta.glob("../public/ipp-docs/056-95a00ade695b.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/npdes-docs/038-8191c7e18aac.pdf", {
     eager: true,
     import: "default",
     query: "?url",

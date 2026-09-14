@@ -523,11 +523,6 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/wexford-docs/014-a6e913ab7006.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/wexford-docs/095-019ae9c3bfd6.pdf", {
     eager: true,
     import: "default",

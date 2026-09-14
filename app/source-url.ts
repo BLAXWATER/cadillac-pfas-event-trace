@@ -11,6 +11,7 @@ const legacyRepositoryCommits: Record<string, string> = {
   // these files in the size-limited Sites deployment package.
   "/findings-docs/122-e9b5255695c3.pdf": "9994ed932ee1600ea10fecb2b3ad80a9595bb3b5",
   "/npdes-docs/038-8191c7e18aac.pdf": "07c302dfa7d4d686ef72973070bcd81667757ba3",
+  "/wexford-docs/014-a6e913ab7006.pdf": "1f44c9e90e718f6e130bdfc319be48098d2163e5",
   "/compliance-docs/004-044b89235b40.msg": "efa59ca098bc5d59adef6edd8705cd336b9fd601",
   "/compliance-docs/006-bd78c5e76142.msg": "efa59ca098bc5d59adef6edd8705cd336b9fd601",
   "/compliance-docs/008-5fff30df4912.pdf": "f930d63655fe41489cb346522a9f841daaa8bd3b",

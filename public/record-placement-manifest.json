@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1635,
+  "recordCount": 1636,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 201
+      "count": 202
     },
     {
       "archiveId": "reference",
@@ -16815,6 +16815,17 @@
       "url": "/findings-docs/202-82254e0c3a95.pdf",
       "sha256": "82254e0c3a951f81260926ec35bb39c2fe3d2c86d75c4ac42926a171ff46831d",
       "size": 81223
+    },
+    {
+      "id": "cadsir-model-c902da6a24fb",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "2004 CadSIR04-5175.7z",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c5a8fbe48856bdd33327b3cb2aff773d5ae82040/public/findings-docs/203-c902da6a24fb.7z",
+      "sha256": "c902da6a24fb299cc771e10f6cef75d5678163b40f2c2b23f689534755f1b764",
+      "size": 53219121
     },
     {
       "id": "001-7c991baaf1e9",

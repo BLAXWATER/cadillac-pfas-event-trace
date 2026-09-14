@@ -483,8 +483,8 @@ const events: Event[] = [
       }),
       {
         name: "2004 CadSIR04-5175.7z",
-        url: "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/22bbc9b519fa4b3e7c77a4cd3b0c603ac9cb4df2/public/model-archives/2004-CadSIR04-5175.7z",
-        preview: bundledFirstPagePreview("/model-archives/2004-CadSIR04-5175.7z"),
+        url: "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c5a8fbe48856bdd33327b3cb2aff773d5ae82040/public/findings-docs/203-c902da6a24fb.7z",
+        preview: bundledFirstPagePreview("/findings-docs/203-c902da6a24fb.7z"),
         format: "7Z",
         role: "Primary source",
         result: "157 files preserved: report/documentation, model inputs, outputs, map files and software. The report and two documentation files were read completely. Full model reproduction is pending: adjusted MODFLOW/MODPATH grid files differ, and the optimized shapefile lacks a projection sidecar. Preview shows the enclosed report cover.",

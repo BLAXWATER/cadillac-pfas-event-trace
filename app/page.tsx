@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- document previews are local static evidence assets */
 
 import { useReducer, useState, type CSSProperties, type ReactNode } from "react";
+import { SourceCatalogLinks } from "./source-catalog-links";
 import {
   AlertTriangle,
   ArrowDown,
@@ -3832,9 +3833,7 @@ export default function Home() {
 
         <nav className="category-jump-nav" aria-label="Independent source catalog links">
           <div className="category-jump-heading"><p className="eyebrow">SOURCE CATALOG TABS</p><strong>Open each category on its own page</strong><span>Each button opens an independent catalog page with its complete record set.</span></div>
-          <div className="category-jump-links">
-            {categoryJumpLinks.map((link) => <a className="category-jump-link" data-category={link.slug} href={link.href} key={link.href}>{link.label}</a>)}
-          </div>
+          <SourceCatalogLinks links={categoryJumpLinks} />
         </nav>
 
         <section className="trace" aria-label="Source-linked event timeline">

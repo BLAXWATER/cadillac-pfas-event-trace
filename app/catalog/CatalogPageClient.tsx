@@ -12,6 +12,7 @@ import { formatSourceDisplayName } from "../source-display-name";
 import { withPdfStartPage } from "../pdf-source-url";
 import { sourceDownloadUrl, type SourceFormat } from "../source-media";
 import { catalogPageList, type CatalogPageConfig, type CatalogRecord } from "./catalog-data";
+import { SourceCatalogLinks } from "../source-catalog-links";
 
 type Props = { config: CatalogPageConfig };
 
@@ -90,9 +91,7 @@ export default function CatalogPageClient({ config }: Props) {
       </header>
 
       <nav className="catalog-page-nav" aria-label="Source catalog pages">
-        <div className="category-jump-links">
-          {catalogPageList.map((page) => <a className={`category-jump-link${page.slug === config.slug ? " is-active" : ""}`} data-category={page.slug} href={`/catalog/${page.slug}`} key={page.slug}>{page.buttonLabel}</a>)}
-        </div>
+        <SourceCatalogLinks links={catalogPageList.map((page) => ({ slug: page.slug, href: `/catalog/${page.slug}`, label: page.buttonLabel }))} activeSlug={config.slug} />
       </nav>
 
       <section className="catalog-page-controls" aria-label="Search this category">

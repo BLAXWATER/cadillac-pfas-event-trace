@@ -16994,5 +16994,14 @@
     "sourceSha256": "cfaee79bdc7e9c6e0d79b9a2929cb7156afaac48a14ab9a479a8a93cea63df54",
     "page": 1,
     "preview": "/first-page-previews/by-sha256/cfaee79bdc7e9c6e0d79b9a2929cb7156afaac48a14ab9a479a8a93cea63df54.webp"
+  },
+  "/findings-docs/197-16057f68d1d5.pdf": {
+    "sourceSha256": "16057f68d1d50e11fa45b7eb3422441d1776847789d0a54aa16dcde8f31d8d4d",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/16057f68d1d50e11fa45b7eb3422441d1776847789d0a54aa16dcde8f31d8d4d.webp",
+    "previewSha256": "a6e99fc767dfa37f504341f5eea3e296feaa964560edb3e6d40b258fa2e13454",
+    "verifiedAt": "2026-09-14T17:55:13.183513+00:00",
+    "verificationMethod": "Physical PDF page1 rendered using PDFium; full page preserved, no invented content.",
+    "scope": "First-page preview provenance only; whole-document review is separate."
   }
 }

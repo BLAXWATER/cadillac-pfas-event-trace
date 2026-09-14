@@ -790,6 +790,16 @@
       "summary": "Already satisfied: local well-construction and lithology records. The remaining four requests concern the specific Plett well and measured local groundwater conditions; regional or delivery context does not complete them.",
       "held": [
         {
+          "id": "september14-historical-sewer-ri-tieback",
+          "finding": "The Northernaire OSC report describes an open-bottom catch basin, ground seepage and a sewer connection to Cadillac's treatment plant, with removal beginning July 5, 1983 and sewer excavation July 27 (pp4,7,13). Contaminated soil remained (p11). The August 1988 RI documents sandy aquifers, variable clay, historical well levels/permeability and downward paired gradients (pp58–63,72–80).",
+          "limitation": "This ties a historical removal to later groundwater investigation, not a proven PFAS route to Plett. The RI p25 instead dates similar removal actions to 1982. OSC appendices and RI references/appendices are absent; some RI map/table fine print remains unresolved. Neither record supplies the missing present-day Plett-specific hydraulic evidence. No request is closed.",
+          "sources": [
+            {"recordId":"197-16057f68d1d5","sha256":"16057f68d1d50e11fa45b7eb3422441d1776847789d0a54aa16dcde8f31d8d4d","label":"Northernaire OSC report · pp4,7,11,13","pages":[4,7,11,13]},
+            {"recordId":"198-402da04fc76d","sha256":"402da04fc76d41547f45b1ecacfd9509d3fc5ce0440bc5f3be7013b3e01a4ed5","label":"August 1988 RI · pp25,58–63,72–80","pages":[25,58,59,60,61,62,63,72,73,74,75,76,77,78,79,80]}
+          ],
+          "requirementIds":["surveyed-elevations-water-levels","local-hydraulic-tests","site-specific-groundwater-map"]
+        },
+        {
           "id": "landfill-maps-held",
           "finding": "The February 2007 CTI facility map locates boundaries and landfill cells. The separate November 5, 2013 Golder map depicts wells and leachate infrastructure, including a 20,000-gallon backup tank.",
           "limitation": "Repeated CTI pages are the same map. Neither figure supplies surveyed synoptic water levels, local hydraulic-test results or a source-to-Plett groundwater-flow map; infrastructure depiction is not actual flow or delivery proof.",

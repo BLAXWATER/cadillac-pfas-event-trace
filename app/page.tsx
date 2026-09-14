@@ -1723,7 +1723,7 @@ const events: Event[] = [
     category: "12 · Landfill & leachate",
     title: "Operating License 9758 renews the landfill authorization",
     finding: "EGLE issued License 9758 for the 196.4-acre Wexford County Landfill through November 19, 2029. The license incorporates Construction Permits 4100 and 4127, the March 2018 hydrogeologic monitoring plan, the leachate recirculation plan and later lagoon, cover and engineering documents.",
-    significance: "Provides the current official operating framework and identifies the historical plans incorporated by reference; it does not by itself prove the contents of those separately listed plans.",
+    significance: "PDF p. 2 authorizes 36.31 active acres; Cell I's additional 10.46 acres require construction certification/approval before waste receipt, even though Attachment A includes them in its 46.77-acre active-area total. Page 6 retains County DPW responsibilities under the October 2007 RAP/agreement and also requires the LLC owner to implement the RAP. Page 5's 5/25 gallons/acre/day action/response rates are thresholds, not measured leakage. Incorporated plans are separate records, not supplied in full by this license.",
     sources: [pdf("Wexford-County-Landfill.PDF · Operating License 9758", "2024-11-19-operating-license-9758", 8, "Official operating license and Attachment A site map.", {
       eventStamp: "2024-11-19 · time not stated",
       basis: "Issue date printed on license page 1",
@@ -2595,6 +2595,24 @@ const events: Event[] = [
         role: "Cross-reference",
       },
     ],
+  },
+  {
+    year: "1983",
+    date: "1983-07-05",
+    isoDate: "1983-07-05",
+    time: noTime,
+    timeBasis: "Removal initiation date stated on PDF page 7; report issue date not stated",
+    phase: "Northernaire federal removal and remaining contamination",
+    kind: "receptor",
+    category: "13 / 14 · Groundwater, wells & hydrogeology",
+    title: "Northernaire removal documents sewer seepage and residual soil",
+    finding: "EPA's on-scene report says an unsealed, open-bottom catch basin allowed plating waste to seep into the ground; after saturation, a second pipe conveyed material to the Eighth Street sewer and Cadillac's sewage treatment plant (PDF pp. 4 and 7). The City had revoked the sewer discharge permit and plugged the connection in October 1978; continued discharge afterward is described as suspected. Federal removal began July 5, 1983, and the sewer was excavated July 27 (pp. 7 and 13). Waste was removed and the building secured, but contaminated soil remained (p. 11).",
+    significance: "This is historical chromium/cyanide cleanup and sewer-pathway evidence, not a PFAS analysis or Wexford leachate receipt. The unnamed local landfill is not identified as Wexford. The p. 10 total $156,171.58 conflicts with p. 11's $156,821.58, and the $40.20 City of Cadillac line has no stated service. The report's 1983 removal dates differ from the 1988 RI p. 25's retrospective 1982 account. Listed appendices, including original manifests, photographs and analytical inventory, are absent and remain open leads.",
+    sources: [archivedSource("EPA_209451_Northernaire_On_Scene_Report.pdf", "/findings-docs/197-16057f68d1d5.pdf", 14, "All 14 supplied pages reviewed. Sewer and seepage pp. 4 and 7; disposal table p. 9; conflicting costs pp. 10–11; residual soil p. 11; July 27 excavation pp. 13–14. Referenced appendices are not included.", {
+      eventStamp: "July 5, 1983 · exact time not stated",
+      basis: "Narrative initiation date, not a title-page issue date or PDF creation timestamp",
+      note: "EPA archive 209451; CERCLA project 68-95-007. Missing appendices and date/cost discrepancies are retained, not treated as reconciled or fully supplied.",
+    })],
   },
   {
     year: "1985",

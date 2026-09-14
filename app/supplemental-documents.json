@@ -1,5 +1,31 @@
 [
   {
+    "id": "197-16057f68d1d5",
+    "name": "EPA_209451_Northernaire_On_Scene_Report.pdf",
+    "url": "/findings-docs/197-16057f68d1d5.pdf",
+    "year": "1983",
+    "category": "Superfund cleanup & groundwater investigation",
+    "type": "EPA on-scene coordinator removal report",
+    "format": "PDF",
+    "pages": 14,
+    "size": 575880,
+    "sha256": "16057f68d1d50e11fa45b7eb3422441d1776847789d0a54aa16dcde8f31d8d4d",
+    "description": "Undated EPA report of the July–August 1983 Northernaire removal. PDF pp. 4 and 7 describe the leaking sewer/open-bottom catch basin, ground seepage and Eighth Street sewer connection to Cadillac's treatment plant. Page 13 dates sewer excavation to July 27, 1983; p. 11 says contaminated soil remained. Page 9 summarizes disposal shipments, not Wexford leachate receipts. The p. 10 narrative total $156,171.58 conflicts with p. 11's $156,821.58; the $40.20 City of Cadillac cost line has no service description. All 14 supplied pages were read; listed appendices are absent. The 1988 RI p. 25 instead dates similar removal actions to 1982; the discrepancy is retained. No PFAS result or Wexford disposal destination is established."
+  },
+  {
+    "id": "198-402da04fc76d",
+    "name": "CADILLAC - WATER- 234880.pdf",
+    "url": "/findings-docs/1988-cadillac-ri-234880.pdf",
+    "year": "1988",
+    "category": "Groundwater & hydrogeology",
+    "type": "Regional remedial investigation — final draft",
+    "format": "PDF",
+    "pages": 169,
+    "size": 8905994,
+    "sha256": "402da04fc76d41547f45b1ecacfd9509d3fc5ce0440bc5f3be7013b3e01a4ed5",
+    "description": "August 1988 FINAL DRAFT regional remedial investigation. PDF pp. 58–63 describe sandy aquifers and discontinuous clay; pp. 72–80 give historical levels, permeability and downward gradients. Page 93 qualifies tentative deep-well TCE as likely sampling carryover. Figures and modeled arrival dates are historical interpretations, not a present-day PFAS pathway. All 169 pages were revisited with text, rendering and OCR; some small map labels and dense risk-table figures remain insufficiently legible for strict verification. Listed references and appendices are absent."
+  },
+  {
     "id": "001-d8496c7348a6",
     "name": "Flood Plain Management Study — Clam River, Wexford County, Michigan.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/0355e48fffbcaaa07b108c2346423e3aeee32296/public/findings-docs/006-d8496c7348a6.pdf",

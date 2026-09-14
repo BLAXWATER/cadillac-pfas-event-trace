@@ -201,7 +201,7 @@
     "pages": 8,
     "size": 3588035,
     "sha256": "4b475079a927cb48147206bb617c64addaf8215f55534601f1674eacb8fb359e",
-    "description": "Operating License 9758, issued November 19, 2024 through November 19, 2029 for the 196.4-acre facility. It incorporates Construction Permits 4100/4127, the March 2018 HMP and later leachate/engineering plans."
+    "description": "Operating License 9758, issued November 19, 2024 through November 19, 2029 for the 196.4-acre facility. All 8 supplied pages were reread. Page 2 authorizes 36.31 active acres; the additional 10.46-acre Cell I requires construction certification/approval before receiving waste. Attachment A includes Cell I in its 46.77-acre active-area total. Page 6 retains County DPW responsibilities under the October 2007 RAP/agreement and also requires the LLC owner to implement the RAP. Page 5's 5/25 gallons/acre/day action/response rates are thresholds, not measured leakage. Incorporated permits and plans are separate records."
   },
   {
     "id": "018-1de5ebb00bdd",
@@ -237,7 +237,7 @@
     "pages": 37,
     "size": 5200399,
     "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
-    "description": "Unsigned draft permit for Wexford Water Technologies WWT Well 1 associated with EPA's October 2017 public-comment package. PDF page 5 is marked DRAFT; effective, expiration, signed-date and EPA-signature fields are blank. Proposed conditions include a Traverse injection interval of 3,166–3,799 feet relative to the Kelly bushing (p. 5), prior written EPA authorization before injection (p. 16), and ceilings of 1,038 psig and 84 gallons per minute (p. 23), not actual operating measurements. Attachment F (p. 37) restricts injected wastewater to nonhazardous wastewater generated at Wexford County Landfill and reports a January 22, 2015 representative leachate sample: total dissolved solids 6,800 mg/L, chloride 1,500 mg/L and benzene 276 µg/L; PFAS are not listed in that table. The sample table is not a complete native laboratory package or evidence of a particular delivery to Cadillac or actual injection. The signed plugging plan in the attachments is not a signed EPA permit."
+    "description": "Unsigned draft permit for Wexford Water Technologies WWT Well 1 associated with EPA's October 2017 public-comment package. PDF page 5 is marked DRAFT; effective, expiration, signed-date and EPA-signature fields are blank. Proposed conditions include a Traverse injection interval of 3,166–3,799 feet relative to the Kelly bushing (p. 5), prior written EPA authorization before injection (p. 16), and ceilings of 1,038 psig and 84 gallons per minute (p. 23), not actual operating measurements. All 37 supplied pages were reread, with scanned diagrams/plugging form OCR-checked. Page 27's March 29, 2017 signed plugging plan estimates $30,460 for the shallow and $32,265 for the deep alternative; its signature is not EPA permit approval. Alternative drawings (pp28–29,35–36) are not as-built evidence. Attachment F (p. 37) describes Wexford Landfill nonhazardous wastewater and a January 22, 2015 sample: TDS 6,800 mg/L, chloride 1,500 mg/L and benzene 276 µg/L, without a PFAS panel. Neither the table nor the draft proves a particular Cadillac delivery or injection commencement."
   },
   {
     "id": "021-0ec05df175b2",

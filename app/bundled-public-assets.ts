@@ -50,6 +50,7 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/findings-docs/197-16057f68d1d5.pdf", { eager: true, import: "default", query: "?url" }),
   // The public repository no longer carries these two legacy paths. Bundle
   // their canonical local originals instead of falling back to dead URLs.
   ...import.meta.glob("../public/compliance-docs/066-637b27ce2526.pdf", {

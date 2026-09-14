@@ -23,6 +23,7 @@ import {
 import complianceAudit from "./compliance-audit.json";
 import msgAudit from "./msg-audit.json";
 import foiaIntakeAudit from "./foia-response-intake-audit-2026-09-11.json";
+import newFolderIntakeAudit from "./new-folder-intake-audit-2026-09-14.json";
 import complianceDocuments from "./compliance-documents.json";
 import correspondenceAudit from "./correspondence-audit.json";
 import correspondenceDocuments from "./correspondence-documents.json";
@@ -3867,6 +3868,22 @@ export default function Home() {
             <div className="audit-panel">
               <p>{ippAudit.methods.join(" · ")}</p>
               <ul>{ippAudit.decisions.map((item) => <li key={item.name}><strong title={item.name}>{formatSourceDisplayName(item.name)}</strong><span>{item.reason}</span></li>)}</ul>
+            </div>
+          </details>
+          <details className="audit-details archive-audit" data-audit="new-folder-intake">
+            <summary>September 14 New folder intake · 15 pages fully reviewed · 5 existing records reused</summary>
+            <div className="audit-panel">
+              <p>{newFolderIntakeAudit.queueDecision}</p>
+              <p>{newFolderIntakeAudit.methods.join(" · ")}</p>
+              <ul>
+                {newFolderIntakeAudit.records.map((item) => (
+                  <li key={item.suppliedName}>
+                    <strong title={item.suppliedName}>{formatSourceDisplayName(item.suppliedName)}</strong>
+                    <span>{item.status}. Catalog: {item.catalog}; canonical source: {item.canonicalAsset ?? "existing timeline/source record"}.</span>
+                  </li>
+                ))}
+              </ul>
+              <p><strong>Boundary:</strong> {newFolderIntakeAudit.evidentiaryBoundary}</p>
             </div>
           </details>
           <div className="document-controls">

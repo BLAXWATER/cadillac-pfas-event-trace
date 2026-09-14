@@ -1,0 +1,161 @@
+{
+  "batch": "September 14, 2026 — New folder intake",
+  "sourceDirectory": "C:/Users/casey/OneDrive/Desktop/New folder",
+  "reviewStatus": "fully reviewed",
+  "methods": [
+    "Verified SHA-256, byte size, PDF metadata and page counts for all five supplied PDFs.",
+    "Rendered every page in source order at 150 DPI and visually inspected all 15 pages; no unreadable pages were found.",
+    "Checked embedded text page-by-page. All 15 pages contained usable native text, so OCR was not required; visual inspection confirmed tables, notices, signatures and annotations where present.",
+    "Compared normalized page text, page counts and rendered content against the existing published canonical records while preserving each supplied filename and source hash as provenance.",
+    "Classified findings by substantive content and traced each source to its existing NPDES, IPP or PFAS catalog record without creating duplicate cards or timeline events."
+  ],
+  "stats": {
+    "suppliedFiles": 5,
+    "distinctInputHashes": 5,
+    "pdfPagesReviewed": 15,
+    "renderedPagesReviewed": 15,
+    "embeddedTextPages": 15,
+    "imageOnlyPages": 0,
+    "ocrEngineAvailable": false,
+    "ocrNeededPages": 0,
+    "ocrCompletedPages": 0,
+    "unreadablePages": 0,
+    "existingCanonicalRecordsReused": 5,
+    "byteIdenticalRecords": 1,
+    "contentEquivalentByteDistinctVariants": 4,
+    "newPublicRecordsAdded": 0,
+    "newTimelineEventsAdded": 0
+  },
+  "records": [
+    {
+      "suppliedName": "2016-07-15_GW1010342_Public_Notice_original.pdf",
+      "sha256": "761D2EC9B1CD39E830BD6557FBB0900A74087131E3557724BAF8E0ECF682453D",
+      "bytes": 43142,
+      "pages": 1,
+      "status": "fully reviewed; content-equivalent to existing canonical NPDES record; not republished",
+      "pageCoverage": "page 1 rendered, visually inspected and text-checked; no OCR needed; no unreadable content",
+      "catalog": "npdes-documents.json",
+      "recordId": "076-a611a75485cf",
+      "canonicalName": "07-15-2016 - GW Public Notice Document.pdf",
+      "canonicalAsset": "/npdes-docs/076-a611a75485cf.pdf",
+      "canonicalSha256": "a611a75485cf4e7814ccf6417e1430dc35c4584f6685a7297f818e4de39f6427",
+      "duplicateBasis": "Normalized page text, page count and rendered content match the published public-notice record; the supplied PDF is a distinct container with different bytes and metadata.",
+      "contentClassification": "Proposed Rule 2210(y) groundwater-discharge public notice",
+      "finding": "The July 15, 2016 notice identifies Permit GW1010342 for Wexford County Landfill at 990 US Highway 131, Manton, Michigan. DEQ proposed authorization for up to 50,400 gallons per day and 2,000,000 gallons per year of landfill leachate from the evaporator lagoon to ground/groundwater in the southeast quarter of the northeast quarter of Section 33, T23N R09W, Cedar Creek Township. Public comments were due August 15, 2016. The rendered page contains highlighted wording around the proposed issue, evaporator-lagoon source and Cedar Creek location.",
+      "boundary": "This is a proposal and public-comment notice, not proof that final authorization was issued, that discharge occurred, or that groundwater was impacted.",
+      "leadTrace": [
+        {
+          "lead": "The notice proposes a Rule 2210(y) groundwater discharge for evaporator-lagoon leachate.",
+          "sourcePages": "1",
+          "targetRecords": "Existing NPDES permit, permit-issuance correspondence and Wexford leachate receiving/DMR records",
+          "tieBack": "Use the final permit and operating records to determine whether the proposal became an authorization and whether any discharge or receiving activity is documented.",
+          "remainingUncertainty": "The supplied notice does not itself establish final permit issuance or actual discharge."
+        }
+      ]
+    },
+    {
+      "suppliedName": "2018 IPP Screening - Monitoring Plan.180627modif.pdf",
+      "sha256": "9ED4B26473CCA1E83B831C908D0FDE6A3A9F2B53AFF821883593EAE6DBF1E388",
+      "bytes": 105315,
+      "pages": 3,
+      "status": "fully reviewed; content-equivalent to existing canonical IPP workflow record; not republished",
+      "pageCoverage": "all 3 pages rendered and visually reviewed in order; all text checked; no OCR needed; no unreadable content",
+      "catalog": "IPP timeline/source record",
+      "canonicalName": "2018 IPP Screening - Monitoring Plan.180627modif.pdf",
+      "canonicalAsset": "/docs/2018-06-27-monitoring-plan.pdf",
+      "canonicalSha256": "59ebe7478b18ff4565630a2c6ac2c37123fbe212ee88309a7c07f26b5e6bed60",
+      "duplicateBasis": "Normalized page text, page count and rendered content match the published June 27 monitoring-plan record; the supplied PDF is a distinct container with different bytes and metadata.",
+      "contentClassification": "IPP PFAS screening and sampling workflow",
+      "finding": "The three-page plan establishes the City’s PFAS industrial-user screening workflow: notice and survey responses are generally due within 10 business days; probable sources are notified of intended sampling; sampling is targeted within three months; samples are collected at current IPP monitoring locations, shipped to an approved laboratory and charged to the permit holder. Confirmed significant sources trigger POTW effluent sampling, and effluent results exceeding standards are to be reported to DEQ-WRD within 10 days. The plan also documents reminder procedures for nonresponders, the 4-business-day extension, the June 1, 2018 wastewater sampling guidance and the continuing unavailability of the referenced general guidance as of June 27, 2018. A nonresponsive permit holder is treated as a probable source and receives registered-mail notice of intent to sample.",
+      "boundary": "This is a procedure and decision framework, not evidence that a particular facility was sampled, that a result exceeded a standard, or that the workflow was completed.",
+      "leadTrace": [
+        {
+          "lead": "The plan directs probable-source sampling and follow-up POTW effluent sampling.",
+          "sourcePages": "1–3",
+          "targetRecords": "HNF-P7H3-DCN87 interim submission, J17646-1 leachate report, J17993-1 effluent report and related IPP correspondence",
+          "tieBack": "Compare the planned deadlines and decision points with the dated sampling, analytical and submission records to verify execution rather than infer it from the plan.",
+          "remainingUncertainty": "The plan does not report facility-specific sample results or completion dates."
+        }
+      ]
+    },
+    {
+      "suppliedName": "2018 IPP Screening - Monitoring Plan.Update181130.pdf",
+      "sha256": "3E1AF01356201ECF687370F43FB55A835E550FA2D3A85E449476C1657BBF8339",
+      "bytes": 141512,
+      "pages": 2,
+      "status": "fully reviewed; content-equivalent to existing canonical IPP tracking record; not republished",
+      "pageCoverage": "both pages rendered and visually reviewed in order; tables and blank status cells checked; no OCR needed; no unreadable content",
+      "catalog": "IPP timeline/source record",
+      "canonicalName": "2018 IPP Screening - Monitoring Plan.Update181130.pdf",
+      "canonicalAsset": "/docs/2018-11-30-monitoring-plan-update.pdf",
+      "canonicalSha256": "2dd8cd38dcb9b088a53fde3a81406d639341960e223ea1271fcad123ab8ce034",
+      "duplicateBasis": "Normalized page text, page count and rendered table content match the published November 30 monitoring-plan update; the supplied PDF is a distinct container with different bytes and metadata.",
+      "contentClassification": "IPP source-screening tracking table",
+      "finding": "The update lists Wexford County Landfill, LLC as a potential source and probable source, with a June 11, 2018 notice of intent to sample. Its second table records Wexford initial sampling completed October 3, 2018, samples shipped October 3, analytical results dated October 29, confirmed POTW impact Yes and POTW effluent sampling required Yes. Two Avon Automotive rows show November 7 sampling and shipping with analytical results pending. Other rows preserve the City’s potential/probable-source decisions and blank status fields.",
+      "boundary": "This is a program tracking table, not an independent laboratory report or a causal determination. Its status entries should be read with the underlying chain-of-custody, analytical and effluent records.",
+      "leadTrace": [
+        {
+          "lead": "The Wexford row links October 3 sampling, October 29 analytical results and a required POTW effluent sample.",
+          "sourcePages": "1–2",
+          "targetRecords": "J17646-1 leachate report, HNJ-P0ZX-8AVDS summary and Cadillac effluent laboratory records",
+          "tieBack": "The update supplies the chronology and decision flags; the linked analytical and submission records supply the underlying measurements and later reporting.",
+          "remainingUncertainty": "The table does not reproduce analytical concentrations, chain-of-custody details or the complete effluent result."
+        }
+      ]
+    },
+    {
+      "suppliedName": "2018_SIU-CIU_List.pdf",
+      "sha256": "95A00ADE695B98A74EB499DCB17D4E44DBA27F6634D6099F145A18EB314C639C",
+      "bytes": 48997,
+      "pages": 7,
+      "status": "fully reviewed; byte-identical to existing canonical IPP record",
+      "pageCoverage": "all 7 pages rendered and visually inspected in order; tables and source spellings checked; no OCR needed; no unreadable content",
+      "catalog": "ipp-documents.json",
+      "recordId": "056-95a00ade695b",
+      "canonicalName": "SIU-CIU_List.pdf",
+      "canonicalAsset": "/ipp-docs/056-95a00ade695b.pdf",
+      "canonicalSha256": "95a00ade695b98a74eb499dcb17d4e44dbb27f6634d6099f145a18eb314c639c",
+      "duplicateBasis": "The supplied file is byte-identical to the canonical asset: same 48,997 bytes and SHA-256. No second asset, catalog card or timeline event was created.",
+      "contentClassification": "SIU/CIU roster and contact inventory",
+      "finding": "The seven-page roster contains 21 industrial-user sites, including Wexford County Landfill, LLC at 990 N US Hwy 131, Manton, Wexford County, Michigan 49663. The legal-name and contact pages identify American Waste, Terry Whetstone as Landfill Manager and terryw@2americanwaste.org; Wexford is listed as an SIU with local limits applicable. The roster also records addresses, SIC/NAICS fields, contacts, emails and categorical-industry applicability for the Cadillac facilities.",
+      "boundary": "This is a roster snapshot used for program administration, not proof of discharge, PFAS use, a violation or source attribution. Source anomalies are preserved, including the Avon Protection ZIP shown as 46901 and spelling variants such as “Arvco Container Corperation” and “Munson Heath Care.”",
+      "leadTrace": [
+        {
+          "lead": "Wexford’s roster identity and contact information connect the landfill to the 2018 screening and survey workflow.",
+          "sourcePages": "1, 3, 5–6",
+          "targetRecords": "2018 IPP monitoring-plan/update records and American Waste/Wexford PFAS survey",
+          "tieBack": "Use the roster for identity and contact cross-reference only; use the dated survey and monitoring records for source-screening statements and sampling status.",
+          "remainingUncertainty": "The roster does not establish which loads, processes or discharges occurred, and its source anomalies were not corrected."
+        }
+      ]
+    },
+    {
+      "suppliedName": "2018-05-21_Wexford_American_Waste_PFAS_Survey_original.pdf",
+      "sha256": "3EA4697DC34BA9879ABDFD449CC0EA65977AC7442EAB41EBAB1C8F7B17926793",
+      "bytes": 298112,
+      "pages": 2,
+      "status": "fully reviewed; content-equivalent to existing canonical PFAS record; not republished",
+      "pageCoverage": "both pages rendered and visually inspected in order; signed response and all survey fields checked; no OCR needed; no unreadable content",
+      "catalog": "pfas-documents.json",
+      "recordId": "002-aca419b24a35",
+      "canonicalName": "2018-05-21 - American Waste PFAS Survey.pdf",
+      "canonicalAsset": "/pfas-docs/002-aca419b24a35.pdf",
+      "canonicalSha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
+      "duplicateBasis": "Normalized page text, page count and rendered content match the published PFAS survey; the supplied PDF is a distinct container with different bytes and metadata.",
+      "contentClassification": "Signed respondent PFAS source-screening survey",
+      "finding": "The signed May 21, 2018 survey identifies Wexford County Landfill, LLC, representative Vicki Garon, Landfill Engineer. It states that the landfill was accepting waste, that American Waste took ownership in fall 2011, and that industrial waste comprised an estimated 18–30 percent of incoming waste. It says generator names were kept for waste transported by the landfill but not necessarily for other haulers, that SIC-code percentages could not be supplied, and that the landfill had not analyzed its leachate for PFAS at the time of response.",
+      "boundary": "These are respondent statements, not independent sampling, transaction-level hauling records, a laboratory result or proof of PFAS source attribution. The survey’s ownership and information limits are part of the provenance and should not be silently expanded.",
+      "leadTrace": [
+        {
+          "lead": "The survey’s statement that leachate had not been analyzed for PFAS creates a dated information gap before later sampling.",
+          "sourcePages": "2",
+          "targetRecords": "J17646-1 leachate analytical report and HNJ-P0ZX-8AVDS IPP summary",
+          "tieBack": "Keep the May 21 respondent statement separate from the October 3 collection and October 29 TestAmerica result; together they show chronology, not a retroactive correction of the survey.",
+          "remainingUncertainty": "The survey does not identify all outside-hauler generators or provide a complete waste composition, load history or analytical result."
+        }
+      ]
+    }
+  ],
+  "queueDecision": "All five uploads are already represented by canonical public records. Four supplied PDFs are content-equivalent, byte-distinct variants and the SIU/CIU list is byte-identical. The uploads add no new event or analytical result, so no duplicate cards or timeline events were created; supplied filenames and hashes are retained here for provenance.",
+  "evidentiaryBoundary": "The intake confirms existing public records and strengthens provenance, chronology and lead-tracing. It does not independently establish final groundwater authorization, actual discharge, PFAS concentrations, causal source attribution or compliance beyond the statements and status fields contained in the cited records."
+}

@@ -1,0 +1,179 @@
+{
+  "duplicateContentGroups": [
+    [
+      "2004 CadSIR04-5175/Input/MODFLOW/cadadjusted/cadmod1.bas",
+      "2004 CadSIR04-5175/Input/MODFLOW/cadoptim/cadmod1.bas"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODFLOW/cadadjusted/cadmod1.obs",
+      "2004 CadSIR04-5175/Input/MODFLOW/cadoptim/cadmod1.obs"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODFLOW/cadadjusted/cadmod1.oc",
+      "2004 CadSIR04-5175/Input/MODFLOW/cadoptim/cadmod1.oc"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODFLOW/cadadjusted/cadmod1.ohd",
+      "2004 CadSIR04-5175/Input/MODFLOW/cadoptim/cadmod1.ohd"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODFLOW/cadadjusted/cadmod1.pes",
+      "2004 CadSIR04-5175/Input/MODFLOW/cadoptim/cadmod1.pes"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODFLOW/cadadjusted/cadmod1.rch",
+      "2004 CadSIR04-5175/Input/MODFLOW/cadoptim/cadmod1.rch"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODFLOW/cadadjusted/cadmod1.zon",
+      "2004 CadSIR04-5175/Input/MODFLOW/cadoptim/cadmod1.zon"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODFLOW/cadoptim/cadmod1.dis",
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.dis",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.dis"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.a0",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.a0"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.a2",
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.a4",
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.a6",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.a2",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.a4",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.a6"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.bhd",
+      "2004 CadSIR04-5175/Output/MODFLOW/cadadjusted/cadmod1.bhd"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.bud",
+      "2004 CadSIR04-5175/Output/MODFLOW/cadadjusted/cadmod1.bud"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.mpa",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.mpa"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.pnm",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.pnm"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/cadmod1.tim",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.tim"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadadjusted/modpath.bat",
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/modpath.bat"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.bhd",
+      "2004 CadSIR04-5175/Output/MODFLOW/cadoptim/cadmod1.bhd"
+    ],
+    [
+      "2004 CadSIR04-5175/Input/MODPATH/cadoptim/cadmod1.bud",
+      "2004 CadSIR04-5175/Output/MODFLOW/cadoptim/cadmod1.bud"
+    ]
+  ],
+  "modelHandoffs": [
+    {
+      "scenario": "cadoptim",
+      "extension": "bhd",
+      "source": "Output/MODFLOW/cadoptim/cadmod1.bhd",
+      "target": "Input/MODPATH/cadoptim/cadmod1.bhd",
+      "identical": true
+    },
+    {
+      "scenario": "cadoptim",
+      "extension": "bud",
+      "source": "Output/MODFLOW/cadoptim/cadmod1.bud",
+      "target": "Input/MODPATH/cadoptim/cadmod1.bud",
+      "identical": true
+    },
+    {
+      "scenario": "cadoptim",
+      "extension": "dis",
+      "source": "Input/MODFLOW/cadoptim/cadmod1.dis",
+      "target": "Input/MODPATH/cadoptim/cadmod1.dis",
+      "identical": true
+    },
+    {
+      "scenario": "cadadjusted",
+      "extension": "bhd",
+      "source": "Output/MODFLOW/cadadjusted/cadmod1.bhd",
+      "target": "Input/MODPATH/cadadjusted/cadmod1.bhd",
+      "identical": true
+    },
+    {
+      "scenario": "cadadjusted",
+      "extension": "bud",
+      "source": "Output/MODFLOW/cadadjusted/cadmod1.bud",
+      "target": "Input/MODPATH/cadadjusted/cadmod1.bud",
+      "identical": true
+    },
+    {
+      "scenario": "cadadjusted",
+      "extension": "dis",
+      "source": "Input/MODFLOW/cadadjusted/cadmod1.dis",
+      "target": "Input/MODPATH/cadadjusted/cadmod1.dis",
+      "identical": false
+    }
+  ],
+  "shapefiles": [
+    {
+      "path": "Output/MODPATH/cadoptim/10yr.shp",
+      "projectionPresent": false,
+      "features": [
+        {
+          "attributes": {
+            "ID": 0,
+            "AREA": 883573.147,
+            "ACRES": 218.331,
+            "PERIMETER": 3522.72,
+            "Z5": 755
+          },
+          "vertexCount": 43,
+          "parts": [
+            0
+          ],
+          "bbox": [
+            546376.2541199166,
+            411857.28578429145,
+            547537.8256381002,
+            412870.1309654629
+          ],
+          "absoluteSignedAreaCoordinateUnitsSquared": 883573.1472320557
+        }
+      ]
+    },
+    {
+      "path": "Output/MODPATH/cadadjusted/10ynew7.shp",
+      "projectionPresent": true,
+      "features": [
+        {
+          "attributes": {
+            "ID": 0,
+            "AREA": 1251812.817,
+            "ACRES": 309.323,
+            "PERIMETER": 4793.521
+          },
+          "vertexCount": 45,
+          "parts": [
+            0
+          ],
+          "bbox": [
+            546429.3118405232,
+            411396.6388324704,
+            547839.4021829887,
+            412918.36132704787
+          ],
+          "absoluteSignedAreaCoordinateUnitsSquared": 1251812.817276001
+        }
+      ]
+    }
+  ],
+  "scope": "Complete file hashes and shapefile feature/vertex parsing; comparison of flow-to-particle-tracking handoff files. Not a rerun or full scientific verification of model arrays, logs, software or particle trajectories."
+}

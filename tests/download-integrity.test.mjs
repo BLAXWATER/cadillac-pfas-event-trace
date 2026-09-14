@@ -1,13 +1,15 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { readFile } from "node:fs/promises";
 import { verifyCatalogIntegrity, loadDownloadDeliveryPlan } from "../scripts/document-download-integrity.mjs";
 
 test("every document download has valid metadata and a direct delivery path", async () => {
   const result = await verifyCatalogIntegrity();
   assert.deepEqual(result.failures, []);
-  assert.equal(result.records.length, 1627);
-  assert.equal(result.local.length, 811);
-  assert.equal(result.external.length, 816);
+  const placement = JSON.parse(await readFile(new URL('../public/record-placement-manifest.json', import.meta.url), 'utf8'));
+  assert.equal(result.records.length, placement.recordCount);
+  assert.equal(result.local.length + result.external.length, result.records.length);
+  assert.deepEqual(result.records.map(r=>r.id).sort(), placement.records.map(r=>r.id).sort());
   assert.equal(result.bundledDeliveries.length + result.archiveDeliveries.length, result.records.length);
 });
 

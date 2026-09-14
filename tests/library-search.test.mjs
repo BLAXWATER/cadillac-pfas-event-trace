@@ -53,10 +53,11 @@ test('every filename in the reconciled A12–A24 manifest finds its existing doc
 
 test('search registry includes each catalog row exactly once; aliases do not inflate count',()=>{
   assert.equal(registry.elements.length,catalogs.size);
-  assert.equal(records.length,1627);
+  const expectedCount=[...catalogs.values()].reduce((sum,rows)=>sum+rows.length,0);
+  assert.equal(records.length,expectedCount);
   assert.equal(index.length,records.length);
-  assert.equal(new Set(records.map(r=>r.id)).size,1627);
-  assert.equal(new Set(records.map(r=>r.sha256)).size,1627);
+  assert.equal(new Set(records.map(r=>r.id)).size,expectedCount);
+  assert.equal(new Set(records.map(r=>r.sha256)).size,expectedCount);
 });
 
 test('all stored canonical and displayed filenames retrieve their own record',()=>{

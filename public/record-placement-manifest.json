@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1627,
+  "recordCount": 1629,
   "archiveCount": 13,
   "archives": [
     {
@@ -57,14 +57,14 @@
       "label": "Compliance & enforcement",
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
-      "count": 65
+      "count": 66
     },
     {
       "archiveId": "correspondence",
       "label": "Correspondence & letters",
       "catalog": "correspondence-documents.json",
       "sectionId": "correspondence-library-title",
-      "count": 44
+      "count": 45
     },
     {
       "archiveId": "process-site",
@@ -3122,6 +3122,17 @@
       "size": 168712
     },
     {
+      "id": "066-637b27ce2526",
+      "archiveId": "compliance",
+      "archiveLabel": "Compliance & enforcement",
+      "catalog": "compliance-documents.json",
+      "sectionId": "compliance-library-title",
+      "name": "2020-10-22 - Read Receipt for EGLE WRD VN-011108.pdf",
+      "url": "/compliance-docs/066-637b27ce2526.pdf",
+      "sha256": "637b27ce2526b58991831e674f3a847c46986e86edafc0bcaedc7ada8e486b2e",
+      "size": 82929
+    },
+    {
       "id": "corr-001-4d33f697af5e",
       "archiveId": "correspondence",
       "archiveLabel": "Correspondence & letters",
@@ -3604,6 +3615,17 @@
       "url": "/correspondence-docs/corr-044-b0440ae9e001.pdf",
       "sha256": "b0440ae9e001fac873727208551d12fb6ab0c8fb4d5d8f5d44b48d3e7058e2b8",
       "size": 101035
+    },
+    {
+      "id": "corr-045-cfaee79bdc7e",
+      "archiveId": "correspondence",
+      "archiveLabel": "Correspondence & letters",
+      "catalog": "correspondence-documents.json",
+      "sectionId": "correspondence-library-title",
+      "name": "2020-12-17 - Permit Modification Review Correspondence.pdf",
+      "url": "/correspondence-docs/corr-045-cfaee79bdc7e.pdf",
+      "sha256": "cfaee79bdc7e9c6e0d79b9a2929cb7156afaac48a14ab9a479a8a93cea63df54",
+      "size": 197550
     },
     {
       "id": "001-e12b255837e5",

@@ -32,6 +32,19 @@ test('failed, interrupted, denied and empty responses never create a download',a
   }
 });
 
+test('timeline citations and descriptive titles save with usable document extensions', async()=>{
+  assert.equal(documentDownloadFilename('Cadillac WWTP SIU Information.pdf · page 4','/assets/source.pdf'),'Cadillac WWTP SIU Information.pdf');
+  assert.equal(documentDownloadFilename('District Compliance File.pdf · pages 93–94','/assets/source.pdf'),'District Compliance File.pdf');
+  assert.equal(documentDownloadFilename('2015-12-21 City incident notification — Grease B Gone discharge','/assets/source.pdf'),'2015-12-21 City incident notification — Grease B Gone discharge.pdf');
+  assert.equal(documentDownloadFilename('Original_file_2019.PDF','/assets/source.pdf'),'Original_file_2019.PDF');
+  let saved;
+  await downloadDocumentFile('/assets/source.pdf','Leachate revenue highlights, PDF page 21',{
+    fetch:async()=>new Response(new Uint8Array([37,80,68,70])),
+    save:(_blob,name)=>{saved=name;},
+  });
+  assert.equal(saved,'Leachate revenue highlights, PDF page 21.pdf');
+});
+
 test('download control remains on the portal and cleans up local Blob URLs',async()=>{
   const html=renderToStaticMarkup(React.createElement(DocumentDownloadButton,{name:'Original.pdf',downloadUrl:'/assets/original.pdf'}));
   assert.match(html,/aria-label="Download Original.pdf"/);

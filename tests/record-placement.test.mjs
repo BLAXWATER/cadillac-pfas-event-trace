@@ -2,15 +2,17 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { publicManifestPath, verifyRecordPlacement } from "../scripts/record-placement-integrity.mjs";
+import { loadDocumentRecords } from "../scripts/document-download-integrity.mjs";
 
 test("every source record is assigned to exactly one intended visible archive block", async () => {
   const { schema, manifest, failures } = await verifyRecordPlacement();
   assert.deepEqual(failures, []);
   assert.equal(schema.length, 13);
   assert.equal(manifest.archiveCount, 13);
-  assert.equal(manifest.recordCount, 1623);
-  assert.equal(new Set(manifest.records.map((record) => record.id)).size, 1623);
-  assert.equal(manifest.archives.reduce((sum, archive) => sum + archive.count, 0), 1623);
+  const records = await loadDocumentRecords();
+  assert.equal(manifest.recordCount, records.length);
+  assert.equal(new Set(manifest.records.map((record) => record.id)).size, records.length);
+  assert.equal(manifest.archives.reduce((sum, archive) => sum + archive.count, 0), records.length);
 });
 
 test("the public placement manifest exactly mirrors the rendered archive registry", async () => {

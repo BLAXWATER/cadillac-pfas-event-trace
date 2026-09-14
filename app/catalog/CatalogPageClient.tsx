@@ -39,7 +39,7 @@ function RecordCard({ record }: { record: CatalogRecord }) {
   const title = formatSourceDisplayName(record.name, record.format ?? undefined, Boolean(record.url));
 
   return (
-    <article className="catalog-page-card">
+    <article className="catalog-page-card" data-record-id={record.id}>
       <div className="catalog-page-card-topline">
         <span>{record.format ?? "SOURCE"}</span>
         {record.year && <span>{record.year}</span>}
@@ -62,7 +62,7 @@ function RecordCard({ record }: { record: CatalogRecord }) {
             {record.sha256 && <div><dt>SHA-256</dt><dd className="catalog-page-hash">{record.sha256}</dd></div>}
           </dl>
           <div className="catalog-page-card-actions" aria-label={`Actions for ${title}`}>
-            <DocumentDownloadButton name={title} downloadUrl={sourceHref} />
+            <DocumentDownloadButton name={record.name} downloadUrl={sourceHref} />
             <DocumentShareButton name={title} downloadUrl={sourceHref} />
           </div>
         </div>

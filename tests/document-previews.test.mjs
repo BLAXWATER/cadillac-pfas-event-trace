@@ -31,7 +31,8 @@ test('every catalog document has a bundled source-derived image', () => {
       count++;
     }
   }
-  assert.equal(count,1627);
+  const placement = JSON.parse(readFileSync(path.join(root,'public/record-placement-manifest.json')));
+  assert.equal(count,placement.recordCount);
 });
 test('1988 study preview is derived from its original', () => {
   assert.ok(manifest['/findings-docs/1988-cadillac-ri-234880.pdf']);

@@ -146,7 +146,7 @@ const categoryPages = [
     eyebrow: "PERMITS & RECORDS",
     title: "Permits and operating licenses",
     description: "Permit applications, renewals, modifications, notices and related regulatory records.",
-    documents: uniqueRecords(npdesDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => ["116-1406440ae1fc", "024-069dda9efa5b"].includes(record.id))),
+    documents: uniqueRecords(npdesDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => ["116-1406440ae1fc", "024-069dda9efa5b", "001-7c991baaf1e9"].includes(record.id))),
   },
   {
     slug: "ipp",
@@ -178,7 +178,7 @@ const categoryPages = [
     eyebrow: "COMPLIANCE & ENFORCEMENT",
     title: "Compliance and enforcement records",
     description: "Inspections, notices, corrective-action correspondence and other compliance records.",
-    documents: complianceDocuments,
+    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9")),
   },
   {
     slug: "violation-notices",

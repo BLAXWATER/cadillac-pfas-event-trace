@@ -7,6 +7,9 @@ const repositoryAssetCommit = "07c302dfa7d4d686ef72973070bcd81667757ba3";
 // that still contains the original file; the two paths that have no public
 // commit remain bundled by bundled-public-assets.ts.
 const legacyRepositoryCommits: Record<string, string> = {
+  // The four May 2018 timeline citations use a relative path. Match the
+  // catalog's byte-verified original; the default archive revision returns 404.
+  "/findings-docs/045-25d3c10b9ea8.pdf": "4535081d2398301cd01bb92501f2fc2e1a83e3ed",
   // Byte-verified immutable originals; keeping delivery here avoids duplicating
   // these files in the size-limited Sites deployment package.
   "/findings-docs/122-e9b5255695c3.pdf": "9994ed932ee1600ea10fecb2b3ad80a9595bb3b5",

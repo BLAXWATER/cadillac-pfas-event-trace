@@ -1,0 +1,15 @@
+{
+  "date":"2026-09-15",
+  "suppliedPath":"C:/Users/casey/AppData/Local/Temp/May 21 2018 City Council Packet.pdf",
+  "recordId":"045-25d3c10b9ea8",
+  "sha256":"25d3c10b9ea8697bb69779ea5341633f7c3326eca5f8130278188bd1cb388d88",
+  "bytes":7201375,
+  "pages":166,
+  "identity":"Exact existing canonical original and uploaded-filename alias. No new original, category identity or repeated finding block required.",
+  "reviewScope":{"priorFullReview":"may-2018-council-review.json, dated2026-09-14:166pages,133native-textpages,42pages OCR-attempted,renderedinspection and explicit unresolved content","currentReview":"Identity and prior complete review reconciled. Current-file text onPDFpp8,9,10,26,57,117,148,157 rechecked; renderedpp26,57,148,157 inspected. This repeat intake is not represented as another full166-page reread or as42new OCR pages.","strictFullyVerified":false,"limitations":"Underlying laboratories, executed decisions, financial actuals, conflicting source wording and previously unresolved fine print remain open."},
+  "linkIssue":{"catalog":"Four catalog placements used the valid immutable4535081d2398301cd01bb92501f2fc2e1a83e3ed revision.","timeline":"Four event citations used a relative path resolved to default07c302dfa7d4d686ef72973070bcd81667757ba3; its raw PDF returned404 and the actual download button did not start.","verifiedOriginal":"The catalog revision returned200 with7201375bytes and the exact supplied SHA256.","repair":"Pin this specific path in the shared repository-source resolver to the verified catalog revision. Download,Share and inline page citations converge on the same original; unrelated paths are unchanged.","regressionTest":"pdf-source-url.test.mjs covers relative, catalog and stale explicit URLs, page fragments9/57/148/157 and fragment-free download URLs."},
+  "catalogs":["leachate-receiving-finance","groundwater-hydrogeology","wwtp-operations-infrastructure","additional"],
+  "existingEventSources":["May packet proposes a $250,000 increase in leachate revenue","Ace and Raven brownfield plans preserve investigation leads and conflicting statements","Stimson demolition memo lists Northern A-1 as a bidder, not the selected contractor","Lofts packet proposes brownfield hearing for the former Oleson block"],
+  "publication":"Link repair prepared for publication. Local and public browser results and final deployment status are recorded separately after completion.",
+  "newOriginals":0,"newFindings":0,"requirementsClosed":0
+}

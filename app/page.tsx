@@ -362,7 +362,51 @@ const formatBytes = (bytes: number) => {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 };
 
+const june2025PacketSource = (page: number, result: string, eventStamp: string, basis: string): Source => ({
+  ...archivedSource("June 2 2025 City Council Packet [Item 2772].pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/030-03967a1eee7e.pdf", 91, result, {
+    eventStamp, basis,
+    created: "2025-05-29 14:59:16 EDT", modified: "2025-05-29 15:40:10 EDT",
+    note: "The June 2 agenda packet contains May 19 draft minutes, March 12 LDFA slides and 1990 bylaws. Document dates and reported events are separate from PDF production times. All 91 supplied pages were reread; underlying laboratory, accounting and final-adoption records are not established by this packet.",
+  }), page,
+});
+
 const events: Event[] = [
+  {
+    year: "1990", date: "1990-12-17", isoDate: "1990-12-17", time: noTime,
+    timeBasis: "Council approval date entered on the historical bylaws reproduced on PDF page 91",
+    phase: "LDFA documentary governance", kind: "regulatory", category: "13 · Groundwater governance & records",
+    title: "Historical LDFA bylaws identify reporting and record custodians",
+    finding: "The bylaws reproduced in the June 2025 packet assign management to the LDFA Board and require annual audit results to be sent to City Council (p89). The Director reports activities and financial condition to both the Board and Council (p90); Council approval precedes Board adoption of the budget. The secretary holds non-financial records and meeting proceedings, while the treasurer holds financial records and approves expenditure vouchers with the Director (p91). The copy bears a Council approval entry dated December 17, 1990.",
+    significance: "Provides a historical custodian and reporting chain for locating LDFA minutes, budgets, audits, vouchers and operational reports. This is not proof of current officer assignments, unchanged bylaws, compliance or a causal link between treatment operations and PFAS. Later amendments and the underlying approvals remain separate verification targets.",
+    sources: [june2025PacketSource(89, "PDF pp89–91: historical LDFA bylaws, reporting duties, custody and approval entries.", "1990-12-17 · time not stated", "Council approval entry on reproduced bylaws; not the 2025 packet date")],
+  },
+  {
+    year: "2025", date: "2025-03-12", isoDate: "2025-03-12", time: noTime,
+    timeBasis: "Date on the attached LDFA Board Meeting presentation cover, PDF page 79",
+    phase: "LDFA groundwater-treatment operations", kind: "operation", category: "13 · Groundwater treatment",
+    title: "LDFA slides report VOC removal and a discharge-detection exception",
+    finding: "The March 12 presentation reports influent groundwater VOC concentration changing from 19.2 to 14.2 µg/L and approximately 106.1 lb of VOCs removed in 2024. It states that discharge VOC concentrations were below detection since 1996 startup with one exception, without identifying that exception (p85). Its Current 2025 budget totals $284,800, including $180,000 utilities and $30,000 contracted laboratory costs (p82); the historical treatment-volume chart is labeled million gallons per year (p84).",
+    significance: "These are LDFA groundwater-treatment presentation statements, not main sewage-WWTP results or proof of PFAS removal. The exception needs its original sample, analyte, detection limit and date before any compliance conclusion. Annual flow records and laboratory results are needed to reproduce the reported removal calculation; budget figures are not paid expenditures.",
+    sources: [june2025PacketSource(85, "PDF pp79–88: March 12 LDFA presentation; p82 budget, p84 annual volumes, p85 VOC removal and one-exception statement, pp86–87 trend charts.", "2025-03-12 · time not stated", "Presentation date; 2024 removal is a retrospective reported quantity")],
+  },
+  {
+    year: "2025", date: "2025-05-19", isoDate: "2025-05-19", time: noTime,
+    timeBasis: "May 19 draft minutes within the June 2 packet; no time for the individual statement or votes",
+    phase: "Leachate-revenue and utility-finance review", kind: "operation", category: "10 · Leachate receiving & finance",
+    title: "Finance Director reports loss of landfill-leachate treatment revenue",
+    finding: "The May 19 draft minutes attribute to Finance Director Owen Roberts a 2019 loss of landfill-leachate treatment revenue from $494,000 to zero in one year, described as 12.5% of the budget (PDF p10). They record unanimous motions 2025-122 and 2025-123 for water and sewer rate ordinances (p11). Attached Municipal Analytics slides identify growing deficits and deferred infrastructure investment, forecasting 4.5% water and 8% sewer increases for FY2025–26 and at least five further years, subject to changing costs and funding (pp20–26).",
+    significance: "Connects the historical receiving/revenue record to the later utility-finance discussion. The $494,000 and 12.5% are attributed figures, not a reconciled ledger, final delivery date or measured leachate volume. Draft minute entries do not replace final adopted ordinances, and multi-year forecasts do not prove future rates or completed capital work. City Finance ledgers, invoices, final load tickets and the complete rate model remain the next records to obtain.",
+    sources: [june2025PacketSource(10, "PDF p10: Roberts' retrospective leachate-revenue statement; p11 draft recorded rate votes; pp19–33 rate and budget-process attachments.", "2025-05-19 · individual statement time not stated", "Date of attached draft meeting minutes, not June 2 agenda date")],
+  },
+  {
+    year: "2025", date: "2025-05-19", isoDate: "2025-05-19", time: noTime,
+    timeBasis: "May 19 budget amendment and draft minutes; individual vote time not stated",
+    phase: "WWTP and IPP budget amendment", kind: "operation", category: "10 · WWTP operations & infrastructure",
+    title: "Budget amendment raises IPP laboratory and treatment-chemical allocations",
+    finding: "FY2025 Budget Amendment #3 raises Industrial Surveillance contract laboratory costs from $8,000 to $25,000, citing IPP testing requirements, and general laboratory supplies from $15,000 to $20,000 (PDF p41). Nutrient-removal chemicals rise from $40,000 to $80,000, attributed to ferric chloride pricing; preliminary-treatment disposal rises from $9,000 to $12,000 for sludge hauling/disposal (p40). The Water and Sewer Fund adds $233,000 in expenditure appropriations and $400,000 in State revenue for lead-and-copper activities. The draft minutes record unanimous motion 2025-131 (p15).",
+    significance: "The table supplies financial leads to IPP laboratory contracts, chemical bids and sludge hauling/disposal invoices. It does not identify specific samples, chemical quantities, sludge loads or actual payments. The $400,000 grant line is labeled lead and copper, not PFAS. The amendment's allocations and the draft recorded vote remain distinct from final adopted records and executed spending.",
+    sources: [june2025PacketSource(40, "PDF pp40–41: Water and Sewer Fund amendments; p15 draft recorded amendment vote; pp37–42 complete six-page amendment.", "2025-05-19 · time not stated", "Printed amendment date and attached draft minutes")],
+  },
   {
     year: "2015", date: "2015-03-05", isoDate: "2015-03-05", time: noTime,
     timeBasis: "Opinion date printed on page 1; earlier agreement and litigation dates are reported history",
@@ -1894,15 +1938,15 @@ const events: Event[] = [
     kind: "sampling",
     category: "13 · Groundwater & wells",
     title: "Council minutes record private-well retesting and PFAS response",
-    finding: "Official minutes record the Utilities Director stating that 48 private-well tests had been completed, 32 results had returned, roughly 10 remained pending and seven were being retested after Cyclopure warned of possible sample contamination. The same update attributes to him statements about quarterly biosolids testing, a latest non-detect result, municipal-water monitoring and effluent testing.",
-    significance: "Preserves a dated public accounting of the testing workflow, delayed results, resampling and infrastructure planning. These are attributed statements in meeting minutes—not laboratory reports—and the source's test-count figures are retained as stated rather than silently reconciled.",
+    finding: "The draft minutes record Utilities Director Jeff Dietlin stating that 48 private-well tests were accounted for: 32 results returned, 10 pending, two study-area cases referred to the State and four self/EGLE tests outside the study area. He attributed seven retests to Cyclopure's warning of possible contamination during fume-hood installation; three had been resampled, two were scheduled and two awaited contact. The same update records his biosolids non-detect and municipal-water statements, while also acknowledging PFAS entering and leaving the sewage plant (June 2 packet, pp6–8).",
+    significance: "The 48 is a reported combined accounting, not 48 validated City laboratory results. The seven retests are described within the pending group, not seven additional wells. Both the standalone minutes and packet carry a DRAFT watermark. No Cyclopure warning letter, sample-level retest reconciliation or biosolids analytical package is attached here. The minutes' Class A EQ, non-detect and effluent-comparison statements do not independently establish absence of PFAS, treatment removal or compliance. GIS sharing and proposed connections require their own records.",
     sources: [archivedSource("May 19 2025 City Council Meeting Minutes.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/acfdd5bb24b35545948a9b0078262cfacaf85510/public/findings-docs/052-8659ed67102c.pdf", 38, "Pages 2–4 contain the PFAS testing, biosolids, municipal-water and mapping update; page 6 records the 2019 loss of landfill-leachate treatment revenue; pages 12–14 preserve further public and council statements.", {
       eventStamp: "2025-05-19 · approximately 6:00 PM EDT",
       basis: "Meeting date and approximate call-to-order time printed on page 1",
       created: "2025-05-29 12:53:51 EDT",
       modified: "2025-05-29 15:43:06 EDT",
-      note: "The PDF timestamps reflect later preparation of the minutes package, not the meeting time. The 38-page file is distinct from the 92-page May 19 council packet despite shared attachments.",
-    })],
+      note: "The PDF timestamps reflect later preparation, not the meeting time. This copy is marked DRAFT. Its first fourteen pages have matching normalized text to PDF pp5–18 in the June 2 packet; the 38-page standalone record remains distinct from either agenda packet.",
+    }), june2025PacketSource(6, "PDF pp5–18 are the May 19 DRAFT minutes; pp6–8 contain the reported testing counts, seven resamples, biosolids statements, water connections and mapping discussion.", "2025-05-19 · meeting called to order approximately 6:00 PM EDT", "Attached draft minutes; individual PFAS update time is not stated")],
   },
   {
     year: "2025",

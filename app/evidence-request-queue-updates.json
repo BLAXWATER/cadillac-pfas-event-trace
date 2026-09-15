@@ -9,6 +9,13 @@
       "summary": "Verified and held: actual leachate offloading, the landfill–WWTP relationship and the submitted June 28, 2019 City source-status and cessation/transition report. Review of HNQ-VZP8-TWNRX version 1 is complete: page 2 reports Wexford County Landfill’s source status as “PFOS eliminated” using “Other: Deep Well injection”; page 3 records Jeffrey Dietlin’s Submitted status. This is not a laboratory finding of zero PFOS throughout the WWTP. That written statement is not missing. Seven narrower requests remain for individual transactions, signed agreements and the exact final-load details or effective stop date.",
       "held": [
         {
+          "id": "june2025-packet-leachate-revenue-tieback",
+          "finding": "Fresh review of the June 2, 2025 packet found a May 19 DRAFT-minute statement by Finance Director Owen Roberts that landfill-leachate treatment revenue went from $494,000 to zero in one year in 2019 and had represented 12.5% of the budget (PDF p10).",
+          "limitation": "This is a retrospective attributed financial statement, not the ledger, invoice series, final load ticket or exact cessation date. Follow up with City Finance for account detail and reconciliation to the 2019 source-status report. No requirement is closed.",
+          "sources": [{"recordId":"030-03967a1eee7e","sha256":"03967a1eee7ea87996f58c6f91731843e66b256b7331717507467f1ccb537a7e","label":"June 2 packet · May 19 draft minutes · p10","pages":[10]}],
+          "requirementIds": ["wexford-leachate-invoices","final-leachate-delivery-record"]
+        },
+        {
           "id": "september9-ipp-flow-review",
           "finding": "The 2011 annual IPP report lists Wexford copper-related Technical Review Criteria noncompliance and return to compliance Pending (pp24–25). The 2012 application attachment checks No for septage while separately listing leachate. The 2017 application reports 0.04 MGD (40,000 gallons/day), distinct from the SIU sheet's 33,000 gallons/day intermittent entry.",
           "limitation": "The 2012 entry reads 33,600 under an MGD heading, an unresolved unit mismatch. These are historical compliance and reported average-flow records, not per-load tickets, invoices or evidence of the exact final delivery. No request is closed by this review; the receiving-history workbook remains withheld pending corrections.",

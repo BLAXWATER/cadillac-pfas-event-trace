@@ -1,4 +1,9 @@
 {
+  "030-03967a1eee7e": {
+    "sha256": "03967a1eee7ea87996f58c6f91731843e66b256b7331717507467f1ccb537a7e",
+    "aliases": ["June 2 2025 City Council Packet.pdf", "June 2 2025 City Council Packet (1).pdf"],
+    "comparison": "Exact SHA-256 match to the existing 91-page original. Packet date is June 2; attached draft minutes are May 19, LDFA slides March 12, and the historical bylaws bear a December 17, 1990 Council approval entry."
+  },
   "206-df0a9fe43a4c": {
     "sha256": "df0a9fe43a4cf32250507e1b9ba1603508d4538032bd9113d7d3da1f521b1145",
     "aliases": ["Wexford-County-Plan-v2004-03-18.pdf", "Wexford-County-Plan-v2004-03-18 (1).pdf"]

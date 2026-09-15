@@ -1,5 +1,18 @@
 [
   {
+    "id": "204-f9c021f6fa7a",
+    "name": "February 19 2018 City Council Packet.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c2c8d7188811b026c9c2bd7b91301c387ae2b131/public/findings-docs/204-f9c021f6fa7a.pdf",
+    "year": "2018",
+    "category": "Biosolids contracting; WWTP infrastructure; watershed context",
+    "type": "Council agenda packet — recommendations and attached lake study",
+    "format": "PDF",
+    "pages": 69,
+    "size": 5133900,
+    "sha256": "f9c021f6fa7a945c6bcba92c811138da298748c2e46724c13d5db63f2b5fd830",
+    "description": "PDF p55 reports 1.5–2.0 million gallons of biosolids applied annually and recommends Midwest Injection at $0.0440/gallon through December 2020; $66,000 is the estimate at 1.5 million gallons, not a payment. Pages 56–60 recommend WWTP equipment/repairs; p57 explicitly says the EQ basin has not failed. Attached January 2018 RLS report (pp22–52) documents 2017 Lake Cadillac sampling, including 0.4 mg/L bottom dissolved oxygen at three basins on August 16, and recommends storm-drain sampling. It contains unresolved date, chlorophyll, milfoil-area and macroinvertebrate-total discrepancies. Pages 5–9 are draft February 5 minutes, not approval of February 19 recommendations. All 69 pages revisited with text/images and OCR for scanned attachments; p68 survey fine print remains partly unreadable. Reviewed with limitations, not Strict Fully Verified. No PFAS result, completed contract, leachate receipt or established contamination pathway."
+  },
+  {
     "id": "cadsir-model-c902da6a24fb",
     "name": "2004 CadSIR04-5175.7z",
     "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c5a8fbe48856bdd33327b3cb2aff773d5ae82040/public/findings-docs/203-c902da6a24fb.7z",

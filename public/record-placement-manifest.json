@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1637,
+  "recordCount": 1638,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 202
+      "count": 203
     },
     {
       "archiveId": "reference",
@@ -16815,6 +16815,17 @@
       "url": "/findings-docs/202-82254e0c3a95.pdf",
       "sha256": "82254e0c3a951f81260926ec35bb39c2fe3d2c86d75c4ac42926a171ff46831d",
       "size": 81223
+    },
+    {
+      "id": "204-f9c021f6fa7a",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "February 19 2018 City Council Packet.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c2c8d7188811b026c9c2bd7b91301c387ae2b131/public/findings-docs/204-f9c021f6fa7a.pdf",
+      "sha256": "f9c021f6fa7a945c6bcba92c811138da298748c2e46724c13d5db63f2b5fd830",
+      "size": 5133900
     },
     {
       "id": "cadsir-model-c902da6a24fb",

@@ -162,7 +162,7 @@ const categoryPages = [
     eyebrow: "BIOSOLIDS & LAND APPLICATION",
     title: "Biosolids and land-application records",
     description: "Laboratory results, hauling sheets, certifications, land-application information and related records.",
-    documents: biosolidsDocuments,
+    documents: uniqueRecords(biosolidsDocuments, supplementalRecords.filter((record) => record.category?.toLowerCase().includes("biosolids contracting"))),
   },
   {
     slug: "laboratory",

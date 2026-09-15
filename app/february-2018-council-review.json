@@ -1,0 +1,41 @@
+{
+  "reviewDate": "2026-09-14",
+  "recordId": "204-f9c021f6fa7a",
+  "sourceSha256": "f9c021f6fa7a945c6bcba92c811138da298748c2e46724c13d5db63f2b5fd830",
+  "status": "Reviewed with explicit limitations — not Strict Fully Verified",
+  "identity": {"bytes":5133900,"pages":69,"originalPreserved":true,"existingHashMatch":false,"author":"Owen Roberts","creator":"Adobe Acrobat Pro 9.5.5","created":"2018-02-15 15:36:02 -05:00","modified":"2018-02-15 15:36:02 -05:00","meeting":"2018-02-19 18:00 scheduled; not evidence meeting occurred"},
+  "method": "Native text pages1–64 read sequentially; all69 rendered pages inspected, including contact sheets and focused full-size tables/maps. Scanned pages65–69 OCR attempted and images inspected. Page68 repeated at higher resolution and rotated; fine print remains partly unreadable. Extraction alone was not counted as review. Original is unmodified; no cryptographic signature validation claimed.",
+  "coverage": [
+    {"pages":"1–4","content":"Cover and February19 agenda; includes biosolids and WWTP actions; closed-session notice is not closed-session minutes."},
+    {"pages":"5–9","content":"DRAFT February5 minutes. Household hazardous-waste collection/proposals and County participation discussed. Water Asset Management Plan reportedly submitted by January1; supporting resolution tabled pending executive summary. Solid-waste/recycling extension and Mitchell-Bentley BRA discussion retained as reported discussion."},
+    {"pages":"10–20","content":"Proposed property-maintenance/fire-code ordinance and draft resolution read throughout. Blank vote/adoption/signature fields; not proof of enactment or individual violations."},
+    {"pages":"21–27","content":"RLS presentation and January2018 report introduction, sampling methods and three-basin map. Some intended inflow samples could not be isolated because of mixing; this is a sampling limitation, not a non-detect."},
+    {"pages":"28–35","content":"All water-quality tables and narrative read; units, depths and censored values retained. August16 bottom DO0.4mg/L in all3 basins; not a WWTP BOD test or a permit determination. Narrative/table chlorophyll and date discrepancies flagged. Bloom photograph is observational context."},
+    {"pages":"36–42","content":"Vegetation methods, species/frequency table, sampling-point map, biovolume map, treatment narrative/maps and acreage history. 2016 treatment acreage unknown. Milfoil narrative23.5acres differs from figure7 legend13.5acres. Curly-leaf presence25acres is not the2acres reported treated."},
+    {"pages":"43–47","content":"Ten-site sediment map, phosphorus/organic-matter table and macroinvertebrate tables. DB2 entries1+3+2=6, printed total10; not silently corrected."},
+    {"pages":"48–52","content":"2018 management and targeted invasive-plant recommendations, proposed storm-drain monitoring before major lake treatments, public workshop proposal and glossary. Drain results and a demonstrated source pathway are not supplied."},
+    {"pages":"53–54","content":"Board reappointment recommendations; not environmental determinations."},
+    {"pages":"55","content":"Biosolids injection bids. NutriGro0.0870, BioTech0.0467, MichiganAgriBusiness0.0510, MidwestInjection0.0440 dollars/gallon. City reports1.5–2.0milliongal/year;1.5million at selected bid=$66000 estimate. Recommendation throughDecember31,2020, not executed award or actual hauling record. ClassEQ A is City's description, not independent analytical or PFAS clearance."},
+    {"pages":"56–60","content":"Final-effluent-water pump, EQbasin, MuffinMonster, RAS spare and digester-circulator bid recommendations. Recommended prices9850,25710,9543,9980,10612 dollars respectively. EQtank expressly not failed; spare RAS purpose and end-of-life replacement distinguished from failures or spills."},
+    {"pages":"61–64","content":"Poverty-exemption policy recommendation and policy text, including internal future March5,2018 revision heading. No environmental finding inferred."},
+    {"pages":"65–67","content":"OCR and image review: OlesonBlock MPUD minimum20-acre waiver request for approximately3-acre development; PlanningCommission recommendation and signed applicant letter, not Council approval or completed development."},
+    {"pages":"68","content":"GDOInvestments boundary/topographic survey, Gourdie-Fraser, Section8/T21N/R9W; rendered and rotation/high-resolution OCR attempted. Dimensions, fine labels and title-block details partly unreadable. No surveyed acreage, boundary or pathway derived from unresolved marks."},
+    {"pages":"69","content":"Proposed MPUD waiver area aerial: E Cass, S Mitchell, E Chapin and S Shelby context. April7,2005 aerial date; explicit not-land/boundary-survey and not-for-construction limitation. Not a2018 survey."}
+  ],
+  "unresolved": [
+    {"pages":"26,28–30","issue":"Sampling described/table-dated June1,2017; p30 narrative says July1. Original data needed to reconcile."},
+    {"pages":"29–30,33","issue":"August16 chlorophyll-a tables6.0µg/L versus narrative9–11µg/L. Do not average or choose silently."},
+    {"pages":"40–42","issue":"Milfoil narrative/treatment history23.5acres versus map legend13.5acres. Survey presence, treatment extent and application log require reconciliation."},
+    {"pages":"47","issue":"DB2 macroinvertebrate rows total6, printed total10."},
+    {"pages":"49–50","issue":"January2018 report describes observations throughout2018, while photograph caption identifies2017. Preserve internal date conflict."},
+    {"pages":"32,34","issue":"TKN explanatory definition and bibliography year2995 are not adopted as authoritative scientific guidance; reported measurements remain attributed to source."},
+    {"pages":"68","issue":"Partial survey fine-print illegibility persists after OCR/rendering; no Strict Fully Verified designation."}
+  ],
+  "leads": [
+    "Obtain approved February19,2018 minutes and executed MidwestInjection agreement to establish award and term; match subsequent biosolids hauling tickets/land-application reports without treating estimated annual gallons as actual loads.",
+    "Obtain EQbasin repair contract, completion record and invoices before asserting work occurred. Compare later maintenance/capacity records; no tank-failure inference from this packet.",
+    "Retrieve underlying RLS2017 laboratory sheets, treatment application records and any2018 storm-drain results to reconcile report conflicts and evaluate the proposed sampling follow-up.",
+    "Obtain readable original OlesonBlock survey if exact boundaries become relevant. Map proximity alone is not a contamination connection."
+  ],
+  "boundaries": "No PFAS measurement, causal source attribution, groundwater pathway, Wexford leachate shipment, paid invoice, violation determination or completed contract is established by this packet. Unrelated municipal appendices remain preserved without unsupported environmental claims."
+}

@@ -1,6 +1,6 @@
 # Five-day document activity badges
 
-Every catalog card, timeline source, linked event block, search result and document preview uses the shared record activity badge. Red **NEW** means a source was added to the site; red **UPDATED** means the existing source, its catalog information or delivery mapping changed. These are site activity dates, never dates printed inside historical documents or filesystem copy timestamps. They are not verification or compliance statuses.
+Every catalog card, timeline source, linked event block, search result and document preview uses the shared record activity badge. Light-green **NEW** means a source was added to the site; light-green **UPDATED** means the existing source, its catalog information or delivery mapping changed. These are site activity dates, never dates printed inside historical documents or filesystem copy timestamps. They are not verification or compliance statuses.
 
 `scripts/update-record-activity.mjs` builds `app/record-activity.json` from actual per-record repository changes, original-file changes and individual delivery fixes. Vite runs it automatically before development/builds. Keep the generated ledger with the source release. Unchanged builds, unrelated styling, record ordering and identical repeat uploads do not renew badges. Cross-catalog copies share the same source identity. Missing history is not replaced by today's date; archive-only builds retain the committed ledger.
 

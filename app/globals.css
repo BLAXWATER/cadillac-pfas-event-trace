@@ -640,9 +640,9 @@ footer p { margin: 0; }
   width: fit-content;
   flex-shrink: 0;
   align-self: flex-start;
-  background: #b91c1c;
-  color: #ffffff;
-  border: 1px solid #ff9494;
+  background: #b9f6ca;
+  color: #103b22;
+  border: 1px solid #85dca3;
   border-radius: 3px;
   padding: 3px 8px;
   margin: 0 4px 4px 0;

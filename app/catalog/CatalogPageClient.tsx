@@ -13,6 +13,7 @@ import { withPdfStartPage } from "../pdf-source-url";
 import { sourceDownloadUrl, type SourceFormat } from "../source-media";
 import { catalogPageList, type CatalogPageConfig, type CatalogRecord } from "./catalog-data";
 import { SourceCatalogLinks } from "../source-catalog-links";
+import { RecordActivityBadge } from "../record-activity-badge";
 
 type Props = { config: CatalogPageConfig };
 
@@ -42,6 +43,7 @@ function RecordCard({ record }: { record: CatalogRecord }) {
   return (
     <article className="catalog-page-card" data-record-id={record.id}>
       <div className="catalog-page-card-topline">
+        <RecordActivityBadge url={record.url} />
         <span>{record.format ?? "SOURCE"}</span>
         {record.year && <span>{record.year}</span>}
         {Boolean(record.pages) && <span>{record.pages} {record.pages === 1 ? "page" : "pages"}</span>}

@@ -632,3 +632,24 @@ footer p { margin: 0; }
   .document-preview-page { padding-inline: 4px; }
   footer { gap: 9px; padding-bottom: max(24px, env(safe-area-inset-bottom)); }
 }
+/* Record recency is independent of year-band and compliance colors. */
+.record-activity-badge,
+.catalog-page-card-topline .record-activity-badge,
+.source-button-copy .record-activity-badge {
+  display: inline-flex;
+  width: fit-content;
+  flex-shrink: 0;
+  align-self: flex-start;
+  background: #b91c1c;
+  color: #ffffff;
+  border: 1px solid #ff9494;
+  border-radius: 3px;
+  padding: 3px 8px;
+  margin: 0 4px 4px 0;
+  font-size: 0.875rem;
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

@@ -63,6 +63,7 @@ import { formatSourceDisplayName } from "./source-display-name";
 import { DocumentShareButton } from "./document-share-button";
 import { documentPreviewCaption } from "./document-controls";
 import { DocumentDownloadButton } from "./document-download-button";
+import { RecordActivityBadge } from "./record-activity-badge";
 import { DocumentPreviewImage } from "./document-preview-image";
 import { documentSummary } from "./document-summary.mjs";
 import verifiedFilenameAliases from "./verified-filename-aliases.json";
@@ -3845,6 +3846,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
           : <span className="source-format-fallback">{formatIcon}<b>{source.format}</b></span>}
       </span>
       <span className="source-button-copy">
+        <RecordActivityBadge url={source.url} />
         <strong title={source.name}>{displayName}</strong>
         <small>{source.role}{source.page ? ` · page ${source.page}` : ""}</small>
       </span>
@@ -3911,9 +3913,12 @@ function DocumentPopoutButton({
   open: (source: Source) => void;
 }) {
   return (
+    <>
     <Button type="button" variant="outline" size="sm" onClick={() => open(catalogSource(document))}>
       {label}<FileSearch />
     </Button>
+    <RecordActivityBadge url={document.url} />
+    </>
   );
 }
 
@@ -4193,7 +4198,7 @@ export default function Home() {
                       </div>
                       <div className="trace-spine" aria-hidden="true"><div className="trace-node"><Icon /></div>{index < events.length - 1 && <div className="trace-line" />}</div>
                       <div className="event-card">
-                        <div className="event-topline"><Badge variant="outline" className="kind-badge">{item.label}</Badge><span className="category-code">{event.category}</span></div>
+                        <div className="event-topline"><Badge variant="outline" className="kind-badge">{item.label}</Badge><span className="category-code">{event.category}</span><RecordActivityBadge urls={event.sources.map((source) => source.url)} /></div>
                         <div className="timestamp-ribbon"><span>DATE</span><strong>{event.date}</strong><i>TIME</i><strong>{event.time}</strong></div>
                         <h3
                           title={event.title}
@@ -4822,6 +4827,7 @@ export default function Home() {
         <Dialog open={Boolean(selected)} onOpenChange={(open) => !open && setSelected(null)}>
           <DialogContent className="document-dialog" showCloseButton>
             {selected && <>
+              <RecordActivityBadge url={selected.url} />
               <DialogHeader className="document-dialog-header">
                 <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <div className="document-dialog-actions">

@@ -1,0 +1,198 @@
+{
+  "basis": "Site record/source change history; not historical document dates. Five rolling 24-hour days.",
+  "records": {
+    "/compliance-docs/004-044b89235b40.msg": {
+      "updatedAt": "2026-09-11T00:02:06-04:00",
+      "fingerprint": "39277dd815e17e5acdd0e3b6b98e15ac65992b393cfcbd10897fcf2dcf56a7f6"
+    },
+    "/compliance-docs/006-bd78c5e76142.msg": {
+      "updatedAt": "2026-09-11T00:02:06-04:00",
+      "fingerprint": "93e50bb9e65b66f579c0fb04f725f417d9e922f7b17f41abce574b0b73707bd5"
+    },
+    "/compliance-docs/008-5fff30df4912.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "b6387bca71c52b464ddc7cb62d97cc65435c122b7e0c89ea5d1cacdbf116af31"
+    },
+    "/compliance-docs/010-96bc79c5922b.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "799d779752a431fd7ffe68ca6262792bea33d77486fca270f10e43cd52b29aa7"
+    },
+    "/compliance-docs/011-afac7f09906b.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "db67012affff0f99b0f711ac60010218f1f43d8ade4201c27e909cd11265571c"
+    },
+    "/compliance-docs/066-637b27ce2526.pdf": {
+      "addedAt": "2026-09-10T16:25:24-04:00",
+      "fingerprint": "ed5423a49daf8aa32916cff8152400f151ddb749800f13a6f82f702648780a85"
+    },
+    "/correspondence-docs/corr-045-cfaee79bdc7e.pdf": {
+      "addedAt": "2026-09-10T16:25:24-04:00",
+      "fingerprint": "7ba4e3d20239797da7f0cf1483cd9cbd580d3ab5dea1a9a112c087d8e184964b"
+    },
+    "/findings-docs/008-5b67e1ed1d5c.pdf": {
+      "updatedAt": "2026-09-14T23:43:33-04:00",
+      "fingerprint": "f1d7c788e70d1ac6c7e9420301c7ae8e603798b5595dc51e4be33ccb676937b1"
+    },
+    "/findings-docs/017-b0276675116f.pdf": {
+      "updatedAt": "2026-09-15T00:39:17-04:00",
+      "fingerprint": "6aff3e5dda5ef4f40ccaa7f9ff15db1e87a6a203b7cbae6c95f8c51c770404f0"
+    },
+    "/findings-docs/018-be4038bf5cd5.pdf": {
+      "updatedAt": "2026-09-14T22:07:03-04:00",
+      "fingerprint": "48a58d3b0663853f387e5648bdca7b635cb4bf781df6ed86d18a923a4ff180a0"
+    },
+    "/findings-docs/030-03967a1eee7e.pdf": {
+      "updatedAt": "2026-09-15T00:10:01-04:00",
+      "fingerprint": "71389e303c04b9a39a718272f1bdedb48a58e5193189d6c7b4550757c4f1b664"
+    },
+    "/findings-docs/045-25d3c10b9ea8.pdf": {
+      "updatedAt": "2026-09-15T00:57:57-04:00",
+      "fingerprint": "ef8dd595635d577f65b38895348f9217eb2c643940dc63509f8e3aeae2da697f"
+    },
+    "/findings-docs/100-850f00b27330.pdf": {
+      "updatedAt": "2026-09-15T00:39:17-04:00",
+      "fingerprint": "59c56f1249c52151c682ee5137cb794d2e2301dda0840a52da2a2e34648c7df8"
+    },
+    "/findings-docs/122-e9b5255695c3.pdf": {
+      "updatedAt": "2026-09-14T14:46:32-04:00",
+      "fingerprint": "b1105036badea1b1a0e8a5f82f5f85f26896f11c065d965bb391b9e01d5259b2"
+    },
+    "/findings-docs/156-2944aeb34f99.pdf": {
+      "updatedAt": "2026-09-15T00:39:17-04:00",
+      "fingerprint": "9d9af04fd539095efd5643b287b7a45663ec3bf4ea28a5446159198c6e8ec61e"
+    },
+    "/findings-docs/165-676065b15331.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "c6229be938129689db383b2cfda64160d6eaf6592dc8466e03f773a8b51c3ab4"
+    },
+    "/findings-docs/168-cdc906173203.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "ecf6705c1d242381a16157aba776af56a76e25969b6f2f9710a472b61d09e62c"
+    },
+    "/findings-docs/172-f779ef08f411.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "862a05c91231a10ce3ccf23e375388d8a24b38c7ebac8cb5162b42b9db1fb2a4"
+    },
+    "/findings-docs/173-87cc40ccea58.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "810ca95bd9b4c3ffb0ab9ec869f72168cc809cf32d10126541baefdb54515afc"
+    },
+    "/findings-docs/174-f091763d0d37.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "6b784e9cdefdf9bd79e5db8698c4ffa2954cd557e606407eceb4eef250e29b46"
+    },
+    "/findings-docs/197-16057f68d1d5.pdf": {
+      "addedAt": "2026-09-14T14:06:24-04:00",
+      "fingerprint": "a72053ff0e9101fd8c16a1023294ec4490682364ac834d8723fa6cccf3746a21"
+    },
+    "/findings-docs/1988-cadillac-ri-234880.pdf": {
+      "addedAt": "2026-09-14T14:06:24-04:00",
+      "fingerprint": "7036b36aa6308c3b79cdfec06affaf531492f5d4c1513e28afc4d3e8a676b768"
+    },
+    "/findings-docs/199-c1524e21ac46.pdf": {
+      "addedAt": "2026-09-14T14:40:47-04:00",
+      "fingerprint": "4339cb97cf53537c43d0525a991c7b1deb5105adbf3b9365c7f34cc4f11b4ba5"
+    },
+    "/findings-docs/200-07119f8b3cdf.pdf": {
+      "addedAt": "2026-09-14T14:40:47-04:00",
+      "fingerprint": "8c899a4e52c1f6d0ab380b67915a61bec14801936de179b325ac912198cde39f"
+    },
+    "/findings-docs/201-962cc6781463.pdf": {
+      "addedAt": "2026-09-14T14:40:47-04:00",
+      "fingerprint": "301af2c2654ff6ba20235177fa73753a5af515ef1a14a5055eead79a3896b80a"
+    },
+    "/findings-docs/202-82254e0c3a95.pdf": {
+      "addedAt": "2026-09-14T14:40:47-04:00",
+      "fingerprint": "9306c4835da732326987d55b9c0da62a8f066666b74ab12f4e7295e589545b00"
+    },
+    "/findings-docs/203-c902da6a24fb.7z": {
+      "addedAt": "2026-09-14T16:30:03-04:00",
+      "updatedAt": "2026-09-14T16:32:56-04:00",
+      "fingerprint": "6d4498007d9d3ffb6ada134d073e3939dd01ac70a5120180b23d6c8bbd4878c6"
+    },
+    "/findings-docs/204-f9c021f6fa7a.pdf": {
+      "addedAt": "2026-09-14T21:49:59-04:00",
+      "fingerprint": "2684fcb450ff5fab6cd2539e58e5c32a6837b93186b30c995947375ece233c39"
+    },
+    "/findings-docs/205-99dc30a27739.pdf": {
+      "addedAt": "2026-09-14T22:46:10-04:00",
+      "fingerprint": "3e5c4414c10986cf3f42fed36d18edad12649b2a7ee973c7c7253f492df715f4"
+    },
+    "/findings-docs/206-df0a9fe43a4c.pdf": {
+      "addedAt": "2026-09-14T23:28:10-04:00",
+      "fingerprint": "6ca600eb5625db95a6447838fcc260128a24f7babfea1a3c37fd091f15be7dcf"
+    },
+    "/form-submission-docs/form-submission-073-c84ac8484363.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "c27f024b5ab56ca295dc21e822511134bb525ee3e6972428f5389040af695da8"
+    },
+    "/npdes-docs/038-8191c7e18aac.pdf": {
+      "updatedAt": "2026-09-14T14:46:32-04:00",
+      "fingerprint": "01143f144af67df60f3d8205299252b5d6153ffc0facbe5caf751dcabc7540f3"
+    },
+    "/pfas-docs/001-391d2cff96ef.msg": {
+      "updatedAt": "2026-09-11T00:02:06-04:00",
+      "fingerprint": "fb7561902db3c6140ee0c3e8811b495ac4fdb094282148d29302c52f5c7be26a"
+    },
+    "/pfas-docs/002-aca419b24a35.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "2dbfe029707fae43ec6993208bdce9ed88ba0fcecff0f5d2dd466210dcdcacb9"
+    },
+    "/pfas-docs/009-c720082b6790.msg": {
+      "updatedAt": "2026-09-11T00:02:06-04:00",
+      "fingerprint": "443878d99b67e1a26a980690a8c91c8330e0205fdc57d691892bb15d3f28b2c7"
+    },
+    "/pfas-docs/102-03b43f8e8597.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "7f533325cff6c355df7def748b3cd102b6004af767bb3cfe09869aa3443a6745"
+    },
+    "/process-site-docs/process-site-021-6c2e73d85da0.pdf": {
+      "updatedAt": "2026-09-15T00:39:17-04:00",
+      "fingerprint": "e416ff541ad4fa24dec73666bd4f872549d0f526e14e566c43e7733c8ac3cf2f"
+    },
+    "/wexford-docs/014-a6e913ab7006.pdf": {
+      "updatedAt": "2026-09-14T14:49:59-04:00",
+      "fingerprint": "c02f3452c0c30f474ea78ab0b54e4473074e717a9bdcee1c64ace40c28f0e3b4"
+    },
+    "/wexford-docs/017-4b475079a927.pdf": {
+      "updatedAt": "2026-09-14T14:06:24-04:00",
+      "fingerprint": "b2830857d3244bdc882969278afa675f061ff4a7c914942f95cba32cb9f7c772"
+    },
+    "/wexford-docs/020-9ad6d46eb20b.pdf": {
+      "updatedAt": "2026-09-14T14:06:24-04:00",
+      "fingerprint": "b74710e9ec0712ecf3a672c94f1f3a89f6fb5f2f599b9be8062e8f968c478743"
+    },
+    "/wexford-docs/024-069dda9efa5b.pdf": {
+      "updatedAt": "2026-09-15T00:39:17-04:00",
+      "fingerprint": "d806d4daab5e1ffaabc7d3d437208414b59012dc762e648900e345858a484776"
+    },
+    "/wexford-docs/027-b6b5e1c0bddb.pdf": {
+      "updatedAt": "2026-09-14T14:40:47-04:00",
+      "fingerprint": "1e7fec0f5c1339d5ebfc792e8ac71008fbe6fd2e122d6e834df844970c9d7414"
+    },
+    "/wexford-docs/066-0c2f6e582533.pdf": {
+      "updatedAt": "2026-09-10T21:30:32-04:00",
+      "fingerprint": "91c5f22731c230d0ebe25c6829647223f8410d1d978db6426f433d57d0533c37"
+    },
+    "/wexford-docs/102-9011dd4b0fe6.pdf": {
+      "updatedAt": "2026-09-10T16:40:58-04:00",
+      "fingerprint": "2cb392c6f934a0903d9ba0ef1cbd9d3359fe55f4969faaf9828729bc7b2bc823"
+    },
+    "/wexford-docs/103-5114323584bd.pdf": {
+      "updatedAt": "2026-09-10T16:40:58-04:00",
+      "fingerprint": "c552da51359781479fa824852150bf3bac1c41e79970d45fa56f8ba76f8c9d8e"
+    },
+    "/wexford-docs/104-6815e2f8b48e.pdf": {
+      "updatedAt": "2026-09-10T23:54:53-04:00",
+      "fingerprint": "199409018515d4340f0a51a99a40d2dbdbeae28de9da7f095e1bb7e3fd27a45d"
+    },
+    "/wexford-docs/110-fb263b3ea6c1.pdf": {
+      "updatedAt": "2026-09-14T23:28:10-04:00",
+      "fingerprint": "8b8b8fa49568654b1199c661bae76cb29a6eb1a7cbe0e1bcb6703e76cafa990a"
+    },
+    "/wexford-docs/116-1406440ae1fc.pdf": {
+      "addedAt": "2026-09-14T21:20:04-04:00",
+      "fingerprint": "e56db33b5c8090be3ce03853b03727114ef0ff24b2a63805a0ef8b25f72a78f2"
+    }
+  }
+}

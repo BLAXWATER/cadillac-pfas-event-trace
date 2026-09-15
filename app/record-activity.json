@@ -29,6 +29,10 @@
       "addedAt": "2026-09-10T16:25:24-04:00",
       "fingerprint": "7ba4e3d20239797da7f0cf1483cd9cbd580d3ab5dea1a9a112c087d8e184964b"
     },
+    "/dmr-docs/088-6f979a1fd6cd.pdf": {
+      "updatedAt": "2026-09-15T18:43:02.017Z",
+      "fingerprint": "10807fd40950989bfda9ef65a1a6330dc30c7bf852ce7c65aa89304fe58bf578"
+    },
     "/findings-docs/008-5b67e1ed1d5c.pdf": {
       "updatedAt": "2026-09-14T23:43:33-04:00",
       "fingerprint": "f1d7c788e70d1ac6c7e9420301c7ae8e603798b5595dc51e4be33ccb676937b1"
@@ -151,7 +155,7 @@
       "fingerprint": "e416ff541ad4fa24dec73666bd4f872549d0f526e14e566c43e7733c8ac3cf2f"
     },
     "/wexford-docs/001-7c991baaf1e9.pdf": {
-      "updatedAt": "2026-09-15T18:26:56.439Z",
+      "updatedAt": "2026-09-15T14:30:20-04:00",
       "fingerprint": "941bf4d41a43280b67f2375f84f925f02198147b0886ecc50abe35875b2eddaa"
     },
     "/wexford-docs/014-a6e913ab7006.pdf": {

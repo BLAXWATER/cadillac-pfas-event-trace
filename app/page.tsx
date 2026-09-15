@@ -364,6 +364,20 @@ const formatBytes = (bytes: number) => {
 
 const events: Event[] = [
   {
+    year: "2015", date: "2015-03-05", isoDate: "2015-03-05", time: noTime,
+    timeBasis: "Opinion date printed on page 1; earlier agreement and litigation dates are reported history",
+    phase: "Municipal sewer-service contract", kind: "regulatory", category: "10 · Wastewater agreements & capacity",
+    title: "Court opinion documents trucked sewage from the Boersma parcel to Cadillac WWTP",
+    finding: "The March 5, 2015 unpublished opinion describes a holding structure on the Boersma parcel and City-arranged trucking of its sewage to Cadillac's wastewater treatment facility, without a direct sewer connection (p3). The court affirmed judgment for Haring: the arrangement did not satisfy City sewer services under the May 5, 2003 conditional-transfer agreement, whose ten-year service condition triggered reversion of this parcel (pp2–6). Page 6 footnote 11 separately reports Cadillac's reply-brief statement that the WWTP accepts hauled waste originating within the City. That broader statement does not identify particular loads, suppliers or volumes.",
+    significance: "Adds a documented non-landfill hauled-sewage receiving pathway. This is a contract/jurisdiction decision, not a PFAS finding or environmental violation. The original agreement, briefs and receiving logs are not attached. Do not merge this 2003-agreement case with the separate 1977/1980 capacity disputes, or attribute the May 2018 annexation legal-fee budget to it without billing and docket records. Actual haul dates, hauler identity, quantities and later appellate history remain open.",
+    sources: [{...archivedSource("2015-318174-.pdf", "/findings-docs/205-99dc30a27739.pdf", 6,
+      "p1: four consolidated appeals; pp2–3: agreement, service arrangement and May 6, 2013 lawsuit; pp4–6: reasoning and affirmed judgment; p6 fn11: attributed hauled-waste statement.", {
+        eventStamp: "2015-03-05 · time not stated", basis: "Printed unpublished opinion date, not a truck-delivery date",
+        created: "2015-03-05 14:45:49 -05:00", modified: "2015-03-05 14:45:57 -05:00",
+        note: "All six pages reviewed. Dockets 318174, 318175, 318821 and 318823; Wexford Circuit 2013-024606-CH. File metadata times are not hearing, haul or decision timestamps. No new Wexford leachate or PFAS result."
+      }), page: 3}],
+  },
+  {
     year: "2018", date: "2018-03-21", isoDate: "2018-03-21", time: "7:30–9:00 PM",
     timeBasis: "Formal hearing opening and closing in the transcript",
     phase: "Public hearing and paid leachate treatment", kind: "regulatory", category: "12 · Landfill & leachate",

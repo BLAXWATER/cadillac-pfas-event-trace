@@ -1,0 +1,32 @@
+{
+  "reviewDate": "2026-09-14",
+  "batch": "2015-opinion-single-record",
+  "recordId": "205-99dc30a27739",
+  "suppliedFilename": "2015-318174-.pdf",
+  "suppliedPath": "C:/Users/casey/OneDrive/Desktop/2015-318174-.pdf",
+  "sourceSha256": "99dc30a27739edba68bb9f26083d5afa01fc83cc3c1b4711a0f79800106df049",
+  "identity": {"bytes":94642,"pages":6,"printedDate":"2015-03-05","dockets":["318174","318175","318821","318823"],"lowerCourt":"Wexford Circuit 2013-024606-CH","created":"2015-03-05 14:45:49 -05:00","modified":"2015-03-05 14:45:57 -05:00","newOriginal":true,"originalPreserved":true},
+  "status": {"received":true,"extractedPages":6,"pagesFullyRead":6,"renderedPagesInspected":6,"ocrRequired":false,"citedPassagesChecked":true,"underlyingOperationalEvidenceIndependentlyVerified":false,"subsequentAppellateHistoryVerified":false,"strictFullyVerified":false},
+  "method": "Read native text of all six pages from top to bottom, including eleven footnotes and typed judicial signatures. Inspected all six rendered pages and full-size pages 3 and 6 for the material receiving and decision passages. Native extraction was legible and consistent with the images; OCR was unnecessary. Compared hash and substantive case identity with catalog records; do not deduplicate cases sharing municipal party names.",
+  "coverage": [
+    {"page":1,"reviewed":true,"finding":"Unpublished March 5, 2015 per curiam opinion; both captions read. Haring plaintiff-appellee; Cadillac and Donald/Gloria Boersma appellants in consolidated appeals. Judges Saad, Owens and K. F. Kelly. Filename and metadata title abbreviate the four docket numbers."},
+    {"page":2,"reviewed":true,"finding":"Affirms summary disposition for Haring. Reports May 5, 2003 conditional-transfer agreement under MCL124.22 with general January31,2053 term and special Boersma-parcel ten-year water/sewer service reversion provision. Footnotes1–5 identify parties, consolidation orders October1/November20,2013, statutory quotation and ownership. The complete executed agreement and orders are not appended."},
+    {"page":3,"reviewed":true,"finding":"Quotes municipal-services clause1.2. No direct sewer pipeline to WWTP; holding structure, collection by truck and transport to Cadillac WWTP described. City labels Phase1/future pump improvements; differing structure descriptions retained in fn7. Reports May6,2013 lawsuit and parties' competing contract positions. Footnotes6–8 read. No load date, amount, truck ID, carrier name, landfill or laboratory result."},
+    {"page":4,"reviewed":true,"finding":"Trial court rejects City's motion and grants Township summary disposition; appellate positions and de-novo review standard. Contract interpretation and dictionary meanings; emphasis on both sewer and City modifiers. Distinguish cited legal authorities from evidence of site operations."},
+    {"page":5,"reviewed":true,"finding":"Court explains why containment plus trucking did not satisfy this contract and why intended upgrades mattered. Repeats municipal-services clause. Footnote9 discusses City's NREPA sewerage-system definition argument and rejects its relevance to this contract; fn10 whole-contract principle. This is not a determination of an NREPA permit violation."},
+    {"page":6,"reviewed":true,"finding":"Court concludes the parcel did not receive the normal City sewer service, affirms reversion and summary disposition. Typed signatures for all three judges. Footnote11 attributes acceptance of hauled waste originating within City to City's reply brief; distinguishes receiving waste from City-provided trucking service. Does not establish all hauled sources, dates, volumes, contamination or later operational changes."}
+  ],
+  "classification": {"primary":"WWTP operations & infrastructure","crossReferences":["Leachate, receiving & finance — explicitly non-landfill sewage","Additional records"],"excluded":["Violation notices / SNC: no environmental violation finding","PFAS analytical records: no tests","Groundwater pathway study: no hydrogeologic measurements"]},
+  "tieBacks": [
+    {"sourcePages":[2,3,6],"targetRecords":["137-ecd87ef13168","138-5c29ab75dc0e","139-b8fc380e3939"],"relationship":"Related municipal wastewater-contract catalog, not the same litigation or a proven appellate sequence. This record concerns a2003conditional-transfer agreement, not the1977/1980capacity agreements."},
+    {"sourcePages":[3,6],"target":"WWTP hauled-waste receiving records","relationship":"Holding structure → truck → WWTP is expressly described in the opinion. Obtain manifests, receiving logs, invoices and dispatch records to quantify it; never relabel this sewage as Wexford landfill leachate."},
+    {"sourcePages":[2,3,6],"targetRecords":["045-25d3c10b9ea8"],"relationship":"May2018packet p157 reports annexation-related legal-fee budget. This opinion alone does not identify that later spending's case; require docket-specific invoices and authorizations before linking dollars."}
+  ],
+  "leads": [
+    {"sourcePages":[2,3],"next":"Obtain executed May5,2003agreement with parcel/legal-description exhibits; underlying trial order and City brief; distinguish planned pump upgrades from completed direct connection."},
+    {"sourcePages":[3,6],"next":"Obtain Boersma parcel receiving logs, truck/hauler identification, volumes, invoices and service dates. No receiving quantity, cessation date or chemical burden can be calculated from this opinion."},
+    {"sourcePages":[1,6],"next":"Check subsequent appellate docket and mandate before asserting current legal or jurisdictional status."},
+    {"sourcePages":[1],"next":"Official Cadillac March16,2015agenda search result references the same circuit case and four appeal numbers; retrieve and fully review the record before promoting Council action.","candidateUrl":"https://www.cadillac-mi.net/ArchiveCenter/ViewFile/Item/743","status":"Discovery lead only, not fully reviewed or added to catalog"}
+  ],
+  "boundary": "Documentary passages and coverage checked, not independent verification of underlying operations or current law. No chemical result, environmental violation, landfill shipment or causal PFAS pathway is established. No blanket Strict Fully Verified label. Publication and live-control verification recorded separately in release output."
+}

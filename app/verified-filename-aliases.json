@@ -1,4 +1,9 @@
 {
+  "205-99dc30a27739": {
+    "sha256": "99dc30a27739edba68bb9f26083d5afa01fc83cc3c1b4711a0f79800106df049",
+    "aliases": ["2015-318174-.pdf", "Charter Township of Haring v City of Cadillac and the Boersmas — March 5, 2015 — 318174, 318175, 318821, 318823"],
+    "comparison": "New source hash; substantive identity is the 2003 conditional-transfer agreement and Boersma parcel, distinct from the existing 1999, 2010 and 2012 wastewater-capacity opinions. The supplied filename names only one of four consolidated appeal numbers."
+  },
   "027-b6b5e1c0bddb": {
     "sha256": "b6b5e1c0bddbe55a3a68391e06d05ece0e1b3c97ce3184c3cfd99a80adf6d756",
     "aliases": ["06-20-2006 - 421579.pdf", "421579_Wexford_Landfill_Fact_Sheet.pdf", "421579.pdf"],

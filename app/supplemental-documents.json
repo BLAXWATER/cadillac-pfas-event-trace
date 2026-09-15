@@ -1,5 +1,18 @@
 [
   {
+    "id": "205-99dc30a27739",
+    "name": "2015-318174-.pdf",
+    "url": "/findings-docs/205-99dc30a27739.pdf",
+    "year": "2015",
+    "category": "Wastewater agreements & capacity; WWTP infrastructure; waste-disposal receiving (non-landfill sewage)",
+    "type": "Unpublished appellate opinion — Boersma sewer-service contract",
+    "format": "PDF",
+    "pages": 6,
+    "size": 94642,
+    "sha256": "99dc30a27739edba68bb9f26083d5afa01fc83cc3c1b4711a0f79800106df049",
+    "description": "March 5, 2015 Michigan Court of Appeals opinion, Charter Township of Haring v City of Cadillac and the Boersmas, consolidated Nos. 318174, 318175, 318821 and 318823. Page 3 describes sewage collected in a holding structure on the Boersma parcel and trucked to Cadillac's WWTP, without a direct sewer connection. Pages 2–6 interpret the May 5, 2003 conditional-transfer agreement: the court affirmed judgment for Haring and reversion of this parcel because the arrangement did not satisfy contractual City sewer services. Page 6 footnote 11 attributes a broader hauled-waste receiving statement to Cadillac's reply brief; it does not identify other loads or sources. All six pages and footnotes read and checked against rendered pages; native text was legible, so OCR was unnecessary. This is a distinct contract case, not an environmental violation notice. No Wexford landfill, PFAS result, shipment volume, hauler identity or actual receiving dates are established. The complete agreement, briefs and receiving logs are not attached; later appellate history was not verified."
+  },
+  {
     "id": "204-f9c021f6fa7a",
     "name": "February 19 2018 City Council Packet.pdf",
     "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c2c8d7188811b026c9c2bd7b91301c387ae2b131/public/findings-docs/204-f9c021f6fa7a.pdf",

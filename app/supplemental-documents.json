@@ -342,13 +342,13 @@
     "name": "December 4 2017 City Council Packet [Item 994].pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/017-b0276675116f.pdf",
     "year": "2017",
-    "category": "Wexford landfill & leachate",
+    "category": "Wexford landfill & leachate / WWTP operations & infrastructure",
     "type": "City council packet",
     "format": "PDF",
     "pages": 38,
     "size": 6250039,
     "sha256": "b0276675116fd81b39148452cf196c745ddd067fec7967d094399c0ae1d5a462",
-    "description": "The packet preserves the subsequent council record concerning the opposition resolution and Cadillac's treatment of Wexford County Landfill leachate."
+    "description": "All38 pages reread; OCR on13 scanned pages. December4 agenda packet contains November20 DRAFT minutes: Webb ferric-chloride award (pp6–7), $40,000 WWTP locker-room authorization and work-clothing discussion (pp7–8), and paid leachate receiving/injection-well opposition (pp10–12). The draft minute text matches the separate November20 minutes; it is not independent corroboration. Remaining pages include appointments, unexecuted MERS forms, library minutes with a preserved redaction, rental slides, draft dispatch and Kenwood resolutions, an older signed Kenwood resolution and draft compensation minutes. Authorizations and expected completion dates are not proof of construction or deliveries."
   },
   {
     "id": "018-be4038bf5cd5",
@@ -1414,7 +1414,7 @@
     "pages": 5,
     "size": 344611,
     "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
-    "description": "Pages3–4 state the City treated Wexford DPW/American Waste landfill leachate for over 20 years, treated/discharged 14 million gallons in calendar2016 and claimed capacity of 20 million gallons annually. The eleven listed contaminants are not PFAS. Safe removal is the City’s claim, not laboratory verification. Page5 vote/certification fields are blank; adoption rests on separate minutes."
+    "description": "All5 pages reread. Pages3–4 state the City treated Wexford DPW/American Waste landfill leachate for over20 years, treated/discharged14 million gallons in2016 and claimed20 million gallons annual capacity. The eleven listed contaminants are not PFAS; removal is a City assertion, not laboratory verification. Pages4–5 direct the City Clerk to send opposition to EPA's Andrew Greenhagen. Vote and certification fields remain blank. Separate minutes record motion2017-232; this draft does not prove the final wording, transmission or EPA receipt."
   },
   {
     "id": "101-17f377c7d731",
@@ -2136,13 +2136,13 @@
     "name": "MPART Cadillac Industrial Park Area of Interest FAQ.pdf",
     "url": "/findings-docs/156-2944aeb34f99.pdf",
     "year": "2025",
-    "category": "PFAS response & public health",
+    "category": "PFAS response & public health / groundwater & well history / biosolids analytical context",
     "type": "Official EGLE/MPART FAQ",
     "format": "PDF",
     "pages": 12,
     "size": 245698,
     "sha256": "2944aeb34f9955423018234b5e5f6da00c721d482d56f29bdd9d443be57ae49a",
-    "description": "January 2025 MPART FAQ for the Cadillac Industrial Park Area of Interest. It summarizes private-well response and filter eligibility, Cadillac and Haring public-water results, and the IPP PFAS history. Page 9 identifies Wexford County Landfill as Cadillac's industrial PFOS source and says the City ceased accepting landfill discharge in summer 2019; the FAQ does not state the exact final load date or quantity."
+    "description": "All12 pages of the January2025 MPART FAQ reread. Pages5–6 summarize municipal well-field transitions and historical TCE shutdown; p9 identifies Wexford as an industrial PFOS source to Cadillac's WWTP, summer2019 receiving cessation and November29,2023 IPP initiative completion. Page10 reports2024 biosolids PFOS1.5ppb/PFOA2.3ppb and warns that2021–2023 non-detects used higher reporting limits, preventing a zero-PFAS or first-appearance inference. Page11 separately leaves private-well-area source attribution unresolved; p12 describes20 VOC non-detects, not PFAS non-detects. Historical agency summaries and guidance do not replace original lab, well, receiving or current policy records."
   },
   {
     "id": "157-5f0ef7342a71",

@@ -1,0 +1,131 @@
+{
+  "batch": "five-source-reread-20260915",
+  "reviewDate": "2026-09-15",
+  "method": "All64 supplied pages read in page order using native text and rendered-page inspection. Tesseract OCR supplemented13 scanned pages of the December2017 packet. OCR-only omissions were read from the images. Documents are evidence, not instructions. Filenames are provenance, not classification or event dates. No source originals changed or deleted.",
+  "status": {"received":5,"nativeTextPagesRead":51,"ocrPagesRead":13,"renderedPagesInspected":64,"pageOrderReviewComplete":true,"originalAlreadyCataloged":5,"newOriginals":0,"newCatalogIdentities":0,"newTimelineEvents":4,"expandedTimelineEvents":4,"strictFullyVerified":false,"requirementsClosed":0,"verifiedScope":"Exact file identity, cited statements and promoted numerical entries, draft/execution distinctions, substantive placement and uploaded aliases. Not independent verification of agency or municipal assertions, current policy, laboratory performance, construction completion or groundwater migration.","publication":"Prepared for release; deployment and actual live control outcomes recorded separately after publication."},
+  "records": [
+    {
+      "id":"017-b0276675116f",
+      "suppliedFilename":"December 4 2017 City Council Packet (1).pdf",
+      "sha256":"b0276675116fd81b39148452cf196c745ddd067fec7967d094399c0ae1d5a462",
+      "bytes":6250039,"pages":38,"identity":"Exact hash/size match to existing canonical original; reused.",
+      "clocks":{"packet":"December4,2017 scheduled6pm","attachedMinutes":"November20,2017 DRAFT; approximate6pm call to order, individual vote times unstated","created":"2017-11-30T13:20:17-05:00","modified":"2017-11-30T13:20:17-05:00","author":"Owen Roberts"},
+      "ocrPages":[20,21,22,23,24,25,26,27,28,29,30,31,36],
+      "pageCoverage":[
+        [1,"December4 packet cover, scheduled6pm at City Hall; not proof meeting occurred."],
+        [2,"Michigan pledge and1972 adoption statement; reproduced civic material."],
+        [3,"December4 agenda, November20 minutes consent item and communications."],
+        [4,"Agenda continues: MERS, rental discussion, dispatch termination, Kenwood funding and compensation; agenda is not adoption."],
+        [5,"DRAFT November20 minutes, attendance, approximate6pm opening, motions2017-221/222 and public opposition statements; anecdotes about well failures not independently verified."],
+        [6,"Sculpture and planning actions223/224, mayor-pro-tem selection; ferric-chloride bids and Webb recommendation at$0.245/drylb, about$40,000/year."],
+        [7,"Dietlin's phosphorus-removal explanation; motion225 Webb2018–2020 award; motion226 Elhorn0.64/lb liquid phosphate for municipal-water iron, about24,000lb/year. Locker area1963 designed3–4staff versus7, proposed$40,000 project and purchasing-authority discussion."],
+        [8,"Laundry service not always used because changing area inadequate; preference to keep work clothes onsite. Motion227 up to$40,000, City crews/subcontracts, expectedMarch2018 not completed work. Piranha paper-road hearing motion228 saysDecember18,2018 despite2017 context; discrepancy retained."],
+        [9,"Piranha expansion, wetland/fire-access and jobs discussion; sale hearing motion229 December18,2017; hazard-mitigation presentation."],
+        [10,"Hazard-mitigation motion230; Peccia reports paid WWTP leachate receiving and potential revenue loss if deep injection replaces it."],
+        [11,"Peccia disclaims revenue motive; Dietlin attributes compliant municipal treatment alternative and describes injection concerns. Northwest groundwater statement is attributed discussion, not a measured local plume map."],
+        [12,"Landfill cells to tank to hauling to Cadillac explanation; motion232 opposition to MI-165-1I-0002 recorded unanimous; November22 comment deadline and municipal-jurisdiction discussion."],
+        [13,"Civic comments, municipal-electric exploration, adjournment without time and typed mayor/clerk names. DRAFT marking preserved."],
+        [14,"Historic Districts reappointment recommendation; historical term/original appointment dates retained."],
+        [15,"Library Technology Director health-care savings plan recommendation; claimed no City cost, not proof enrollment."],
+        [16,"MERS adoption form, City8301 division12, proposedDecember4,2017; first form page."],
+        [17,"MERS employer-contribution options; no basic contribution checked."],
+        [18,"MERS employee elections include$50/pay mandatory salary and100% sick leave at retirement; checked options read against image."],
+        [19,"MERS execution and approval fields blank; not an executed agreement."],
+        [20,"Scanned November20 library-board minutes, attendance, budgets/fund-balance and reports."],
+        [21,"Library HCSP separate City division/approval and no-increased-library-cost statement, roof contractor contingent on references, adjournment6:52. Black redaction in8.6 preserved without attempted recovery."],
+        [22,"Short-Term Rental Housing presentation title and photograph; John Wallace."],
+        [23,"Presentation definition: occupancy under30days; historical discussion, not current law."],
+        [24,"Owner-direct and internet-platform rental methods; photo/graphic inspected."],
+        [25,"Rental-market/platform context and graphics inspected."],
+        [26,"Presentation's then-current TS2 zoning treatment and uncertainty elsewhere; not independently verified ordinance."],
+        [27,"Owner benefits: income, investment/preservation, tax and tourism arguments; OCR incomplete, all visible bullets read from image."],
+        [28,"Renter benefits: savings, temporary furnished accommodation, kitchen, space/privacy and local experience; OCR largely title-only, body read visually."],
+        [29,"Community tourism, local experience and hospitality/exposure arguments; visual text checked."],
+        [30,"Concerns: noise, management, parking, long-term housing, tenant knowledge, neighborhood character and hotel/motel impacts."],
+        [31,"Zoning questions: rooms/houses, management, locations, day limits, long-term stock, hotels and property rights; not an adopted regulation."],
+        [32,"Draft dispatch-termination resolution;1994 agreement/automatic five-year renewal history and recited2017 County letter, not attached original."],
+        [33,"Draft dispatch termination and notice provisions; proposed action, not proof transmission or effective termination."],
+        [34,"Dispatch vote/certification blanks; no executed resolution supplied here."],
+        [35,"Draft Kenwood funding:80,000match and completion beforeJune30,2020; vote/signature blank."],
+        [36,"Scanned older Kenwood resolution:160,000estimate,80,000grant+80,000match; approvalMarch21,2016 and signed clerk certificationMarch31,2016, not new2017 adoption."],
+        [37,"DRAFT compensation commission November28,2017,9:02opening; salary history/survey referenced but not attached."],
+        [38,"Compensation recommendation maintains2018/19 salaries;9:04adjournment. Draft minutes do not supply missing survey or historical salary table."]
+      ],
+      "crossReference":"Normalized native text of packetpp5–13 equals all nine pages of standalone164-519d4faa6c33. Standalone cover/closing inspected: no DRAFT watermark; typed closing names. This is matching minute text, not byte identity, independent corroboration or authentication of signatures.",
+      "classification":"Additional records, leachate/receiving/finance and WWTP operations/infrastructure. Incidental civic records retained within intact packet, not promoted as environmental findings or violations."
+    },
+    {
+      "id":"024-069dda9efa5b","suppliedFilename":"fact_sheet_mi-165-1i-0002 (1).pdf",
+      "sha256":"069dda9efa5b9c615dcbfaac75f59fe1fa9acdcf11b309401f005c45fc021caf","bytes":350012,"pages":2,
+      "identity":"Exact existing original reused.",
+      "clocks":{"printedIssue":"October2017, no exact day","created":"2017-10-19T13:57:48-05:00","modified":"2017-10-20T09:02:54-05:00","author":"US EPA Region5","note":"Explicit metadata offsets preserved without imposing local daylight-time assumptions."},
+      "ocrPages":[],
+      "pageCoverage":[
+        [1,"Tentative approval of proposed ClassI nonhazardous Wexford Water Technologies permit; location990NUS131 described asManton. November22,2017 midnight/postmark deadline, Andrew Greenhagen EPAUIC contact, Manton library draft and Chicago complete administrative record. Proposed location map, no hearing then planned, historical regulatory footnote."],
+        [2,"Hearing-request process, significant-interest condition and at-least30-day notice; responses with final decision. EPA preliminary no-impact assertion. Bayport lowermost drinking-water-source base890ft, Traverse interval3166–3799ft, immediate AntrimShale confinement. Two-mile AOR well table:0producing,0injection,0temporarily abandoned,1plugged/abandoned penetrating confinement. Proposed1038psig and33,000state plugging bond. Not as-built, operating or liability-insurance evidence."]
+      ],
+      "classification":"Existing verified Wexford record cross-listed in permits, groundwater/hydrogeology and leachate/receiving; no new catalog identity."
+    },
+    {
+      "id":"156-2944aeb34f99","suppliedFilename":"FAQ-Cadillac-Industrial-Park-AOI (1).pdf",
+      "sha256":"2944aeb34f9955423018234b5e5f6da00c721d482d56f29bdd9d443be57ae49a","bytes":245698,"pages":12,
+      "identity":"Exact existing original reused.",
+      "clocks":{"printedIssue":"January2025","created":"2025-01-14T14:46:33-05:00","modified":"2025-01-15T13:54:36-05:00","author":"EGLE","note":"Printed month, later PDF modification and retrospective sample/event dates are separate."},
+      "ocrPages":[],
+      "pageCoverage":[
+        [1,"January2025 overview, November6,2024 town hall before private-well results; by endDecember three sampling rounds with two shared heatmaps."],
+        [2,"Table of contents for all27questions and resources."],
+        [3,"Private-well sampling/filter eligibility, MDHHS/DHD10 and NSF20ppt statements. Dated health guidance not promoted as current advice."],
+        [4,"Then-priced290dollar kit and lab/toxicologist routes; blood testing not diagnostic. All five percentile columns for PFNA,PFOS,PFOA,PFHxS read with serumµg/L units; not drinking-water values."],
+        [5,"2018–20State survey and later2020criteria context; public entry-point versus household sampling. Cadillac2018–24ND agency account; older-field replacement planning before2011, age/potential industrial threats and TCE standby-well statement attributed to formerCityemployee."],
+        [6,"Full well table: oldfield well1 inactive2012;2–4inactiveNovember2022;5casing shattered;6inactive2013;7installed1970s replacing5,inactive1994TCE and emergency availability before2012. Crosby8–10installedJuly2012;44Road11–13November2022,active asFAQ. No exact well5failure date."],
+        [7,"All12Haring result rows read, unitsng/L; includesNovember14,2024 well1ND andwell2 PFOA4,PFBS2,PFHxS2,PFOS2. Running-annual-average compliance is agency assertion, not independent recalculation. November1main permit and CareerTechbid plans not completed work."],
+        [8,"Haring test-well approvalApril15,2024 andDecember2024ND report; pump test/equipping/operating approval stillfuture. Historicalcriteria/filter guidance; CadillacIPP1985,Haring2017."],
+        [9,"Q18WexfordindustrialPFOSsource,March4,2019 reduced-frequency letter,summer2019cessation,November29,2023initiative completion atpermit reissue. Q19January/May/Septembereffluent schedule andMiEnviro site links. Q20Rule57compliance assertions not rawtests or zeroPFAS proof."],
+        [10,"Q21agency2022lake/river water results belowcriteria. Q22fishreview thenpending. Q23Cadillac2024biosolids PFOS1.5ppb/PFOA2.3ppb;2021–23NDreportinglimits higher than2024detections. SeparateHaringPFOS5.7(2022)/3.0(2024),PFOA1.6/0.6; notCadillac. Historicalagency summaries, not laboratory reanalysis."],
+        [11,"2024interim biosolids policy table with20/100ppb thresholds and associatedrequirements fullyread asdatedcontext. Q25municipalpayment statement notinvoices. Q26arearesults notpointingtooneidentifiedsource;various hypotheses anddepth/sourceinvestigation remainopen."],
+        [12,"Q27reports20VOCprivatewell samplesnorthwest/southindustrialarea asND,notPFASND or allwellsproof; underlyingreports absent. Alllistedresource links read as references, not instructions."]
+      ],
+      "classification":"Additional/PFAS/groundwater/biosolids contextual cross-listing of one canonical record. Not a raw laboratory record or blanket compliance certification."
+    },
+    {
+      "id":"100-850f00b27330","suppliedFilename":"Item_2798_fileID_2118 (1).pdf",
+      "sha256":"850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406","bytes":344611,"pages":5,
+      "identity":"Exact existing original reused.",
+      "clocks":{"meeting":"November20,2017 scheduled6pm","created":"2017-11-16T08:22:48-05:00","modified":"2017-11-16T08:22:48-05:00","author":"Candace Strong"},
+      "ocrPages":[],
+      "pageCoverage":[
+        [1,"Opposition draft title and scheduledmeeting; resolutionnumber,attendance,mover,seconder blank."],
+        [2,"Potential injection,transport andoperationrisks andpreferredWWTPalternative statedasCityposition,notprovenfailure orpathway."],
+        [3,"Over20yearsWexfordDPW/AmericanWaste receiving,14milliongallons2016,20millionannualcapacity claims. ListedCd,Pb,Ni,Cr,As,benzene,ethylbenzene,ammonia,Ag,Cu,toluene; notPFAS."],
+        [4,"Removal/NPDESsafe-discharge claim without supportinglabreports; opposition andCityClerk transmissiondirection toEPAAndrewGreenhagen."],
+        [5,"Official-comment distribution/certificationlanguage; vote,execution andcertificationblanks. Boilerplateadoptedlanguage notproofactualadoption orEPAreceipt."]
+      ],
+      "classification":"Draft municipal opposition/receiving-context record, not permit authorization or violation finding. Existing related timeline expanded, not duplicated."
+    },
+    {
+      "id":"process-site-021-6c2e73d85da0","suppliedFilename":"January 19 2016 (2).pdf",
+      "sha256":"6c2e73d85da00db6690645c8d68b445992eccb97b1324d6afbc7a8459d9b0a3e","bytes":110300,"pages":7,
+      "identity":"Exact existing original reused.",
+      "clocks":{"meeting":"January19,2016 approximately6pm","created":"2016-02-02T16:28:01-05:00","modified":"2016-02-02T16:28:01-05:00","author":"Kyle Ecker"},
+      "ocrPages":[],
+      "pageCoverage":[
+        [1,"Attendance,approximate6pmopening,Ferrisclosed-sessionaddition,agenda010,consent011,ZBAappointment012."],
+        [2,"Appointments andboarddiscussions; reused013/014motionnumbers preserved ratherthan silentlynormalized."],
+        [3,"NASFclosureandKenwoodexclusion;RabbitRunproposal/resolutionaddressdiscrepancy220versus200Otsego retained inoriginal,not promoted environmental finding."],
+        [4,"Streetlights/cafes; motion2016-019:Biotechbiosolidsinjection,Kemiraferricchloride,Elhornliquidphosphate,Alexanderliquidchlorine extendedthroughDecember31,2017. Roberts2013bids/up-to-two-year-extensionbasis."],
+        [5,"Purchasingvotecontinuedunanimous;RotarypavilionfundingseparatefromWWTP;historicalPA269opposition discussion,notcurrentlegaladvice."],
+        [6,"LakeMitchellImprovementBoardhearing/assessmentandrecordavailability;attorneyaskedto developFOIApolicy,notcompletedpolicy. ClosedlitigationClamLake/Haring,Arvco,Ferriswithnosubstantiveconfidentialcontent. Coloredtext inspected."],
+        [7,"Closed/open/proceedmotions022–024unanimous;adjournmentwithouttime,typedmayor/clerkclosingnames,notauthenticatedsignatures."]
+      ],
+      "classification":"Process/site,WWTPoperationsandbiosolids-contractingcontext;authorizationnotdelivery or performance."
+    }
+  ],
+  "followUpChain":[
+    {"custodian":"City Clerk and EPA Region5 UIC","source":"100 pp4–5;024 p1;017 pp10–12;164 pp6–8","next":"Final signed resolution, City transmission/email and EPA comment receipt/response","boundary":"Matching draft and minutes do not establish actual submission, final text or later permitting outcome."},
+    {"custodian":"EPA/EGLE and well operator","source":"024 p2","next":"Final permit, as-built drilling/geophysical logs, cementing/completion records, MIT and actual operating/pressure reports","boundary":"Do not equate proposed deep-bedrock confinement with demonstrated performance or shallow clay continuity; referenced archive records require their own review."},
+    {"custodian":"City Utilities and Finance","source":"017 pp7–8 and process-site021 pp4–5","next":"Locker-project authorization, orders/invoices/completion and clothing procedures; original2013bids and2016–17contract/delivery records","boundary":"No completed construction, worker exposure, chemical deliveries or biosolids tonnage established."},
+    {"custodian":"City/Haring Utilities, laboratories and EGLE","source":"156 pp5–11","next":"Original biosolids reports with dates, reportinglimits,methods,qualifiers,dry/wetbasis; welllogs/status,originalTCEtests; finalreceivinglogs and IPPcompletionletter","boundary":"NDnotzero; no unsupported year-to-yeartrend, exactfinaldelivery, currentwellstatus or commonVOC/PFASpathway."}
+  ],
+  "preservedUncertainty":["DraftDecember18,2018hearingdatewithin2017context not silently corrected.","Redaction preserved; no concealed content inferred.","Referenced salary survey/table, dispatch letter and executed MERS/final resolutions not supplied inpacket.","No current medical/legal conclusions drawn from January2025FAQ guidance.","Fully reread and source-page checked is distinct from Strict Fully Verified, which would require outstanding underlying evidence."]
+}

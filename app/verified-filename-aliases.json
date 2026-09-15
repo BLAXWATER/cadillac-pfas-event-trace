@@ -62,7 +62,9 @@
   "017-b0276675116f": {
     "sha256": "b0276675116fd81b39148452cf196c745ddd067fec7967d094399c0ae1d5a462",
     "aliases": [
-      "ADID_994_December_4_2017_City_Council_Packet.pdf"
+      "ADID_994_December_4_2017_City_Council_Packet.pdf",
+      "December 4 2017 City Council Packet.pdf",
+      "December 4 2017 City Council Packet (1).pdf"
     ]
   },
   "016-6ed7900b4952": {
@@ -174,6 +176,7 @@
     "aliases": [
       "05_2016-01-19_Kemira_Purchase_Authorization_Extension.pdf",
       "January 19 2016.pdf",
+      "January 19 2016 (2).pdf",
       "842.pdf"
     ]
   },
@@ -194,7 +197,9 @@
   "024-069dda9efa5b": {
     "sha256": "069dda9efa5b9c615dcbfaac75f59fe1fa9acdcf11b309401f005c45fc021caf",
     "aliases": [
-      "06_EPA_2017-10_Wexford_Injection_Well_Fact_Sheet.pdf"
+      "06_EPA_2017-10_Wexford_Injection_Well_Fact_Sheet.pdf",
+      "fact_sheet_mi-165-1i-0002.pdf",
+      "fact_sheet_mi-165-1i-0002 (1).pdf"
     ]
   },
   "process-site-022-fe153aeaa6d9": {
@@ -426,8 +431,14 @@
   "100-850f00b27330": {
     "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
     "aliases": [
-      "Nov_20_2017_Wexford_Leachate_Resolution.pdf"
+      "Nov_20_2017_Wexford_Leachate_Resolution.pdf",
+      "Item_2798_fileID_2118.pdf",
+      "Item_2798_fileID_2118 (1).pdf"
     ]
+  },
+  "156-2944aeb34f99": {
+    "sha256": "2944aeb34f9955423018234b5e5f6da00c721d482d56f29bdd9d443be57ae49a",
+    "aliases": ["FAQ-Cadillac-Industrial-Park-AOI.pdf", "FAQ-Cadillac-Industrial-Park-AOI (1).pdf"]
   },
   "lab-091-c2427c56e094": {
     "sha256": "c2427c56e09404188eb126a71c8e1bdca7a183dc7f43ea669a5a9970e06ce3e5",

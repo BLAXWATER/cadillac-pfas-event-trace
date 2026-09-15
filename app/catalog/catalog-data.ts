@@ -50,12 +50,12 @@ const uniqueRecords = (...groups: readonly CatalogRecord[][]): readonly CatalogR
 const groundwaterRecords = uniqueRecords(supplementalRecords.filter((record) => {
   const category = record.category?.toLowerCase() ?? "";
   return category.includes("groundwater") || category.includes("watershed");
-}), (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "027-b6b5e1c0bddb"));
+}), (wexfordDocuments as readonly CatalogRecord[]).filter((record) => ["027-b6b5e1c0bddb", "024-069dda9efa5b"].includes(record.id)));
 
 const leachateRecords = uniqueRecords(supplementalRecords.filter((record) => {
   const category = record.category?.toLowerCase() ?? "";
   return category.includes("leachate") || category.includes("landfill receiving") || category.includes("waste-disposal");
-}), (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "110-fb263b3ea6c1"));
+}), (wexfordDocuments as readonly CatalogRecord[]).filter((record) => ["110-fb263b3ea6c1", "024-069dda9efa5b"].includes(record.id)));
 
 const operationsRecords = supplementalRecords.filter((record) => {
   const category = record.category?.toLowerCase() ?? "";
@@ -130,7 +130,7 @@ const categoryPages = [
     eyebrow: "PFAS RECORDS",
     title: "PFAS monitoring and source records",
     description: "The PFAS monitoring archive, including screening, source-status, receptor and corrective-action records.",
-    documents: pfasDocuments,
+    documents: uniqueRecords(pfasDocuments, supplementalRecords.filter((record) => record.id === "156-2944aeb34f99")),
   },
   {
     slug: "dmr",
@@ -146,7 +146,7 @@ const categoryPages = [
     eyebrow: "PERMITS & RECORDS",
     title: "Permits and operating licenses",
     description: "Permit applications, renewals, modifications, notices and related regulatory records.",
-    documents: uniqueRecords(npdesDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "116-1406440ae1fc")),
+    documents: uniqueRecords(npdesDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => ["116-1406440ae1fc", "024-069dda9efa5b"].includes(record.id))),
   },
   {
     slug: "ipp",
@@ -162,7 +162,7 @@ const categoryPages = [
     eyebrow: "BIOSOLIDS & LAND APPLICATION",
     title: "Biosolids and land-application records",
     description: "Laboratory results, hauling sheets, certifications, land-application information and related records.",
-    documents: uniqueRecords(biosolidsDocuments, supplementalRecords.filter((record) => record.category?.toLowerCase().includes("biosolids contracting"))),
+    documents: uniqueRecords(biosolidsDocuments, supplementalRecords.filter((record) => record.category?.toLowerCase().includes("biosolids contracting") || record.id === "156-2944aeb34f99"), processSiteRecords.filter((record) => record.id === "process-site-021-6c2e73d85da0")),
   },
   {
     slug: "laboratory",

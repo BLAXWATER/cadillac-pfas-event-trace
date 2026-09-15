@@ -370,7 +370,65 @@ const june2025PacketSource = (page: number, result: string, eventStamp: string, 
   }), page,
 });
 
+const december2017PacketSource = (page: number, result: string): Source => ({
+  ...archivedSource("December 4 2017 City Council Packet [Item 994].pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/6270442d983214a178cc50c72412dadbac53d593/public/findings-docs/017-b0276675116f.pdf", 38, result, {
+    eventStamp: "2017-11-20 · individual action time not stated",
+    basis: "November 20 DRAFT minutes reproduced on PDF pp5–13 in the December 4 agenda packet",
+    created: "2017-11-30 13:20:17 EST", modified: "2017-11-30 13:20:17 EST",
+    note: "All 38 pages reread, with OCR on 13 scanned pages. Draft minutes, proposed resolutions and older attachments retain their own dates and execution status. The nine minute pages match normalized text of standalone record 164; the PDFs and draft markings differ.",
+  }), page,
+});
+
+const january2025FaqSource = (page: number, result: string): Source => ({
+  ...archivedSource("MPART Cadillac Industrial Park Area of Interest FAQ.pdf", "/findings-docs/156-2944aeb34f99.pdf", 12, result, {
+    eventStamp: "2025-01 · exact publication day/time not stated",
+    basis: "January 2025 printed on the FAQ; retrospective dates are attributed historical statements",
+    created: "2025-01-14 14:46:33 EST", modified: "2025-01-15 13:54:36 EST",
+    note: "All 12 pages reread. PDF modification day is not assumed to be the publication day. Agency summaries do not replace underlying well logs, laboratory reports or receiving records; historical health guidance is not presented as current advice.",
+  }), page,
+});
+
 const events: Event[] = [
+  {
+    year: "2017", date: "2017-10", isoDate: "2017-10-01", time: noTime,
+    timeBasis: "October 2017 issue month; exact publication day not printed",
+    phase: "Proposed injection-well design", kind: "regulatory", category: "12 / 13 · Injection permitting & hydrogeology",
+    title: "EPA fact sheet separates the proposed deep injection zone from drinking-water formations",
+    finding: "EPA's October 2017 fact sheet describes tentative approval of Class I nonhazardous permit MI-165-1I-0002. It places the proposed Traverse injection interval at 3,166–3,799 feet below ground, the base of the lowermost underground drinking-water source in the Bayport Limestone at about 890 feet, and the immediate confining layer in the Antrim Shale. Its two-mile area-of-review table lists one plugged and abandoned well and zero producing, injection or temporarily abandoned wells penetrating the confining layer. Proposed maximum pressure is 1,038 psig; a $33,000 state bond addresses plugging and abandonment (p2).",
+    significance: "These are proposed design and preliminary agency-review statements, not as-built drilling results, an operating authorization or proof of actual confinement. Deep bedrock shale must not be equated with the discontinuous shallow clay described in historical Cadillac studies. Follow the application and final permit into drilling logs, mechanical-integrity tests and operating reports before evaluating actual performance. The bond is not evidence of liability-insurance coverage. Page 1 directs comments to EPA's Andrew Greenhagen by November 22, 2017; the City Clerk's transmittal and EPA receipt remain the link needed to establish submission of Cadillac's opposition.",
+    sources: [{...archivedSource("October 2017 EPA Wexford Water Technologies Proposed Injection-Well Fact Sheet.pdf", "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/024-069dda9efa5b.pdf", 2, "P1: tentative approval, November 22 comment deadline and EPA contact. P2: proposed formations, depths, two-mile review table, pressure and plugging bond; no actual injection or shipment totals.", {
+      eventStamp: "2017-10 · exact day/time not stated", basis: "Printed issue month",
+      created: "2017-10-19 13:57:48 UTC−05:00", modified: "2017-10-20 09:02:54 UTC−05:00",
+      note: "The PDF's explicit time-zone offsets are preserved. The comment deadline and metadata dates are not substituted for the issue date or a later permit decision.",
+    }), page: 2}],
+  },
+  {
+    year: "2017", date: "2017-11-20", isoDate: "2017-11-20", time: noTime,
+    timeBasis: "Date of attached draft minutes; individual discussion and vote times not stated",
+    phase: "WWTP worker facilities", kind: "operation", category: "10 · WWTP operations & infrastructure",
+    title: "Council record links WWTP locker-room funding to work-clothes handling",
+    finding: "The November 20 draft minutes in the December 4 packet describe a 1963 locker area designed for three or four workers, compared with seven staff at the time. Dietlin reported that a laundry service was available but not always used because the plant lacked an adequate changing area; he preferred work clothes remain on site. Motion 2017-227 records unanimous authorization of up to $40,000 for a locker-room project using City crews and subcontracted work, with completion expected by March 2018 (PDF pp7–8).",
+    significance: "Documents a reported operational condition and proposed response, not measured worker exposure, a violation finding or proof the project was completed. The draft minute text matches the corresponding standalone November 20 minutes, so it is not independent corroboration. The next records are the final authorization, purchase orders, subcontract invoices, completion record and work-clothing procedures held by the City and Utilities Department.",
+    sources: [december2017PacketSource(7, "PDF pp7–8: locker facilities, laundry-service explanation, $40,000 authorization and expected completion. Packet contains DRAFT minutes, not construction-completion documentation.")],
+  },
+  {
+    year: "2025", date: "2025-01", isoDate: "2025-01-01", time: noTime,
+    timeBasis: "Printed January 2025 FAQ issue month; exact day not stated",
+    phase: "Biosolids analytical comparability", kind: "sampling", category: "04 / 05 / 06 · PFAS, biosolids & laboratory context",
+    title: "FAQ warns that earlier biosolids non-detects used higher reporting limits",
+    finding: "Question 23 reports Cadillac's 2024 biosolids results as PFOS 1.5 ppb and PFOA 2.3 ppb. It states that Cadillac's 2021–2023 results were non-detects but used reporting limits higher than the concentrations detected in 2024 (PDF p10). The same answer lists separate Haring Township values; those are not Cadillac results.",
+    significance: "Earlier non-detects do not establish zero PFAS, first appearance in 2024 or an increase between years. The original laboratory reports, sample dates, reporting limits, methods, qualifiers and solids-basis information are needed for a comparable series. This is an agency summary, not a fresh analysis of every underlying laboratory report, a PFAS mass balance or proof of a land-application exposure pathway. The FAQ's 2024 policy table is historical context, not a statement of current requirements.",
+    sources: [january2025FaqSource(10, "PDF p10, Question 23: Cadillac PFOS 1.5 ppb and PFOA 2.3 ppb in 2024; higher earlier reporting limits explicitly qualify the 2021–2023 non-detects. P11 contains the historical 2024 policy table.")],
+  },
+  {
+    year: "2025", date: "2025-01", isoDate: "2025-01-01", time: noTime,
+    timeBasis: "Printed January 2025 FAQ; installation and inactive dates are retrospective reports",
+    phase: "Municipal well-field history", kind: "regulatory", category: "13 · Groundwater & well records",
+    title: "FAQ records Cadillac well-field transitions and a historical TCE shutdown",
+    finding: "The FAQ reports that the old Sixth Avenue/Eighth Street field had well 1 inactive in 2012, wells 2–4 inactive in November 2022 and well 6 inactive in 2013. Well 5's casing shattered and it went out of service; well 7, installed in the 1970s to replace it, became inactive in 1994 because of TCE. It lists Crosby wells 8–10 installed in July 2012 and 44 Road wells 11–13 installed in November 2022 as active when the FAQ was issued (PDF pp5–6).",
+    significance: "This is an attributed historical chronology, not independent verification of installation dates, present operating status or original TCE results. It must not be merged with the separate industrial-park PFAS/private-well investigation as a demonstrated common pathway. City well logs, abandonment records, water-supply permits and original sampling reports are the next custody links. The FAQ also reports 20 VOC private-well samples as non-detects (p12); that statement is not a PFAS non-detect finding or evidence about every private well.",
+    sources: [january2025FaqSource(5, "PDF pp5–6: old-field history, well-by-well table and newer fields. P12 Question 27 separately describes 20 VOC samples; it does not establish absence of PFAS.")],
+  },
   {
     year: "1990", date: "1990-12-17", isoDate: "1990-12-17", time: noTime,
     timeBasis: "Council approval date entered on the historical bylaws reproduced on PDF page 91",
@@ -813,13 +871,14 @@ const events: Event[] = [
     kind: "operation",
     category: "10 · Process & site documents",
     title: "Cadillac extends Kemira ferric-chloride purchasing through December 2017",
-    finding: <>Council approved motion 2016-019 extending Water and Sewer purchasing authorizations through <strong>December 31, 2017</strong>, including ferric chloride from <strong>Kemira Water Solutions</strong>. The same action also covers biosolids-injection services and other water-system chemicals; those are separate activities, not all inbound WWTP deliveries.</>,
-    significance: "Establishes the named chemical supplier and authorized purchasing period. The minutes are purchase authorization, not an individual shipment record, delivery receipt or invoice.",
+    finding: <>Council approved motion 2016-019 extending Water and Sewer purchasing authorizations through <strong>December 31, 2017</strong>: Biotech Agronomics for biosolids injection, <strong>Kemira Water Solutions</strong> for ferric chloride, Elhorn Engineering for liquid phosphate and Alexander Chemical for liquid chlorine. Roberts explained that the original 2013 bids allowed extensions of up to two years. The vote continues onto PDF page 5 and is recorded as unanimous.</>,
+    significance: "Establishes named vendors, activities and the extension basis. Biosolids application and municipal-water chemicals are separate activities, not all inbound WWTP deliveries. The minutes provide no shipment date, quantity, invoice or proof of contract performance. The City purchasing files and original 2013 bids are the next records in this authorization-to-delivery chain.",
     sources: [{
       ...archivedSource("January 19, 2016 Cadillac City Council Minutes.pdf", "/process-site-docs/process-site-021-6c2e73d85da0.pdf", 7, "Pages 4–5 record the purchasing extension and motion 2016-019, including Kemira ferric chloride through December 31, 2017.", {
         eventStamp: "2016-01-19 approximately 6:00 PM · meeting opened",
         basis: "Dated council minutes and recorded motion",
-        note: "The authorization end date is not an actual shipment date. Water-system chemicals and biosolids services are not treated as evidence of inbound leachate deliveries.",
+        created: "2016-02-02 16:28:01 EST", modified: "2016-02-02 16:28:01 EST",
+        note: "All seven pages freshly reread. The authorization end date and February PDF production date are not shipment dates. Water-system chemicals and biosolids services are not evidence of inbound leachate deliveries.",
       }),
       page: 4,
     }],
@@ -922,7 +981,7 @@ const events: Event[] = [
         note: "The award belongs under 2017; the January 2018 contract start is not proof of a delivery on that date.",
       }),
       page: 2,
-    }],
+    }, december2017PacketSource(6, "PDF pp6–7 reproduce the November 20 DRAFT minutes for Webb's award, its price and term, followed by a separate Elhorn municipal-water liquid-phosphate award. This is the same meeting record, not a second purchase.")],
   },
   {
     year: "2019",
@@ -2454,7 +2513,7 @@ const events: Event[] = [
     category: "12 · Landfill & leachate",
     title: "Cadillac records paid landfill leachate treatment and rejects the injection alternative",
     finding: <>The official minutes record City Manager Marcus Peccia stating that the landfill company deposited leachate at Cadillac&apos;s WWTP, the City was paid to treat it, a deep injection well would take that revenue source away, and Cadillac was responsible for treating the waste and discharging the treated water. Utilities Director Jeff Dietlin explained that leachate—rainwater and liquid from garbage—was collected in landfill cells, pumped into a tank and hauled to Cadillac&apos;s WWTP. Council then unanimously approved motion 2017-232 opposing draft permit MI-165-1I-0002. The associated draft resolution states that Cadillac treated Wexford County Landfill leachate for <strong>over 20 years</strong>, treated and discharged <strong>14 million gallons in 2016</strong>, and had capacity for <strong>up to 20 million gallons annually</strong>. It identifies cadmium, lead, nickel, chromium, arsenic, benzene, ethylbenzene, ammonia, silver, copper and toluene and states that contaminants were removed before discharge under NPDES limits.</>,
-    significance: "This is direct municipal evidence of the landfill-to-WWTP receiving and paid-treatment relationship, the treatment-and-discharge pathway, and the Council's recorded action. The volume, duration, capacity and removal statements are City assertions in an unsigned draft resolution, not the underlying delivery logs, DMR totals, capacity calculations, analytical results or contaminant-removal measurements. The record does not provide the exact final delivery date, PFAS concentrations or a proven groundwater migration pathway.",
+    significance: "This is municipal evidence of the paid landfill-to-WWTP receiving relationship and the Council's recorded action. Volume, duration, capacity and removal statements remain City assertions in an unsigned draft, not delivery logs, DMR totals, capacity calculations or analytical measurements. The draft directs the City Clerk to send opposition to EPA's Andrew Greenhagen (pp4–5); the October EPA fact sheet sets a November 22 comment deadline. Clerk transmittal, EPA receipt and the final signed resolution remain needed to verify that handoff. No exact final delivery date, PFAS concentrations or proven groundwater migration pathway is supplied.",
     sources: [{
       name: "November 20, 2017 Cadillac City Council Meeting Minutes.pdf",
       url: "/findings-docs/164-519d4faa6c33.pdf",
@@ -3614,8 +3673,8 @@ const events: Event[] = [
     kind: "regulatory",
     category: "04 / 12 · PFAS monitoring, landfill & leachate",
     title: "MPART confirms the landfill source and summer 2019 cessation",
-    finding: "MPART's January 2025 FAQ identifies Wexford County Landfill as Cadillac's industrial PFOS source and states that the City ceased accepting landfill discharge in summer 2019. It also summarizes public-water and private-well response information for the Cadillac Industrial Park investigation.",
-    significance: "Adds a later official agency account of source identification and cessation while preserving its stated season-level precision; the FAQ does not establish the exact final load date or quantity.",
+    finding: "MPART's January 2025 FAQ identifies Wexford County Landfill as Cadillac's industrial PFOS source and states that the City ceased accepting landfill discharge in summer 2019. Question 18 also reports completion of the City's IPP PFAS initiative on November 29, 2023, when its permit was reissued (p9). Question 26 separately says the industrial-park-area results do not point to a single identified source and that the investigation remains ongoing (p11).",
+    significance: "The identified industrial contribution to the WWTP must not be treated as proof of the source of private-well PFAS. This later agency account retains season-level cessation precision and supplies neither the exact final load nor its quantity. Reported IPP initiative completion is not proof of zero PFAS or closure of every compliance question. Underlying permit correspondence, final receiving logs, paired samples and site-specific groundwater evidence remain separate verification targets.",
     sources: [{
       name: "MPART Cadillac Industrial Park Area of Interest FAQ.pdf",
       url: "/findings-docs/156-2944aeb34f99.pdf",

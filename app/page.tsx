@@ -4827,9 +4827,8 @@ export default function Home() {
         <Dialog open={Boolean(selected)} onOpenChange={(open) => !open && setSelected(null)}>
           <DialogContent className="document-dialog" showCloseButton>
             {selected && <>
-              <RecordActivityBadge url={selected.url} />
               <DialogHeader className="document-dialog-header">
-                <div><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
+                <div><RecordActivityBadge url={selected.url} /><DialogTitle title={selected.name}>{formatSourceDisplayName(selected.displayName ?? selected.name, selected.format, Boolean(selected.url))}</DialogTitle><DialogDescription className="document-meta">{selected.role} · {selected.format}{selected.pages ? ` · ${selected.pages} ${selected.pages === 1 ? "page" : "pages"}` : ""} · Event: {selected.clock.eventStamp} · File created: {selected.clock.created ?? "unavailable"}</DialogDescription></div>
                 <div className="document-dialog-actions">
                   <span className="document-preview-status">{selectedPreviewUrl ? (selected.format === "PDF" ? documentPreviewCaption(selected) : "Source content preview") : "File details"}</span>
                   {selectedDownloadUrl && <DocumentDownloadButton key={`${selectedDownloadUrl}-${selected.name}`} name={selected.name} downloadUrl={selectedDownloadUrl} />}

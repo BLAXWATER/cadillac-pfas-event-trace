@@ -52,10 +52,10 @@ const groundwaterRecords = uniqueRecords(supplementalRecords.filter((record) => 
   return category.includes("groundwater") || category.includes("watershed");
 }), (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "027-b6b5e1c0bddb"));
 
-const leachateRecords = supplementalRecords.filter((record) => {
+const leachateRecords = uniqueRecords(supplementalRecords.filter((record) => {
   const category = record.category?.toLowerCase() ?? "";
   return category.includes("leachate") || category.includes("landfill receiving") || category.includes("waste-disposal");
-});
+}), (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "110-fb263b3ea6c1"));
 
 const operationsRecords = supplementalRecords.filter((record) => {
   const category = record.category?.toLowerCase() ?? "";

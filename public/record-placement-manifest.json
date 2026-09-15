@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1639,
+  "recordCount": 1640,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 204
+      "count": 205
     },
     {
       "archiveId": "reference",
@@ -16837,6 +16837,17 @@
       "url": "/findings-docs/205-99dc30a27739.pdf",
       "sha256": "99dc30a27739edba68bb9f26083d5afa01fc83cc3c1b4711a0f79800106df049",
       "size": 94642
+    },
+    {
+      "id": "206-df0a9fe43a4c",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Wexford County Comprehensive Plan — Adopted May 19, 2004.pdf",
+      "url": "/findings-docs/206-df0a9fe43a4c.pdf",
+      "sha256": "df0a9fe43a4cf32250507e1b9ba1603508d4538032bd9113d7d3da1f521b1145",
+      "size": 698037
     },
     {
       "id": "cadsir-model-c902da6a24fb",

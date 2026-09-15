@@ -1,0 +1,87 @@
+{
+  "reviewDate": "2026-09-14",
+  "batch": "Two Wexford plans; separate whole-record intake units",
+  "status": {"received":2,"extracted":2,"reviewCoverageComplete":2,"citedPassagesChecked":true,"strictFullyVerified":false,"requirementsClosed":0,"publication":"Tracked separately in release checks; not inferred from this audit"},
+  "method": "Read in page order using extracted text and rendered images, including appendices, tables, signatures and annotations. OCR applied to weak/missing text in the scanned compilation; material OCR readings checked against images. Contact-sheet inspection is not high-resolution verification of every character. The comprehensive plan completes the earlier explicit pp1–144 checkpoint with pp145–184 and targeted rereading. Range entries below cover every page, not only search hits. Instructions quoted in documents remain evidence, not user instructions.",
+  "records": [
+    {
+      "recordId":"110-fb263b3ea6c1",
+      "suppliedPath":"C:/Users/casey/AppData/Local/Temp/Wexford (1).pdf",
+      "sha256":"fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+      "bytes":10119631,"pages":347,"existingOriginalReused":true,
+      "dates":{"contentSpan":"1995–2012","catalogMapAnchor":"2007-02","created":"2017-03-14 10:42:33 -04:00","modified":"2019-05-30 12:55:48 -04:00"},
+      "coverage":[
+        {"from":1,"to":8,"read":true,"note":"May1,2012 DEQ approval; February2012 submission chronology; 22 primary/unrestricted import counties and22 export destinations; deletes executed-agreement prerequisite, not proof of deliveries."},
+        {"from":9,"to":12,"read":true,"note":"April19,2011 approval and modifications control older amendment text. Sample hauler ordinance, annual truck information and quarterly reports are not proof of enactment. Automatic planning consistency is not construction authorization."},
+        {"from":13,"to":20,"read":true,"note":"2010/2009 amendment and County actions. Historical account of RAP,2006 buffer acquisition,2008 construction permit and2009 topography requires underlying originals; not a cleanup-completion finding."},
+        {"from":21,"to":28,"read":true,"note":"Import/export tables and facility profile; property196.4acres/sited56.1/permitted33.1/operating23 are differently defined. Accepted sludge/foundry sand/ash are waste types, not loads. February2007 CTI boundaries/cell map p28 is not hydraulic-gradient evidence."},
+        {"from":29,"to":36,"read":true,"note":"Proposed collection/siting workflow and setbacks; later approval modifications matter. Developer/County/SWMPC review process not an actual facility permit."},
+        {"from":37,"to":51,"read":true,"note":"Full targeted OCR read of draft ordinance and law excerpts. Blank ordinance number/adoption/signatures; truck lists, insurance, fees and quarterly reports remain proposed. Liquid waste excluded in statutory definitions; sludge categories cannot be relabeled leachate."},
+        {"from":52,"to":55,"read":true,"note":"Capacity estimate and September15,2010 County7–2 amendment vote; minutes explicitly separate ordinance adoption. Financial/contamination remarks attributed to participants, not independent findings."},
+        {"from":56,"to":110,"read":true,"note":"46 exact rendered repeats reconciled against first occurrences. All nonexact variants64–65,81–82,85,87–89,92 read and compared; annotations retained. Repetition is not corroboration."},
+        {"from":111,"to":124,"read":true,"note":"March7,2002 DEQ approval/modifications followed by2000 plan. Approval limits jurisdiction and changes siting/contingency provisions. Page123 waste-generation/recycling arithmetic conflicts; no reconstructed load calculated."},
+        {"from":125,"to":146,"read":true,"note":"Historical property187.34acres, sited/permitted81.4,4operating;2,932,645CY remaining are period-specific. Locator map; hauler list. Page128 expressly describes limited private-hauler tracking/coordination. Northern Disposal is not established as NorthernA1. Proposed TypeIII/RDF alternatives not operating facilities."},
+        {"from":147,"to":160,"read":true,"note":"Recycling/compost tables; p156 rotated and OCR-read upright. Six proposed dropoffs and public/private responsibilities. Cadillac compost legend identifies yard/leaf/wood categories, not demonstrated biosolids receipt."},
+        {"from":161,"to":172,"read":true,"note":"Implementation and historical authority roles: DEQ regulation, County adoption, BPW oversight, DPW operations, SWMPC recommendations and municipal/private collection. Later deletions/approval modifications qualify older text."},
+        {"from":173,"to":195,"read":true,"note":"Capacity/feasibility budgets, existing City compost at old City landfill and proposed separate County facility. Forecast costs, TypeIII and RDF alternatives not actual expenditures or construction."},
+        {"from":196,"to":198,"read":true,"note":"March2000 transmittal and blank adoption templates; not signed approvals."},
+        {"from":199,"to":204,"read":true,"note":"September21,1999 BPW minutes and October agenda. No oral hearing comments does not erase later written comments. Finance amounts are reported, not underlying audit. MIOSHA discussion says no citations. Conditional wastewater agreements, dam operating dates and high-water reports do not establish a PFAS pathway."},
+        {"from":205,"to":210,"read":true,"note":"January25,2000 conditional foundry-sand discount recommendation $8→$6/CY subject to alternative-daily-cover approval; January4 company letter referenced but absent here. Recycling correspondence. Page207 date references are internally inconsistent; not silently corrected."},
+        {"from":211,"to":229,"read":true,"note":"MWIA attorney advocacy13pages, township/treasurer comments and June30,1999 DEQ three-page draft comments. Distinguish legal arguments/draft deficiencies from agency final determinations or operating notices."},
+        {"from":230,"to":240,"read":true,"note":"Coordinator change and newspaper coverage. Page232 rotated/OCR read. Page239 overlay/fine print partly unresolved. News quotations and reported approval thresholds are not controlling primary approvals."},
+        {"from":241,"to":246,"read":true,"note":"Publication proofs, review periods,67%municipal approval flowchart, divider and blank approval date. Handwriting on244 not fully resolved."},
+        {"from":247,"to":262,"read":true,"note":"Mailing/meeting notices do not alone prove proceedings. March1,2000 County minutes approve plan; unrelated budget,zoning,personnel pages also read."},
+        {"from":263,"to":266,"read":true,"note":"February17 transmittal and January20,2000 SWMPC minutes: recycling funding recommendation, sand/TypeIII option and forecast deliveries will triple byJune. Forecast not actual measured volume."},
+        {"from":267,"to":281,"read":true,"note":"Repeated September1999 BPW minutes,1998 SWMPC minutes and correspondence. Quorum delays retained. Listed intercounty letters not all attached/read as separate originals."},
+        {"from":282,"to":293,"read":true,"note":"Divider,recruitment,1998 appointments/rosters,damaged agenda287 and repeats of2000 minutes. Historical sector representatives not current operational command. Small handwriting/agenda portions unresolved."},
+        {"from":294,"to":301,"read":true,"note":"March1999 BPW plan review and four-township sewer-feasibility discussion. Underlying study/invoice not supplied. March21,2001 CountyResolution01-27 and CadillacResolution1387 ofMay15,2000 are separate adoption actions."},
+        {"from":302,"to":329,"read":true,"note":"All municipal adoption forms inspected. Typed actions distinguished from handwritten execution fields; some dates/names remain uncertain, not field-by-field strict verification."},
+        {"from":330,"to":336,"read":true,"note":"Potential biosolids composting,capacity references,divider,regional/site locator maps and agreement cover. Maps not groundwater gradients; cover annotations partly unresolved."},
+        {"from":337,"to":344,"read":true,"note":"Signed September19,1995 Missaukee–Wexford solid-waste agreement. Liquid waste excluded; §2.3hauler-list delivery, separately set fees,5year mutual-renewal term,termination and signatures. Same substantive agreement as109pp136–143, not a new event and not Cadillac leachate."},
+        {"from":345,"to":347,"read":true,"note":"January1999 import notice,old tables andD6 agreement prerequisite with annotations. Read against later2002/2012 modifications; D6 prerequisite deleted2012."}
+      ],
+      "ocrReadChecks":[3,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,118,123,125,143,149,156,232,239,244,267,271,272,275,278,279,280,281,282,285,287,289,290,332,333,334,335,336,347],
+      "unresolved":["Fine print and annotations on239,244,287,336,347; some handwritten municipal fields302–329.","Generated OCR for other low-text pages is not claimed as individually read OCR output.","Page123 arithmetic conflicts; page207 correspondence-date conflict.","Referenced company correspondence,RAP,ordinance enactment,rate approvals,scale tickets andchemical tests remain separate sources."],
+      "classification":["Verified records — existing primary source","Leachate, receiving & finance — added cross-reference; solid waste is not automatically leachate"]
+    },
+    {
+      "recordId":"206-df0a9fe43a4c",
+      "suppliedPath":"C:/Users/casey/AppData/Local/Temp/Wexford-County-Plan-v2004-03-18 (1).pdf",
+      "sha256":"df0a9fe43a4cf32250507e1b9ba1603508d4538032bd9113d7d3da1f521b1145",
+      "bytes":698037,"pages":184,"newOriginal":true,
+      "officialIdenticalCopy":"https://wexfordcounty.org/wp-content/uploads/2018/02/Wexford-County-Plan-v2004-03-18.pdf",
+      "dates":{"coverReportedAdoption":"2004-05-19","printed":"2004-12-17","pdfCreated":"2004-12-17 14:00:20, timezone absent","filenameDateNotAdoption":"2004-03-18"},
+      "coverage":[
+        {"from":1,"to":144,"read":true,"basis":"Earlier complete sequential read documented in output/comprehensive-plan-2004-review/REVIEW-CHECKPOINT.md, not represented as a fresh full reread in this segment. Prior truncations were reread and contact sheets inspected. Key cover and pages17,28,78–82,97,100–102,136 revisited against images."},
+        {"from":145,"to":146,"read":true,"note":"Appendix transition and documentation context."},
+        {"from":147,"to":155,"read":true,"note":"Correspondence INSERT placeholders, not attached correspondence."},
+        {"from":156,"to":167,"read":true,"note":"Public-notice INSERT placeholders, not certified publications."},
+        {"from":168,"to":172,"read":true,"note":"Hearing and minutes placeholders, not actual hearing record."},
+        {"from":173,"to":175,"read":true,"note":"PlanningCommission March18 resolution,County adoption and transmittal placeholders. Cover reportsMay19adoption; signed action cannot be verified from these pages."},
+        {"from":176,"to":181,"read":true,"note":"Self-assessment pages; capital-improvement planning blanks/absence are not an adopted CIP."},
+        {"from":182,"to":182,"read":true,"note":"Bibliography; cited prior plans and FactBook not automatically attached or reviewed."},
+        {"from":183,"to":184,"read":true,"note":"Clarification addendum not amendment; July7ClamLakeSection10 roughly19acrecommercial zoning and September8map-key clarification reported; June9minutes referenced not supplied. December17printing clock distinct."}
+      ],
+      "materialChecks":[
+        {"pages":[17],"finding":"Policy guide, not ordinance or proof of implementation."},
+        {"pages":[28,78,79,80,81,82,97,136],"finding":"Proposed wellhead/agency/stormwater/utilities coordination. ClamRiverwithinCadillac exception andCitystormwaterapproval role qualify broad wording; advisory coordination is not County operational command."},
+        {"pages":[100],"finding":"Footnote22 prints3.2milliongallons/yearcapacity and2.5million/yearaverage. Do not convert toMGD or calculate spare capacity without plant records."},
+        {"pages":[101,102],"finding":"Historic cooperative agreements and leachate agreements mentioned. No actual agreement terms,landfill source,delivery dates orvolumes."},
+        {"pages":[104,105],"finding":"Commercial row clipped andstep5not available; do not reconstruct."},
+        {"pages":[115,116,117,121,122,132,133],"finding":"Proposedbuffers/exclusions and intergovernmentalcomments. NormanTownshipdownstream statement is an attributed comment,not measuredflow."}
+      ],
+      "missingMapPlaceholders":[13,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,113],
+      "unresolved":["Absent adoption documents147–175 and inserted map plates.","Cover map fine legend not fully transcribed; no hydraulic directions inferred.","Plant units require original design/DMR confirmation; underlying leachate agreements absent."],
+      "classification":["Groundwater & hydrogeology — watershed/planning context only","WWTP operations & infrastructure — utility planning","Leachate, receiving & finance — historical agreement lead","Additional records"]
+    }
+  ],
+  "tieBacks":[
+    {"source":"110 pp337–344","target":"109-5cc3c1841ff9 pp136–143","relationship":"Same signed1995solid-waste agreement inside different full compilations; retain both originals, one event."},
+    {"source":"110 pp1–12","target":["106-99937cdc748b","107-099e4487d07d"],"relationship":"2011/2012 approval copies tie to existing events, not new approvals."},
+    {"source":"110 pp205,264–266","target":"Company January4letter; DEQ alternative-cover approval; BPW rate resolution; scale tickets; sand analyses","relationship":"Unclosed proposal-to-operation verification chain."},
+    {"source":"110 pp128,161–172,341","target":"Enacted hauler ordinance,authorized-hauler lists and quarterly reports","relationship":"Planning/contractual records identify custodians; not proof logs exist or that all private loads were tracked."},
+    {"source":"206 pp101–102","target":"Pre2009 leachate agreements and municipal utility agreements","relationship":"Find parties,execution,terms,renewals,invoices andreceiving logs; do not infer Wexford start date from generic reference."},
+    {"source":"206 pp80–82,97,136","target":"Wellhead delineations,committee minutes,adopted ordinances andCitystormwater approvals","relationship":"Proposed coordination and City authority clarification; not an implemented groundwater-control system."}
+  ],
+  "boundary":"Cited documentary findings reviewed; full underlying operational,chemical,legal and current-status verification remains incomplete. No new PFAS source/pathway,delivered load,SNC or operating violation is asserted. No evidence-request closed."
+}

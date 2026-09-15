@@ -4325,7 +4325,7 @@ export default function Home() {
             <p>This source set preserves the groundwater-discharge, landfill-gas, air-permit, compliance, county, leachate, stormwater and site-history record. Exact matches already indexed elsewhere are reused instead of republished, while substantive revisions remain available separately.</p>
           </div>
           <div className="reference-summary" aria-label="Wexford landfill archive audit summary">
-            <div><FileText /><span><strong>{solidWastePlans.events.length}</strong> solid-waste-plan findings · September 7 intake: 5 originals</span></div>
+            <div><FileText /><span><strong>{solidWastePlans.events.length}</strong> source-linked planning findings · page-specific review limits retained</span></div>
             <div><CheckCircle2 /><span><strong>{wexfordAudit.stats.exactExistingRecordsReused}</strong> exact record(s) reused as cross reference(s)</span></div>
             <div><FileSearch /><span><strong>{formatBytes(wexfordAudit.stats.publishedBytes)}</strong> preserved</span></div>
           </div>

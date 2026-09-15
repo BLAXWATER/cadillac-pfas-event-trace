@@ -1,4 +1,8 @@
 {
+  "206-df0a9fe43a4c": {
+    "sha256": "df0a9fe43a4cf32250507e1b9ba1603508d4538032bd9113d7d3da1f521b1145",
+    "aliases": ["Wexford-County-Plan-v2004-03-18.pdf", "Wexford-County-Plan-v2004-03-18 (1).pdf"]
+  },
   "205-99dc30a27739": {
     "sha256": "99dc30a27739edba68bb9f26083d5afa01fc83cc3c1b4711a0f79800106df049",
     "aliases": ["2015-318174-.pdf", "Charter Township of Haring v City of Cadillac and the Boersmas — March 5, 2015 — 318174, 318175, 318821, 318823"],
@@ -107,7 +111,9 @@
   "110-fb263b3ea6c1": {
     "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
     "aliases": [
-      "Wexford February 2007 CTI facility map - Project No. 75010002-2.pdf"
+      "Wexford February 2007 CTI facility map - Project No. 75010002-2.pdf",
+      "Wexford.pdf",
+      "Wexford (1).pdf"
     ]
   },
   "039-c677de7c10e6": {

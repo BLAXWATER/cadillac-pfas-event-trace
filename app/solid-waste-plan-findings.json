@@ -1,7 +1,73 @@
 {
-  "reviewDate": "2026-09-07",
-  "scope": "Five supplied full originals with targeted page and visual checks. Embedded repeats are not independent corroboration. No new evidence-request closures.",
+  "reviewDate": "2026-09-14",
+  "scope": "Existing findings expanded by the completed Wexford plan reviews. Page-specific source checks, missing material and unresolved readings remain in wexford-plans-review-20260914.json. Embedded repeats are not independent corroboration. No new evidence-request closures.",
   "events": [
+    {
+      "year": "2000",
+      "date": "2000-01-25",
+      "isoDate": "2000-01-25",
+      "time": "Time not stated",
+      "timeBasis": "Date on the recommendation; not a verified implementation date",
+      "phase": "Conditional pricing proposal",
+      "kind": "operation",
+      "category": "12 · Landfill & leachate",
+      "title": "Foundry-sand discount proposal points to approval and receiving records",
+      "finding": "Gary Fuller's January 25, 2000 recommendation proposes reducing foundry-sand disposal pricing for the company printed as Hayes-Lammerz from $8 to $6 per cubic yard for segregated sand excluding metal and debris, subject to DEQ approval for alternative daily cover. The discount would be rescinded if approval was not obtained. January 20 committee minutes separately record a forecast of increased sand deliveries.",
+      "significance": "Proposal → agency cover authorization → adopted rate → scale tickets and sand analyses is the verification chain. Neither the proposed discount nor the forecast proves an approved rate, delivered volume, PFAS concentration or groundwater release. The referenced January 4 company letter is not attached at this location.",
+      "sources": [{
+        "recordId": "110-fb263b3ea6c1",
+        "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+        "name": "Wexford Solid Waste Management Plan Compilation — Including February 2007 CTI Facility Map.pdf",
+        "url": "/wexford-docs/110-fb263b3ea6c1.pdf",
+        "pages": 347,
+        "page": 205,
+        "result": "PDF p205: conditional January25 pricing recommendation. PDF pp264–266, repeated pp291–293: January20 minutes contain the delivery forecast and proposed TypeIII option; not actual receiving totals."
+      }]
+    },
+    {
+      "year": "2002",
+      "date": "2002-03-07",
+      "isoDate": "2002-03-07",
+      "time": "Time not stated",
+      "timeBasis": "Dated DEQ approval letter",
+      "phase": "Controlling planning modifications",
+      "kind": "regulatory",
+      "category": "12 · Landfill & leachate",
+      "title": "DEQ approval modifies the earlier Wexford solid-waste plan",
+      "finding": "The March 7, 2002 DEQ approval includes modifications removing undefined contingency provisions and correcting treatment of proposed facilities and recycling sites. The approval states that it does not enlarge the County's jurisdiction. Read these modifications ahead of the older draft policies retained later in the compilation.",
+      "significance": "Draft comments → municipal and County actions → DEQ approval → later 2011/2012 amendments. June1999 draft-review deficiencies are not an operating violation notice. The draft hauler ordinance has blank adoption fields; obtain the enacted ordinance and quarterly haul reports before treating its requirements as implemented.",
+      "sources": [{
+        "recordId": "110-fb263b3ea6c1",
+        "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+        "name": "Wexford Solid Waste Management Plan Compilation — Including February 2007 CTI Facility Map.pdf",
+        "url": "/wexford-docs/110-fb263b3ea6c1.pdf",
+        "pages": 347,
+        "page": 111,
+        "result": "PDF pp111–115: approval/modifications, including jurisdiction limit p114. Page128 describes private-hauler tracking limitations. Pages227–229 are earlier draft-review comments, not a separate enforcement order."
+      }]
+    },
+    {
+      "year": "2004",
+      "date": "2004-05-19",
+      "isoDate": "2004-05-19",
+      "time": "Time not stated",
+      "timeBasis": "Adoption date reported on the cover; signed adoption appendix is absent",
+      "phase": "Historical planning and agreement leads",
+      "kind": "regulatory",
+      "category": "10 · Infrastructure & watershed context",
+      "title": "County plan references earlier leachate agreements and shared water planning",
+      "finding": "The comprehensive plan reports adoption May 19, 2004. Pages101–102 list municipal cooperative ventures, including leachate agreements, while pp28,80–82,97 propose wellhead, stormwater and utility coordination. The response to Cadillac on p136 preserves the City's stormwater approval role within its boundaries.",
+      "significance": "The agreement reference is a lead to records predating2009, not proof of Wexford deliveries or a receiving start date. Obtain executed agreements, parties, invoices and operating logs. Page100's flow/capacity units say PER YEAR and need independent verification. Maps and adoption materials are missing INSERT placeholders. Planning guidance is not proof of implementation or a contaminant pathway.",
+      "sources": [{
+        "recordId": "206-df0a9fe43a4c",
+        "sha256": "df0a9fe43a4cf32250507e1b9ba1603508d4538032bd9113d7d3da1f521b1145",
+        "name": "Wexford County Comprehensive Plan — Adopted May 19, 2004.pdf",
+        "url": "/findings-docs/206-df0a9fe43a4c.pdf",
+        "pages": 184,
+        "page": 102,
+        "result": "PDF pp101–102: cooperative ventures and leachate-agreement reference; p100 fn22: questionable printed units; p136: City stormwater authority clarification; pp147–175: missing adoption-documentation placeholders."
+      }]
+    },
     {
       "year": "1995",
       "date": "1995-09-19",
@@ -23,6 +89,15 @@
           "pages": 149,
           "page": 136,
           "result": "PDF pp136–143 contain the signed September 19, 1995 agreement; p140 §2.3 covers hauler lists and p141 §§4.1–4.2 covers fees and payment."
+        },
+        {
+          "recordId": "110-fb263b3ea6c1",
+          "sha256": "fb263b3ea6c13d5c772b43707a94ddbac01ff9e31fb095bde0e8f4e79011feb0",
+          "name": "Wexford Solid Waste Management Plan Compilation — Including February 2007 CTI Facility Map.pdf",
+          "url": "/wexford-docs/110-fb263b3ea6c1.pdf",
+          "pages": 347,
+          "page": 337,
+          "result": "PDF pp337–344 preserve the same signed agreement in the Wexford compilation; §2.3 at p341. Same agreement, not an additional transaction or independent corroboration."
         }
       ]
     },

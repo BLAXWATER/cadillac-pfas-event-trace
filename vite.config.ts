@@ -49,7 +49,9 @@ export default defineConfig(async () => {
     // uploader does not publish.
     publicDir: false,
     // Every original needs an HTTP URL for Share, including tiny CSV/GeoJSON files.
-    build: { assetsInlineLimit: 0 },
+    // Minify server output too, retaining room for complete source PDFs without
+    // recompressing, shortening or moving the original evidence off-site.
+    build: { assetsInlineLimit: 0, minify: "oxc" },
     server: {
       host: "0.0.0.0",
       allowedHosts: ["terminal.local"],

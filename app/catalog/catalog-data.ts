@@ -144,9 +144,9 @@ const categoryPages = [
     slug: "permits",
     buttonLabel: "PERMITS & RECORDS",
     eyebrow: "PERMITS & RECORDS",
-    title: "NPDES permits and permit records",
+    title: "Permits and operating licenses",
     description: "Permit applications, renewals, modifications, notices and related regulatory records.",
-    documents: npdesDocuments,
+    documents: uniqueRecords(npdesDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "116-1406440ae1fc")),
   },
   {
     slug: "ipp",

@@ -1,0 +1,23 @@
+{
+  "reviewDate": "2026-09-14",
+  "sourceName": "DEQ-WHMD-WEXFORD_COUNTY_OpLicense_241193_7.pdf",
+  "sha256": "1406440ae1fcff42c79fe6950e94b27a305c6a831c3bcbaee77beacbb8063bcc",
+  "bytes": 950869,
+  "recordId": "116-1406440ae1fc",
+  "pageCoverage": [
+    {"page":1,"read":true,"renderInspected":true,"notes":"Signed license 9405; 2014-08-29 issue, 2019-08-29 stated expiration; facility 470336; supersedes 9366; owner/operator LLC; Edward G. Ascione responsible party."},
+    {"page":2,"read":true,"renderInspected":true,"notes":"Authorized, conditional and excluded cell acreage; application received June 3 with May 28 application and June/August revisions; continuation header says Inc."},
+    {"page":3,"read":true,"renderInspected":true,"notes":"Restrictive covenant Liber 640 pp659–664; 196.98 covenant acres vs196.4 facility acres. Michael A. Ascione signed care fund agreement. $1,914,736.12 fund plus $6,526,831.70 bond equals $8,441,567.82. Separate County RAP $987,000."},
+    {"page":4,"read":true,"renderInspected":true,"notes":"Permits 4100/4127, CTI investigations and plans incorporated by reference, not attached. Liner repair/recertification and monitoring requirements; written recirculation approval. Item8f says RAP approval August9,2007, versus October9 elsewhere."},
+    {"page":5,"read":true,"renderInspected":true,"notes":"Leak detection action5/response25 gallons/acre/day, not measured leakage. Daily-cover monthly limits: foundry sand Cadillac Castings unlimited; ash250tons; auto fluff1650; contaminated soils500; drilling mud300; solidified soils450; wood chips200; compost rejects200; catch basin solids200; oil/gas solids300. Restrictions and test retention, not evidence of deliveries."},
+    {"page":6,"read":true,"renderInspected":true,"notes":"Dust suppression conditions; RAP approval October9 and agreement execution October5,2007; County duties survive ownership transfer; LLC implementation/access duties. License term allows supersession/continuation; no current status inferred."},
+    {"page":7,"read":true,"renderInspected":true,"ocrAttempted":true,"notes":"Attachment A facility map: cell layout, property/waste boundaries, monitoring wells, leachate tank/backup tank and dual-contained forcemain. Some faint internal cell labels and receipt-stamp detail not reliably legible; no guessed labels or groundwater flow inference."}
+  ],
+  "status": "All seven pages read and rendered; material textual findings checked against images. Not blanket strictly verified: faint map details unresolved and incorporated supporting records absent.",
+  "leads": [
+    {"pages":[3,6],"target":"2007 RAP, October5 agreement and County/LLC implementation contract","tieBack":"County responsibility after transfer and separate assurance","uncertainty":"No proof here of remedy completion or actual funding balance today"},
+    {"pages":[4],"target":"July2014 leachate recirculation plan, written approval and operating logs","tieBack":"License incorporates plan but makes recirculation conditional","uncertainty":"No recirculated volumes or contaminant chemistry supplied"},
+    {"pages":[4,7],"target":"2012 HMP and monitoring results, as-built map","tieBack":"Monitoring requirement and mapped infrastructure","uncertainty":"No groundwater gradients or present migration pathway established"},
+    {"pages":[5],"target":"Daily-cover source tests, acceptance records and hauling manifests","tieBack":"Cadillac Castings named as approved foundry-sand source","uncertainty":"Permission is not evidence of any specific delivery or PFAS content"}
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1636,
+  "recordCount": 1637,
   "archiveCount": 13,
   "archives": [
     {
@@ -50,7 +50,7 @@
       "label": "Wexford landfill",
       "catalog": "wexford-documents.json",
       "sectionId": "wexford-library-title",
-      "count": 115
+      "count": 116
     },
     {
       "archiveId": "compliance",
@@ -18091,6 +18091,17 @@
       "url": "/wexford-docs/115-1a26b8e7ef8d.pdf",
       "sha256": "1a26b8e7ef8d45dd9788291ec79de706e495b3c34faa2bb58b5d03a7abc68dee",
       "size": 51171
+    },
+    {
+      "id": "116-1406440ae1fc",
+      "archiveId": "wexford",
+      "archiveLabel": "Wexford landfill",
+      "catalog": "wexford-documents.json",
+      "sectionId": "wexford-library-title",
+      "name": "DEQ-WHMD-WEXFORD_COUNTY_OpLicense_241193_7.pdf",
+      "url": "/wexford-docs/116-1406440ae1fc.pdf",
+      "sha256": "1406440ae1fcff42c79fe6950e94b27a305c6a831c3bcbaee77beacbb8063bcc",
+      "size": 950869
     }
   ]
 }

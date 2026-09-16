@@ -1,5 +1,17 @@
 [
   {
+    "id": "067-1c869397a807",
+    "name": "2017-56545 Self Monitoring Records.pdf",
+    "url": "/compliance-docs/067-1c869397a807.pdf",
+    "year": "2014",
+    "type": "Inspection recordkeeping deficiency",
+    "format": "PDF",
+    "pages": 2,
+    "size": 103887,
+    "sha256": "1c869397a807b6b8c4eab97e5fb60c7b224d3d93c98741f93d43b988093ef04b",
+    "description": "October 14, 2014 Cadillac WWTP self-monitoring inspection, NMS record 56545, permit MI0020257. The supplied filename's 2017 prefix conflicts with the handwritten inspection date on page 2; the original filename and bytes are preserved. Page 1 marks two DMR/site-record spot checks accurate: July 2014 grab DO 8.1 and August 2014 24-hour composite TSS 2.40; the table gives no units. Although its instructions request at least three checks, only two are entered. Page 2, question 5(b), marks NO for identifying the individual performing sampling and notes multiple people sharing shifts. Other listed sampling/analysis record fields are marked YES. This is a documented recordkeeping deficiency, not a formal violation notice or SNC determination. The sheet also marks no reduced-monitoring authorization and records ferric chloride and infrequent tablet-chlorine use; closing notes call for checking the current Haring permit. Follow-up: obtain collector/shift logs, the chemical-approval file and Haring permit, and evidence of any corrective-action closure. Both scanned pages were freshly OCR-assisted and visually read in order on September 16, 2026."
+  },
+  {
     "id": "047-0afa6eb9d108",
     "name": "comrespcadillac1.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/047-0afa6eb9d108.pdf",

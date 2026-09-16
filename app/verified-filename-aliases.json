@@ -1,4 +1,19 @@
 {
+  "lab-047-09e84279f368": {
+    "sha256": "09e84279f368e33f840ccaa0aa476a90c42018fea996d0ce31054200c62ee9cb",
+    "aliases": ["2012 - Cadillac WWTP Test Results.pdf"],
+    "comparison": "September 16, 2026: exact byte match to existing 25-page original. All pages freshly OCR-assisted and visually read. Contents span 2009–2011 and eight reports, not only the first October 2011 report and not 2012 testing."
+  },
+  "001-4e9a0cdf0189": {
+    "sha256": "4e9a0cdf01891e70d6ba197d3ed3a96d1949ca777ff58e7a0cd26818ff307846",
+    "aliases": ["2012 Cadillac WWTP SIU Information.pdf"],
+    "comparison": "September 16, 2026: exact byte match to existing eleven-page original. All eleven SIU sheets freshly OCR-assisted and visually read. No completed/signed date appears; 2012 remains catalog context rather than a newly verified event date."
+  },
+  "067-1c869397a807": {
+    "sha256": "1c869397a807b6b8c4eab97e5fb60c7b224d3d93c98741f93d43b988093ef04b",
+    "aliases": ["56545 Self Monitoring Records.pdf", "2014-56545 Self Monitoring Records.pdf"],
+    "comparison": "September 16, 2026: three local filename variants have identical bytes. No matching standalone original hash existed in the catalog. The two pages are dated October 14, 2014, despite the supplied 2017 filename; added once with shared references across Compliance, DMR & QA and Violation Notices."
+  },
   "050-dcdd5cb57f01": {
     "sha256": "dcdd5cb57f01a3bfb522851fe07ad9b023d671ba4e56319a2b6af6b6c272156d",
     "aliases": ["Issued Letter - Individual Permit.pdf"],

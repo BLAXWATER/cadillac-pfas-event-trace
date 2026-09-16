@@ -90,6 +90,7 @@ const complianceEnforcementTypes = new Set([
   "Agency notebook image",
   "Compliance correspondence and laboratory sequence",
   "Pretreatment compliance correspondence",
+  "Inspection recordkeeping deficiency",
 ]);
 
 const complianceEnforcementRecords = (complianceDocuments as readonly CatalogRecord[]).filter((record) => {
@@ -138,7 +139,7 @@ const categoryPages = [
     eyebrow: "DISCHARGE MONITORING ARCHIVE",
     title: "DMR and QA records",
     description: "Discharge monitoring reports, DMR-QA studies and related permittee data records.",
-    documents: dmrDocuments,
+    documents: uniqueRecords(dmrDocuments, (complianceDocuments as readonly CatalogRecord[]).filter((record) => record.id === "067-1c869397a807")),
   },
   {
     slug: "permits",

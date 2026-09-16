@@ -112,12 +112,12 @@
     "name": "CadillacWWTP_FS.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/010-7621bc53d1a1.pdf",
     "year": "2013",
-    "type": "IPP/industrial pretreatment record",
+    "type": "WQBEL toxics fact/decision sheet",
     "format": "PDF",
     "pages": 13,
     "size": 150653,
     "sha256": "7621bc53d1a129b74d1df6e7fddcc25b56a11e9bf9c0f5683dd08aca00b5a4d3",
-    "description": "13-page ipp/industrial pretreatment record record associated with 2013. Retained as materially distinct after SHA-256, normalized-text, metadata and page-overlap comparison."
+    "description": "May 2, 2013 WQBEL toxics fact/decision sheet by Glen Schmitt for Cadillac WWTP, MI0020257; all 13 pages read in text and rendered images on September 16, 2026. This is a permit-development assessment, not a general industrial-user file. Pages 1–2 review earlier DMR/CSI data, report periodic low-pH exceedances and recommend retaining pH 6.5–9, seasonal phosphorus limits and a mercury pollutant-minimization program. Proposed copper 19 µg/L monthly and available cyanide 5.9 µg/L monthly limits are recommendations, not confirmed issued 2013 conditions. Pages 12–13 list chronic WET values of 1.3 on March 6, 2012 and 2.4 on September 13, 2012; the narrative says two of 57 tests while the worksheet contains 58. This is not a formal violation notice or SNC determination. Worksheet sample counts, nondetect entries and cyanide maxima differ from the narrative; source laboratory records and calculation reconciliation remain needed. Historical Clam River PCB impairment is context, not attribution to the WWTP. The separate October 2, 2013 issuance letter does not include its referenced permit; the August 2019 final permit is a later permit cycle. No PFAS measurement or source-to-receptor pathway is established here."
   },
   {
     "id": "011-9f84067f8dd2",

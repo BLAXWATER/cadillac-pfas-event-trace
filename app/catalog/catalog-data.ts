@@ -37,6 +37,9 @@ export type CatalogPageConfig = {
 
 const supplementalRecords = supplementalDocuments as readonly CatalogRecord[];
 const processSiteRecords = processSiteDocuments as readonly CatalogRecord[];
+const factSheet2013 = (ippDocuments as readonly CatalogRecord[]).filter((record) => record.id === "010-7621bc53d1a1");
+const finalPermit2019 = (npdesDocuments as readonly CatalogRecord[]).filter((record) => record.id === "082-9f01fe21418a");
+const nondomesticAttachment = (biosolidsDocuments as readonly CatalogRecord[]).filter((record) => record.id === "052-760656b79f1f");
 
 const uniqueRecords = (...groups: readonly CatalogRecord[][]): readonly CatalogRecord[] => {
   const seen = new Set<string>();
@@ -131,7 +134,7 @@ const categoryPages = [
     eyebrow: "PFAS RECORDS",
     title: "PFAS monitoring and source records",
     description: "The PFAS monitoring archive, including screening, source-status, receptor and corrective-action records.",
-    documents: uniqueRecords(pfasDocuments, supplementalRecords.filter((record) => record.id === "156-2944aeb34f99")),
+    documents: uniqueRecords(pfasDocuments, supplementalRecords.filter((record) => record.id === "156-2944aeb34f99"), finalPermit2019),
   },
   {
     slug: "dmr",
@@ -147,7 +150,7 @@ const categoryPages = [
     eyebrow: "PERMITS & RECORDS",
     title: "Permits and operating licenses",
     description: "Permit applications, renewals, modifications, notices and related regulatory records.",
-    documents: uniqueRecords(npdesDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => ["116-1406440ae1fc", "024-069dda9efa5b", "001-7c991baaf1e9"].includes(record.id))),
+    documents: uniqueRecords(npdesDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => ["116-1406440ae1fc", "024-069dda9efa5b", "001-7c991baaf1e9"].includes(record.id)), factSheet2013, nondomesticAttachment),
   },
   {
     slug: "ipp",
@@ -155,7 +158,7 @@ const categoryPages = [
     eyebrow: "INDUSTRIAL PRETREATMENT",
     title: "Industrial pretreatment records",
     description: "Industrial pretreatment program records, significant-industrial-user files and enforcement material.",
-    documents: ippDocuments,
+    documents: uniqueRecords(ippDocuments, nondomesticAttachment, finalPermit2019),
   },
   {
     slug: "biosolids",
@@ -171,7 +174,7 @@ const categoryPages = [
     eyebrow: "LAB RESULTS & SAMPLING",
     title: "Laboratory records",
     description: "Analytical reports and sampling records cataloged separately from the regulatory and source archives.",
-    documents: labDocuments,
+    documents: uniqueRecords(labDocuments, nondomesticAttachment),
   },
   {
     slug: "compliance",
@@ -179,7 +182,7 @@ const categoryPages = [
     eyebrow: "COMPLIANCE & ENFORCEMENT",
     title: "Compliance and enforcement records",
     description: "Inspections, notices, corrective-action correspondence and other compliance records.",
-    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9"), (npdesDocuments as readonly CatalogRecord[]).filter((record) => ["045-49e091247101", "092-c041f2300a6d", "109-5836ad2c594c"].includes(record.id))),
+    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9"), (npdesDocuments as readonly CatalogRecord[]).filter((record) => ["045-49e091247101", "092-c041f2300a6d", "109-5836ad2c594c"].includes(record.id)), factSheet2013),
   },
   {
     slug: "violation-notices",
@@ -251,7 +254,7 @@ const categoryPages = [
     eyebrow: "LEACHATE, RECEIVING & FINANCE",
     title: "Leachate receiving, hauling and finance",
     description: "Receiving history, invoices, hauling records, leachate-treatment revenue, contracts and capacity agreements.",
-    documents: leachateRecords,
+    documents: uniqueRecords(leachateRecords, nondomesticAttachment),
   },
   {
     slug: "wwtp-operations-infrastructure",

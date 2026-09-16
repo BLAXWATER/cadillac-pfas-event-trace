@@ -1,4 +1,19 @@
 {
+  "010-7621bc53d1a1": {
+    "sha256": "7621bc53d1a129b74d1df6e7fddcc25b56a11e9bf9c0f5683dd08aca00b5a4d3",
+    "aliases": ["2013-CadillacWWTP_FS.pdf"],
+    "comparison": "September 16, 2026: exact byte match; all 13 pages freshly read in text and images. Content is May 2, 2013 WQBEL fact/decision sheet."
+  },
+  "082-9f01fe21418a": {
+    "sha256": "9f01fe21418ab3c840b003f2834560b3fbc45edff80eb7baaf73b4fd7a921401",
+    "aliases": ["NPDES Permit-FINAL_Cadillac WWTP 2018.pdf"],
+    "comparison": "September 16, 2026: both uploaded Final permit names match this canonical 38-page original byte-for-byte. All unique pages freshly read. Issued August 30, 2019, not 2018 or former catalog year 2017; no duplicate original added."
+  },
+  "052-760656b79f1f": {
+    "sha256": "760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51",
+    "aliases": ["2012 - Cadillac WWTP Septage Information.pdf"],
+    "comparison": "September 16, 2026: exact byte match; all 16 pages OCR-assisted and visually read, including handwriting. 2012 remains catalog context rather than a signed date; attached samples span 2010–2011."
+  },
   "045-49e091247101": {
     "sha256": "49e091247101fd2685e47cf3f31e45318d68939df2a399f9d57dc9264cfc1538",
     "aliases": ["2018 - WQBELBiologistFactSheet_MI0020257_1-30-2018.pdf"],
@@ -21,7 +36,7 @@
   },
   "050-dcdd5cb57f01": {
     "sha256": "dcdd5cb57f01a3bfb522851fe07ad9b023d671ba4e56319a2b6af6b6c272156d",
-    "aliases": ["Issued Letter - Individual Permit.pdf"],
+    "aliases": ["Issued Letter - Individual Permit.pdf", "2013-Issued Letter - Individual Permit.pdf"],
     "comparison": "September 16, 2026 intake: exact byte match to the existing two-page original. Both pages were freshly read in extracted text and rendered images. The letter is dated October 2, 2013; the archived May 23, 2013 filename prefix is retained only for provenance. The generic supplied filename does not merge different 2003 or 2004 issuance letters."
   },
   "030-03967a1eee7e": {

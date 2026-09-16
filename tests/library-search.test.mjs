@@ -67,15 +67,23 @@ test('all stored canonical and displayed filenames retrieve their own record',()
   }
 });
 
-test('all verified uploaded aliases resolve to the same original, ranked first',()=>{
+test('all verified uploaded aliases resolve among exact filename matches without merging ambiguous originals',()=>{
   let count=0;
   for(const [id,entry] of Object.entries(aliases)) {
     assert.equal(records.find(r=>r.id===id)?.sha256,entry.sha256,id);
     assert.equal(new Set(entry.aliases).size,entry.aliases.length);
     for(const name of entry.aliases) {
       assert.doesNotMatch(name,/[/\\]/,'Only basenames may be published');
-      assert.equal(ids(name)[0],id,name);
-      assert.equal(ids(name.replaceAll('_',' ').toUpperCase())[0],id,name);
+      for (const query of [name, name.replaceAll('_',' ').toUpperCase()]) {
+        const normalized = search.normalizeLibrarySearch(query);
+        const exactIds = index.filter(entry => entry.names.has(normalized)).map(entry => entry.record.id);
+        const matches = ids(query);
+        assert.ok(exactIds.includes(id), name);
+        // A generic filename can identify several different original documents.
+        // All exact matches must lead the results; none may be silently dropped.
+        assert.deepEqual(new Set(matches.slice(0, exactIds.length)), new Set(exactIds), name);
+        if (exactIds.length === 1) assert.equal(matches[0], id, name);
+      }
       count++;
     }
   }

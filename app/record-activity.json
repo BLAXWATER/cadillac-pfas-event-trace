@@ -2,7 +2,7 @@
   "basis": "Site record/source change history; not historical document dates. Five rolling 24-hour days.",
   "records": {
     "/compliance-docs/067-1c869397a807.pdf": {
-      "addedAt": "2026-09-16T12:32:42.794Z",
+      "addedAt": "2026-09-16T08:34:46-04:00",
       "fingerprint": "479ee3bcb628813d36933e1519a6bc5b5c5366da895af4cd0596f70b98a13b35"
     },
     "/dmr-docs/088-6f979a1fd6cd.pdf": {
@@ -83,20 +83,32 @@
       "fingerprint": "6ca600eb5625db95a6447838fcc260128a24f7babfea1a3c37fd091f15be7dcf"
     },
     "/ipp-docs/001-4e9a0cdf0189.pdf": {
-      "updatedAt": "2026-09-16T12:32:42.794Z",
+      "updatedAt": "2026-09-16T08:34:46-04:00",
       "fingerprint": "0f65f40af56790b5a819b868a3e76f37847440bd54e09f54c44b4e10050da7b0"
     },
     "/lab-docs/047-09e84279f368.pdf": {
-      "updatedAt": "2026-09-16T12:32:42.794Z",
+      "updatedAt": "2026-09-16T08:34:46-04:00",
       "fingerprint": "bf54044ebedffb9d212d4908da735039270c7e445067c515858a7df4a5a05240"
     },
     "/npdes-docs/038-8191c7e18aac.pdf": {
       "updatedAt": "2026-09-14T14:46:32-04:00",
       "fingerprint": "01143f144af67df60f3d8205299252b5d6153ffc0facbe5caf751dcabc7540f3"
     },
+    "/npdes-docs/045-49e091247101.pdf": {
+      "updatedAt": "2026-09-16T12:51:30.935Z",
+      "fingerprint": "b9be70ed01440a806aa08591a878b665eb5d418049d8ee73748da7eccf59d22b"
+    },
     "/npdes-docs/050-dcdd5cb57f01.pdf": {
       "updatedAt": "2026-09-16T08:17:44-04:00",
       "fingerprint": "b74d36c7b9db579f06c7016759f48359906c74425c3bdb86f213c03f68a7c971"
+    },
+    "/npdes-docs/092-c041f2300a6d.pdf": {
+      "updatedAt": "2026-09-16T12:51:30.935Z",
+      "fingerprint": "b249a90f8ad30b4b93b4058000ab9581ca8376aa7a41b20b4552bd4c31789bdf"
+    },
+    "/npdes-docs/109-5836ad2c594c.pdf": {
+      "updatedAt": "2026-09-16T12:51:30.935Z",
+      "fingerprint": "00c25553ed7d9db33d0ec19afbd50f2e54c17e77c9e4481b5c3589efb5f42135"
     },
     "/process-site-docs/process-site-021-6c2e73d85da0.pdf": {
       "updatedAt": "2026-09-15T00:39:17-04:00",

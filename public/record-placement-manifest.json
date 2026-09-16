@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1640,
+  "recordCount": 1641,
   "archiveCount": 13,
   "archives": [
     {
@@ -57,7 +57,7 @@
       "label": "Compliance & enforcement",
       "catalog": "compliance-documents.json",
       "sectionId": "compliance-library-title",
-      "count": 66
+      "count": 67
     },
     {
       "archiveId": "correspondence",
@@ -3131,6 +3131,17 @@
       "url": "/compliance-docs/066-637b27ce2526.pdf",
       "sha256": "637b27ce2526b58991831e674f3a847c46986e86edafc0bcaedc7ada8e486b2e",
       "size": 82929
+    },
+    {
+      "id": "067-1c869397a807",
+      "archiveId": "compliance",
+      "archiveLabel": "Compliance & enforcement",
+      "catalog": "compliance-documents.json",
+      "sectionId": "compliance-library-title",
+      "name": "2017-56545 Self Monitoring Records.pdf",
+      "url": "/compliance-docs/067-1c869397a807.pdf",
+      "sha256": "1c869397a807b6b8c4eab97e5fb60c7b224d3d93c98741f93d43b988093ef04b",
+      "size": 103887
     },
     {
       "id": "corr-001-4d33f697af5e",

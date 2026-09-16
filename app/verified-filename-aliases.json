@@ -1,4 +1,9 @@
 {
+  "045-49e091247101": {
+    "sha256": "49e091247101fd2685e47cf3f31e45318d68939df2a399f9d57dc9264cfc1538",
+    "aliases": ["2018 - WQBELBiologistFactSheet_MI0020257_1-30-2018.pdf"],
+    "comparison": "September 16, 2026: exact byte match to the existing 22-page original; every page freshly read in native text and rendered images. Corrected catalog year to 2018 from the document's January 30, 2018 date. The archived 2013 filename prefix denotes the prior permit issue date. No duplicate original added."
+  },
   "lab-047-09e84279f368": {
     "sha256": "09e84279f368e33f840ccaa0aa476a90c42018fea996d0ce31054200c62ee9cb",
     "aliases": ["2012 - Cadillac WWTP Test Results.pdf"],

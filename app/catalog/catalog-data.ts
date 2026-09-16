@@ -179,7 +179,7 @@ const categoryPages = [
     eyebrow: "COMPLIANCE & ENFORCEMENT",
     title: "Compliance and enforcement records",
     description: "Inspections, notices, corrective-action correspondence and other compliance records.",
-    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9")),
+    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9"), (npdesDocuments as readonly CatalogRecord[]).filter((record) => ["045-49e091247101", "092-c041f2300a6d", "109-5836ad2c594c"].includes(record.id))),
   },
   {
     slug: "violation-notices",

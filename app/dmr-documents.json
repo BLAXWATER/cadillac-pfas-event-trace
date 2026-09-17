@@ -2663,5 +2663,17 @@
     "size": 986810,
     "sha256": "6251fd5c146e3e1d2ec51171dfc6c1ebbab05729a8752ae4b04a3699278ac11b",
     "description": "Cadillac WWTP daily and summary DMR for July 2026, generated August 19, 2026. The report records no DMR comments and reports zero exceedances in the summary tables; it is retained as a monthly compliance record rather than evidence of a violation."
+  },
+  {
+    "id": "273-d116d6d3b972",
+    "name": "MI0020257_2026-08-01_to_2026-08-31_DMR.pdf",
+    "url": "/dmr-docs/273-d116d6d3b972.pdf",
+    "year": "2026",
+    "type": "DMR with reported limit exceedance",
+    "format": "PDF",
+    "pages": 17,
+    "size": 987464,
+    "sha256": "d116d6d3b972f394e2017b052d2e62d054df5519129ce180afd5d11c3cecad9a",
+    "description": "August 1–31, 2026 Cadillac WWTP daily and summary DMR, MI0020257 v7.0, submitted by Patrick Miller September 17, 2026 at 6:30:48 AM (p. 17). August 7 CBOD5 is 12.70 mg/L against the printed 10 mg/L daily limit (pp. 1, 11); the value-specific note says ‘Debris in sample. Notified Aaron Kline.’ (p. 9). No correction or agency disposition is attached; this is a reported numeric exceedance, not a formal VN or SNC determination. Monthly flow is reported as 1.97 MGD, maximum 2.14 MGD (p. 11). PFOS is coded *g, not a measured concentration (pp. 7, 14–15). Review remains qualified: summary No. Ex. cells are blank, and displayed daily CBOD5/fecal-coliform values do not reproduce the reported monthly averages. All 17 pages were read and visually checked; underlying laboratory data and aggregation explanations remain open."
   }
 ]

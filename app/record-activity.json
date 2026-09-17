@@ -2,7 +2,7 @@
   "basis": "Site record/source change history; not historical document dates. Five rolling 24-hour days.",
   "records": {
     "/biosolids-docs/052-760656b79f1f.pdf": {
-      "updatedAt": "2026-09-16T13:16:17.435Z",
+      "updatedAt": "2026-09-16T09:19:08-04:00",
       "fingerprint": "e46d98c4e22837e67058a94af0926a23b0f6ad513218f1554745ed25d1ed460e"
     },
     "/compliance-docs/067-1c869397a807.pdf": {
@@ -12,6 +12,10 @@
     "/dmr-docs/088-6f979a1fd6cd.pdf": {
       "updatedAt": "2026-09-15T14:44:39-04:00",
       "fingerprint": "10807fd40950989bfda9ef65a1a6330dc30c7bf852ce7c65aa89304fe58bf578"
+    },
+    "/dmr-docs/273-d116d6d3b972.pdf": {
+      "addedAt": "2026-09-17T12:58:25.929Z",
+      "fingerprint": "0c7ec18045ab5d1d05508495f0e96b51602e1498246d89de21faa5ad429213e0"
     },
     "/findings-docs/008-5b67e1ed1d5c.pdf": {
       "updatedAt": "2026-09-14T23:43:33-04:00",
@@ -91,7 +95,7 @@
       "fingerprint": "0f65f40af56790b5a819b868a3e76f37847440bd54e09f54c44b4e10050da7b0"
     },
     "/ipp-docs/010-7621bc53d1a1.pdf": {
-      "updatedAt": "2026-09-16T13:16:17.435Z",
+      "updatedAt": "2026-09-16T09:19:08-04:00",
       "fingerprint": "f0bec4d7c7ddfc94039e702d1e6f6e2f22cb4bd3c9ee4959bec118c996009712"
     },
     "/lab-docs/047-09e84279f368.pdf": {
@@ -103,7 +107,7 @@
       "fingerprint": "01143f144af67df60f3d8205299252b5d6153ffc0facbe5caf751dcabc7540f3"
     },
     "/npdes-docs/045-49e091247101.pdf": {
-      "updatedAt": "2026-09-16T13:16:17.435Z",
+      "updatedAt": "2026-09-16T09:19:08-04:00",
       "fingerprint": "35d8b0085a168f8b351a9aaf7439119f324154c9b9bf484c573cedf8e89aa23e"
     },
     "/npdes-docs/050-dcdd5cb57f01.pdf": {
@@ -111,15 +115,15 @@
       "fingerprint": "b74d36c7b9db579f06c7016759f48359906c74425c3bdb86f213c03f68a7c971"
     },
     "/npdes-docs/082-9f01fe21418a.pdf": {
-      "updatedAt": "2026-09-16T13:16:17.435Z",
+      "updatedAt": "2026-09-16T09:19:08-04:00",
       "fingerprint": "91bce266d40d80b95a5ddd71b34f01d4f1d5664eddc312c957299f82711458b5"
     },
     "/npdes-docs/092-c041f2300a6d.pdf": {
-      "updatedAt": "2026-09-16T13:16:17.435Z",
+      "updatedAt": "2026-09-16T09:19:08-04:00",
       "fingerprint": "504f07e500e890bff28bbda054535dc2cc16342c4813584c771e3260efcbadbe"
     },
     "/npdes-docs/109-5836ad2c594c.pdf": {
-      "updatedAt": "2026-09-16T13:16:17.435Z",
+      "updatedAt": "2026-09-16T09:19:08-04:00",
       "fingerprint": "91c9d6a59dd32df4fa704f5541aa4443efffaae4dab27739fc09d246dea65ed4"
     },
     "/process-site-docs/process-site-021-6c2e73d85da0.pdf": {

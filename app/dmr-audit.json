@@ -14,10 +14,17 @@
     "repeatedLooseCopiesSuppressed": 234,
     "metadataOnlyEquivalentCopiesSuppressed": 1,
     "crossCategoryExactCopiesSuppressed": 6,
-    "newDistinctRecords": 7,
-    "finalDistinctRecords": 266
+    "newDistinctRecords": 8,
+    "finalDistinctRecords": 267
   },
   "batches": [
+    {
+      "label": "August 2026 DMR — September 17 intake",
+      "supplied": 1,
+      "added": 1,
+      "duplicates": 0,
+      "note": "All 17 physical pages extracted, rendered and read in order. Native text was checked against images; OCR not needed. August 7 CBOD5 exceeds the printed daily limit, with the separate debris/notification qualification retained. Original data/aggregation questions remain unresolved; not blanket Strict Fully Verified. See docs/august-2026-dmr-review-2026-09-17.md."
+    },
     {
       "label": "Original collection",
       "supplied": 264,

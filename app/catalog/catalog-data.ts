@@ -40,6 +40,7 @@ const processSiteRecords = processSiteDocuments as readonly CatalogRecord[];
 const factSheet2013 = (ippDocuments as readonly CatalogRecord[]).filter((record) => record.id === "010-7621bc53d1a1");
 const finalPermit2019 = (npdesDocuments as readonly CatalogRecord[]).filter((record) => record.id === "082-9f01fe21418a");
 const nondomesticAttachment = (biosolidsDocuments as readonly CatalogRecord[]).filter((record) => record.id === "052-760656b79f1f");
+const reportedDmrExceedances = (dmrDocuments as readonly CatalogRecord[]).filter((record) => record.type === "DMR with reported limit exceedance");
 
 const uniqueRecords = (...groups: readonly CatalogRecord[][]): readonly CatalogRecord[] => {
   const seen = new Set<string>();
@@ -125,6 +126,7 @@ const violationNoticeRecords = uniqueRecords(
   regulatoryViolationExport,
   wexfordNoncomplianceRecords,
   incidentRecords,
+  reportedDmrExceedances,
 );
 
 const categoryPages = [
@@ -182,7 +184,7 @@ const categoryPages = [
     eyebrow: "COMPLIANCE & ENFORCEMENT",
     title: "Compliance and enforcement records",
     description: "Inspections, notices, corrective-action correspondence and other compliance records.",
-    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9"), (npdesDocuments as readonly CatalogRecord[]).filter((record) => ["045-49e091247101", "092-c041f2300a6d", "109-5836ad2c594c"].includes(record.id)), factSheet2013),
+    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9"), (npdesDocuments as readonly CatalogRecord[]).filter((record) => ["045-49e091247101", "092-c041f2300a6d", "109-5836ad2c594c"].includes(record.id)), factSheet2013, reportedDmrExceedances),
   },
   {
     slug: "violation-notices",

@@ -14,7 +14,7 @@
       "fingerprint": "10807fd40950989bfda9ef65a1a6330dc30c7bf852ce7c65aa89304fe58bf578"
     },
     "/dmr-docs/273-d116d6d3b972.pdf": {
-      "addedAt": "2026-09-17T12:58:25.929Z",
+      "addedAt": "2026-09-17T09:02:49-04:00",
       "fingerprint": "0c7ec18045ab5d1d05508495f0e96b51602e1498246d89de21faa5ad429213e0"
     },
     "/findings-docs/008-5b67e1ed1d5c.pdf": {
@@ -89,6 +89,10 @@
     "/findings-docs/206-df0a9fe43a4c.pdf": {
       "addedAt": "2026-09-14T23:28:10-04:00",
       "fingerprint": "6ca600eb5625db95a6447838fcc260128a24f7babfea1a3c37fd091f15be7dcf"
+    },
+    "/findings-docs/207-caaf3ea8f891.pdf": {
+      "addedAt": "2026-09-18T18:48:26.973Z",
+      "fingerprint": "09113c8678aca1540107028f278bad5e33398223e3c5e06b570d6539fcaad872"
     },
     "/ipp-docs/001-4e9a0cdf0189.pdf": {
       "updatedAt": "2026-09-16T08:34:46-04:00",

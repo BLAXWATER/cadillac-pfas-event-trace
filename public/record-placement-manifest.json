@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1642,
+  "recordCount": 1643,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 205
+      "count": 206
     },
     {
       "archiveId": "reference",
@@ -16870,6 +16870,17 @@
       "url": "/findings-docs/206-df0a9fe43a4c.pdf",
       "sha256": "df0a9fe43a4cf32250507e1b9ba1603508d4538032bd9113d7d3da1f521b1145",
       "size": 698037
+    },
+    {
+      "id": "207-caaf3ea8f891",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "S.S. Papadopulos Hydraulic Capture Zone Evaluation — April 2007.pdf",
+      "url": "/findings-docs/207-caaf3ea8f891.pdf",
+      "sha256": "caaf3ea8f891c31522b39cdfacde02a58c006a77643e6a2253428380429c7960",
+      "size": 21138579
     },
     {
       "id": "cadsir-model-c902da6a24fb",

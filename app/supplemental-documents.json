@@ -2663,5 +2663,18 @@
     "size": 107944,
     "sha256": "fa41c0f607d919398d2d9affd75083dd9a05b657065fa501c38ce3521a55a46b",
     "description": "April 2, 2018 work-session minutes and FY2019 budget material. PDF p4 reports leachate revenue continuing above budget, cautions against excessive reliance and identifies additional revenue for system reinvestment. The proposed 3% general water/sewer increase on p3 is not a signed leachate treatment rate. Budget discussion is not a per-load receiving record, customer invoice or proof of a completed delivery."
+  },
+  {
+    "id": "207-caaf3ea8f891",
+    "name": "S.S. Papadopulos Hydraulic Capture Zone Evaluation — April 2007.pdf",
+    "url": "/findings-docs/207-caaf3ea8f891.pdf",
+    "year": "2007",
+    "category": "Groundwater & hydrogeology",
+    "type": "Historical hydraulic capture evaluation",
+    "format": "PDF",
+    "pages": 598,
+    "size": 21138579,
+    "sha256": "caaf3ea8f891c31522b39cdfacde02a58c006a77643e6a2253428380429c7960",
+    "description": "April 2007 S.S. Papadopulos & Associates Hydraulic Capture Zone Evaluation for the Kysor-Northernaire Superfund Site, prepared for EPA Region 5. The report describes heterogeneous sand aquifers, intermittent/discontinuous shallow and intermediate clay, historical groundwater gradients, remediation pumping and 2006 VOC/chromium trend analysis (pp. 21–49, 109–159, 162–598). Review coverage is complete for all 598 supplied pages, but verification remains qualified: capture/plume polygon layers are absent from several supplied map renders (pp. 61–66, 79–84 and 155–158), and internal unit/date/rate discrepancies require original-record tie-back. This historical evaluation predates the PFAS investigation and does not establish PFAS source attribution or a present Wexford-to-Plett migration pathway."
   }
 ]

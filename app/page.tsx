@@ -4178,7 +4178,7 @@ export default function Home() {
             <div className="papadopulos-finding-mark" aria-hidden="true"><Database /></div>
             <div>
               <p className="eyebrow">KEY FINDING</p>
-              <h2 id="papadopulos-finding-title">2007 PAPADOPULOS</h2>
+              <h2 id="papadopulos-finding-title">2007 PAPADOPULOS Groundwater Evaluation &amp; Optimization System</h2>
             </div>
             <a href="/catalog/groundwater-hydrogeology">View source record</a>
           </div>
@@ -4186,17 +4186,27 @@ export default function Home() {
             <article>
               <span>01</span>
               <h3>Discontinuous clay framework</h3>
-              <p>The report documents intermittent shallow and intermediate clay, with the shallow clay absent to the northeast and the shallow and intermediate aquifers merging in that area.</p>
+              <p>The report documents intermittent shallow and intermediate clay, with the shallow clay absent to the northeast and the shallow and intermediate aquifers merging in that area. <strong>PDF 21–22, 109–110, 135.</strong></p>
             </article>
             <article>
               <span>02</span>
               <h3>Measured hydraulic record</h3>
-              <p>Its capture evaluation uses identified-well groundwater elevations from 1987, 2004 and 2006, documented pumping rates, hydraulic gradients and aquifer transmissivity estimates.</p>
+              <p>Its capture evaluation uses identified-well groundwater elevations from 1987, 2004 and 2006, documented pumping rates, hydraulic gradients and aquifer transmissivity estimates. <strong>PDF 25–36, 114–138.</strong></p>
             </article>
             <article>
               <span>03</span>
               <h3>Historical capture conclusion</h3>
-              <p>Papadopulos concluded that the combined extraction systems captured the VOC plume, that hexavalent-chromium cleanup may have been achieved, and that overall remedy objectives appeared to be met.</p>
+              <p>Papadopulos concluded that the combined extraction systems captured the VOC plume, that hexavalent-chromium cleanup may have been achieved, and that overall remedy objectives appeared to be met. <strong>PDF 9, 33–36.</strong></p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Modeled vertical leakage</h3>
+              <p>The report presents possible shallow-to-intermediate leakage as modeled or estimated values—not as a direct current-flow measurement—including approximately 210 gpm before remediation, 130 gpm in 2004 and 115 gpm in 2006. <strong>PDF 46, 114.</strong></p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3>Chemistry trend qualification</h3>
+              <p>The October 4, 2006 analysis found many declining VOC series while multiple upper-confidence-limit results still exceeded standards; a downward trend did not by itself establish cleanup or closure. <strong>PDF 162–186.</strong></p>
             </article>
           </div>
         </section>

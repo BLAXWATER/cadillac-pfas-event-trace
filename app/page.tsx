@@ -4173,6 +4173,34 @@ export default function Home() {
           )}
         </section>
 
+        <section className="papadopulos-finding" aria-labelledby="papadopulos-finding-title">
+          <div className="papadopulos-finding-heading">
+            <div className="papadopulos-finding-mark" aria-hidden="true"><Database /></div>
+            <div>
+              <p className="eyebrow">KEY FINDING</p>
+              <h2 id="papadopulos-finding-title">2007 PAPADOPULOS</h2>
+            </div>
+            <a href="/catalog/groundwater-hydrogeology">View source record</a>
+          </div>
+          <div className="papadopulos-finding-grid">
+            <article>
+              <span>01</span>
+              <h3>Discontinuous clay framework</h3>
+              <p>The report documents intermittent shallow and intermediate clay, with the shallow clay absent to the northeast and the shallow and intermediate aquifers merging in that area.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Measured hydraulic record</h3>
+              <p>Its capture evaluation uses identified-well groundwater elevations from 1987, 2004 and 2006, documented pumping rates, hydraulic gradients and aquifer transmissivity estimates.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Historical capture conclusion</h3>
+              <p>Papadopulos concluded that the combined extraction systems captured the VOC plume, that hexavalent-chromium cleanup may have been achieved, and that overall remedy objectives appeared to be met.</p>
+            </article>
+          </div>
+        </section>
+
         <section className="timeframe-model" aria-labelledby="timeframe-title">
           <div className="timeframe-heading">
             <div><p className="eyebrow">HIERARCHICAL TIMEFRAME MODEL</p><h2 id="timeframe-title">Year → event → source clock</h2></div>

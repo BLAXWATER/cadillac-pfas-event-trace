@@ -50,6 +50,7 @@ const bundledAssets = {
 } as Record<string, string>;
 
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/findings-docs/208-6342e4abc27e.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/207-caaf3ea8f891.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/dmr-docs/273-d116d6d3b972.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/compliance-docs/067-1c869397a807.pdf", { eager: true, import: "default", query: "?url" }),

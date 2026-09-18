@@ -2128,6 +2128,28 @@ const events: Event[] = [
   },
   {
     year: "2025",
+    date: "2025-09-04",
+    isoDate: "2025-09-04",
+    time: noTime,
+    timeBasis: "Issue date printed on the EGLE memorandum",
+    phase: "PFAS monitoring-well installation",
+    kind: "regulatory",
+    category: "04 / 13 · PFAS monitoring, wells & hydrogeology",
+    title: "EGLE documents three monitoring wells and northwesterly groundwater flow",
+    finding: "EGLE's September 4 memorandum documents installation of GSS-1, GSS-2 and GSS-3 on July 14–16 near the soccer fields, Wexford County Fairgrounds and Bell Avenue/Plett Road. Surveyed casing elevations and July 17 static-water measurements support the memorandum's northwesterly groundwater-flow interpretation; the boring logs record predominantly sand, with gravel encountered at GSS-2 and GSS-3.",
+    significance: "Adds a site-specific 2025 monitoring network and measured hydraulic-head context to the groundwater record. EGLE expressly states that no soil or water samples were collected, so the memorandum does not report PFAS concentrations, identify a contaminant source or by itself prove a source-to-receptor pathway.",
+    sources: [
+      archivedSource("EGLE Cadillac Area PFAS Investigation — Monitor Well Installation Memorandum.pdf", "/findings-docs/208-6342e4abc27e.pdf", 10, "Installation narrative pp1–2; site and groundwater-flow maps pp3–4; GPS and water-level tables pp5–6; complete GSS-1, GSS-2 and GSS-3 boring logs pp8–10.", {
+        eventStamp: "2025-09-04 · time not stated",
+        basis: "Issue date printed on the memorandum",
+        created: "2025-09-04 11:31:14 EDT",
+        modified: "2025-09-08 08:19:59 EDT",
+        note: "The work occurred July 14–17, 2025. The record documents well installation, surveying and water levels; it explicitly says no soil or water samples were collected.",
+      }),
+    ],
+  },
+  {
+    year: "2025",
     date: "2025-04-09",
     isoDate: "2025-04-09",
     time: noTime,

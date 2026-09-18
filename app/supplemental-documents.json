@@ -2676,5 +2676,18 @@
     "size": 21138579,
     "sha256": "caaf3ea8f891c31522b39cdfacde02a58c006a77643e6a2253428380429c7960",
     "description": "April 2007 S.S. Papadopulos & Associates Hydraulic Capture Zone Evaluation for the Kysor-Northernaire Superfund Site, prepared for EPA Region 5. The report describes heterogeneous sand aquifers, intermittent/discontinuous shallow and intermediate clay, historical groundwater gradients, remediation pumping and 2006 VOC/chromium trend analysis (pp. 21–49, 109–159, 162–598). Review coverage is complete for all 598 supplied pages, but verification remains qualified: capture/plume polygon layers are absent from several supplied map renders (pp. 61–66, 79–84 and 155–158), and internal unit/date/rate discrepancies require original-record tie-back. This historical evaluation predates the PFAS investigation and does not establish PFAS source attribution or a present Wexford-to-Plett migration pathway."
+  },
+  {
+    "id": "208-6342e4abc27e",
+    "name": "EGLE Cadillac Area PFAS Investigation — Monitor Well Installation Memorandum.pdf",
+    "url": "/findings-docs/208-6342e4abc27e.pdf",
+    "year": "2025",
+    "category": "Groundwater & hydrogeology",
+    "type": "EGLE monitoring-well installation memorandum",
+    "format": "PDF",
+    "pages": 10,
+    "size": 8751136,
+    "sha256": "6342e4abc27e4c9938f39a55d3691f7ec54739c59505097aa120a9a7226049ca",
+    "description": "September 4, 2025 EGLE memorandum documenting installation of monitoring wells GSS-1, GSS-2 and GSS-3 on July 14–16 near the soccer fields, Wexford County Fairgrounds and Bell Avenue/Plett Road (pp. 1, 3). The survey and July 17 static-water measurements support the memorandum's northwesterly groundwater-flow interpretation (pp. 2, 4–6), while the boring logs document predominantly sand with gravel at GSS-2 and GSS-3 (pp. 8–10). EGLE explicitly states that no soil or water samples were collected, so this record contains no PFAS analytical result or source attribution."
   }
 ]

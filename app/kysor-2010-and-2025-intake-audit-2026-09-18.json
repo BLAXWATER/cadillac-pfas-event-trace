@@ -1,0 +1,100 @@
+{
+  "reviewDate": "2026-09-18",
+  "scope": "Five supplied PDFs reviewed under the page-order and OCR rules. The two 124-page Kysor files are byte-identical copies. The 7-page and 1-page files are index records whose filenames overstate their contents. The 2025 EGLE memorandum is a distinct image-only record and was read from all ten rendered pages.",
+  "summary": {
+    "suppliedFiles": 5,
+    "distinctInputHashes": 4,
+    "suppliedPageInstances": 266,
+    "distinctPagesReviewed": 142,
+    "exactInputCopies": 1,
+    "newCatalogRecords": 1,
+    "newTimelineEvents": 1,
+    "requirementsClosed": 0
+  },
+  "records": [
+    {
+      "suppliedName": "2010 - Kysor Industrial Corp., Superfiand Site-373482.pdf",
+      "sha256": "83ebcbda08bd1a5bd62d33fabd0ea06938b6917a16d9f4d70df9c39884573992",
+      "bytes": 21990591,
+      "pages": 124,
+      "status": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": "existing canonical EPA report reused"
+      },
+      "coverage": "All 124 pages read in order. Ninety-eight pages carried sufficient embedded text; 26 sparse-text pages were OCR-checked and every page was visually inspected in rendered contact sheets.",
+      "identity": "August 2010 EPA Region 5 Third Five-Year Review Report for the Kysor Industrial Corp. Superfund Site.",
+      "reconciliation": "Same 124-page official report already cataloged as record 088-ffba65b657df, but supplied as a byte-different scan/OCR rendition. The established canonical copy remains published once.",
+      "boundary": "Historical VOC/chromium cleanup and hydraulic-capture evidence. It predates the Cadillac-area PFAS investigation and does not establish PFAS source attribution or a Wexford-to-Plett migration pathway."
+    },
+    {
+      "suppliedName": "Kysor_Third_Five-Year_Review_2010.pdf",
+      "sha256": "83ebcbda08bd1a5bd62d33fabd0ea06938b6917a16d9f4d70df9c39884573992",
+      "bytes": 21990591,
+      "pages": 124,
+      "status": {
+        "received": true,
+        "extracted": "reused exact-copy extraction",
+        "reviewed": "reused exact-copy page review",
+        "verified": "qualified",
+        "published": "not republished"
+      },
+      "reconciliation": "Byte-identical to the first supplied 124-page file; retained in the intake inventory as an uploaded alias, not a second evidentiary record."
+    },
+    {
+      "suppliedName": "EPA-Kysor - Liability - 234872.pdf",
+      "sha256": "84aea6725dbf33aa9abc153a6bfb8a0e313e3a4363a41bc12fa7f3e52e6ed99f",
+      "bytes": 160809,
+      "pages": 7,
+      "status": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": false
+      },
+      "coverage": "All seven pages read and rendered; two sparse-text pages were OCR-checked.",
+      "identity": "July 12, 1989 Kysor Industries administrative-record, sampling-data and guidance-document index—not a substantive liability determination.",
+      "lead": "Page 1 lists a May 20, 1988 potential-liability notice and states that the information request is not attached. That underlying notice/request remains an acquisition target.",
+      "publicationBoundary": "The transient supplied binary was no longer locally available when publication packaging began, so no unsupported or non-downloadable catalog card was created."
+    },
+    {
+      "suppliedName": "Kysor-Explanation of Significant Difference-234896.pdf",
+      "sha256": "edb84888823fd41802330d5d398d74cab31a5f6db66fec3b1d478965e0f02296",
+      "bytes": 15092,
+      "pages": 1,
+      "status": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": false
+      },
+      "identity": "January 11, 1995 Update #2 administrative-record addendum/index. It lists the March 3, 1994 Explanation of Significant Difference and an April 30, 1998 compliance-status/closure record; it is not either underlying document.",
+      "reconciliation": "The complete 22-page 1994 ESD is already preserved as record 095-b7620af87938. The index page is not substituted for that decision record.",
+      "publicationBoundary": "The transient supplied binary was no longer locally available when publication packaging began, so no unsupported or non-downloadable catalog card was created."
+    },
+    {
+      "suppliedName": "2025_Report-Workplan-RI-EGLE-GSS-Monitor-Well-Installation.pdf",
+      "sha256": "6342e4abc27e4c9938f39a55d3691f7ec54739c59505097aa120a9a7226049ca",
+      "bytes": 8751136,
+      "pages": 10,
+      "status": {
+        "received": true,
+        "extracted": "image-only; rendered-page reading used",
+        "reviewed": true,
+        "verified": true,
+        "published": "record 208-6342e4abc27e"
+      },
+      "coverage": "All ten pages rendered and read in order, including both maps, both tables and all three boring logs.",
+      "supportedFindings": [
+        "Pages 1–2 document installation of GSS-1, GSS-2 and GSS-3 on July 14–16, surveying, July 17 static-water measurements and a northwesterly groundwater-flow interpretation.",
+        "Pages 3–6 locate the wells and preserve the GPS, casing, ground-elevation, static-water-level and calculated groundwater-elevation data.",
+        "Pages 8–10 record predominantly sandy materials, with gravel encountered at GSS-2 around 45 feet and at GSS-3 around 25 feet."
+      ],
+      "boundary": "Page 2 expressly states that no soil or water samples were collected. This record contains no PFAS analytical result and does not establish source attribution or a contaminant pathway."
+    }
+  ]
+}

@@ -49,6 +49,10 @@ const bundledAssets = {
   }),
 } as Record<string, string>;
 
+// Bundle records that do not already have a byte-identical source at the
+// immutable public repository revision used by source-url.ts. Exact public
+// copies stay available through their pinned archive URLs without consuming
+// the Sites deployment package a second time.
 const bundledDocumentDownloads = {
   ...import.meta.glob("../public/findings-docs/208-6342e4abc27e.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/207-caaf3ea8f891.pdf", { eager: true, import: "default", query: "?url" }),
@@ -183,11 +187,6 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/pfas-docs/055-ae1a7fc25cfe.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/pfas-docs/100-cea8f3321719.pdf", {
     eager: true,
     import: "default",
@@ -199,16 +198,6 @@ const bundledDocumentDownloads = {
     query: "?url",
   }),
   ...import.meta.glob("../public/findings-docs/147-501cb6326dac.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/findings-docs/148-c1f66e091159.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/findings-docs/150-09f087fefb8f.pdf", {
     eager: true,
     import: "default",
     query: "?url",
@@ -410,11 +399,6 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/findings-docs/100-850f00b27330.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/form-submission-docs/form-submission-036-1873afe1dd72.pdf", {
     eager: true,
     import: "default",
@@ -425,42 +409,7 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/biosolids-docs/052-760656b79f1f.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/form-submission-docs/form-submission-033-bffd8eec3c32.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/form-submission-docs/form-submission-074-120dbeb59d52.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/ipp-docs/011-9f84067f8dd2.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/ipp-docs/012-4ef102885030.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/ipp-docs/013-3d6cd5e0a57b.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/ipp-docs/151-774fbfdfab32.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/compliance-docs/012-16dae2e386d4.pdf", {
     eager: true,
     import: "default",
     query: "?url",
@@ -495,22 +444,12 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/wexford-docs/004-aaa74db2f56d.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/wexford-docs/005-07d4a892d342.pdf", {
     eager: true,
     import: "default",
     query: "?url",
   }),
   ...import.meta.glob("../public/wexford-docs/006-44cde488aaf4.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/wexford-docs/007-cc1225120bd0.pdf", {
     eager: true,
     import: "default",
     query: "?url",
@@ -545,17 +484,7 @@ const bundledDocumentDownloads = {
     import: "default",
     query: "?url",
   }),
-  ...import.meta.glob("../public/wexford-docs/099-8c0affe1ef31.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
   ...import.meta.glob("../public/wexford-docs/100-7bc1b5bbf6f2.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/ipp-docs/001-4e9a0cdf0189.pdf", {
     eager: true,
     import: "default",
     query: "?url",
@@ -581,11 +510,6 @@ const bundledDocumentDownloads = {
     query: "?url",
   }),
   ...import.meta.glob("../public/ipp-docs/056-95a00ade695b.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/npdes-docs/044-a0347eae1366.pdf", {
     eager: true,
     import: "default",
     query: "?url",
@@ -686,11 +610,6 @@ const bundledDocumentDownloads = {
     query: "?url",
   }),
   ...import.meta.glob("../public/wexford-docs/103-5114323584bd.pdf", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-  ...import.meta.glob("../public/docs/2014-preinspection.pdf", {
     eager: true,
     import: "default",
     query: "?url",

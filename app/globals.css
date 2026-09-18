@@ -132,6 +132,7 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .papadopulos-finding-mark svg { width: 25px; height: 25px; }
 .papadopulos-finding-heading .eyebrow { margin-bottom: 5px; }
 .papadopulos-finding-heading h2 { max-width: 980px; margin: 0; color: var(--brand-white); font-size: clamp(24px, 2.7vw, 38px); line-height: 1.08; letter-spacing: -.025em; }
+.papadopulos-finding-summary { max-width: 980px; margin: 10px 0 0; color: var(--brand-gray); font-size: var(--font-12pt); line-height: 1.55; }
 .papadopulos-finding-heading > a { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 9px 14px; border: 1px solid var(--primary); color: var(--primary); font-family: var(--font-mono); font-size: var(--font-11pt); text-decoration: none; }
 .papadopulos-finding-heading > a:hover { background: rgba(0, 188, 235, .1); color: var(--brand-white); }
 .papadopulos-finding-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }

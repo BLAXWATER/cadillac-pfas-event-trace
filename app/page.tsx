@@ -4178,7 +4178,8 @@ export default function Home() {
             <div className="papadopulos-finding-mark" aria-hidden="true"><Database /></div>
             <div>
               <p className="eyebrow">KEY FINDING</p>
-              <h2 id="papadopulos-finding-title">2007 PAPADOPULOS Groundwater Evaluation &amp; Optimization System</h2>
+              <h2 id="papadopulos-finding-title">2007 &quot;Papadopulos report evaluated groundwater flow and contaminants&quot;</h2>
+              <p className="papadopulos-finding-summary">The 2007 Papadopulos report evaluated groundwater flow and contaminant capture at the Kysor-Northernaire site. It found complex aquifers, discontinuous clay barriers, and generally effective historical VOC capture, while recommending further monitoring and system optimization.</p>
             </div>
             <a href="/catalog/groundwater-hydrogeology">View source record</a>
           </div>

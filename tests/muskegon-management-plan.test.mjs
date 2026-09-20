@@ -39,3 +39,15 @@ test("Muskegon plan appears in Groundwater and Reference catalogs with a local p
   assert.match(pageSource, /document\.preview \? bundledPublicAsset\(document\.preview\)/);
   assert.match(cardSource, /record\.preview \? bundledPublicAsset\(record\.preview\)/);
 });
+
+test("Muskegon plan has a conservative five-point front-page key finding", async () => {
+  const pageSource = await readFile(new URL("app/page.tsx", root), "utf8");
+  assert.match(pageSource, /id="muskegon-finding-title"/);
+  assert.match(pageSource, /2002 Muskegon River Watershed Management Plan/);
+  assert.match(pageSource, /Cadillac watershed setting/);
+  assert.match(pageSource, /Regional groundwater framework/);
+  assert.match(pageSource, /Clam River flow context/);
+  assert.match(pageSource, /Historical WWTP finding/);
+  assert.match(pageSource, /No Plett Road pathway finding/);
+  assert.match(pageSource, /contains no PFAS testing and does not establish a Plett Road WWTP pathway/);
+});

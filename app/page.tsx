@@ -4199,6 +4199,45 @@ export default function Home() {
           )}
         </section>
 
+        <section className="papadopulos-finding muskegon-finding" aria-labelledby="muskegon-finding-title">
+          <div className="papadopulos-finding-heading">
+            <div className="papadopulos-finding-mark" aria-hidden="true"><Waves /></div>
+            <div>
+              <p className="eyebrow">KEY FINDING</p>
+              <h2 id="muskegon-finding-title">2002 Muskegon River Watershed Management Plan</h2>
+              <p className="papadopulos-finding-summary">The 449-page plan places Cadillac and Wexford County within the Muskegon River watershed and supplies regional groundwater, geology and Clam River context. It is a planning-level reference—not PFAS testing or proof of a Plett Road WWTP contamination pathway.</p>
+            </div>
+            <a href="/catalog/groundwater-hydrogeology">View source record</a>
+          </div>
+          <div className="papadopulos-finding-grid">
+            <article>
+              <span>01</span>
+              <h3>Cadillac watershed setting</h3>
+              <p>Cadillac is identified among the largest cities in the 2,725-square-mile Muskegon River watershed. The plan places 119.4 square miles of Wexford County within that watershed. <strong>PDF 14, 22, 31.</strong></p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Regional groundwater framework</h3>
+              <p>The watershed contains extensive permeable glacial deposits and many groundwater-fed streams, while heterogeneous deposits and local clay layers can alter groundwater conditions. <strong>PDF 25–26, 37, 116, 217–220.</strong></p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Clam River flow context</h3>
+              <p>The hydrology appendix identifies the Clam River as a primary tributary and maps a long-term average flow of 134 cubic feet per second at the Vogel Center USGS station. <strong>PDF 228, 230.</strong></p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Historical WWTP finding</h3>
+              <p>The plan says it found no evidence at that time of watershed water-quality contamination by wastewater treatment plants, while excluding detailed point-source toxic-substance analysis. <strong>PDF 64, 89.</strong></p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3>No Plett Road pathway finding</h3>
+              <p>Landfill leachate appears only as a potential regional source. The plan says its table does not identify exact locations, sources or causes; it contains no PFAS testing and does not establish a Plett Road WWTP pathway. <strong>PDF 72, 74.</strong></p>
+            </article>
+          </div>
+        </section>
+
         <section className="papadopulos-finding" aria-labelledby="papadopulos-finding-title">
           <div className="papadopulos-finding-heading">
             <div className="papadopulos-finding-mark" aria-hidden="true"><Database /></div>

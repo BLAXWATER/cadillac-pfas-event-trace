@@ -27,7 +27,7 @@ test("Muskegon plan is fully reviewed and conservatively cataloged", async () =>
   assert.equal(audit.status.verified, true);
   assert.equal(audit.status.published, true);
   assert.equal(audit.status.publishedUrl, "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site");
-  assert.equal(audit.status.sitesVersion, 284);
+  assert.equal(audit.status.firstPublishedSitesVersion, 284);
 });
 
 test("Muskegon plan appears in Groundwater and Reference catalogs with a local preview", async () => {

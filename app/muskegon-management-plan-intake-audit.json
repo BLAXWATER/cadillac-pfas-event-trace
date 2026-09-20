@@ -2866,7 +2866,7 @@
     "verified": true,
     "published": true,
     "publishedUrl": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site",
-    "sitesVersion": 284,
+    "firstPublishedSitesVersion": 284,
     "verificationBasis": "Complete page-order native extraction, rendered inspection of every page, OCR and visual verification of all 53 low-text pages, hash and metadata capture, and exact-length confirmation against the official MRWA-hosted source URL."
   }
 }

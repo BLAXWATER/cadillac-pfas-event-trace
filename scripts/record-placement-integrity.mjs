@@ -9,7 +9,9 @@ const schemaPath = path.join(appDirectory, "library-placement-schema.json");
 const pagePath = path.join(appDirectory, "page.tsx");
 export const publicManifestPath = path.join(publicDirectory, "record-placement-manifest.json");
 
-function sourcePathPrefix(url) {
+function sourcePathPrefix(record) {
+  if (record.placementPrefix) return record.placementPrefix;
+  const url = record.url;
   const base = url.split("#", 1)[0];
   if (base.startsWith("/")) return decodeURIComponent(base).split("/").filter(Boolean)[0];
   try {
@@ -61,7 +63,7 @@ export async function verifyRecordPlacement({ writeManifest = false } = {}) {
     for (const record of records) {
       if (seenRecordIds.has(record.id)) failures.push(`record is assigned to more than one block: ${record.id}`);
       seenRecordIds.add(record.id);
-      const prefix = sourcePathPrefix(record.url);
+      const prefix = sourcePathPrefix(record);
       if (!prefix || !placement.pathPrefixes.includes(prefix)) {
         failures.push(`${placement.catalog}:${record.id} is stored under ${prefix ?? "an invalid path"}, expected ${placement.pathPrefixes.join(" or ")}`);
       }

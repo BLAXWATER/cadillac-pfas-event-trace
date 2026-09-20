@@ -4,7 +4,7 @@
 
 import { useMemo, useState } from "react";
 import { ArrowLeft, FileSearch, Search } from "lucide-react";
-import { bundledDocumentDownload, bundledFirstPagePreview } from "../bundled-public-assets";
+import { bundledDocumentDownload, bundledFirstPagePreview, bundledPublicAsset } from "../bundled-public-assets";
 import { documentSummary } from "../document-summary.mjs";
 import { DocumentDownloadButton } from "../document-download-button";
 import { DocumentShareButton } from "../document-share-button";
@@ -34,7 +34,7 @@ const searchableText = (record: CatalogRecord) => [
 ].filter(Boolean).join(" ").toLowerCase();
 
 function RecordCard({ record }: { record: CatalogRecord }) {
-  const preview = bundledFirstPagePreview(record.url);
+  const preview = record.preview ? bundledPublicAsset(record.preview) : bundledFirstPagePreview(record.url);
   const sourceFormat = (record.format ?? "OTHER") as SourceFormat;
   const sourceHref = bundledDocumentDownload(record.url)
     ?? sourceDownloadUrl(record.url, sourceFormat, (url) => withPdfStartPage(url));

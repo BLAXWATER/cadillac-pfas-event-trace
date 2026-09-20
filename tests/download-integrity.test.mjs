@@ -10,7 +10,7 @@ test("every document download has valid metadata and a direct delivery path", as
   assert.equal(result.records.length, placement.recordCount);
   assert.equal(result.local.length + result.external.length, result.records.length);
   assert.deepEqual(result.records.map(r=>r.id).sort(), placement.records.map(r=>r.id).sort());
-  assert.equal(result.bundledDeliveries.length + result.archiveDeliveries.length, result.records.length);
+  assert.equal(result.bundledDeliveries.length + result.archiveDeliveries.length + result.officialDeliveries.length, result.records.length);
 });
 
 test("HTML originals use immutable raw downloads rather than transformed hosted pages", async () => {

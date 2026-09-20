@@ -37,7 +37,14 @@ export function DocumentDownloadButton({ name, downloadUrl }: { name: string; do
       }, operation.signal);
       if (mounted.current) setMessage("Download started. Check your browser's downloads.");
     } catch {
-      if (mounted.current) setMessage("Download could not start. Please retry; the original is also available through Share.");
+      const fallback = document.createElement("a");
+      fallback.href = downloadUrl;
+      fallback.target = "_blank";
+      fallback.rel = "noopener noreferrer";
+      document.body.appendChild(fallback);
+      fallback.click();
+      fallback.remove();
+      if (mounted.current) setMessage("The original opened in a new tab. Use your browser's download control to save it.");
     } finally {
       window.clearTimeout(timeout);
       controller.current = null;

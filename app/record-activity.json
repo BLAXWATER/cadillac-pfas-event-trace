@@ -9,86 +9,9 @@
       "addedAt": "2026-09-16T08:34:46-04:00",
       "fingerprint": "479ee3bcb628813d36933e1519a6bc5b5c5366da895af4cd0596f70b98a13b35"
     },
-    "/dmr-docs/088-6f979a1fd6cd.pdf": {
-      "updatedAt": "2026-09-15T14:44:39-04:00",
-      "fingerprint": "10807fd40950989bfda9ef65a1a6330dc30c7bf852ce7c65aa89304fe58bf578"
-    },
     "/dmr-docs/273-d116d6d3b972.pdf": {
       "addedAt": "2026-09-17T09:02:49-04:00",
       "fingerprint": "0c7ec18045ab5d1d05508495f0e96b51602e1498246d89de21faa5ad429213e0"
-    },
-    "/findings-docs/008-5b67e1ed1d5c.pdf": {
-      "updatedAt": "2026-09-14T23:43:33-04:00",
-      "fingerprint": "f1d7c788e70d1ac6c7e9420301c7ae8e603798b5595dc51e4be33ccb676937b1"
-    },
-    "/findings-docs/017-b0276675116f.pdf": {
-      "updatedAt": "2026-09-15T00:39:17-04:00",
-      "fingerprint": "6aff3e5dda5ef4f40ccaa7f9ff15db1e87a6a203b7cbae6c95f8c51c770404f0"
-    },
-    "/findings-docs/018-be4038bf5cd5.pdf": {
-      "updatedAt": "2026-09-14T22:07:03-04:00",
-      "fingerprint": "48a58d3b0663853f387e5648bdca7b635cb4bf781df6ed86d18a923a4ff180a0"
-    },
-    "/findings-docs/030-03967a1eee7e.pdf": {
-      "updatedAt": "2026-09-15T00:10:01-04:00",
-      "fingerprint": "71389e303c04b9a39a718272f1bdedb48a58e5193189d6c7b4550757c4f1b664"
-    },
-    "/findings-docs/045-25d3c10b9ea8.pdf": {
-      "updatedAt": "2026-09-15T00:57:57-04:00",
-      "fingerprint": "ef8dd595635d577f65b38895348f9217eb2c643940dc63509f8e3aeae2da697f"
-    },
-    "/findings-docs/100-850f00b27330.pdf": {
-      "updatedAt": "2026-09-15T00:39:17-04:00",
-      "fingerprint": "59c56f1249c52151c682ee5137cb794d2e2301dda0840a52da2a2e34648c7df8"
-    },
-    "/findings-docs/122-e9b5255695c3.pdf": {
-      "updatedAt": "2026-09-14T14:46:32-04:00",
-      "fingerprint": "b1105036badea1b1a0e8a5f82f5f85f26896f11c065d965bb391b9e01d5259b2"
-    },
-    "/findings-docs/156-2944aeb34f99.pdf": {
-      "updatedAt": "2026-09-15T00:39:17-04:00",
-      "fingerprint": "9d9af04fd539095efd5643b287b7a45663ec3bf4ea28a5446159198c6e8ec61e"
-    },
-    "/findings-docs/197-16057f68d1d5.pdf": {
-      "addedAt": "2026-09-14T14:06:24-04:00",
-      "fingerprint": "a72053ff0e9101fd8c16a1023294ec4490682364ac834d8723fa6cccf3746a21"
-    },
-    "/findings-docs/1988-cadillac-ri-234880.pdf": {
-      "addedAt": "2026-09-14T14:06:24-04:00",
-      "fingerprint": "7036b36aa6308c3b79cdfec06affaf531492f5d4c1513e28afc4d3e8a676b768"
-    },
-    "/findings-docs/199-c1524e21ac46.pdf": {
-      "addedAt": "2026-09-14T14:40:47-04:00",
-      "fingerprint": "4339cb97cf53537c43d0525a991c7b1deb5105adbf3b9365c7f34cc4f11b4ba5"
-    },
-    "/findings-docs/200-07119f8b3cdf.pdf": {
-      "addedAt": "2026-09-14T14:40:47-04:00",
-      "fingerprint": "8c899a4e52c1f6d0ab380b67915a61bec14801936de179b325ac912198cde39f"
-    },
-    "/findings-docs/201-962cc6781463.pdf": {
-      "addedAt": "2026-09-14T14:40:47-04:00",
-      "fingerprint": "301af2c2654ff6ba20235177fa73753a5af515ef1a14a5055eead79a3896b80a"
-    },
-    "/findings-docs/202-82254e0c3a95.pdf": {
-      "addedAt": "2026-09-14T14:40:47-04:00",
-      "fingerprint": "9306c4835da732326987d55b9c0da62a8f066666b74ab12f4e7295e589545b00"
-    },
-    "/findings-docs/203-c902da6a24fb.7z": {
-      "addedAt": "2026-09-14T16:30:03-04:00",
-      "updatedAt": "2026-09-14T16:32:56-04:00",
-      "fingerprint": "6d4498007d9d3ffb6ada134d073e3939dd01ac70a5120180b23d6c8bbd4878c6"
-    },
-    "/findings-docs/204-f9c021f6fa7a.pdf": {
-      "addedAt": "2026-09-14T21:49:59-04:00",
-      "fingerprint": "2684fcb450ff5fab6cd2539e58e5c32a6837b93186b30c995947375ece233c39"
-    },
-    "/findings-docs/205-99dc30a27739.pdf": {
-      "addedAt": "2026-09-14T22:46:10-04:00",
-      "fingerprint": "3e5c4414c10986cf3f42fed36d18edad12649b2a7ee973c7c7253f492df715f4"
-    },
-    "/findings-docs/206-df0a9fe43a4c.pdf": {
-      "addedAt": "2026-09-14T23:28:10-04:00",
-      "fingerprint": "6ca600eb5625db95a6447838fcc260128a24f7babfea1a3c37fd091f15be7dcf"
     },
     "/findings-docs/207-caaf3ea8f891.pdf": {
       "addedAt": "2026-09-18T14:58:08-04:00",
@@ -110,10 +33,6 @@
       "updatedAt": "2026-09-16T08:34:46-04:00",
       "fingerprint": "bf54044ebedffb9d212d4908da735039270c7e445067c515858a7df4a5a05240"
     },
-    "/npdes-docs/038-8191c7e18aac.pdf": {
-      "updatedAt": "2026-09-14T14:46:32-04:00",
-      "fingerprint": "01143f144af67df60f3d8205299252b5d6153ffc0facbe5caf751dcabc7540f3"
-    },
     "/npdes-docs/045-49e091247101.pdf": {
       "updatedAt": "2026-09-16T09:19:08-04:00",
       "fingerprint": "35d8b0085a168f8b351a9aaf7439119f324154c9b9bf484c573cedf8e89aa23e"
@@ -134,41 +53,9 @@
       "updatedAt": "2026-09-16T09:19:08-04:00",
       "fingerprint": "91c9d6a59dd32df4fa704f5541aa4443efffaae4dab27739fc09d246dea65ed4"
     },
-    "/process-site-docs/process-site-021-6c2e73d85da0.pdf": {
-      "updatedAt": "2026-09-15T00:39:17-04:00",
-      "fingerprint": "e416ff541ad4fa24dec73666bd4f872549d0f526e14e566c43e7733c8ac3cf2f"
-    },
-    "/wexford-docs/001-7c991baaf1e9.pdf": {
-      "updatedAt": "2026-09-15T14:30:20-04:00",
-      "fingerprint": "941bf4d41a43280b67f2375f84f925f02198147b0886ecc50abe35875b2eddaa"
-    },
-    "/wexford-docs/014-a6e913ab7006.pdf": {
-      "updatedAt": "2026-09-14T14:49:59-04:00",
-      "fingerprint": "c02f3452c0c30f474ea78ab0b54e4473074e717a9bdcee1c64ace40c28f0e3b4"
-    },
-    "/wexford-docs/017-4b475079a927.pdf": {
-      "updatedAt": "2026-09-14T14:06:24-04:00",
-      "fingerprint": "b2830857d3244bdc882969278afa675f061ff4a7c914942f95cba32cb9f7c772"
-    },
-    "/wexford-docs/020-9ad6d46eb20b.pdf": {
-      "updatedAt": "2026-09-14T14:06:24-04:00",
-      "fingerprint": "b74710e9ec0712ecf3a672c94f1f3a89f6fb5f2f599b9be8062e8f968c478743"
-    },
-    "/wexford-docs/024-069dda9efa5b.pdf": {
-      "updatedAt": "2026-09-15T00:39:17-04:00",
-      "fingerprint": "d806d4daab5e1ffaabc7d3d437208414b59012dc762e648900e345858a484776"
-    },
-    "/wexford-docs/027-b6b5e1c0bddb.pdf": {
-      "updatedAt": "2026-09-14T14:40:47-04:00",
-      "fingerprint": "1e7fec0f5c1339d5ebfc792e8ac71008fbe6fd2e122d6e834df844970c9d7414"
-    },
-    "/wexford-docs/110-fb263b3ea6c1.pdf": {
-      "updatedAt": "2026-09-14T23:28:10-04:00",
-      "fingerprint": "8b8b8fa49568654b1199c661bae76cb29a6eb1a7cbe0e1bcb6703e76cafa990a"
-    },
-    "/wexford-docs/116-1406440ae1fc.pdf": {
-      "addedAt": "2026-09-14T21:20:04-04:00",
-      "fingerprint": "e56db33b5c8090be3ce03853b03727114ef0ff24b2a63805a0ef8b25f72a78f2"
+    "https://mrwa.org/wp-content/uploads/repository/MuskegonManagementPlan.pdf": {
+      "addedAt": "2026-09-20T21:58:11.633Z",
+      "fingerprint": "a44b3fce63f66dd9fe4f102e7115ebc924ab3bdfd61f455578cdb6117bd37c27"
     }
   }
 }

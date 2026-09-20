@@ -24,6 +24,9 @@ export type CatalogRecord = {
   size?: number | null;
   description?: string | null;
   sha256?: string | null;
+  preview?: string | null;
+  placementPrefix?: string | null;
+  officialSource?: boolean;
 };
 
 export type CatalogPageConfig = {
@@ -240,7 +243,10 @@ const categoryPages = [
     eyebrow: "REFERENCE DATA",
     title: "Reference records",
     description: "Reference exports, tables and supporting datasets used to cross-check the documentary archive.",
-    documents: uniqueRecords(referenceDocuments, supplementalRecords.filter((record) => record.type === "EPA administrative-record index")),
+    documents: uniqueRecords(referenceDocuments, supplementalRecords.filter((record) => [
+      "EPA administrative-record index",
+      "Watershed management plan and hydrologic reference",
+    ].includes(record.type ?? ""))),
   },
   {
     slug: "groundwater-hydrogeology",

@@ -57,7 +57,10 @@ test('download control remains on the portal and cleans up local Blob URLs',asyn
   assert.match(src,/if \(controller.current\) return/);
   assert.doesNotMatch(src,/return \(\) => controller.current\?\.abort/);
   assert.match(src,/window.clearTimeout\(timeout\)/);
-  assert.doesNotMatch(src,/target\s*=|window.open|location.href/);
+  assert.match(src,/fallback\.target = "_blank"/);
+  assert.match(src,/fallback\.rel = "noopener noreferrer"/);
+  assert.match(src,/The original opened in a new tab/);
+  assert.doesNotMatch(src,/window.open|location.href/);
   assert.equal(documentDownloadFilename('path/a\\b\r\n.pdf'),'path_a_b__.pdf');
 });
 

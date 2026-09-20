@@ -74,6 +74,16 @@ export async function loadDownloadDeliveryPlan(inputRecords) {
   return records.map((row) => {
     const baseUrl = row.url.split("#", 1)[0];
     const pinned = row.url.startsWith("/") ? undefined : parsePinnedRepositoryUrl(row.url);
+    if (row.officialSource === true) {
+      try {
+        const direct = new URL(baseUrl);
+        if (direct.protocol === "https:") {
+          return { row, kind: "official", publicPath: undefined, source: { rawUrl: direct.href } };
+        }
+      } catch {
+        return { row, kind: "invalid", publicPath: undefined, source: undefined };
+      }
+    }
     const publicPath = row.url.startsWith("/")
       ? decodeURIComponent(baseUrl)
       : pinned
@@ -134,6 +144,7 @@ export async function verifyCatalogIntegrity() {
   const deliveries = await loadDownloadDeliveryPlan(records);
   const bundledDeliveries = deliveries.filter((entry) => entry.kind === "bundled");
   const archiveDeliveries = deliveries.filter((entry) => entry.kind === "archive");
+  const officialDeliveries = deliveries.filter((entry) => entry.kind === "official");
   const failures = [];
   const verifiedLocalPaths = new Set();
 
@@ -166,6 +177,11 @@ export async function verifyCatalogIntegrity() {
     if (direct.hostname !== "raw.githubusercontent.com") failures.push(`${row.catalog}:${row.id} does not use direct file delivery`);
     if (direct.hash) failures.push(`${row.catalog}:${row.id} download URL contains a fragment`);
   }
+  for (const { row, source } of officialDeliveries) {
+    const direct = new URL(source.rawUrl);
+    if (direct.protocol !== "https:") failures.push(`${row.catalog}:${row.id} official source is not HTTPS`);
+    if (direct.hash) failures.push(`${row.catalog}:${row.id} official source URL contains a fragment`);
+  }
 
   const metadata = gitBlobMetadata(archiveDeliveries.map(({ source }) => source.spec));
   metadata.forEach((line, index) => {
@@ -182,7 +198,7 @@ export async function verifyCatalogIntegrity() {
     if (Number(match[1]) !== row.size) failures.push(`${row.catalog}:${row.id} repository size ${match[1]} != ${row.size}`);
   });
 
-  return { records, local, external, deliveries, bundledDeliveries, archiveDeliveries, failures };
+  return { records, local, external, deliveries, bundledDeliveries, archiveDeliveries, officialDeliveries, failures };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -193,6 +209,6 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     if (result.failures.length > 25) console.error(`- ... ${result.failures.length - 25} more`);
     process.exitCode = 1;
   } else {
-    console.log(`Catalog integrity passed: ${result.records.length} records (${result.bundledDeliveries.length} bundled deliveries, ${result.archiveDeliveries.length} public archive deliveries).`);
+    console.log(`Catalog integrity passed: ${result.records.length} records (${result.bundledDeliveries.length} bundled deliveries, ${result.archiveDeliveries.length} public archive deliveries, ${result.officialDeliveries.length} official-source deliveries).`);
   }
 }

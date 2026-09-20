@@ -120,6 +120,7 @@ type CatalogDocument = {
   year?: string | null;
   description?: string | null;
   type?: string | null;
+  preview?: string | null;
 };
 type Event = {
   year: string;
@@ -156,6 +157,9 @@ type LibraryDocument = {
   format?: string;
   pages?: number | null;
   description?: string;
+  preview?: string | null;
+  placementPrefix?: string | null;
+  officialSource?: boolean;
   matchingSources?: readonly MatchingSource[];
 };
 
@@ -3957,7 +3961,7 @@ function catalogSource(document: CatalogDocument): Source {
   return {
     name: document.name,
     url: document.url,
-    preview: bundledFirstPagePreview(document.url),
+    preview: document.preview ? bundledPublicAsset(document.preview) : bundledFirstPagePreview(document.url),
     pages: document.pages ?? undefined,
     format,
     role: "Primary source",

@@ -88,15 +88,19 @@ test("catalog records are unique and source metadata matches local files", async
       } else {
         const url = new URL(row.url);
         assert.equal(url.protocol, "https:", `${catalog.name}:${row.id} is not HTTPS`);
-        assert.equal(url.hostname, "github.com", `${catalog.name}:${row.id} uses an unexpected archive host`);
-        assert.match(url.pathname, /^\/(?:cazey43|BLAXWATER)\/cadillac-pfas-event-trace\/blob\/[0-9a-f]{40}\//, `${catalog.name}:${row.id} is not pinned to a source commit`);
+        if (row.id === "209-781d1714fe06") {
+          assert.equal(url.href, "https://mrwa.org/wp-content/uploads/repository/MuskegonManagementPlan.pdf");
+        } else {
+          assert.equal(url.hostname, "github.com", `${catalog.name}:${row.id} uses an unexpected archive host`);
+          assert.match(url.pathname, /^\/(?:cazey43|BLAXWATER)\/cadillac-pfas-event-trace\/blob\/[0-9a-f]{40}\//, `${catalog.name}:${row.id} is not pinned to a source commit`);
+        }
         externalFiles += 1;
       }
     }
   }
 
-  assert.equal(localFiles, 807);
-  assert.equal(externalFiles, 816);
+  assert.equal(localFiles, 826);
+  assert.equal(externalFiles, 819);
 });
 
 test("every pinned GitHub source resolves to its recorded repository blob", async () => {

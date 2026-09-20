@@ -4,12 +4,25 @@ import { createHash } from "node:crypto";
 const concurrency = Math.max(1, Number(process.env.DOWNLOAD_AUDIT_CONCURRENCY ?? 12));
 const timeoutMs = Math.max(1_000, Number(process.env.DOWNLOAD_AUDIT_TIMEOUT_MS ?? 30_000));
 const records = await loadDocumentRecords();
-const deliveries = (await loadDownloadDeliveryPlan(records)).filter((entry) => entry.kind === "archive");
+const deliveries = (await loadDownloadDeliveryPlan(records)).filter((entry) => entry.kind === "archive" || entry.kind === "official");
 const failures = [];
 let cursor = 0;
 
 async function inspect(delivery) {
   const { row, source } = delivery;
+
+  if (delivery.kind === "official") {
+    const response = await fetch(source.rawUrl, {
+      method: "HEAD",
+      redirect: "follow",
+      signal: AbortSignal.timeout(timeoutMs),
+      headers: { "User-Agent": "cadillac-pfas-anonymous-integrity-audit" },
+    });
+    if (!response.ok) return `${row.catalog}:${row.id} official source returned HTTP ${response.status}`;
+    const length = Number(response.headers.get("content-length"));
+    if (Number.isFinite(length) && length !== row.size) return `${row.catalog}:${row.id} official source size ${length} != ${row.size}`;
+    return undefined;
+  }
 
   const response = await fetch(source.rawUrl, {
     method: "HEAD",

@@ -1,0 +1,2870 @@
+{
+  "recordId": "209-781d1714fe06",
+  "originalFilename": "MuskegonManagementPlan.pdf",
+  "receivedPath": "C:/Users/casey/OneDrive/Desktop/MuskegonManagementPlan.pdf",
+  "availableLocalPath": "C:/Users/casey/OneDrive/Desktop/Already in portal/MuskegonManagementPlan.pdf",
+  "officialSourceUrl": "https://mrwa.org/wp-content/uploads/repository/MuskegonManagementPlan.pdf",
+  "sha256": "781d1714fe069941098f928cf15fb58fe2678e36d5495b92a36d5fbe18249d5e",
+  "bytes": 50690086,
+  "pages": 449,
+  "metadata": {
+    "title": "Muskegon_Management_Plan",
+    "author": "wri-student-desk",
+    "creator": "Microsoft Word",
+    "producer": "Acrobat PDFWriter 4.0",
+    "created": "2002-08-20T10:16:12-04:00",
+    "modified": "2015-06-09T16:40:09-04:00"
+  },
+  "identity": {
+    "title": "Muskegon River Watershed Project — Volume I Management Plan and Volume II Appendices",
+    "reportNumber": "MR-2002-4",
+    "issued": "August 2002",
+    "submittedBy": "Sarah U’Ren, Project Manager, Annis Water Resources Institute, Grand Valley State University",
+    "fundingContext": "Clean Water Act Section 319 planning project funded through EPA and administered by MDEQ, with local partner match."
+  },
+  "classification": {
+    "primary": "Groundwater & Hydrogeology",
+    "secondary": "Reference Records",
+    "archive": "Additional Records",
+    "basis": "Regional watershed hydrology, geology, streamflow, water-quality planning, local-government planning, and appendices; it is not a Cadillac-specific analytical or PFAS source record."
+  },
+  "reviewCoverage": {
+    "pageOrder": "1-449, top to bottom",
+    "renderedInspection": "All 449 pages reviewed in 19 numbered contact sheets generated from 72-DPI page renders.",
+    "nativeExtraction": "All 449 pages extracted in page order; 692,870 normalized characters.",
+    "ocr": {
+      "engine": "RapidOCR ONNX Runtime",
+      "renderDpi": 160,
+      "pages": [
+        21,
+        23,
+        28,
+        29,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        44,
+        45,
+        48,
+        49,
+        50,
+        60,
+        96,
+        97,
+        98,
+        99,
+        105,
+        115,
+        116,
+        117,
+        118,
+        133,
+        148,
+        149,
+        150,
+        167,
+        168,
+        169,
+        174,
+        196,
+        208,
+        209,
+        217,
+        225,
+        227,
+        230,
+        246,
+        261,
+        262,
+        263,
+        276,
+        310,
+        322,
+        378,
+        381,
+        385,
+        438,
+        439
+      ],
+      "reason": "Native text below 80 characters or absent; the set includes maps, dividers, forms and scan-heavy pages.",
+      "output": "output/muskegon-management-plan/ocr-low-text-pages.jsonl"
+    },
+    "pageReview": [
+      {
+        "page": 1,
+        "nativeCharacters": 175,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 2,
+        "nativeCharacters": 619,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 3,
+        "nativeCharacters": 244,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 4,
+        "nativeCharacters": 2227,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 5,
+        "nativeCharacters": 1840,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 6,
+        "nativeCharacters": 2118,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 7,
+        "nativeCharacters": 583,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 8,
+        "nativeCharacters": 2343,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 9,
+        "nativeCharacters": 1395,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 10,
+        "nativeCharacters": 2137,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 11,
+        "nativeCharacters": 2775,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 12,
+        "nativeCharacters": 1012,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 13,
+        "nativeCharacters": 790,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 14,
+        "nativeCharacters": 2888,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 15,
+        "nativeCharacters": 3524,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 16,
+        "nativeCharacters": 3391,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 17,
+        "nativeCharacters": 3340,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 18,
+        "nativeCharacters": 2103,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 19,
+        "nativeCharacters": 2578,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 20,
+        "nativeCharacters": 2243,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 21,
+        "nativeCharacters": 30,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 22,
+        "nativeCharacters": 1474,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 23,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 24,
+        "nativeCharacters": 2984,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 25,
+        "nativeCharacters": 2340,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 26,
+        "nativeCharacters": 2421,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 27,
+        "nativeCharacters": 914,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 28,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 29,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 30,
+        "nativeCharacters": 407,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 31,
+        "nativeCharacters": 1241,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 32,
+        "nativeCharacters": 3373,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 33,
+        "nativeCharacters": 3403,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 34,
+        "nativeCharacters": 2694,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 35,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 36,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 37,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 38,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 39,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 40,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 41,
+        "nativeCharacters": 1223,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 42,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 43,
+        "nativeCharacters": 2105,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 44,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 45,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 46,
+        "nativeCharacters": 1719,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 47,
+        "nativeCharacters": 1819,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 48,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 49,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 50,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 51,
+        "nativeCharacters": 3480,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 52,
+        "nativeCharacters": 2309,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 53,
+        "nativeCharacters": 1071,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 54,
+        "nativeCharacters": 104,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 55,
+        "nativeCharacters": 149,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 56,
+        "nativeCharacters": 2521,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 57,
+        "nativeCharacters": 396,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 58,
+        "nativeCharacters": 2176,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 59,
+        "nativeCharacters": 658,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 60,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 61,
+        "nativeCharacters": 1371,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 62,
+        "nativeCharacters": 1562,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 63,
+        "nativeCharacters": 1668,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 64,
+        "nativeCharacters": 1726,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 65,
+        "nativeCharacters": 2369,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 66,
+        "nativeCharacters": 2338,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 67,
+        "nativeCharacters": 1550,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 68,
+        "nativeCharacters": 478,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 69,
+        "nativeCharacters": 1700,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 70,
+        "nativeCharacters": 1706,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 71,
+        "nativeCharacters": 732,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 72,
+        "nativeCharacters": 1408,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 73,
+        "nativeCharacters": 745,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 74,
+        "nativeCharacters": 1234,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 75,
+        "nativeCharacters": 1272,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 76,
+        "nativeCharacters": 1278,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 77,
+        "nativeCharacters": 1572,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 78,
+        "nativeCharacters": 2655,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 79,
+        "nativeCharacters": 2758,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 80,
+        "nativeCharacters": 3226,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 81,
+        "nativeCharacters": 2632,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 82,
+        "nativeCharacters": 3432,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 83,
+        "nativeCharacters": 3187,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 84,
+        "nativeCharacters": 2481,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 85,
+        "nativeCharacters": 1306,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 86,
+        "nativeCharacters": 2826,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 87,
+        "nativeCharacters": 1966,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 88,
+        "nativeCharacters": 2469,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 89,
+        "nativeCharacters": 3274,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 90,
+        "nativeCharacters": 2570,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 91,
+        "nativeCharacters": 2587,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 92,
+        "nativeCharacters": 1941,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 93,
+        "nativeCharacters": 2944,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 94,
+        "nativeCharacters": 1045,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 95,
+        "nativeCharacters": 1310,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 96,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 97,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 98,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 99,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 100,
+        "nativeCharacters": 1134,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 101,
+        "nativeCharacters": 913,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 102,
+        "nativeCharacters": 852,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 103,
+        "nativeCharacters": 1297,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 104,
+        "nativeCharacters": 2151,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 105,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 106,
+        "nativeCharacters": 3180,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 107,
+        "nativeCharacters": 485,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 108,
+        "nativeCharacters": 3095,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 109,
+        "nativeCharacters": 1779,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 110,
+        "nativeCharacters": 1327,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 111,
+        "nativeCharacters": 1573,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 112,
+        "nativeCharacters": 1567,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 113,
+        "nativeCharacters": 732,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 114,
+        "nativeCharacters": 1413,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 115,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 116,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 117,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 118,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 119,
+        "nativeCharacters": 2891,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 120,
+        "nativeCharacters": 465,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 121,
+        "nativeCharacters": 2798,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 122,
+        "nativeCharacters": 2080,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 123,
+        "nativeCharacters": 3159,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 124,
+        "nativeCharacters": 3364,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 125,
+        "nativeCharacters": 3233,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 126,
+        "nativeCharacters": 1083,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 127,
+        "nativeCharacters": 1393,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 128,
+        "nativeCharacters": 1782,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 129,
+        "nativeCharacters": 1188,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 130,
+        "nativeCharacters": 1108,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 131,
+        "nativeCharacters": 1533,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 132,
+        "nativeCharacters": 1724,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 133,
+        "nativeCharacters": 30,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 134,
+        "nativeCharacters": 2539,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 135,
+        "nativeCharacters": 3483,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 136,
+        "nativeCharacters": 2539,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 137,
+        "nativeCharacters": 1191,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 138,
+        "nativeCharacters": 1749,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 139,
+        "nativeCharacters": 2118,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 140,
+        "nativeCharacters": 2019,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 141,
+        "nativeCharacters": 1787,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 142,
+        "nativeCharacters": 1972,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 143,
+        "nativeCharacters": 1818,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 144,
+        "nativeCharacters": 1147,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 145,
+        "nativeCharacters": 1291,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 146,
+        "nativeCharacters": 3512,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 147,
+        "nativeCharacters": 883,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 148,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 149,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 150,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 151,
+        "nativeCharacters": 2389,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 152,
+        "nativeCharacters": 2079,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 153,
+        "nativeCharacters": 1278,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 154,
+        "nativeCharacters": 1928,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 155,
+        "nativeCharacters": 1984,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 156,
+        "nativeCharacters": 1966,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 157,
+        "nativeCharacters": 2022,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 158,
+        "nativeCharacters": 1912,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 159,
+        "nativeCharacters": 2004,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 160,
+        "nativeCharacters": 1523,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 161,
+        "nativeCharacters": 2096,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 162,
+        "nativeCharacters": 1890,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 163,
+        "nativeCharacters": 1107,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 164,
+        "nativeCharacters": 1250,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 165,
+        "nativeCharacters": 2920,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 166,
+        "nativeCharacters": 2083,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 167,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 168,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 169,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 170,
+        "nativeCharacters": 2047,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 171,
+        "nativeCharacters": 2309,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 172,
+        "nativeCharacters": 3326,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 173,
+        "nativeCharacters": 276,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 174,
+        "nativeCharacters": 29,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 175,
+        "nativeCharacters": 1084,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 176,
+        "nativeCharacters": 2576,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 177,
+        "nativeCharacters": 2002,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 178,
+        "nativeCharacters": 1832,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 179,
+        "nativeCharacters": 2089,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 180,
+        "nativeCharacters": 994,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 181,
+        "nativeCharacters": 1949,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 182,
+        "nativeCharacters": 1951,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 183,
+        "nativeCharacters": 929,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 184,
+        "nativeCharacters": 1606,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 185,
+        "nativeCharacters": 1834,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 186,
+        "nativeCharacters": 1643,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 187,
+        "nativeCharacters": 1568,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 188,
+        "nativeCharacters": 1027,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 189,
+        "nativeCharacters": 1277,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 190,
+        "nativeCharacters": 835,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 191,
+        "nativeCharacters": 1378,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 192,
+        "nativeCharacters": 2351,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 193,
+        "nativeCharacters": 710,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 194,
+        "nativeCharacters": 2776,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 195,
+        "nativeCharacters": 3251,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 196,
+        "nativeCharacters": 24,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 197,
+        "nativeCharacters": 2807,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 198,
+        "nativeCharacters": 1698,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 199,
+        "nativeCharacters": 1905,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 200,
+        "nativeCharacters": 1439,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 201,
+        "nativeCharacters": 1765,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 202,
+        "nativeCharacters": 2062,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 203,
+        "nativeCharacters": 2219,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 204,
+        "nativeCharacters": 2424,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 205,
+        "nativeCharacters": 187,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 206,
+        "nativeCharacters": 619,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 207,
+        "nativeCharacters": 257,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 208,
+        "nativeCharacters": 71,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 209,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 210,
+        "nativeCharacters": 169,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 211,
+        "nativeCharacters": 2549,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 212,
+        "nativeCharacters": 3098,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 213,
+        "nativeCharacters": 3042,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 214,
+        "nativeCharacters": 2661,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 215,
+        "nativeCharacters": 3184,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 216,
+        "nativeCharacters": 1856,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 217,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 218,
+        "nativeCharacters": 2772,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 219,
+        "nativeCharacters": 2237,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 220,
+        "nativeCharacters": 1923,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 221,
+        "nativeCharacters": 1433,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 222,
+        "nativeCharacters": 2491,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 223,
+        "nativeCharacters": 3410,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 224,
+        "nativeCharacters": 479,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 225,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 226,
+        "nativeCharacters": 1052,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 227,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 228,
+        "nativeCharacters": 1886,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 229,
+        "nativeCharacters": 786,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 230,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 231,
+        "nativeCharacters": 3252,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 232,
+        "nativeCharacters": 2918,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 233,
+        "nativeCharacters": 2703,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 234,
+        "nativeCharacters": 2596,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 235,
+        "nativeCharacters": 3095,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 236,
+        "nativeCharacters": 2363,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 237,
+        "nativeCharacters": 2141,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 238,
+        "nativeCharacters": 1986,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 239,
+        "nativeCharacters": 2254,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 240,
+        "nativeCharacters": 2470,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 241,
+        "nativeCharacters": 1760,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 242,
+        "nativeCharacters": 1475,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 243,
+        "nativeCharacters": 188,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 244,
+        "nativeCharacters": 1128,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 245,
+        "nativeCharacters": 732,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 246,
+        "nativeCharacters": 78,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 247,
+        "nativeCharacters": 1676,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 248,
+        "nativeCharacters": 797,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 249,
+        "nativeCharacters": 1262,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 250,
+        "nativeCharacters": 1400,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 251,
+        "nativeCharacters": 1188,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 252,
+        "nativeCharacters": 629,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 253,
+        "nativeCharacters": 1187,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 254,
+        "nativeCharacters": 1024,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 255,
+        "nativeCharacters": 327,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 256,
+        "nativeCharacters": 1000,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 257,
+        "nativeCharacters": 900,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 258,
+        "nativeCharacters": 144,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 259,
+        "nativeCharacters": 2384,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 260,
+        "nativeCharacters": 1808,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 261,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 262,
+        "nativeCharacters": 0,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 263,
+        "nativeCharacters": 75,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 264,
+        "nativeCharacters": 603,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 265,
+        "nativeCharacters": 643,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 266,
+        "nativeCharacters": 740,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 267,
+        "nativeCharacters": 658,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 268,
+        "nativeCharacters": 734,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 269,
+        "nativeCharacters": 525,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 270,
+        "nativeCharacters": 542,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 271,
+        "nativeCharacters": 613,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 272,
+        "nativeCharacters": 679,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 273,
+        "nativeCharacters": 628,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 274,
+        "nativeCharacters": 699,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 275,
+        "nativeCharacters": 504,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 276,
+        "nativeCharacters": 71,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 277,
+        "nativeCharacters": 873,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 278,
+        "nativeCharacters": 1028,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 279,
+        "nativeCharacters": 3172,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 280,
+        "nativeCharacters": 2706,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 281,
+        "nativeCharacters": 2580,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 282,
+        "nativeCharacters": 2005,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 283,
+        "nativeCharacters": 1126,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 284,
+        "nativeCharacters": 1169,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 285,
+        "nativeCharacters": 1976,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 286,
+        "nativeCharacters": 2548,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 287,
+        "nativeCharacters": 577,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 288,
+        "nativeCharacters": 2251,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 289,
+        "nativeCharacters": 1380,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 290,
+        "nativeCharacters": 1630,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 291,
+        "nativeCharacters": 2485,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 292,
+        "nativeCharacters": 3043,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 293,
+        "nativeCharacters": 3017,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 294,
+        "nativeCharacters": 1355,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 295,
+        "nativeCharacters": 2955,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 296,
+        "nativeCharacters": 2913,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 297,
+        "nativeCharacters": 1666,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 298,
+        "nativeCharacters": 2194,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 299,
+        "nativeCharacters": 2308,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 300,
+        "nativeCharacters": 1307,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 301,
+        "nativeCharacters": 2512,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 302,
+        "nativeCharacters": 1220,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 303,
+        "nativeCharacters": 2918,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 304,
+        "nativeCharacters": 584,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 305,
+        "nativeCharacters": 2235,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 306,
+        "nativeCharacters": 1671,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 307,
+        "nativeCharacters": 2183,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 308,
+        "nativeCharacters": 3343,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 309,
+        "nativeCharacters": 577,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 310,
+        "nativeCharacters": 36,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 311,
+        "nativeCharacters": 2454,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 312,
+        "nativeCharacters": 1921,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 313,
+        "nativeCharacters": 2166,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 314,
+        "nativeCharacters": 1780,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 315,
+        "nativeCharacters": 1947,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 316,
+        "nativeCharacters": 789,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 317,
+        "nativeCharacters": 2296,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 318,
+        "nativeCharacters": 2165,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 319,
+        "nativeCharacters": 562,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 320,
+        "nativeCharacters": 2032,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 321,
+        "nativeCharacters": 1242,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 322,
+        "nativeCharacters": 59,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 323,
+        "nativeCharacters": 1824,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 324,
+        "nativeCharacters": 1630,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 325,
+        "nativeCharacters": 1555,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 326,
+        "nativeCharacters": 1014,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 327,
+        "nativeCharacters": 1263,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 328,
+        "nativeCharacters": 823,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 329,
+        "nativeCharacters": 1365,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 330,
+        "nativeCharacters": 2022,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 331,
+        "nativeCharacters": 267,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 332,
+        "nativeCharacters": 140,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 333,
+        "nativeCharacters": 304,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 334,
+        "nativeCharacters": 2045,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 335,
+        "nativeCharacters": 2844,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 336,
+        "nativeCharacters": 2092,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 337,
+        "nativeCharacters": 2239,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 338,
+        "nativeCharacters": 2169,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 339,
+        "nativeCharacters": 2514,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 340,
+        "nativeCharacters": 2578,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 341,
+        "nativeCharacters": 1479,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 342,
+        "nativeCharacters": 1387,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 343,
+        "nativeCharacters": 1940,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 344,
+        "nativeCharacters": 1863,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 345,
+        "nativeCharacters": 1793,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 346,
+        "nativeCharacters": 291,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 347,
+        "nativeCharacters": 534,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 348,
+        "nativeCharacters": 617,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 349,
+        "nativeCharacters": 456,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 350,
+        "nativeCharacters": 2149,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 351,
+        "nativeCharacters": 411,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 352,
+        "nativeCharacters": 1837,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 353,
+        "nativeCharacters": 2161,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 354,
+        "nativeCharacters": 668,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 355,
+        "nativeCharacters": 1042,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 356,
+        "nativeCharacters": 1105,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 357,
+        "nativeCharacters": 1329,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 358,
+        "nativeCharacters": 990,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 359,
+        "nativeCharacters": 2551,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 360,
+        "nativeCharacters": 2778,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 361,
+        "nativeCharacters": 3193,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 362,
+        "nativeCharacters": 2973,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 363,
+        "nativeCharacters": 761,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 364,
+        "nativeCharacters": 2303,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 365,
+        "nativeCharacters": 2087,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 366,
+        "nativeCharacters": 2188,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 367,
+        "nativeCharacters": 2195,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 368,
+        "nativeCharacters": 1472,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 369,
+        "nativeCharacters": 1642,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 370,
+        "nativeCharacters": 85,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 371,
+        "nativeCharacters": 761,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 372,
+        "nativeCharacters": 725,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 373,
+        "nativeCharacters": 563,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 374,
+        "nativeCharacters": 880,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 375,
+        "nativeCharacters": 355,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 376,
+        "nativeCharacters": 607,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 377,
+        "nativeCharacters": 551,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 378,
+        "nativeCharacters": 54,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 379,
+        "nativeCharacters": 2233,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 380,
+        "nativeCharacters": 2239,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 381,
+        "nativeCharacters": 54,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 382,
+        "nativeCharacters": 128,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 383,
+        "nativeCharacters": 827,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 384,
+        "nativeCharacters": 205,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 385,
+        "nativeCharacters": 70,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 386,
+        "nativeCharacters": 2511,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 387,
+        "nativeCharacters": 2644,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 388,
+        "nativeCharacters": 3561,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 389,
+        "nativeCharacters": 3264,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 390,
+        "nativeCharacters": 3125,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 391,
+        "nativeCharacters": 2460,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 392,
+        "nativeCharacters": 1381,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 393,
+        "nativeCharacters": 1500,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 394,
+        "nativeCharacters": 1420,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 395,
+        "nativeCharacters": 1166,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 396,
+        "nativeCharacters": 1416,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 397,
+        "nativeCharacters": 939,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 398,
+        "nativeCharacters": 1496,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 399,
+        "nativeCharacters": 1813,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 400,
+        "nativeCharacters": 1736,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 401,
+        "nativeCharacters": 1916,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 402,
+        "nativeCharacters": 1529,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 403,
+        "nativeCharacters": 1518,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 404,
+        "nativeCharacters": 1859,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 405,
+        "nativeCharacters": 1088,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 406,
+        "nativeCharacters": 1795,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 407,
+        "nativeCharacters": 1783,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 408,
+        "nativeCharacters": 1882,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 409,
+        "nativeCharacters": 1379,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 410,
+        "nativeCharacters": 1583,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 411,
+        "nativeCharacters": 1459,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 412,
+        "nativeCharacters": 1975,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 413,
+        "nativeCharacters": 1680,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 414,
+        "nativeCharacters": 1572,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 415,
+        "nativeCharacters": 580,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 416,
+        "nativeCharacters": 1456,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 417,
+        "nativeCharacters": 1695,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 418,
+        "nativeCharacters": 1685,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 419,
+        "nativeCharacters": 1785,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 420,
+        "nativeCharacters": 1922,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 421,
+        "nativeCharacters": 1174,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 422,
+        "nativeCharacters": 1942,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 423,
+        "nativeCharacters": 1917,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 424,
+        "nativeCharacters": 624,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 425,
+        "nativeCharacters": 1523,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 426,
+        "nativeCharacters": 1854,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 427,
+        "nativeCharacters": 1896,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 428,
+        "nativeCharacters": 1464,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 429,
+        "nativeCharacters": 1943,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 430,
+        "nativeCharacters": 1757,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 431,
+        "nativeCharacters": 1715,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 432,
+        "nativeCharacters": 1831,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 433,
+        "nativeCharacters": 1909,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 434,
+        "nativeCharacters": 115,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 435,
+        "nativeCharacters": 1473,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 436,
+        "nativeCharacters": 1034,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 437,
+        "nativeCharacters": 1232,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 438,
+        "nativeCharacters": 2,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 439,
+        "nativeCharacters": 66,
+        "renderedReview": "reviewed",
+        "ocr": "performed-and-visually-checked"
+      },
+      {
+        "page": 440,
+        "nativeCharacters": 3483,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 441,
+        "nativeCharacters": 3369,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 442,
+        "nativeCharacters": 3552,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 443,
+        "nativeCharacters": 3604,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 444,
+        "nativeCharacters": 3712,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 445,
+        "nativeCharacters": 3646,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 446,
+        "nativeCharacters": 3617,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 447,
+        "nativeCharacters": 1745,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 448,
+        "nativeCharacters": 457,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      },
+      {
+        "page": 449,
+        "nativeCharacters": 270,
+        "renderedReview": "reviewed",
+        "ocr": "not-required"
+      }
+    ]
+  },
+  "supportedFindings": [
+    {
+      "pages": [
+        14,
+        22,
+        31
+      ],
+      "finding": "The plan describes the 2,725-square-mile Muskegon River Watershed and identifies Wexford County as 119.4 square miles of the watershed, 20.8 percent of the county and 4.4 percent of the watershed; Cadillac is identified among the largest cities within the watershed."
+    },
+    {
+      "pages": [
+        25,
+        26,
+        37,
+        116,
+        217,
+        218,
+        219,
+        220
+      ],
+      "finding": "The regional hydrologic framework includes extensive permeable glacial deposits and groundwater-fed streams, but also stresses heterogeneous deposits and local clay-controlled conditions."
+    },
+    {
+      "pages": [
+        72,
+        74
+      ],
+      "finding": "Landfill leachate appears only in a regional list of potential toxic-substance sources; the plan expressly says the table does not identify exact locations, sources or causes and requires further research."
+    },
+    {
+      "pages": [
+        64,
+        89
+      ],
+      "finding": "The plan focuses on nonpoint sources, excludes detailed point-source toxic-substance analysis, and states that it found no evidence at that time of watershed water-quality contamination by wastewater treatment plants."
+    },
+    {
+      "pages": [
+        228,
+        230
+      ],
+      "finding": "The hydrology appendix preserves Clam River regional-flow context, including a mapped long-term average of 134 cubic feet per second at the Vogel Center USGS station."
+    },
+    {
+      "pages": [
+        388,
+        389,
+        391,
+        406,
+        407,
+        412,
+        413,
+        436,
+        437,
+        440,
+        443,
+        444,
+        445
+      ],
+      "finding": "The independent evaluation and AWRI response document material methodological limits: the critical-area model was a screening starting point, the hydrologic report relied on secondary information, and site-specific investigation and monitoring were still required."
+    }
+  ],
+  "supportLimits": [
+    "No PFAS testing or PFAS source attribution appears in this 2002 plan.",
+    "The plan does not establish a Wexford Landfill-to-Cadillac WWTP-to-Plett Road pathway.",
+    "Regional susceptibility, potential-source lists and participant concerns are not site-specific findings.",
+    "Pilot-project findings concern Middle Branch River and Tamarack Creek, not Cadillac or the Wexford landfill.",
+    "The published catalog summary must preserve the evaluator’s methodological cautions and the distinction between potential and confirmed sources."
+  ],
+  "status": {
+    "received": true,
+    "extracted": true,
+    "reviewed": true,
+    "verified": true,
+    "published": false,
+    "verificationBasis": "Complete page-order native extraction, rendered inspection of every page, OCR and visual verification of all 53 low-text pages, hash and metadata capture, and exact-length confirmation against the official MRWA-hosted source URL."
+  }
+}

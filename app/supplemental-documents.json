@@ -2689,5 +2689,21 @@
     "size": 8751136,
     "sha256": "6342e4abc27e4c9938f39a55d3691f7ec54739c59505097aa120a9a7226049ca",
     "description": "September 4, 2025 EGLE memorandum documenting installation of monitoring wells GSS-1, GSS-2 and GSS-3 on July 14–16 near the soccer fields, Wexford County Fairgrounds and Bell Avenue/Plett Road (pp. 1, 3). The survey and July 17 static-water measurements support the memorandum's northwesterly groundwater-flow interpretation (pp. 2, 4–6), while the boring logs document predominantly sand with gravel at GSS-2 and GSS-3 (pp. 8–10). EGLE explicitly states that no soil or water samples were collected, so this record contains no PFAS analytical result or source attribution."
+  },
+  {
+    "id": "209-781d1714fe06",
+    "name": "MuskegonManagementPlan.pdf",
+    "url": "https://mrwa.org/wp-content/uploads/repository/MuskegonManagementPlan.pdf",
+    "officialSource": true,
+    "preview": "/optimized-source-previews/209-781d1714fe06.webp",
+    "placementPrefix": "findings-docs",
+    "year": "2002",
+    "category": "Groundwater & hydrogeology — regional watershed context",
+    "type": "Watershed management plan and hydrologic reference",
+    "format": "PDF",
+    "pages": 449,
+    "size": 50690086,
+    "sha256": "781d1714fe069941098f928cf15fb58fe2678e36d5495b92a36d5fbe18249d5e",
+    "description": "August 2002 Muskegon River Watershed Project management plan and appendices (MR-2002-4), fully reviewed through all 449 pages. It supplies regional watershed, groundwater, geology and Clam River context, including the plan's express warning that its potential-source table does not identify exact locations, sources or causes (pp. 72, 74). The plan focuses on nonpoint sources and reports no evidence at that time of watershed water-quality contamination by wastewater treatment plants (pp. 64, 89). It contains no PFAS testing, Cadillac-specific source attribution or proof of a Wexford Landfill-to-Cadillac WWTP-to-Plett Road pathway; the independent evaluation also identifies material screening-model and secondary-data limitations (pp. 386–449)."
   }
 ]

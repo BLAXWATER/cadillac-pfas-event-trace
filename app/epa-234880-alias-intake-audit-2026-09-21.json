@@ -28,7 +28,9 @@
     "extracted": true,
     "reviewed": true,
     "verified": true,
-    "published": "alias pending deployment",
+    "published": true,
+    "publishedUrl": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site",
+    "firstPublishedSitesVersion": 290,
     "verificationScope": "Identity and page equivalence are verified. Existing page-by-page findings and limitations remain attached to canonical record 198-402da04fc76d; no new substantive finding is inferred from the reoptimized copy."
   }
 }

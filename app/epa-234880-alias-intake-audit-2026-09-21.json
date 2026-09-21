@@ -1,0 +1,34 @@
+{
+  "reviewDate": "2026-09-21",
+  "recordId": "198-402da04fc76d",
+  "intakeBatch": {
+    "label": "EPA 234880 single-record alias intake",
+    "membership": 1,
+    "totalRecords": 1,
+    "note": "One indivisible PDF; the six-batch rule does not split an individual record."
+  },
+  "source": {
+    "suppliedPath": "C:/Users/casey/Downloads/234880.pdf",
+    "originalFilename": "234880.pdf",
+    "sha256": "ddd2bc1eb32fddc91b8c2653243d3755fc6d409fd6a595781ea39862d8049a60",
+    "byteSize": 8887577,
+    "pages": 169,
+    "identity": "August 1988 E.C. Jordan Cadillac Area Groundwater Contamination Remedial Investigation, FINAL DRAFT, EPA DocID 234880.",
+    "reconciliation": "Byte-identical to the previously received EPA_234880 alternate copy. It is a differently optimized PDF of canonical record 198-402da04fc76d, not a separate substantive record."
+  },
+  "comparison": {
+    "canonicalSha256": "402da04fc76d41547f45b1ecacfd9509d3fc5ce0440bc5f3be7013b3e01a4ed5",
+    "canonicalByteSize": 8905994,
+    "pageCounts": "169 supplied; 169 canonical",
+    "renderedPageComparison": "All 169 pages matched the canonical record at 36 DPI in this intake; the earlier strict review also matched all 169 normalized-text and 108-DPI rendered pages.",
+    "disposition": "Retain one canonical downloadable original and add 234880.pdf as a verified searchable filename alias."
+  },
+  "status": {
+    "received": true,
+    "extracted": true,
+    "reviewed": true,
+    "verified": true,
+    "published": "alias pending deployment",
+    "verificationScope": "Identity and page equivalence are verified. Existing page-by-page findings and limitations remain attached to canonical record 198-402da04fc76d; no new substantive finding is inferred from the reoptimized copy."
+  }
+}

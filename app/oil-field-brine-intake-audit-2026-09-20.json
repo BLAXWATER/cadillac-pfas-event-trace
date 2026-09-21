@@ -45,7 +45,9 @@
     "extracted": true,
     "reviewed": true,
     "verified": true,
-    "published": false,
+    "published": true,
+    "publishedUrl": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site",
+    "firstPublishedSitesVersion": 288,
     "verificationScope": "Source identity, page coverage and cited statements are verified against the supplied record; historical assertions were not independently re-proven."
   }
 }

@@ -61,7 +61,9 @@
     "extracted": true,
     "reviewed": true,
     "verified": true,
-    "published": "existing canonical record retained; enriched metadata and timeline event pending deployment",
+    "published": true,
+    "publishedUrl": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site",
+    "updatedSitesVersion": 288,
     "verificationScope": "Source identity, complete page coverage, decision language and cited results are verified against the supplied record. Historical measurements were not independently resampled."
   }
 }

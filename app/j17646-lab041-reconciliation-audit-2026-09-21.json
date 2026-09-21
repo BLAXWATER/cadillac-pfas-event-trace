@@ -36,6 +36,8 @@
     "extracted": true,
     "reviewed": true,
     "verified": true,
-    "published": "existing binary retained; enriched card and filename alias pending deployment"
+    "published": true,
+    "publishedUrl": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site",
+    "firstPublishedSitesVersion": 292
   }
 }

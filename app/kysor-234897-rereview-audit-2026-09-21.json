@@ -1,0 +1,67 @@
+{
+  "reviewDate": "2026-09-21",
+  "recordId": "095-b7620af87938",
+  "intakeBatch": {
+    "label": "Kysor-234897 single-record intake",
+    "membership": 1,
+    "totalRecords": 1,
+    "note": "One indivisible PDF; the six-batch rule does not split an individual record."
+  },
+  "source": {
+    "suppliedPath": "C:/Users/casey/OneDrive/Desktop/Kysor-234897.pdf",
+    "originalFilename": "Kysor-234897.pdf",
+    "sha256": "b7620af87938165207a12d127689ca240e887565412c773210c4dd54c8510299",
+    "byteSize": 919625,
+    "pages": 22,
+    "identity": "March 3, 1994 EPA Explanation of Significant Differences with the June 11, 1993 MDNR Fall 1992 Cadillac Area Groundwater Investigation memorandum and supporting tables.",
+    "reconciliation": "Byte-identical to the canonical site record 095-b7620af87938. No duplicate catalog card or second binary was created."
+  },
+  "reviewCoverage": {
+    "pageOrder": { "first": 1, "last": 22, "count": 22, "status": "reviewed" },
+    "renderedPageReview": { "first": 1, "last": 22, "count": 22, "status": "visually-inspected" },
+    "textCoverage": "Embedded text was checked for all pages; maps, dense analytical tables, handwriting and the signature page were verified against rendered page images.",
+    "includedMaterial": ["signed ESD", "four maps", "MDNR memorandum", "vertical-profile analytical tables", "Fall 1992 well-sampling tables", "handwritten source annotations"]
+  },
+  "supportedFindings": [
+    {
+      "pages": "PDF 9–10",
+      "finding": "EPA finally concluded that North Park and West of Leeson groundwater contamination was commingled with contamination at the Northernaire/Kysor site and included both areas in the remedial action.",
+      "boundary": "The determination concerns the historical Superfund VOC/chromium remedy area; it is not PFAS evidence or a present-day plume map."
+    },
+    {
+      "pages": "PDF 12",
+      "finding": "MDNR reported a continuous TCE-contaminated zone more than 1,100 feet across from Sixth Avenue to the west side of the Catholic church parking lot, based on the listed North Park wells and vertical profiling.",
+      "boundary": "This is the memorandum's interpretation of 1992 and earlier sampling; it does not establish current extent."
+    },
+    {
+      "pages": "PDF 13",
+      "finding": "MDNR reported an unbroken contaminated profile more than 1,200 feet long across the West of Leeson study line and described TCE detections in CMS-3, MW-21 and MW-23.",
+      "boundary": "The record does not connect this historical VOC profile to Plett Road or to PFAS."
+    },
+    {
+      "pages": "PDF 19–20",
+      "finding": "Table 2 preserves Fall 1992 well-specific depth and results for TCE, 1,1,1-TCA, 1,1-DCE and PCE, including multiple depth intervals for MW-20 through MW-24.",
+      "boundary": "Zeros and detections are reported as printed; no modern cleanup comparison or independent reanalysis was inferred."
+    }
+  ],
+  "leads": [
+    {
+      "sourcePage": 9,
+      "target": "September 4, 1992 EPA letter that temporarily excluded North Park and West of Leeson pending future data",
+      "status": "referenced but not attached as a separate record in this PDF"
+    },
+    {
+      "sourcePages": "12–13",
+      "target": "Complete 1992 field records and the 1991 R.W. Beck/Cogen Michigan assessment",
+      "status": "summarized or excerpted; full underlying records require separate reconciliation"
+    }
+  ],
+  "status": {
+    "received": true,
+    "extracted": true,
+    "reviewed": true,
+    "verified": true,
+    "published": "existing canonical record retained; enriched metadata and timeline event pending deployment",
+    "verificationScope": "Source identity, complete page coverage, decision language and cited results are verified against the supplied record. Historical measurements were not independently resampled."
+  }
+}

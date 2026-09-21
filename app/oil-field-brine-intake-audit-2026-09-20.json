@@ -1,0 +1,51 @@
+{
+  "recordId": "210-6aec96618242",
+  "intakeBatch": {
+    "label": "Oil-field-brine single-record intake",
+    "membership": 1,
+    "totalRecords": 1,
+    "note": "One indivisible PDF; the six-batch rule does not split an individual record."
+  },
+  "source": {
+    "suppliedPath": "C:/Users/casey/OneDrive/Desktop/Oil-Field-Brine-opt.pdf",
+    "originalFilename": "Oil-Field-Brine-opt.pdf",
+    "canonicalSitePath": "/findings-docs/210-6aec96618242.pdf",
+    "officialSourceUrl": "https://www.michigan.gov/-/media/Project/Websites/egle/Documents/Programs/GRMD/Catalog/12/Oil-Field-Brine-opt.pdf?rev=8cb0a100209e4d7283c24b688df015e8",
+    "sha256": "6aec966182427c220162a242f702c7112182aeef2cf720b5f4e14a6f04ec36b2",
+    "byteSize": 3359014,
+    "pages": 78,
+    "identityVerification": "The official Michigan copy is byte-identical to the supplied record."
+  },
+  "reviewCoverage": {
+    "pageOrder": { "first": 1, "last": 78, "count": 78, "status": "reviewed" },
+    "renderedPageReview": { "first": 1, "last": 78, "count": 78, "status": "visually-inspected" },
+    "ocrCoverage": { "first": 1, "last": 78, "count": 78, "status": "performed-and-visually-checked" },
+    "nativeText": "Image-only scan; native text was insufficient and was not used as a substitute for page review.",
+    "includedMaterial": ["cover", "body text", "tables", "figures", "footnotes", "appendices", "questionnaire", "bibliography"]
+  },
+  "supportedFindings": [
+    {
+      "pages": "PDF 15–16 (printed 12–13)",
+      "finding": "Table II lists seven residential or business wells on Plett Road, Section 34, Haring Township, among cases possibly attributable to road brining; it also lists Cadillac and Cedar Creek Township residences.",
+      "boundary": "Possible attribution only; not proof of source, not PFAS, not current conditions, and not identification of the 1140 Plett Road receptor."
+    },
+    {
+      "pages": "PDF 20 (printed 17)",
+      "finding": "Table III estimates 11,947,110 gallons used for 1982 road maintenance in the Cadillac Geological Survey District.",
+      "boundary": "The district is a regional administrative unit, not the City of Cadillac; the report characterizes the data as estimated and conservative."
+    },
+    {
+      "pages": "PDF 56–67 (printed 53–64)",
+      "finding": "The report describes suspected long-term low-level groundwater effects and recommends stronger coordination, written contracts, monitoring, enforcement and centralized records.",
+      "boundary": "The report expressly says proof of the suspected statewide trend did not then exist; recommendations are not evidence of implementation."
+    }
+  ],
+  "status": {
+    "received": true,
+    "extracted": true,
+    "reviewed": true,
+    "verified": true,
+    "published": false,
+    "verificationScope": "Source identity, page coverage and cited statements are verified against the supplied record; historical assertions were not independently re-proven."
+  }
+}

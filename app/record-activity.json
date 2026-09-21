@@ -1,17 +1,13 @@
 {
   "basis": "Site record/source change history; not historical document dates. Five rolling 24-hour days.",
   "records": {
-    "/biosolids-docs/052-760656b79f1f.pdf": {
-      "updatedAt": "2026-09-16T09:19:08-04:00",
-      "fingerprint": "e46d98c4e22837e67058a94af0926a23b0f6ad513218f1554745ed25d1ed460e"
-    },
-    "/compliance-docs/067-1c869397a807.pdf": {
-      "addedAt": "2026-09-16T08:34:46-04:00",
-      "fingerprint": "479ee3bcb628813d36933e1519a6bc5b5c5366da895af4cd0596f70b98a13b35"
-    },
     "/dmr-docs/273-d116d6d3b972.pdf": {
       "addedAt": "2026-09-17T09:02:49-04:00",
       "fingerprint": "0c7ec18045ab5d1d05508495f0e96b51602e1498246d89de21faa5ad429213e0"
+    },
+    "/findings-docs/095-b7620af87938.pdf": {
+      "updatedAt": "2026-09-21T14:50:28.785Z",
+      "fingerprint": "95b05f5b174bb9ca8c2eb71f14ae127287461dce07ae8c17a5ee014658bca977"
     },
     "/findings-docs/207-caaf3ea8f891.pdf": {
       "addedAt": "2026-09-18T14:58:08-04:00",
@@ -21,37 +17,9 @@
       "addedAt": "2026-09-18T16:57:56-04:00",
       "fingerprint": "9fe90086a98c0fe51e56db9a76568fa9f79c2cbb932f2807cafcf2f25cf0ced6"
     },
-    "/ipp-docs/001-4e9a0cdf0189.pdf": {
-      "updatedAt": "2026-09-16T08:34:46-04:00",
-      "fingerprint": "0f65f40af56790b5a819b868a3e76f37847440bd54e09f54c44b4e10050da7b0"
-    },
-    "/ipp-docs/010-7621bc53d1a1.pdf": {
-      "updatedAt": "2026-09-16T09:19:08-04:00",
-      "fingerprint": "f0bec4d7c7ddfc94039e702d1e6f6e2f22cb4bd3c9ee4959bec118c996009712"
-    },
-    "/lab-docs/047-09e84279f368.pdf": {
-      "updatedAt": "2026-09-16T08:34:46-04:00",
-      "fingerprint": "bf54044ebedffb9d212d4908da735039270c7e445067c515858a7df4a5a05240"
-    },
-    "/npdes-docs/045-49e091247101.pdf": {
-      "updatedAt": "2026-09-16T09:19:08-04:00",
-      "fingerprint": "35d8b0085a168f8b351a9aaf7439119f324154c9b9bf484c573cedf8e89aa23e"
-    },
-    "/npdes-docs/050-dcdd5cb57f01.pdf": {
-      "updatedAt": "2026-09-16T08:17:44-04:00",
-      "fingerprint": "b74d36c7b9db579f06c7016759f48359906c74425c3bdb86f213c03f68a7c971"
-    },
-    "/npdes-docs/082-9f01fe21418a.pdf": {
-      "updatedAt": "2026-09-16T09:19:08-04:00",
-      "fingerprint": "91bce266d40d80b95a5ddd71b34f01d4f1d5664eddc312c957299f82711458b5"
-    },
-    "/npdes-docs/092-c041f2300a6d.pdf": {
-      "updatedAt": "2026-09-16T09:19:08-04:00",
-      "fingerprint": "504f07e500e890bff28bbda054535dc2cc16342c4813584c771e3260efcbadbe"
-    },
-    "/npdes-docs/109-5836ad2c594c.pdf": {
-      "updatedAt": "2026-09-16T09:19:08-04:00",
-      "fingerprint": "91c9d6a59dd32df4fa704f5541aa4443efffaae4dab27739fc09d246dea65ed4"
+    "/findings-docs/210-6aec96618242.pdf": {
+      "addedAt": "2026-09-20T22:59:28.372Z",
+      "fingerprint": "b2f4263af5afd1161b7e80c7d0ed4b0ebd636c88ff0b1c100924f8bd2822262a"
     },
     "https://mrwa.org/wp-content/uploads/repository/MuskegonManagementPlan.pdf": {
       "addedAt": "2026-09-20T18:01:17-04:00",

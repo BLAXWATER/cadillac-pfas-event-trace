@@ -1,5 +1,18 @@
 [
   {
+    "id": "210-6aec96618242",
+    "name": "The Use of Oil Field Brine on Michigan Roadways.pdf",
+    "url": "/findings-docs/210-6aec96618242.pdf",
+    "year": "1983",
+    "category": "Groundwater & hydrogeology — historical road-brine contamination",
+    "type": "Michigan DNR road-brine management and groundwater report",
+    "format": "PDF",
+    "pages": 78,
+    "size": 3359014,
+    "sha256": "6aec966182427c220162a242f702c7112182aeef2cf720b5f4e14a6f04ec36b2",
+    "description": "Michigan DNR Geological Survey Division report on road application of oil-field brine. Table II (PDF p15, printed p12) lists three Wexford County water-well cases as POSSIBLY ATTRIBUTABLE to road brining: the Depew residence in Cadillac, the Forsgren residence in Cedar Creek Township, and seven residential or business wells on Plett Road in Section 34 of Haring Township. The next page says the listed cases were sampled at no more than 550 mg/L chloride and reports no health effects to date. Table III (PDF p20, printed p17) estimates 11,947,110 gallons applied for road maintenance in the Cadillac Geological Survey District during 1982; that administrative district is not the City of Cadillac. The report describes historical chloride/brine management, not PFAS, current conditions, the 1140 Plett Road receptor, or a proven source pathway. All 78 supplied pages—including tables, appendices, figures, footnotes and bibliography—were rendered, OCRed and visually reviewed."
+  },
+  {
     "id": "206-df0a9fe43a4c",
     "name": "Wexford County Comprehensive Plan — Adopted May 19, 2004.pdf",
     "url": "/findings-docs/206-df0a9fe43a4c.pdf",
@@ -1349,7 +1362,7 @@
     "pages": 22,
     "size": 919625,
     "sha256": "b7620af87938165207a12d127689ca240e887565412c773210c4dd54c8510299",
-    "description": "EPA Explanation of Significant Differences adding the North Park and West of Leeson contamination areas to the Northernaire/Kysor remedy record. It documents the Superfund decision history and groundwater-cleanup scope."
+    "description": "EPA's signed March 3, 1994 Explanation of Significant Differences concludes that groundwater contamination in the North Park and West of Leeson areas was commingled with contamination at the Northernaire/Kysor site and requires those areas to be included in the remedial action (PDF pp9–10). The attached June 11, 1993 MDNR memorandum reports Fall 1992 well investigations: a continuous TCE-contaminated zone more than 1,100 feet across in North Park (p12) and an unbroken contaminated profile more than 1,200 feet long across the West of Leeson study line (p13). Tables on pp19–20 preserve well-specific TCE, 1,1,1-TCA, 1,1-DCE and PCE results. The State agreed that remediation must include both areas but continued disputing the ROD's TCE cleanup levels (p10). All 22 pages, maps, tables, attachment pages, signature and handwritten annotations were freshly read and visually checked. This is a historical VOC and hexavalent-chromium Superfund remedy decision—not PFAS evidence, a present-day plume map, or proof of a pathway to Plett Road."
   },
   {
     "id": "096-84790845bb27",

@@ -1,0 +1,41 @@
+{
+  "reviewDate": "2026-09-21",
+  "recordId": "lab-041-b6acc1cf09fd",
+  "intakeBatch": {
+    "label": "J17646-1 single-record reconciliation",
+    "membership": 1,
+    "totalRecords": 1,
+    "note": "One indivisible PDF; the six-batch rule does not split an individual record."
+  },
+  "source": {
+    "suppliedPath": "C:/Users/casey/OneDrive/Desktop/2018 - TEST-AMERICA-REPORT-J17646-1-UDS-Level-2-Report-Final-Report (1).pdf",
+    "originalFilename": "2018 - TEST-AMERICA-REPORT-J17646-1-UDS-Level-2-Report-Final-Report (1).pdf",
+    "sha256": "b6acc1cf09fd453c965e2b6e12dbd0ff444f6dc9fe95816a30f510163054e4b3",
+    "byteSize": 2167998,
+    "pages": 23,
+    "identity": "TestAmerica job 190-17646-1, Wexford County Landfill leachate samples collected October 3, 2018 and report authorized October 29, 2018.",
+    "reconciliation": "Byte-identical to the existing published lab-041 asset. No duplicate binary, catalog card or timeline event was created."
+  },
+  "comparison": {
+    "publishedAsset": "/lab-docs/041-b6acc1cf09fd.pdf",
+    "publishedAssetSha256": "b6acc1cf09fd453c965e2b6e12dbd0ff444f6dc9fe95816a30f510163054e4b3",
+    "timelineAsset": "/docs/2018-10-03-j17646-leachate.pdf",
+    "timelineAssetSha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6",
+    "pageCounts": "23 supplied; 23 published lab asset; 23 timeline copy",
+    "normalizedTextComparison": "All 23 pages match the timeline copy.",
+    "renderedPageComparison": "All 23 pages match the timeline copy at 108 DPI.",
+    "metadataDifference": "The supplied/lab-041 copy is optimized and records an April 8, 2026 PDF modification timestamp; the laboratory creation and authorization date remains October 29, 2018."
+  },
+  "supportedFinding": {
+    "pages": "PDF 3–7",
+    "finding": "The primary leachate sample reports PFOS 120 ng/L and PFOA 590 ng/L; the duplicate reports PFOS 140 ng/L and PFOA 700 ng/L. The package preserves other PFAS results, blanks and quality-control information.",
+    "boundary": "Leachate-source chemistry is not mixed WWTP influent, a leachate delivery record, a treatment-removal calculation, or proof of a source-to-receptor groundwater pathway."
+  },
+  "status": {
+    "received": true,
+    "extracted": true,
+    "reviewed": true,
+    "verified": true,
+    "published": "existing binary retained; enriched card and filename alias pending deployment"
+  }
+}

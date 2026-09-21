@@ -522,7 +522,7 @@
   {
     "id": "lab-041-b6acc1cf09fd",
     "name": "10-29-2018 - 2018 - TEST-AMERICA-REPORT-J17646-1-UDS-Level-2-Report-Final-Report.pdf",
-    "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/5be18df044489dcea83c7c3154f83ca047b6e5cb/public/lab-docs/041-b6acc1cf09fd.pdf",
+    "url": "/lab-docs/041-b6acc1cf09fd.pdf",
     "year": "2018",
     "category": "Lab results & sampling",
     "type": "Laboratory report",
@@ -530,7 +530,7 @@
     "pages": 23,
     "size": 2167998,
     "sha256": "b6acc1cf09fd453c965e2b6e12dbd0ff444f6dc9fe95816a30f510163054e4b3",
-    "description": "23-page distinct laboratory or analytical package for 2018. Revisions and repeated monitoring events remain separate when dates, samples, analytes or reported values differ."
+    "description": "TestAmerica job 190-17646-1, authorized October 29, 2018, for Wexford County Landfill leachate collected October 3. The primary leachate sample reports PFOS 120 ng/L, PFOA 590 ng/L, PFHxS 610 ng/L, PFBS 950 ng/L, PFHxA 2,100 ng/L, PFPeA 610 ng/L and PFPeS 160 ng/L; the duplicate reports PFOS 140 ng/L and PFOA 700 ng/L (PDF pp3–7). Equipment, field and method blanks are included, along with dilution, matrix-interference and quality-control qualifications. Chain-of-custody and receipt pages document four laboratory samples received October 4; they are not leachate-hauling manifests. This characterizes the sampled landfill leachate—it is not mixed WWTP influent, does not establish treatment-removal efficiency, does not prove that PFAS passed through the plant, and does not identify delivery volumes or the final acceptance date. All 23 pages were previously reviewed; this supplied binary is the exact existing lab-041 asset and all normalized-text and 108-DPI rendered pages also match the established timeline copy."
   },
   {
     "id": "lab-042-17dfcc25e8a0",

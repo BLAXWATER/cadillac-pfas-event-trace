@@ -67,6 +67,14 @@
     "aliases": ["CADILLAC - WATER- 234880.pdf", "EPA_234880_Cadillac_Groundwater_Investigation.pdf", "234880.pdf"],
     "comparison": "The supplied EPA_234880 copy has SHA-256 ddd2bc1eb32fddc91b8c2653243d3755fc6d409fd6a595781ea39862d8049a60; all169 normalized-text and108-DPI rendered pages match the canonical original. This is not a byte-identical alias."
   },
+  "lab-041-b6acc1cf09fd": {
+    "sha256": "b6acc1cf09fd453c965e2b6e12dbd0ff444f6dc9fe95816a30f510163054e4b3",
+    "aliases": [
+      "10-29-2018 - 2018 - TEST-AMERICA-REPORT-J17646-1-UDS-Level-2-Report-Final-Report.pdf",
+      "2018 - TEST-AMERICA-REPORT-J17646-1-UDS-Level-2-Report-Final-Report (1).pdf"
+    ],
+    "comparison": "The newly supplied file is byte-identical to the published lab-041 asset. Its 23 normalized-text and 108-DPI rendered pages also match the established timeline copy /docs/2018-10-03-j17646-leachate.pdf, which differs only in PDF packaging and metadata."
+  },
   "046-0fcfc8c9921f": {
     "sha256": "0fcfc8c9921f0ae0ae2957d5a2df3b2064a8a407c7ed5b8bea541f3fed215385",
     "aliases": [

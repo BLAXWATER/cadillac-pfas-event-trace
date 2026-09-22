@@ -931,12 +931,12 @@
     },
     {
       "requestId": "source-receptor-confirmation",
-      "summary": "AOI results, maps and the comparability study provide context, not a completed source-to-receptor attribution package. All four confirmation requests remain open.",
+      "summary": "The September 22 reread of six City/EGLE records (105 pages) confirms analytical and methodological context, not a completed source-to-receptor attribution package. The comparability report is held and fully read; the requested coordinate, transect, synchronized sampling and field/QC evidence remains separate. All four confirmation requests remain open.",
       "held": [
         {
           "id": "aoi-context-held",
           "finding": "The complete MPART comparability study and 26-page EGLE results compilation are held. The fresh manifest review confirms A14–A18 are standalone copies of A13 pages 21–26, while AOI address numbering restarts between collection rounds; repeated views are not additional samples.",
-          "limitation": "The study is not a PFAS source investigation. Anonymized address/LDFA results do not replace a source/receptor coordinate crosswalk, an explicit transect, synchronized source samples or matching field/QC records. A13 page 19 has an undated, unnumbered TBA column; it must not be counted as a verified sample. Named field blanks in table notes are not a complete blank-results/QC package.",
+          "limitation": "The study is not a PFAS source investigation (PDF p4). Its generally comparable results still include criterion crossings that differ by laboratory (pp14,20,29), and higher outdoor PFOA at Address 8 (p17). Anonymized addresses cannot be joined across documents without a crosswalk. A13 sample 2412230-08 PFNA is <2 on p5 but 4 on p15; the original laboratory record must resolve this. A13 p19's undated TBA column is not a verified sample, and named blanks are not a complete QC package. LDFA effluent entries must not be relabeled main-WWTP samples. These limits leave all four source/receptor requests open.",
           "sources": [
             {
               "recordId": "056-ae1a7fc25cfe",

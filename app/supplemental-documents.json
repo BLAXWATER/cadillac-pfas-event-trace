@@ -1531,7 +1531,7 @@
     "pages": 32,
     "size": 1556206,
     "sha256": "1b03034190308bdcde00033bdfbcbea87d1be005d1a1be627309a5a37cbdbace",
-    "description": "Technical summary of LDFA groundwater-treatment optimization, including VOC and PFAS monitoring considerations. Recommendations are retained as engineering analysis rather than completed-action claims."
+    "description": "March 25, 2026 Geosyntec optimization presentation, all 32 pages reviewed. Page 19 recommends S-3/I-7/I-8 shutdown and evaluation of S-4/I-6; this is not authorization or evidence of completed shutdown. Trend projections are conditional, not achieved cleanup dates. PFAS status colors conflict for I-3 between pp22 and 24; date notes and the p6 PCE/TCE label also need clarification. Pages 31–32 describe shallow and intermediate flow using ROD rates, not a demonstrated Plett Road migration pathway. Full supporting report, laboratory data and subsequent EPA decisions remain separate records."
   },
   {
     "id": "109-804e9a08651c",
@@ -1817,7 +1817,7 @@
     "pages": 5,
     "size": 370664,
     "sha256": "b4bd5d68b7a8c1e3b646e935fde72dbd9242226773623fd44f8c31136e46acb3",
-    "description": "Five-page Cadillac sampling update covering response status and current results. It is a dated agency summary and does not replace underlying laboratory reports."
+    "description": "May 2025 EGLE surface-water update, all five pages reviewed. Page 3 reports no exceedances of the printed nondrinking-water Rule 57 values for the sampled waters; Clay Drive PFOS/PFOA are 1.6/1.6 ng/L. A dry location is not a nondetect. Page 4 lists 31 analytes, but p3 presents results for five. Page 5 distinguishes June 2022 and April 2025 map symbols while its caption/table describe May 2025; field records are needed to reconcile dates. These are surface-water observations, not WWTP effluent samples or proof of a source-to-receptor pathway."
   },
   {
     "id": "131-0cbb4e491791",

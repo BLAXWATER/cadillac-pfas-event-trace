@@ -785,7 +785,7 @@
     "pages": 29,
     "size": 1228088,
     "sha256": "ae1a7fc25cfe1448b8303c3f05624c2461ee3b7348827ecaf836bdaef92aa7c3",
-    "description": "MPART report on the comparability of PFAS drinking-water samples collected in Cadillac. The complete study is preserved as primary agency analysis."
+    "description": "November 2025 MPART report: all 29 pages reviewed. September 9–10 samples from 20 responding properties generally showed comparable EGLE, Merit and Cyclopure results (PDF pp3–8). Results still cross the report's printed Michigan criteria: Address 8 outdoor PFOA is 14/10/10.9 ppt (p17); Address 11 PFOA is 20.3–36 ppt, with PFOS crossing the criterion by laboratory (p20). Addresses 5 and 20 also show laboratory-dependent PFOA criterion crossings (pp14,29). Reporting limits, treatment and flushing differ; ND does not mean absent. This was expressly not a PFAS source investigation (p4), and does not replace custody records or the complete original work order."
   },
   {
     "id": "057-4b2cb3ce5e54",
@@ -1125,7 +1125,7 @@
     "pages": 26,
     "size": 221882,
     "sha256": "18e25560cde65592a0124554738525bf0bb25e96f981384ab8eda129214ed8dc",
-    "description": "Twenty-six-page EGLE compilation of Cadillac Industrial Park address results and LDFA Special Investigation tables. Pages 21–26 are also supplied as the A14–A18 standalone views, not independent samples. Address numbering restarts between rounds; there is no coordinate crosswalk or complete field/custody/QC package. Page 19 contains an undated, unnumbered TBA column, not a verified sample. Pages 25–26 print a November 2025 analysis year for three November 2024 samples where pages 23–24 print 2024. LDFA results must not be relabeled main-WWTP samples.",
+    "description": "Twenty-six-page EGLE compilation of Cadillac Industrial Park address results and LDFA Special Investigation tables, fully reread. Pages 21–26 also appear as A14–A18 standalone views, not independent samples. Address numbering restarts; no coordinate crosswalk or complete field/custody/QC package is supplied. Sample 2412230-08 PFNA conflicts: <2 on p5 versus 4 on p15; the original laboratory report is needed. Page 19 has an undated TBA column, not a verified sample. Pages 25–26 print a November 2025 analysis year where pp23–24 print 2024. LDFA results must not be relabeled main-WWTP samples.",
     "matchingSources": [
       {
         "name": "A13 - Complete Test Results.pdf",

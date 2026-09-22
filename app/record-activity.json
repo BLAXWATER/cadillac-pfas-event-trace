@@ -1,13 +1,17 @@
 {
   "basis": "Site record/source change history; not historical document dates. Five rolling 24-hour days.",
   "records": {
-    "/dmr-docs/273-d116d6d3b972.pdf": {
-      "addedAt": "2026-09-17T09:02:49-04:00",
-      "fingerprint": "0c7ec18045ab5d1d05508495f0e96b51602e1498246d89de21faa5ad429213e0"
-    },
     "/findings-docs/095-b7620af87938.pdf": {
-      "updatedAt": "2026-09-21T14:50:28.785Z",
+      "updatedAt": "2026-09-21T10:53:06-04:00",
       "fingerprint": "95b05f5b174bb9ca8c2eb71f14ae127287461dce07ae8c17a5ee014658bca977"
+    },
+    "/findings-docs/108-1b0303419030.pdf": {
+      "updatedAt": "2026-09-22T22:53:27.291Z",
+      "fingerprint": "bdc6890c7ee09ab72b8145cffd6a4a38017dd1df7517bb26d3bce92d9da8ed0f"
+    },
+    "/findings-docs/130-b4bd5d68b7a8.pdf": {
+      "updatedAt": "2026-09-22T22:53:27.291Z",
+      "fingerprint": "862503271ad3c1968a6f359aff7b422ba2cdef5065079f7681f8dcdccbfacc7a"
     },
     "/findings-docs/207-caaf3ea8f891.pdf": {
       "addedAt": "2026-09-18T14:58:08-04:00",
@@ -18,12 +22,20 @@
       "fingerprint": "9fe90086a98c0fe51e56db9a76568fa9f79c2cbb932f2807cafcf2f25cf0ced6"
     },
     "/findings-docs/210-6aec96618242.pdf": {
-      "addedAt": "2026-09-20T22:59:28.372Z",
+      "addedAt": "2026-09-21T10:53:06-04:00",
       "fingerprint": "b2f4263af5afd1161b7e80c7d0ed4b0ebd636c88ff0b1c100924f8bd2822262a"
     },
     "/lab-docs/041-b6acc1cf09fd.pdf": {
       "updatedAt": "2026-09-21T14:09:05-04:00",
       "fingerprint": "cea96054dc053bfc60019a9d118537590f9ca2a4a19c2677db42e58cad3e2755"
+    },
+    "/pfas-docs/055-ae1a7fc25cfe.pdf": {
+      "updatedAt": "2026-09-22T22:53:27.291Z",
+      "fingerprint": "f2468ad221503532666c75e419bcdd5e6bd08a7deb2475b3424fe84f25e778c1"
+    },
+    "/pfas-docs/082-18e25560cde6.pdf": {
+      "updatedAt": "2026-09-22T22:53:27.291Z",
+      "fingerprint": "49ebccf0b80dbe9cd994b557fd5e6b742cd7b6e951fbe83bafbed5788a16c23f"
     },
     "https://mrwa.org/wp-content/uploads/repository/MuskegonManagementPlan.pdf": {
       "addedAt": "2026-09-20T18:01:17-04:00",

@@ -9596,7 +9596,7 @@
       "catalog": "lab-documents.json",
       "sectionId": "lab-library-title",
       "name": "10-29-2018 - 2018 - TEST-AMERICA-REPORT-J17646-1-UDS-Level-2-Report-Final-Report.pdf",
-      "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/5be18df044489dcea83c7c3154f83ca047b6e5cb/public/lab-docs/041-b6acc1cf09fd.pdf",
+      "url": "/lab-docs/041-b6acc1cf09fd.pdf",
       "sha256": "b6acc1cf09fd453c965e2b6e12dbd0ff444f6dc9fe95816a30f510163054e4b3",
       "size": 2167998
     },

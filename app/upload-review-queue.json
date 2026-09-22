@@ -1,0 +1,139 @@
+{
+  "updatedAt": "2026-09-22T14:24:00-04:00",
+  "note": "Files remain in supplied order. A record advances only after the file ahead of it completes the applicable page review, verification, catalog reconciliation and publication decision.",
+  "items": [
+    {
+      "position": 1,
+      "lane": "current",
+      "status": "Processing now",
+      "name": "PPN Comments_Rexair GWCU.pdf",
+      "pages": 691,
+      "bytes": 6602821,
+      "sha256": "9f799536992737afeedc0ab47e8eb3ad4c708f2c1577828cbe888b8c2c2f646b",
+      "category": "Rexair groundwater treatment and NPDES permit support",
+      "detail": "Native text was extracted and all 691 pages were rendered. Full page-order review remains in progress, so this record is not yet verified, cataloged or published.",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": false,
+        "verified": false,
+        "cataloged": false,
+        "published": false
+      }
+    },
+    {
+      "position": 2,
+      "lane": "next",
+      "status": "Next in line",
+      "name": "MANIKI-SMITH-raw.pdf",
+      "pages": 4,
+      "bytes": 1760573,
+      "sha256": "bb8b5d27cc50400926f7cae3485ef8487042e6b0e7bb433abf62b1da23a255bf",
+      "category": "Rexair remediation contract close-out",
+      "detail": "All four scanned pages were rendered and visually reviewed because the PDF has no usable native text. It waits behind the current record for catalog reconciliation and a publication decision.",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": false,
+        "published": false
+      }
+    },
+    {
+      "position": 3,
+      "lane": "waiting",
+      "status": "Waiting",
+      "name": "DEQA3_2011_Project_Closeout_Letter.pdf",
+      "pages": 2,
+      "bytes": 239388,
+      "sha256": "8b4fe7ebf88ce50717d2d4817bea8754304e38bf2c522f9083c069e9b4ffed8c",
+      "category": "Rexair remediation project close-out",
+      "detail": "Both scanned pages were rendered and visually reviewed. The February 4, 2011 letter and its project-file list remain queued for catalog reconciliation; records named in the list are leads, not attachments present in this PDF.",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": false,
+        "published": false
+      }
+    },
+    {
+      "position": 4,
+      "lane": "linked",
+      "status": "Matched file 02",
+      "name": "DEQA3_2011_Project_Contract_Order_Closeout.pdf",
+      "pages": 4,
+      "bytes": 1760573,
+      "sha256": "bb8b5d27cc50400926f7cae3485ef8487042e6b0e7bb433abf62b1da23a255bf",
+      "category": "Rexair remediation contract close-out",
+      "detail": "This upload is byte-identical to MANIKI-SMITH-raw.pdf in queue position 02. It is preserved as a supplied filename alias and will not create a second record.",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": false,
+        "published": false
+      }
+    },
+    {
+      "position": 5,
+      "lane": "resolved",
+      "status": "Already cataloged",
+      "name": "373482-Site-Inspection-Documents.pdf",
+      "pages": 124,
+      "bytes": 21990591,
+      "sha256": "83ebcbda08bd1a5bd62d33fabd0ea06938b6917a16d9f4d70df9c39884573992",
+      "category": "Kysor Industrial Superfund five-year review",
+      "detail": "The available file is byte-identical to the previously reviewed and published August 2010 EPA Third Five-Year Review. The filename does not change the document's identity and no second catalog record is created.",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 6,
+      "lane": "waiting",
+      "status": "Waiting",
+      "name": "NorthernAIRE-Remedial-investigation-209559.pdf",
+      "pages": 416,
+      "bytes": 17014349,
+      "sha256": "13c5976167a78c6b70d70142fe290f3e44477490bcf81de8d0867aac404cee30",
+      "category": "Northernaire Phase 2 remedial investigation",
+      "detail": "Received as a 416-page EPA Superfund record titled Phase 2 Remedial Investigation Volume 2 — Final Draft Report. It remains behind the earlier queue items; page-order rendering, OCR checks, full review and catalog reconciliation have not yet been completed.",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": false,
+        "reviewed": false,
+        "verified": false,
+        "cataloged": false,
+        "published": false
+      }
+    },
+    {
+      "position": 7,
+      "lane": "waiting",
+      "status": "Waiting · possible catalog match",
+      "name": "Five-year-review-2010-373434.pdf",
+      "pages": 94,
+      "bytes": 16623063,
+      "sha256": "a915d8117200bf64acb3650b6884767bb15a12e11be057e7b307dd6166f9be32",
+      "category": "Northernaire Superfund five-year review",
+      "detail": "Received as a 94-page copy of the September 2010 EPA Fourth Five-Year Review. A 95-page version is already cataloged, but this file has a different hash and must be reconciled by page and content before it can be treated as the same substantive record.",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": false,
+        "reviewed": false,
+        "verified": false,
+        "cataloged": false,
+        "published": false
+      }
+    }
+  ]
+}

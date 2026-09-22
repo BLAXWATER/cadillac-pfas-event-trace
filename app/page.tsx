@@ -36,6 +36,7 @@ import newFolderLeachateAudit from "./new-folder-leachate-intake-audit-2026-09-1
 import newFolderCountyAgendasAudit from "./new-folder-county-agendas-audit-2026-09-14.json";
 import evidenceRequestQueue from "./evidence-request-queue.json";
 import evidenceQueueUpdates from "./evidence-request-queue-updates.json";
+import uploadReviewQueue from "./upload-review-queue.json";
 import formSubmissionAudit from "./form-submission-audit.json";
 import formSubmissionDocuments from "./form-submission-documents.json";
 import ippAudit from "./ipp-audit.json";
@@ -4944,6 +4945,39 @@ export default function Home() {
             <p>{evidenceQueueUpdates.note}</p>
             <p className="queue-scope">{evidenceQueueUpdates.scope}</p>
           </div>
+          <section className="upload-queue-tree" aria-labelledby="upload-queue-title">
+            <div className="upload-queue-heading">
+              <div><p className="eyebrow">ORDERED FILE INTAKE</p><h3 id="upload-queue-title">Upload review queue</h3></div>
+              <p>{uploadReviewQueue.note}</p>
+            </div>
+            <ol className="upload-queue-list" role="tree" aria-label="Uploaded files waiting for review">
+              {uploadReviewQueue.items.map((item) => (
+                <li className={`upload-queue-item queue-${item.lane}`} role="treeitem" aria-level={1} aria-posinset={item.position} aria-setsize={uploadReviewQueue.items.length} key={`${item.position}-${item.sha256}`}>
+                  <div className="upload-queue-position" aria-hidden="true"><span>{String(item.position).padStart(2, "0")}</span></div>
+                  <div className="upload-queue-file">
+                    <div className="upload-queue-topline"><Badge variant="outline">{item.status}</Badge><span>{item.pages.toLocaleString()} {item.pages === 1 ? "page" : "pages"} · {formatBytes(item.bytes)}</span></div>
+                    <h4 title={item.name}>{item.name}</h4>
+                    <p className="upload-queue-category">{item.category}</p>
+                    <p>{item.detail}</p>
+                    <ul className="upload-stage-list" aria-label={`${item.name} processing stages`}>
+                      {Object.entries({
+                        received: "Received",
+                        extractedOrOcr: "Extracted / OCR",
+                        reviewed: "Reviewed",
+                        verified: "Verified",
+                        cataloged: "Cataloged",
+                        published: "Published",
+                      }).map(([stage, label]) => {
+                        const complete = item.stages[stage as keyof typeof item.stages];
+                        return <li className={complete ? "is-complete" : "is-waiting"} key={stage}><span aria-hidden="true">{complete ? "✓" : "○"}</span>{label}</li>;
+                      })}
+                    </ul>
+                    <p className="upload-queue-hash" title={item.sha256}>SHA-256 {item.sha256.slice(0, 16)}…</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
           <section className="evidence-chain" aria-labelledby="evidence-chain-title">
             <div className="evidence-chain-heading">
               <div><p className="eyebrow">WORK-IN-PROCESS HANDOFF MAP</p><h3 id="evidence-chain-title">Authority → record → next verification</h3></div>

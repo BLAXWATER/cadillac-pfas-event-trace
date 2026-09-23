@@ -66,8 +66,8 @@ const provenance = await readJson("app/document-preview-provenance.json");
 const activity = await readJson("app/record-activity.json");
 for (const record of records) {
   const preview = `/first-page-previews/by-sha256/${previewHashes[record.id]}.webp`;
-  previewManifest[record.url] = preview;
-  provenance[record.url] = { sourceSha256: record.sha256, page: 1, preview, previewSha256: previewHashes[record.id], verifiedAt: reviewedAt, verificationMethod: "Actual first PDF page rendered during complete page-order review; full page preserved.", scope: "Preview provenance only; whole-document verification is recorded in the Batch 5 intake audit." };
+  previewManifest[`/findings-docs/${record.id}.pdf`] = preview;
+  provenance[`/findings-docs/${record.id}.pdf`] = { sourceSha256: record.sha256, page: 1, preview, previewSha256: previewHashes[record.id], verifiedAt: reviewedAt, verificationMethod: "Actual first PDF page rendered during complete page-order review; full page preserved.", scope: "Preview provenance only; whole-document verification is recorded in the Batch 5 intake audit." };
   activity.records[record.url] = { addedAt: reviewedAt, fingerprint: fingerprint(record) };
 }
 if (indexRecord) activity.records[indexRecord.url] = { ...(activity.records[indexRecord.url] ?? {}), updatedAt: reviewedAt, fingerprint: fingerprint(indexRecord) };

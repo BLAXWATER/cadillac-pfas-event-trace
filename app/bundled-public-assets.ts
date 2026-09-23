@@ -733,7 +733,11 @@ function publicDocumentPath(sourceUrl: string): string | undefined {
 export function bundledFirstPagePreview(sourceUrl: string): string | undefined {
   const path = publicDocumentPath(sourceUrl);
   if (!path) return undefined;
-  const firstPagePath = (firstPagePreviewManifest as Record<string, string>)[path] ?? (nonPdfPreviewManifest as Record<string, {preview: string}>)[path]?.preview;
+  // Historical intake manifests may use the full immutable source URL.
+  const sourceKey = sourceUrl.split("#", 1)[0];
+  const pdf = firstPagePreviewManifest as Record<string, string>;
+  const other = nonPdfPreviewManifest as Record<string, {preview: string}>;
+  const firstPagePath = pdf[path] ?? pdf[sourceKey] ?? other[path]?.preview ?? other[sourceKey]?.preview;
   if (!firstPagePath) return undefined;
   return bundledAssets[`../public${firstPagePath}`];
 }

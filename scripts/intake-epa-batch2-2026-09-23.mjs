@@ -120,8 +120,8 @@ for (const record of records) {
   delete provenance[obsoleteRawUrl];
   delete activity.records[obsoleteRawUrl];
   const preview = `/first-page-previews/by-sha256/${record.sha256}.webp`;
-  previewManifest[record.url] = preview;
-  provenance[record.url] = {
+  previewManifest[`/findings-docs/${record.id}.pdf`] = preview;
+  provenance[`/findings-docs/${record.id}.pdf`] = {
     sourceSha256: record.sha256,
     page: 1,
     preview,

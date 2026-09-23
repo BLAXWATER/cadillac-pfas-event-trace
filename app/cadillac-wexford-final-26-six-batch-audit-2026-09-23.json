@@ -1,0 +1,51 @@
+{
+  "auditDate":"2026-09-23",
+  "sourceFolder":"C:/Users/casey/OneDrive/Desktop/Cadillac_Wexford_Leachate_Records_2012-Early2020",
+  "rule":"All 402 pages rendered and read in supplied order; native text and paired OCR checked against page images; no unreadable pages.",
+  "counts":{"fileInstances":26,"bytes":10061717,"renderedPagesReviewed":402,"unreadablePages":0,"newDistinctRecords":0},
+  "batches":[
+    {"id":"CWL-26-01","positions":[1,2],"files":2,"pages":198,"bytes":1975262},
+    {"id":"CWL-26-02","positions":[3,4,5,6,7,8],"files":6,"pages":49,"bytes":1478805},
+    {"id":"CWL-26-03","positions":[9,10,11,12,13,14],"files":6,"pages":57,"bytes":819655},
+    {"id":"CWL-26-04","positions":[15,16,17,18,19,20],"files":6,"pages":67,"bytes":1954834},
+    {"id":"CWL-26-05","positions":[21,22,23,24],"files":4,"pages":29,"bytes":3680829},
+    {"id":"CWL-26-06","positions":[25,26],"files":2,"pages":2,"bytes":152332}
+  ],
+  "files":[
+    {"position":1,"name":"Wexford_Landfill_Groundwater_Discharge_Permit_Application_2210_y_.pdf","bytes":104769,"pages":11,"sha256":"7ee1b2c9396c51faa97a932b9756b0a42d0fb85cf4ad0e52d204f6cefd242dc5","canonicalRecordId":"016-7ee1b2c9396c","canonicalAsset":"/wexford-docs/016-7ee1b2c9396c.pdf","disposition":"exact-existing-record"},
+    {"position":2,"name":"ADID_1238_FY2019_Comprehensive_Annual_Financial_Report.pdf","bytes":1870493,"pages":187,"sha256":"f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241","canonicalRecordId":"013-f756ecea1687","canonicalAsset":"/findings-docs/013-f756ecea1687.pdf","disposition":"exact-existing-record"},
+    {"position":3,"name":"Application_2Q7-HQ21-P66B_V1_1_.pdf","bytes":137562,"pages":22,"sha256":"c447fdfaf9cd97b5a9e1c543a370b77cff5c09c99c453f25a4b5ffe44ae30664","canonicalRecordId":"080-6a540cadcdc6","canonicalAsset":"/npdes-docs/080-6a540cadcdc6.pdf","disposition":"render-and-text-identical-variant"},
+    {"position":4,"name":"Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf","bytes":98120,"pages":1,"sha256":"ed0595a491891ad13896613a2fbea86e5ca6594eae3b2f71e5990a673f93901f","canonicalRecordId":"039-c677de7c10e6","canonicalAsset":"/findings-docs/039-c677de7c10e6.pdf","disposition":"render-identical-variant"},
+    {"position":5,"name":"Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf","bytes":88720,"pages":1,"sha256":"627d80d3b52d0baab436c9c7638883f66ae48b1e6c88ffb449b1592f437cc5b7","canonicalRecordId":"039-c677de7c10e6","canonicalAsset":"/findings-docs/039-c677de7c10e6.pdf","disposition":"ocr-render-identical"},
+    {"position":6,"name":"Cadillac_WWTP_PFAS_Letter.pdf","bytes":123393,"pages":3,"sha256":"66353d067ca56f14be259845da84fc331943e26b70762c0fbeeabc5560f811c3","canonicalRecordId":"timeline-report-approval","canonicalAsset":"/docs/2019-03-04-report-approval.pdf","disposition":"exact-existing-record"},
+    {"position":7,"name":"Cadillac_WWTP_SIU_Information.pdf","bytes":498131,"pages":11,"sha256":"4e9a0cdf01891e70d6ba197d3ed3a96d1949ca777ff58e7a0cd26818ff307846","canonicalRecordId":"001-4e9a0cdf0189","canonicalAsset":"/ipp-docs/001-4e9a0cdf0189.pdf","disposition":"exact-existing-record"},
+    {"position":8,"name":"Cadillac_WWTP_SIU_Information_OCR.pdf","bytes":532879,"pages":11,"sha256":"6c166c3b531559f77da9ba926d8c60c7e1ebf89bb21c70a63c6f4f8faca000c6","canonicalRecordId":"001-4e9a0cdf0189","canonicalAsset":"/ipp-docs/001-4e9a0cdf0189.pdf","disposition":"ocr-render-identical"},
+    {"position":9,"name":"DMR_Daily_-_GW1010342__10_01_2016_to_10_31_2016_V1.pdf","bytes":134258,"pages":8,"sha256Prefix":"36f3abe16dd1","canonicalRecordId":"016-36f3abe16dd1","canonicalAsset":"/dmr-docs/016-36f3abe16dd1.pdf","disposition":"exact-existing-record"},
+    {"position":10,"name":"DMR_Daily_-_GW1010342__11_01_2016_to_11_30_2016_V1.pdf","bytes":133812,"pages":8,"sha256Prefix":"9a9721237464","canonicalRecordId":"013-9a9721237464","canonicalAsset":"/dmr-docs/013-9a9721237464.pdf","disposition":"exact-existing-record"},
+    {"position":11,"name":"DMR_Daily_-_GW1010342__12_01_2016_to_12_31_2016_V1.pdf","bytes":134146,"pages":8,"sha256Prefix":"38abcc29105c","canonicalRecordId":"014-38abcc29105c","canonicalAsset":"/dmr-docs/014-38abcc29105c.pdf","disposition":"exact-existing-record"},
+    {"position":12,"name":"DMR_Summary_-_GW1010342__10_01_2016_to_10_31_2016_V1.pdf","bytes":139064,"pages":11,"sha256Prefix":"e20050cc15eb","canonicalRecordId":"015-e20050cc15eb","canonicalAsset":"/dmr-docs/015-e20050cc15eb.pdf","disposition":"exact-existing-record"},
+    {"position":13,"name":"DMR_Summary_-_GW1010342__11_01_2016_to_11_30_2016_V1.pdf","bytes":139135,"pages":11,"sha256Prefix":"6a73e78ae28d","canonicalRecordId":"018-6a73e78ae28d","canonicalAsset":"/dmr-docs/018-6a73e78ae28d.pdf","disposition":"exact-existing-record"},
+    {"position":14,"name":"DMR_Summary_-_GW1010342__12_01_2016_to_12_31_2016_V1.pdf","bytes":139240,"pages":11,"sha256Prefix":"ff2a91f0f3b9","canonicalRecordId":"017-ff2a91f0f3b9","canonicalAsset":"/dmr-docs/017-ff2a91f0f3b9.pdf","disposition":"exact-existing-record"},
+    {"position":15,"name":"Fig_5_-_North_Topo.pdf","bytes":63888,"pages":1,"sha256":"29d8248efbf8d2a2cff9307c244a5eacc9b49bca8098f23d7f24a1fcc200a65c","canonicalRecordId":"008-29d8248efbf8","canonicalAsset":"/wexford-docs/008-29d8248efbf8.pdf","disposition":"exact-existing-record"},
+    {"position":16,"name":"Fig_5_-_North_Topo_OCR.pdf","bytes":71775,"pages":1,"sha256":"12f6a8068a821b9afd514897b502e5c90eee5b92573964992e53326eba4bb64e","canonicalRecordId":"008-29d8248efbf8","canonicalAsset":"/wexford-docs/008-29d8248efbf8.pdf","disposition":"ocr-render-identical"},
+    {"position":17,"name":"Flow_Rate_-_Days.pdf","bytes":17870,"pages":1,"sha256":"dfae42863627f0273e4c61afb38f189a6a36b211b21ed161d42cdb5234bb57c9","canonicalRecordId":"010-dfae42863627","canonicalAsset":"/wexford-docs/010-dfae42863627.pdf","disposition":"exact-existing-record"},
+    {"position":18,"name":"lagoon_summary.pdf","bytes":811604,"pages":30,"sha256":"ff3227a6e962f1a048076f5a9ed5c8b26c8814c94cfb6ae05ffd4410073251b5","canonicalRecordId":"011-ff3227a6e962","canonicalAsset":"/wexford-docs/011-ff3227a6e962.pdf","disposition":"exact-existing-record"},
+    {"position":19,"name":"lagoon_summary_OCR.pdf","bytes":887003,"pages":30,"sha256":"379493ff0ce167e3abc70ff592ceeca3f49baa7de80b2ec73b7846f1e71d6f9f","canonicalRecordId":"011-ff3227a6e962","canonicalAsset":"/wexford-docs/011-ff3227a6e962.pdf","disposition":"ocr-render-identical"},
+    {"position":20,"name":"N3862_On-Site_Inspection_11-06-2017.pdf","bytes":102694,"pages":4,"sha256":"5114323584bd9f2b98c09145c4c1941ba7beb059abdc4b2f8a7b0f3f76e4e4b4","canonicalRecordId":"103-5114323584bd","canonicalAsset":"/wexford-docs/103-5114323584bd.pdf","disposition":"exact-existing-record"},
+    {"position":21,"name":"Rule_2210_Permit_Template-Wexford_Landfill.pdf","bytes":2837072,"pages":26,"sha256":"38c4dd289771ab2109af0cf4a8ac198c69e58432d076683732ba20c68a9618be","canonicalRecordId":"015-38c4dd289771","canonicalAsset":"/wexford-docs/015-38c4dd289771.pdf","disposition":"exact-existing-record"},
+    {"position":22,"name":"Wexford_Co_Landfill_Termination_Form_1_.pdf","bytes":41090,"pages":1,"sha256":"9aac9145e60300327e2b68566907c6a351d2179c599ae5af22f88b65fa27cb43","canonicalRecordId":"097-9aac9145e603","canonicalAsset":"/wexford-docs/097-9aac9145e603.pdf","disposition":"exact-existing-record"},
+    {"position":23,"name":"Wexford_County_Landfill_GW1010342_Termination_7-2-18_Green_Card_Ret_d.pdf","bytes":399768,"pages":1,"sha256":"8c0affe1ef313cb0a14f9ee85bf1db1d45c8297977d9f054f59aabba12b924c7","canonicalRecordId":"099-8c0affe1ef31","canonicalAsset":"/wexford-docs/099-8c0affe1ef31.pdf","disposition":"exact-existing-record"},
+    {"position":24,"name":"Wexford_County_Landfill_GW1010342_Termination_7-2-18_Green_Card_Ret_d_OCR.pdf","bytes":402899,"pages":1,"sha256":"3bace2d36656e2da28fbc9331f34844bfbdac3614839c775d44aecb59d57e06c","canonicalRecordId":"099-8c0affe1ef31","canonicalAsset":"/wexford-docs/099-8c0affe1ef31.pdf","disposition":"ocr-render-identical"},
+    {"position":25,"name":"Wexford_County_Landfill_Termination_Issued_Letter_1_.pdf","bytes":95753,"pages":1,"sha256":"7bc1b5bbf6f24bb2d8119ba5e2ab1ed516327d8050fac960448d200f0f46b3cb","canonicalRecordId":"100-7bc1b5bbf6f2","canonicalAsset":"/wexford-docs/100-7bc1b5bbf6f2.pdf","disposition":"exact-existing-record"},
+    {"position":26,"name":"WEXFORD_LANDFILL.pdf","bytes":56579,"pages":1,"sha256":"1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3","canonicalRecordId":"037-1f7e70d66b30","canonicalAsset":"/ipp-docs/037-1f7e70d66b30.pdf","disposition":"exact-existing-record"}
+  ],
+  "findingBoundaries":[
+    "Applications, calculations, permits and maps establish proposals or authorization terms, not actual discharge or hauling.",
+    "The PFAS approval letter leaves the facility unnamed and does not establish completed controls or liability.",
+    "DMRs are permittee reports; daily/summary flow discrepancies and footer pagination anomalies remain unresolved.",
+    "The 2015 lagoon analytical package contains no PFAS analysis and does not independently establish a permit violation.",
+    "The July 2018 termination determines groundwater-permit status; it does not supply Cadillac's final hauled-load date.",
+    "The certified-mail OCR misreads the year; visually verified July 6, 2018 delivery and July 9, 2018 agency receipt control."
+  ],
+  "statuses":{"received":true,"extracted":true,"reviewed":true,"verified":true,"cataloged":true,"published":true}
+}

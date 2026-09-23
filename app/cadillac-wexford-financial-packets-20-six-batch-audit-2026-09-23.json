@@ -1,0 +1,45 @@
+{
+  "auditDate":"2026-09-23",
+  "sourceFolder":"C:/Users/casey/OneDrive/Desktop/Cadillac_Wexford_Leachate_Records_2012-Early2020",
+  "rule":"All pages freshly rendered and read in supplied order; original/OCR pairs reconciled page by page.",
+  "counts":{"fileInstances":20,"renderedPagesReviewed":2380,"exactCatalogOriginals":15,"ocrDerivatives":5,"newDistinctCandidates":0},
+  "batches":[
+    {"id":"CWLR-FIN-01","positions":[1,2,3],"pages":650},
+    {"id":"CWLR-FIN-02","positions":[4,5,6],"pages":442},
+    {"id":"CWLR-FIN-03","positions":[7,8,9,10],"pages":90},
+    {"id":"CWLR-FIN-04","positions":[11,12,13],"pages":514},
+    {"id":"CWLR-FIN-05","positions":[14,15],"pages":418},
+    {"id":"CWLR-FIN-06","positions":[16,17,18,19,20],"pages":266}
+  ],
+  "files":[
+    {"position":1,"name":"ADID_1178_2019-2020_Annual_Operating_Budget.pdf","bytes":6449847,"pages":231,"sha256":"d206785ff744be96b8de578f5b0b4aef908b61e2a3b494b57347af3917a30877","canonicalRecordId":"187-d206785ff744","canonicalAsset":"/findings-docs/187-d206785ff744.pdf","disposition":"exact-existing-record"},
+    {"position":2,"name":"ADID_886_2016-2017_Annual_Operating_Budget.pdf","bytes":4930283,"pages":247,"sha256":"7f29198ab87d96e87ab29cd3de9ddf408fad06abcaf2c18c37e36932c62763ca","canonicalRecordId":"186-7f29198ab87d","canonicalAsset":"/findings-docs/186-7f29198ab87d.pdf","disposition":"exact-existing-record"},
+    {"position":3,"name":"ADID_909_2016_City_of_Cadillac_CAFR.pdf","bytes":3816435,"pages":172,"sha256":"1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b","canonicalRecordId":"169-1dfb7b3336af","canonicalAsset":"/findings-docs/169-1dfb7b3336af.pdf","disposition":"exact-existing-record"},
+    {"position":4,"name":"ADID_983_2017-2018_Annual_Operating_Budget.pdf","bytes":4713019,"pages":238,"sha256":"ca634234c53f4b0996a68dd3cc457379838e94c64f743fccc58053e06be65d36","canonicalRecordId":"181-ca634234c53f","canonicalAsset":"/findings-docs/181-ca634234c53f.pdf","disposition":"exact-existing-record"},
+    {"position":5,"name":"ADID_992_November_20_2017_City_Council_Packet.pdf","bytes":7433697,"pages":102,"sha256":"6ed7900b4952e238eda7baa37379cfc2d3293a25b2271abd0dcf72185a758194","canonicalRecordId":"016-6ed7900b4952","canonicalAsset":"/findings-docs/016-6ed7900b4952.pdf","disposition":"exact-existing-record"},
+    {"position":6,"name":"ADID_992_November_20_2017_City_Council_Packet_OCR.pdf","bytes":7482689,"pages":102,"sha256":"188fa449047d4b534b850ee23c0d856e01f5ff0723c4ed29ef4399fc9ebe188b","canonicalRecordId":"016-6ed7900b4952","canonicalAsset":"/findings-docs/016-6ed7900b4952.pdf","disposition":"ocr-render-identical"},
+    {"position":7,"name":"ADID_994_December_4_2017_City_Council_Packet.pdf","bytes":6250039,"pages":38,"sha256":"b0276675116fd81b39148452cf196c745ddd067fec7967d094399c0ae1d5a462","canonicalRecordId":"017-b0276675116f","canonicalAsset":"/findings-docs/017-b0276675116f.pdf","disposition":"exact-existing-record"},
+    {"position":8,"name":"ADID_994_December_4_2017_City_Council_Packet_OCR.pdf","bytes":6314241,"pages":38,"sha256":"8853ed9677db01f219d6e33a844712667494c2caf8932bc75942ae85fcb93d4c","canonicalRecordId":"017-b0276675116f","canonicalAsset":"/findings-docs/017-b0276675116f.pdf","disposition":"ocr-render-identical"},
+    {"position":9,"name":"ADID_996_November_20_2017_City_Council_Minutes.pdf","bytes":203476,"pages":9,"sha256":"519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85","canonicalRecordId":"164-519d4faa6c33","canonicalAsset":"/findings-docs/164-519d4faa6c33.pdf","disposition":"exact-existing-record"},
+    {"position":10,"name":"ADID_1041_April_2_2018_Work_Session_Minutes.pdf","bytes":107944,"pages":5,"sha256":"fa41c0f607d919398d2d9affd75083dd9a05b657065fa501c38ce3521a55a46b","canonicalRecordId":"196-fa41c0f607d9","canonicalAsset":"/findings-docs/196-fa41c0f607d9.pdf","disposition":"exact-existing-record"},
+    {"position":11,"name":"ADID_1043_2017_City_of_Cadillac_CAFR.pdf","bytes":3929791,"pages":182,"sha256":"6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214","canonicalRecordId":"146-6b4e98f4c779","canonicalAsset":"/findings-docs/146-6b4e98f4c779.pdf","disposition":"exact-existing-record"},
+    {"position":12,"name":"ADID_1047_May_21_2018_City_Council_Packet.pdf","bytes":7201375,"pages":166,"sha256":"25d3c10b9ea8697bb69779ea5341633f7c3326eca5f8130278188bd1cb388d88","canonicalRecordId":"045-25d3c10b9ea8","canonicalAsset":"/findings-docs/045-25d3c10b9ea8.pdf","disposition":"exact-existing-record"},
+    {"position":13,"name":"ADID_1047_May_21_2018_City_Council_Packet_OCR.pdf","bytes":7329379,"pages":166,"sha256":"12b6391004da303b451ad901589ce03c99d966fc7b5915629daa31a89af821b5","canonicalRecordId":"045-25d3c10b9ea8","canonicalAsset":"/findings-docs/045-25d3c10b9ea8.pdf","disposition":"ocr-render-identical"},
+    {"position":14,"name":"ADID_1059_2018-2019_Annual_Operating_Budget.pdf","bytes":4584959,"pages":235,"sha256":"676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0","canonicalRecordId":"165-676065b15331","canonicalAsset":"/findings-docs/165-676065b15331.pdf","disposition":"exact-existing-record"},
+    {"position":15,"name":"ADID_1092_FY2018_Cadillac_Comprehensive_Annual_Financial_Report.pdf","bytes":3803130,"pages":183,"sha256":"641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb","canonicalRecordId":"170-641352fc860b","canonicalAsset":"/findings-docs/170-641352fc860b.pdf","disposition":"exact-existing-record"},
+    {"position":16,"name":"ADID_1123_April_1_2019_City_Council_Packet.pdf","bytes":2634450,"pages":49,"sha256":"be4038bf5cd5438457ddcd05756514c877d2ab530720e37e670bb80f3eb75b80","canonicalRecordId":"018-be4038bf5cd5","canonicalAsset":"/findings-docs/018-be4038bf5cd5.pdf","disposition":"exact-existing-record"},
+    {"position":17,"name":"ADID_1123_April_1_2019_City_Council_Packet_OCR.pdf","bytes":2654728,"pages":49,"sha256":"a314682f9c792b29afd351c44a8fff0e222fc9e6f96b81940f5ecf32058431fc","canonicalRecordId":"018-be4038bf5cd5","canonicalAsset":"/findings-docs/018-be4038bf5cd5.pdf","disposition":"ocr-render-identical"},
+    {"position":18,"name":"ADID_1124_March_18_2019_Work_Sessions_Minutes.pdf","bytes":197413,"pages":4,"sha256":"4335077ddaf4c19d138cd8e6648d1f0253b052ab69e7e672aa9685d879917133","canonicalRecordId":"152-4335077ddaf4","canonicalAsset":"/findings-docs/152-4335077ddaf4.pdf","disposition":"exact-existing-record"},
+    {"position":19,"name":"ADID_1142_June_3_2019_City_Council_Packet.pdf","bytes":2821876,"pages":82,"sha256":"0fcfc8c9921f0ae0ae2957d5a2df3b2064a8a407c7ed5b8bea541f3fed215385","canonicalRecordId":"046-0fcfc8c9921f","canonicalAsset":"/findings-docs/046-0fcfc8c9921f.pdf","disposition":"exact-existing-record"},
+    {"position":20,"name":"ADID_1142_June_3_2019_City_Council_Packet_OCR.pdf","bytes":2897151,"pages":82,"sha256":"a64b6dd429b7c6cc4f24c4d8bfc3e39f78ffe610aec763ed503a1c9780920b7e","canonicalRecordId":"046-0fcfc8c9921f","canonicalAsset":"/findings-docs/046-0fcfc8c9921f.pdf","disposition":"ocr-render-identical"}
+  ],
+  "findingBoundaries":[
+    "Budget and CAFR amounts are aggregate reported revenues or variances, not load-level invoices, manifests or analytical proof.",
+    "NPDES violation counts are not identified as PFAS-specific and do not establish leachate causation.",
+    "Unsigned packet exhibits remain proposals unless tied to a separate action record.",
+    "Injection-well startup and cessation language is forecast/reporting, not a final-load date.",
+    "The five OCR packet variants are derivatives and are retained as provenance without duplicate catalog cards."
+  ],
+  "unresolved":["Final delivery date","Load-level gallons, manifests, tickets, invoices and carriers","Exact cessation date","PFAS content of individual loads","PFAS-treatment effectiveness","Causal link between leachate and NPDES violations"],
+  "statuses":{"received":true,"extracted":true,"reviewed":true,"verified":true,"cataloged":true,"published":true}
+}

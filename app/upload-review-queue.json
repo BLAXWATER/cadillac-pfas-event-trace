@@ -546,7 +546,14 @@
       "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
       "detail": "CEDAR-SIX-01 batch 1/6. The complete page was reviewed; exact SHA-256 match to the published public-notice email. The four named attachments are not embedded in this PDF.",
       "canonicalAsset": "/wexford-docs/013-46619080fc73.pdf",
-      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
     },
     {
       "position": 29,
@@ -559,7 +566,14 @@
       "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
       "detail": "CEDAR-SIX-02 batch 2/6. All four pages were reviewed; exact SHA-256 match to the published Wexford County minutes. No duplicate card was created.",
       "canonicalAsset": "/process-site-docs/process-site-008-4127cba91f8b.pdf",
-      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
     },
     {
       "position": 30,
@@ -572,7 +586,14 @@
       "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
       "detail": "CEDAR-SIX-03 batch 3/6. All five pages were reviewed; exact SHA-256 match to the published resolution form. The form is unexecuted; the separate November 20 minutes support adoption.",
       "canonicalAsset": "/findings-docs/100-850f00b27330.pdf",
-      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
     },
     {
       "position": 31,
@@ -585,7 +606,14 @@
       "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
       "detail": "CEDAR-SIX-04 batch 4/6. All nine pages were reviewed; exact SHA-256 match to the published Cadillac City Council minutes. No duplicate card was created.",
       "canonicalAsset": "/findings-docs/164-519d4faa6c33.pdf",
-      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
     },
     {
       "position": 32,
@@ -599,7 +627,14 @@
       "detail": "CEDAR-SIX-05 batch 5/6. The scanned page was fully rendered, OCR-assisted and visually reviewed. Its rendered content matches the published canonical spill letter, so this byte-distinct packaging was preserved in the audit without a duplicate card.",
       "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/039-c677de7c10e6.pdf",
       "publicationDisposition": "duplicate-suppressed-canonical-published",
-      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
     },
     {
       "position": 33,
@@ -613,7 +648,2225 @@
       "detail": "CEDAR-SIX-06 batch 6/6. The OCR layer was checked against the complete page image. It matches the supplied scan and the published canonical spill letter, so the derivative was preserved in the audit without a duplicate card.",
       "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/039-c677de7c10e6.pdf",
       "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
-      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 34,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "09_HNF-P7H3-DCN87_V1_Interim_Report_2018-07-30.pdf",
+      "pages": 3,
+      "bytes": 53376,
+      "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
+      "category": "Cadillac / American Waste original-record reconciliation",
+      "detail": "CAW-11-01 batch 1/6. All three pages were reviewed; exact SHA-256 match to the published interim-report source. Named attachments are not embedded in this PDF.",
+      "canonicalAsset": "/form-submission-docs/form-submission-073-c84ac8484363.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 35,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "11_2018_IPP_Screening_Monitoring_Plan_Update_181130.pdf",
+      "pages": 2,
+      "bytes": 86584,
+      "sha256": "2dd8cd38dcb9b088a53fde3a81406d639341960e223ea1271fcad123ab8ce034",
+      "category": "Cadillac / American Waste original-record reconciliation",
+      "detail": "CAW-11-03 batch 3/6. Both pages were reviewed; exact SHA-256 match to the published November 30, 2018 monitoring-plan update.",
+      "canonicalAsset": "/docs/2018-11-30-monitoring-plan-update.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 36,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2015-01-21_Wexford_County_BOC_Minutes.pdf",
+      "pages": 4,
+      "bytes": 167518,
+      "sha256": "5bf7502e6eaf7c2ee44459945f4487815c9efd49cece0cf11d939af83a5ab703",
+      "category": "Cadillac / American Waste original-record reconciliation",
+      "detail": "CAW-11-05 batch 5/6. All four signed-minute pages were reviewed; exact SHA-256 match to the existing Process & Site source.",
+      "canonicalAsset": "/process-site-docs/process-site-006-5bf7502e6eaf.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 37,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2015-10-07_Wexford_BOC_Cedar_Creek_injection_discussion.pdf",
+      "pages": 6,
+      "bytes": 66859,
+      "sha256": "c4ddf20bbac21c63c094608b3bac9758fc8daad969bf3df5a29af139bfa1d342",
+      "category": "Cadillac / American Waste original-record reconciliation",
+      "detail": "CAW-11-05 batch 5/6. All six signed-minute pages were reviewed; exact SHA-256 match. The well language is a reported discussion, not approval, construction or operation.",
+      "canonicalAsset": "/process-site-docs/process-site-007-c4ddf20bbac2.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 38,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2015-2016_Wexford_County_Landfill_Leachate_Request.pdf",
+      "pages": 3,
+      "bytes": 167653,
+      "sha256": "c2eaedede443068e6a0adf05354e28393bff6424989e5bd00698db301e59d0fc",
+      "category": "Cadillac / American Waste original-record reconciliation",
+      "detail": "CAW-11-06 batch 6/6. All three scanned pages were rendered, OCR-assisted and visually reviewed; exact SHA-256 match to the published request package. The March 2016 request is not an approval.",
+      "canonicalAsset": "/docs/2015-2016-leachate-request.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 39,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2015-2016_Wexford_County_Landfill_Leachate_Request_OCR.pdf",
+      "pages": 3,
+      "bytes": 183426,
+      "sha256": "41a6b9e5a3b61a38fa754046e87ca2ccafdddcfe13844203d9a4fb416add5ec7",
+      "category": "Cadillac / American Waste original-record reconciliation",
+      "detail": "CAW-11-06 batch 6/6. The OCR layer was checked against all three page images. Rendered pages match the published canonical request package page-for-page, so no duplicate card was created.",
+      "canonicalAsset": "/docs/2015-2016-leachate-request.pdf",
+      "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 40,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Wexford_Landfill_Groundwater_Discharge_Permit_Application_2210_y_.pdf",
+      "pages": 11,
+      "bytes": 104769,
+      "sha256": "7ee1b2c9396c51faa97a932b9756b0a42d0fb85cf4ad0e52d204f6cefd242dc5",
+      "category": "Rule 2210 original-record reconciliation",
+      "detail": "CAW-R2210-01. All 11 pages were reviewed; exact SHA-256 match to the published application. Applicant representations are not authorization or proof of discharge.",
+      "canonicalAsset": "/wexford-docs/016-7ee1b2c9396c.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 41,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Flow_Rate_-_Days.pdf",
+      "pages": 1,
+      "bytes": 17870,
+      "sha256": "dfae42863627f0273e4c61afb38f189a6a36b211b21ed161d42cdb5234bb57c9",
+      "category": "Rule 2210 original-record reconciliation",
+      "detail": "CAW-R2210-02. The complete calculation sheet was reviewed; exact SHA-256 match to the published source. The worksheet is not an operating log.",
+      "canonicalAsset": "/wexford-docs/010-dfae42863627.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 42,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "lagoon_summary.pdf",
+      "pages": 30,
+      "bytes": 811604,
+      "sha256": "ff3227a6e962f1a048076f5a9ed5c8b26c8814c94cfb6ae05ffd4410073251b5",
+      "category": "Rule 2210 original-record reconciliation",
+      "detail": "CAW-R2210-03. All 30 scan pages, including custody, result and QA/QC material, were rendered and visually reviewed; exact SHA-256 match.",
+      "canonicalAsset": "/wexford-docs/011-ff3227a6e962.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 43,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "lagoon_summary_OCR.pdf",
+      "pages": 30,
+      "bytes": 887003,
+      "sha256": "379493ff0ce167e3abc70ff592ceeca3f49baa7de80b2ec73b7846f1e71d6f9f",
+      "category": "Rule 2210 original-record reconciliation",
+      "detail": "CAW-R2210-03. The OCR layer was verified against all 30 images; every rendered page matches lagoon_summary.pdf, so no duplicate card was created.",
+      "canonicalAsset": "/wexford-docs/011-ff3227a6e962.pdf",
+      "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 44,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Rule_2210_Permit_Template-Wexford_Landfill.pdf",
+      "pages": 26,
+      "bytes": 2837072,
+      "sha256": "38c4dd289771ab2109af0cf4a8ac198c69e58432d076683732ba20c68a9618be",
+      "category": "Rule 2210 original-record reconciliation",
+      "detail": "CAW-R2210-04. All 26 permit, condition, map and monitoring pages were reviewed; exact SHA-256 match to the published issued permit.",
+      "canonicalAsset": "/wexford-docs/015-38c4dd289771.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 45,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "WEXFORD_LANDFILL.pdf",
+      "pages": 1,
+      "bytes": 56579,
+      "sha256": "1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3",
+      "category": "Rule 2210 original-record reconciliation",
+      "detail": "CAW-R2210-05. The complete SIU profile was reviewed; exact SHA-256 match to the published IPP record. It is not a per-load ticket or analytical result.",
+      "canonicalAsset": "/ipp-docs/037-1f7e70d66b30.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 46,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_GW1010342_Draft_Rule_2210_Permit_original.pdf",
+      "pages": 20,
+      "bytes": 1910540,
+      "sha256": "a6e913ab7006112701a1a7760bd6d9180c413d95cb820df43540329f125aee73",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-01. All 20 pages reviewed; exact match to the published draft permit. Blank issuance fields and draft status preserved.",
+      "canonicalAsset": "/wexford-docs/014-a6e913ab7006.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 47,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_GW1010342_Final_Authorization_Email_original.pdf",
+      "pages": 1,
+      "bytes": 81801,
+      "sha256": "8ba13c7dcdf6e6e0e3f2328f3cf7ad5ea6bce988b4e3131f34fd9fd6b45c05f5",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-01. Full page reviewed; exact match to the authorization transmittal. The permit attachment is separate.",
+      "canonicalAsset": "/wexford-docs/003-8ba13c7dcdf6.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 48,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2016-01-12_American_Waste_Leachate_Incident_Letter.pdf",
+      "pages": 1,
+      "bytes": 324172,
+      "sha256": "26aea81a75d3c681af039edeaf2d406c6e911a537b416a7d3fc3ea87381e1757",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-02. Image/OCR review complete; content matches the published color correspondence source. No measured spill volume is stated.",
+      "canonicalAsset": "/correspondence-docs/corr-034-1872d030ac1d.jpg",
+      "publicationDisposition": "render-identical-canonical-published",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 49,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2016-01-12_American_Waste_Leachate_Incident_Letter_OCR.pdf",
+      "pages": 1,
+      "bytes": 315940,
+      "sha256": "780d97cd5c43b78999e4e9075d067dc8a67e523973e0c6e8e3573ec62a3efc25",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-02. OCR verified against the page image; identical rendered page to position 48. No duplicate card.",
+      "canonicalAsset": "/correspondence-docs/corr-034-1872d030ac1d.jpg",
+      "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 50,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2017-04-05_Wexford_BOC_Cedar_Creek_missing_updates.pdf",
+      "pages": 9,
+      "bytes": 268663,
+      "sha256": "3dc615cfcf9ce5e8252c0d536a755cb548ed6c290ebed1f773ca5bb9356f72a0",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-02. All nine pages reviewed; exact catalog match. Missing-update language is attributed public comment.",
+      "canonicalAsset": "/findings-docs/134-3dc615cfcf9c.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 51,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2017-08-16_Wexford_County_BOC_Minutes.pdf",
+      "pages": 6,
+      "bytes": 171652,
+      "sha256": "c3e654984910616cc2bf56710512a745d4e31143f314b72c5eda79c7aca920d0",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-03. All six pages reviewed; exact catalog match. Proposal approval is not proof closure or sampling occurred.",
+      "canonicalAsset": "/wexford-docs/092-c3e654984910.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 52,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2017-10_EPA_MI-165-1I-0002_draft_permit_with_waste_analysis.pdf",
+      "pages": 37,
+      "bytes": 5200399,
+      "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-03. All 37 pages reviewed; exact catalog match. Draft terms and drawings are not final authorization or operations.",
+      "canonicalAsset": "/wexford-docs/020-9ad6d46eb20b.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 53,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2017-10_EPA_MI-165-1I-0002_draft_permit_with_waste_analysis_OCR.pdf",
+      "pages": 37,
+      "bytes": 5159356,
+      "sha256": "61b78901d885fc071e81bfcb37bdc7b0634c9061660e5fe72f33b8b4ddfc7bfb",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-03. All 37 OCR pages match the published draft page-for-page and add no substantive content.",
+      "canonicalAsset": "/wexford-docs/020-9ad6d46eb20b.pdf",
+      "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 54,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2017-10_EPA_Wexford_Water_Technologies_fact_sheet.pdf",
+      "pages": 2,
+      "bytes": 350012,
+      "sha256": "069dda9efa5b9c615dcbfaac75f59fe1fa9acdcf11b309401f005c45fc021caf",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-04. Both pages reviewed; exact catalog match. Tentative approval and public comment are proposal-stage facts.",
+      "canonicalAsset": "/wexford-docs/024-069dda9efa5b.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 55,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2017-11-01_Wexford_BOC_Cedar_Creek_leachate_injection.pdf",
+      "pages": 8,
+      "bytes": 288002,
+      "sha256": "7c628f229e98599ab13a0152d8a06d797175a026199dece5bc1d34fc2115df96",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-04. All eight pages reviewed; exact catalog match. Motion was to prepare an opposition resolution.",
+      "canonicalAsset": "/wexford-docs/044-7c628f229e98.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 56,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2017-11-15_Wexford_BOC_American_Waste_WWT_injection_packet.pdf",
+      "pages": 1,
+      "bytes": 40693,
+      "sha256": "84b6c32074db75049a1184bcb75fba5f8e496e349361991ac82d71f3b1832594",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-04. Complete page reviewed; exact match. This file is only a tentative agenda, not a full packet.",
+      "canonicalAsset": "/wexford-docs/031-84b6c32074db.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 57,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2017-11-20_Cadillac_Leachate_Resolution_Draft.pdf",
+      "pages": 5,
+      "bytes": 369627,
+      "sha256": "f328381962dc6f6c5ddec70ea6bf9d2dd2ca54336064d192267fe727d57c50a3",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-05. All five pages match the published unsigned resolution draft; separate minutes support adoption.",
+      "canonicalAsset": "/findings-docs/100-850f00b27330.pdf",
+      "publicationDisposition": "render-identical-variant-suppressed",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 58,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018_POTW_Oversight_Table.pdf",
+      "pages": 14,
+      "bytes": 48518,
+      "sha256": "4d20ff2cea097b75992e4e5cb2a8ed159e482c0867ad1d5b93ba7d7749a34002",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-06. All 14 pages reviewed; exact match. Continuation-row values preserved without filling blanks.",
+      "canonicalAsset": "/ipp-docs/003-4d20ff2cea09.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 59,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018_SIU-CIU_List.pdf",
+      "pages": 7,
+      "bytes": 48997,
+      "sha256": "95a00ade695b98a74eb499dcb17d4e44dba27f6634d6099f145a18eb314c639c",
+      "category": "CAW-17 six-batch reconciliation",
+      "detail": "CAW-17-06. All seven pages reviewed; exact match. Document is internally undated; supplied 2018 label remains provenance only.",
+      "canonicalAsset": "/ipp-docs/056-95a00ade695b.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 60,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "01_Pre-Inspection_Report.pdf",
+      "pages": 7,
+      "bytes": 119143,
+      "sha256": "3da57e8018fbdeb2474b90c359352df532d2b0d46fbb00e591841182ae0b49e2",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 7 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/ipp-docs/002-3da57e8018fb.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 61,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18_OCR.pdf",
+      "pages": 2,
+      "bytes": 156812,
+      "sha256": "f63fcc880f58189ab4f00a1d5e3bec5cd9d2af981d28fedd3336a8ffbcae451f",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 2 page(s); hash and rendered content reconciled to the canonical source. ocr-derivative-suppressed-canonical-published.",
+      "canonicalAsset": "/pfas-docs/097-e13fc785334f.pdf",
+      "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 62,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "08_2018_IPP_Screening_Monitoring_Plan_180627.pdf",
+      "pages": 3,
+      "bytes": 76074,
+      "sha256": "59ebe7478b18ff4565630a2c6ac2c37123fbe212ee88309a7c07f26b5e6bed60",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 3 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/docs/2018-06-27-monitoring-plan.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 63,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2012-03-26_Cadillac_WWTP_Septage_Information_Original.pdf",
+      "pages": 16,
+      "bytes": 948370,
+      "sha256": "760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 16 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/biosolids-docs/052-760656b79f1f.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 64,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2012-03-26_Cadillac_WWTP_Septage_Information_Original_OCR.pdf",
+      "pages": 16,
+      "bytes": 1014491,
+      "sha256": "25ed8cdd46d852866a1f1f113d0e39b094cd7747a62c84c0660c945d9299e834",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 16 page(s); hash and rendered content reconciled to the canonical source. ocr-derivative-suppressed-canonical-published.",
+      "canonicalAsset": "/biosolids-docs/052-760656b79f1f.pdf",
+      "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 65,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2014-09-16_N3862_Full_Compliance_Evaluation_original.pdf",
+      "pages": 1,
+      "bytes": 36902,
+      "sha256": "2713c81a8e63c2e0e223d208f12eb1be1cc14a9b1fe5ed5a591e8a99ea9cc251",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/compliance-docs/017-2713c81a8e63.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 66,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2014-10-10_Cadillac_Pre-Inspection_Report_56545_Scan_Original.pdf",
+      "pages": 8,
+      "bytes": 406885,
+      "sha256": "2afbbbc3680f99b401c8c6fba64379621dd73ac239d5fa6e97e8f2ff968a8040",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 8 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/docs/2014-preinspection.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 67,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2014-10-10_Cadillac_Pre-Inspection_Report_56545_Scan_Original_OCR.pdf",
+      "pages": 8,
+      "bytes": 431601,
+      "sha256": "7b1ad90c94089676fd67dbff734275cebcb8c73d2b2bcb58ba3003c753353877",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 8 page(s); hash and rendered content reconciled to the canonical source. ocr-derivative-suppressed-canonical-published.",
+      "canonicalAsset": "/docs/2014-preinspection.pdf",
+      "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 68,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_Wexford_Fig_4_-_Wetland_Location.pdf",
+      "pages": 1,
+      "bytes": 350218,
+      "sha256": "cc1225120bd0adefc738409fae3ff3620b43bc391f6c5af1ca14e7f0742e9a7a",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/007-cc1225120bd0.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 69,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2015-09-02_Wexford_BOC_Wexford_Water_Technologies_letter.pdf",
+      "pages": 4,
+      "bytes": 39911,
+      "sha256": "bfdf67a999daa1b2086e2210c07672f8ee98858441a150f5b671e93a60a10dce",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 4 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/030-bfdf67a999da.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 70,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2015-2016_Wexford_County_Landfill_District_Compliance_File_original.pdf",
+      "pages": 8,
+      "bytes": 153987,
+      "sha256": "7c991baaf1e9d5af5a7177123957d8f933fd759f4022ceab2878626430a37943",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 8 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/001-7c991baaf1e9.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 71,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2015-2016_Wexford_County_Landfill_District_Compliance_File_original_OCR.pdf",
+      "pages": 8,
+      "bytes": 166932,
+      "sha256": "f3aa88ae1cf49b14bd1309bcc11086f3b9231a1c1ced9f4b274dfcf9150174d9",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 8 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/001-7c991baaf1e9.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 72,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_GW1010342_Completed_Public_Notice_Certification_original.pdf",
+      "pages": 1,
+      "bytes": 153213,
+      "sha256": "54c7e9d67d4444970e012a81f61195786e73bc9a04b0ff298fd67239bf1a833b",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/npdes-docs/075-54c7e9d67d44.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 73,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2016_GW1010342_Completed_Public_Notice_Certification_original_OCR.pdf",
+      "pages": 1,
+      "bytes": 154265,
+      "sha256": "1f55b0501a91101ac42f3a1d825ba62ea8a17d119b999f2b5fd7d58c37145a2c",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/npdes-docs/075-54c7e9d67d44.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 74,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_GW1010342_Cover_Letter_Email_original.pdf",
+      "pages": 1,
+      "bytes": 8190,
+      "sha256": "e45ebd99572bb182c93668efa939d9aff245aa0916071a5d63b683e88023a45b",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/002-e45ebd99572b.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 75,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_GW1010342_Public_Notice_Certification_Form_original.pdf",
+      "pages": 1,
+      "bytes": 7672,
+      "sha256": "34bbe60fdbc281b587994d36c27c70be1ec7c63f21a14a505019c2541600e5f4",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/012-34bbe60fdbc2.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 76,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_Wexford_Fig_1_-_Site_Location.pdf",
+      "pages": 1,
+      "bytes": 342082,
+      "sha256": "aaa74db2f56d4369bf069082693a16e31d42b7944f1eaf1317c2eb4befb902b5",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/004-aaa74db2f56d.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 77,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2016_Wexford_Fig_1_-_Site_Location_OCR.pdf",
+      "pages": 1,
+      "bytes": 345418,
+      "sha256": "805690a7583cef6a7dd93b3e88a685a98e2275cdc1bf5bffcc2f979cbaf93321",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/004-aaa74db2f56d.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 78,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_Wexford_Fig_2_-_Site_Plan.pdf",
+      "pages": 1,
+      "bytes": 46743,
+      "sha256": "07d4a892d34245e418de0eb57514162c659d0f65ede9dcaf8d6889e4642a2c1e",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/005-07d4a892d342.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 79,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2016_Wexford_Fig_2_-_Site_Plan_OCR.pdf",
+      "pages": 1,
+      "bytes": 54000,
+      "sha256": "0994f441a20f35ba9f85f3dd822da8a8f585059fa2137ca48718de92dad2e88d",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/005-07d4a892d342.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 80,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_Wexford_Fig_3_-_Reg_Water_Well_Location.pdf",
+      "pages": 1,
+      "bytes": 297431,
+      "sha256": "44cde488aaf41c3a0bd877fb60e4838ec4cd8c9a78240ae6695508b7fe013a66",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/006-44cde488aaf4.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 81,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2016_Wexford_Fig_3_-_Reg_Water_Well_Location_OCR.pdf",
+      "pages": 1,
+      "bytes": 301243,
+      "sha256": "19f6ad09a6f8dec4ee2ec02a668bb78797fb6b4c3cd94bbeb5fb3c3ba01a67e9",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/006-44cde488aaf4.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 82,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2016_Wexford_Fig_4_-_Wetland_Location_OCR.pdf",
+      "pages": 1,
+      "bytes": 353591,
+      "sha256": "3561ca5489f6ea8c57a658f77e85a2caf29441a0c166e93dbca50732e8f1ffef",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/007-cc1225120bd0.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 83,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_Wexford_Fig_6_-_South_Topo.pdf",
+      "pages": 1,
+      "bytes": 108134,
+      "sha256": "34358f131b59bc2025f0e3b62ea9f6cc3c2205d13d95d9af46cded038de5599f",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/009-34358f131b59.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 84,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2016_Wexford_Fig_6_-_South_Topo_OCR.pdf",
+      "pages": 1,
+      "bytes": 116370,
+      "sha256": "2c50b018ffe0a54f500655c1728aac61236e585fa610d758b068f878e621e9ef",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/009-34358f131b59.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 85,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016-07-15_GW1010342_Public_Notice_original.pdf",
+      "pages": 1,
+      "bytes": 22381,
+      "sha256": "a611a75485cf4e7814ccf6417e1430dc35c4584f6685a7297f818e4de39f6427",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/npdes-docs/076-a611a75485cf.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 86,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018-02_EPA_WWT_public_hearing_fact_sheet.pdf",
+      "pages": 2,
+      "bytes": 340023,
+      "sha256": "0cbb4e4917919bc323d7a0c618636d728324bd4af24975f01b226c94e3f065a3",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 2 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/findings-docs/131-0cbb4e491791.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 87,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018-02-07_Wexford_County_BOC_Minutes.pdf",
+      "pages": 4,
+      "bytes": 116957,
+      "sha256": "0d84b0d63d506cf288333c679de272ea1b71be426870d84bdd7173596ed9f35e",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 4 page(s); hash and rendered content reconciled to the canonical source. exact-existing.",
+      "canonicalAsset": "/wexford-docs/046-0d84b0d63d50.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 88,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "ADID_804_2015-2016_Annual_Operating_Budget_OCR.pdf",
+      "pages": 250,
+      "bytes": 9240338,
+      "sha256": "1d0a54ec5487d580b0421e88c0e97da3cd9a3e44513c621f2fd15adcb3ffb2fb",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 250 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/findings-docs/191-82bfe8b8928e.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 89,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_863_April_14_2016_Work_Session_Minutes.pdf",
+      "pages": 5,
+      "bytes": 235758,
+      "sha256": "ab25bfa3b3c4b86e0b2294e80a2f444c7fcc898bcb3692d416290a5e6f82f5e7",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/195-ab25bfa3b3c4.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 90,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018-02-21_Wexford_County_BOC_Minutes.pdf",
+      "pages": 5,
+      "bytes": 186031,
+      "sha256": "8d6267327b86ca669f955a73a37c519bc8b9090fbc4483e665d4dc9fdef93f7c",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/047-8d6267327b86.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 91,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018-03-07_Wexford_BOC_injection_well_status.pdf",
+      "pages": 5,
+      "bytes": 160961,
+      "sha256": "c18471b190b0bd4325af4cd64d931f280d39dcba90f130c3bc787f862e3d3457",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/048-c18471b190b0.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 92,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2019_POTW_Oversight_Table.pdf",
+      "pages": 14,
+      "bytes": 48775,
+      "sha256": "e09cc490d763e734c7b8735143d937dca6f188a620956820ebe0c5e94258b2e7",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 14 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/ipp-docs/004-e09cc490d763.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 93,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2019_SIU-CIU_List.pdf",
+      "pages": 6,
+      "bytes": 48663,
+      "sha256": "b1f62dff2c41ae0e8d8e44deec46559e56518bb4c74a10237812493dbca44e03",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 6 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/ipp-docs/005-b1f62dff2c41.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 94,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2019-03-20_Wexford_County_BOC_Minutes_Original.pdf",
+      "pages": 5,
+      "bytes": 196486,
+      "sha256": "7a4516c01f4553bee0b152c27ddc8aa92ef2e5ce3d0ccf8c1a2f665a3b7a6d48",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/049-7a4516c01f45.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 95,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2019-03-20_Wexford_County_BOC_Minutes_Original_OCR.pdf",
+      "pages": 5,
+      "bytes": 211478,
+      "sha256": "c043c331aa205730a0cb3aaa003fae5ea687503c8c960ea4f21050f90478b94a",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/049-7a4516c01f45.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 96,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2019-05-01_Wexford_County_BOC_Minutes_Original.pdf",
+      "pages": 3,
+      "bytes": 129091,
+      "sha256": "f116fb87dc6c9c2fe95599ff6cf04786c5b7448fba93f0385658301e5e66827f",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 3 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/050-f116fb87dc6c.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 97,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2019-05-01_Wexford_County_BOC_Minutes_Original_OCR.pdf",
+      "pages": 3,
+      "bytes": 138348,
+      "sha256": "ea0255d4ffaa07018395feae7dd1a341bb70300d58906a974084bc4f711db01a",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 3 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/050-f116fb87dc6c.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 98,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2019-05-15_Wexford_County_BOC_Minutes_Original.pdf",
+      "pages": 5,
+      "bytes": 220433,
+      "sha256": "037e7938ec943da9f9f9d6af5b430ee8e324720ed42a63de6557de2b13ebf97f",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/051-037e7938ec94.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 99,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2019-05-15_Wexford_County_BOC_Minutes_Original_OCR.pdf",
+      "pages": 5,
+      "bytes": 237972,
+      "sha256": "606882dd32db7a41e85e1c77987e642497dcd4e429150d167ae1cb48a8e3948b",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/051-037e7938ec94.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 100,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2019-07-03_Wexford_County_BOC_Minutes_Original.pdf",
+      "pages": 5,
+      "bytes": 191835,
+      "sha256": "ff414da946e02ba7a1d54ee2ca2c75f83b554a8855dd6687961e714156b1d023",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/052-ff414da946e0.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 101,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2019-07-03_Wexford_County_BOC_Minutes_Original_OCR.pdf",
+      "pages": 5,
+      "bytes": 208315,
+      "sha256": "e9343cc9dc78ff4cf26ecd8e53996dcdd914dcb65b437728222c5be92c5fa794",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/052-ff414da946e0.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 102,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2019-11-06_Wexford_County_BOC_Minutes_Original.pdf",
+      "pages": 4,
+      "bytes": 186300,
+      "sha256": "402b13d81161b9e895fcba63b08af7a0f42b8b54028c88ca1dcc0bfbfcfd307d",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 4 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/053-402b13d81161.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 103,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "2019-11-06_Wexford_County_BOC_Minutes_Original_OCR.pdf",
+      "pages": 4,
+      "bytes": 203177,
+      "sha256": "a2913d0de7a5ecf60f68f68f74e0ac193a01f6b910a6784f1c2c9446fe3fbdfe",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 4 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/053-402b13d81161.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 104,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_583_2013-2014_Annual_Operating_Budget.pdf",
+      "pages": 246,
+      "bytes": 5124403,
+      "sha256": "fbee0873f184b26ce053485567814250abb118d20bd58d335c796620a54c6189",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 246 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/184-fbee0873f184.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 105,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_703_2014-2015_Annual_Operating_Budget.pdf",
+      "pages": 238,
+      "bytes": 2605092,
+      "sha256": "710379d9664cec7ce863561b925c025e69dac99cce3e50edceaf88ef95ea9c83",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 238 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/185-710379d9664c.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 106,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_804_2015-2016_Annual_Operating_Budget.pdf",
+      "pages": 250,
+      "bytes": 9027857,
+      "sha256": "82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 250 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/191-82bfe8b8928e.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 107,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1178_2019-2020_Annual_Operating_Budget.pdf",
+      "pages": 231,
+      "bytes": 6449847,
+      "sha256": "d206785ff744be96b8de578f5b0b4aef908b61e2a3b494b57347af3917a30877",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 231 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/187-d206785ff744.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 108,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_886_2016-2017_Annual_Operating_Budget.pdf",
+      "pages": 247,
+      "bytes": 4930283,
+      "sha256": "7f29198ab87d96e87ab29cd3de9ddf408fad06abcaf2c18c37e36932c62763ca",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 247 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/186-7f29198ab87d.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 109,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_909_2016_City_of_Cadillac_CAFR.pdf",
+      "pages": 172,
+      "bytes": 3816435,
+      "sha256": "1dfb7b3336afd2dd99cf1297764c6f9855aa448e89790b6f50321e78580dd31b",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 172 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/169-1dfb7b3336af.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 110,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_983_2017-2018_Annual_Operating_Budget.pdf",
+      "pages": 238,
+      "bytes": 4713019,
+      "sha256": "ca634234c53f4b0996a68dd3cc457379838e94c64f743fccc58053e06be65d36",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 238 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/181-ca634234c53f.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 111,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_992_November_20_2017_City_Council_Packet.pdf",
+      "pages": 102,
+      "bytes": 7433697,
+      "sha256": "6ed7900b4952e238eda7baa37379cfc2d3293a25b2271abd0dcf72185a758194",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 102 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/016-6ed7900b4952.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 112,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "ADID_992_November_20_2017_City_Council_Packet_OCR.pdf",
+      "pages": 102,
+      "bytes": 7482689,
+      "sha256": "188fa449047d4b534b850ee23c0d856e01f5ff0723c4ed29ef4399fc9ebe188b",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 102 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/findings-docs/016-6ed7900b4952.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 113,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_994_December_4_2017_City_Council_Packet.pdf",
+      "pages": 38,
+      "bytes": 6250039,
+      "sha256": "b0276675116fd81b39148452cf196c745ddd067fec7967d094399c0ae1d5a462",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 38 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/017-b0276675116f.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 114,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "ADID_994_December_4_2017_City_Council_Packet_OCR.pdf",
+      "pages": 38,
+      "bytes": 6314241,
+      "sha256": "8853ed9677db01f219d6e33a844712667494c2caf8932bc75942ae85fcb93d4c",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 38 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/findings-docs/017-b0276675116f.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 115,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1041_April_2_2018_Work_Session_Minutes.pdf",
+      "pages": 5,
+      "bytes": 107944,
+      "sha256": "fa41c0f607d919398d2d9affd75083dd9a05b657065fa501c38ce3521a55a46b",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 5 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/196-fa41c0f607d9.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 116,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1043_2017_City_of_Cadillac_CAFR.pdf",
+      "pages": 182,
+      "bytes": 3929791,
+      "sha256": "6b4e98f4c77917c16dff2544e9be1d2ff1c3165bf51df15ee2e4bd8875e7b214",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 182 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/146-6b4e98f4c779.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 117,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1047_May_21_2018_City_Council_Packet.pdf",
+      "pages": 166,
+      "bytes": 7201375,
+      "sha256": "25d3c10b9ea8697bb69779ea5341633f7c3326eca5f8130278188bd1cb388d88",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 166 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/045-25d3c10b9ea8.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 118,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "ADID_1047_May_21_2018_City_Council_Packet_OCR.pdf",
+      "pages": 166,
+      "bytes": 7329379,
+      "sha256": "12b6391004da303b451ad901589ce03c99d966fc7b5915629daa31a89af821b5",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 166 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/findings-docs/045-25d3c10b9ea8.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 119,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1059_2018-2019_Annual_Operating_Budget.pdf",
+      "pages": 235,
+      "bytes": 4584959,
+      "sha256": "676065b153316c2b4f876d8be7af0e9c31b14e637c80f9e761f7276bcfb1c6d0",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 235 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/165-676065b15331.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 120,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1092_FY2018_Cadillac_Comprehensive_Annual_Financial_Report.pdf",
+      "pages": 183,
+      "bytes": 3803130,
+      "sha256": "641352fc860b291c851d4de0419ec4d939b9c8089beec10657077d0f04c382bb",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 183 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/170-641352fc860b.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 121,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1123_April_1_2019_City_Council_Packet.pdf",
+      "pages": 49,
+      "bytes": 2634450,
+      "sha256": "be4038bf5cd5438457ddcd05756514c877d2ab530720e37e670bb80f3eb75b80",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 49 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/018-be4038bf5cd5.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 122,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "ADID_1123_April_1_2019_City_Council_Packet_OCR.pdf",
+      "pages": 49,
+      "bytes": 2654728,
+      "sha256": "a314682f9c792b29afd351c44a8fff0e222fc9e6f96b81940f5ecf32058431fc",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 49 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/findings-docs/018-be4038bf5cd5.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 123,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1124_March_18_2019_Work_Sessions_Minutes.pdf",
+      "pages": 4,
+      "bytes": 197413,
+      "sha256": "4335077ddaf4c19d138cd8e6648d1f0253b052ab69e7e672aa9685d879917133",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 4 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/152-4335077ddaf4.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 124,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1142_June_3_2019_City_Council_Packet.pdf",
+      "pages": 82,
+      "bytes": 2821876,
+      "sha256": "0fcfc8c9921f0ae0ae2957d5a2df3b2064a8a407c7ed5b8bea541f3fed215385",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 82 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/046-0fcfc8c9921f.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 125,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "ADID_1142_June_3_2019_City_Council_Packet_OCR.pdf",
+      "pages": 82,
+      "bytes": 2897151,
+      "sha256": "a64b6dd429b7c6cc4f24c4d8bfc3e39f78ffe610aec763ed503a1c9780920b7e",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 82 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/findings-docs/046-0fcfc8c9921f.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 126,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_1238_FY2019_Comprehensive_Annual_Financial_Report.pdf",
+      "pages": 187,
+      "bytes": 1870493,
+      "sha256": "f756ecea1687bfde53db0d27ec60dad7d206a9886fe1d8fa7d3cf55ed9f7e241",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 187 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/findings-docs/013-f756ecea1687.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 127,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "Application_2Q7-HQ21-P66B_V1_1_.pdf",
+      "pages": 22,
+      "bytes": 137562,
+      "sha256": "c447fdfaf9cd97b5a9e1c543a370b77cff5c09c99c453f25a4b5ffe44ae30664",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 22 page(s); hash and rendered content reconciled to the canonical source. render-and-text-identical-variant.",
+      "canonicalAsset": "/npdes-docs/080-6a540cadcdc6.pdf",
+      "publicationDisposition": "render-and-text-identical-variant",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 128,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Cadillac_WWTP_SIU_Information.pdf",
+      "pages": 11,
+      "bytes": 498131,
+      "sha256": "4e9a0cdf01891e70d6ba197d3ed3a96d1949ca777ff58e7a0cd26818ff307846",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 11 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/ipp-docs/001-4e9a0cdf0189.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 129,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "Cadillac_WWTP_SIU_Information_OCR.pdf",
+      "pages": 11,
+      "bytes": 532879,
+      "sha256": "6c166c3b531559f77da9ba926d8c60c7e1ebf89bb21c70a63c6f4f8faca000c6",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 11 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/ipp-docs/001-4e9a0cdf0189.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 130,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "DMR_Daily_-_GW1010342__10_01_2016_to_10_31_2016_V1.pdf",
+      "pages": 8,
+      "bytes": 134258,
+      "sha256": "36f3abe16dd100e0681b2855d9b2c6c41dd8992edd3db7741f0a134e90780389",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 8 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/dmr-docs/016-36f3abe16dd1.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 131,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "DMR_Daily_-_GW1010342__11_01_2016_to_11_30_2016_V1.pdf",
+      "pages": 8,
+      "bytes": 133812,
+      "sha256": "9a97212374642a444f5330dae253186c45c7ee4f01326a2d41393965da81638d",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 8 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/dmr-docs/013-9a9721237464.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 132,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "DMR_Daily_-_GW1010342__12_01_2016_to_12_31_2016_V1.pdf",
+      "pages": 8,
+      "bytes": 134146,
+      "sha256": "38abcc29105cfaab46f37fa4c4b6414d85b2010739f5094da02431741aab22bc",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 8 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/dmr-docs/014-38abcc29105c.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 133,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "DMR_Summary_-_GW1010342__10_01_2016_to_10_31_2016_V1.pdf",
+      "pages": 11,
+      "bytes": 139064,
+      "sha256": "e20050cc15eb297e9f3109911cff04f7136f8aa813d739b4caf10746e6dc1a3a",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 11 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/dmr-docs/015-e20050cc15eb.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 134,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "DMR_Summary_-_GW1010342__11_01_2016_to_11_30_2016_V1.pdf",
+      "pages": 11,
+      "bytes": 139135,
+      "sha256": "6a73e78ae28db7df8c9859302d2f302ffe2a97f5c64652c97432367c72bdcc52",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 11 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/dmr-docs/018-6a73e78ae28d.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 135,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "DMR_Summary_-_GW1010342__12_01_2016_to_12_31_2016_V1.pdf",
+      "pages": 11,
+      "bytes": 139240,
+      "sha256": "ff2a91f0f3b9893d3972fa6d8ed0cf305c02d792d97716423fcb7fad09c184ec",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 11 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/dmr-docs/017-ff2a91f0f3b9.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 136,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Fig_5_-_North_Topo.pdf",
+      "pages": 1,
+      "bytes": 63888,
+      "sha256": "29d8248efbf8d2a2cff9307c244a5eacc9b49bca8098f23d7f24a1fcc200a65c",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/008-29d8248efbf8.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 137,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "Fig_5_-_North_Topo_OCR.pdf",
+      "pages": 1,
+      "bytes": 71775,
+      "sha256": "12f6a8068a821b9afd514897b502e5c90eee5b92573964992e53326eba4bb64e",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/008-29d8248efbf8.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 138,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "N3862_On-Site_Inspection_11-06-2017.pdf",
+      "pages": 4,
+      "bytes": 102694,
+      "sha256": "5114323584bd9f2b98c09145c4c1941ba7beb059abdc4b2f8a7b0f3f76e4e4b4",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 4 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/103-5114323584bd.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 139,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Wexford_Co_Landfill_Termination_Form_1_.pdf",
+      "pages": 1,
+      "bytes": 41090,
+      "sha256": "9aac9145e60300327e2b68566907c6a351d2179c599ae5af22f88b65fa27cb43",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/097-9aac9145e603.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 140,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Wexford_County_Landfill_GW1010342_Termination_7-2-18_Green_Card_Ret_d.pdf",
+      "pages": 1,
+      "bytes": 399768,
+      "sha256": "8c0affe1ef313cb0a14f9ee85bf1db1d45c8297977d9f054f59aabba12b924c7",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/099-8c0affe1ef31.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 141,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "Wexford_County_Landfill_GW1010342_Termination_7-2-18_Green_Card_Ret_d_OCR.pdf",
+      "pages": 1,
+      "bytes": 402899,
+      "sha256": "3bace2d36656e2da28fbc9331f34844bfbdac3614839c775d44aecb59d57e06c",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. ocr-render-identical.",
+      "canonicalAsset": "/wexford-docs/099-8c0affe1ef31.pdf",
+      "publicationDisposition": "ocr-render-identical",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 142,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Wexford_County_Landfill_Termination_Issued_Letter_1_.pdf",
+      "pages": 1,
+      "bytes": 95753,
+      "sha256": "7bc1b5bbf6f24bb2d8119ba5e2ab1ed516327d8050fac960448d200f0f46b3cb",
+      "category": "Cadillac / Wexford leachate records six-batch reconciliation",
+      "detail": "Six-batch page-order review completed for all 1 page(s); hash and rendered content reconciled to the canonical source. exact-existing-record.",
+      "canonicalAsset": "/wexford-docs/100-7bc1b5bbf6f2.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
     }
   ]
 }

@@ -1,0 +1,68 @@
+{
+  "intake": "Cadillac / American Waste Rule 2210 records — six files",
+  "reviewedAt": "2026-09-23",
+  "batchLabels": ["CAW-R2210-01", "CAW-R2210-02", "CAW-R2210-03", "CAW-R2210-04", "CAW-R2210-05"],
+  "batchRuleNote": "Five batches are used because the original and OCR copy of lagoon_summary are one substantive record and cannot be split across batches.",
+  "totalFiles": 6,
+  "totalPages": 99,
+  "newDistinctRecords": 0,
+  "exactFileMatches": 5,
+  "renderIdenticalOcrDerivatives": 1,
+  "records": [
+    {
+      "position": 1, "batch": "CAW-R2210-01", "name": "Wexford_Landfill_Groundwater_Discharge_Permit_Application_2210_y_.pdf",
+      "path": "C:/Users/casey/OneDrive/Desktop/Cadillac_American_Waste_Original_Records_2012-Early2020/Wexford_Landfill_Groundwater_Discharge_Permit_Application_2210_y_.pdf",
+      "sha256": "7ee1b2c9396c51faa97a932b9756b0a42d0fb85cf4ad0e52d204f6cefd242dc5", "bytes": 104769, "pages": 11,
+      "renderedPages": [1,2,3,4,5,6,7,8,9,10,11], "nativeTextReviewedPages": [1,2,3,4,5,6,7,8,9,10,11], "ocrVerifiedPages": [],
+      "reviewNote": "Submitted March 16, 2016 application proposing seasonal diluted overland-flow discharge; applicant representations and attachment links are not authorization or proof of discharge.",
+      "canonicalRecordId": "016-7ee1b2c9396c", "canonicalAsset": "/wexford-docs/016-7ee1b2c9396c.pdf", "disposition": "exact-existing-record",
+      "statuses": {"received": true, "extracted": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 2, "batch": "CAW-R2210-02", "name": "Flow_Rate_-_Days.pdf",
+      "path": "C:/Users/casey/OneDrive/Desktop/Cadillac_American_Waste_Original_Records_2012-Early2020/Flow_Rate_-_Days.pdf",
+      "sha256": "dfae42863627f0273e4c61afb38f189a6a36b211b21ed161d42cdb5234bb57c9", "bytes": 17870, "pages": 1,
+      "renderedPages": [1], "nativeTextReviewedPages": [1], "ocrVerifiedPages": [],
+      "reviewNote": "Golder calculation sheet estimates days needed to empty the lagoon under stated volume, precipitation and pumping assumptions; a calculation is not an operating log.",
+      "canonicalRecordId": "010-dfae42863627", "canonicalAsset": "/wexford-docs/010-dfae42863627.pdf", "disposition": "exact-existing-record",
+      "statuses": {"received": true, "extracted": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 3, "batch": "CAW-R2210-03", "name": "lagoon_summary.pdf",
+      "path": "C:/Users/casey/OneDrive/Desktop/Cadillac_American_Waste_Original_Records_2012-Early2020/lagoon_summary.pdf",
+      "sha256": "ff3227a6e962f1a048076f5a9ed5c8b26c8814c94cfb6ae05ffd4410073251b5", "bytes": 811604, "pages": 30,
+      "renderedPages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30], "nativeTextReviewedPages": [], "ocrVerifiedPages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+      "reviewNote": "Scan-only lagoon analytical package, including custody sheets, letters, result tables and QA/QC pages; unreadable small values were not guessed.",
+      "canonicalRecordId": "011-ff3227a6e962", "canonicalAsset": "/wexford-docs/011-ff3227a6e962.pdf", "disposition": "exact-existing-record",
+      "statuses": {"received": true, "extracted": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 4, "batch": "CAW-R2210-03", "name": "lagoon_summary_OCR.pdf",
+      "path": "C:/Users/casey/OneDrive/Desktop/Cadillac_American_Waste_Original_Records_2012-Early2020/lagoon_summary_OCR.pdf",
+      "sha256": "379493ff0ce167e3abc70ff592ceeca3f49baa7de80b2ec73b7846f1e71d6f9f", "bytes": 887003, "pages": 30,
+      "renderedPages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30], "nativeTextReviewedPages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30], "ocrVerifiedPages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
+      "renderComparison": {"matchesPosition": 3, "equalPages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]},
+      "reviewNote": "OCR layer verified against every rendered page; page renders are identical to position 3, so this derivative is preserved without a duplicate card.",
+      "canonicalRecordId": "011-ff3227a6e962", "canonicalAsset": "/wexford-docs/011-ff3227a6e962.pdf", "disposition": "ocr-derivative-suppressed-canonical-published",
+      "statuses": {"received": true, "extracted": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 5, "batch": "CAW-R2210-04", "name": "Rule_2210_Permit_Template-Wexford_Landfill.pdf",
+      "path": "C:/Users/casey/OneDrive/Desktop/Cadillac_American_Waste_Original_Records_2012-Early2020/Rule_2210_Permit_Template-Wexford_Landfill.pdf",
+      "sha256": "38c4dd289771ab2109af0cf4a8ac198c69e58432d076683732ba20c68a9618be", "bytes": 2837072, "pages": 26,
+      "renderedPages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26], "nativeTextReviewedPages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,26], "ocrVerifiedPages": [16,17,18,19,20,21,22,23,24,25],
+      "reviewNote": "Issued GW1010342 permit, effective October 1, 2016 through January 31, 2017, with limits, conditions, maps and monitoring attachments. Authorization terms do not prove actual discharge or impact.",
+      "canonicalRecordId": "015-38c4dd289771", "canonicalAsset": "/wexford-docs/015-38c4dd289771.pdf", "disposition": "exact-existing-record",
+      "statuses": {"received": true, "extracted": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 6, "batch": "CAW-R2210-05", "name": "WEXFORD_LANDFILL.pdf",
+      "path": "C:/Users/casey/OneDrive/Desktop/Cadillac_American_Waste_Original_Records_2012-Early2020/WEXFORD_LANDFILL.pdf",
+      "sha256": "1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3", "bytes": 56579, "pages": 1,
+      "renderedPages": [1], "nativeTextReviewedPages": [1], "ocrVerifiedPages": [],
+      "reviewNote": "Undated Cadillac SIU profile listing Wexford County Landfill, permit 590-13 and intermittent process wastewater at 33,000 gpd; it is an aggregate profile, not a load ticket or analytical result.",
+      "canonicalRecordId": "037-1f7e70d66b30", "canonicalAsset": "/ipp-docs/037-1f7e70d66b30.pdf", "disposition": "exact-existing-record",
+      "statuses": {"received": true, "extracted": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    }
+  ]
+}

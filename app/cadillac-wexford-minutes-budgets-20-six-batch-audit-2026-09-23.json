@@ -1,0 +1,44 @@
+{
+  "auditDate":"2026-09-23",
+  "sourceFolder":"C:/Users/casey/OneDrive/Desktop/Cadillac_Wexford_Leachate_Records_2012-Early2020",
+  "rule":"Every supplied page rendered and reviewed in order; image-only originals verified against paired OCR; source names retained as provenance.",
+  "counts":{"fileInstances":20,"receivedPages":1066,"substantivelyUniquePages":794,"unreadablePages":0,"newDistinctRecords":0},
+  "batches":[
+    {"id":"CWLR-20B-01","positions":[1,2,3],"pages":260},
+    {"id":"CWLR-20B-02","positions":[4,5,6,7],"pages":28},
+    {"id":"CWLR-20B-03","positions":[8,9,10,11],"pages":16},
+    {"id":"CWLR-20B-04","positions":[12,13,14,15],"pages":20},
+    {"id":"CWLR-20B-05","positions":[16,17],"pages":8},
+    {"id":"CWLR-20B-06","positions":[18,19,20],"pages":734}
+  ],
+  "files":[
+    {"position":1,"name":"ADID_804_2015-2016_Annual_Operating_Budget_OCR.pdf","bytes":9240338,"pages":250,"sha256":"1d0a54ec5487d580b0421e88c0e97da3cd9a3e44513c621f2fd15adcb3ffb2fb","canonicalRecordId":"191-82bfe8b8928e","canonicalAsset":"/findings-docs/191-82bfe8b8928e.pdf","disposition":"ocr-render-identical"},
+    {"position":2,"name":"ADID_863_April_14_2016_Work_Session_Minutes.pdf","bytes":235758,"pages":5,"sha256":"ab25bfa3b3c4b86e0b2294e80a2f444c7fcc898bcb3692d416290a5e6f82f5e7","canonicalRecordId":"195-ab25bfa3b3c4","canonicalAsset":"/findings-docs/195-ab25bfa3b3c4.pdf","disposition":"exact-existing-record"},
+    {"position":3,"name":"2018-02-21_Wexford_County_BOC_Minutes.pdf","bytes":186031,"pages":5,"sha256":"8d6267327b86ca669f955a73a37c519bc8b9090fbc4483e665d4dc9fdef93f7c","canonicalRecordId":"047-8d6267327b86","canonicalAsset":"/wexford-docs/047-8d6267327b86.pdf","disposition":"exact-existing-record"},
+    {"position":4,"name":"2018-03-07_Wexford_BOC_injection_well_status.pdf","bytes":160961,"pages":5,"sha256":"c18471b190b0bd4325af4cd64d931f280d39dcba90f130c3bc787f862e3d3457","canonicalRecordId":"048-c18471b190b0","canonicalAsset":"/wexford-docs/048-c18471b190b0.pdf","disposition":"exact-existing-record"},
+    {"position":5,"name":"2018-2019_Cadillac_PFAS_Interim_Summary_Approval_Letter_original.pdf","bytes":120071,"pages":3,"sha256":"0c500dc1ea41e8d5ecc70a9a54d24368a61977350dda27315be469bea0d421c5","canonicalAsset":"/docs/2019-03-04-report-approval.pdf","disposition":"render-and-text-identical-variant"},
+    {"position":6,"name":"2019_POTW_Oversight_Table.pdf","bytes":48775,"pages":14,"sha256":"e09cc490d763e734c7b8735143d937dca6f188a620956820ebe0c5e94258b2e7","canonicalRecordId":"004-e09cc490d763","canonicalAsset":"/ipp-docs/004-e09cc490d763.pdf","disposition":"exact-existing-record"},
+    {"position":7,"name":"2019_SIU-CIU_List.pdf","bytes":48663,"pages":6,"sha256":"b1f62dff2c41ae0e8d8e44deec46559e56518bb4c74a10237812493dbca44e03","canonicalRecordId":"005-b1f62dff2c41","canonicalAsset":"/ipp-docs/005-b1f62dff2c41.pdf","disposition":"exact-existing-record"},
+    {"position":8,"name":"2019-03-20_Wexford_County_BOC_Minutes_Original.pdf","bytes":196486,"pages":5,"sha256":"7a4516c01f4553bee0b152c27ddc8aa92ef2e5ce3d0ccf8c1a2f665a3b7a6d48","canonicalRecordId":"049-7a4516c01f45","canonicalAsset":"/wexford-docs/049-7a4516c01f45.pdf","disposition":"exact-existing-record"},
+    {"position":9,"name":"2019-03-20_Wexford_County_BOC_Minutes_Original_OCR.pdf","bytes":211478,"pages":5,"sha256":"c043c331aa205730a0cb3aaa003fae5ea687503c8c960ea4f21050f90478b94a","canonicalRecordId":"049-7a4516c01f45","canonicalAsset":"/wexford-docs/049-7a4516c01f45.pdf","disposition":"ocr-render-identical"},
+    {"position":10,"name":"2019-05-01_Wexford_County_BOC_Minutes_Original.pdf","bytes":129091,"pages":3,"sha256":"f116fb87dc6c9c2fe95599ff6cf04786c5b7448fba93f0385658301e5e66827f","canonicalRecordId":"050-f116fb87dc6c","canonicalAsset":"/wexford-docs/050-f116fb87dc6c.pdf","disposition":"exact-existing-record"},
+    {"position":11,"name":"2019-05-01_Wexford_County_BOC_Minutes_Original_OCR.pdf","bytes":138348,"pages":3,"sha256":"ea0255d4ffaa07018395feae7dd1a341bb70300d58906a974084bc4f711db01a","canonicalRecordId":"050-f116fb87dc6c","canonicalAsset":"/wexford-docs/050-f116fb87dc6c.pdf","disposition":"ocr-render-identical"},
+    {"position":12,"name":"2019-05-15_Wexford_County_BOC_Minutes_Original.pdf","bytes":220433,"pages":5,"sha256":"037e7938ec943da9f9f9d6af5b430ee8e324720ed42a63de6557de2b13ebf97f","canonicalRecordId":"051-037e7938ec94","canonicalAsset":"/wexford-docs/051-037e7938ec94.pdf","disposition":"exact-existing-record"},
+    {"position":13,"name":"2019-05-15_Wexford_County_BOC_Minutes_Original_OCR.pdf","bytes":237972,"pages":5,"sha256":"606882dd32db7a41e85e1c77987e642497dcd4e429150d167ae1cb48a8e3948b","canonicalRecordId":"051-037e7938ec94","canonicalAsset":"/wexford-docs/051-037e7938ec94.pdf","disposition":"ocr-render-identical"},
+    {"position":14,"name":"2019-07-03_Wexford_County_BOC_Minutes_Original.pdf","bytes":191835,"pages":5,"sha256":"ff414da946e02ba7a1d54ee2ca2c75f83b554a8855dd6687961e714156b1d023","canonicalRecordId":"052-ff414da946e0","canonicalAsset":"/wexford-docs/052-ff414da946e0.pdf","disposition":"exact-existing-record"},
+    {"position":15,"name":"2019-07-03_Wexford_County_BOC_Minutes_Original_OCR.pdf","bytes":208315,"pages":5,"sha256":"e9343cc9dc78ff4cf26ecd8e53996dcdd914dcb65b437728222c5be92c5fa794","canonicalRecordId":"052-ff414da946e0","canonicalAsset":"/wexford-docs/052-ff414da946e0.pdf","disposition":"ocr-render-identical"},
+    {"position":16,"name":"2019-11-06_Wexford_County_BOC_Minutes_Original.pdf","bytes":186300,"pages":4,"sha256":"402b13d81161b9e895fcba63b08af7a0f42b8b54028c88ca1dcc0bfbfcfd307d","canonicalRecordId":"053-402b13d81161","canonicalAsset":"/wexford-docs/053-402b13d81161.pdf","disposition":"exact-existing-record"},
+    {"position":17,"name":"2019-11-06_Wexford_County_BOC_Minutes_Original_OCR.pdf","bytes":203177,"pages":4,"sha256":"a2913d0de7a5ecf60f68f68f74e0ac193a01f6b910a6784f1c2c9446fe3fbdfe","canonicalRecordId":"053-402b13d81161","canonicalAsset":"/wexford-docs/053-402b13d81161.pdf","disposition":"ocr-render-identical"},
+    {"position":18,"name":"ADID_583_2013-2014_Annual_Operating_Budget.pdf","bytes":5124403,"pages":246,"sha256":"fbee0873f184b26ce053485567814250abb118d20bd58d335c796620a54c6189","canonicalRecordId":"184-fbee0873f184","canonicalAsset":"/findings-docs/184-fbee0873f184.pdf","disposition":"exact-existing-record"},
+    {"position":19,"name":"ADID_703_2014-2015_Annual_Operating_Budget.pdf","bytes":2605092,"pages":238,"sha256":"710379d9664cec7ce863561b925c025e69dac99cce3e50edceaf88ef95ea9c83","canonicalRecordId":"185-710379d9664c","canonicalAsset":"/findings-docs/185-710379d9664c.pdf","disposition":"exact-existing-record"},
+    {"position":20,"name":"ADID_804_2015-2016_Annual_Operating_Budget.pdf","bytes":9027857,"pages":250,"sha256":"82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca","canonicalRecordId":"191-82bfe8b8928e","canonicalAsset":"/findings-docs/191-82bfe8b8928e.pdf","disposition":"exact-existing-record"}
+  ],
+  "findingBoundaries":[
+    "Meeting comments about installed injection wells and proposed ordinances remain reported statements or proposals, not independently verified operation or adoption.",
+    "The March 2019 PFAS approval letter leaves the industrial source unnamed and preserves continuing duties and liability.",
+    "POTW oversight fields are administrative reporting, not independent analytical or adjudicated findings.",
+    "Annual leachate revenues are aggregate figures, not customer-attributed load records; NPDES counts are not tied to leachate or PFAS.",
+    "The underlying 2019 landfill groundwater report, laboratory data and Resolution 19-07 attachments remain missing."
+  ],
+  "statuses":{"received":true,"extracted":true,"reviewed":true,"verified":true,"cataloged":true,"published":true}
+}

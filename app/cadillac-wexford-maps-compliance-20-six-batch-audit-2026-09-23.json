@@ -1,0 +1,45 @@
+{
+  "auditDate": "2026-09-23",
+  "sourceFolder": "C:/Users/casey/OneDrive/Desktop/Cadillac_Wexford_Leachate_Records_2012-Early2020",
+  "rule": "Full page-order rendered review with OCR verification; six stable batches; filenames are provenance only.",
+  "counts": {"fileInstances": 20, "substantiveRecords": 13, "ocrDerivatives": 7, "renderedPagesReviewed": 63, "newDistinctRecords": 0},
+  "batches": [
+    {"id":"CWLR-20-01","positions":[1,2,3],"pages":11},
+    {"id":"CWLR-20-02","positions":[4,5],"pages":16},
+    {"id":"CWLR-20-03","positions":[6,7,8,9],"pages":8},
+    {"id":"CWLR-20-04","positions":[10,11,12,13,14],"pages":24},
+    {"id":"CWLR-20-05","positions":[15,16],"pages":2},
+    {"id":"CWLR-20-06","positions":[17,18,19,20],"pages":4}
+  ],
+  "files": [
+    {"position":1,"name":"2016_Wexford_Fig_4_-_Wetland_Location.pdf","bytes":350218,"pages":1,"sha256":"cc1225120bd0adefc738409fae3ff3620b43bc391f6c5af1ca14e7f0742e9a7a","canonicalId":"007-cc1225120bd0","disposition":"exact-existing"},
+    {"position":2,"name":"2015-09-02_Wexford_BOC_Wexford_Water_Technologies_letter.pdf","bytes":39911,"pages":4,"sha256":"bfdf67a999daa1b2086e2210c07672f8ee98858441a150f5b671e93a60a10dce","canonicalId":"030-bfdf67a999da","disposition":"exact-existing"},
+    {"position":3,"name":"2015-10-07_Wexford_BOC_Cedar_Creek_injection_discussion.pdf","pages":6,"sha256Prefix":"c4dd","canonicalId":"process-site-007","disposition":"exact-existing"},
+    {"position":4,"name":"2015-2016_Wexford_County_Landfill_District_Compliance_File_original.pdf","bytes":153987,"pages":8,"sha256Prefix":"7c991","canonicalId":"001-7c991baaf1e9","disposition":"exact-existing"},
+    {"position":5,"name":"2015-2016_Wexford_County_Landfill_District_Compliance_File_original_OCR.pdf","bytes":166932,"pages":8,"sha256Prefix":"f3aa88","canonicalId":"001-7c991baaf1e9","disposition":"ocr-render-identical"},
+    {"position":6,"name":"2015-2016_Wexford_County_Landfill_Leachate_Request.pdf","pages":3,"sha256Prefix":"c2ea","disposition":"exact-existing"},
+    {"position":7,"name":"2015-2016_Wexford_County_Landfill_Leachate_Request_OCR.pdf","pages":3,"sha256Prefix":"41a6","disposition":"ocr-render-identical"},
+    {"position":8,"name":"2016_GW1010342_Completed_Public_Notice_Certification_original.pdf","bytes":153213,"pages":1,"sha256Prefix":"54c7e9","canonicalId":"075-54c7e9d67d44","disposition":"exact-existing"},
+    {"position":9,"name":"2016_GW1010342_Completed_Public_Notice_Certification_original_OCR.pdf","bytes":154265,"pages":1,"sha256Prefix":"1f55b0","canonicalId":"075-54c7e9d67d44","disposition":"ocr-render-identical"},
+    {"position":10,"name":"2016_GW1010342_Cover_Letter_Email_original.pdf","bytes":8190,"pages":1,"sha256Prefix":"e45ebd","canonicalId":"002-e45ebd99572b","disposition":"exact-existing"},
+    {"position":11,"name":"2016_GW1010342_Draft_Rule_2210_Permit_original.pdf","pages":20,"sha256Prefix":"a6e913","canonicalId":"014-a6e913ab7006","disposition":"exact-existing"},
+    {"position":12,"name":"2016_GW1010342_Final_Authorization_Email_original.pdf","pages":1,"sha256Prefix":"8ba13c","canonicalId":"003-8ba13c7dcdf6","disposition":"exact-existing"},
+    {"position":13,"name":"2016_GW1010342_Public_Notice_Certification_Form_original.pdf","bytes":7672,"pages":1,"sha256Prefix":"34bbe60","canonicalId":"012-34bbe60fdbc2","disposition":"exact-existing"},
+    {"position":14,"name":"2016_GW1010342_Public_Notice_Email_original.pdf","pages":1,"sha256Prefix":"466190","canonicalId":"013-46619080fc73","disposition":"exact-existing"},
+    {"position":15,"name":"2016_Wexford_Fig_1_-_Site_Location.pdf","bytes":342082,"pages":1,"sha256Prefix":"aaa74","canonicalId":"004-aaa74db2f56d","disposition":"exact-existing"},
+    {"position":16,"name":"2016_Wexford_Fig_1_-_Site_Location_OCR.pdf","bytes":345418,"pages":1,"sha256Prefix":"805690","canonicalId":"004-aaa74db2f56d","disposition":"ocr-render-identical"},
+    {"position":17,"name":"2016_Wexford_Fig_2_-_Site_Plan.pdf","bytes":46743,"pages":1,"sha256Prefix":"07d4","canonicalId":"005-07d4a892d342","disposition":"exact-existing"},
+    {"position":18,"name":"2016_Wexford_Fig_2_-_Site_Plan_OCR.pdf","bytes":54000,"pages":1,"sha256Prefix":"0994","canonicalId":"005-07d4a892d342","disposition":"ocr-render-identical"},
+    {"position":19,"name":"2016_Wexford_Fig_3_-_Reg_Water_Well_Location.pdf","bytes":297431,"pages":1,"sha256Prefix":"44cde","canonicalId":"006-44cde488aaf4","disposition":"exact-existing"},
+    {"position":20,"name":"2016_Wexford_Fig_3_-_Reg_Water_Well_Location_OCR.pdf","bytes":301243,"pages":1,"sha256Prefix":"19f6","canonicalId":"006-44cde488aaf4","disposition":"ocr-render-identical"}
+  ],
+  "findingBoundaries": [
+    "The September 2 supplied filename calls the record a letter, but the content is complete meeting minutes.",
+    "The district compliance file concerns termination of a stormwater NPDES certificate; it does not establish landfill closure.",
+    "The March 2016 leachate request is not authorization, and the November 2015 approval reproduced in it addresses an earlier lagoon/spray-curtain plan.",
+    "The completed certification supports entrance posting only; absent newspaper and 30-day records remain absent.",
+    "The draft permit is not final authorization; its internal page numbering also indicates absent referenced material.",
+    "Maps and figures are application-context exhibits, not current as-built proof."
+  ],
+  "statuses": {"received":true,"extracted":true,"reviewed":true,"verified":true,"cataloged":true,"published":true}
+}

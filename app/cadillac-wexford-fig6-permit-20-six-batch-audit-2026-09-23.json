@@ -1,0 +1,43 @@
+{
+  "auditDate":"2026-09-23",
+  "sourceFolder":"C:/Users/casey/OneDrive/Desktop/Cadillac_Wexford_Leachate_Records_2012-Early2020",
+  "rule":"All pages rendered and reviewed in supplied order; OCR derivatives compared to original page images.",
+  "counts":{"fileInstances":20,"renderedPagesReviewed":147,"newDistinctRecords":0},
+  "batches":[
+    {"id":"CWLR-PERMIT-01","positions":[1,2,3,4,5],"pages":5},
+    {"id":"CWLR-PERMIT-02","positions":[6,7,8],"pages":16},
+    {"id":"CWLR-PERMIT-03","positions":[9,10,11],"pages":76},
+    {"id":"CWLR-PERMIT-04","positions":[12,13,14],"pages":13},
+    {"id":"CWLR-PERMIT-05","positions":[15,16],"pages":10},
+    {"id":"CWLR-PERMIT-06","positions":[17,18,19,20],"pages":27}
+  ],
+  "files":[
+    {"position":1,"name":"2016_Wexford_Fig_4_-_Wetland_Location_OCR.pdf","bytes":353591,"pages":1,"sha256Prefix":"3561ca","canonicalId":"007-cc1225120bd0","disposition":"ocr-render-identical"},
+    {"position":2,"name":"2016_Wexford_Fig_6_-_South_Topo.pdf","bytes":108134,"pages":1,"sha256Prefix":"34358f131b59","canonicalId":"009-34358f131b59","disposition":"exact-existing"},
+    {"position":3,"name":"2016_Wexford_Fig_6_-_South_Topo_OCR.pdf","bytes":116370,"pages":1,"sha256Prefix":"2c50b","canonicalId":"009-34358f131b59","disposition":"ocr-render-identical"},
+    {"position":4,"name":"2016-01-12_American_Waste_Leachate_Incident_Letter.pdf","pages":1,"sha256Prefix":"26aea","canonicalId":"corr-034-1872d030ac1d","disposition":"canonical-render-match"},
+    {"position":5,"name":"2016-01-12_American_Waste_Leachate_Incident_Letter_OCR.pdf","pages":1,"sha256Prefix":"780d","canonicalId":"corr-034-1872d030ac1d","disposition":"ocr-render-identical"},
+    {"position":6,"name":"2016-07-15_GW1010342_Public_Notice_original.pdf","bytes":22381,"pages":1,"sha256Prefix":"a611a","canonicalId":"076-a611a75485cf","disposition":"exact-existing"},
+    {"position":7,"name":"2017-04-05_Wexford_BOC_Cedar_Creek_missing_updates.pdf","pages":9,"canonicalId":"134-3dc615cfcf9c","disposition":"exact-existing"},
+    {"position":8,"name":"2017-08-16_Wexford_County_BOC_Minutes.pdf","pages":6,"canonicalId":"092-c3e654984910","disposition":"exact-existing"},
+    {"position":9,"name":"2017-10_EPA_MI-165-1I-0002_draft_permit_with_waste_analysis.pdf","pages":37,"canonicalId":"020-9ad6d46eb20b","disposition":"exact-existing"},
+    {"position":10,"name":"2017-10_EPA_MI-165-1I-0002_draft_permit_with_waste_analysis_OCR.pdf","pages":37,"sha256Prefix":"61b","canonicalId":"020-9ad6d46eb20b","disposition":"ocr-render-identical"},
+    {"position":11,"name":"2017-10_EPA_Wexford_Water_Technologies_fact_sheet.pdf","pages":2,"canonicalId":"024-069dda9efa5b","disposition":"exact-existing"},
+    {"position":12,"name":"2017-11-01_Wexford_BOC_Cedar_Creek_leachate_injection.pdf","pages":8,"canonicalId":"044-7c628f229e98","disposition":"exact-existing"},
+    {"position":13,"name":"2017-11-15_Wexford_BOC_American_Waste_WWT_injection_packet.pdf","pages":1,"canonicalId":"031-84b6c32074db","disposition":"exact-existing"},
+    {"position":14,"name":"2017-11-15_Wexford_County_BOC_Minutes.pdf","pages":4,"canonicalId":"process-site-008","disposition":"exact-existing"},
+    {"position":15,"name":"2017-11-20_Cadillac_Leachate_Resolution_Draft.pdf","pages":5,"sha256Prefix":"f328","canonicalId":"100-850f00b27330","disposition":"render-identical-variant"},
+    {"position":16,"name":"2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf","pages":5,"canonicalId":"100-850f00b27330","disposition":"exact-existing"},
+    {"position":17,"name":"2018_POTW_Oversight_Table.pdf","pages":14,"canonicalId":"003-4d20ff2cea09","disposition":"exact-existing"},
+    {"position":18,"name":"2018_SIU-CIU_List.pdf","pages":7,"canonicalId":"056-95a00ade695b","disposition":"exact-existing"},
+    {"position":19,"name":"2018-02_EPA_WWT_public_hearing_fact_sheet.pdf","pages":2,"canonicalId":"131-0cbb4e491791","canonicalAsset":"/findings-docs/131-0cbb4e491791.pdf","disposition":"exact-existing"},
+    {"position":20,"name":"2018-02-07_Wexford_County_BOC_Minutes.pdf","bytes":116957,"pages":4,"sha256Prefix":"0d84b0","canonicalId":"046-0d84b0d63d50","disposition":"exact-existing"}
+  ],
+  "findingBoundaries":[
+    "The injection-well permit and fact sheet are draft or proposal-stage records, not evidence of constructed or operating wells.",
+    "The supplied packet is a one-page tentative agenda; it is not a complete injection packet.",
+    "The unsigned resolution form is kept distinct from separate minutes supporting adoption.",
+    "The PFAS/oversight lists and public-hearing materials do not independently prove a landfill-to-Plett Road contaminant pathway."
+  ],
+  "statuses":{"received":true,"extracted":true,"reviewed":true,"verified":true,"cataloged":true,"published":true}
+}

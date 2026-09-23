@@ -16,7 +16,9 @@
   "052-760656b79f1f": {
     "sha256": "760656b79f1f4e150bc02ea7de18ba062ed4898461513cea98d059031b163b51",
     "aliases": [
-      "2012 - Cadillac WWTP Septage Information.pdf"
+      "2012 - Cadillac WWTP Septage Information.pdf",
+      "2012-03-26_Cadillac_WWTP_Septage_Information_Original.pdf",
+      "2012-03-26_Cadillac_WWTP_Septage_Information_Original_OCR.pdf"
     ],
     "comparison": "September 16, 2026: exact byte match; all 16 pages OCR-assisted and visually read, including handwriting. 2012 remains catalog context rather than a signed date; attached samples span 2010–2011."
   },
@@ -37,7 +39,9 @@
   "001-4e9a0cdf0189": {
     "sha256": "4e9a0cdf01891e70d6ba197d3ed3a96d1949ca777ff58e7a0cd26818ff307846",
     "aliases": [
-      "2012 Cadillac WWTP SIU Information.pdf"
+      "2012 Cadillac WWTP SIU Information.pdf",
+      "Cadillac_WWTP_SIU_Information.pdf",
+      "Cadillac_WWTP_SIU_Information_OCR.pdf"
     ],
     "comparison": "September 16, 2026: exact byte match to existing eleven-page original. All eleven SIU sheets freshly OCR-assisted and visually read. No completed/signed date appears; 2012 remains catalog context rather than a newly verified event date."
   },
@@ -115,7 +119,8 @@
   "046-0fcfc8c9921f": {
     "sha256": "0fcfc8c9921f0ae0ae2957d5a2df3b2064a8a407c7ed5b8bea541f3fed215385",
     "aliases": [
-      "ADID_1142_June_3_2019_City_Council_Packet.pdf"
+      "ADID_1142_June_3_2019_City_Council_Packet.pdf",
+      "ADID_1142_June_3_2019_City_Council_Packet_OCR.pdf"
     ]
   },
   "152-4335077ddaf4": {
@@ -128,14 +133,16 @@
     "sha256": "be4038bf5cd5438457ddcd05756514c877d2ab530720e37e670bb80f3eb75b80",
     "aliases": [
       "ADID_1123_April_1_2019_City_Council_Packet.pdf",
-      "April 1 2019 City Council_RN1123.pdf"
+      "April 1 2019 City Council_RN1123.pdf",
+      "ADID_1123_April_1_2019_City_Council_Packet_OCR.pdf"
     ]
   },
   "045-25d3c10b9ea8": {
     "sha256": "25d3c10b9ea8697bb69779ea5341633f7c3326eca5f8130278188bd1cb388d88",
     "aliases": [
       "ADID_1047_May_21_2018_City_Council_Packet.pdf",
-      "May 21 2018 City Council Packet.pdf"
+      "May 21 2018 City Council Packet.pdf",
+      "ADID_1047_May_21_2018_City_Council_Packet_OCR.pdf"
     ]
   },
   "196-fa41c0f607d9": {
@@ -149,13 +156,15 @@
     "aliases": [
       "ADID_994_December_4_2017_City_Council_Packet.pdf",
       "December 4 2017 City Council Packet.pdf",
-      "December 4 2017 City Council Packet (1).pdf"
+      "December 4 2017 City Council Packet (1).pdf",
+      "ADID_994_December_4_2017_City_Council_Packet_OCR.pdf"
     ]
   },
   "016-6ed7900b4952": {
     "sha256": "6ed7900b4952e238eda7baa37379cfc2d3293a25b2271abd0dcf72185a758194",
     "aliases": [
-      "ADID_992_November_20_2017_City_Council_Packet.pdf"
+      "ADID_992_November_20_2017_City_Council_Packet.pdf",
+      "ADID_992_November_20_2017_City_Council_Packet_OCR.pdf"
     ]
   },
   "195-ab25bfa3b3c4": {
@@ -241,7 +250,8 @@
   "037-1f7e70d66b30": {
     "sha256": "1f7e70d66b3012a9b251015562ea99bed32584e098c413c7cc1916a266dbf3f3",
     "aliases": [
-      "03_2017_Wexford_Landfill_SIU_Profile.pdf"
+      "03_2017_Wexford_Landfill_SIU_Profile.pdf",
+      "WEXFORD_LANDFILL.pdf"
     ]
   },
   "008-5b67e1ed1d5c": {
@@ -289,7 +299,8 @@
     "aliases": [
       "06_EPA_2017-10_Wexford_Injection_Well_Fact_Sheet.pdf",
       "fact_sheet_mi-165-1i-0002.pdf",
-      "fact_sheet_mi-165-1i-0002 (1).pdf"
+      "fact_sheet_mi-165-1i-0002 (1).pdf",
+      "2017-10_EPA_Wexford_Water_Technologies_fact_sheet.pdf"
     ]
   },
   "process-site-022-fe153aeaa6d9": {
@@ -303,7 +314,9 @@
     "sha256": "9ad6d46eb20b4f3b0d78edc88c391c766943c711b7fca43db9c6dcc9206daeaa",
     "aliases": [
       "EPA_MI-165-1I-0002_Draft_Permit_2017-10.pdf",
-      "07_EPA_2017-10_Wexford_Injection_Well_DRAFT_Permit.pdf"
+      "07_EPA_2017-10_Wexford_Injection_Well_DRAFT_Permit.pdf",
+      "2017-10_EPA_MI-165-1I-0002_draft_permit_with_waste_analysis.pdf",
+      "2017-10_EPA_MI-165-1I-0002_draft_permit_with_waste_analysis_OCR.pdf"
     ]
   },
   "process-site-023-0fcc5cbb1c14": {
@@ -315,7 +328,8 @@
   "131-0cbb4e491791": {
     "sha256": "0cbb4e4917919bc323d7a0c618636d728324bd4af24975f01b226c94e3f065a3",
     "aliases": [
-      "08_EPA_2018-02_Wexford_Public_Hearing_Fact_Sheet.pdf"
+      "08_EPA_2018-02_Wexford_Public_Hearing_Fact_Sheet.pdf",
+      "2018-02_EPA_WWT_public_hearing_fact_sheet.pdf"
     ]
   },
   "135-5f86ea369b77": {
@@ -340,14 +354,16 @@
   "134-3dc615cfcf9c": {
     "sha256": "3dc615cfcf9ce5e8252c0d536a755cb548ed6c290ebed1f773ca5bb9356f72a0",
     "aliases": [
-      "2017-04-05_Wexford_County_Board_Minutes.pdf"
+      "2017-04-05_Wexford_County_Board_Minutes.pdf",
+      "2017-04-05_Wexford_BOC_Cedar_Creek_missing_updates.pdf"
     ]
   },
   "044-7c628f229e98": {
     "sha256": "7c628f229e98599ab13a0152d8a06d797175a026199dece5bc1d34fc2115df96",
     "aliases": [
       "2017-11-01_Wexford_County_Board_Minutes.pdf",
-      "November-1-2017.pdf"
+      "November-1-2017.pdf",
+      "2017-11-01_Wexford_BOC_Cedar_Creek_leachate_injection.pdf"
     ]
   },
   "014-990955a02a90": {
@@ -482,7 +498,8 @@
     "sha256": "82bfe8b8928eb325dd8a4b00514a077f2912da7372317cbc61559708444f65ca",
     "aliases": [
       "FY2016 City of Cadillac Operating Budget.pdf",
-      "ADID_804_2015-2016_Annual_Operating_Budget.pdf"
+      "ADID_804_2015-2016_Annual_Operating_Budget.pdf",
+      "ADID_804_2015-2016_Annual_Operating_Budget_OCR.pdf"
     ]
   },
   "146-6b4e98f4c779": {
@@ -524,7 +541,8 @@
       "Nov_20_2017_Wexford_Leachate_Resolution.pdf",
       "Item_2798_fileID_2118.pdf",
       "Item_2798_fileID_2118 (1).pdf",
-      "2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf"
+      "2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
+      "2017-11-20_Cadillac_Leachate_Resolution_Draft.pdf"
     ],
     "comparison": "September 23, 2026: exact SHA-256 match confirmed after complete five-page review in CEDAR-SIX-03. The file is an unexecuted resolution form; the separate City minutes support adoption."
   },
@@ -569,7 +587,8 @@
   "form-submission-073-c84ac8484363": {
     "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
     "aliases": [
-      "IPP-PFAS-09_HNF-P7H3-DCN87_V1_Interim_Report_2018-07-30.pdf"
+      "IPP-PFAS-09_HNF-P7H3-DCN87_V1_Interim_Report_2018-07-30.pdf",
+      "09_HNF-P7H3-DCN87_V1_Interim_Report_2018-07-30.pdf"
     ],
     "comparison": "September 23, 2026: entire supplied PDF visually reviewed in page order, OCR checked where needed; exact bytes or identical rendered pages reconciled in PFAS-20260923-A six-batch audit. Original filenames preserved; no duplicate card."
   },
@@ -590,7 +609,8 @@
   "097-e13fc785334f": {
     "sha256": "e13fc785334ff3ae00fd36ed88c23332dbd56238910a92ffa498814c00c15acc",
     "aliases": [
-      "05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18.pdf"
+      "05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18.pdf",
+      "05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18_OCR.pdf"
     ],
     "comparison": "September 23, 2026: entire supplied PDF visually reviewed in page order, OCR checked where needed; exact bytes or identical rendered pages reconciled in PFAS-20260923-B six-batch audit. Original filenames preserved; no duplicate card."
   },
@@ -607,5 +627,357 @@
       "2017-11-15_Wexford_County_BOC_Minutes.pdf"
     ],
     "comparison": "September 23, 2026: exact SHA-256 match confirmed after complete four-page review in CEDAR-SIX-02."
+  },
+  "process-site-006-5bf7502e6eaf": {
+    "sha256": "5bf7502e6eaf7c2ee44459945f4487815c9efd49cece0cf11d939af83a5ab703",
+    "aliases": [
+      "2015-01-21_Wexford_County_BOC_Minutes.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match to the published four-page signed Wexford County minutes; all pages re-reviewed."
+  },
+  "process-site-007-c4ddf20bbac2": {
+    "sha256": "c4ddf20bbac21c63c094608b3bac9758fc8daad969bf3df5a29af139bfa1d342",
+    "aliases": [
+      "2015-10-07_Wexford_BOC_Cedar_Creek_injection_discussion.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match to the published six-page signed Wexford County minutes; the injection-well language is retained as reported discussion, not approval or operation."
+  },
+  "010-dfae42863627": {
+    "sha256": "dfae42863627f0273e4c61afb38f189a6a36b211b21ed161d42cdb5234bb57c9",
+    "aliases": [
+      "Flow_Rate_-_Days.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match to the existing one-page flow-duration calculation; page image and native text re-reviewed."
+  },
+  "011-ff3227a6e962": {
+    "sha256": "ff3227a6e962f1a048076f5a9ed5c8b26c8814c94cfb6ae05ffd4410073251b5",
+    "aliases": [
+      "lagoon_summary.pdf",
+      "lagoon_summary_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match to the existing 30-page lagoon analytical package; every page was re-rendered and visually reviewed in order."
+  },
+  "015-38c4dd289771": {
+    "sha256": "38c4dd289771ab2109af0cf4a8ac198c69e58432d076683732ba20c68a9618be",
+    "aliases": [
+      "Rule_2210_Permit_Template-Wexford_Landfill.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match to the published 26-page issued GW1010342 permit; all permit conditions, attachments, maps and monitoring table were re-reviewed."
+  },
+  "016-7ee1b2c9396c": {
+    "sha256": "7ee1b2c9396c51faa97a932b9756b0a42d0fb85cf4ad0e52d204f6cefd242dc5",
+    "aliases": [
+      "Wexford_Landfill_Groundwater_Discharge_Permit_Application_2210_y_.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match to the published 11-page Rule 2210(y) application; all pages and attachment references were re-reviewed."
+  },
+  "014-a6e913ab7006": {
+    "sha256": "a6e913ab7006112701a1a7760bd6d9180c413d95cb820df43540329f125aee73",
+    "aliases": [
+      "2016_GW1010342_Draft_Rule_2210_Permit_original.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match after complete 20-page review; blank issue/effective/signature fields confirm this is a draft, not final authorization."
+  },
+  "003-8ba13c7dcdf6": {
+    "sha256": "8ba13c7dcdf6e6e0e3f2328f3cf7ad5ea6bce988b4e3131f34fd9fd6b45c05f5",
+    "aliases": [
+      "2016_GW1010342_Final_Authorization_Email_original.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match to the one-page final-authorization transmittal; the named permit attachment is separately cataloged."
+  },
+  "092-c3e654984910": {
+    "sha256": "c3e654984910616cc2bf56710512a745d4e31143f314b72c5eda79c7aca920d0",
+    "aliases": [
+      "2017-08-16_Wexford_County_BOC_Minutes.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match after full six-page review. Approval of a closure proposal is kept distinct from completed closure or sampling."
+  },
+  "031-84b6c32074db": {
+    "sha256": "84b6c32074db75049a1184bcb75fba5f8e496e349361991ac82d71f3b1832594",
+    "aliases": [
+      "2017-11-15_Wexford_BOC_American_Waste_WWT_injection_packet.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match. Despite its supplied name, the record is only a one-page notice/tentative agenda."
+  },
+  "003-4d20ff2cea09": {
+    "sha256": "4d20ff2cea097b75992e4e5cb2a8ed159e482c0867ad1d5b93ba7d7749a34002",
+    "aliases": [
+      "2018_POTW_Oversight_Table.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match after all 14 pages and Wexford positional continuation rows were re-reviewed."
+  },
+  "056-95a00ade695b": {
+    "sha256": "95a00ade695b98a74eb499dcb17d4e44dba27f6634d6099f145a18eb314c639c",
+    "aliases": [
+      "2018_SIU-CIU_List.pdf"
+    ],
+    "comparison": "September 23, 2026: exact byte match after all seven pages were reviewed. The PDF is internally undated; the supplied 2018 name conflicts with the catalog's 2020 year and remains provenance, not a verified date."
+  },
+  "002-3da57e8018fb": {
+    "sha256": "3da57e8018fbdeb2474b90c359352df532d2b0d46fbb00e591841182ae0b49e2",
+    "aliases": [
+      "01_Pre-Inspection_Report.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "017-2713c81a8e63": {
+    "sha256": "2713c81a8e63c2e0e223d208f12eb1be1cc14a9b1fe5ed5a591e8a99ea9cc251",
+    "aliases": [
+      "2014-09-16_N3862_Full_Compliance_Evaluation_original.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "007-cc1225120bd0": {
+    "sha256": "cc1225120bd0adefc738409fae3ff3620b43bc391f6c5af1ca14e7f0742e9a7a",
+    "aliases": [
+      "2016_Wexford_Fig_4_-_Wetland_Location.pdf",
+      "2016_Wexford_Fig_4_-_Wetland_Location_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "030-bfdf67a999da": {
+    "sha256": "bfdf67a999daa1b2086e2210c07672f8ee98858441a150f5b671e93a60a10dce",
+    "aliases": [
+      "2015-09-02_Wexford_BOC_Wexford_Water_Technologies_letter.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "001-7c991baaf1e9": {
+    "sha256": "7c991baaf1e9d5af5a7177123957d8f933fd759f4022ceab2878626430a37943",
+    "aliases": [
+      "2015-2016_Wexford_County_Landfill_District_Compliance_File_original.pdf",
+      "2015-2016_Wexford_County_Landfill_District_Compliance_File_original_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "075-54c7e9d67d44": {
+    "sha256": "54c7e9d67d4444970e012a81f61195786e73bc9a04b0ff298fd67239bf1a833b",
+    "aliases": [
+      "2016_GW1010342_Completed_Public_Notice_Certification_original.pdf",
+      "2016_GW1010342_Completed_Public_Notice_Certification_original_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "002-e45ebd99572b": {
+    "sha256": "e45ebd99572bb182c93668efa939d9aff245aa0916071a5d63b683e88023a45b",
+    "aliases": [
+      "2016_GW1010342_Cover_Letter_Email_original.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "012-34bbe60fdbc2": {
+    "sha256": "34bbe60fdbc281b587994d36c27c70be1ec7c63f21a14a505019c2541600e5f4",
+    "aliases": [
+      "2016_GW1010342_Public_Notice_Certification_Form_original.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "004-aaa74db2f56d": {
+    "sha256": "aaa74db2f56d4369bf069082693a16e31d42b7944f1eaf1317c2eb4befb902b5",
+    "aliases": [
+      "2016_Wexford_Fig_1_-_Site_Location.pdf",
+      "2016_Wexford_Fig_1_-_Site_Location_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "005-07d4a892d342": {
+    "sha256": "07d4a892d34245e418de0eb57514162c659d0f65ede9dcaf8d6889e4642a2c1e",
+    "aliases": [
+      "2016_Wexford_Fig_2_-_Site_Plan.pdf",
+      "2016_Wexford_Fig_2_-_Site_Plan_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "006-44cde488aaf4": {
+    "sha256": "44cde488aaf41c3a0bd877fb60e4838ec4cd8c9a78240ae6695508b7fe013a66",
+    "aliases": [
+      "2016_Wexford_Fig_3_-_Reg_Water_Well_Location.pdf",
+      "2016_Wexford_Fig_3_-_Reg_Water_Well_Location_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "009-34358f131b59": {
+    "sha256": "34358f131b59bc2025f0e3b62ea9f6cc3c2205d13d95d9af46cded038de5599f",
+    "aliases": [
+      "2016_Wexford_Fig_6_-_South_Topo.pdf",
+      "2016_Wexford_Fig_6_-_South_Topo_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "corr-034-1872d030ac1d": {
+    "sha256": "1872d030ac1d32dcf078661a462fe2fdf5c064557ade0e7a8ac97e32f976be76",
+    "aliases": [
+      "2016-01-12_American_Waste_Leachate_Incident_Letter.pdf",
+      "2016-01-12_American_Waste_Leachate_Incident_Letter_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "076-a611a75485cf": {
+    "sha256": "a611a75485cf4e7814ccf6417e1430dc35c4584f6685a7297f818e4de39f6427",
+    "aliases": [
+      "2016-07-15_GW1010342_Public_Notice_original.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "046-0d84b0d63d50": {
+    "sha256": "0d84b0d63d506cf288333c679de272ea1b71be426870d84bdd7173596ed9f35e",
+    "aliases": [
+      "2018-02-07_Wexford_County_BOC_Minutes.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "047-8d6267327b86": {
+    "sha256": "8d6267327b86ca669f955a73a37c519bc8b9090fbc4483e665d4dc9fdef93f7c",
+    "aliases": [
+      "2018-02-21_Wexford_County_BOC_Minutes.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "048-c18471b190b0": {
+    "sha256": "c18471b190b0bd4325af4cd64d931f280d39dcba90f130c3bc787f862e3d3457",
+    "aliases": [
+      "2018-03-07_Wexford_BOC_injection_well_status.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "004-e09cc490d763": {
+    "sha256": "e09cc490d763e734c7b8735143d937dca6f188a620956820ebe0c5e94258b2e7",
+    "aliases": [
+      "2019_POTW_Oversight_Table.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "005-b1f62dff2c41": {
+    "sha256": "b1f62dff2c41ae0e8d8e44deec46559e56518bb4c74a10237812493dbca44e03",
+    "aliases": [
+      "2019_SIU-CIU_List.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "049-7a4516c01f45": {
+    "sha256": "7a4516c01f4553bee0b152c27ddc8aa92ef2e5ce3d0ccf8c1a2f665a3b7a6d48",
+    "aliases": [
+      "2019-03-20_Wexford_County_BOC_Minutes_Original.pdf",
+      "2019-03-20_Wexford_County_BOC_Minutes_Original_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "050-f116fb87dc6c": {
+    "sha256": "f116fb87dc6c9c2fe95599ff6cf04786c5b7448fba93f0385658301e5e66827f",
+    "aliases": [
+      "2019-05-01_Wexford_County_BOC_Minutes_Original.pdf",
+      "2019-05-01_Wexford_County_BOC_Minutes_Original_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "051-037e7938ec94": {
+    "sha256": "037e7938ec943da9f9f9d6af5b430ee8e324720ed42a63de6557de2b13ebf97f",
+    "aliases": [
+      "2019-05-15_Wexford_County_BOC_Minutes_Original.pdf",
+      "2019-05-15_Wexford_County_BOC_Minutes_Original_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "052-ff414da946e0": {
+    "sha256": "ff414da946e02ba7a1d54ee2ca2c75f83b554a8855dd6687961e714156b1d023",
+    "aliases": [
+      "2019-07-03_Wexford_County_BOC_Minutes_Original.pdf",
+      "2019-07-03_Wexford_County_BOC_Minutes_Original_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "053-402b13d81161": {
+    "sha256": "402b13d81161b9e895fcba63b08af7a0f42b8b54028c88ca1dcc0bfbfcfd307d",
+    "aliases": [
+      "2019-11-06_Wexford_County_BOC_Minutes_Original.pdf",
+      "2019-11-06_Wexford_County_BOC_Minutes_Original_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "080-6a540cadcdc6": {
+    "sha256": "6a540cadcdc6fb9200560fcfd59897410932872fa6e48ca880ee5a8266642960",
+    "aliases": [
+      "Application_2Q7-HQ21-P66B_V1_1_.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "016-36f3abe16dd1": {
+    "sha256": "36f3abe16dd100e0681b2855d9b2c6c41dd8992edd3db7741f0a134e90780389",
+    "aliases": [
+      "DMR_Daily_-_GW1010342__10_01_2016_to_10_31_2016_V1.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "013-9a9721237464": {
+    "sha256": "9a97212374642a444f5330dae253186c45c7ee4f01326a2d41393965da81638d",
+    "aliases": [
+      "DMR_Daily_-_GW1010342__11_01_2016_to_11_30_2016_V1.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "014-38abcc29105c": {
+    "sha256": "38abcc29105cfaab46f37fa4c4b6414d85b2010739f5094da02431741aab22bc",
+    "aliases": [
+      "DMR_Daily_-_GW1010342__12_01_2016_to_12_31_2016_V1.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "015-e20050cc15eb": {
+    "sha256": "e20050cc15eb297e9f3109911cff04f7136f8aa813d739b4caf10746e6dc1a3a",
+    "aliases": [
+      "DMR_Summary_-_GW1010342__10_01_2016_to_10_31_2016_V1.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "018-6a73e78ae28d": {
+    "sha256": "6a73e78ae28db7df8c9859302d2f302ffe2a97f5c64652c97432367c72bdcc52",
+    "aliases": [
+      "DMR_Summary_-_GW1010342__11_01_2016_to_11_30_2016_V1.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "017-ff2a91f0f3b9": {
+    "sha256": "ff2a91f0f3b9893d3972fa6d8ed0cf305c02d792d97716423fcb7fad09c184ec",
+    "aliases": [
+      "DMR_Summary_-_GW1010342__12_01_2016_to_12_31_2016_V1.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "008-29d8248efbf8": {
+    "sha256": "29d8248efbf8d2a2cff9307c244a5eacc9b49bca8098f23d7f24a1fcc200a65c",
+    "aliases": [
+      "Fig_5_-_North_Topo.pdf",
+      "Fig_5_-_North_Topo_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "103-5114323584bd": {
+    "sha256": "5114323584bd9f2b98c09145c4c1941ba7beb059abdc4b2f8a7b0f3f76e4e4b4",
+    "aliases": [
+      "N3862_On-Site_Inspection_11-06-2017.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "097-9aac9145e603": {
+    "sha256": "9aac9145e60300327e2b68566907c6a351d2179c599ae5af22f88b65fa27cb43",
+    "aliases": [
+      "Wexford_Co_Landfill_Termination_Form_1_.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "099-8c0affe1ef31": {
+    "sha256": "8c0affe1ef313cb0a14f9ee85bf1db1d45c8297977d9f054f59aabba12b924c7",
+    "aliases": [
+      "Wexford_County_Landfill_GW1010342_Termination_7-2-18_Green_Card_Ret_d.pdf",
+      "Wexford_County_Landfill_GW1010342_Termination_7-2-18_Green_Card_Ret_d_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
+  },
+  "100-7bc1b5bbf6f2": {
+    "sha256": "7bc1b5bbf6f24bb2d8119ba5e2ab1ed516327d8050fac960448d200f0f46b3cb",
+    "aliases": [
+      "Wexford_County_Landfill_Termination_Issued_Letter_1_.pdf"
+    ],
+    "comparison": "September 23, 2026: full page-order review completed and the supplied filename was reconciled to this canonical source."
   }
 }

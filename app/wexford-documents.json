@@ -1165,15 +1165,15 @@
   },
   {
     "id": "097-9aac9145e603",
-    "name": "Wexford Co Landfill Termination Form.pdf",
+    "name": "Wexford County Landfill GW1010342 Groundwater Discharge Permit Termination — July 2, 2018.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/097-9aac9145e603.pdf",
     "year": "2018",
-    "type": "Stormwater record",
+    "type": "Groundwater permit termination",
     "format": "PDF",
     "pages": 1,
     "size": 41090,
     "sha256": "9aac9145e60300327e2b68566907c6a351d2179c599ae5af22f88b65fa27cb43",
-    "description": "STATE OF MICHIGAN. Verified as a distinct stormwater record after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Signed Michigan DEQ Water Resources Division termination statement for Wexford County Landfill Groundwater Discharge Permit GW1010342. The agency determined that the permit had expired, that all groundwater discharges authorized under it had been eliminated and completed, terminated the permit effective July 2, 2018, and stated that no further groundwater discharge may occur without a new permit. This is a groundwater-permit determination, not proof of the final hauled load or Cadillac WWTP receiving date."
   },
   {
     "id": "098-0130db19c6ca",
@@ -1189,27 +1189,27 @@
   },
   {
     "id": "099-8c0affe1ef31",
-    "name": "Wexford County Landfill GW1010342 Termination 7-2-18 Green Card Ret'd.pdf",
+    "name": "GW1010342 Termination Certified-Mail Return Receipt — July 6, 2018.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/099-8c0affe1ef31.pdf",
     "year": "2018",
-    "type": "Stormwater record",
+    "type": "Certified-mail return receipt",
     "format": "PDF",
     "pages": 1,
     "size": 399768,
     "sha256": "8c0affe1ef313cb0a14f9ee85bf1db1d45c8297977d9f054f59aabba12b924c7",
-    "description": "Wexford County Landfill GW1010342 Termination 7-2-18 Green Card Ret'd. Verified as a distinct stormwater record after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "USPS certified-mail return receipt addressed to Edward Ascione at Wexford County Landfill for the GW1010342 termination mailing. The card records delivery on July 6, 2018 and bears a Michigan DEQ Water Resources Division received stamp dated July 9, 2018. It proves delivery and return receipt only; the companion termination statement supplies the substantive terms."
   },
   {
     "id": "100-7bc1b5bbf6f2",
-    "name": "Wexford County Landfill Termination Issued Letter.pdf",
+    "name": "DEQ Issuance Letter — Wexford County Landfill GW1010342 Termination — July 2, 2018.pdf",
     "url": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/b4705928d16ccaac9701ee43cba04369982c5ab6/public/wexford-docs/100-7bc1b5bbf6f2.pdf",
     "year": "2018",
-    "type": "Stormwater record",
+    "type": "Groundwater permit correspondence",
     "format": "PDF",
     "pages": 1,
     "size": 95753,
     "sha256": "7bc1b5bbf6f24bb2d8119ba5e2ab1ed516327d8050fac960448d200f0f46b3cb",
-    "description": "(% letter top certified %). Verified as a distinct stormwater record after file-hash, rendered-page, OCR-text and metadata comparison."
+    "description": "Michigan DEQ certified-mail cover letter dated July 2, 2018 transmitting the termination statement for Wexford County Landfill Groundwater Discharge Permit GW1010342 and stating that the permit was terminated on July 2, 2018. This is transmittal correspondence; the companion termination statement is the substantive agency determination."
   },
   {
     "id": "101-8716c8f5f6f1",

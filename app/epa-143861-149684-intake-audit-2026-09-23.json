@@ -9,7 +9,8 @@
       "sha256": "edf83f5fdf7c2c7b8898dcf8a9077399bccdf9a95024672cdc3dead20845cbb5",
       "bytes": 4707290,
       "pages": 114,
-      "status": { "received": true, "extracted": true, "reviewed": true, "verified": true, "published": false },
+      "status": { "received": true, "extracted": true, "reviewed": true, "verified": true, "published": true },
+      "publication": { "version": 296, "deployedAt": "2026-09-23T09:11:23-04:00", "url": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site" },
       "coverage": {
         "pageOrderReviewed": "1-114",
         "renderedPagesInspected": "1-114",
@@ -32,7 +33,8 @@
       "sha256": "69ab779993c2980d62c7fd9f510130b212041e528c65a86946b94823a4807bca",
       "bytes": 284461,
       "pages": 5,
-      "status": { "received": true, "extracted": true, "reviewed": true, "verified": true, "published": false },
+      "status": { "received": true, "extracted": true, "reviewed": true, "verified": true, "published": true },
+      "publication": { "version": 296, "deployedAt": "2026-09-23T09:11:23-04:00", "url": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site" },
       "coverage": {
         "pageOrderReviewed": "1-5",
         "renderedPagesInspected": "1-5",

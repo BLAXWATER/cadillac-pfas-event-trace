@@ -2,6 +2,7 @@ import { createServer } from 'vite';
 import { fileURLToPath } from 'node:url';
 import { loadDownloadDeliveryPlan } from './document-download-integrity.mjs';
 import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const origin = process.argv[2] ?? 'https://cadillac-pfas-event-trace.icons-7120.chatgpt.site';
@@ -48,8 +49,10 @@ try {
       const built = manifest[`public${sourcePath}`]?.file;
       if (!built) { failures.push(`Missing built original: ${d.row.id}`); continue; }
       try {
-        const r = await fetch(new URL(built, origin), {method:'HEAD', signal:AbortSignal.timeout(30000)});
-        if (!r.ok || Number(r.headers.get('content-length')) !== d.row.size) failures.push(`Invalid live original: ${d.row.id} HTTP ${r.status}`);
+        const r = await fetch(new URL(built, origin), {signal:AbortSignal.timeout(60000)});
+        const bytes = Buffer.from(await r.arrayBuffer());
+        const hash = createHash('sha256').update(bytes).digest('hex');
+        if (!r.ok || bytes.length !== d.row.size || hash !== d.row.sha256) failures.push(`Invalid live original: ${d.row.id} HTTP ${r.status}`);
       } catch(e) { failures.push(`${d.row.id}: ${e.message}`); }
     }
   }));

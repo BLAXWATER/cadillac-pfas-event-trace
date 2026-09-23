@@ -1,0 +1,81 @@
+{
+  "batch": "2026-09-23 Wexford Construction Permit 4127 exact recheck intake 109",
+  "batchMembership": "Batch 1 of 1",
+  "scope": "Fresh page-order review and exact-record reconciliation of the supplied Wexford-County-Landfill.pdf.",
+  "method": [
+    "Computed the supplied PDF's SHA-256 hash, byte size and page count before catalog reconciliation.",
+    "Extracted native text from all three pages and rendered all three pages at 150 DPI for visual inspection in page order.",
+    "Read pages 1-2 top to bottom, including the signed permit, conditions, incorporated application materials, monitoring requirement and term. Inspected page 3 as the complete Attachment A site map; native map text was not treated as reliable where visually indistinct.",
+    "Compared the supplied file against the canonical catalogs by full SHA-256, byte size, page count and substantive identity. It is byte-identical to published record 039-a2b89f4b2389.",
+    "Downloaded the immutable canonical source anonymously and verified its byte count and SHA-256 against the supplied file.",
+    "Reused the established record without creating a duplicate card or resetting a NEW or UPDATED activity timestamp."
+  ],
+  "status": {
+    "received": true,
+    "extracted": true,
+    "reviewed": true,
+    "verified": true,
+    "published": true,
+    "publicationBasis": "Exact byte-identical canonical record already published; this intake adds no new catalog record."
+  },
+  "stats": {
+    "receivedFiles": 1,
+    "distinctInputHashes": 1,
+    "pdfPagesReviewed": 3,
+    "nativeTextPages": 3,
+    "renderedPagesReviewed": 3,
+    "ocrPages": 0,
+    "exactExistingRecordsReusedAsCrossReferences": 1,
+    "anonymousCanonicalDownloadStatus": 200,
+    "exactCanonicalDownloadHashMatches": 1,
+    "recordsAdded": 0,
+    "timelineEventsAdded": 0,
+    "evidenceRequirementsClosed": 0,
+    "unreadablePages": 0
+  },
+  "suppliedFile": {
+    "fullPath": "C:/Users/casey/OneDrive/Desktop/Wexford-County-Landfill.pdf",
+    "name": "Wexford-County-Landfill.pdf",
+    "sha256": "a2b89f4b2389a8a3681c0a571ad711063734093892d0876bca0b8b3c2063fd43",
+    "size": 255586,
+    "pages": 3
+  },
+  "canonicalRecord": {
+    "catalog": "npdes-documents.json",
+    "recordId": "039-a2b89f4b2389",
+    "canonicalName": "02_EGLE_2012_Construction_Permit_4127.pdf",
+    "url": "/npdes-docs/039-a2b89f4b2389.pdf",
+    "anonymousRawUrl": "https://raw.githubusercontent.com/BLAXWATER/cadillac-pfas-event-trace/07c302dfa7d4d686ef72973070bcd81667757ba3/public/npdes-docs/039-a2b89f4b2389.pdf",
+    "sha256": "a2b89f4b2389a8a3681c0a571ad711063734093892d0876bca0b8b3c2063fd43",
+    "size": 255586,
+    "pages": 3,
+    "permitNumber": "4127",
+    "issueDate": "2012-08-20"
+  },
+  "pageCoverage": [
+    {
+      "page": 1,
+      "coverage": "Native text and rendered page reviewed in full, including facility identity, facility type, acreage/location, responsible party, permit term, non-transferability clause and signed issuance."
+    },
+    {
+      "page": 2,
+      "coverage": "Native text and rendered page reviewed in full, including construction-only authorization, operating-license prerequisite, incorporated 2012 application and engineering plans, monitoring-plan requirement, no variances, no special conditions and permit term."
+    },
+    {
+      "page": 3,
+      "coverage": "Attachment A rendered and visually reviewed as the complete site map, including facility layout, permitted/expansion areas, roads, monitoring-related features, legend, notes, survey information and Golder Associates title block. Small map text not reliably legible was not guessed."
+    }
+  ],
+  "verifiedFindings": [
+    "MDEQ issued Solid Waste Disposal Area Construction Permit 4127 to Wexford County Landfill, LLC on August 20, 2012 for facility ID 470336.",
+    "The permit identifies the facility as a 196.40-acre municipal solid-waste and Type III industrial-waste landfill in Cedar Creek Township, Wexford County.",
+    "The permit authorizes construction under the incorporated 2012 application and engineering plans; it expressly states that the newly authorized disposal area could not accept solid waste until MDEQ issued an operating license.",
+    "The permit requires sampling under the Hydrogeological Monitoring Plan and submission of results to MDEQ's Cadillac District Office; it lists no variances and no special conditions.",
+    "Attachment A is the permit's site map and provides facility-layout context, not a measured contaminant pathway or proof of a Cadillac WWTP receiving transaction."
+  ],
+  "evidentiaryBoundary": "This source establishes the 2012 landfill construction authorization and incorporated planning/monitoring framework. It does not prove when construction occurred, when waste acceptance began, any leachate delivery to Cadillac, PFAS concentrations, compliance with later permit conditions or a hydrogeologic pathway to Plett Road.",
+  "queueResolution": {
+    "closedRequirementIds": [],
+    "reason": "The supplied file is an exact existing record and adds no new transaction-level, synchronized-sampling, compliance-outcome or pathway evidence."
+  }
+}

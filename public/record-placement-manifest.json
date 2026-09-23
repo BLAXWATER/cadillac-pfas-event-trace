@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1652,
+  "recordCount": 1658,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 215
+      "count": 221
     },
     {
       "archiveId": "reference",
@@ -16980,6 +16980,72 @@
       "url": "/findings-docs/216-4ff61c6d3cb5.pdf",
       "sha256": "4ff61c6d3cb5c6f8ae27ca26200c583aeda588fb4098155a29f5f10245a4ec36",
       "size": 139708
+    },
+    {
+      "id": "217-293e8020bbbe",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Fourth Five-Year Review — Kysor Industrial Corp. Superfund Site — August 31, 2015.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/217-293e8020bbbe.pdf",
+      "sha256": "293e8020bbbe4af6ed8460293cf9b296df989f70a2c211f723c7c50e996fce13",
+      "size": 41605089
+    },
+    {
+      "id": "218-0a9bdc712747",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Sixth Five-Year Review — Kysor Industrial Corp. Superfund Site — August 13, 2025.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/218-0a9bdc712747.pdf",
+      "sha256": "0a9bdc7127476f79f953a4360048d285929744c0ef86ed0610f7b95b057dc62b",
+      "size": 19386146
+    },
+    {
+      "id": "219-2ebb2a7ba6d0",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Notice of Potential Liability and Information Request — Kysor Site — May 26, 1988.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/219-2ebb2a7ba6d0.pdf",
+      "sha256": "2ebb2a7ba6d08e227af75617ceb26939911d6c011066a2fab7451b1220c34079",
+      "size": 299740
+    },
+    {
+      "id": "220-2f8dfa1860cd",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Public Correspondence Regarding Cadillac Groundwater Cleanup Proposal — August 24, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/220-2f8dfa1860cd.pdf",
+      "sha256": "2f8dfa1860cd19859bdc4b74fb883b3f7750431c4938c1d58abbf31f8ba5e427",
+      "size": 125995
+    },
+    {
+      "id": "221-a8b3680cb1b0",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac Area Groundwater Contamination Public Meeting Transcript — August 7, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/221-a8b3680cb1b0.pdf",
+      "sha256": "a8b3680cb1b0926ab955a5d5c757e8d62570d38650fd0777254bc9eb9f895b44",
+      "size": 2737668
+    },
+    {
+      "id": "222-a20e778c67f4",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Fifth Five-Year Review — Kysor Industrial Corp. Superfund Site — August 28, 2020.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/222-a20e778c67f4.pdf",
+      "sha256": "a20e778c67f4bf5ac2b07613b1c0f05ce0e9b6d75dd6d0c271a9fd39d75267f5",
+      "size": 19551345
     },
     {
       "id": "cadsir-model-c902da6a24fb",

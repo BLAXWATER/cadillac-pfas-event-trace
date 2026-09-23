@@ -139,7 +139,7 @@ const categoryPages = [
     eyebrow: "PFAS RECORDS",
     title: "PFAS monitoring and source records",
     description: "The PFAS monitoring archive, including screening, source-status, receptor and corrective-action records.",
-    documents: uniqueRecords(pfasDocuments, supplementalRecords.filter((record) => record.id === "156-2944aeb34f99"), finalPermit2019),
+    documents: uniqueRecords(pfasDocuments, supplementalRecords.filter((record) => ["156-2944aeb34f99", "218-0a9bdc712747", "222-a20e778c67f4"].includes(record.id)), finalPermit2019),
   },
   {
     slug: "dmr",
@@ -187,7 +187,7 @@ const categoryPages = [
     eyebrow: "COMPLIANCE & ENFORCEMENT",
     title: "Compliance and enforcement records",
     description: "Inspections, notices, corrective-action correspondence and other compliance records.",
-    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9"), (npdesDocuments as readonly CatalogRecord[]).filter((record) => ["045-49e091247101", "092-c041f2300a6d", "109-5836ad2c594c"].includes(record.id)), factSheet2013, reportedDmrExceedances),
+    documents: uniqueRecords(complianceDocuments, (wexfordDocuments as readonly CatalogRecord[]).filter((record) => record.id === "001-7c991baaf1e9"), (npdesDocuments as readonly CatalogRecord[]).filter((record) => ["045-49e091247101", "092-c041f2300a6d", "109-5836ad2c594c"].includes(record.id)), supplementalRecords.filter((record) => record.id === "219-2ebb2a7ba6d0"), factSheet2013, reportedDmrExceedances),
   },
   {
     slug: "violation-notices",
@@ -211,7 +211,7 @@ const categoryPages = [
     eyebrow: "CORRESPONDENCE & LETTERS",
     title: "Correspondence and letters",
     description: "Agency, municipal, consultant and stakeholder correspondence linked to the documentary record.",
-    documents: correspondenceDocuments,
+    documents: uniqueRecords(correspondenceDocuments, supplementalRecords.filter((record) => ["219-2ebb2a7ba6d0", "220-2f8dfa1860cd"].includes(record.id))),
   },
   {
     slug: "process-site",
@@ -246,6 +246,7 @@ const categoryPages = [
     documents: uniqueRecords(referenceDocuments, supplementalRecords.filter((record) => [
       "EPA administrative-record index",
       "Watershed management plan and hydrologic reference",
+      "Certified public-meeting transcript",
     ].includes(record.type ?? ""))),
   },
   {

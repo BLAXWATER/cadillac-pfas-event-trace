@@ -10,7 +10,7 @@
     "pages": 5,
     "size": 284461,
     "sha256": "69ab779993c2980d62c7fd9f510130b212041e528c65a86946b94823a4807bca",
-    "description": "Signed July 29, 1995 EPA Region 5 five-year review for Northernaire. It reports that source-control work ran October 4–November 17, 1988 and excavated approximately 1,016 cubic yards of soil, with final inspection May 8, 1991 (pp. 3–4). The review says the groundwater extraction/treatment system was still under construction, notes spring 1995 chromium was not detected in the closest cited near-surface downgradient well while cadmium was not sampled, and recommends additional chromium/cadmium sampling plus continued groundwater-remedy implementation (pp. 4–5). Its protectiveness certification is a 1995 determination, not proof of present conditions, PFAS source attribution or a Plett Road pathway."
+    "description": "EPA Region 5's signed July 29, 1995 first five-year review for Northernaire Plating. It records the 1988–1991 source-control work, the shared Kysor/Northernaire groundwater remedy then under construction, recommended additional shallow chromium/cadmium sampling and certified the selected remedies protective at that review date (PDF pp. 1–5). All five supplied pages, including the signed cover, were freshly reread and visually checked. The report predates PFAS investigation and does not establish PFAS source attribution or a present Plett Road pathway."
   },
   {
     "id": "211-edf83f5fdf7c",
@@ -2796,5 +2796,83 @@
     "size": 139708,
     "sha256": "4ff61c6d3cb5c6f8ae27ca26200c583aeda588fb4098155a29f5f10245a4ec36",
     "description": "One-page EPA Region 5 administrative-record update listing the 2000 Kysor five-year review, the 2005 second five-year review and the 2010 third five-year review by record identifier and page count. The page was fully read and visually checked. It is an index and supplies no independent environmental, analytical, compliance or PFAS finding."
+  },
+  {
+    "id": "217-293e8020bbbe",
+    "name": "EPA Fourth Five-Year Review — Kysor Industrial Corp. Superfund Site — August 31, 2015.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/217-293e8020bbbe.pdf",
+    "year": "2015",
+    "category": "Groundwater & hydrogeology — Superfund remedy review",
+    "type": "EPA five-year review",
+    "format": "PDF",
+    "pages": 147,
+    "size": 41605089,
+    "sha256": "293e8020bbbe4af6ed8460293cf9b296df989f70a2c211f723c7c50e996fce13",
+    "description": "EPA Region 5's signed August 31, 2015 fourth five-year review for the Kysor Industrial Superfund site. EPA characterized the remedy as currently protective but conditioned long-term protectiveness on stronger groundwater-use controls, long-term stewardship and investigation of rising TCE at extraction well I-9 (PDF pp. 6–10, 23–30). The report describes three aquifers, discontinuous clay, six commingled VOC plumes, historic LDFA extraction/treatment and Clam River discharge, while stating that missing Rexair data prevented a firm allocation of captured contamination (pp. 22–26, 32, 38–44). All 147 pages, appendices, maps, tables, handwritten forms and photographs were read and visually checked; pages 2, 50, 54, 64, 67 and 129 received additional OCR/visual verification. The embedded title calls this a third review, but the signed report identifies it as the fourth. This historical VOC/chromium review does not evaluate PFAS or prove a present Plett Road pathway."
+  },
+  {
+    "id": "218-0a9bdc712747",
+    "name": "EPA Sixth Five-Year Review — Kysor Industrial Corp. Superfund Site — August 13, 2025.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/218-0a9bdc712747.pdf",
+    "year": "2025",
+    "category": "Groundwater & hydrogeology — Superfund remedy review",
+    "type": "EPA five-year review",
+    "format": "PDF",
+    "pages": 108,
+    "size": 19386146,
+    "sha256": "0a9bdc7127476f79f953a4360048d285929744c0ef86ed0610f7b95b057dc62b",
+    "description": "EPA Region 5's signed August 13, 2025 sixth five-year review for the Kysor Industrial Superfund site. EPA found the remedy short-term protective, while requiring renewed groundwater monitoring, institutional-control stewardship, 1,4-dioxane sampling, vapor-intrusion evaluation, PFAS sampling under an approved QAPP and groundwater-flow reassessment after the municipal well-field move (PDF pp. 31–35). The review reports that routine monitoring stopped after 2020, identifies damaged or missing wells, and uses 2020/January 2021 results showing localized TCE/PCE exceedances (pp. 16–17, 24–27, 33). It also reports residential PFAS detections but states that upgradient and side-gradient results made Kysor/Northernaire an unlikely primary source; EPA still required QAPP-based confirmation (pp. 22–23, 28–32). All 108 pages were read and visually checked; map pages 47–48 were OCR/visual-verified. Planned 2025 work is not treated as completed, and the report does not prove no Site contribution or a Wexford-to-Plett pathway."
+  },
+  {
+    "id": "219-2ebb2a7ba6d0",
+    "name": "EPA Notice of Potential Liability and Information Request — Kysor Site — May 26, 1988.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/219-2ebb2a7ba6d0.pdf",
+    "year": "1988",
+    "category": "Groundwater & hydrogeology — CERCLA correspondence",
+    "type": "EPA CERCLA potential-liability notice and information request",
+    "format": "PDF",
+    "pages": 5,
+    "size": 299740,
+    "sha256": "2ebb2a7ba6d08e227af75617ceb26939911d6c011066a2fab7451b1220c34079",
+    "description": "EPA Region V certified-mail notice dated May 26, 1988 concerning the Kysor Industries site. EPA stated that it had documented releases or threatened releases, identified the recipient as a potential responsible party, requested a response on participation and negotiations within 14 days, and demanded CERCLA/RCRA information within 30 days (PDF pp. 1–3). The attachment lists potential responsible parties for Kysor/Northernaire (p. 5), with several addresses redacted. All five pages were read and visually checked. This is a potential-liability notice and information demand, not an adjudication of liability, cleanup completion or source apportionment."
+  },
+  {
+    "id": "220-2f8dfa1860cd",
+    "name": "Public Correspondence Regarding Cadillac Groundwater Cleanup Proposal — August 24, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/220-2f8dfa1860cd.pdf",
+    "year": "1989",
+    "category": "Groundwater & hydrogeology — public correspondence",
+    "type": "Public correspondence and comment",
+    "format": "PDF",
+    "pages": 1,
+    "size": 125995,
+    "sha256": "2f8dfa1860cd19859bdc4b74fb883b3f7750431c4938c1d58abbf31f8ba5e427",
+    "description": "One-page handwritten public letter dated August 24, 1989 following the August 7 Cadillac groundwater hearing. The writer supports supervised cleanup participation, questions the proposed project's financial durability, recounts a retiree's explanation of contamination practices and expresses the opinion that Kysor should be held responsible. The page was manually read and visually verified because native extraction was unusable. The sender and address are redacted and the recipient surname is not fully legible. This is personal opinion and recollection, not an agency determination, approval or independent source-attribution finding."
+  },
+  {
+    "id": "221-a8b3680cb1b0",
+    "name": "Cadillac Area Groundwater Contamination Public Meeting Transcript — August 7, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/221-a8b3680cb1b0.pdf",
+    "year": "1989",
+    "category": "Groundwater & hydrogeology — historical public meeting",
+    "type": "Certified public-meeting transcript",
+    "format": "PDF",
+    "pages": 66,
+    "size": 2737668,
+    "sha256": "a8b3680cb1b0926ab955a5d5c757e8d62570d38650fd0777254bc9eb9f895b44",
+    "description": "Certified transcript of the August 7, 1989 Cadillac Area Groundwater Contamination public meeting at the Wexford County Courthouse. Agency speakers describe the RI/FS, multiple VOC plumes, three aquifers, proposed groundwater extraction/treatment and soil-vapor extraction alternatives, while stating that the final remedy had not yet been selected (PDF pp. 2–16, 24–31, 63–64). City, Kysor and cogeneration proponents then present attributed positions, estimates and performance claims (pp. 32–64). All 66 pages were read and visually checked. The hearing records proposals and public comments; it does not prove later approval, construction, operating flow, treatment performance, PFAS conditions or a Plett Road pathway."
+  },
+  {
+    "id": "222-a20e778c67f4",
+    "name": "EPA Fifth Five-Year Review — Kysor Industrial Corp. Superfund Site — August 28, 2020.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/222-a20e778c67f4.pdf",
+    "year": "2020",
+    "category": "Groundwater & hydrogeology — Superfund remedy review",
+    "type": "EPA five-year review",
+    "format": "PDF",
+    "pages": 103,
+    "size": 19551345,
+    "sha256": "a20e778c67f4bf5ac2b07613b1c0f05ce0e9b6d75dd6d0c271a9fd39d75267f5",
+    "description": "EPA Region 5's signed August 28, 2020 fifth five-year review for the Kysor Industrial Superfund site. EPA found the remedy short-term protective and the plume apparently contained, but made long-term protectiveness conditional on institutional-control stewardship, 1,4-dioxane analysis, PFAS well sampling and continued vapor-intrusion tracking (PDF pp. 27–31). The review reports continued treatment, localized TCE/PCE exceedances and projected cleanup dates that are model estimates rather than achieved milestones (pp. 17–26, 96–103). Its PFAS section states that Site monitoring wells had not yet been tested and recommends sampling; its cited municipal/WWTP statements are summaries, not embedded raw laboratory reports (p. 27). All 103 pages were read and visually checked; pages 51–52 and 76 were OCR/visual-verified. The report does not prove a Wexford Landfill-to-Plett Road pathway."
   }
 ]

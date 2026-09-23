@@ -117,16 +117,20 @@ const audit = {
   reviewedAt,
   sourceAssetCommit: assetCommit,
   sourceAssetBranch: "epa-intake-batch-3",
+  publishedAt: "2026-09-23T22:25:21.347322Z",
+  publishedVersion: 322,
+  deploymentId: "appgdep_6ab451c2f9c0819193709f424f938832",
+  liveUrl: "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site",
   rules: { recordBoundariesPreserved: true, pageOrderReviewRequired: true, filenameOnlyDeduplicationProhibited: true, statusesSeparated: true },
   totals: { records: 7, pages: 162, exactExistingRecords: 1, alternateRenditions: 2, newDistinctRecords: 4 },
   records: [
     { supplied: "EPA_05_159280.pdf", sourceUrl: pinned("223-b7dffe19c91d"), sha256: "b7dffe19c91d8e93afb945495e9c25fc59fb9eb900a66b174ebb89b34bd83807", bytes: 392487, pages: 9, ocrCheckedPages: [4], disposition: "alternate-rendition-canonical-reused", canonicalRecordId: "087-31f27263ba22", statuses: { received: true, extracted: true, reviewed: true, verified: "qualified", published: true } },
-    { supplied: "EPA_05_159310.pdf", sha256: records[0].sha256, bytes: 381753, pages: 8, ocrCheckedPages: [3], disposition: "new-distinct-record", canonicalRecordId: records[0].id, statuses: { received: true, extracted: true, reviewed: true, verified: true, published: false } },
+    { supplied: "EPA_05_159310.pdf", sha256: records[0].sha256, bytes: 381753, pages: 8, ocrCheckedPages: [3], disposition: "new-distinct-record", canonicalRecordId: records[0].id, statuses: { received: true, extracted: true, reviewed: true, verified: true, published: true } },
     { supplied: "EPA_05_209538.pdf", sha256: "07119f8b3cdf21d9a7786054a6ae4d3ffb1bca65a4661860e250299e8586fef4", bytes: 1121333, pages: 24, ocrCheckedPages: [], disposition: "exact-existing-record", canonicalRecordId: "200-07119f8b3cdf", statuses: { received: true, extracted: true, reviewed: true, verified: true, published: true } },
     { supplied: "EPA_05_209675.pdf", sourceUrl: pinned("225-8390f3bec949"), sha256: "8390f3bec9498430802aa92214312684da1df551b3f26261b03a9243f7382642", bytes: 854953, pages: 20, ocrCheckedPages: [11], disposition: "alternate-reduced-reordered-rendition-canonical-reused", canonicalRecordId: "095-b7620af87938", statuses: { received: true, extracted: true, reviewed: true, verified: "qualified", published: true } },
-    { supplied: "EPA_05_234872.pdf", sha256: records[1].sha256, bytes: 160809, pages: 7, ocrCheckedPages: [7], disposition: "new-distinct-record", canonicalRecordId: records[1].id, statuses: { received: true, extracted: true, reviewed: true, verified: true, published: false } },
-    { supplied: "EPA_05_234874.pdf", sha256: records[2].sha256, bytes: 220393, pages: 6, ocrCheckedPages: [], disposition: "new-distinct-record", canonicalRecordId: records[2].id, statuses: { received: true, extracted: true, reviewed: true, verified: true, published: false } },
-    { supplied: "EPA_05_234875.pdf", sha256: records[3].sha256, bytes: 5294043, pages: 88, ocrCheckedPages: [7,22,33,34,36,38,49,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88], disposition: "new-distinct-record", canonicalRecordId: records[3].id, statuses: { received: true, extracted: true, reviewed: true, verified: "qualified", published: false } }
+    { supplied: "EPA_05_234872.pdf", sha256: records[1].sha256, bytes: 160809, pages: 7, ocrCheckedPages: [7], disposition: "new-distinct-record", canonicalRecordId: records[1].id, statuses: { received: true, extracted: true, reviewed: true, verified: true, published: true } },
+    { supplied: "EPA_05_234874.pdf", sha256: records[2].sha256, bytes: 220393, pages: 6, ocrCheckedPages: [], disposition: "new-distinct-record", canonicalRecordId: records[2].id, statuses: { received: true, extracted: true, reviewed: true, verified: true, published: true } },
+    { supplied: "EPA_05_234875.pdf", sha256: records[3].sha256, bytes: 5294043, pages: 88, ocrCheckedPages: [7,22,33,34,36,38,49,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88], disposition: "new-distinct-record", canonicalRecordId: records[3].id, statuses: { received: true, extracted: true, reviewed: true, verified: "qualified", published: true } }
   ],
   limitations: [
     "Historical chromium and VOC findings do not independently establish PFAS source attribution or a present pathway to Plett Road.",

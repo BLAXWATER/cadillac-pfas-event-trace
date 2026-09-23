@@ -8,6 +8,10 @@
   "reviewedAt": "2026-09-23T10:25:00-04:00",
   "sourceAssetCommit": "1fb4ab511dabbf1e1589643afad50b72ae9fc926",
   "sourceAssetBranch": "epa-intake-batch-2",
+  "publishedAt": "2026-09-23T22:25:21.347322Z",
+  "publishedVersion": 322,
+  "deploymentId": "appgdep_6ab451c2f9c0819193709f424f938832",
+  "liveUrl": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site",
   "rules": {
     "recordBoundariesPreserved": true,
     "pageOrderReviewRequired": true,

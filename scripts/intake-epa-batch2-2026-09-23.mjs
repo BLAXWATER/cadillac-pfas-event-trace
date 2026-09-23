@@ -167,6 +167,10 @@ const audit = {
   reviewedAt,
   sourceAssetCommit: assetCommit,
   sourceAssetBranch: "epa-intake-batch-2",
+  publishedAt: "2026-09-23T22:25:21.347322Z",
+  publishedVersion: 322,
+  deploymentId: "appgdep_6ab451c2f9c0819193709f424f938832",
+  liveUrl: "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site",
   rules: {
     recordBoundariesPreserved: true,
     pageOrderReviewRequired: true,

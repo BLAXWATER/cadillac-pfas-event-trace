@@ -1,7 +1,7 @@
 {
   "auditVersion": 1,
   "batch": "CEDAR-SIX-2026-09-23",
-  "reviewedAt": "2026-09-23T11:25:00-04:00",
+  "reviewedAt": "2026-09-23T16:30:00-04:00",
   "rules": {
     "suppliedOrderPreserved": true,
     "recordBoundariesPreserved": true,
@@ -20,7 +20,9 @@
   "records": [
     {
       "suppliedOrder": 1,
+      "batchLabel": "CEDAR-SIX-01",
       "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2016_GW1010342_Public_Notice_Email_original.pdf",
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2016_GW1010342_Public_Notice_Email_original.pdf",
       "originalFilename": "2016_GW1010342_Public_Notice_Email_original.pdf",
       "sha256": "46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce",
       "bytes": 79078,
@@ -46,7 +48,9 @@
     },
     {
       "suppliedOrder": 2,
+      "batchLabel": "CEDAR-SIX-02",
       "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2017-11-15_Wexford_County_BOC_Minutes.pdf",
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2017-11-15_Wexford_County_BOC_Minutes.pdf",
       "originalFilename": "2017-11-15_Wexford_County_BOC_Minutes.pdf",
       "sha256": "4127cba91f8b9a77c3ddace776f719f28a415f847c7c9aae921ab3dd25137edd",
       "bytes": 155362,
@@ -70,7 +74,9 @@
     },
     {
       "suppliedOrder": 3,
+      "batchLabel": "CEDAR-SIX-03",
       "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
       "originalFilename": "2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
       "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
       "bytes": 344611,
@@ -95,7 +101,9 @@
     },
     {
       "suppliedOrder": 4,
+      "batchLabel": "CEDAR-SIX-04",
       "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\ADID_996_November_20_2017_City_Council_Minutes.pdf",
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\ADID_996_November_20_2017_City_Council_Minutes.pdf",
       "originalFilename": "ADID_996_November_20_2017_City_Council_Minutes.pdf",
       "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
       "bytes": 203476,
@@ -124,7 +132,9 @@
     },
     {
       "suppliedOrder": 5,
+      "batchLabel": "CEDAR-SIX-05",
       "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf",
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf",
       "originalFilename": "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf",
       "sha256": "ed0595a491891ad13896613a2fbea86e5ca6594eae3b2f71e5990a673f93901f",
       "bytes": 98120,
@@ -157,7 +167,9 @@
     },
     {
       "suppliedOrder": 6,
+      "batchLabel": "CEDAR-SIX-06",
       "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf",
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf",
       "originalFilename": "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf",
       "sha256": "627d80d3b52d0baab436c9c7638883f66ae48b1e6c88ffb449b1592f437cc5b7",
       "bytes": 88720,

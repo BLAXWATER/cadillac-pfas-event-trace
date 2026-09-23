@@ -2,7 +2,7 @@
   "basis": "Site record/source change history; not historical document dates. Five rolling 24-hour days.",
   "records": {
     "/biosolids-docs/032-58c5fd24e5f9.pdf": {
-      "updatedAt": "2026-09-23T20:43:17.382Z",
+      "updatedAt": "2026-09-23T16:45:50-04:00",
       "fingerprint": "a090d537e404e784ee8888b5988a860f40ecaf91436aff7566184c716a152bf3"
     },
     "/findings-docs/011-05c2a0fb3666.pdf": {
@@ -40,10 +40,6 @@
     "/findings-docs/202-82254e0c3a95.pdf": {
       "updatedAt": "2026-09-23T14:32:21-04:00",
       "fingerprint": "ed27c458d6c03219c63169c14f8dcb56a79d3dc69d130c782fa6ad59d3a9a5a5"
-    },
-    "/findings-docs/208-6342e4abc27e.pdf": {
-      "addedAt": "2026-09-18T16:57:56-04:00",
-      "fingerprint": "9fe90086a98c0fe51e56db9a76568fa9f79c2cbb932f2807cafcf2f25cf0ced6"
     },
     "/findings-docs/210-6aec96618242.pdf": {
       "addedAt": "2026-09-21T10:53:06-04:00",

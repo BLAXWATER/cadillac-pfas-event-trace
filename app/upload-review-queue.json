@@ -534,6 +534,86 @@
         "cataloged": true,
         "published": true
       }
+    },
+    {
+      "position": 28,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2016_GW1010342_Public_Notice_Email_original.pdf",
+      "pages": 1,
+      "bytes": 79078,
+      "sha256": "46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce",
+      "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
+      "detail": "CEDAR-SIX-01 batch 1/6. The complete page was reviewed; exact SHA-256 match to the published public-notice email. The four named attachments are not embedded in this PDF.",
+      "canonicalAsset": "/wexford-docs/013-46619080fc73.pdf",
+      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 29,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2017-11-15_Wexford_County_BOC_Minutes.pdf",
+      "pages": 4,
+      "bytes": 155362,
+      "sha256": "4127cba91f8b9a77c3ddace776f719f28a415f847c7c9aae921ab3dd25137edd",
+      "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
+      "detail": "CEDAR-SIX-02 batch 2/6. All four pages were reviewed; exact SHA-256 match to the published Wexford County minutes. No duplicate card was created.",
+      "canonicalAsset": "/process-site-docs/process-site-008-4127cba91f8b.pdf",
+      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 30,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
+      "pages": 5,
+      "bytes": 344611,
+      "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+      "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
+      "detail": "CEDAR-SIX-03 batch 3/6. All five pages were reviewed; exact SHA-256 match to the published resolution form. The form is unexecuted; the separate November 20 minutes support adoption.",
+      "canonicalAsset": "/findings-docs/100-850f00b27330.pdf",
+      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 31,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "ADID_996_November_20_2017_City_Council_Minutes.pdf",
+      "pages": 9,
+      "bytes": 203476,
+      "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+      "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
+      "detail": "CEDAR-SIX-04 batch 4/6. All nine pages were reviewed; exact SHA-256 match to the published Cadillac City Council minutes. No duplicate card was created.",
+      "canonicalAsset": "/findings-docs/164-519d4faa6c33.pdf",
+      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 32,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf",
+      "pages": 1,
+      "bytes": 98120,
+      "sha256": "ed0595a491891ad13896613a2fbea86e5ca6594eae3b2f71e5990a673f93901f",
+      "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
+      "detail": "CEDAR-SIX-05 batch 5/6. The scanned page was fully rendered, OCR-assisted and visually reviewed. Its rendered content matches the published canonical spill letter, so this byte-distinct packaging was preserved in the audit without a duplicate card.",
+      "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/039-c677de7c10e6.pdf",
+      "publicationDisposition": "duplicate-suppressed-canonical-published",
+      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
+    },
+    {
+      "position": 33,
+      "lane": "resolved",
+      "status": "Completed · canonical source published",
+      "name": "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf",
+      "pages": 1,
+      "bytes": 88720,
+      "sha256": "627d80d3b52d0baab436c9c7638883f66ae48b1e6c88ffb449b1592f437cc5b7",
+      "category": "Cedar Creek and Wexford-to-Cadillac source reconciliation",
+      "detail": "CEDAR-SIX-06 batch 6/6. The OCR layer was checked against the complete page image. It matches the supplied scan and the published canonical spill letter, so the derivative was preserved in the audit without a duplicate card.",
+      "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/efa59ca098bc5d59adef6edd8705cd336b9fd601/public/compliance-docs/039-c677de7c10e6.pdf",
+      "publicationDisposition": "ocr-derivative-suppressed-canonical-published",
+      "stages": {"received": true, "extractedOrOcr": true, "reviewed": true, "verified": true, "cataloged": true, "published": true}
     }
   ]
 }

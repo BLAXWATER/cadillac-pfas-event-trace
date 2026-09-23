@@ -213,8 +213,11 @@
     "aliases": [
       "01_2016-01-12_American_Waste_Offloading_Spill_Letter.pdf",
       "01_2016-01-12_Cadillac_Leachate_Offloading_Spill_Letter.pdf",
-      "Spill notification 1-12-16 (1).pdf"
-    ]
+      "Spill notification 1-12-16 (1).pdf",
+      "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf",
+      "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf"
+    ],
+    "comparison": "September 23, 2026: both supplied one-page PDFs were visually reviewed. Their rendered pages match the canonical published spill letter; the OCR derivative adds no distinct page or attachment. Source-file hashes remain preserved in the Cedar six-batch audit."
   },
   "process-site-018-26f79914deae": {
     "sha256": "26f79914deaeb45725961047baebd4d294153e7eeadc9fe991a52873d77e7a2b",
@@ -520,8 +523,10 @@
     "aliases": [
       "Nov_20_2017_Wexford_Leachate_Resolution.pdf",
       "Item_2798_fileID_2118.pdf",
-      "Item_2798_fileID_2118 (1).pdf"
-    ]
+      "Item_2798_fileID_2118 (1).pdf",
+      "2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf"
+    ],
+    "comparison": "September 23, 2026: exact SHA-256 match confirmed after complete five-page review in CEDAR-SIX-03. The file is an unexecuted resolution form; the separate City minutes support adoption."
   },
   "156-2944aeb34f99": {
     "sha256": "2944aeb34f9955423018234b5e5f6da00c721d482d56f29bdd9d443be57ae49a",
@@ -588,5 +593,19 @@
       "05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18.pdf"
     ],
     "comparison": "September 23, 2026: entire supplied PDF visually reviewed in page order, OCR checked where needed; exact bytes or identical rendered pages reconciled in PFAS-20260923-B six-batch audit. Original filenames preserved; no duplicate card."
+  },
+  "013-46619080fc73": {
+    "sha256": "46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce",
+    "aliases": [
+      "2016_GW1010342_Public_Notice_Email_original.pdf"
+    ],
+    "comparison": "September 23, 2026: exact SHA-256 match confirmed after complete page-order visual and native-text review in CEDAR-SIX-01."
+  },
+  "process-site-008-4127cba91f8b": {
+    "sha256": "4127cba91f8b9a77c3ddace776f719f28a415f847c7c9aae921ab3dd25137edd",
+    "aliases": [
+      "2017-11-15_Wexford_County_BOC_Minutes.pdf"
+    ],
+    "comparison": "September 23, 2026: exact SHA-256 match confirmed after complete four-page review in CEDAR-SIX-02."
   }
 }

@@ -211,7 +211,7 @@ const categoryPages = [
     eyebrow: "CORRESPONDENCE & LETTERS",
     title: "Correspondence and letters",
     description: "Agency, municipal, consultant and stakeholder correspondence linked to the documentary record.",
-    documents: uniqueRecords(correspondenceDocuments, supplementalRecords.filter((record) => ["219-2ebb2a7ba6d0", "220-2f8dfa1860cd"].includes(record.id))),
+    documents: uniqueRecords(correspondenceDocuments, supplementalRecords.filter((record) => ["219-2ebb2a7ba6d0", "220-2f8dfa1860cd", "242-39d329816200"].includes(record.id))),
   },
   {
     slug: "process-site",

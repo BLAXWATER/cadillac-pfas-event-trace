@@ -34,8 +34,8 @@
       "fingerprint": "c6993092ade1a8de969ce17a5dcba1343c8fa99812e7f7dbb875ae79e2c78c23"
     },
     "/findings-docs/202-82254e0c3a95.pdf": {
-      "updatedAt": "2026-09-23T13:52:45-04:00",
-      "fingerprint": "3972d92442f36d931ac816d7750e2b0072cb1d4a49219b0d4500adea3f1ca437"
+      "updatedAt": "2026-09-23T17:07:00-04:00",
+      "fingerprint": "8cacd1a5cd2060c8f825e613b431a45ec452cc46814101da5028ce1d5e98db8d"
     },
     "/findings-docs/207-caaf3ea8f891.pdf": {
       "addedAt": "2026-09-18T14:58:08-04:00",
@@ -159,6 +159,26 @@
       "addedAt": "2026-09-23T13:52:45-04:00",
       "fingerprint": "3264818e30286fc28331966a59b792cb7a09b8d89e4e14cc591085f94f699540"
     },
+    "/findings-docs/241-a1a92819d01c.pdf": {
+      "addedAt": "2026-09-23T18:18:16.087Z",
+      "fingerprint": "595030f60f4f5b39024413b1d7462379caadb09ceab4a0349c2203364d4fa603"
+    },
+    "/findings-docs/242-39d329816200.pdf": {
+      "addedAt": "2026-09-23T18:18:16.087Z",
+      "fingerprint": "cb1d9f7f45d56f9c9e71d02c0a8b51999c0d437a058ae487b1d36ba15c5bfa67"
+    },
+    "/findings-docs/243-ae0517acffe3.pdf": {
+      "addedAt": "2026-09-23T18:18:16.087Z",
+      "fingerprint": "d1f71c470a0cb66657b5868bd7176c9a0a13509f1ead0c1138c3dc5b3c2082ca"
+    },
+    "/findings-docs/244-dc9a86606a0a.pdf": {
+      "addedAt": "2026-09-23T18:18:16.087Z",
+      "fingerprint": "fc773e158402852edd6a1fac969f357e2cf944afe4a962599a5fdb66d3419101"
+    },
+    "/findings-docs/245-edb84888823f.pdf": {
+      "addedAt": "2026-09-23T18:18:16.087Z",
+      "fingerprint": "aca3a997254ad6804ef0a8bce5e9ed455daa0037ff10531e3491647084ec8858"
+    },
     "/lab-docs/041-b6acc1cf09fd.pdf": {
       "updatedAt": "2026-09-21T14:09:05-04:00",
       "fingerprint": "cea96054dc053bfc60019a9d118537590f9ca2a4a19c2677db42e58cad3e2755"
@@ -174,6 +194,26 @@
     "https://mrwa.org/wp-content/uploads/repository/MuskegonManagementPlan.pdf": {
       "addedAt": "2026-09-20T18:01:17-04:00",
       "fingerprint": "a44b3fce63f66dd9fe4f102e7115ebc924ab3bdfd61f455578cdb6117bd37c27"
+    },
+    "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/241-a1a92819d01c.pdf": {
+      "addedAt": "2026-09-23T17:07:00-04:00",
+      "fingerprint": "bba7c62ccbd3c38a49dfbd6d159aebbb2d5c4c6c188fc657b7ddd01c53476fb4"
+    },
+    "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/242-39d329816200.pdf": {
+      "addedAt": "2026-09-23T17:07:00-04:00",
+      "fingerprint": "fda0fe286f28f1852fd57c20cb658c6d3654e14a03db77a902ef4a91d30d5e59"
+    },
+    "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/243-ae0517acffe3.pdf": {
+      "addedAt": "2026-09-23T17:07:00-04:00",
+      "fingerprint": "284f1a729d5cb7273023cf90bb0f346b41979f002a5e181ac1889e3acb6b7c7d"
+    },
+    "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/244-dc9a86606a0a.pdf": {
+      "addedAt": "2026-09-23T17:07:00-04:00",
+      "fingerprint": "168bf008aa1187d24f30e7fa1a4b3d8cf294a1cc1f501245208a441447f03dc6"
+    },
+    "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/245-edb84888823f.pdf": {
+      "addedAt": "2026-09-23T17:07:00-04:00",
+      "fingerprint": "62fca137d7a899e59604da9559cc7630d60923c7a6b6954de4910f458f5ae3e3"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "reviewDate": "2026-09-23",
   "reviewDateLabel": "September 23, 2026",
-  "scope": "September 23 now includes full page-order review and reconciliation of EPA micro-batches 1-5, plus the Wexford Permit 4127-to-License 9758 monitoring-document trace. This is an incremental source-chain review, not a fresh reread of the whole repository.",
-  "note": "EPA micro-batch 5 adds seven distinct 1989 comment and transmittal records behind the Kysor administrative index. One is only a cover letter; its 129-page Kysor comments enclosure remains missing. These records improve the administrative chain but do not establish PFAS, Plett Road or a Wexford-to-WWTP pathway. One local construction/lithology requirement remains satisfied; 22 requests remain open.",
+  "scope": "September 23 includes full page-order review and reconciliation of all six EPA micro-batches, plus the Wexford Permit 4127-to-License 9758 monitoring-document trace. This is an incremental source-chain review, not a fresh reread of the whole repository.",
+  "note": "All six EPA micro-batches are complete. Batch 6 supplies the 374-page June 1989 Final Draft feasibility study, the complete 129-page Kysor comments, the July 1989 fact sheet, Mayor Becker's letter and the one-page later index. The 374/375-page discrepancy remains, and the 66-page hearing transcript, 120-page ROD, August 24 letter and 1998 compliance/closure record remain missing. These historical records do not close modern Plett/PFAS requests. One local construction/lithology requirement remains satisfied; 22 requests remain open.",
   "blocks": [
     {
       "requestId": "receiving-history",
@@ -980,8 +980,8 @@
         },
         {
           "id": "september14-five-source-pathway-tieback",
-          "finding": "The 1983 funding request (209480), signed September 11, 1985 source-control ROD (209538), January 1987 supplemental RI (209637) and later 1988 regional RI form a documented investigation/remedy sequence. The supplemental RI records clay pinch-out/interbeds, differing historical heads and unresolved exact chromium transfer/deep-aquifer impact. Its p24 describes tested purge-water infiltration, and p106 records unidentified second-phase product at MW16, 63–68 ft. Index234881 identifies 15 separate 1989 records. Its two-page City statement (entry 11) is now supplied and reviewed; the 66-page hearing transcript, 375-page final FS and 120-page regional ROD remain outstanding. Batch 5 now supplies seven 1989 comment/transmittal records behind index entries 2 and 4-9, documenting stakeholder and interagency positions before the final decision.",
-          "limitation": "The memo's Enforcement Release, damaged map portions, MW9 log continuation and several 1989 comment originals are now held, but the 66-page hearing transcript, 375-page final FS, 129-page Kysor comments and 120-page ROD remain absent; the entry-4 cover letter does not include its enclosure. The product's identity/source is unknown. Survey and analytical discrepancies remain open. The Wexford July2006 fact sheet concerns a different site's aquifers and onsite groundwater treatment—not proof of the same clay layer, WWTP-delivered leachate volume or a source-to-Plett PFAS route. No Plett-specific requirement is closed.",
+          "finding": "The 1983 funding request (209480), signed September 11, 1985 source-control ROD (209538), January 1987 supplemental RI (209637) and later 1988 regional RI form a documented investigation/remedy sequence. The supplemental RI records clay pinch-out/interbeds, differing historical heads and unresolved exact chromium transfer/deep-aquifer impact. Its p24 describes tested purge-water infiltration, and p106 records unidentified second-phase product at MW16, 63–68 ft. Index234881 identifies 15 separate 1989 records. Its two-page City statement (entry 11) is now supplied and reviewed; the 66-page hearing transcript, 375-page final FS and 120-page regional ROD remain outstanding. Batch 5 now supplies seven 1989 comment/transmittal records behind index entries 2 and 4-9, documenting stakeholder and interagency positions before the final decision. Batch 6 now supplies the July 1989 EPA proposed-plan fact sheet, Mayor Becker's letter, the June 1989 Final Draft feasibility study and Kysor's complete 129-page comments. The Final Draft provides the historical detailed alternatives and extraction-system designs; Kysor's comments supply the enclosure previously missing from the August 26 cover letter.",
+          "limitation": "The memo's Enforcement Release, damaged map portions, MW9 log continuation and several 1989 comment originals are now held, but the 66-page hearing transcript and 120-page ROD remain absent. The supplied Final Draft FS has 374 physical pages although the index states 375, and the Kysor package's p69 nested census enclosures remain unresolved. The product's identity/source is unknown. Survey and analytical discrepancies remain open. The Wexford July2006 fact sheet concerns a different site's aquifers and onsite groundwater treatment—not proof of the same clay layer, WWTP-delivered leachate volume or a source-to-Plett PFAS route. No Plett-specific requirement is closed.",
           "sources": [
             {
               "recordId": "199-c1524e21ac46",
@@ -1134,6 +1134,40 @@
               "pages": [
                 1
               ]
+            },
+            {
+              "recordId": "241-a1a92819d01c",
+              "sha256": "a1a92819d01c76854d49474f3b41a9389a5158b8203179dbb99184db13ae2110",
+              "label": "EPA proposed-plan fact sheet; historical proposal/comment boundary retained",
+              "pages": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            {
+              "recordId": "242-39d329816200",
+              "sha256": "39d329816200bf14e9dd9351db7457cd0a56906a1834c344ab8f31264cbbe708",
+              "label": "Mayor's public-comment letter; historical proposal/comment boundary retained",
+              "pages": [
+                1,
+                2
+              ]
+            },
+            {
+              "recordId": "243-ae0517acffe3",
+              "sha256": "ae0517acffe329e9f190ae8c40dd37a4a8aa739788bbff370e5f3ca89dc22c53",
+              "label": "CERCLA feasibility study; historical proposal/comment boundary retained"
+            },
+            {
+              "recordId": "244-dc9a86606a0a",
+              "sha256": "dc9a86606a0a3a887e64ff26ea34a727662a20af29f3634ea0502a0ff5647343",
+              "label": "RI/FS and proposed-plan comments with exhibits; historical proposal/comment boundary retained"
             }
           ],
           "requirementIds": [

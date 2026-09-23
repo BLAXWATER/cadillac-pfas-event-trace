@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1673,
+  "recordCount": 1678,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 236
+      "count": 241
     },
     {
       "archiveId": "reference",
@@ -17211,6 +17211,61 @@
       "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/240-247244b600a3.pdf",
       "sha256": "247244b600a334970ec70ac7d2416192f4d098e67eea76bd5b445b27a2938d72",
       "size": 56059
+    },
+    {
+      "id": "241-a1a92819d01c",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Proposed Plan Fact Sheet - Kysor and Northernaire Cleanup Action Recommended - July 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/241-a1a92819d01c.pdf",
+      "sha256": "a1a92819d01c76854d49474f3b41a9389a5158b8203179dbb99184db13ae2110",
+      "size": 2379611
+    },
+    {
+      "id": "242-39d329816200",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Mayor Becker Letter Supporting Cadillac Cogeneration Groundwater Proposal - August 7, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/242-39d329816200.pdf",
+      "sha256": "39d329816200bf14e9dd9351db7457cd0a56906a1834c344ab8f31264cbbe708",
+      "size": 65325
+    },
+    {
+      "id": "243-ae0517acffe3",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac Area Groundwater Contamination Final Draft Feasibility Study - June 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/243-ae0517acffe3.pdf",
+      "sha256": "ae0517acffe329e9f190ae8c40dd37a4a8aa739788bbff370e5f3ca89dc22c53",
+      "size": 14175851
+    },
+    {
+      "id": "244-dc9a86606a0a",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Kysor Comments on Cadillac Industrial Park RI-FS and Proposed Plan - August 26, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/244-dc9a86606a0a.pdf",
+      "sha256": "dc9a86606a0a3a887e64ff26ea34a727662a20af29f3634ea0502a0ff5647343",
+      "size": 5071744
+    },
+    {
+      "id": "245-edb84888823f",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Kysor Administrative Record Update 2 and 1998 Addendum Index.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/245-edb84888823f.pdf",
+      "sha256": "edb84888823fd41802330d5d398d74cab31a5f6db66fec3b1d478965e0f02296",
+      "size": 15092
     },
     {
       "id": "cadsir-model-c902da6a24fb",

@@ -140,7 +140,7 @@
     "pages": 2,
     "size": 81223,
     "sha256": "82254e0c3a951f81260926ec35bb39c2fe3d2c86d75c4ac42926a171ff46831d",
-    "description": "October 16, 1989 Update 1 lists 15 Kysor/Cadillac groundwater records. Batch 4 supplied entry 11's two-page City statement. Batch 5 now supplies the originals behind entries 2 and 4-9, including public/interagency comments; entry 4 is only a cover letter and its separately indexed 129-page Kysor comments remain absent. The 66-page hearing transcript, 375-page final FS, 129-page comments and 120-page ROD remain retrieval leads. This index is metadata, not proof of the listed records' substance."
+    "description": "October 16, 1989 Update 1 lists 15 Kysor/Cadillac groundwater records. Supplied originals now resolve entries 1-2, 4-11 and 13-14. Entry 4's cover letter and entry 14's complete 129-page enclosure remain separate records. Entry 13's Final Draft FS is physically 374 pages although the index says 375. The remaining unsupplied originals are entry 3's August 24 letter, entry 12's 66-page hearing transcript and entry 15's 120-page ROD. The index is retrieval metadata, not proof of those records' substance."
   },
   {
     "id": "197-16057f68d1d5",
@@ -3069,5 +3069,70 @@
     "size": 56059,
     "sha256": "247244b600a334970ec70ac7d2416192f4d098e67eea76bd5b445b27a2938d72",
     "description": "September 28, 1989 MDNR letter concurring with the ROD's remedial technology while rejecting the 5-ppb TCE target in favor of 1 ppb, disputing omission of Act 245/Part 22 as ARARs and requesting a broader site/source description. The single page was read and visually checked. It records MDNR's position, not proof of EPA adoption or a current legal standard; the referenced ROD and RI/FS are absent."
+  },
+  {
+    "id": "241-a1a92819d01c",
+    "name": "EPA Proposed Plan Fact Sheet - Kysor and Northernaire Cleanup Action Recommended - July 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/241-a1a92819d01c.pdf",
+    "year": "1989",
+    "category": "Groundwater & hydrogeology - proposed remedy",
+    "type": "EPA proposed-plan fact sheet",
+    "format": "PDF",
+    "pages": 8,
+    "size": 2379611,
+    "sha256": "a1a92819d01c76854d49474f3b41a9389a5158b8203179dbb99184db13ae2110",
+    "description": "EPA Region 5's July 1989 proposed-plan fact sheet for Kysor and Northernaire. It summarizes historical VOC/chromium investigation, lists proposed extraction/treatment and soil alternatives, and identifies GW Alternative 3A plus Kysor Soil Alternative 5 as EPA's preferred proposal (PDF pp. 2-5). The sheet expressly says final selection awaited public comment (pp. 1, 5, 7-8); conceptual wells, Clam River discharge, costs and 64-year groundwater duration are proposals/estimates, not approved construction or operations. All eight pages were read and visually checked, with noisy text on pp. 3, 7 and 8 verified against the images. Underlying RI/FS, risk data, complete Proposed Plan, comments and ROD are separate records. No PFAS, Wexford, Plett Road or WWTP/leachate evidence appears."
+  },
+  {
+    "id": "242-39d329816200",
+    "name": "Mayor Becker Letter Supporting Cadillac Cogeneration Groundwater Proposal - August 7, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/242-39d329816200.pdf",
+    "year": "1989",
+    "category": "Correspondence - municipal public comment",
+    "type": "Mayor's public-comment letter",
+    "format": "PDF",
+    "pages": 2,
+    "size": 65325,
+    "sha256": "39d329816200bf14e9dd9351db7457cd0a56906a1834c344ab8f31264cbbe708",
+    "description": "Signed August 7, 1989 letter from Cadillac Mayor Darrell D. Becker to EPA. The Mayor reports the City's role in a proposed wood-fired cogeneration/air-stripping project, anticipated ground-breaking, special-assessment planning and City land/funding, and asks EPA/MDNR to recognize that proposal as preferred (PDF pp. 1-2). Both pages were read and visually checked. These are municipal claims and advocacy, not independent proof of approval, financing, construction or operation; the supporting study, PSC order, financing, construction and agency-approval records are absent. This is distinct from the City's separate courthouse statement of the same date."
+  },
+  {
+    "id": "243-ae0517acffe3",
+    "name": "Cadillac Area Groundwater Contamination Final Draft Feasibility Study - June 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/243-ae0517acffe3.pdf",
+    "year": "1989",
+    "category": "Groundwater & hydrogeology - final draft feasibility study",
+    "type": "CERCLA feasibility study",
+    "format": "PDF",
+    "pages": 374,
+    "size": 14175851,
+    "sha256": "ae0517acffe329e9f190ae8c40dd37a4a8aa739788bbff370e5f3ca89dc22c53",
+    "description": "E.C. Jordan's June 1989 FINAL DRAFT Cadillac Area Groundwater Contamination Feasibility Study for MDNR. It carries historical VOC/chromium alternatives into detailed engineering, cost, monitoring and risk comparisons and includes Appendices A-G. Proposed systems include seven modeled extraction-well series and treatment/discharge alternatives; the report repeatedly qualifies pumping rates, cleanup times and volumes as design/model outputs dependent on assumptions and later monitoring (PDF pp. 134-241, 303-309, 363-370). Community and State acceptance awaited public review and the ROD, and conceptual costs carried approximately -30%/+50% uncertainty (pp. 125-126). All 374 physical pages, maps, tables and appendices were read and visually checked. EPA's 1989 index says 375 pages; the unresolved one-page discrepancy is preserved. This is not the signed ROD, proof of construction/operation, PFAS evidence or a Wexford-to-Plett pathway."
+  },
+  {
+    "id": "244-dc9a86606a0a",
+    "name": "Kysor Comments on Cadillac Industrial Park RI-FS and Proposed Plan - August 26, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/244-dc9a86606a0a.pdf",
+    "year": "1989",
+    "category": "Groundwater & hydrogeology - responsible-party comments",
+    "type": "RI/FS and proposed-plan comments with exhibits",
+    "format": "PDF",
+    "pages": 129,
+    "size": 5071744,
+    "sha256": "dc9a86606a0a3a887e64ff26ea34a727662a20af29f3634ea0502a0ff5647343",
+    "description": "Kysor Industrial Corporation's August 26, 1989 comments on the Cadillac RI/FS and Proposed Plan, with five top-level exhibits. Kysor disputes risk, ARAR, cleanup-level, flow/cost and remedy assumptions; advocates modeling and a cogeneration/purge/air-stripping proposal; and presents historical hydrogeologic material and remedy analogies (PDF pp. 5-44, 45-129). Proposed 5,000-gpm purge, 4,400-gpm Clam River discharge and anticipated construction are party proposals/estimates, not proof of approval or operation (pp. 28-30, 39-44). Exhibit C reports a 1983 municipal Well 7 test, but it is not Plett/Wexford testing or PFAS evidence (pp. 73-75). All 129 pages were read and visually checked; targeted OCR covered weak/divider/map pages. The p. 69 letter's nested census enclosures are not separately identifiable. Claims remain attributed to Kysor/consultants, not agency findings."
+  },
+  {
+    "id": "245-edb84888823f",
+    "name": "EPA Kysor Administrative Record Update 2 and 1998 Addendum Index.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/4ee5c25769f776b209a7377a3aca33e765ebc722/public/findings-docs/245-edb84888823f.pdf",
+    "year": "1998",
+    "category": "Reference records - Superfund administrative index",
+    "type": "EPA administrative-record index/addendum",
+    "format": "PDF",
+    "pages": 1,
+    "size": 15092,
+    "sha256": "edb84888823fd41802330d5d398d74cab31a5f6db66fec3b1d478965e0f02296",
+    "description": "One-page EPA Kysor administrative-record Update 2/addendum. It lists a March 3, 1994 Explanation of Significant Difference and an April 30, 1998 Administrative Order Compliance Status and Closure record, each printed as 21 pages. The full 1994 ESD is separately preserved as canonical record 095-b7620af87938 with 22 PDF pages; the count discrepancy remains explicit. The 1998 closure record is not attached and remains an acquisition lead. This exact one-page index was previously reviewed under another supplied filename but had no public asset; it is published once here without substituting it for either underlying record."
   }
 ]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1658,
+  "recordCount": 1662,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 221
+      "count": 225
     },
     {
       "archiveId": "reference",
@@ -17046,6 +17046,50 @@
       "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/1fb4ab511dabbf1e1589643afad50b72ae9fc926/public/findings-docs/222-a20e778c67f4.pdf",
       "sha256": "a20e778c67f4bf5ac2b07613b1c0f05ce0e9b6d75dd6d0c271a9fd39d75267f5",
       "size": 19551345
+    },
+    {
+      "id": "224-86da7f5f48ee",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Second Five-Year Review - Northernaire Plating Superfund Site - July 26, 2000.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/224-86da7f5f48ee.pdf",
+      "sha256": "86da7f5f48ee2d85f16358aa0fc32d61930ef90fd8c39d8263a5441c6bf38254",
+      "size": 381753
+    },
+    {
+      "id": "226-84aea6725dbf",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Kysor Industrial Administrative Record, Sampling and Guidance Index - July 12, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/226-84aea6725dbf.pdf",
+      "sha256": "84aea6725dbf33aa9abc153a6bfb8a0e313e3a4363a41bc12fa7f3e52e6ed99f",
+      "size": 160809
+    },
+    {
+      "id": "227-5e0b1f03162b",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Review of Cadillac Regional Area Risk Assessment - May 24, 1988.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/227-5e0b1f03162b.pdf",
+      "sha256": "5e0b1f03162b36704e30ccb866312f4c2922531ed4eae6a6ece3167d2f0ae70c",
+      "size": 220393
+    },
+    {
+      "id": "228-1fa07d99d00e",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Four Star Corporation Hydrogeologic Investigation Report - August 1983.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/228-1fa07d99d00e.pdf",
+      "sha256": "1fa07d99d00e2d0c1c4fd9e43a3e497ca740e08a5dac6e4853d025f49358cca8",
+      "size": 5294043
     },
     {
       "id": "cadsir-model-c902da6a24fb",

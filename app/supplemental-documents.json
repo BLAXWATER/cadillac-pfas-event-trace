@@ -1284,7 +1284,7 @@
     "pages": 8,
     "size": 85919,
     "sha256": "31f27263ba22c594ff730babc84ca7491fb1a5de7c4064dc7d9404811b624f1f",
-    "description": "EPA Region 5's first five-year review of the Kysor site, covering remedy history, groundwater cleanup and the July 2000 site review. It is an official remedial-review record, not PFAS sampling."
+    "description": "EPA Region 5's signed July 26, 2000 first five-year review for the Kysor site. It describes the 18-well groundwater remedy, then-current containment and declining VOC/chromium concentrations, the corrected 1997 carbon-breakthrough episode, and recommends continued operation, trend analysis, optimization and coordination with neighboring sources (PDF pp. 3, 5-8). EPA found the remedy protective at that review date (p. 8 of the canonical copy). The alternate nine-page EPA rendition supplied in Batch 3 adds only a records-center cover and is preserved without a duplicate card. This dated chromium/VOC review is not PFAS evidence or proof of a present Plett Road pathway."
   },
   {
     "id": "088-ffba65b657df",
@@ -2874,5 +2874,57 @@
     "size": 19551345,
     "sha256": "a20e778c67f4bf5ac2b07613b1c0f05ce0e9b6d75dd6d0c271a9fd39d75267f5",
     "description": "EPA Region 5's signed August 28, 2020 fifth five-year review for the Kysor Industrial Superfund site. EPA found the remedy short-term protective and the plume apparently contained, but made long-term protectiveness conditional on institutional-control stewardship, 1,4-dioxane analysis, PFAS well sampling and continued vapor-intrusion tracking (PDF pp. 27–31). The review reports continued treatment, localized TCE/PCE exceedances and projected cleanup dates that are model estimates rather than achieved milestones (pp. 17–26, 96–103). Its PFAS section states that Site monitoring wells had not yet been tested and recommends sampling; its cited municipal/WWTP statements are summaries, not embedded raw laboratory reports (p. 27). All 103 pages were read and visually checked; pages 51–52 and 76 were OCR/visual-verified. The report does not prove a Wexford Landfill-to-Plett Road pathway."
+  },
+  {
+    "id": "224-86da7f5f48ee",
+    "name": "EPA Second Five-Year Review - Northernaire Plating Superfund Site - July 26, 2000.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/224-86da7f5f48ee.pdf",
+    "year": "2000",
+    "category": "Groundwater & hydrogeology - Superfund remedy review",
+    "type": "EPA five-year review",
+    "format": "PDF",
+    "pages": 8,
+    "size": 381753,
+    "sha256": "86da7f5f48ee2d85f16358aa0fc32d61930ef90fd8c39d8263a5441c6bf38254",
+    "description": "EPA Region 5's signed July 26, 2000 second five-year review for the Northernaire Plating site. It recounts the 1983 removal, 1985 source-control decision and 1989 groundwater remedy, describes the joint 18-well extraction/treatment system, and reports then-current containment, declining concentrations and no identified deficiencies (PDF pp. 2-7). EPA found the remedy protective at that review date while recommending continued operation, trend analysis and optimization (pp. 7-8). All eight pages were read and visually checked; the page 3 map received supplemental OCR review. This dated chromium/VOC remedy finding is not PFAS evidence or proof of a present Plett Road pathway."
+  },
+  {
+    "id": "226-84aea6725dbf",
+    "name": "EPA Kysor Industrial Administrative Record, Sampling and Guidance Index - July 12, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/226-84aea6725dbf.pdf",
+    "year": "1989",
+    "category": "Reference records - Superfund administrative index",
+    "type": "EPA administrative-record index",
+    "format": "PDF",
+    "pages": 7,
+    "size": 160809,
+    "sha256": "84aea6725dbf33aa9abc153a6bfb8a0e313e3a4363a41bc12fa7f3e52e6ed99f",
+    "description": "EPA Region 5's July 12, 1989 Kysor administrative-record, sampling-data, guidance-document and acronym index. It identifies underlying records such as the May 1988 potential-liability notice, Cadillac-area RI/FS materials, monitoring-well logs and CLP sampling results (PDF pp. 1-7), but those source records are not attached here. All seven pages were read and visually checked; the weak final page received supplemental OCR review. This index is a provenance and acquisition guide, not independent proof of the listed records' substantive findings."
+  },
+  {
+    "id": "227-5e0b1f03162b",
+    "name": "EPA Review of Cadillac Regional Area Risk Assessment - May 24, 1988.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/227-5e0b1f03162b.pdf",
+    "year": "1988",
+    "category": "Groundwater & hydrogeology - technical review",
+    "type": "EPA risk-assessment technical memorandum",
+    "format": "PDF",
+    "pages": 6,
+    "size": 220393,
+    "sha256": "5e0b1f03162b36704e30ccb866312f4c2922531ed4eae6a6ece3167d2f0ae70c",
+    "description": "EPA Office of Research and Development's May 24, 1988 technical review of the Cadillac regional-area risk assessment. The reviewer states that missing chapters and hydrogeologic material constrained the review (PDF p. 1), questions several chemical exclusions and surrogate assumptions (pp. 1-2), and criticizes the one-dimensional homogeneous/isotropic transport model while recommending more site-specific treatment of groundwater, surface-water discharge and aquitard conditions (pp. 3-4). Pages 5-6 preserve chemical-property tables. All six pages were read and visually checked. The memorandum identifies model limitations; it does not itself establish a corrected plume, PFAS source or route to Plett Road."
+  },
+  {
+    "id": "228-1fa07d99d00e",
+    "name": "Four Star Corporation Hydrogeologic Investigation Report - August 1983.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/228-1fa07d99d00e.pdf",
+    "year": "1983",
+    "category": "Groundwater & hydrogeology - industrial site investigation",
+    "type": "Hydrogeologic investigation and laboratory report",
+    "format": "PDF",
+    "pages": 88,
+    "size": 5294043,
+    "sha256": "1fa07d99d00e2d0c1c4fd9e43a3e497ca740e08a5dac6e4853d025f49358cca8",
+    "description": "Gosling Czubak Associates' August 1983 hydrogeologic investigation for the former Four Star facility in Cadillac. The report documents 11 borings and 10 monitoring wells, predominantly sandy materials with discontinuous clay lenses, groundwater about 30 feet below ground, and a north-to-northwest flow interpretation with an estimated 0.17% gradient and 50-75 feet/year average velocity (PDF pp. 25, 40-44). It reports high historical TCE/PCE in several wells and interprets the plume as moving north with its leading edge still undefined (pp. 11-12, 29-32). All 88 pages, laboratory sheets, agency correspondence, logs and maps were read and visually checked. Sparse pages and the degraded map series received OCR/manual review; fine map annotations remain unreadable and an internal MW1/MW4 result-label discrepancy is preserved. This historical VOC investigation does not establish PFAS, impact to municipal wells, or a pathway to Plett Road."
   }
 ]

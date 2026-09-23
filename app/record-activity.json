@@ -1,6 +1,10 @@
 {
   "basis": "Site record/source change history; not historical document dates. Five rolling 24-hour days.",
   "records": {
+    "/findings-docs/087-31f27263ba22.pdf": {
+      "updatedAt": "2026-09-23T17:03:59.216Z",
+      "fingerprint": "a1f50a618b177e6b767faf9e1572472e95e05289df9b6ef30d46f1b49343ca3d"
+    },
     "/findings-docs/095-b7620af87938.pdf": {
       "updatedAt": "2026-09-21T10:53:06-04:00",
       "fingerprint": "95b05f5b174bb9ca8c2eb71f14ae127287461dce07ae8c17a5ee014658bca977"
@@ -82,6 +86,22 @@
     "/findings-docs/222-a20e778c67f4.pdf": {
       "addedAt": "2026-09-23T10:34:42-04:00",
       "fingerprint": "c2600e8b569916b885e2620eb3247081ebe95c63b536d093d4ba211257b64224"
+    },
+    "/findings-docs/224-86da7f5f48ee.pdf": {
+      "addedAt": "2026-09-23T17:03:59.216Z",
+      "fingerprint": "46a791773fd9414f8741d128c9dc533d4729fec671bbba7a28aa9206da2176dd"
+    },
+    "/findings-docs/226-84aea6725dbf.pdf": {
+      "addedAt": "2026-09-23T17:03:59.216Z",
+      "fingerprint": "f43044cd8f8cc05d58d6ca86ce01f3857810f9ad9846d452ec5f0c54c26f163e"
+    },
+    "/findings-docs/227-5e0b1f03162b.pdf": {
+      "addedAt": "2026-09-23T17:03:59.216Z",
+      "fingerprint": "6b5457c13811b8aa25a80a56a7d0788f243182e21995e23712fad9bcc8c23e9c"
+    },
+    "/findings-docs/228-1fa07d99d00e.pdf": {
+      "addedAt": "2026-09-23T17:03:59.216Z",
+      "fingerprint": "ad2003ced1b4ca1cbdd20493ab91d136f490dc98c3855c7b553a5c1816f8818d"
     },
     "/lab-docs/041-b6acc1cf09fd.pdf": {
       "updatedAt": "2026-09-21T14:09:05-04:00",

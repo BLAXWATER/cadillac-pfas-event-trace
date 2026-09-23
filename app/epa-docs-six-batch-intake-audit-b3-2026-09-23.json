@@ -1,0 +1,182 @@
+{
+  "auditVersion": 1,
+  "intake": "EPA DOCS six-micro-batch intake",
+  "batch": "EPA-2026-09-23-B3",
+  "batchNumber": 3,
+  "totalBatches": 6,
+  "sourceOrderPreserved": true,
+  "reviewedAt": "2026-09-23T12:57:54-04:00",
+  "sourceAssetCommit": "c9400bd935317e0a8868688d08e7492a53839854",
+  "sourceAssetBranch": "epa-intake-batch-3",
+  "rules": {
+    "recordBoundariesPreserved": true,
+    "pageOrderReviewRequired": true,
+    "filenameOnlyDeduplicationProhibited": true,
+    "statusesSeparated": true
+  },
+  "totals": {
+    "records": 7,
+    "pages": 162,
+    "exactExistingRecords": 1,
+    "alternateRenditions": 2,
+    "newDistinctRecords": 4
+  },
+  "records": [
+    {
+      "supplied": "EPA_05_159280.pdf",
+      "sourceUrl": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/223-b7dffe19c91d.pdf",
+      "sha256": "b7dffe19c91d8e93afb945495e9c25fc59fb9eb900a66b174ebb89b34bd83807",
+      "bytes": 392487,
+      "pages": 9,
+      "ocrCheckedPages": [
+        4
+      ],
+      "disposition": "alternate-rendition-canonical-reused",
+      "canonicalRecordId": "087-31f27263ba22",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": true
+      }
+    },
+    {
+      "supplied": "EPA_05_159310.pdf",
+      "sha256": "86da7f5f48ee2d85f16358aa0fc32d61930ef90fd8c39d8263a5441c6bf38254",
+      "bytes": 381753,
+      "pages": 8,
+      "ocrCheckedPages": [
+        3
+      ],
+      "disposition": "new-distinct-record",
+      "canonicalRecordId": "224-86da7f5f48ee",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": false
+      }
+    },
+    {
+      "supplied": "EPA_05_209538.pdf",
+      "sha256": "07119f8b3cdf21d9a7786054a6ae4d3ffb1bca65a4661860e250299e8586fef4",
+      "bytes": 1121333,
+      "pages": 24,
+      "ocrCheckedPages": [],
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": "200-07119f8b3cdf",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": true
+      }
+    },
+    {
+      "supplied": "EPA_05_209675.pdf",
+      "sourceUrl": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/225-8390f3bec949.pdf",
+      "sha256": "8390f3bec9498430802aa92214312684da1df551b3f26261b03a9243f7382642",
+      "bytes": 854953,
+      "pages": 20,
+      "ocrCheckedPages": [
+        11
+      ],
+      "disposition": "alternate-reduced-reordered-rendition-canonical-reused",
+      "canonicalRecordId": "095-b7620af87938",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": true
+      }
+    },
+    {
+      "supplied": "EPA_05_234872.pdf",
+      "sha256": "84aea6725dbf33aa9abc153a6bfb8a0e313e3a4363a41bc12fa7f3e52e6ed99f",
+      "bytes": 160809,
+      "pages": 7,
+      "ocrCheckedPages": [
+        7
+      ],
+      "disposition": "new-distinct-record",
+      "canonicalRecordId": "226-84aea6725dbf",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": false
+      }
+    },
+    {
+      "supplied": "EPA_05_234874.pdf",
+      "sha256": "5e0b1f03162b36704e30ccb866312f4c2922531ed4eae6a6ece3167d2f0ae70c",
+      "bytes": 220393,
+      "pages": 6,
+      "ocrCheckedPages": [],
+      "disposition": "new-distinct-record",
+      "canonicalRecordId": "227-5e0b1f03162b",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": false
+      }
+    },
+    {
+      "supplied": "EPA_05_234875.pdf",
+      "sha256": "1fa07d99d00e2d0c1c4fd9e43a3e497ca740e08a5dac6e4853d025f49358cca8",
+      "bytes": 5294043,
+      "pages": 88,
+      "ocrCheckedPages": [
+        7,
+        22,
+        33,
+        34,
+        36,
+        38,
+        49,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "disposition": "new-distinct-record",
+      "canonicalRecordId": "228-1fa07d99d00e",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": false
+      }
+    }
+  ],
+  "limitations": [
+    "Historical chromium and VOC findings do not independently establish PFAS source attribution or a present pathway to Plett Road.",
+    "The Four Star report's degraded maps and handwritten logs are not character-perfect; its internal MW1/MW4 result-label discrepancy remains explicit.",
+    "The administrative index identifies acquisition targets but does not substitute for the underlying records.",
+    "No evidence-request requirement closes in this batch."
+  ]
+}

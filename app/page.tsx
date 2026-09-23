@@ -4187,7 +4187,7 @@ export default function Home() {
           <div><Factory /><span>Wexford landfill</span><small>Source material</small></div><ArrowDown />
           <div><Landmark /><span>Cadillac WWTP</span><small>Historical receiver</small></div><ArrowDown />
           <div><FlaskConical /><span>PFAS record</span><small>Sampling + controls</small></div><ArrowDown />
-          <div><Waves /><span>Plett Road wells</span><small>Receptor results</small></div>
+          <div><Waves /><span>Cadillac Area Wells</span><small>Receptor results</small></div>
         </section>
 
         <section className="global-search-panel" id="record-search" aria-labelledby="record-search-title">

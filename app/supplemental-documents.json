@@ -140,7 +140,7 @@
     "pages": 2,
     "size": 81223,
     "sha256": "82254e0c3a951f81260926ec35bb39c2fe3d2c86d75c4ac42926a171ff46831d",
-    "description": "October 16, 1989 Update 1 lists 15 Kysor/Cadillac groundwater records. Page 1 identifies City, stakeholder and agency comments; page 2 lists the August 7 public-meeting transcript, June 8 final feasibility study, Kysor comments and September 29 ROD. The separately supplied two-page City statement now resolves index entry 11 only. The other listed originals remain retrieval leads, not attachments or proof of their contents. This newly supplied EPA copy is byte-identical to the canonical index and does not receive a duplicate card."
+    "description": "October 16, 1989 Update 1 lists 15 Kysor/Cadillac groundwater records. Batch 4 supplied entry 11's two-page City statement. Batch 5 now supplies the originals behind entries 2 and 4-9, including public/interagency comments; entry 4 is only a cover letter and its separately indexed 129-page Kysor comments remain absent. The 66-page hearing transcript, 375-page final FS, 129-page comments and 120-page ROD remain retrieval leads. This index is metadata, not proof of the listed records' substance."
   },
   {
     "id": "197-16057f68d1d5",
@@ -2978,5 +2978,96 @@
     "size": 73417,
     "sha256": "86a0d0431b4c74feecba805cb11cd8140ae632c9aa953fe9c5d42d5b2d602f09",
     "description": "City of Cadillac statement presented August 7, 1989 at the Wexford County Courthouse. The City reports its historical understanding of industrial groundwater contamination, says the municipal supply then showed no sign of contamination, states protection/cleanup/economic goals, and advocates a Cogeneration Michigan cleanup proposal (PDF pp. 1-2). Both pages were read and visually checked. These are attributed City positions and predictions, not independent confirmation of remedy approval, construction, operation, performance, cost or present conditions. The record matches entry 11 in EPA's October 1989 administrative-record index but does not supply the separately listed final feasibility study or Record of Decision."
+  },
+  {
+    "id": "234-49ef2dd3725c",
+    "name": "Haring Township Questions on Kysor and Northernaire Cleanup Proposals - August 21, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/234-49ef2dd3725c.pdf",
+    "year": "1989",
+    "category": "Correspondence - public comments",
+    "type": "Township comment letter",
+    "format": "PDF",
+    "pages": 2,
+    "size": 104181,
+    "sha256": "49ef2dd3725cddd8fc359b70a7bf87e04c3f7bcb84e19f5cd8f44bd42149528d",
+    "description": "Signed August 21, 1989 letter from Haring Township Supervisor Mary F. Stark to EPA following the August 7 public meeting. It asks how the proposed Cogeneration Michigan alternative would address soil, a stated 5,000-gpm extraction rate, shallow-well effects and resulting water disposal, and requests an environmental-impact study (PDF pp. 1-2). Both pages were read and visually checked. The figures and alternatives are stakeholder questions/characterizations, not proof of approved or operating pumping, discharge or cleanup. The referenced briefing, meeting record, prior correspondence, EPA response, proposal and any EIS are absent."
+  },
+  {
+    "id": "235-60336cd883e2",
+    "name": "Kysor RI-FS and Proposed Plan Comment Cover Letter - August 26, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/235-60336cd883e2.pdf",
+    "year": "1989",
+    "category": "Correspondence - transmittal",
+    "type": "Comment transmittal cover letter",
+    "format": "PDF",
+    "pages": 1,
+    "size": 51101,
+    "sha256": "60336cd883e2f7836aada317e004d052631cd65b7276cbfc0ba52fc6e5238073",
+    "description": "August 26, 1989 Warner Norcross & Judd cover letter transmitting Kysor Industrial Corporation's comments on the RI/FS and proposed plan to EPA. The single supplied page was read and visually checked. Its stated enclosure is absent, so this record proves only the transmittal and remains an acquisition lead for the separately indexed 129-page Kysor comments; it does not establish the comments' substance."
+  },
+  {
+    "id": "236-addc2718157a",
+    "name": "ASI Four Winns Comments on Cadillac RI-FS - August 30, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/236-addc2718157a.pdf",
+    "year": "1989",
+    "category": "Correspondence - technical comments",
+    "type": "Consultant RI/FS comments",
+    "format": "PDF",
+    "pages": 3,
+    "size": 143612,
+    "sha256": "addc2718157a49f425e3809d13ee10d5b0fa730764fa0d73560e8938870b8f1d",
+    "description": "August 30, 1989 ASI Environmental Technologies comments for Four Winns with an August 31 fax sheet. ASI states that soil information was insufficient and more investigation was needed (PDF p. 1), says Four Winns may have been partially responsible for shallow-aquifer VOCs, and describes a 1986 granular-activated-carbon proposal with possible sewer or Clam River discharge subject to permits (p. 2). All three pages were read and visually checked. These are a party consultant's positions and proposal history, not proof of source allocation, approval, construction, discharge or operation."
+  },
+  {
+    "id": "237-647d136b3049",
+    "name": "Black and Veatch Draft Summary of Kysor and Northernaire Public Comments - September 5, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/237-647d136b3049.pdf",
+    "year": "1989",
+    "category": "Correspondence - public-comment summary",
+    "type": "Draft responsiveness-summary support",
+    "format": "PDF",
+    "pages": 2,
+    "size": 80405,
+    "sha256": "647d136b3049959d54d020e4b6521294ec3ac255ea3dfac8a25ee868124f5c91",
+    "description": "September 5, 1989 Black & Veatch transmittal and draft summary of comments concerning the Kysor and Northernaire sites. Page 1 explains that the compilation draws from the public-meeting transcript and written comments; page 2 summarizes seven commenter positions about cogeneration, health explanations, cleanup levels, source/cost allocation, soil flushing and deed restrictions. Both pages were read and visually checked. The transcript, original comments and enclosures are absent, and summarized allegations are not EPA findings, selected remedies or proof of consensus."
+  },
+  {
+    "id": "238-34bd721181df",
+    "name": "MDNR Comments on Draft Northernaire-Kysor Record of Decision - September 15, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/238-34bd721181df.pdf",
+    "year": "1989",
+    "category": "Compliance - interagency remedy comments",
+    "type": "MDNR draft-ROD comment letter",
+    "format": "PDF",
+    "pages": 5,
+    "size": 274246,
+    "sha256": "34bd721181df019a5d09f6c254a0ed6c576fe12aadce1ed8c411b063284dad97",
+    "description": "Signed September 15, 1989 MDNR letter commenting on the draft Northernaire/Kysor Record of Decision. MDNR concurs with remedial technology but disputes cleanup levels, advocates a historical 1-ppb TCE criterion, requests inclusion of other source/plume information and corrections, and comments on ARAR/protectiveness language (PDF pp. 1-5). All five pages were read and visually checked. These are MDNR's requested revisions under the then-current framework, not proof that EPA adopted them or that cited rules remain current; the draft/final ROD and cited RI/FS material are absent."
+  },
+  {
+    "id": "239-3b31f0736347",
+    "name": "MDNR Comments on Draft Northernaire-Kysor Responsiveness Summary - September 22, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/239-3b31f0736347.pdf",
+    "year": "1989",
+    "category": "Correspondence - interagency comments",
+    "type": "MDNR draft-responsiveness-summary comments",
+    "format": "PDF",
+    "pages": 4,
+    "size": 170387,
+    "sha256": "3b31f0736347d69ed9c557bf2dba878a00e77f59bedc0e26e3d18156f85e8b98",
+    "description": "Signed September 22, 1989 MDNR comments on the draft Responsiveness Summary for the Northernaire/Kysor ROD. MDNR asks that the RI/FS's broader industrial-park scope be stated, explains its position on cogeneration, soil remediation, comment rights and historical cleanup/risk criteria, and requests language describing one groundwater plume with multiple origins while treating Rexair separately (PDF pp. 1-4). All four pages and handwritten receipt/fax dates were visually checked. These are requested revisions and agency positions, not proof that EPA adopted the wording or independent proof of source attribution. Referenced drafts, comments and the final ROD are absent."
+  },
+  {
+    "id": "240-247244b600a3",
+    "name": "MDNR Concurrence and Objections on Northernaire-Kysor ROD - September 28, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/240-247244b600a3.pdf",
+    "year": "1989",
+    "category": "Compliance - interagency remedy comments",
+    "type": "MDNR ROD comment letter",
+    "format": "PDF",
+    "pages": 1,
+    "size": 56059,
+    "sha256": "247244b600a334970ec70ac7d2416192f4d098e67eea76bd5b445b27a2938d72",
+    "description": "September 28, 1989 MDNR letter concurring with the ROD's remedial technology while rejecting the 5-ppb TCE target in favor of 1 ppb, disputing omission of Act 245/Part 22 as ARARs and requesting a broader site/source description. The single page was read and visually checked. It records MDNR's position, not proof of EPA adoption or a current legal standard; the referenced ROD and RI/FS are absent."
   }
 ]

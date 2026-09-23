@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1666,
+  "recordCount": 1673,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 229
+      "count": 236
     },
     {
       "archiveId": "reference",
@@ -17134,6 +17134,83 @@
       "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/233-86a0d0431b4c.pdf",
       "sha256": "86a0d0431b4c74feecba805cb11cd8140ae632c9aa953fe9c5d42d5b2d602f09",
       "size": 73417
+    },
+    {
+      "id": "234-49ef2dd3725c",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Haring Township Questions on Kysor and Northernaire Cleanup Proposals - August 21, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/234-49ef2dd3725c.pdf",
+      "sha256": "49ef2dd3725cddd8fc359b70a7bf87e04c3f7bcb84e19f5cd8f44bd42149528d",
+      "size": 104181
+    },
+    {
+      "id": "235-60336cd883e2",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Kysor RI-FS and Proposed Plan Comment Cover Letter - August 26, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/235-60336cd883e2.pdf",
+      "sha256": "60336cd883e2f7836aada317e004d052631cd65b7276cbfc0ba52fc6e5238073",
+      "size": 51101
+    },
+    {
+      "id": "236-addc2718157a",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "ASI Four Winns Comments on Cadillac RI-FS - August 30, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/236-addc2718157a.pdf",
+      "sha256": "addc2718157a49f425e3809d13ee10d5b0fa730764fa0d73560e8938870b8f1d",
+      "size": 143612
+    },
+    {
+      "id": "237-647d136b3049",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Black and Veatch Draft Summary of Kysor and Northernaire Public Comments - September 5, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/237-647d136b3049.pdf",
+      "sha256": "647d136b3049959d54d020e4b6521294ec3ac255ea3dfac8a25ee868124f5c91",
+      "size": 80405
+    },
+    {
+      "id": "238-34bd721181df",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "MDNR Comments on Draft Northernaire-Kysor Record of Decision - September 15, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/238-34bd721181df.pdf",
+      "sha256": "34bd721181df019a5d09f6c254a0ed6c576fe12aadce1ed8c411b063284dad97",
+      "size": 274246
+    },
+    {
+      "id": "239-3b31f0736347",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "MDNR Comments on Draft Northernaire-Kysor Responsiveness Summary - September 22, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/239-3b31f0736347.pdf",
+      "sha256": "3b31f0736347d69ed9c557bf2dba878a00e77f59bedc0e26e3d18156f85e8b98",
+      "size": 170387
+    },
+    {
+      "id": "240-247244b600a3",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "MDNR Concurrence and Objections on Northernaire-Kysor ROD - September 28, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/20f2ac1e5855e5f1312fc85b75fc91317bd46f94/public/findings-docs/240-247244b600a3.pdf",
+      "sha256": "247244b600a334970ec70ac7d2416192f4d098e67eea76bd5b445b27a2938d72",
+      "size": 56059
     },
     {
       "id": "cadsir-model-c902da6a24fb",

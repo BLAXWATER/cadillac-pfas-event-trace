@@ -8,6 +8,12 @@
   "reviewedAt": "2026-09-23T17:07:00-04:00",
   "sourceAssetCommit": "4ee5c25769f776b209a7377a3aca33e765ebc722",
   "sourceAssetBranch": "epa-intake-batch-6",
+  "publication": {
+    "publishedAt": "2026-09-23T18:38:52.510347Z",
+    "siteVersion": 310,
+    "deploymentId": "appgdep_6ab41cab6f708191bb13649e46d16810",
+    "liveUrl": "https://cadillac-pfas-event-trace.icons-7120.chatgpt.site"
+  },
   "rules": {
     "recordBoundariesPreserved": true,
     "pageOrderReviewRequired": true,
@@ -48,7 +54,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": "qualified",
-        "published": false
+        "published": true
       }
     },
     {
@@ -70,7 +76,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": "qualified",
-        "published": false
+        "published": true
       }
     },
     {
@@ -88,7 +94,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": "qualified",
-        "published": false
+        "published": true
       }
     },
     {
@@ -116,7 +122,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": "qualified",
-        "published": false
+        "published": true
       }
     },
     {
@@ -136,7 +142,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": "index-only",
-        "published": false
+        "published": true
       }
     }
   ],

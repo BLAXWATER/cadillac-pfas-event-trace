@@ -4329,7 +4329,7 @@ export default function Home() {
             <ArrowDown />
             <div><b>02</b><span>Event stamp</span><small>Date + stated time</small></div>
             <ArrowDown />
-            <div><b>03</b><span>Source clock</span><small>Created + modified metadata</small></div>
+            <div><b>03</b><span>Annual by Events</span><small>Documented + Repository</small></div>
           </div>
           <nav className="year-nav" aria-label="Jump to year band">
             {groups.map((group) => {

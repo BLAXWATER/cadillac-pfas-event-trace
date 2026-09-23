@@ -1,0 +1,783 @@
+{
+  "intake": "PFAS original records — ten-file six-batch reconciliation",
+  "reviewedAt": "2026-09-23",
+  "batches": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+  ],
+  "totalPages": 56,
+  "newDistinctRecords": 0,
+  "exactFileMatches": 7,
+  "renderIdenticalVariants": 3,
+  "records": [
+    {
+      "position": 1,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\17_HNQ-VZP8-TWNRX_V1_Status_Report_2019-06-28.pdf",
+      "name": "17_HNQ-VZP8-TWNRX_V1_Status_Report_2019-06-28.pdf",
+      "batch": 1,
+      "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+      "bytes": 47218,
+      "pages": 3,
+      "reviewedPages": [
+        1,
+        2,
+        3
+      ],
+      "canonicalAsset": "/docs/2019-06-28-source-status.pdf",
+      "canonicalSha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+      "exactBytes": true,
+      "canonicalPages": 3,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: June 4 2019 outfall 2 MGD, PFOS 7.1 and PFOA 15 ng/L; no influent sampling. J17646 and J19915 are listed attachments, not embedded pages.",
+        "p2: City reports Wexford source, CIU yes, deep-well injection and PFOS eliminated; these are submitted source-status statements, not zero WWTP effluent.",
+        "p3: Jeffrey Dietlin submission history June 28 2019."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": "form-submission-034-00d98416b456"
+    },
+    {
+      "position": 2,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\18_HNV-XK97-EV0GR_V1_Status_Report_2019-12-18.pdf",
+      "name": "18_HNV-XK97-EV0GR_V1_Status_Report_2019-12-18.pdf",
+      "batch": 1,
+      "sha256": "1873afe1dd72faba2066ef0163012c2feb727ca7dbd92726fd0f45c8935e6697",
+      "bytes": 43266,
+      "pages": 3,
+      "reviewedPages": [
+        1,
+        2,
+        3
+      ],
+      "canonicalAsset": "/form-submission-docs/form-submission-036-1873afe1dd72.pdf",
+      "canonicalSha256": "1873afe1dd72faba2066ef0163012c2feb727ca7dbd92726fd0f45c8935e6697",
+      "exactBytes": true,
+      "canonicalPages": 3,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: October 22 2019 outfall 1.98 MGD, PFOS 2.4 and PFOA 3.4 ng/L; no influent sampling. Spreadsheet and October lab report listed, not embedded.",
+        "p2: City reports no longer accepting leachate; deep-well injection; CIU no (differs from June), source status Other: Trash; local limits not adopted.",
+        "p3: December 10 draft / December 18 submission history."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": "form-submission-036-1873afe1dd72"
+    },
+    {
+      "position": 3,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\2018-06-27_Cadillac_IPP_PFAS_Screening_Monitoring_Plan_original.pdf",
+      "name": "2018-06-27_Cadillac_IPP_PFAS_Screening_Monitoring_Plan_original.pdf",
+      "batch": 2,
+      "sha256": "59ebe7478b18ff4565630a2c6ac2c37123fbe212ee88309a7c07f26b5e6bed60",
+      "bytes": 76074,
+      "pages": 3,
+      "reviewedPages": [
+        1,
+        2,
+        3
+      ],
+      "canonicalAsset": "/docs/2018-06-27-monitoring-plan.pdf",
+      "canonicalSha256": "59ebe7478b18ff4565630a2c6ac2c37123fbe212ee88309a7c07f26b5e6bed60",
+      "exactBytes": true,
+      "canonicalPages": 3,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: Screening workflow and proposed sampling / notification deadlines, not results.",
+        "p2: Reminder and 4-business-day extension; guidance availability note dated June 7 2018.",
+        "p3: Nonresponder assumption and June 27 guidance correspondence; assumption is not analytical confirmation."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": null
+    },
+    {
+      "position": 4,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\2018-11-30_Cadillac_IPP_PFAS_Monitoring_Plan_Update_original.pdf",
+      "name": "2018-11-30_Cadillac_IPP_PFAS_Monitoring_Plan_Update_original.pdf",
+      "batch": 2,
+      "sha256": "2dd8cd38dcb9b088a53fde3a81406d639341960e223ea1271fcad123ab8ce034",
+      "bytes": 86584,
+      "pages": 2,
+      "reviewedPages": [
+        1,
+        2
+      ],
+      "canonicalAsset": "/docs/2018-11-30-monitoring-plan-update.pdf",
+      "canonicalSha256": "2dd8cd38dcb9b088a53fde3a81406d639341960e223ea1271fcad123ab8ce034",
+      "exactBytes": true,
+      "canonicalPages": 2,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: 21 screening rows; Avon Automotive and Wexford marked probable. Shaded cells mask underlying native text: visible page controls interpretation.",
+        "p2: Avon November 7 samples pending; Wexford October 3 sampling and October 29 results receipt; confirmed source and effluent sampling required Yes. Shaded hidden dates are not visible findings."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": null
+    },
+    {
+      "position": 5,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\2018-2019_Cadillac_PFAS_Interim_Summary_Approval_Letter_original.pdf",
+      "name": "2018-2019_Cadillac_PFAS_Interim_Summary_Approval_Letter_original.pdf",
+      "batch": 3,
+      "sha256": "0c500dc1ea41e8d5ecc70a9a54d24368a61977350dda27315be469bea0d421c5",
+      "bytes": 120071,
+      "pages": 3,
+      "reviewedPages": [
+        1,
+        2,
+        3
+      ],
+      "canonicalAsset": "/docs/2019-03-04-report-approval.pdf",
+      "canonicalSha256": "66353d067ca56f14be259845da84fc331943e26b70762c0fbeeabc5560f811c3",
+      "exactBytes": false,
+      "canonicalPages": 3,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: March 4 2019 DEQ approval, November 5 2018 effluent PFOS 6.5 ng/L, source reduction requested.",
+        "p2: Semiannual effluent/status reports starting June 30 2019; local limits/legal authority advised; no liability waiver.",
+        "p3: Signed Brian Jankowski; contacts and cc list."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "render-and-text-identical-container-variant",
+      "canonicalRecordId": null
+    },
+    {
+      "position": 6,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\American_Waste_PFAS_Survey_1_.pdf",
+      "name": "American_Waste_PFAS_Survey_1_.pdf",
+      "batch": 3,
+      "sha256": "0f6da144029589aadd9814ae631d5f4ecdc7b78fe05a6cea237f3c5bba6ceee7",
+      "bytes": 302218,
+      "pages": 2,
+      "reviewedPages": [
+        1,
+        2
+      ],
+      "canonicalAsset": "/pfas-docs/002-aca419b24a35.pdf",
+      "canonicalSha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
+      "exactBytes": false,
+      "canonicalPages": 2,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: Vicki Garon signed Wexford survey May 21 2018.",
+        "p2: Operator reports 18–30% industrial waste, ownership since fall 2011, incomplete generator classification and no leachate PFAS analysis then."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "render-and-text-identical-container-variant",
+      "canonicalRecordId": "002-aca419b24a35"
+    },
+    {
+      "position": 7,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\Cadillac_WWTP_MI0020257_IPP_PFAS_Dec_2019_Status.pdf",
+      "name": "Cadillac_WWTP_MI0020257_IPP_PFAS_Dec_2019_Status.pdf",
+      "batch": 4,
+      "sha256": "d0aba8b5a5a45953cfc3fee56c99f8ea8f9c83e6fd01c5ee4fea416d5198884f",
+      "bytes": 196867,
+      "pages": 5,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "canonicalAsset": "/docs/2019-12-pfas-status.pdf",
+      "canonicalSha256": "d0aba8b5a5a45953cfc3fee56c99f8ea8f9c83e6fd01c5ee4fea416d5198884f",
+      "exactBytes": true,
+      "canonicalPages": 5,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ocrCheckedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pageReviewNotes": [
+        "p1: December 3 2019 statewide initiative letter addressed to Dietlin; 68/95 at or below criterion or no source, 93/95 screened.",
+        "p2: Statewide comparative reduction table; Cadillac not a table entry; bins and biosolids study.",
+        "p3: Land-application study and permitting strategy; Bin 1 four times/five years, Bin 2 semiannual.",
+        "p4: Bin 3a quarterly, 3b monthly; future guidance, analyte additions, PFAS DMR coding.",
+        "p5: Signed Teresa Seidel; cc City Clerk."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": null
+    },
+    {
+      "position": 8,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\Cadillac_WWTP_PFAS_Letter.pdf",
+      "name": "Cadillac_WWTP_PFAS_Letter.pdf",
+      "batch": 4,
+      "sha256": "66353d067ca56f14be259845da84fc331943e26b70762c0fbeeabc5560f811c3",
+      "bytes": 123393,
+      "pages": 3,
+      "reviewedPages": [
+        1,
+        2,
+        3
+      ],
+      "canonicalAsset": "/docs/2019-03-04-report-approval.pdf",
+      "canonicalSha256": "66353d067ca56f14be259845da84fc331943e26b70762c0fbeeabc5560f811c3",
+      "exactBytes": true,
+      "canonicalPages": 3,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1–3: Same complete March 4 2019 approval letter as item 5; page renders and normalized text identical."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": null
+    },
+    {
+      "position": 9,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\FW_TestAmerica_190-18507-1_WWTP_Biosolids.pdf",
+      "name": "FW_TestAmerica_190-18507-1_WWTP_Biosolids.pdf",
+      "batch": 5,
+      "sha256": "4bee30aadaaf47dee702e6169f00f101945949eea9694eae83b25a3fd354fd38",
+      "bytes": 2451299,
+      "pages": 29,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "canonicalAsset": "/biosolids-docs/032-58c5fd24e5f9.pdf",
+      "canonicalSha256": "58c5fd24e5f9b0e5181d170b801fe84693faee742aecbddbb85fa82c0b4803a6",
+      "exactBytes": false,
+      "canonicalPages": 29,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 9,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 10,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 11,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 12,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 13,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 14,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 15,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 16,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 17,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 18,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 19,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 20,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 21,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 22,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 23,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 24,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 25,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 26,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 27,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 28,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 29,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "ocrCheckedPages": [
+        8,
+        28,
+        29
+      ],
+      "pageReviewNotes": [
+        "p1–3: January 23 email and attachment separator; email says collected December 27 and calculated dry-weight 4–10 ppb, not lab-reported units.",
+        "p4–7: January 21 2019 TestAmerica report; collected December 26 2018 per laboratory, received December 27, cooler 1.3 C.",
+        "p8–11: Custody, receipt and Eurofins cover/sample identities; four samples and December 28 subcontract receipt.",
+        "p12–16: Full analytical tables checked. Digester PFOS 190 J / duplicate 220 J ng/L; PFOA 130 J / 140 J. NM eFOSAA 470 J / 590 J; PFBS 82 J / 95 J; PFHxA 400 U / 420 (unqualified); NEtFOSAA ND / 210 J. Equipment blank PFOA 0.32 J; field blank all ND. Moisture 97.3%. Other sample analytes ND; retain detection and quantitation limits.",
+        "p17–21: Method blanks, LCS/LCSD and isotope recoveries checked, including high recoveries and field-blank d3-NMeFOSAA 130 outside 30–127; sample matrix raised limits; original injection-standard issue documented.",
+        "p22–27: Repeated custody/receipt pages, symbols, J/U definitions, glossary and accreditation reviewed.",
+        "p28: Rotated original custody: digester samples labeled solid; collection December 26, Dave Skiff; laboratory reports matrix Water.",
+        "p29: Receipt handwriting says analyze as water, TS on one sample, do not dry-weight correct. Unclear signature glyphs not transcribed. No compliance or pathway conclusion inferred."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "render-and-text-identical-container-variant",
+      "canonicalRecordId": "032-58c5fd24e5f9"
+    },
+    {
+      "position": 10,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\IPP-PFAS-09_HNF-P7H3-DCN87_V1_Interim_Report_2018-07-30.pdf",
+      "name": "IPP-PFAS-09_HNF-P7H3-DCN87_V1_Interim_Report_2018-07-30.pdf",
+      "batch": 6,
+      "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
+      "bytes": 53376,
+      "pages": 3,
+      "reviewedPages": [
+        1,
+        2,
+        3
+      ],
+      "canonicalAsset": "/form-submission-docs/form-submission-073-c84ac8484363.pdf",
+      "canonicalSha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
+      "exactBytes": true,
+      "canonicalPages": 3,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: July 30 2018 interim report; named industrial-user survey classifications.",
+        "p2: Wexford probable, results pending, no POTW effluent monitoring yet; monitoring plan and surveys referenced.",
+        "p3: 14 attachment names and submission history; names are leads, not embedded attachments."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Existing canonical original already published; this intake audit publication is tracked separately.",
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": "form-submission-073-c84ac8484363"
+    }
+  ]
+}

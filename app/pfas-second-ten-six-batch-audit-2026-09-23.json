@@ -1,0 +1,1149 @@
+{
+  "intake": "PFAS original records — second ten-file six-batch reconciliation",
+  "reviewedAt": "2026-09-23",
+  "batches": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+  ],
+  "totalPages": 105,
+  "newDistinctRecords": 0,
+  "exactFileMatches": 9,
+  "renderIdenticalVariants": 1,
+  "records": [
+    {
+      "position": 1,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\06_American_Waste_PFAS_Survey_2018-05-21.pdf",
+      "name": "06_American_Waste_PFAS_Survey_2018-05-21.pdf",
+      "batch": 1,
+      "sha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
+      "bytes": 272313,
+      "pages": 2,
+      "reviewedPages": [
+        1,
+        2
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\06_American_Waste_PFAS_Survey_2018-05-21.pdf",
+      "canonicalAsset": "/pfas-docs/002-aca419b24a35.pdf",
+      "canonicalRecordId": "002-aca419b24a35",
+      "canonicalSha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: May 21 2018 Wexford County Landfill survey signed by engineer Vicki Garon; eight screening categories.",
+        "p2: Respondent reports fall 2011 ownership, industrial waste 18–30 percent, incomplete waste-category records and no leachate PFAS testing yet. These are respondent statements, not analytical findings."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    },
+    {
+      "position": 2,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\07_Cadillac_WWTP_PFAS_Extension_Approval_2018-05-24.pdf",
+      "name": "07_Cadillac_WWTP_PFAS_Extension_Approval_2018-05-24.pdf",
+      "batch": 1,
+      "sha256": "57e36bcc9486ed5a74f6a72d1bd86d96d58efff263bf14e8d986d11cfcf6f9c6",
+      "bytes": 103851,
+      "pages": 1,
+      "reviewedPages": [
+        1
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\07_Cadillac_WWTP_PFAS_Extension_Approval_2018-05-24.pdf",
+      "canonicalAsset": "/docs/2018-05-24-extension-approval.pdf",
+      "canonicalRecordId": null,
+      "canonicalSha256": "57e36bcc9486ed5a74f6a72d1bd86d96d58efff263bf14e8d986d11cfcf6f9c6",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1: May 24 2018 DEQ approval of May 8 alternate monitoring and extension request. Interim due July 31; summary due November 30 2018. Explicitly not a liability/compliance waiver. Thomas P. Berdinski signature; three named copied officials."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    },
+    {
+      "position": 3,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\10_J17646-1_Leachate_Lab_Report_2018-10-29.pdf",
+      "name": "10_J17646-1_Leachate_Lab_Report_2018-10-29.pdf",
+      "batch": 2,
+      "sha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6",
+      "bytes": 2220096,
+      "pages": 23,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\10_J17646-1_Leachate_Lab_Report_2018-10-29.pdf",
+      "canonicalAsset": "/docs/2018-10-03-j17646-leachate.pdf",
+      "canonicalRecordId": null,
+      "canonicalSha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 9,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 10,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 11,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 12,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 13,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 14,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 15,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 16,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 17,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 18,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 19,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 20,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 21,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 22,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 23,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "ocrCheckedPages": [
+        21,
+        22,
+        23
+      ],
+      "pageReviewNotes": [
+        "p1 release October 29 2018, job190-17646-1; p2 contents.",
+        "p3 October3 leachate, duplicate, equipment and field blanks; p4 matrix interference, dilution, elevated limits, PFTeDA isotope recovery low.",
+        "p5 leachate ng/L: PFBA950 PFPeA610 PFHxA2100 PFHpA240 PFOA590 PFBS950 PFPeS160 PFHxS610 PFOS120; other analytes below stated limits. p6 6:2FTS<2100 at100fold dilution.",
+        "p7 duplicate PFBA840 (100fold), PFPeA620 PFHxA1900 PFHpA260 PFOA700 PFNA18 PFBS1200 PFPeS200 PFHxS720 PFOS140; remaining analytes below limits. p8 diluted isotope recoveries.",
+        "p9 equipment blank all below limits2.4/24ng/L; p10 field blank below1.7/17. p11 method blank below2/20.",
+        "pp12–14 LCS/LCSD recovery and RPD tables within printed limits. pp15–16 isotope table: PFTeDA15/14 percent below25–150 limits; legends.",
+        "p17 asterisk is isotope dilution outside acceptance limits; glossary. p18 prep252552 and analysis253691/254698 associations. p19 preparation/analysis chronicle and analyst identities.",
+        "p20 certification list with Kansas renewal pending footnote. p21 signed October3 custody, leachate09:30 duplicate09:35 equipment09:25, two containers each; handwriting checked against image. p22 receipt October4 12:41,0C acceptable, checklist and handwritten pH-strip note. p23 subcontract custody to Sacramento, October5 receipt and2.1C; signature names not inferred where unclear."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    },
+    {
+      "position": 4,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\12_HNJ-P0ZX-8AVDS_V1_Summary_Report_2018-11-29.pdf",
+      "name": "12_HNJ-P0ZX-8AVDS_V1_Summary_Report_2018-11-29.pdf",
+      "batch": 2,
+      "sha256": "7cac269c4207f212eae8b5587cda7a9c38ed8db720560a4b9c803041f383cc97",
+      "bytes": 52125,
+      "pages": 2,
+      "reviewedPages": [
+        1,
+        2
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\12_HNJ-P0ZX-8AVDS_V1_Summary_Report_2018-11-29.pdf",
+      "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/form-submission-docs/form-submission-030-7cac269c4207.pdf",
+      "canonicalRecordId": "form-submission-030-7cac269c4207",
+      "canonicalSha256": "7cac269c4207f212eae8b5587cda7a9c38ed8db720560a4b9c803041f383cc97",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2
+      ],
+      "ocrCheckedPages": [],
+      "pageReviewNotes": [
+        "p1 November29 2018 HNJ summary submitted by Jeffrey Dietlin. Wexford sampled by POTW, results received; Avon results pending. J17646 listed but not embedded.",
+        "p2 City states contacted landfill/no corrective action and alleges refusal to invest in cleanup; attribute to submitter. November5 effluent NONE PROVIDED, no biosolids yet, results awaited. Monitoring-plan attachment listed not embedded. Submission timestamps preserved."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    },
+    {
+      "position": 5,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\13_J17993-1_Cadillac_Effluent_Lab_Report_2018-12-10.pdf",
+      "name": "13_J17993-1_Cadillac_Effluent_Lab_Report_2018-12-10.pdf",
+      "batch": 3,
+      "sha256": "49ac94be99a95ad5ba68ded294499ff934ffefbafc6a2fa6429f4554e60e39ff",
+      "bytes": 2566850,
+      "pages": 21,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\13_J17993-1_Cadillac_Effluent_Lab_Report_2018-12-10.pdf",
+      "canonicalAsset": "/docs/2018-11-05-j17993-effluent.pdf",
+      "canonicalRecordId": null,
+      "canonicalSha256": "49ac94be99a95ad5ba68ded294499ff934ffefbafc6a2fa6429f4554e60e39ff",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 9,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 10,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 11,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 12,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 13,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 14,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 15,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 16,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 17,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 18,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 19,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 20,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 21,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "ocrCheckedPages": [
+        13,
+        14,
+        17,
+        19,
+        20,
+        21
+      ],
+      "pageReviewNotes": [
+        "pp1–2 December10 release190-17993-1 and contents; pp3–4 November5 effluent/duplicate13:15 and fieldblank13:10, receivedNovember6 at3.1C.",
+        "pp5–6 EurofinsNovember29 group2010210, three sample IDs. p7 effluent ng/L:6:2FTS1.6J NMeFOSAA1.8J PFBA21 PFBS58 PFDA1.3J PFHpA6.6 PFHxA68 PFHxS15 PFNA1.2J PFOA20 PFOS6.5 PFPeA22 PFPeS8.2; restND.",
+        "p8 duplicate6:2FTS1.8 NMeFOSAA1.1J PFBA20 PFBS59 PFDA1.1J PFHpA6.9 PFHxA69 PFHxS16 PFNA1.2J PFOA20 PFOS6.6 PFPeA24 PFPeS9.6; restND. p9 fieldblankallND.",
+        "pp7–9 methodblank extraction-standard warnings; effluent/duplicate reextracted outside holding time, original extraction reported. p10 methodblankND/LCS; pp11–12 LCSD and isotope QC:6:2FTS199/194 above170; blankd3NMeFOSAA152 above127. LCS/LCSD withinlimits.",
+        "p13 custody transfers; p14 receiptNovember16,0.5/0.6C; p15 symbols/limitations; p16 J estimated belowLOQ; p17 repeatedreceiptlog; p18 glossary.",
+        "p19 custody timesblank; p20 handwritten clarification timesfrombottles13:15/13:15/13:10, crossoutsnotinitialed,3.1C receipt. p21 subcontractcustodyNovember7,3.1C. Illegible signatures not assigned identities; OCR is unreliable for handwriting and images govern."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    },
+    {
+      "position": 6,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\14_J18036-1_Avon_Alternative_Source_Lab_Report_2018-12-10.pdf",
+      "name": "14_J18036-1_Avon_Alternative_Source_Lab_Report_2018-12-10.pdf",
+      "batch": 3,
+      "sha256": "c1b8c7e5c6e09b0163825967f7da96f8c3886424a77757774844f2178ac87a27",
+      "bytes": 2609068,
+      "pages": 22,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\14_J18036-1_Avon_Alternative_Source_Lab_Report_2018-12-10.pdf",
+      "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/044-c1b8c7e5c6e0.pdf",
+      "canonicalRecordId": "044-c1b8c7e5c6e0",
+      "canonicalSha256": "c1b8c7e5c6e09b0163825967f7da96f8c3886424a77757774844f2178ac87a27",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 9,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 10,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 11,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 12,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 13,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 14,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 15,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 16,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 17,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 18,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 19,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 20,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 21,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 22,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "ocrCheckedPages": [
+        15,
+        16,
+        20,
+        21,
+        22
+      ],
+      "pageReviewNotes": [
+        "pp1–2 December10 release190-18036-1/contents. pp3–4 November7 four samples; receiptNovember8 at1.2C. pp5–6 EurofinsNov29 group2010206; duplicatecollectiontimeunstated.",
+        "p7 fieldblank6:2FTS3.5 andPFOS1.4J ng/L, restND. p8 AvonAuto6:2FTS14 PFBA17 PFBS660 PFDS16 PFNA1.0J PFOA0.94J PFOS7.1; restND. Matrixlimitsraised, internalstandardsoutsideQC initial/reinjection. p9 prepchronicle.",
+        "p10 Avon5thStreet6:2FTS4.3 PFOS1.8,restND. p11 AvonduplicateallND; do not assign duplicate site from filename. p12 methodblankND/LCS. pp13–14 LCSD and isotope:AvonAutoPFHxA26low,6:2FTS374high,8:2FTS298high,NMeFOSAA145high,PFDoDA135high,PFTeDA153high; blankNMeFOSAA152high.",
+        "p15 subcontractcustodyNovember9/16,4.5C; p16 receiptlogNovember16,0.5/0.6C. pp17–18 terms and J/U qualifiers. p19 Michigan certification. p20 originalcustody explicitly no equipmentblankcollected, duplicate timeblank. p21 receiptNovember8,1.2C/checklist. p22 subcontractcustody repeated, seals and4.5C. Signature names not guessed."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    },
+    {
+      "position": 7,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\16_J19915-1_Cadillac_Effluent_Lab_Report_2019-06-25.pdf",
+      "name": "16_J19915-1_Cadillac_Effluent_Lab_Report_2019-06-25.pdf",
+      "batch": 4,
+      "sha256": "c2427c56e09404188eb126a71c8e1bdca7a183dc7f43ea669a5a9970e06ce3e5",
+      "bytes": 1978694,
+      "pages": 22,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\16_J19915-1_Cadillac_Effluent_Lab_Report_2019-06-25.pdf",
+      "canonicalAsset": "/lab-docs/091-c2427c56e094.pdf",
+      "canonicalRecordId": "lab-091-c2427c56e094",
+      "canonicalSha256": "c2427c56e09404188eb126a71c8e1bdca7a183dc7f43ea669a5a9970e06ce3e5",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 6,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 7,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 8,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 9,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 10,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 11,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 12,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 13,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 14,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 15,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 16,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 17,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 18,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 19,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 20,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 21,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 22,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "ocrCheckedPages": [
+        15,
+        16,
+        21,
+        22
+      ],
+      "pageReviewNotes": [
+        "p1 June25 2019 release job190-19915-1; p2 contents; p3 four June4 samples and June5 receipt; p4 acceptable3.9C; p5 Lancaster receiptJune6,3.2C; p6 subcontract releaseJune21; p7 sample crosswalk1074244–47.",
+        "p8 primary effluent ng/L:6:2FTS2.4,NEtFOSAA1.1J,NMeFOSAA4.4,PFBS49,PFHpS0.40J,PFHxS16,PFOS7.8,PFBA22,PFDA1.5J,PFHpA6.7,PFHxA55,PFNA0.98J,PFOA16,PFPeA18,PFPeS7.3; remaining analytes below stated limits.",
+        "p9 duplicate ng/L:6:2FTS2.2,NEtFOSAA1.2J,NMeFOSAA3.8,PFBS49,PFHpS0.35J,PFHxS17,PFOS7.1,PFBA23,PFDA1.3J,PFHpA7.4,PFHxA59,PFNA0.99J,PFOA15,PFPeA17,PFPeS8.7; remaining below stated limits. June28 status submission uses duplicate7.1/15, not primary7.8/16.",
+        "pp10–11 equipment/field blanks all nondetect; sample notes identify CCV/internal-standard qualifications. p12 method blank/LCS, p13 LCS/LCSD and isotope QC:4:2FTS193/216 and6:2FTS198/223 percent above printed limits. p14 remaining isotope table within printed limits; explanatory footnotes.",
+        "p15 subcontract custody: four water samples,two bottles each; June5 14:20 transfer,June6 08:00 receipt3.2C; unreadable signature names not inferred. p16 arrival summary right edge clipped in supplied PDF; legible fields show intact sealed chilled samples,no missing/extra samples,June6 unpacking17:27,3.2C. Clipped content not inferred; compare complete canonical record.",
+        "pp17–19 symbols,qualifiers and glossary: J estimated between detection and quantitation limits; results relate only to tested samples. p20 Michigan certifications expiringMay5 2020. p21 original custody June4 samples13:15,13:17,13:12,13:08, relinquished14:00,receivedJune5 12:15. p22 receipt log acceptablecorrected3.9C,UPSground,intact seals,checklist; unreadable initials not guessed."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication.",
+      "alternateCompleteAsset": "/docs/2019-06-04-j19915-effluent.pdf",
+      "limitation": "Supplied p16 is clipped. Complete alternate p16 visually checked: receipt June6 2019 08:00 FedEx, matching sample IDs/dates, intact/chilled, 3.2C; source binary not altered."
+    },
+    {
+      "position": 8,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\04_MI0020257_PFAS-IPP_Letter_2018-02-20.pdf",
+      "name": "04_MI0020257_PFAS-IPP_Letter_2018-02-20.pdf",
+      "batch": 4,
+      "sha256": "7a058f9c19d3ee00ec85257408e6fc1360fdffa9ef8d29828bca2394526e66a1",
+      "bytes": 359934,
+      "pages": 5,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\04_MI0020257_PFAS-IPP_Letter_2018-02-20.pdf",
+      "canonicalAsset": "/docs/2018-02-20-pfas-ipp-letter.pdf",
+      "canonicalRecordId": null,
+      "canonicalSha256": "7a058f9c19d3ee00ec85257408e6fc1360fdffa9ef8d29828bca2394526e66a1",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 4,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 5,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ocrCheckedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pageReviewNotes": [
+        "p1 February20 2018 DEQ PFAS source-evaluation/reduction letter to JeffDietlin; historical WQS values and general background, not Cadillac sample results.",
+        "p2 required IPP actions and initial source screening; Flint example is not Cadillac evidence.",
+        "p3 potential sources include certain landfills; monitoring-plan and source-sampling requirements, original alternate-plan deadlineMay1.",
+        "p4 QA/QC and source-reduction requirements,effluent follow-up,interimJune29 and summaryOctober26 deadlines; no independent noncompliance determination.",
+        "p5 March regional meeting details, liability waiver expressly excluded,TeresaSeidel signature and copy list."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    },
+    {
+      "position": 9,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\04_MI0020257_PFAS-IPP_Letter_2018-02-20_OCR.pdf",
+      "name": "04_MI0020257_PFAS-IPP_Letter_2018-02-20_OCR.pdf",
+      "batch": 5,
+      "sha256": "1c6b79bf9c9ec827d5f6dfcdbc70a5a0d27f97df5f86e131ee729c61fb659ad6",
+      "bytes": 384773,
+      "pages": 5,
+      "reviewedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\04_MI0020257_PFAS-IPP_Letter_2018-02-20_OCR.pdf",
+      "canonicalAsset": "/docs/2018-02-20-pfas-ipp-letter.pdf",
+      "canonicalRecordId": null,
+      "canonicalSha256": "7a058f9c19d3ee00ec85257408e6fc1360fdffa9ef8d29828bca2394526e66a1",
+      "exactBytes": false,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": false,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": false,
+          "renderEqual": true
+        },
+        {
+          "page": 3,
+          "textEqual": false,
+          "renderEqual": true
+        },
+        {
+          "page": 4,
+          "textEqual": false,
+          "renderEqual": true
+        },
+        {
+          "page": 5,
+          "textEqual": false,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ocrCheckedPages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pageReviewNotes": [
+        "All five page images independently read in order and OCR-layer content checked against images. Same February20 letter,background,requiredactions,deadlines,signature and limitations as record8. Preserve distinct OCR-file hash and compare rendered pages before reconciliation."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    },
+    {
+      "position": 10,
+      "path": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18.pdf",
+      "name": "05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18.pdf",
+      "batch": 6,
+      "sha256": "e13fc785334ff3ae00fd36ed88c23332dbd56238910a92ffa498814c00c15acc",
+      "bytes": 143259,
+      "pages": 2,
+      "reviewedPages": [
+        1,
+        2
+      ],
+      "resolvedPath": "C:\\Users\\casey\\OneDrive\\Desktop\\Cadillac_WWTP_PFAS_Original_Records_2012-Early2020\\05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18.pdf",
+      "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/pfas-docs/097-e13fc785334f.pdf",
+      "canonicalRecordId": "097-e13fc785334f",
+      "canonicalSha256": "e13fc785334ff3ae00fd36ed88c23332dbd56238910a92ffa498814c00c15acc",
+      "exactBytes": true,
+      "pageComparisons": [
+        {
+          "page": 1,
+          "textEqual": true,
+          "renderEqual": true
+        },
+        {
+          "page": 2,
+          "textEqual": true,
+          "renderEqual": true
+        }
+      ],
+      "renderedPages": [
+        1,
+        2
+      ],
+      "ocrCheckedPages": [
+        1,
+        2
+      ],
+      "pageReviewNotes": [
+        "p1 April18 2018 DEQ follow-up to February20 letter; corrected analyte list and guidance available separately,not embedded. DEQ does not expect WWTPs to force users out; encourages systematic reduction/treatment and IPP approach.",
+        "p2 proposed landfill-industry sampling initiative,data possibly afterOctober1; extension/alternative-plan request deadline nowMay8. Complete labreports must be evaluated/reported; WWTPs should obtain leachate data. SignedTeresaSeidel. This is program guidance,not proof landfill sampling occurred or authorization of particular disposal loads."
+      ],
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      },
+      "publicationMeaning": "Matched pre-existing published source; this intake audit is a separate publication."
+    }
+  ]
+}

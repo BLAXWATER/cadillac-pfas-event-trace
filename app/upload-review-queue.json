@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T14:24:00-04:00",
+  "updatedAt": "2026-09-23",
   "note": "Files remain in supplied order. A record advances only after the file ahead of it completes the applicable page review, verification, catalog reconciliation and publication decision.",
   "items": [
     {
@@ -133,6 +133,406 @@
         "verified": false,
         "cataloged": false,
         "published": false
+      }
+    },
+    {
+      "position": 8,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "17_HNQ-VZP8-TWNRX_V1_Status_Report_2019-06-28.pdf",
+      "pages": 3,
+      "bytes": 47218,
+      "sha256": "00d98416b456c77073324bf3e2a4c011e3c5d2cc86c8159c41e1c6674ddf6bc5",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 1/6. All 3 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2019-06-28-source-status.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 9,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "18_HNV-XK97-EV0GR_V1_Status_Report_2019-12-18.pdf",
+      "pages": 3,
+      "bytes": 43266,
+      "sha256": "1873afe1dd72faba2066ef0163012c2feb727ca7dbd92726fd0f45c8935e6697",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 1/6. All 3 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/form-submission-docs/form-submission-036-1873afe1dd72.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 10,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018-06-27_Cadillac_IPP_PFAS_Screening_Monitoring_Plan_original.pdf",
+      "pages": 3,
+      "bytes": 76074,
+      "sha256": "59ebe7478b18ff4565630a2c6ac2c37123fbe212ee88309a7c07f26b5e6bed60",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 2/6. All 3 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2018-06-27-monitoring-plan.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 11,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018-11-30_Cadillac_IPP_PFAS_Monitoring_Plan_Update_original.pdf",
+      "pages": 2,
+      "bytes": 86584,
+      "sha256": "2dd8cd38dcb9b088a53fde3a81406d639341960e223ea1271fcad123ab8ce034",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 2/6. All 2 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2018-11-30-monitoring-plan-update.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 12,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "2018-2019_Cadillac_PFAS_Interim_Summary_Approval_Letter_original.pdf",
+      "pages": 3,
+      "bytes": 120071,
+      "sha256": "0c500dc1ea41e8d5ecc70a9a54d24368a61977350dda27315be469bea0d421c5",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 3/6. All 3 pages reviewed; identical rendered pages, distinct source-file hash to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2019-03-04-report-approval.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 13,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "American_Waste_PFAS_Survey_1_.pdf",
+      "pages": 2,
+      "bytes": 302218,
+      "sha256": "0f6da144029589aadd9814ae631d5f4ecdc7b78fe05a6cea237f3c5bba6ceee7",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 3/6. All 2 pages reviewed; identical rendered pages, distinct source-file hash to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/pfas-docs/002-aca419b24a35.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 14,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Cadillac_WWTP_MI0020257_IPP_PFAS_Dec_2019_Status.pdf",
+      "pages": 5,
+      "bytes": 196867,
+      "sha256": "d0aba8b5a5a45953cfc3fee56c99f8ea8f9c83e6fd01c5ee4fea416d5198884f",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 4/6. All 5 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2019-12-pfas-status.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 15,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "Cadillac_WWTP_PFAS_Letter.pdf",
+      "pages": 3,
+      "bytes": 123393,
+      "sha256": "66353d067ca56f14be259845da84fc331943e26b70762c0fbeeabc5560f811c3",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 4/6. All 3 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2019-03-04-report-approval.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 16,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "FW_TestAmerica_190-18507-1_WWTP_Biosolids.pdf",
+      "pages": 29,
+      "bytes": 2451299,
+      "sha256": "4bee30aadaaf47dee702e6169f00f101945949eea9694eae83b25a3fd354fd38",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 5/6. All 29 pages reviewed; identical rendered pages, distinct source-file hash to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/biosolids-docs/032-58c5fd24e5f9.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 17,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "IPP-PFAS-09_HNF-P7H3-DCN87_V1_Interim_Report_2018-07-30.pdf",
+      "pages": 3,
+      "bytes": 53376,
+      "sha256": "c84ac8484363839feb2f3923c72983c8b022805a633bbee6f91bbd2b80969a77",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-A batch 6/6. All 3 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/form-submission-docs/form-submission-073-c84ac8484363.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 18,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "06_American_Waste_PFAS_Survey_2018-05-21.pdf",
+      "pages": 2,
+      "bytes": 272313,
+      "sha256": "aca419b24a35ce99ee82caae61906d54f44457c13274a7d4c63ae0dc8225eea8",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 1/6. All 2 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/pfas-docs/002-aca419b24a35.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 19,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "07_Cadillac_WWTP_PFAS_Extension_Approval_2018-05-24.pdf",
+      "pages": 1,
+      "bytes": 103851,
+      "sha256": "57e36bcc9486ed5a74f6a72d1bd86d96d58efff263bf14e8d986d11cfcf6f9c6",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 1/6. All 1 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2018-05-24-extension-approval.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 20,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "10_J17646-1_Leachate_Lab_Report_2018-10-29.pdf",
+      "pages": 23,
+      "bytes": 2220096,
+      "sha256": "f14db99c8153f5bb88297170433b6195aa16344f8c44a173f687b4c76fd577e6",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 2/6. All 23 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2018-10-03-j17646-leachate.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 21,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "12_HNJ-P0ZX-8AVDS_V1_Summary_Report_2018-11-29.pdf",
+      "pages": 2,
+      "bytes": 52125,
+      "sha256": "7cac269c4207f212eae8b5587cda7a9c38ed8db720560a4b9c803041f383cc97",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 2/6. All 2 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/form-submission-docs/form-submission-030-7cac269c4207.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 22,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "13_J17993-1_Cadillac_Effluent_Lab_Report_2018-12-10.pdf",
+      "pages": 21,
+      "bytes": 2566850,
+      "sha256": "49ac94be99a95ad5ba68ded294499ff934ffefbafc6a2fa6429f4554e60e39ff",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 3/6. All 21 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2018-11-05-j17993-effluent.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 23,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "14_J18036-1_Avon_Alternative_Source_Lab_Report_2018-12-10.pdf",
+      "pages": 22,
+      "bytes": 2609068,
+      "sha256": "c1b8c7e5c6e09b0163825967f7da96f8c3886424a77757774844f2178ac87a27",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 3/6. All 22 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/3553feaa71173065084148263f8911dfa61f174d/public/ipp-docs/044-c1b8c7e5c6e0.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 24,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "16_J19915-1_Cadillac_Effluent_Lab_Report_2019-06-25.pdf",
+      "pages": 22,
+      "bytes": 1978694,
+      "sha256": "c2427c56e09404188eb126a71c8e1bdca7a183dc7f43ea669a5a9970e06ce3e5",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 4/6. All 22 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added. Supplied receipt-log page 16 is clipped; complete alternate source checked and retained.",
+      "canonicalAsset": "/lab-docs/091-c2427c56e094.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 25,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "04_MI0020257_PFAS-IPP_Letter_2018-02-20.pdf",
+      "pages": 5,
+      "bytes": 359934,
+      "sha256": "7a058f9c19d3ee00ec85257408e6fc1360fdffa9ef8d29828bca2394526e66a1",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 4/6. All 5 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2018-02-20-pfas-ipp-letter.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 26,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "04_MI0020257_PFAS-IPP_Letter_2018-02-20_OCR.pdf",
+      "pages": 5,
+      "bytes": 384773,
+      "sha256": "1c6b79bf9c9ec827d5f6dfcdbc70a5a0d27f97df5f86e131ee729c61fb659ad6",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 5/6. All 5 pages reviewed; identical rendered pages, distinct source-file hash to an existing published source. No duplicate document added.",
+      "canonicalAsset": "/docs/2018-02-20-pfas-ipp-letter.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
+      }
+    },
+    {
+      "position": 27,
+      "lane": "resolved",
+      "status": "Completed · existing source",
+      "name": "05_Cadillac_WWTP_2nd_PFAS-IPP_Mailing_2018-04-18.pdf",
+      "pages": 2,
+      "bytes": 143259,
+      "sha256": "e13fc785334ff3ae00fd36ed88c23332dbd56238910a92ffa498814c00c15acc",
+      "category": "PFAS original-record reconciliation",
+      "detail": "PFAS-20260923-B batch 6/6. All 2 pages reviewed; exact SHA-256 match to an existing published source. No duplicate document added.",
+      "canonicalAsset": "https://github.com/cazey43/cadillac-pfas-event-trace/blob/49922c706588f236e1edbad5fa8996e4c249e330/public/pfas-docs/097-e13fc785334f.pdf",
+      "stages": {
+        "received": true,
+        "extractedOrOcr": true,
+        "reviewed": true,
+        "verified": true,
+        "cataloged": true,
+        "published": true
       }
     }
   ]

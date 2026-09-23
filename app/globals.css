@@ -97,7 +97,7 @@ img, svg, video, canvas, iframe, embed, object { max-width: 100%; }
 .site-shell { width: min(var(--site-max-width), calc(100% - var(--site-edge-space) - var(--site-edge-space))); min-width: 0; margin: 0 auto; padding: clamp(28px, 4vw, 56px) 0 32px; }
 .site-shell > * { min-width: 0; }
 .site-shell small { font-size: var(--font-11pt); }
-.site-shell [data-slot="badge"] { font-size: var(--font-11pt); line-height: 1.25; }
+.site-shell [data-slot="badge"] { min-width: 0; max-width: 100%; height: auto; white-space: normal; overflow-wrap: anywhere; font-size: var(--font-11pt); line-height: 1.25; }
 .trace-header { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(280px, .8fr); gap: 48px; align-items: end; padding: 16px 0 34px; border-bottom: 1px solid var(--border); }
 .eyebrow { margin: 0 0 10px; color: var(--primary); font-family: var(--font-mono); font-size: var(--font-11pt); font-weight: 600; letter-spacing: .16em; }
 h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); line-height: .94; letter-spacing: -.055em; font-weight: 650; }

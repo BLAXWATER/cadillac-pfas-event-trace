@@ -5,6 +5,14 @@
       "updatedAt": "2026-09-21T10:53:06-04:00",
       "fingerprint": "95b05f5b174bb9ca8c2eb71f14ae127287461dce07ae8c17a5ee014658bca977"
     },
+    "/findings-docs/096-84790845bb27.pdf": {
+      "updatedAt": "2026-09-23T13:28:51.558Z",
+      "fingerprint": "2381d1d67a60eac4a0975b77b773e771ba29061435415f6a51ae5c57f7a72108"
+    },
+    "/findings-docs/097-299f46bb09f2.pdf": {
+      "updatedAt": "2026-09-23T13:28:51.558Z",
+      "fingerprint": "71a905de4dc06c44b9724e3fb190bfe5c4215a5aa190b695c8fc8a10dc1dd4f8"
+    },
     "/findings-docs/108-1b0303419030.pdf": {
       "updatedAt": "2026-09-22T18:57:03-04:00",
       "fingerprint": "bdc6890c7ee09ab72b8145cffd6a4a38017dd1df7517bb26d3bce92d9da8ed0f"
@@ -26,12 +34,28 @@
       "fingerprint": "b2f4263af5afd1161b7e80c7d0ed4b0ebd636c88ff0b1c100924f8bd2822262a"
     },
     "/findings-docs/211-edf83f5fdf7c.pdf": {
-      "addedAt": "2026-09-23T12:57:40.534Z",
+      "addedAt": "2026-09-23T08:59:08-04:00",
       "fingerprint": "02222cbd007d1ee1c65fd47bef51ee19efd15985cee1f9455322c82b3ca01265"
     },
     "/findings-docs/212-69ab779993c2.pdf": {
-      "addedAt": "2026-09-23T12:57:40.534Z",
+      "addedAt": "2026-09-23T08:59:08-04:00",
       "fingerprint": "217066500c7043dd805266af65bd2d549d91e92b74349eeba5aa65fb8161e86d"
+    },
+    "/findings-docs/213-ff4d48eb64da.pdf": {
+      "addedAt": "2026-09-23T13:28:51.558Z",
+      "fingerprint": "98613a7206479c4f03f93f3a3e148a111ce57aade790257759058a0352e17604"
+    },
+    "/findings-docs/214-a915d8117200.pdf": {
+      "addedAt": "2026-09-23T13:28:51.558Z",
+      "fingerprint": "20bf0a2c9805509a432b6fc34de1ff0e6af50c178ae50b8cdf2d3c204abe913f"
+    },
+    "/findings-docs/215-83ebcbda08bd.pdf": {
+      "addedAt": "2026-09-23T13:28:51.558Z",
+      "fingerprint": "84f2571e944ba497bdd633802b7f6da2e2795272406730ea20ebcb2be8f84f40"
+    },
+    "/findings-docs/216-4ff61c6d3cb5.pdf": {
+      "addedAt": "2026-09-23T13:28:51.558Z",
+      "fingerprint": "baaf086d9e6c3f986c46481f911f642f82a14e07767b8795f6d76a86a5f8ee0d"
     },
     "/lab-docs/041-b6acc1cf09fd.pdf": {
       "updatedAt": "2026-09-21T14:09:05-04:00",

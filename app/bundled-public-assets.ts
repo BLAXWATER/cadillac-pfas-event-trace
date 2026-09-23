@@ -54,6 +54,10 @@ const bundledAssets = {
 // copies stay available through their pinned archive URLs without consuming
 // the Sites deployment package a second time.
 const bundledDocumentDownloads = {
+  ...import.meta.glob("../public/findings-docs/216-4ff61c6d3cb5.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/215-83ebcbda08bd.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/214-a915d8117200.pdf", { eager: true, import: "default", query: "?url" }),
+  ...import.meta.glob("../public/findings-docs/213-ff4d48eb64da.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/212-69ab779993c2.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/211-edf83f5fdf7c.pdf", { eager: true, import: "default", query: "?url" }),
   ...import.meta.glob("../public/findings-docs/210-6aec96618242.pdf", { eager: true, import: "default", query: "?url" }),

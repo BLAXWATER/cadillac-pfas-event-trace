@@ -1401,7 +1401,7 @@
     "pages": 85,
     "size": 9423203,
     "sha256": "84790845bb27beb66b8041efde1417691bcc5bc1d4d99046c54c28844f56f9a9",
-    "description": "Complete 85-page EPA Region 5 third five-year review for Northernaire Plating. The alternate 80-page scan in this intake is the same official report with reduced front matter and is not published as a second library item."
+    "description": "EPA Region 5's signed September 30, 2005 third five-year review for Northernaire Plating. It found the remedy protective in the short term but tied long-term protectiveness to institutional controls and confirmation that the extraction system captured the chromium plume; the review also identified possible incomplete chromium capture and private-well/control concerns (PDF pp. 7–10, 25–31). All 85 pages, figures, graphs, tables, checklist annotations and photographs were freshly reread and visually checked; weak native-text pages 34, 35, 41 and 68 were OCR-checked. This is historical chromium/VOC evidence, not PFAS attribution or proof of a current pathway to Plett Road."
   },
   {
     "id": "097-299f46bb09f2",
@@ -1414,7 +1414,7 @@
     "pages": 118,
     "size": 13165120,
     "sha256": "299f46bb09f275f2d749dc285c3a90e7e381b76977523b3e3537f6a8338821a2",
-    "description": "EPA Region 5's September 2005 second five-year review for the Kysor Industrial site, including monitoring, remedy performance and protectiveness analysis."
+    "description": "EPA Region 5's signed September 30, 2005 second five-year review for the Kysor Industrial site. The report found short-term protectiveness while conditioning long-term protectiveness on cleanup completion and effective institutional controls; it identified groundwater-use control gaps, possible incomplete capture or capture of a neighboring plume, and air-emission requirement discrepancies (PDF pp. 7–11, 29–41). All 118 pages, maps, graphs, tables, ordinances, checklist annotations and photographs were freshly reread and visually checked; 17 weak native-text pages were OCR-checked. This is historical VOC/chromium cleanup evidence and does not establish PFAS attribution or a current Plett Road pathway."
   },
   {
     "id": "098-4cb767dfc70e",
@@ -2744,5 +2744,57 @@
     "size": 50690086,
     "sha256": "781d1714fe069941098f928cf15fb58fe2678e36d5495b92a36d5fbe18249d5e",
     "description": "August 2002 Muskegon River Watershed Project management plan and appendices (MR-2002-4), fully reviewed through all 449 pages. It supplies regional watershed, groundwater, geology and Clam River context, including the plan's express warning that its potential-source table does not identify exact locations, sources or causes (pp. 72, 74). The plan focuses on nonpoint sources and reports no evidence at that time of watershed water-quality contamination by wastewater treatment plants (pp. 64, 89). It contains no PFAS testing, Cadillac-specific source attribution or proof of a Wexford Landfill-to-Cadillac WWTP-to-Plett Road pathway; the independent evaluation also identifies material screening-model and secondary-data limitations (pp. 386–449)."
+  },
+  {
+    "id": "213-ff4d48eb64da",
+    "name": "EPA Administrative Order Compliance Status and Closure — April 30, 1998.pdf",
+    "url": "/findings-docs/213-ff4d48eb64da.pdf",
+    "year": "1998",
+    "category": "Superfund & groundwater cleanup",
+    "type": "EPA administrative-order status index",
+    "format": "PDF",
+    "pages": 21,
+    "size": 557323,
+    "sha256": "ff4d48eb64da75d9e1f56816b7699d66a8d107d4e6d46ffe3d6a036a83d7587f",
+    "description": "EPA Region 5's April 30, 1998 memorandum and attached WasteLAN status listing for unilateral administrative orders. The Kysor entry reports both the order and activity completed May 16, 1990 (PDF p. 12); the Northernaire entry reports the order completed May 16, 1990 and the activity completed March 9, 1995 (p. 15). These are administrative-order status entries, not findings that the sites, groundwater remedy, or environmental cleanup were closed. All 21 supplied pages were read in page order and visually checked. The record predates PFAS investigation and does not establish PFAS source attribution or a Plett Road pathway."
+  },
+  {
+    "id": "214-a915d8117200",
+    "name": "EPA Fourth Five-Year Review — Northernaire Plating Superfund Site — September 2010.pdf",
+    "url": "/findings-docs/214-a915d8117200.pdf",
+    "year": "2010",
+    "category": "Superfund & groundwater cleanup",
+    "type": "EPA five-year review",
+    "format": "PDF",
+    "pages": 94,
+    "size": 16623063,
+    "sha256": "a915d8117200bf64acb3650b6884767bb15a12e11be057e7b307dd6166f9be32",
+    "description": "Signed EPA Region 5 fourth five-year review for the Northernaire Plating Superfund site. EPA reported that the remedy was functioning as intended, chromium cleanup goals had been achieved throughout the plume, and the site remedy was protective in the short and long term (PDF pp. 7, 30–31). The report also documents the shared LDFA extraction/treatment network, Clam River discharge, historical chromium/VOC monitoring and the April 2007 hydraulic-capture evaluation (pp. 20–29, 70–71). All 94 pages, maps, graphs, tables, checklist annotations and photographs were read and visually checked; weak native-text pages 2, 35 and 84 were OCR-checked. This is a historical chromium/VOC remedy review and does not establish PFAS attribution or a current Plett Road pathway."
+  },
+  {
+    "id": "215-83ebcbda08bd",
+    "name": "EPA Third Five-Year Review — Kysor Industrial Superfund Site — August 2010.pdf",
+    "url": "/findings-docs/215-83ebcbda08bd.pdf",
+    "year": "2010",
+    "category": "Superfund & groundwater cleanup",
+    "type": "EPA five-year review",
+    "format": "PDF",
+    "pages": 124,
+    "size": 21990591,
+    "sha256": "83ebcbda08bd1a5bd62d33fabd0ea06938b6917a16d9f4d70df9c39884573992",
+    "description": "Signed EPA Region 5 third five-year review for the Kysor Industrial Superfund site. EPA found the remedy protective in the short term but conditioned long-term protectiveness on effective groundwater-use controls, private-well abandonment or connection measures, continued monitoring and enforcement (PDF pp. 7, 10, 43–45). The review reports remaining VOC plume uncertainty, possible commingling with neighboring plumes, incomplete evidence for hydraulic capture in several areas, and continuing treated-groundwater discharge to the Clam River (pp. 34–42). All 124 pages, maps, ordinances, graphs, tables, handwritten checklist entries and photographs were read and visually checked; weak native-text pages 52, 53, 56 and 108 were OCR-checked. The findings concern historical VOC cleanup, not PFAS source attribution or proof of a present pathway to Plett Road."
+  },
+  {
+    "id": "216-4ff61c6d3cb5",
+    "name": "EPA Kysor Industrial Administrative Record Index — Update 3 — August 31, 2010.pdf",
+    "url": "/findings-docs/216-4ff61c6d3cb5.pdf",
+    "year": "2010",
+    "category": "Reference records",
+    "type": "EPA administrative-record index",
+    "format": "PDF",
+    "pages": 1,
+    "size": 139708,
+    "sha256": "4ff61c6d3cb5c6f8ae27ca26200c583aeda588fb4098155a29f5f10245a4ec36",
+    "description": "One-page EPA Region 5 administrative-record update listing the 2000 Kysor five-year review, the 2005 second five-year review and the 2010 third five-year review by record identifier and page count. The page was fully read and visually checked. It is an index and supplies no independent environmental, analytical, compliance or PFAS finding."
   }
 ]

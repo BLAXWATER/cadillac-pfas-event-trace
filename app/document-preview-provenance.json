@@ -17091,5 +17091,41 @@
     "verifiedAt": "2026-09-14T18:28:39.026694+00:00",
     "verificationMethod": "Actual first PDF page rendered with PDFium; full page preserved.",
     "scope": "Preview provenance only; whole-document verification recorded separately."
+  },
+  "/findings-docs/213-ff4d48eb64da.pdf": {
+    "sourceSha256": "ff4d48eb64da75d9e1f56816b7699d66a8d107d4e6d46ffe3d6a036a83d7587f",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/ff4d48eb64da75d9e1f56816b7699d66a8d107d4e6d46ffe3d6a036a83d7587f.webp",
+    "previewSha256": "2146659e62641ef5fabaaff1b0017036bd82452c125891f4a57b9e263e70e693",
+    "verifiedAt": "2026-09-23T15:35:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered during the complete page-order review; full page preserved.",
+    "scope": "Preview provenance only; whole-document verification is recorded in the six-batch intake audit."
+  },
+  "/findings-docs/214-a915d8117200.pdf": {
+    "sourceSha256": "a915d8117200bf64acb3650b6884767bb15a12e11be057e7b307dd6166f9be32",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/a915d8117200bf64acb3650b6884767bb15a12e11be057e7b307dd6166f9be32.webp",
+    "previewSha256": "50530f5265218a9f68aafc4e4bed546d1cc62c8934e04c19a2d34feda1e0fb2f",
+    "verifiedAt": "2026-09-23T15:35:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered during the complete page-order review; full page preserved.",
+    "scope": "Preview provenance only; whole-document verification is recorded in the six-batch intake audit."
+  },
+  "/findings-docs/215-83ebcbda08bd.pdf": {
+    "sourceSha256": "83ebcbda08bd1a5bd62d33fabd0ea06938b6917a16d9f4d70df9c39884573992",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/83ebcbda08bd1a5bd62d33fabd0ea06938b6917a16d9f4d70df9c39884573992.webp",
+    "previewSha256": "c381e9fa02bb67317e2ae2693a96358627d3265c5c42a3d13f4064ea3d07c7aa",
+    "verifiedAt": "2026-09-23T15:35:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered during the complete page-order review; full page preserved.",
+    "scope": "Preview provenance only; whole-document verification is recorded in the six-batch intake audit."
+  },
+  "/findings-docs/216-4ff61c6d3cb5.pdf": {
+    "sourceSha256": "4ff61c6d3cb5c6f8ae27ca26200c583aeda588fb4098155a29f5f10245a4ec36",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/4ff61c6d3cb5c6f8ae27ca26200c583aeda588fb4098155a29f5f10245a4ec36.webp",
+    "previewSha256": "324d293dd4a115a5f9163cab0865ec14ee326fea93fb79419322d25e802e209d",
+    "verifiedAt": "2026-09-23T15:35:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered during the complete page-order review; full page preserved.",
+    "scope": "Preview provenance only; whole-document verification is recorded in the six-batch intake audit."
   }
 }

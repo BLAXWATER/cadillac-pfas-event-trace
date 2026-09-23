@@ -6,6 +6,8 @@
   "totalBatches": 6,
   "sourceOrderPreserved": true,
   "reviewedAt": "2026-09-23T15:35:00-04:00",
+  "publishedAt": "2026-09-23T10:02:40-04:00",
+  "publishedVersion": 299,
   "rules": {
     "recordBoundariesPreserved": true,
     "pageOrderReviewRequired": true,
@@ -50,7 +52,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {
@@ -125,7 +127,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {
@@ -146,7 +148,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {
@@ -162,7 +164,7 @@
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     }
   ],

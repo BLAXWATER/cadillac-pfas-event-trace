@@ -36,7 +36,7 @@ import newFolderLeachateAudit from "./new-folder-leachate-intake-audit-2026-09-1
 import newFolderCountyAgendasAudit from "./new-folder-county-agendas-audit-2026-09-14.json";
 import evidenceRequestQueue from "./evidence-request-queue.json";
 import evidenceQueueUpdates from "./evidence-request-queue-updates.json";
-import uploadReviewQueue from "./upload-review-queue.json";
+import uploadReviewQueue from "./upload-review-queue";
 import formSubmissionAudit from "./form-submission-audit.json";
 import formSubmissionDocuments from "./form-submission-documents.json";
 import ippAudit from "./ipp-audit.json";

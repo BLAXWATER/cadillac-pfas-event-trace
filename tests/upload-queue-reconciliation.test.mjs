@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { reconcileUploadQueue } from '../app/reconcile-upload-queue.mjs';
+const read = (name) => JSON.parse(readFileSync(new URL(`../app/${name}`, import.meta.url), 'utf8'));
+const queue = read('upload-review-queue.json');
+const catalog = read('supplemental-documents.json');
+const audit = read('epa-docs-six-batch-intake-audit-2026-09-23.json');
+const result = reconcileUploadQueue(queue, catalog, [audit]);
+assert.equal(result.items[6].stages.published, true);
+assert.equal(result.items[6].lane, 'resolved');
+assert.equal(result.items[0].stages.reviewed, false);
+assert.equal(result.items[1].stages.cataloged, false);
+assert.equal(queue.items[6].stages.published, false, 'do not mutate source audit');
+assert.equal(reconcileUploadQueue(queue, catalog, [{...audit, publishedAt: null}]).items[6].stages.published, false);
+assert.equal(reconcileUploadQueue(queue, [], [audit]).items[6].stages.published, false);
+assert.deepEqual(result.items.map(x=>x.position), queue.items.map(x=>x.position));
+console.log('Queue reconciliation passed: exact-file publication evidence required; incomplete stages preserved.');

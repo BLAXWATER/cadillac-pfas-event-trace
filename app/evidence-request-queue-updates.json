@@ -1,8 +1,8 @@
 {
-  "reviewDate": "2026-09-08",
-  "reviewDateLabel": "September 8, 2026",
-  "scope": "September 8 manifest reconciliation: all 16 official downloads match their manifest fingerprints and existing catalog records. Fresh review of the 15 PDFs and eleven-sheet workbook adds LDFA, intermediate-aquifer map and Cadillac biosolids tie-backs. A subsequent three-PDF review adds the 2022 N3862 report's early-2019 injection statement to the transition evidence. The 2020 LDFA minutes and signed 2015 air-inspection scan add historical context, not missing analytical or leachate transaction packages. All 23 requirement dispositions were checked; this is not a fresh reread of the whole repository. The subsequent 20-file ADID Part2 review reconciles 18 existing originals and two new work-session originals; a separate three-page June28, 2019 form recheck distinguishes the written cessation/transition report and system signature from final-load details. J19915-1 is reconciled with its existing timeline rendition and indexed once in the laboratory archive; primary/duplicate results, custody and QC caveats are cross-linked without closing an unrelated request.",
-  "note": "All 16 manifest documents are already accounted for; repeat downloads do not create new records. The later batch adds one LDFA record and a materially distinct signed inspection version, retaining one exact staff-report duplicate under its existing record. These additions close no additional request. One local construction/lithology requirement remains satisfied, with 22 requests still open. Missing tickets, missing documents doesn’t mean missing events. ADID filename aliases preserve the same original identities; only the two standalone work-session originals increase the catalog count. The written cessation/transition report is accounted for, while the exact final-load/effective-stop-date request remains open.",
+  "reviewDate": "2026-09-23",
+  "reviewDateLabel": "September 23, 2026",
+  "scope": "September 23 adds a fresh three-page review and exact-record reconciliation of Wexford Construction Permit 4127, then traces it to Operating License 9758 and their incorporated hydrogeological-monitoring references. This is an incremental source-chain review, not a fresh reread of the whole repository. The prior September 8 manifest reconciliation, later ADID review, June 28, 2019 cessation-form recheck and J19915-1 analytical reconciliation remain incorporated below.",
+  "note": "Construction Permit 4127 is accounted for as an exact existing record and is now tied visibly to the later operating license. The records establish the authorization and monitoring-document chain, but the incorporated monitoring plans are separate sources and neither permit supplies the missing Plett-specific measured heads, hydraulic tests or source-to-receptor flow map. No duplicate record or false NEW/UPDATED timestamp was created. One local construction/lithology requirement remains satisfied, with 22 requests still open.",
   "blocks": [
     {
       "requestId": "receiving-history",
@@ -796,6 +796,30 @@
       "requestId": "subsurface-pathway",
       "summary": "Already satisfied: local well-construction and lithology records. The remaining four requests concern the specific Plett well and measured local groundwater conditions; regional or delivery context does not complete them.",
       "held": [
+        {
+          "id": "september23-permit4127-license9758-monitoring-chain",
+          "finding": "Construction Permit 4127, issued August 20, 2012, incorporates the 2012 construction application, engineering plans and a Hydrogeological Monitoring Plan and requires monitoring results to be submitted to MDEQ's Cadillac District Office (pp1–2). Operating License 9758 later incorporates Construction Permits 4100/4127 and identifies the March 2018 hydrogeological monitoring plan among the governing records (pp4–5); its Attachment A supplies later facility-layout context (p8).",
+          "limitation": "The permit and license identify and incorporate monitoring materials but do not attach the complete 2012 or March 2018 monitoring plans, dated surveyed heads, local hydraulic-test results or a Plett-specific potentiometric map. Attachment maps show facility configuration, not measured migration to Plett Road. No subsurface-pathway request is closed.",
+          "sources": [
+            {
+              "recordId": "039-a2b89f4b2389",
+              "sha256": "a2b89f4b2389a8a3681c0a571ad711063734093892d0876bca0b8b3c2063fd43",
+              "label": "Construction Permit 4127 · pp1–3",
+              "pages": [1, 2, 3]
+            },
+            {
+              "recordId": "017-4b475079a927",
+              "sha256": "4b475079a927cb48147206bb617c64addaf8215f55534601f1674eacb8fb359e",
+              "label": "Operating License 9758 · pp4–5, 8",
+              "pages": [4, 5, 8]
+            }
+          ],
+          "requirementIds": [
+            "surveyed-elevations-water-levels",
+            "local-hydraulic-tests",
+            "site-specific-groundwater-map"
+          ]
+        },
         {
           "id": "september14-five-source-pathway-tieback",
           "finding": "The 1983 funding request (209480), signed September 11, 1985 source-control ROD (209538), January 1987 supplemental RI (209637) and later 1988 regional RI form a documented investigation/remedy sequence. The supplemental RI records clay pinch-out/interbeds, differing historical heads and unresolved exact chromium transfer/deep-aquifer impact. Its p24 describes tested purge-water infiltration, and p106 records unidentified second-phase product at MW16, 63–68 ft. Index234881 identifies 15 separate 1989 records, including a 66-page hearing transcript, 375-page final FS and 120-page regional ROD.",

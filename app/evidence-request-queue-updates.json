@@ -1,8 +1,8 @@
 {
   "reviewDate": "2026-09-23",
   "reviewDateLabel": "September 23, 2026",
-  "scope": "September 23 now includes full page-order review and reconciliation of EPA micro-batches 1-3, plus the Wexford Permit 4127-to-License 9758 monitoring-document trace. This is an incremental source-chain review, not a fresh reread of the whole repository.",
-  "note": "EPA micro-batch 3 adds four distinct historical records and reconciles one exact existing record plus two alternate renditions without duplicate cards. The 1983 Four Star investigation supplies measured historical industrial-park hydrogeology and VOC results, but its plume edge remained unresolved and it does not extend to Plett Road or PFAS. One local construction/lithology requirement remains satisfied; 22 requests remain open.",
+  "scope": "September 23 now includes full page-order review and reconciliation of EPA micro-batches 1-4, plus the Wexford Permit 4127-to-License 9758 monitoring-document trace. This is an incremental source-chain review, not a fresh reread of the whole repository.",
+  "note": "EPA micro-batch 4 adds four distinct historical records, reconciles one exact existing record and two alternate renditions without duplicate cards, and supplies ten appendices missing from the canonical 1988 RI. Nine RI appendices, the 1989 final FS and ROD, and all Plett-specific modern hydraulic/PFAS requirements remain unresolved. One local construction/lithology requirement remains satisfied; 22 requests remain open.",
   "blocks": [
     {
       "requestId": "receiving-history",
@@ -843,6 +843,70 @@
       "summary": "Already satisfied: local well-construction and lithology records. The remaining four requests concern the specific Plett well and measured local groundwater conditions; regional or delivery context does not complete them.",
       "held": [
         {
+          "id": "september23-epa-batch4-ri-appendices-alternatives",
+          "finding": "The 1988 RI companion volume supplies monitoring-well construction tables, historical analytical summaries, plume statistics, fate/transport calculations and risk scenarios from Appendices A, B, C, E, G, K, L, Q, R and S. It documents sandy materials, discontinuous clay lenses and historical modeled municipal-well scenarios. The July 1988 alternatives document separately records candidate groundwater/soil remedies for later analysis.",
+          "limitation": "Appendices D, F, H, I, J, M, N, O and P remain absent. The historical models use inferred sources and simplified assumptions; projected arrivals are not measured contamination. Neither record identifies 1140 Plett, supplies a Plett-inclusive synoptic round or hydraulic tests, or establishes a Wexford-to-Plett PFAS pathway. No requirement is closed.",
+          "sources": [
+            {
+              "recordId": "232-8ab378ec9452",
+              "sha256": "8ab378ec94521d21f6b381ba588ecbd56b0b5edca5f5d4302f1c904af02d3f6c",
+              "label": "1988 RI appendix compilation - pp13-15,67-85,102-110",
+              "pages": [
+                13,
+                14,
+                15,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                83,
+                84,
+                85,
+                102,
+                103,
+                108,
+                109,
+                110
+              ]
+            },
+            {
+              "recordId": "231-6ffb214e3c30",
+              "sha256": "6ffb214e3c303f21b7f950f469251840e2702da7b5751e54e915f794e390601d",
+              "label": "July 1988 alternatives screening - pp64-75",
+              "pages": [
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75
+              ]
+            }
+          ],
+          "requirementIds": [
+            "surveyed-elevations-water-levels",
+            "local-hydraulic-tests",
+            "site-specific-groundwater-map"
+          ]
+        },
+        {
           "id": "september23-epa-batch3-four-star-hydrogeology",
           "finding": "The August 1983 Four Star investigation records 11 borings and 10 monitoring wells, sandy materials with discontinuous clay lenses, groundwater about 30 feet below ground, a north-to-northwest flow interpretation, an estimated 0.17% gradient and 50-75 feet/year average velocity. It reports high historical TCE/PCE and says the plume moved north while its leading edge remained undefined. EPA's May 1988 review separately criticizes reliance on a one-dimensional homogeneous/isotropic model and asks for more site-specific analysis.",
           "limitation": "These are historical industrial-park VOC records. The Four Star map sheets are degraded, vertical extent and leading edge were unresolved, and neither record identifies 1140 Plett, PFAS, a Plett-inclusive synoptic round, Plett-linked hydraulic tests or a source-to-Plett potentiometric map. No requirement is closed.",
@@ -916,8 +980,8 @@
         },
         {
           "id": "september14-five-source-pathway-tieback",
-          "finding": "The 1983 funding request (209480), signed September 11, 1985 source-control ROD (209538), January 1987 supplemental RI (209637) and later 1988 regional RI form a documented investigation/remedy sequence. The supplemental RI records clay pinch-out/interbeds, differing historical heads and unresolved exact chromium transfer/deep-aquifer impact. Its p24 describes tested purge-water infiltration, and p106 records unidentified second-phase product at MW16, 63–68 ft. Index234881 identifies 15 separate 1989 records, including a 66-page hearing transcript, 375-page final FS and 120-page regional ROD.",
-          "limitation": "The memo's Enforcement Release, damaged map portions, MW9 log continuation and listed 1989 originals are not supplied here. The product's identity/source is unknown. Survey and analytical discrepancies remain open. The Wexford July2006 fact sheet concerns a different site's aquifers and onsite groundwater treatment—not proof of the same clay layer, WWTP-delivered leachate volume or a source-to-Plett PFAS route. No Plett-specific requirement is closed.",
+          "finding": "The 1983 funding request (209480), signed September 11, 1985 source-control ROD (209538), January 1987 supplemental RI (209637) and later 1988 regional RI form a documented investigation/remedy sequence. The supplemental RI records clay pinch-out/interbeds, differing historical heads and unresolved exact chromium transfer/deep-aquifer impact. Its p24 describes tested purge-water infiltration, and p106 records unidentified second-phase product at MW16, 63–68 ft. Index234881 identifies 15 separate 1989 records. Its two-page City statement (entry 11) is now supplied and reviewed; the 66-page hearing transcript, 375-page final FS and 120-page regional ROD remain outstanding.",
+          "limitation": "The memo's Enforcement Release, damaged map portions, MW9 log continuation and most listed 1989 originals are not supplied here; only entry 11's City statement is now held. The product's identity/source is unknown. Survey and analytical discrepancies remain open. The Wexford July2006 fact sheet concerns a different site's aquifers and onsite groundwater treatment—not proof of the same clay layer, WWTP-delivered leachate volume or a source-to-Plett PFAS route. No Plett-specific requirement is closed.",
           "sources": [
             {
               "recordId": "199-c1524e21ac46",
@@ -993,6 +1057,15 @@
                 2,
                 3,
                 4
+              ]
+            },
+            {
+              "recordId": "233-86a0d0431b4c",
+              "sha256": "86a0d0431b4c74feecba805cb11cd8140ae632c9aa953fe9c5d42d5b2d602f09",
+              "label": "1989 City statement - pp1-2; attributed proposal only",
+              "pages": [
+                1,
+                2
               ]
             }
           ],

@@ -1,8 +1,12 @@
 {
   "basis": "Site record/source change history; not historical document dates. Five rolling 24-hour days.",
   "records": {
+    "/findings-docs/011-05c2a0fb3666.pdf": {
+      "updatedAt": "2026-09-23T17:33:19.613Z",
+      "fingerprint": "13afd239a9b976e16a05b018de48e8a8d0508b0402739af4efc3d6f0894e3de6"
+    },
     "/findings-docs/087-31f27263ba22.pdf": {
-      "updatedAt": "2026-09-23T17:03:59.216Z",
+      "updatedAt": "2026-09-23T13:05:52-04:00",
       "fingerprint": "a1f50a618b177e6b767faf9e1572472e95e05289df9b6ef30d46f1b49343ca3d"
     },
     "/findings-docs/095-b7620af87938.pdf": {
@@ -24,6 +28,14 @@
     "/findings-docs/130-b4bd5d68b7a8.pdf": {
       "updatedAt": "2026-09-22T18:57:03-04:00",
       "fingerprint": "862503271ad3c1968a6f359aff7b422ba2cdef5065079f7681f8dcdccbfacc7a"
+    },
+    "/findings-docs/1988-cadillac-ri-234880.pdf": {
+      "updatedAt": "2026-09-23T17:33:19.613Z",
+      "fingerprint": "c6993092ade1a8de969ce17a5dcba1343c8fa99812e7f7dbb875ae79e2c78c23"
+    },
+    "/findings-docs/202-82254e0c3a95.pdf": {
+      "updatedAt": "2026-09-23T17:33:19.613Z",
+      "fingerprint": "fbcdb46de5f7e1d0e4772899cce1aed79d1369a24960ca3234360fc249e21ada"
     },
     "/findings-docs/207-caaf3ea8f891.pdf": {
       "addedAt": "2026-09-18T14:58:08-04:00",
@@ -88,20 +100,36 @@
       "fingerprint": "c2600e8b569916b885e2620eb3247081ebe95c63b536d093d4ba211257b64224"
     },
     "/findings-docs/224-86da7f5f48ee.pdf": {
-      "addedAt": "2026-09-23T17:03:59.216Z",
+      "addedAt": "2026-09-23T13:05:52-04:00",
       "fingerprint": "46a791773fd9414f8741d128c9dc533d4729fec671bbba7a28aa9206da2176dd"
     },
     "/findings-docs/226-84aea6725dbf.pdf": {
-      "addedAt": "2026-09-23T17:03:59.216Z",
+      "addedAt": "2026-09-23T13:05:52-04:00",
       "fingerprint": "f43044cd8f8cc05d58d6ca86ce01f3857810f9ad9846d452ec5f0c54c26f163e"
     },
     "/findings-docs/227-5e0b1f03162b.pdf": {
-      "addedAt": "2026-09-23T17:03:59.216Z",
+      "addedAt": "2026-09-23T13:05:52-04:00",
       "fingerprint": "6b5457c13811b8aa25a80a56a7d0788f243182e21995e23712fad9bcc8c23e9c"
     },
     "/findings-docs/228-1fa07d99d00e.pdf": {
-      "addedAt": "2026-09-23T17:03:59.216Z",
+      "addedAt": "2026-09-23T13:05:52-04:00",
       "fingerprint": "ad2003ced1b4ca1cbdd20493ab91d136f490dc98c3855c7b553a5c1816f8818d"
+    },
+    "/findings-docs/229-8d392d43b22a.pdf": {
+      "addedAt": "2026-09-23T17:33:19.613Z",
+      "fingerprint": "a3ed1fd22fa84a9a1daa5941e69cf3e7a2af9c08b1b04cd184e218a0cac66de5"
+    },
+    "/findings-docs/231-6ffb214e3c30.pdf": {
+      "addedAt": "2026-09-23T17:33:19.613Z",
+      "fingerprint": "1dfd1e14cf192890b4f57b2c39900cef6d9490298e2bf9ca253453b6e44637ab"
+    },
+    "/findings-docs/232-8ab378ec9452.pdf": {
+      "addedAt": "2026-09-23T17:33:19.613Z",
+      "fingerprint": "b79c3af8b85b9f24e2001ab58f35d571e6978dadf9ee155f1c360d88c76d0050"
+    },
+    "/findings-docs/233-86a0d0431b4c.pdf": {
+      "addedAt": "2026-09-23T17:33:19.613Z",
+      "fingerprint": "0685c11a3beac7be1a74e204f85027cd80265afa00feac401d35e9b9de4c3dbc"
     },
     "/lab-docs/041-b6acc1cf09fd.pdf": {
       "updatedAt": "2026-09-21T14:09:05-04:00",

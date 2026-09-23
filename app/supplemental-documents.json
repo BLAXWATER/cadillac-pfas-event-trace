@@ -140,7 +140,7 @@
     "pages": 2,
     "size": 81223,
     "sha256": "82254e0c3a951f81260926ec35bb39c2fe3d2c86d75c4ac42926a171ff46831d",
-    "description": "October 16, 1989 Update 1 lists 15 Kysor/Cadillac groundwater records. Page1 identifies City, stakeholder and agency comments. Page 2 lists the August 7, 1989 public-meeting transcript (66p), June 8, 1989 feasibility study (375p), Kysor comments (129p) and September 29, 1989 ROD (120p). These are retrieval leads, not attachments or proof of the listed documents' contents. Both index pages are legible and reviewed; the original records must be obtained separately. Distinct from the held April 1988 interim FS and September 1985 source-control ROD."
+    "description": "October 16, 1989 Update 1 lists 15 Kysor/Cadillac groundwater records. Page 1 identifies City, stakeholder and agency comments; page 2 lists the August 7 public-meeting transcript, June 8 final feasibility study, Kysor comments and September 29 ROD. The separately supplied two-page City statement now resolves index entry 11 only. The other listed originals remain retrieval leads, not attachments or proof of their contents. This newly supplied EPA copy is byte-identical to the canonical index and does not receive a duplicate card."
   },
   {
     "id": "197-16057f68d1d5",
@@ -166,7 +166,7 @@
     "pages": 169,
     "size": 8905994,
     "sha256": "402da04fc76d41547f45b1ecacfd9509d3fc5ce0440bc5f3be7013b3e01a4ed5",
-    "description": "August 1988 FINAL DRAFT regional remedial investigation. PDF pp. 58–63 describe sandy aquifers and discontinuous clay; pp. 72–80 give historical levels, permeability and downward gradients. Page 93 qualifies tentative deep-well TCE as likely sampling carryover. Figures and modeled arrival dates are historical interpretations, not a present-day PFAS pathway. All 169 pages were revisited with text, rendering and OCR; some small map labels and dense risk-table figures remain insufficiently legible for strict verification. Listed references and appendices are absent."
+    "description": "August 1988 FINAL DRAFT regional remedial investigation. PDF pp. 58-63 describe sandy aquifers and discontinuous clay; pp. 72-80 provide historical levels, permeability and gradient work. Page 93 qualifies tentative deep-well TCE as likely sampling carryover. The supplied EPA_05_234880 rendition was re-read through all 169 rendered pages and reconciled as the same substantive record; the distinct 176-page companion volume now supplies Appendices A, B, C, E, G, K, L, Q, R and S. Appendices D, F, H, I, J, M, N, O and P remain absent. Historical modeled arrivals are not observed PFAS or Plett Road contamination."
   },
   {
     "id": "001-d8496c7348a6",
@@ -309,7 +309,7 @@
     "pages": 50,
     "size": 4459048,
     "sha256": "05c2a0fb36661387a7463a33db4d8ede73e3d9e8d296f47c6c2d98163cd8fbfe",
-    "description": "April 1988 MDNR/E.C. Jordan interim feasibility study identifies five known or probable industrial-park source areas and seven groundwater plumes involving VOCs and hexavalent chromium, and discusses treated-groundwater discharge options. It predates the PFAS investigation and is not evidence of PFAS source attribution."
+    "description": "April 1988 MDNR/E.C. Jordan Interim Deliverable 1 identifies five known or probable industrial-park source areas and seven historical VOC/chromium plumes, develops preliminary cleanup targets, and discusses treated-groundwater discharge options. All 50 pages of the newly supplied EPA rendition were read and visually checked; it is the same substantive record as this canonical OCR/font-fixed copy, so no duplicate card was created. Targets remained preliminary and discharge discussion is not proof of remedy selection, construction or operation. It predates the PFAS investigation and is not evidence of PFAS source attribution."
   },
   {
     "id": "012-b2cb5003bb04",
@@ -2926,5 +2926,57 @@
     "size": 5294043,
     "sha256": "1fa07d99d00e2d0c1c4fd9e43a3e497ca740e08a5dac6e4853d025f49358cca8",
     "description": "Gosling Czubak Associates' August 1983 hydrogeologic investigation for the former Four Star facility in Cadillac. The report documents 11 borings and 10 monitoring wells, predominantly sandy materials with discontinuous clay lenses, groundwater about 30 feet below ground, and a north-to-northwest flow interpretation with an estimated 0.17% gradient and 50-75 feet/year average velocity (PDF pp. 25, 40-44). It reports high historical TCE/PCE in several wells and interprets the plume as moving north with its leading edge still undefined (pp. 11-12, 29-32). All 88 pages, laboratory sheets, agency correspondence, logs and maps were read and visually checked. Sparse pages and the degraded map series received OCR/manual review; fine map annotations remain unreadable and an internal MW1/MW4 result-label discrepancy is preserved. This historical VOC investigation does not establish PFAS, impact to municipal wells, or a pathway to Plett Road."
+  },
+  {
+    "id": "229-8d392d43b22a",
+    "name": "EPA Kysor Industrial Hazard Ranking System Scoring Package - April 11, 1985.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/229-8d392d43b22a.pdf",
+    "year": "1985",
+    "category": "Groundwater & hydrogeology - Superfund hazard ranking",
+    "type": "EPA Hazard Ranking System scoring package",
+    "format": "PDF",
+    "pages": 28,
+    "size": 621395,
+    "sha256": "8d392d43b22a3c4cff72129fac479484cba1b9aa4b6e1b16611b6e2a34376721",
+    "description": "April 11, 1985 Kysor Industrial CERCLA Hazard Ranking System package. EPA's site summary says historical solvent wastes were disposed in unlined pits, excavated in 1981, and onsite shallow-groundwater wells contained solvents (PDF p. 1). The signed scoring sheets record an overall HRS score of 33.94, driven by a 58.71 groundwater-route score, with surface-water and air-route scores of zero (pp. 2, 6). All 28 pages were read and visually checked; targeted OCR covered weak handwritten pages. Portions of the reference log on pp. 27-28 remain partly unreadable. Referenced laboratory records are not all attached, and this historical VOC record contains no PFAS analysis or Plett Road finding."
+  },
+  {
+    "id": "231-6ffb214e3c30",
+    "name": "Cadillac Area Groundwater Feasibility Study - Interim Deliverable 2 Alternatives Array - July 1988.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/231-6ffb214e3c30.pdf",
+    "year": "1988",
+    "category": "Groundwater & hydrogeology - remedy alternatives",
+    "type": "Interim feasibility-study alternatives screening",
+    "format": "PDF",
+    "pages": 106,
+    "size": 3255393,
+    "sha256": "6ffb214e3c303f21b7f950f469251840e2702da7b5751e54e915f794e390601d",
+    "description": "July 1988 E.C. Jordan/MDNR Interim Deliverable 2 screens historical groundwater and soil remedial alternatives for the Cadillac industrial-park VOC/chromium investigation. It retains several pump-treat-discharge and soil-remedy alternatives for later analysis (PDF pp. 64-75, 89, 101), while explicitly remaining an interim screening record rather than a selected remedy, design or operating record (pp. 8-10). Historical targets, discharge comparisons and costs are proposals/estimates, not current standards, actual discharges or expenditures. All 106 pages were read and visually checked. Appendix B is listed but absent, an internal SC-8/SC-9 numbering conflict is preserved, and the record contains no PFAS, Wexford-landfill, leachate-receiving or Plett-well evidence."
+  },
+  {
+    "id": "232-8ab378ec9452",
+    "name": "Cadillac Area Groundwater Remedial Investigation - Supporting Appendix Volume - 1988.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/232-8ab378ec9452.pdf",
+    "year": "1988",
+    "category": "Groundwater & hydrogeology - remedial investigation appendices",
+    "type": "Technical appendix compilation",
+    "format": "PDF",
+    "pages": 176,
+    "size": 4150306,
+    "sha256": "8ab378ec94521d21f6b381ba588ecbd56b0b5edca5f5d4302f1c904af02d3f6c",
+    "description": "Supporting volume for the 1988 Cadillac Area Groundwater Remedial Investigation containing Appendices A, B, C, E, G, K, L, Q, R and S. It supplies monitoring-well tables, Four Winns investigation material, analytical tables, field results, plume statistics, fate/transport calculations and baseline-risk scenarios. The Four Winns section reports sandy materials with discontinuous clay lenses and historical upper-aquifer VOC/acetone interpretations (PDF pp. 13-15). Appendix R expressly relies on inferred sources and simplified homogeneous one-dimensional modeling, so projected arrivals and concentrations are not observations (pp. 83-85, 102-110). All 176 pages were read and visually checked, with targeted OCR/image review of 27 weak, sparse, mapped or rotated pages. Appendices D, F, H, I, J, M, N, O and P remain absent; the record contains no PFAS analysis or proven Wexford-to-Plett pathway."
+  },
+  {
+    "id": "233-86a0d0431b4c",
+    "name": "City of Cadillac Statement on Kysor and Northernaire Feasibility Study - August 7, 1989.pdf",
+    "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/233-86a0d0431b4c.pdf",
+    "year": "1989",
+    "category": "Correspondence - public statement",
+    "type": "City feasibility-study comment",
+    "format": "PDF",
+    "pages": 2,
+    "size": 73417,
+    "sha256": "86a0d0431b4c74feecba805cb11cd8140ae632c9aa953fe9c5d42d5b2d602f09",
+    "description": "City of Cadillac statement presented August 7, 1989 at the Wexford County Courthouse. The City reports its historical understanding of industrial groundwater contamination, says the municipal supply then showed no sign of contamination, states protection/cleanup/economic goals, and advocates a Cogeneration Michigan cleanup proposal (PDF pp. 1-2). Both pages were read and visually checked. These are attributed City positions and predictions, not independent confirmation of remedy approval, construction, operation, performance, cost or present conditions. The record matches entry 11 in EPA's October 1989 administrative-record index but does not supply the separately listed final feasibility study or Record of Decision."
   }
 ]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordCount": 1662,
+  "recordCount": 1666,
   "archiveCount": 13,
   "archives": [
     {
@@ -85,7 +85,7 @@
       "label": "Added evidence",
       "catalog": "supplemental-documents.json",
       "sectionId": "supplemental-library-title",
-      "count": 225
+      "count": 229
     },
     {
       "archiveId": "reference",
@@ -17090,6 +17090,50 @@
       "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/c9400bd935317e0a8868688d08e7492a53839854/public/findings-docs/228-1fa07d99d00e.pdf",
       "sha256": "1fa07d99d00e2d0c1c4fd9e43a3e497ca740e08a5dac6e4853d025f49358cca8",
       "size": 5294043
+    },
+    {
+      "id": "229-8d392d43b22a",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "EPA Kysor Industrial Hazard Ranking System Scoring Package - April 11, 1985.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/229-8d392d43b22a.pdf",
+      "sha256": "8d392d43b22a3c4cff72129fac479484cba1b9aa4b6e1b16611b6e2a34376721",
+      "size": 621395
+    },
+    {
+      "id": "231-6ffb214e3c30",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac Area Groundwater Feasibility Study - Interim Deliverable 2 Alternatives Array - July 1988.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/231-6ffb214e3c30.pdf",
+      "sha256": "6ffb214e3c303f21b7f950f469251840e2702da7b5751e54e915f794e390601d",
+      "size": 3255393
+    },
+    {
+      "id": "232-8ab378ec9452",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "Cadillac Area Groundwater Remedial Investigation - Supporting Appendix Volume - 1988.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/232-8ab378ec9452.pdf",
+      "sha256": "8ab378ec94521d21f6b381ba588ecbd56b0b5edca5f5d4302f1c904af02d3f6c",
+      "size": 4150306
+    },
+    {
+      "id": "233-86a0d0431b4c",
+      "archiveId": "supplemental",
+      "archiveLabel": "Added evidence",
+      "catalog": "supplemental-documents.json",
+      "sectionId": "supplemental-library-title",
+      "name": "City of Cadillac Statement on Kysor and Northernaire Feasibility Study - August 7, 1989.pdf",
+      "url": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/233-86a0d0431b4c.pdf",
+      "sha256": "86a0d0431b4c74feecba805cb11cd8140ae632c9aa953fe9c5d42d5b2d602f09",
+      "size": 73417
     },
     {
       "id": "cadsir-model-c902da6a24fb",

@@ -17217,5 +17217,41 @@
     "verifiedAt": "2026-09-23T12:57:54-04:00",
     "verificationMethod": "Actual first PDF page rendered during the complete page-order review; full page preserved.",
     "scope": "Preview provenance only; whole-document verification is recorded in the Batch 3 intake audit."
+  },
+  "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/229-8d392d43b22a.pdf": {
+    "sourceSha256": "8d392d43b22a3c4cff72129fac479484cba1b9aa4b6e1b16611b6e2a34376721",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/5924399aeafaa031f3cd0fc2c732b560566a851ca87ba0f98a9412d00a6152e3.webp",
+    "previewSha256": "5924399aeafaa031f3cd0fc2c732b560566a851ca87ba0f98a9412d00a6152e3",
+    "verifiedAt": "2026-09-23T15:48:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered during complete page-order review; full page preserved.",
+    "scope": "Preview provenance only; whole-document verification is recorded in the Batch 4 intake audit."
+  },
+  "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/231-6ffb214e3c30.pdf": {
+    "sourceSha256": "6ffb214e3c303f21b7f950f469251840e2702da7b5751e54e915f794e390601d",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/1fab1973aea8fbfb3ede89a9a04edd3625b392520afc540919aa1750142f29a2.webp",
+    "previewSha256": "1fab1973aea8fbfb3ede89a9a04edd3625b392520afc540919aa1750142f29a2",
+    "verifiedAt": "2026-09-23T15:48:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered during complete page-order review; full page preserved.",
+    "scope": "Preview provenance only; whole-document verification is recorded in the Batch 4 intake audit."
+  },
+  "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/232-8ab378ec9452.pdf": {
+    "sourceSha256": "8ab378ec94521d21f6b381ba588ecbd56b0b5edca5f5d4302f1c904af02d3f6c",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/da915f7b8091cea3ff609c7f9412c0d236ae5c9da2a70c2e96ab7a2850b15e9f.webp",
+    "previewSha256": "da915f7b8091cea3ff609c7f9412c0d236ae5c9da2a70c2e96ab7a2850b15e9f",
+    "verifiedAt": "2026-09-23T15:48:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered during complete page-order review; full page preserved.",
+    "scope": "Preview provenance only; whole-document verification is recorded in the Batch 4 intake audit."
+  },
+  "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/233-86a0d0431b4c.pdf": {
+    "sourceSha256": "86a0d0431b4c74feecba805cb11cd8140ae632c9aa953fe9c5d42d5b2d602f09",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/aa0faa5679cff25c17fe4463548d2d80cdfe2600154d6089332c762842e5a672.webp",
+    "previewSha256": "aa0faa5679cff25c17fe4463548d2d80cdfe2600154d6089332c762842e5a672",
+    "verifiedAt": "2026-09-23T15:48:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered during complete page-order review; full page preserved.",
+    "scope": "Preview provenance only; whole-document verification is recorded in the Batch 4 intake audit."
   }
 }

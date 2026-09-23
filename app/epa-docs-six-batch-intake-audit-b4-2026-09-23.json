@@ -1,0 +1,202 @@
+{
+  "auditVersion": 1,
+  "intake": "EPA DOCS six-micro-batch intake",
+  "batch": "EPA-2026-09-23-B4",
+  "batchNumber": 4,
+  "totalBatches": 6,
+  "sourceOrderPreserved": true,
+  "reviewedAt": "2026-09-23T15:48:00-04:00",
+  "sourceAssetCommit": "b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc",
+  "sourceAssetBranch": "epa-intake-batch-4",
+  "rules": {
+    "recordBoundariesPreserved": true,
+    "pageOrderReviewRequired": true,
+    "filenameOnlyDeduplicationProhibited": true,
+    "statusesSeparated": true
+  },
+  "totals": {
+    "records": 7,
+    "pages": 533,
+    "exactExistingRecords": 1,
+    "alternateRenditions": 2,
+    "newDistinctRecords": 4
+  },
+  "records": [
+    {
+      "supplied": "EPA_05_234876.pdf",
+      "sha256": "8d392d43b22a3c4cff72129fac479484cba1b9aa4b6e1b16611b6e2a34376721",
+      "bytes": 621395,
+      "pages": 28,
+      "ocrCheckedPages": [
+        2,
+        6,
+        15,
+        18,
+        19,
+        23,
+        26,
+        27,
+        28
+      ],
+      "disposition": "new-distinct-record",
+      "canonicalRecordId": "229-8d392d43b22a",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": false
+      }
+    },
+    {
+      "supplied": "EPA_05_234877.pdf",
+      "sourceUrl": "https://github.com/BLAXWATER/cadillac-pfas-event-trace/blob/b33823da2b48d8c621d13b4c0c8f22a0f55fa4fc/public/findings-docs/230-2425df25aad5.pdf",
+      "sha256": "2425df25aad519a3acaea93091aeb466b571158e9d066df49f89188f6d391b52",
+      "bytes": 1131421,
+      "pages": 50,
+      "ocrCheckedPages": [],
+      "disposition": "alternate-rendition-canonical-reused",
+      "canonicalRecordId": "011-05c2a0fb3666",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": true
+      }
+    },
+    {
+      "supplied": "EPA_05_234878.pdf",
+      "sha256": "6ffb214e3c303f21b7f950f469251840e2702da7b5751e54e915f794e390601d",
+      "bytes": 3255393,
+      "pages": 106,
+      "ocrCheckedPages": [],
+      "missingAttachments": [
+        "Appendix B"
+      ],
+      "disposition": "new-distinct-record",
+      "canonicalRecordId": "231-6ffb214e3c30",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": false
+      }
+    },
+    {
+      "supplied": "EPA_05_234879.pdf",
+      "sha256": "8ab378ec94521d21f6b381ba588ecbd56b0b5edca5f5d4302f1c904af02d3f6c",
+      "bytes": 4150306,
+      "pages": 176,
+      "ocrCheckedPages": [
+        1,
+        2,
+        12,
+        13,
+        16,
+        17,
+        18,
+        21,
+        22,
+        34,
+        37,
+        51,
+        57,
+        66,
+        82,
+        91,
+        92,
+        94,
+        95,
+        100,
+        101,
+        104,
+        106,
+        107,
+        111,
+        113,
+        137
+      ],
+      "missingAppendices": [
+        "D",
+        "F",
+        "H",
+        "I",
+        "J",
+        "M",
+        "N",
+        "O",
+        "P"
+      ],
+      "disposition": "new-distinct-record",
+      "canonicalRecordId": "232-8ab378ec9452",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": false
+      }
+    },
+    {
+      "supplied": "EPA_05_234880.pdf",
+      "sha256": "ddd2bc1eb32fddc91b8c2653243d3755fc6d409fd6a595781ea39862d8049a60",
+      "bytes": 8887577,
+      "pages": 169,
+      "ocrCheckedPages": [],
+      "disposition": "alternate-reoptimized-rendition-canonical-reused",
+      "canonicalRecordId": "198-402da04fc76d",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": "qualified",
+        "published": true
+      }
+    },
+    {
+      "supplied": "EPA_05_234881.pdf",
+      "sha256": "82254e0c3a951f81260926ec35bb39c2fe3d2c86d75c4ac42926a171ff46831d",
+      "bytes": 81223,
+      "pages": 2,
+      "ocrCheckedPages": [],
+      "disposition": "exact-existing-record",
+      "canonicalRecordId": "202-82254e0c3a95",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": true
+      }
+    },
+    {
+      "supplied": "EPA_05_234882.pdf",
+      "sha256": "86a0d0431b4c74feecba805cb11cd8140ae632c9aa953fe9c5d42d5b2d602f09",
+      "bytes": 73417,
+      "pages": 2,
+      "ocrCheckedPages": [],
+      "disposition": "new-distinct-record",
+      "canonicalRecordId": "233-86a0d0431b4c",
+      "resolvesIndexEntry": {
+        "recordId": "202-82254e0c3a95",
+        "entry": 11
+      },
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": false
+      }
+    }
+  ],
+  "limitations": [
+    "Historical VOC/chromium findings and modeled scenarios do not establish PFAS source attribution or a present pathway to Plett Road.",
+    "The alternatives documents are preliminary screening records, not proof of remedy selection, construction, discharge or operation.",
+    "The appendix compilation supplies ten of the RI's listed appendices; nine remain absent.",
+    "The City statement is an attributed position and proposal, not independent proof of cogeneration implementation.",
+    "No currently open Plett Road/PFAS evidence-request requirement closes in this batch."
+  ]
+}

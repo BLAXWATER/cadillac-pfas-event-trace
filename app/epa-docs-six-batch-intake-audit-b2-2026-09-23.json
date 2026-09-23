@@ -36,12 +36,14 @@
       ],
       "disposition": "new-distinct-record",
       "canonicalRecordId": "217-293e8020bbbe",
+      "publishedAt": "2026-09-23T10:38:42-04:00",
+      "publishedVersion": 301,
       "statuses": {
         "received": true,
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {
@@ -55,12 +57,14 @@
       ],
       "disposition": "new-distinct-record",
       "canonicalRecordId": "218-0a9bdc712747",
+      "publishedAt": "2026-09-23T10:38:42-04:00",
+      "publishedVersion": 301,
       "statuses": {
         "received": true,
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {
@@ -71,12 +75,14 @@
       "ocrCheckedPages": [],
       "disposition": "new-distinct-record",
       "canonicalRecordId": "219-2ebb2a7ba6d0",
+      "publishedAt": "2026-09-23T10:38:42-04:00",
+      "publishedVersion": 301,
       "statuses": {
         "received": true,
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {
@@ -89,12 +95,14 @@
       ],
       "disposition": "new-distinct-record",
       "canonicalRecordId": "220-2f8dfa1860cd",
+      "publishedAt": "2026-09-23T10:38:42-04:00",
+      "publishedVersion": 301,
       "statuses": {
         "received": true,
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {
@@ -105,12 +113,14 @@
       "ocrCheckedPages": [],
       "disposition": "new-distinct-record",
       "canonicalRecordId": "221-a8b3680cb1b0",
+      "publishedAt": "2026-09-23T10:38:42-04:00",
+      "publishedVersion": 301,
       "statuses": {
         "received": true,
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {
@@ -125,12 +135,14 @@
       ],
       "disposition": "new-distinct-record",
       "canonicalRecordId": "222-a20e778c67f4",
+      "publishedAt": "2026-09-23T10:38:42-04:00",
+      "publishedVersion": 301,
       "statuses": {
         "received": true,
         "extracted": true,
         "reviewed": true,
         "verified": true,
-        "published": false
+        "published": true
       }
     },
     {

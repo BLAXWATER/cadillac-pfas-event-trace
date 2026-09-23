@@ -61,7 +61,7 @@ const records = [
     pages: 1,
     size: 125995,
     sha256: "2f8dfa1860cd19859bdc4b74fb883b3f7750431c4938c1d58abbf31f8ba5e427",
-    description: "One-page handwritten public letter dated August 24, 1989 following the August 7 Cadillac groundwater hearing. The writer supports supervised cleanup participation, questions the proposed project's financial durability, recounts a retiree's explanation of contamination practices and expresses the opinion that Kysor should be held responsible. The page was manually read and visually verified because native extraction was unusable. The sender and address are redacted and the recipient surname is not fully legible. This is personal opinion and recollection, not an agency determination, approval or independent source-attribution finding."
+    description: "One-page handwritten public letter dated August 24, 1989 following the August 7 Cadillac groundwater hearing. The writer supports supervised cleanup participation, questions whether area forests could sustain a project of the proposed size, recounts a retiree's explanation of contamination practices and expresses the opinion that Kysor should be held responsible. The page was manually read and visually verified because native extraction was unusable. The sender and address are redacted and the recipient surname is not fully legible. This is personal opinion and recollection, not an agency determination, approval or independent source-attribution finding."
   },
   {
     id: "221-a8b3680cb1b0",

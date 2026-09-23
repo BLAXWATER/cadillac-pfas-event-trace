@@ -3,11 +3,20 @@
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 
 :root {
-  --brand-black: #050708;
-  --brand-navy: #002b3b;
-  --brand-cyan: #00bceb;
-  --brand-white: #f5f6f6;
-  --brand-gray: #8d969c;
+  /* User-supplied Secure Blue palette; semantic category colors stay independent. */
+  --secure-navy: #071a2b;
+  --trusted-navy: #0b2d4d;
+  --primary-blue: #145da0;
+  --action-blue: #1e73be;
+  --verification-blue: #2f8fd5;
+  --steel-blue: #6e91ad;
+  --interface-blue: #dceaf5;
+  --secure-light: #f4f8fb;
+  --brand-black: var(--secure-navy);
+  --brand-navy: var(--trusted-navy);
+  --brand-cyan: var(--interface-blue);
+  --brand-white: var(--secure-light);
+  --brand-gray: #b3c9da;
   --background: var(--brand-black);
   --foreground: var(--brand-white);
   --card: var(--brand-navy);
@@ -15,15 +24,15 @@
   --popover: var(--brand-navy);
   --popover-foreground: var(--brand-white);
   --primary: var(--brand-cyan);
-  --primary-foreground: var(--brand-black);
+  --primary-foreground: var(--secure-navy);
   --secondary: var(--brand-navy);
   --secondary-foreground: var(--brand-white);
   --muted: var(--brand-navy);
   --muted-foreground: var(--brand-gray);
-  --accent: #003449;
+  --accent: var(--primary-blue);
   --accent-foreground: var(--brand-white);
   --destructive: var(--brand-gray);
-  --border: rgba(141, 150, 156, .32);
+  --border: rgba(110, 145, 173, .5);
   --input: var(--brand-navy);
   --ring: var(--brand-cyan);
   --chart-1: var(--brand-cyan);
@@ -74,8 +83,8 @@ body {
   margin: 0;
   overflow-x: clip;
   background:
-    radial-gradient(circle at 88% 3%, rgba(0, 188, 235, .11), transparent 24rem),
-    linear-gradient(155deg, #050708 0%, #050708 54%, #002b3b 88%, #050708 100%);
+    radial-gradient(circle at 88% 3%, rgba(47, 143, 213, .12), transparent 24rem),
+    linear-gradient(155deg, var(--secure-navy) 0%, var(--secure-navy) 54%, var(--trusted-navy) 88%, var(--secure-navy) 100%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-sans);
@@ -697,6 +706,54 @@ footer p { margin: 0; }
   .document-preview-page { padding-inline: 4px; }
   footer { gap: 9px; padding-bottom: max(24px, env(safe-area-inset-bottom)); }
 }
+/* Shared blue surfaces: leave year-band borders, category tabs, warning colors,
+   original document pixels and the five-day recency badges unchanged. */
+.integrity-note, .path-strip, .category-jump-nav, .timeframe-model,
+.global-search-panel, .papadopulos-finding, .upload-queue-tree, .evidence-chain,
+.reference-summary > div {
+  background: linear-gradient(135deg, var(--trusted-navy), var(--secure-navy));
+  border-color: var(--border);
+}
+.catalog-page-card, .global-search-card, .archive-card, .event-card,
+.request-card, .request-empty {
+  background: linear-gradient(150deg, var(--trusted-navy), var(--secure-navy));
+}
+.hierarchy-steps > div, .catalog-page-controls, .document-search,
+.document-filter, .document-filter option { background: var(--trusted-navy); }
+.global-search-input, .catalog-page-controls input, .source-button,
+.source-clock, .timestamp-ribbon, .audit-details, .evidence-chain-node,
+.upload-queue-file, .upload-queue-position, .timeframe-counts span,
+.year-nav a, .document-share-link input { background: var(--secure-navy); border-color: var(--border); }
+.catalog-page-summary, .catalog-page-card-copy > p { color: var(--interface-blue); }
+.catalog-page-card-meta div, .catalog-page-hash, .catalog-page-statline,
+.catalog-page-controls > span { color: var(--brand-gray); }
+.catalog-page-card-meta dt, .catalog-page-card-topline,
+.catalog-page-controls label, .catalog-page-back, .catalog-page-source-link {
+  color: var(--interface-blue);
+}
+.catalog-page-statline strong { color: var(--verification-blue); }
+.document-download-control button {
+  background: var(--primary-blue); color: #fff; border-color: var(--steel-blue);
+}
+.document-share-control button {
+  background: var(--trusted-navy); color: var(--interface-blue); border-color: var(--steel-blue);
+}
+.document-download-control button:hover:not(:disabled),
+.document-share-control button:hover:not(:disabled) {
+  background: var(--action-blue); color: #fff; border-color: var(--verification-blue);
+}
+.document-download-control button:focus-visible,
+.document-share-control button:focus-visible,
+.catalog-page-controls input:focus-visible, .category-jump-link:focus-visible {
+  outline: 2px solid var(--interface-blue); outline-offset: 3px;
+}
+.source-button:hover, .year-nav a:hover, .year-nav a:focus-visible {
+  background: var(--trusted-navy); border-color: var(--verification-blue);
+}
+.document-preview-page, .rendered-document-frame { background: var(--interface-blue); }
+.document-preview-page figcaption { color: var(--secure-navy); }
+.document-dialog { background: var(--secure-navy) !important; }
+
 /* Record recency is independent of year-band and compliance colors. */
 .record-activity-badge,
 .catalog-page-card-topline .record-activity-badge,

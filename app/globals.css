@@ -46,7 +46,9 @@
   --site-max-width: 1180px;
   --site-edge-space: 16px;
   --section-space: clamp(54px, 6vw, 78px);
-  --radius: 0.75rem;
+  --radius: 6pt;
+  --block-radius-small: 6pt;
+  --block-radius-large: 12pt;
 }
 
 @theme inline {
@@ -753,6 +755,26 @@ footer p { margin: 0; }
 .document-preview-page, .rendered-document-frame { background: var(--interface-blue); }
 .document-preview-page figcaption { color: var(--secure-navy); }
 .document-dialog { background: var(--secure-navy) !important; }
+
+/* Small blocks = 6pt (8px); large section panels = 12pt (16px).
+   Keep compact status pills and original document images unaltered. */
+.category-jump-link, .year-nav a, .hierarchy-steps > div,
+.timeframe-counts span, .catalog-page-card, .global-search-card,
+.archive-card, .request-card, .source-button, .source-thumbnail,
+.evidence-chain-node, .upload-queue-file, .upload-queue-position,
+.reference-summary > div, .archive-matching-source,
+.global-search-input, .catalog-page-controls input, .document-search,
+.document-filter, .document-share-link input, .timestamp-ribbon, .source-clock,
+.document-download-control button, .document-share-control button,
+.papadopulos-finding-heading > a {
+  border-radius: var(--block-radius-small);
+}
+.integrity-note, .path-strip, .category-jump-nav, .timeframe-model,
+.global-search-panel, .papadopulos-finding, .upload-queue-tree,
+.evidence-chain, .event-card, .catalog-page-controls, .request-empty,
+.audit-details, .queue-review, .document-dialog, .source-tooltip {
+  border-radius: var(--block-radius-large);
+}
 
 /* Record recency is independent of year-band and compliance colors. */
 .record-activity-badge,

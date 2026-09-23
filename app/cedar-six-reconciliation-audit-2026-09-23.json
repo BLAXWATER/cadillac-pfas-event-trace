@@ -1,0 +1,199 @@
+{
+  "auditVersion": 1,
+  "batch": "CEDAR-SIX-2026-09-23",
+  "reviewedAt": "2026-09-23T11:25:00-04:00",
+  "rules": {
+    "suppliedOrderPreserved": true,
+    "recordBoundariesPreserved": true,
+    "pageOrderReviewRequired": true,
+    "renderedPageInspectionRequired": true,
+    "filenameOnlyDeduplicationProhibited": true,
+    "statusesSeparated": true
+  },
+  "totals": {
+    "suppliedRecords": 6,
+    "suppliedPages": 21,
+    "exactByteMatches": 4,
+    "renderedContentMatches": 2,
+    "newDistinctRecords": 0
+  },
+  "records": [
+    {
+      "suppliedOrder": 1,
+      "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2016_GW1010342_Public_Notice_Email_original.pdf",
+      "originalFilename": "2016_GW1010342_Public_Notice_Email_original.pdf",
+      "sha256": "46619080fc733362ce28d8563112105ef5679b241d9276659b66ca98745f8dce",
+      "bytes": 79078,
+      "pages": 1,
+      "pageCoverage": [
+        {
+          "page": 1,
+          "visualReviewed": true,
+          "nativeTextReviewed": true,
+          "ocrReviewed": false
+        }
+      ],
+      "disposition": "exact-byte-match",
+      "canonicalRecordId": "013-46619080fc73",
+      "supportedFinding": "The July 12, 2016 DEQ email transmitted the cover letter, public notice, certification form and draft Rule 2210 permit and requested newspaper publication by July 15, 2016. The attachments are named but are not embedded in this one-page PDF.",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": true
+      }
+    },
+    {
+      "suppliedOrder": 2,
+      "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2017-11-15_Wexford_County_BOC_Minutes.pdf",
+      "originalFilename": "2017-11-15_Wexford_County_BOC_Minutes.pdf",
+      "sha256": "4127cba91f8b9a77c3ddace776f719f28a415f847c7c9aae921ab3dd25137edd",
+      "bytes": 155362,
+      "pages": 4,
+      "pageCoverage": [
+        {"page": 1, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 2, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 3, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 4, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false}
+      ],
+      "disposition": "exact-byte-match",
+      "canonicalRecordId": "process-site-008-4127cba91f8b",
+      "supportedFinding": "The November 15, 2017 Wexford County Board minutes record an American Waste presentation on a proposed Class I injection well and a unanimous county resolution opposing issuance of draft permit MI-165-1I-0002. Public comments and speaker concerns are attributed statements, not independent findings.",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": true
+      }
+    },
+    {
+      "suppliedOrder": 3,
+      "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
+      "originalFilename": "2017-11-20_Cadillac_Resolution_Opposing_MI-165-1I-0002_original.pdf",
+      "sha256": "850f00b27330ad4fac7e1abdbbdd2716cfcfb18bdc2b38671919c3fe52ba0406",
+      "bytes": 344611,
+      "pages": 5,
+      "pageCoverage": [
+        {"page": 1, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 2, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 3, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 4, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 5, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false}
+      ],
+      "disposition": "exact-byte-match",
+      "canonicalRecordId": "100-850f00b27330",
+      "supportedFinding": "This five-page file is an unexecuted resolution form: the resolution number, attendance, mover, seconder, vote and certification fields are blank. Its recitals and proposed action oppose draft permit MI-165-1I-0002 and contain the City's stated treatment, capacity, contaminant and risk claims. The form alone does not prove adoption; the separate November 20 minutes record the adopted motion.",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": true
+      }
+    },
+    {
+      "suppliedOrder": 4,
+      "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\ADID_996_November_20_2017_City_Council_Minutes.pdf",
+      "originalFilename": "ADID_996_November_20_2017_City_Council_Minutes.pdf",
+      "sha256": "519d4faa6c3319d0dc374158a811601b3cbe50064a390cb3e4c3ad17d3254d85",
+      "bytes": 203476,
+      "pages": 9,
+      "pageCoverage": [
+        {"page": 1, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 2, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 3, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 4, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 5, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 6, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 7, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 8, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false},
+        {"page": 9, "visualReviewed": true, "nativeTextReviewed": true, "ocrReviewed": false}
+      ],
+      "disposition": "exact-byte-match",
+      "canonicalRecordId": "164-519d4faa6c33",
+      "supportedFinding": "The November 20, 2017 Cadillac minutes record attributed discussion of WWTP leachate treatment, revenue, groundwater direction and the proposed injection well. Motion 2017-232 unanimously adopted a resolution opposing the draft permit. These minutes prove the municipal action and reported statements, not the technical accuracy of every statement or a contaminant pathway.",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": true
+      }
+    },
+    {
+      "suppliedOrder": 5,
+      "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf",
+      "originalFilename": "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf",
+      "sha256": "ed0595a491891ad13896613a2fbea86e5ca6594eae3b2f71e5990a673f93901f",
+      "bytes": 98120,
+      "pages": 1,
+      "pageCoverage": [
+        {
+          "page": 1,
+          "visualReviewed": true,
+          "nativeTextReviewed": false,
+          "ocrReviewed": true
+        }
+      ],
+      "disposition": "rendered-content-match-suppressed",
+      "canonicalRecordId": "039-c677de7c10e6",
+      "canonicalRecordPublished": true,
+      "comparison": {
+        "renderDpi": 120,
+        "renderedPageSha256": "69448526343ca7ae87ff901c4fdebd8da2959d5d8c2cee70406323cafa226b90",
+        "matchesCanonicalRenderedPage": true,
+        "matchesSuppliedOcrDerivativeRenderedPage": true
+      },
+      "supportedFinding": "The January 12, 2016 City letter documents an actual American Waste leachate-truck offloading spill reported at 9:22 a.m., containment and cleanup actions, and preventive procedures. It states only that less than the truck's 10,000-gallon capacity spilled; it gives no measured spill volume. The typed text does not identify the originating landfill, and the handwritten Wexford County notation has unstated provenance.",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": false
+      }
+    },
+    {
+      "suppliedOrder": 6,
+      "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\ZIPS\\Cedar_Creek_Wexford_to_Cadillac_Transport_Originals\\Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf",
+      "originalFilename": "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf",
+      "sha256": "627d80d3b52d0baab436c9c7638883f66ae48b1e6c88ffb449b1592f437cc5b7",
+      "bytes": 88720,
+      "pages": 1,
+      "pageCoverage": [
+        {
+          "page": 1,
+          "visualReviewed": true,
+          "nativeTextReviewed": true,
+          "ocrReviewed": true
+        }
+      ],
+      "disposition": "ocr-derivative-rendered-content-match-suppressed",
+      "canonicalRecordId": "039-c677de7c10e6",
+      "canonicalRecordPublished": true,
+      "comparison": {
+        "renderDpi": 120,
+        "renderedPageSha256": "69448526343ca7ae87ff901c4fdebd8da2959d5d8c2cee70406323cafa226b90",
+        "matchesCanonicalRenderedPage": true,
+        "matchesSuppliedOriginalRenderedPage": true
+      },
+      "supportedFinding": "The OCR layer was checked against the page image. It supports the same spill-notification facts as the supplied original and introduces no distinct page or attachment. OCR errors do not replace the visual reading.",
+      "statuses": {
+        "received": true,
+        "extracted": true,
+        "reviewed": true,
+        "verified": true,
+        "published": false
+      }
+    }
+  ],
+  "limitations": [
+    "The public-notice email names four attachments, but those attachments are separate records and are not present inside the one-page email PDF.",
+    "The five-page Cadillac resolution form is unexecuted; adoption is supported by the separately cataloged City Council minutes.",
+    "Municipal and public statements about risks, groundwater direction, capacity, treatment and contaminants are attributed statements unless independently supported by another source.",
+    "The spill letter documents an American Waste truck but does not identify the source landfill in its typed text or supply a measured spill volume.",
+    "The two newly supplied spill PDFs are preserved at their local source paths in this audit but are not published as duplicate cards; the canonical equivalent remains downloadable."
+  ]
+}

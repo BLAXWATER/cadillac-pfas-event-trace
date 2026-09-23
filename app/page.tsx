@@ -4236,6 +4236,11 @@ export default function Home() {
           )}
         </section>
 
+        <nav className="category-jump-nav home-catalog-nav" aria-label="Independent source catalog links">
+          <div className="category-jump-heading"><p className="eyebrow">SOURCE CATALOG TABS</p><strong>Open each category on its own page</strong><span>Each button opens an independent catalog page with its complete record set.</span></div>
+          <SourceCatalogLinks links={categoryJumpLinks} />
+        </nav>
+
         <section className="papadopulos-finding muskegon-finding" aria-labelledby="muskegon-finding-title">
           <div className="papadopulos-finding-heading">
             <div className="papadopulos-finding-mark" aria-hidden="true"><Waves /></div>
@@ -4349,11 +4354,6 @@ export default function Home() {
           <div><p className="eyebrow">CHRONOLOGICAL EVENT TRACE</p><h2>Year Over Year, Multiple Events, One source trail</h2></div>
           <p><strong>Missing tickets do not negate documented activity.</strong> The source-linked records below corroborate leachate offloading, purchasing and equipment installation without reconstructing every delivery. Regulatory records do not independently prove contaminant migration; groundwater attribution remains subject to hydrogeologic confirmation.</p>
         </section>
-
-        <nav className="category-jump-nav" aria-label="Independent source catalog links">
-          <div className="category-jump-heading"><p className="eyebrow">SOURCE CATALOG TABS</p><strong>Open each category on its own page</strong><span>Each button opens an independent catalog page with its complete record set.</span></div>
-          <SourceCatalogLinks links={categoryJumpLinks} />
-        </nav>
 
         <section className="trace" aria-label="Source-linked event timeline">
           {groups.map((group) => {

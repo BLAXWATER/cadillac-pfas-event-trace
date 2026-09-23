@@ -756,6 +756,9 @@ footer p { margin: 0; }
 .document-preview-page figcaption { color: var(--secure-navy); }
 .document-dialog { background: var(--secure-navy) !important; }
 
+.home-catalog-nav { margin-top: calc(var(--section-space) * -.48); margin-bottom: 40px; }
+.home-catalog-nav + .papadopulos-finding { margin-top: 0; }
+
 /* Small blocks = 6pt (8px); large section panels = 12pt (16px).
    Keep compact status pills and original document images unaltered. */
 .category-jump-link, .year-nav a, .hierarchy-steps > div,

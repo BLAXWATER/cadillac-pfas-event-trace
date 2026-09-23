@@ -756,6 +756,8 @@ footer p { margin: 0; }
 .document-preview-page figcaption { color: var(--secure-navy); }
 .document-dialog { background: var(--secure-navy) !important; }
 
+/* Reduce catalog button height by 20% without scaling text or changing column order. */
+.category-jump-link { min-height: 70.4px; padding: 12.8px 14.4px; font-weight: 700; }
 .home-catalog-nav { margin-top: calc(var(--section-space) * -.48); margin-bottom: 40px; }
 .home-catalog-nav + .papadopulos-finding { margin-top: 0; }
 

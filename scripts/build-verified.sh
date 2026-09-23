@@ -30,6 +30,9 @@ run_node_script() {
   fi
 }
 
+echo "Refreshing the five-day NEW and UPDATED activity ledger..."
+run_node_script "scripts/update-record-activity.mjs"
+
 echo "Verifying every document catalog entry and delivery path..."
 run_node_script "scripts/document-download-integrity.mjs"
 

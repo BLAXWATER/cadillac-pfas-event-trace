@@ -7,6 +7,12 @@ import { ACTIVITY_WINDOW_MS, newestSourceActivity } from "./record-activity.mjs"
 
 // One shared clock for every card; expiration works even without another deployment.
 let snapshot: number | null = null;
+// Render active badges in the initial HTML. The ledger is refreshed before every
+// verified build, then the browser clock takes over immediately after hydration.
+const ledgerSnapshot = Math.max(0, ...Object.values(ledger.records).flatMap((entry) =>
+  ["addedAt", "updatedAt"].map((field) => Date.parse((entry as Record<string, string>)[field] ?? ""))
+    .filter(Number.isFinite),
+));
 const listeners = new Set<() => void>();
 let timer: ReturnType<typeof setTimeout> | undefined;
 function refresh() {
@@ -38,7 +44,7 @@ function subscribe(listener: () => void) {
   };
 }
 const getSnapshot = () => snapshot;
-const getServerSnapshot = () => null;
+const getServerSnapshot = () => ledgerSnapshot || null;
 
 export function RecordActivityBadge({ url, urls }: { url?: string; urls?: (string | undefined)[] }) {
   const now = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);

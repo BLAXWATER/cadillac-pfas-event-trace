@@ -10,6 +10,13 @@ test("NEW lasts exactly five rolling days, including across month boundaries", (
   assert.equal(recordActivity({addedAt}, at + ACTIVITY_WINDOW_MS), null);
   assert.equal(recordActivity({addedAt: "2026-08-30T01:00:00Z"}, Date.parse("2026-09-04T01:00:00Z")), null);
 });
+test("the five-day window is 120 hours, not five calendar labels or build days", () => {
+  assert.equal(ACTIVITY_WINDOW_MS, 120 * 60 * 60 * 1000);
+  const lateNight = Date.parse("2026-09-01T23:59:59-04:00");
+  const entry = {addedAt: new Date(lateNight).toISOString()};
+  assert.equal(recordActivity(entry, lateNight + ACTIVITY_WINDOW_MS - 1).label, "NEW");
+  assert.equal(recordActivity(entry, lateNight + ACTIVITY_WINDOW_MS), null);
+});
 test("a genuine update starts its own five-day window and takes precedence", () => {
   const updatedAt = new Date(at + 3600000).toISOString();
   assert.equal(recordActivity({addedAt, updatedAt}, at + 3600000).label, "UPDATED");

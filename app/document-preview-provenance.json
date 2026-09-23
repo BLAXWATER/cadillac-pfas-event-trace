@@ -1,4 +1,22 @@
 {
+  "/findings-docs/212-69ab779993c2.pdf": {
+    "sourceSha256": "69ab779993c2980d62c7fd9f510130b212041e528c65a86946b94823a4807bca",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/69ab779993c2980d62c7fd9f510130b212041e528c65a86946b94823a4807bca.webp",
+    "previewSha256": "e6a490474beabb401a3d9e053a7ec66bd8915f56b20640174992520e809b3058",
+    "verifiedAt": "2026-09-23T12:00:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered with PDFium; full page preserved.",
+    "scope": "Preview provenance only; whole-document review is recorded separately."
+  },
+  "/findings-docs/211-edf83f5fdf7c.pdf": {
+    "sourceSha256": "edf83f5fdf7c2c7b8898dcf8a9077399bccdf9a95024672cdc3dead20845cbb5",
+    "page": 1,
+    "preview": "/first-page-previews/by-sha256/edf83f5fdf7c2c7b8898dcf8a9077399bccdf9a95024672cdc3dead20845cbb5.webp",
+    "previewSha256": "d89f84b8daff30b07b9ff3dda2b0d68ed0c97bf491b52436babbc8d5df35fcbe",
+    "verifiedAt": "2026-09-23T12:00:00-04:00",
+    "verificationMethod": "Actual first PDF page rendered with PDFium; full page preserved.",
+    "scope": "Preview provenance only; whole-document review is recorded separately."
+  },
   "/findings-docs/207-caaf3ea8f891.pdf": {
     "sourceSha256": "caaf3ea8f891c31522b39cdfacde02a58c006a77643e6a2253428380429c7960",
     "page": 1,

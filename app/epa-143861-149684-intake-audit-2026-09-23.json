@@ -1,0 +1,51 @@
+{
+  "intakeDate": "2026-09-23",
+  "batchRule": "Two intact records retained as two stable intake units; no individual record split.",
+  "records": [
+    {
+      "originalFilename": "EPA_05_143861.pdf",
+      "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\EPA DOCS\\EPA_05_143861.pdf",
+      "canonicalSitePath": "/findings-docs/211-edf83f5fdf7c.pdf",
+      "sha256": "edf83f5fdf7c2c7b8898dcf8a9077399bccdf9a95024672cdc3dead20845cbb5",
+      "bytes": 4707290,
+      "pages": 114,
+      "status": { "received": true, "extracted": true, "reviewed": true, "verified": true, "published": false },
+      "coverage": {
+        "pageOrderReviewed": "1-114",
+        "renderedPagesInspected": "1-114",
+        "nativeTextReviewed": "1-114",
+        "ocr": "No OCR substitution required. PDF page 72 contains only the Appendix A divider and was verified directly from the rendered page; degraded table text on preceding pages was checked against rendered tables."
+      },
+      "identity": "EPA Record of Decision for Northernaire Plating Company and Kysor of Cadillac groundwater remedy, signed September 29, 1989, with administrative-record indexes and responsiveness summary.",
+      "supportedFindings": [
+        "Pages 1-4 and 39-47 select groundwater extraction/treatment, Kysor soil-vapor extraction, monitoring and use restrictions; the stated cost and cleanup durations are estimates, not completed work.",
+        "Pages 8-9, 58 and 60 distinguish Northernaire-attributed hexavalent chromium from VOCs reported as originating from other sources and mixed within the same aquifer.",
+        "Pages 100-112 document public/PRP/State comments, a commingled plume with multiple origins, exclusion of the separable Rexair plume, and Michigan's disagreement with EPA's 5-ppb TCE target.",
+        "Pages 73-99 are administrative-record and sampling/data indexes; pages 113-114 list community-relations activities. Indexed records are leads, not attachments contained in this PDF."
+      ],
+      "limits": "Historical VOC/chromium remedy record. It contains no PFAS testing and does not prove a current Wexford Landfill-to-Cadillac WWTP-to-Plett Road pathway."
+    },
+    {
+      "originalFilename": "EPA_05_149684.pdf",
+      "sourcePath": "C:\\Users\\casey\\OneDrive\\Desktop\\EPA DOCS\\EPA_05_149684.pdf",
+      "canonicalSitePath": "/findings-docs/212-69ab779993c2.pdf",
+      "sha256": "69ab779993c2980d62c7fd9f510130b212041e528c65a86946b94823a4807bca",
+      "bytes": 284461,
+      "pages": 5,
+      "status": { "received": true, "extracted": true, "reviewed": true, "verified": true, "published": false },
+      "coverage": {
+        "pageOrderReviewed": "1-5",
+        "renderedPagesInspected": "1-5",
+        "nativeTextReviewed": "1-5",
+        "ocr": "Native text was complete; the overwritten line on page 5 was verified from the rendered page."
+      },
+      "identity": "Signed July 29, 1995 EPA Region 5 statutory first five-year review for Northernaire Plating Company.",
+      "supportedFindings": [
+        "Pages 3-4 report October 4-November 17, 1988 source-control work, approximately 1,016 cubic yards excavated, and a May 8, 1991 final inspection.",
+        "Pages 4-5 state that the groundwater system remained under construction, report chromium not detected in the closest cited spring 1995 near-surface downgradient well, explicitly say cadmium was not sampled, and recommend additional chromium/cadmium sampling.",
+        "Page 5 certifies the selected remedies as protective as of the review date while requiring continued groundwater-remedy implementation and future review."
+      ],
+      "limits": "The 1995 protectiveness statement is not proof of present conditions. The record contains no PFAS testing or current Plett Road source attribution."
+    }
+  ]
+}

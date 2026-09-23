@@ -1,5 +1,31 @@
 [
   {
+    "id": "212-69ab779993c2",
+    "name": "EPA Northernaire First Five-Year Review — July 29, 1995.pdf",
+    "url": "/findings-docs/212-69ab779993c2.pdf",
+    "year": "1995",
+    "category": "Groundwater & hydrogeology — Superfund remedy review",
+    "type": "EPA five-year review",
+    "format": "PDF",
+    "pages": 5,
+    "size": 284461,
+    "sha256": "69ab779993c2980d62c7fd9f510130b212041e528c65a86946b94823a4807bca",
+    "description": "Signed July 29, 1995 EPA Region 5 five-year review for Northernaire. It reports that source-control work ran October 4–November 17, 1988 and excavated approximately 1,016 cubic yards of soil, with final inspection May 8, 1991 (pp. 3–4). The review says the groundwater extraction/treatment system was still under construction, notes spring 1995 chromium was not detected in the closest cited near-surface downgradient well while cadmium was not sampled, and recommends additional chromium/cadmium sampling plus continued groundwater-remedy implementation (pp. 4–5). Its protectiveness certification is a 1995 determination, not proof of present conditions, PFAS source attribution or a Plett Road pathway."
+  },
+  {
+    "id": "211-edf83f5fdf7c",
+    "name": "EPA Record of Decision — Northernaire and Kysor Groundwater — September 29, 1989.pdf",
+    "url": "/findings-docs/211-edf83f5fdf7c.pdf",
+    "year": "1989",
+    "category": "Groundwater & hydrogeology — Superfund remedy decision",
+    "type": "EPA signed record of decision and responsiveness summary",
+    "format": "PDF",
+    "pages": 114,
+    "size": 4707290,
+    "sha256": "edf83f5fdf7c2c7b8898dcf8a9077399bccdf9a95024672cdc3dead20845cbb5",
+    "description": "September 29, 1989 EPA groundwater ROD for the combined Northernaire/Kysor remedy. It selects groundwater extraction and treatment, Kysor soil-vapor extraction, monitoring and land/use restrictions, with an estimated $16 million cost and modeled 64-year intermediate-aquifer restoration period (pp. 1–4, 39–47). The ROD attributes Northernaire's documented plume contribution to hexavalent chromium while stating the VOCs within that plume were from other sources and had mixed in the aquifer (pp. 8–9, 58, 60). The responsiveness summary records a commingled, multiple-origin plume, excludes the separable Rexair plume, and preserves Michigan's disagreement with EPA's 5-ppb TCE target (pp. 100–112). These are historical remedy findings and estimates, not PFAS evidence or proof of a current source-to-Plett pathway."
+  },
+  {
     "id": "210-6aec96618242",
     "name": "The Use of Oil Field Brine on Michigan Roadways.pdf",
     "url": "/findings-docs/210-6aec96618242.pdf",

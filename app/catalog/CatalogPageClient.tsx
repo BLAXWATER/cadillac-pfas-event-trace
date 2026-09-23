@@ -14,6 +14,7 @@ import { sourceDownloadUrl, type SourceFormat } from "../source-media";
 import { catalogPageList, type CatalogPageConfig, type CatalogRecord } from "./catalog-data";
 import { SourceCatalogLinks } from "../source-catalog-links";
 import { RecordActivityBadge } from "../record-activity-badge";
+import { existingSourceAliases } from "../existing-source-routing";
 
 type Props = { config: CatalogPageConfig };
 
@@ -39,9 +40,10 @@ function RecordCard({ record }: { record: CatalogRecord }) {
   const sourceHref = bundledDocumentDownload(record.url)
     ?? sourceDownloadUrl(record.url, sourceFormat, (url) => withPdfStartPage(url));
   const title = formatSourceDisplayName(record.name, record.format ?? undefined, Boolean(record.url));
+  const existingAliases = existingSourceAliases(record.url);
 
   return (
-    <article className="catalog-page-card" data-record-id={record.id}>
+    <article className="catalog-page-card" data-record-id={record.id} id={`record-${record.id}`}>
       <div className="catalog-page-card-topline">
         <RecordActivityBadge url={record.url} />
         <span>{record.format ?? "SOURCE"}</span>
@@ -64,6 +66,19 @@ function RecordCard({ record }: { record: CatalogRecord }) {
             <div><dt>File size</dt><dd>{formatBytes(record.size)}</dd></div>
             {record.sha256 && <div><dt>SHA-256</dt><dd className="catalog-page-hash">{record.sha256}</dd></div>}
           </dl>
+          {existingAliases.length > 0 && (
+            <details className="catalog-existing-sources">
+              <summary>{existingAliases.length} completed upload{existingAliases.length === 1 ? "" : "s"} verified against this source</summary>
+              <ul>
+                {existingAliases.map((alias) => (
+                  <li key={`${alias.sha256}-${alias.name}`}>
+                    <strong>{formatSourceDisplayName(alias.name, "PDF", true)}</strong>
+                    <span>{alias.pages} {alias.pages === 1 ? "page" : "pages"} · SHA-256 {alias.sha256.slice(0, 12)}…</span>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
           <div className="catalog-page-card-actions" aria-label={`Actions for ${title}`}>
             <DocumentDownloadButton name={record.name} downloadUrl={sourceHref} />
             <DocumentShareButton name={title} downloadUrl={sourceHref} />

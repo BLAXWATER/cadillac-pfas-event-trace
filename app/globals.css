@@ -432,6 +432,23 @@ h1 { margin: 0; max-width: 760px; font-size: clamp(26.4px, 4.356vw, 56.76px); li
 .upload-stage-list li.is-complete { border-color: rgba(129, 229, 193, .5); color: #81e5c1; }
 .upload-stage-list li.is-waiting { border-color: rgba(255, 191, 71, .4); color: #ffcf73; }
 .upload-queue-file .upload-queue-hash { margin-top: 12px; color: var(--brand-gray); font: .72rem/1.4 var(--font-mono); overflow-wrap: anywhere; }
+.upload-existing-source { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 14px; align-items: center; margin-top: 14px; padding: 12px; border: 1px solid rgba(129, 229, 193, .35); border-radius: 12px; background: rgba(129, 229, 193, .045); }
+.upload-existing-preview { width: 92px; height: 116px; padding: 0; overflow: hidden; border: 1px solid rgba(220, 234, 245, .42); border-radius: 6px; background: #f4f8fb; color: #145da0; cursor: pointer; }
+.upload-existing-preview img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.upload-existing-source strong { color: #81e5c1; }
+.upload-existing-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px; }
+.upload-existing-actions a { color: #9bc8ff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.source-existing-count { color: #81e5c1 !important; font-weight: 700; }
+.source-existing-aliases { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(129, 229, 193, .3); }
+.source-existing-aliases strong { color: #81e5c1; }
+.source-existing-aliases ul { margin: 6px 0 0; padding-left: 18px; }
+.catalog-existing-sources { margin-top: 12px; padding: 10px 12px; border: 1px solid rgba(129, 229, 193, .32); border-radius: 12px; background: rgba(129, 229, 193, .04); }
+.catalog-existing-sources summary { color: #81e5c1; font-weight: 700; cursor: pointer; }
+.catalog-existing-sources ul { margin: 10px 0 0; padding-left: 18px; }
+.catalog-existing-sources li { margin-top: 8px; }
+.catalog-existing-sources li strong, .catalog-existing-sources li span { display: block; overflow-wrap: anywhere; }
+.catalog-existing-sources li span { color: var(--brand-gray); font: .72rem/1.4 var(--font-mono); }
+@media (max-width: 640px) { .upload-existing-source { grid-template-columns: 70px minmax(0, 1fr); } .upload-existing-preview { width: 70px; height: 90px; } }
 .evidence-chain { min-width: 0; max-width: 100%; margin: 0 0 26px; padding: 20px; border: 1px solid rgba(0, 188, 235, .28); background: linear-gradient(145deg, rgba(0, 43, 59, .72), rgba(5, 7, 8, .9)); }
 .evidence-chain-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, .85fr); gap: 28px; align-items: end; margin-bottom: 18px; }
 .evidence-chain-heading h3 { margin: 0; color: var(--brand-white); font-size: clamp(23px, 3vw, 31px); line-height: 1.1; }

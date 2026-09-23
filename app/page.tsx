@@ -65,6 +65,8 @@ import { DocumentShareButton } from "./document-share-button";
 import { documentPreviewCaption } from "./document-controls";
 import { DocumentDownloadButton } from "./document-download-button";
 import { RecordActivityBadge } from "./record-activity-badge";
+import { existingSourceAliases, normalizeSourceAsset, timelineSourceTargets } from "./existing-source-routing";
+import { catalogPageList, type CatalogRecord } from "./catalog/catalog-data";
 import { DocumentPreviewImage } from "./document-preview-image";
 import { documentSummary } from "./document-summary.mjs";
 import verifiedFilenameAliases from "./verified-filename-aliases.json";
@@ -226,6 +228,20 @@ const categoryJumpLinks = [
   { slug: "wwtp-operations-infrastructure", label: "WWTP OPERATIONS & INFRASTRUCTURE", href: "/catalog/wwtp-operations-infrastructure" },
   { slug: "chemicals-sds", label: "CHEMICALS & SDS", href: "/catalog/chemicals-sds" },
 ] as const;
+
+const catalogPlacementByAsset = new Map<string, { record: CatalogRecord; href: string; label: string }>();
+for (const page of catalogPageList) {
+  for (const record of page.documents) {
+    const asset = normalizeSourceAsset(record.url);
+    if (!catalogPlacementByAsset.has(asset)) {
+      catalogPlacementByAsset.set(asset, {
+        record,
+        href: `/catalog/${page.slug}#record-${record.id}`,
+        label: page.buttonLabel,
+      });
+    }
+  }
+}
 
 const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((archive) =>
   archive.documents.map((document) => ({
@@ -3935,6 +3951,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
   const previewAvailable = Boolean(previewUrl && !previewFailed);
   const displayName = formatSourceDisplayName(source.displayName ?? source.name, source.format, linked);
   const mediaKind = sourceMediaKind(source.format);
+  const existingAliases = existingSourceAliases(source.url);
 
   const formatIcon = mediaKind === "html"
     ? <FileCode2 />
@@ -3957,6 +3974,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
         <RecordActivityBadge url={source.url} />
         <strong title={source.name}>{displayName}</strong>
         <small>{source.role}{source.page ? ` · page ${source.page}` : ""}</small>
+        {existingAliases.length > 0 && <small className="source-existing-count">{existingAliases.length} completed upload{existingAliases.length === 1 ? "" : "s"} verified here</small>}
       </span>
       {linked && <FileSearch className="source-open-icon" />}
     </>
@@ -3973,6 +3991,7 @@ function SourceButton({ source, open }: { source: Source; open: (source: Source)
           <p className="source-role">{source.role}</p>
           <p className="source-full-name" title={source.name}>{displayName}</p>
           <p className="source-result">{source.result}</p>
+          {existingAliases.length > 0 && <div className="source-existing-aliases"><strong>Completed uploads routed to this source</strong><ul>{existingAliases.map((alias) => <li key={`${alias.sha256}-${alias.name}`}>{alias.name}</li>)}</ul></div>}
           <div className="source-clock">
             <div><span>Event stamp</span><strong>{source.clock.eventStamp}</strong></div>
             <div><span>Date basis</span><strong>{source.clock.basis}</strong></div>
@@ -4951,7 +4970,23 @@ export default function Home() {
               <p>{uploadReviewQueue.note}</p>
             </div>
             <ol className="upload-queue-list" role="tree" aria-label="Uploaded files waiting for review">
-              {uploadReviewQueue.items.map((item) => (
+              {uploadReviewQueue.items.map((item) => {
+                const canonicalAsset = "canonicalAsset" in item ? item.canonicalAsset : undefined;
+                const catalogPlacement = catalogPlacementByAsset.get(normalizeSourceAsset(canonicalAsset));
+                const timelinePlacement = timelineSourceTargets[normalizeSourceAsset(canonicalAsset)];
+                const placement = catalogPlacement ?? timelinePlacement;
+                const canonicalDocument: CatalogDocument | undefined = canonicalAsset ? {
+                  name: catalogPlacement?.record.name ?? item.name,
+                  url: canonicalAsset,
+                  preview: catalogPlacement?.record.preview,
+                  format: catalogPlacement?.record.format ?? "PDF",
+                  pages: catalogPlacement?.record.pages ?? item.pages,
+                  year: catalogPlacement?.record.year,
+                  description: catalogPlacement?.record.description ?? item.detail,
+                  type: catalogPlacement?.record.type ?? "Verified existing source",
+                } : undefined;
+                const preview = canonicalAsset ? bundledFirstPagePreview(canonicalAsset) : undefined;
+                return (
                 <li className={`upload-queue-item queue-${item.lane}`} role="treeitem" aria-level={1} aria-posinset={item.position} aria-setsize={uploadReviewQueue.items.length} key={`${item.position}-${item.sha256}`}>
                   <div className="upload-queue-position" aria-hidden="true"><span>{String(item.position).padStart(2, "0")}</span></div>
                   <div className="upload-queue-file">
@@ -4959,6 +4994,21 @@ export default function Home() {
                     <h4 title={item.name}>{item.name}</h4>
                     <p className="upload-queue-category">{item.category}</p>
                     <p>{item.detail}</p>
+                    {item.status === "Completed · existing source" && canonicalDocument && (
+                      <div className="upload-existing-source">
+                        <button type="button" className="upload-existing-preview" onClick={() => setSelected(catalogSource(canonicalDocument))} aria-label={`View first page of ${item.name}`}>
+                          {preview ? <img src={preview} alt={`First page of ${item.name}`} loading="lazy" /> : <FileSearch aria-hidden="true" />}
+                        </button>
+                        <div>
+                          <strong>Transferred to established source block</strong>
+                          <p>{placement?.label ?? "Canonical source record"}</p>
+                          <div className="upload-existing-actions">
+                            <Button type="button" variant="outline" size="sm" onClick={() => setSelected(catalogSource(canonicalDocument))}>Page view<FileSearch /></Button>
+                            {placement && <a href={placement.href}>Open supporting block</a>}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                     <ul className="upload-stage-list" aria-label={`${item.name} processing stages`}>
                       {Object.entries({
                         received: "Received",
@@ -4975,7 +5025,8 @@ export default function Home() {
                     <p className="upload-queue-hash" title={item.sha256}>SHA-256 {item.sha256.slice(0, 16)}…</p>
                   </div>
                 </li>
-              ))}
+                );
+              })}
             </ol>
           </section>
           <section className="evidence-chain" aria-labelledby="evidence-chain-title">

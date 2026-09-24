@@ -4966,7 +4966,7 @@ export default function Home() {
           </div>
           <section className="upload-queue-tree" aria-labelledby="upload-queue-title">
             <div className="upload-queue-heading">
-              <div><p className="eyebrow">ORDERED FILE INTAKE</p><h3 id="upload-queue-title">Upload review queue</h3></div>
+              <div><p className="eyebrow">FILE INTAKE STATUS</p><h3 id="upload-queue-title">Upload review queue</h3></div>
               <p>{uploadReviewQueue.note}</p>
             </div>
             <ol className="upload-queue-list" role="tree" aria-label="Uploaded files waiting for review">

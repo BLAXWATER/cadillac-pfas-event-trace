@@ -1,0 +1,689 @@
+[
+  {
+    "batch": "01_EGLE_Leachate",
+    "archive": null,
+    "recoveredFrom": "preserved WEX_NEW_ORIGINALS_2026-09-09 tree",
+    "crc_error": null,
+    "count": 5,
+    "files": [
+      {
+        "filename": "01_Leachate/29731847/61366 Application - Analytical Data (Leachate) 2016 to 2018.PDF",
+        "bytes": 17389702,
+        "sha256": "51edf4c54439f8caa62a733f6744623f0e2dda92b86cad375438c93643b5ba0d"
+      },
+      {
+        "filename": "01_Leachate/29731849/61366 Application - Attachment C (Leachate Volumes).PDF",
+        "bytes": 2921690,
+        "sha256": "87c8f84902b51db8e2d9bde644a4845bafe677ac241e25e8363f6d718fffecc6"
+      },
+      {
+        "filename": "01_Leachate/29731852/61366 Application - Attachment C (Waste Analysis Plan).PDF",
+        "bytes": 85115,
+        "sha256": "82c3e682faccf04a1a0df31abc1258b92d0d7c229b2a0a932b9303de7f6827e2"
+      },
+      {
+        "filename": "01_Leachate/29797415/61366 Analytical Data 2018-12-12.PDF",
+        "bytes": 553479,
+        "sha256": "1c6d4faf07521852eb6f9f1c809701d427cd7f724fdb8160f5a7301a68d1b333"
+      },
+      {
+        "filename": "01_Leachate/30425869/61366 Analytical Data 2019-02-20.PDF",
+        "bytes": 5686690,
+        "sha256": "ce6f1610fb102a383118e0da5cf30a4f74edfe1a3ad4df9f7cd5295dfb047531"
+      }
+    ]
+  },
+  {
+    "batch": "02_EGLE_Permit",
+    "archive": null,
+    "recoveredFrom": "preserved WEX_NEW_ORIGINALS_2026-09-09 tree",
+    "crc_error": null,
+    "count": 12,
+    "files": [
+      {
+        "filename": "02_Permit/29731848/61366 Application - Attachment C (Deep Well Data).PDF",
+        "bytes": 50056640,
+        "sha256": "8a4eba8e4fb310288fc4b901aa6fa677cd85bfd4fbfeb578a4d238471338545e"
+      },
+      {
+        "filename": "02_Permit/29731850/61366 Application - Attachment C (Monitoring Well Data).PDF",
+        "bytes": 22659301,
+        "sha256": "fc68b6d6d2582328321345f5908734ce478eca00235c2638dbac32fcc34654f6"
+      },
+      {
+        "filename": "02_Permit/29731851/61366 Application - Attachment C (Monitoring Wells Located in the WWT Well Area).PDF",
+        "bytes": 67399,
+        "sha256": "3d998e1ce5c6d9d954f2841f8aef1d27cfad4a2b80475b816b7b4f279fe2f638"
+      },
+      {
+        "filename": "02_Permit/29731853/61366 Application - Attachment C (Water Well Data).PDF",
+        "bytes": 1850726,
+        "sha256": "866b0bc5a6fa5f31e606f85d1dd66b733889584183cee0c83c84a3dcc0f17156"
+      },
+      {
+        "filename": "02_Permit/29731854/61366 Application - Attachment C (Water Wells Located in 1 Mile Radius of Facility).PDF",
+        "bytes": 87159,
+        "sha256": "38291250f44a71c8d70f71b919f390b24e3deb9aec0fd45e05b385e686adccd4"
+      },
+      {
+        "filename": "02_Permit/29731855/61366 Application - Permit Review.PDF",
+        "bytes": 4778522,
+        "sha256": "5f7d341dbdfa218787660552e0803506f111cb6da386154d0087d8e286123c66"
+      },
+      {
+        "filename": "02_Permit/29731856/61366 Application - Public Notice.PDF",
+        "bytes": 725576,
+        "sha256": "2849e0d627f45e6d84308f52b7cb3cfa5843513a1e8d2041f0eaf2a1ab0fbf56"
+      },
+      {
+        "filename": "02_Permit/29731858/61366 Application - Technical Memorandum.PDF",
+        "bytes": 5755654,
+        "sha256": "2b087118297f90e9d289dae6a9db4fc61a1e4101dc9d9a3a8575cacf8edd1c66"
+      },
+      {
+        "filename": "02_Permit/29731873/61366 Permit 2018-10-01.PDF",
+        "bytes": 109187,
+        "sha256": "9b1ec5b95fc6f9fad008232e92a90537898653c8ac2f81a99f00451a93e0f3b3"
+      },
+      {
+        "filename": "02_Permit/29731874/61366 Permit Update 2018-11-27.PDF",
+        "bytes": 1884119,
+        "sha256": "228a9331a56bed826a7c7e1f3d13d1cc269bd6ff704a241c87672f7ff018c76e"
+      },
+      {
+        "filename": "02_Permit/29900863/61366 Permit Update 2019-01-03.PDF",
+        "bytes": 1642559,
+        "sha256": "0a93bd77345a347ae36bab14ef40ada6c3931ceadc3e39378e9be5aeff330620"
+      },
+      {
+        "filename": "02_Permit/30264465/61366 Record of Well Drilling or Deepening 2019-03-08.PDF",
+        "bytes": 58625,
+        "sha256": "c0e304fd5b0ee30f762fdac155ae71d0ac8fbd3ef400c519a658019b85abe4ea"
+      }
+    ]
+  },
+  {
+    "batch": "03_EGLE_Hearing",
+    "archive": null,
+    "recoveredFrom": "preserved WEX_NEW_ORIGINALS_2026-09-09 tree",
+    "crc_error": null,
+    "count": 9,
+    "files": [
+      {
+        "filename": "03_Hearing/29731859/61366 Application - Written Comments Responses.PDF",
+        "bytes": 919085,
+        "sha256": "e75adac8d3d7ed1e3ec5dfdd564976f61caf240bba686343cbf40bf77fa436ca"
+      },
+      {
+        "filename": "03_Hearing/29731860/61366 Application - Written Comments.PDF",
+        "bytes": 1297980,
+        "sha256": "79c01de0a581721dcb1a2c5cc1b6db5cbfd1cccb16408c9a17f01c895fd173c1"
+      },
+      {
+        "filename": "03_Hearing/29731866/61366 Hearing - Comments Summary.PDF",
+        "bytes": 267297,
+        "sha256": "05c30a8f42f89d6756172620b7c9d0686479ff4d54c629fdde69d43e89025023"
+      },
+      {
+        "filename": "03_Hearing/29731867/61366 Hearing - Correspondence.PDF",
+        "bytes": 429931,
+        "sha256": "2e53f72d52b3d3c9550ab7b2e30c29b314cfd6218c20085b98e331aaf1ec822e"
+      },
+      {
+        "filename": "03_Hearing/29731868/61366 Hearing - OGMD Response.PDF",
+        "bytes": 51171,
+        "sha256": "1a26b8e7ef8d45dd9788291ec79de706e495b3c34faa2bb58b5d03a7abc68dee"
+      },
+      {
+        "filename": "03_Hearing/29731869/61366 Hearing - Public Notice.PDF",
+        "bytes": 828732,
+        "sha256": "094ed161131a827c08d0da4b54e736b7d1565df3ba7eb6c7bfc9e3dd4b2c833c"
+      },
+      {
+        "filename": "03_Hearing/29731870/61366 Hearing - Transcript.PDF",
+        "bytes": 610746,
+        "sha256": "dacaccbf50614b5703e8b1ee44e19d02de6dd40774d1f18043e3cd7e09cc856e"
+      },
+      {
+        "filename": "03_Hearing/29731871/61366 Hearing - Written Comments.PDF",
+        "bytes": 614721,
+        "sha256": "84ca68576d11988435610877cd26cd86057387d0fdd32ad079ad7882b5ea6d28"
+      },
+      {
+        "filename": "03_Hearing/29731872/61366 Hearing 2018-03-21.PDF",
+        "bytes": 2193732,
+        "sha256": "302cac40449aa16d9e105cbec02ecc7495ba72a5ceb552ab3f6dd8e20266636b"
+      }
+    ]
+  },
+  {
+    "batch": "04_EGLE_Email",
+    "archive": null,
+    "recoveredFrom": "preserved WEX_NEW_ORIGINALS_2026-09-09 tree",
+    "crc_error": null,
+    "count": 15,
+    "files": [
+      {
+        "filename": "04_Email/29735079/61366 Email 2018-11-28.PDF",
+        "bytes": 174099,
+        "sha256": "aa5fc9137da364d4738d2c4fe872adcf71fd78deae2e5a978d794f321092421b"
+      },
+      {
+        "filename": "04_Email/29735080/61366 Email 2018-11-19.PDF",
+        "bytes": 647226,
+        "sha256": "a08f96bfc5f0dc51e3b2ab543d3cbc30d02fe51138292f2ff7ae82b32d2bae4c"
+      },
+      {
+        "filename": "04_Email/29779824/61366 Email 2018-11-29.PDF",
+        "bytes": 349729,
+        "sha256": "73bbbe3a89132405ce6cd139ca0e058bcff26fb3f14234bf77757f13553e2ae8"
+      },
+      {
+        "filename": "04_Email/29779826/61366 Email 2018-12-03.PDF",
+        "bytes": 355510,
+        "sha256": "02fa33916afd36d92510a2dff71cfdf8aec258c9235b810cbc87f34b63f220f4"
+      },
+      {
+        "filename": "04_Email/29817562/61366 Email 2018-12-14.PDF",
+        "bytes": 146418,
+        "sha256": "6d2f9171f041a1f74315bd30afe5826dbdaab9db6876aa004f4c7d004a3bfbae"
+      },
+      {
+        "filename": "04_Email/29908872/61366 Email 2018-12-14.PDF",
+        "bytes": 251765,
+        "sha256": "97f6013fde32d8a7042deea6d3b5f61b33af06cba3c46328980c9dbef2cc5900"
+      },
+      {
+        "filename": "04_Email/29911551/61366 Email 2018-12-20.PDF",
+        "bytes": 186342,
+        "sha256": "9348a784df486669e7cd96dd681fdd9e38d24c5277b4a36efc2ad50cc3a3313f"
+      },
+      {
+        "filename": "04_Email/29983820/61366 Correspondence 2019-01-16.PDF",
+        "bytes": 151941,
+        "sha256": "d231f1f3c7ba418beac42afc1cec6c2c1da678f4849bb8df22d5b7d0b8357738"
+      },
+      {
+        "filename": "04_Email/30166978/61366 Correspondence 2019-02-26.PDF",
+        "bytes": 121432,
+        "sha256": "6d2b78ba4ef71fee84a2d9dd9314597ccf53a774eea3d202fb781345549e3996"
+      },
+      {
+        "filename": "04_Email/30529973/61366 Email 2018-11-30.PDF",
+        "bytes": 236851,
+        "sha256": "44e11fb7ae0e72c95a52c46a58094db6dd1e90ee53dd38c2d62fd5e0fd28f56f"
+      },
+      {
+        "filename": "04_Email/30530401/61366 Email 2019-01-09.PDF",
+        "bytes": 128977,
+        "sha256": "3fb7c2a30b28ae22663b094fdfdff58aceeeb0d4f41b0177f0b061b643b47348"
+      },
+      {
+        "filename": "04_Email/30530404/61366 Email 2019-01-22.PDF",
+        "bytes": 165757,
+        "sha256": "9123270ecb2ddc796f1e5d6fa7f0de36a3805c5b1e015e86983a25df823ff11f"
+      },
+      {
+        "filename": "04_Email/30530409/61366 Email 2019-02-01.PDF",
+        "bytes": 311588,
+        "sha256": "3af971eae6bbd3bd7efc44129bc8f3784359c5b1fed48c37e8d6aa7630af6e97"
+      },
+      {
+        "filename": "04_Email/30530410/61366 Email 2019-02-11.PDF",
+        "bytes": 238068,
+        "sha256": "fae198ba5ba51295d31b6b5a2873297c578b3bab8b90a318328cc83301cd30d5"
+      },
+      {
+        "filename": "04_Email/30530412/61366 Email 2019-02-22.PDF",
+        "bytes": 293907,
+        "sha256": "8a1b0e239ae1c926aa40e77ef7eda96188078da5a80da30917bca9705b4a5864"
+      }
+    ]
+  },
+  {
+    "batch": "05_EGLE_Well_Test",
+    "archive": null,
+    "recoveredFrom": "preserved WEX_NEW_ORIGINALS_2026-09-09 tree",
+    "crc_error": null,
+    "count": 11,
+    "files": [
+      {
+        "filename": "05_Well_Test/29779825/61366 Photos 2018-11-30.PDF",
+        "bytes": 2496055,
+        "sha256": "03d33d742b160912b6e19cfe522c6abd73487bc20b4408ba6cb8e3f49df9b281"
+      },
+      {
+        "filename": "05_Well_Test/29911567/61366 Report 2018-12-21.PDF",
+        "bytes": 87680,
+        "sha256": "734a19042dcd59dffc172f2c6dda69a2ccbb7bf57e8d04193b4586372acfb83a"
+      },
+      {
+        "filename": "05_Well_Test/29947176/61366 Report 2019-01-08.PDF",
+        "bytes": 57687,
+        "sha256": "14b5490dabc74a939e165efd8ef41a64a84c2eb203bd8eb860fae3cf7d7d0482"
+      },
+      {
+        "filename": "05_Well_Test/30530418/61366 MIT 2019-03-12.PDF",
+        "bytes": 97042,
+        "sha256": "81bb0f1247d473e4429b32a70c3cc783ea79025cae027288fb952d5e9472175d"
+      },
+      {
+        "filename": "05_Well_Test/31601718/61366 Photos 2018-11-30.PDF",
+        "bytes": 1385964,
+        "sha256": "be73bd32089c8b305da044fb248db73e5944b8a360837ed55b1927a6a5d200e9"
+      },
+      {
+        "filename": "05_Well_Test/31601719/61366 Photos 2018-12-10.PDF",
+        "bytes": 503382,
+        "sha256": "f7ce0f88074c1a7bd3ac352f8d0c4d4699f5480cd23ebce0836a40cabefd1fa0"
+      },
+      {
+        "filename": "05_Well_Test/32658962/61366 Drilling Completion and Testing  Report.PDF",
+        "bytes": 66962520,
+        "sha256": "119278df271473c78aa8e6dcb95d218f6d63c3f84f6b9800a73f5534c085b8b7"
+      },
+      {
+        "filename": "05_Well_Test/32658970/61366_Bottom hole pressure test 2019 Bottom Gauge (1243).XLS",
+        "bytes": 2152506,
+        "sha256": "44df90833d38c110192aa7f2bb7427368f66c430d630c02eb25426f41dd361d8"
+      },
+      {
+        "filename": "05_Well_Test/32658977/61366 Bottom hole pressure test 2019 Top Gauge (1237) Data.XLS",
+        "bytes": 2155080,
+        "sha256": "2db792888bf82e852c0f047126b60c3e009542a8c7c7ef372c7b596aeacddc2c"
+      },
+      {
+        "filename": "05_Well_Test/32658981/61366_Bottom hole pressure test 2019 Downhole Gauge 1237 Certification.PDF",
+        "bytes": 146779,
+        "sha256": "01aac59f0f199fa78b3f37b02e81cbb0232f8635b0fc8270c270ab5bcb8fda50"
+      },
+      {
+        "filename": "05_Well_Test/32658985/61366 Bottom hole pressure test 2019 Downhole Gauge 1243 Certification.PDF",
+        "bytes": 139581,
+        "sha256": "d195d27a526ed5bc3db060a17167de18c6158234babdd5d74eff6fdfdfbc42dd"
+      }
+    ]
+  },
+  {
+    "batch": "06_EGLE_Operations",
+    "archive": null,
+    "recoveredFrom": "preserved WEX_NEW_ORIGINALS_2026-09-09 tree",
+    "crc_error": null,
+    "count": 4,
+    "files": [
+      {
+        "filename": "06_Operations/29983800/61366 Other 2019-01-14.PDF",
+        "bytes": 7938540,
+        "sha256": "4b1b7cdb3fe6ac9e2948d556fbb737e2b76a707a43e09e2e4a85e294063f51da"
+      },
+      {
+        "filename": "06_Operations/30863872/61366 Correspondence 2019-06-14.PDF",
+        "bytes": 31724,
+        "sha256": "0f72ed20d0fc49fb064f257adf7db5db140a5e1a019385f4f624be4506165e02"
+      },
+      {
+        "filename": "06_Operations/31134680/61366 Report 2019-07-31.PDF",
+        "bytes": 1586788,
+        "sha256": "53f3bf35e82b67d4c32953c71bc3d2e41b4d037e4cfff7c907a06257e8483e93"
+      },
+      {
+        "filename": "06_Operations/31284790/61366 Injectate Analysis 2019-08-16.PDF",
+        "bytes": 5195562,
+        "sha256": "00f091b70060f183f3abbcfb03df7753ede0eba4dcf0a298467e7962c73e20e8"
+      }
+    ]
+  },
+  {
+    "batch": "07_EGLE_2020_MOR",
+    "archive": null,
+    "recoveredFrom": "preserved WEX_NEW_ORIGINALS_2026-09-09 tree",
+    "crc_error": null,
+    "count": 1,
+    "files": [
+      {
+        "filename": "07_2020_MOR/34094374/61366 Monthly operating reports 2020.PDF",
+        "bytes": 3913874,
+        "sha256": "c2bb6e88b50b7b5281e468c48ee6209ca2fdee81286af75f4741fecea32341d6"
+      }
+    ]
+  },
+  {
+    "batch": "08_Cadillac_Wexford_Corporate",
+    "archive": null,
+    "recoveredFrom": "preserved WEX_NEW_ORIGINALS_2026-09-09 tree",
+    "crc_error": null,
+    "count": 66,
+    "files": [
+      {
+        "filename": "02_MiEnviro_Cadillac_IPP_2019/1611229033523596445/POTW_Monitoring_Data_Summary 2019.xlsx",
+        "bytes": 14529,
+        "sha256": "47b1cb1d5572a1d48ebf4945676f951d112d2b810c5565c1f6474f0ca05a8243"
+      },
+      {
+        "filename": "02_MiEnviro_Cadillac_IPP_2019/4473589058410684374/POTW_Oversight_Table 2019.xlsx",
+        "bytes": 35635,
+        "sha256": "0f769cb66aa6377f33ec4a199cf1e92e9aa50ef148e893c463df39e75662c9ca"
+      },
+      {
+        "filename": "02_MiEnviro_Cadillac_IPP_2019/7404543692145492921/SIU-CIU_List.xlsx",
+        "bytes": 31335,
+        "sha256": "c825b2dca60ed917d983edf7816849eb60a3815250de7b62aec70372d221d6fa"
+      },
+      {
+        "filename": "03_Wexford_County/01_Board_Agendas/2017/08-16-17.pdf",
+        "bytes": 47632,
+        "sha256": "20ddbe5843b0398e6b25e5775ae407b4dbb9b96a45c06856373e442c3271b527"
+      },
+      {
+        "filename": "03_Wexford_County/01_Board_Agendas/2018/01-17-18.pdf",
+        "bytes": 41728,
+        "sha256": "23332131350bb182f50355f5a79129c713e3f06163bba7ca41b649e68f1537e8"
+      },
+      {
+        "filename": "04_LARA/01_Wexford_Water_Technologies_LLC_801851167/BF4073133-1.pdf",
+        "bytes": 32167,
+        "sha256": "b91157369052454085ca3325292033310deb6769f6e4dd0010172d7fc250b165"
+      },
+      {
+        "filename": "04_LARA/01_Wexford_Water_Technologies_LLC_801851167/BF4073135-1.pdf",
+        "bytes": 173986,
+        "sha256": "be93be77d30d18a0ff8eb9d1d7deae8cd6ddc6cc2e8a06aabc76633f4451720d"
+      },
+      {
+        "filename": "04_LARA/01_Wexford_Water_Technologies_LLC_801851167/BF4073136-1.pdf",
+        "bytes": 174068,
+        "sha256": "b48f4d7726656faaf4a3ffc9f55324f7056802877f7de0be5aab663f5f1a9b49"
+      },
+      {
+        "filename": "04_LARA/01_Wexford_Water_Technologies_LLC_801851167/BF4073140-1.pdf",
+        "bytes": 174161,
+        "sha256": "dd0e5bca04eeebf38126978210f0fb5ce9d6b6fc2a7834a13c178a5738adb915"
+      },
+      {
+        "filename": "04_LARA/01_Wexford_Water_Technologies_LLC_801851167/BF4073141-1.pdf",
+        "bytes": 320143,
+        "sha256": "2ebd21bdbdd61c1e0d893e3c73aca8b41e4dad9d1823c626d150c7c5bbbc89c6"
+      },
+      {
+        "filename": "04_LARA/01_Wexford_Water_Technologies_LLC_801851167/BF4073142-1.pdf",
+        "bytes": 322345,
+        "sha256": "487d7e17306711ed0bbcfa48983179834cba6b525c623f1138564dd8c7407981"
+      },
+      {
+        "filename": "04_LARA/01_Wexford_Water_Technologies_LLC_801851167/BF4073143-1.pdf",
+        "bytes": 22918,
+        "sha256": "ac4bebe05fae25e8f4d0353e616d33bc5df62e0f15689630df3e2c0ac80ea087"
+      },
+      {
+        "filename": "04_LARA/01_Wexford_Water_Technologies_LLC_801851167/BF4073144-1.pdf",
+        "bytes": 322205,
+        "sha256": "d31146bbf873a2fb215dfb9a613c1b75c5e4a7dabb6192ae138dbf9fc7dee7cc"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771033-1.pdf",
+        "bytes": 78604,
+        "sha256": "dc4a8ebbb7f72e438f17405bb7e31b213c7939993080293516176de21018b88a"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771034-1.pdf",
+        "bytes": 322162,
+        "sha256": "3159dc71afef37ee5e0298d0da85d66a123c561719ce8459f63480df25064f5e"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771035-1.pdf",
+        "bytes": 74811,
+        "sha256": "79e0791c2e2bc19709ccd38461efbea7ec31ed9b6194b8b9c8b7cb888b0f62a5"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771036-1.pdf",
+        "bytes": 84261,
+        "sha256": "6c64cfc6abe14655a6475961d1e20fc1355a706c1b59c2c0d8789b154e052e2b"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771039-1.pdf",
+        "bytes": 31660,
+        "sha256": "02bb3eea98bb46e86072cd3585562db8282c3b6a5cb9d2346bee964da5a08cef"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771041-1.pdf",
+        "bytes": 174129,
+        "sha256": "29fb7c63c2f0caf7c277ecbc190a57dc7202a103fcf2af999a23e674f3746fe0"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771042-1.pdf",
+        "bytes": 29801,
+        "sha256": "241de53e5fe98f229d1f4e65388a3ed555373cbdd28e60cf484f20245a1c7a60"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771043-1.pdf",
+        "bytes": 173965,
+        "sha256": "d2b356646ed7e2ae24c619ad5d8504893127703c20829ecfd3e58776764f895a"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771044-1.pdf",
+        "bytes": 281476,
+        "sha256": "5f4661edf92ff469ade3f45ba99fd6a1ea9241286697c6cce7999e98ab4a7870"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771045-1.pdf",
+        "bytes": 173942,
+        "sha256": "1f437669619c020c8687b83428bd58447fc0f5e7269d9a24b14c053be844069b"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771046-1.pdf",
+        "bytes": 22691,
+        "sha256": "c3686088f4262ca9ef888cb5724aad8f178011fe0cd88174d1960e4c968f3f52"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771047-1.pdf",
+        "bytes": 322296,
+        "sha256": "224b5c64f2587394eb12ca48ea057439e2c4e79d56d87961069d8c7646748f5f"
+      },
+      {
+        "filename": "04_LARA/02_Wexford_County_Landfill_LLC_801614343/BF17771050-1.pdf",
+        "bytes": 83277,
+        "sha256": "34367435fc0d59e23e8872538b75770982e5f5952afbfa4a2bfc05c7f0c130f3"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406231-1.pdf",
+        "bytes": 92421,
+        "sha256": "a9208f430c505050638d072dd6c531a9f19da26b24566c85f5ff5789e6c83f38"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406242-1.pdf",
+        "bytes": 175403,
+        "sha256": "7d035b64ba8394ed6e51af9d4f12699b0b33e3230ea73484e5f35a7566086563"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406262-1.pdf",
+        "bytes": 53419,
+        "sha256": "ab189880b1bd9e0666bdf6475bfee2cdd886a834a883e4025bc749e2f8916f65"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406269-1.pdf",
+        "bytes": 134644,
+        "sha256": "fef528f41418d6587489d49bb4342fb3f0cc59b261d7f35dc6230fce761e5dad"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406270-1.pdf",
+        "bytes": 139326,
+        "sha256": "d41297918b33316e25a226a10b110b592687172878ddc6072a63e06b067bf3ce"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406275-1.pdf",
+        "bytes": 93141,
+        "sha256": "5040cc5eaeb9e0878492490c649c86fa09f1d01657bdc5d5bfcb0e2c731b62c2"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406283-1.pdf",
+        "bytes": 114615,
+        "sha256": "62a722cf3a2d47b0c41f9a242eaa31dc3ec1b2b7b045d8994f5f7121b2d75cba"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406303-1.pdf",
+        "bytes": 124363,
+        "sha256": "91874dcebf56182f0fb917cb1e61598d300d37673cc7e975d8a7e6bfab944843"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406315-1.pdf",
+        "bytes": 175402,
+        "sha256": "ef3aab31862e079df94fd26aa633b0e4c0c1f781b319136cdc4e83553791199c"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406316-1.pdf",
+        "bytes": 57851,
+        "sha256": "adc29476b1239b475e919d2e3bc26a7c78e555d879989eac4168f3def6fa8dab"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406318-1.pdf",
+        "bytes": 92774,
+        "sha256": "7d20044d431ae6efde317082cf3a1db35459de5f5b438df9f31a40f43146e312"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406336-1.pdf",
+        "bytes": 92397,
+        "sha256": "83dc803b7b2fa11d207282156dd610c3a0ea694fbf85136246a3bc691bb554e6"
+      },
+      {
+        "filename": "04_LARA/03_American_Waste_Inc_800585556/BF14406337-1.pdf",
+        "bytes": 282997,
+        "sha256": "bc21d1e90448d4c1be9e23d0825791a68d751e605cdc7388d3104064ce1f22c7"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246215-1.pdf",
+        "bytes": 94772,
+        "sha256": "47be2fea71bdf4c7e68518903af69762c04f0fbe6e5ed6c458d6a22d6b384a5a"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246216-1.pdf",
+        "bytes": 87800,
+        "sha256": "310cfcb0e3c6a38e6e455c7b14b19494b70b32270052b8ceed5c252a50f16d2a"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246217-1.pdf",
+        "bytes": 48476,
+        "sha256": "071a2830ff08475a1a83ba125fce8f8e3484b1259048e0d3dd54bd21bf058d9c"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246221-1.pdf",
+        "bytes": 174124,
+        "sha256": "f6c441028d870b0aa3f7f13124072ada6982170e39b66bf9de177d427303b915"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246223-1.pdf",
+        "bytes": 31759,
+        "sha256": "7944b1170d7a296926846d799af599f5eb47050e5afdb06da1f98ff30a19fae3"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246224-1.pdf",
+        "bytes": 173944,
+        "sha256": "a329a6a3fc9e023131ab6fbf5ad72dc593a41f1da5e3cda3671eea675e710aa2"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246226-1.pdf",
+        "bytes": 103808,
+        "sha256": "306b4a03dbbf9d1b0ca971d0b545de43731d60a810ed05b0670d0e689e43baa0"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246227-1.pdf",
+        "bytes": 31663,
+        "sha256": "8acc27f63869c8dbc0e666590c21272b12c8da23764b37a36a250466b49a47cc"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246229-1.pdf",
+        "bytes": 30051,
+        "sha256": "800db795b362210045a04d64dc9cc235e6d81a3ea900c0232961ad4fa17ac9df"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246232-1.pdf",
+        "bytes": 77827,
+        "sha256": "01be1b7b4d58bbb1d4b80fcc5b9333491360af0c2d5570daf12b4c36d69066b3"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246234-1.pdf",
+        "bytes": 73621,
+        "sha256": "25a66b44f357d3123b16324d8a3b700b081eba423f5ad240fdafb3ab3bfb645a"
+      },
+      {
+        "filename": "04_LARA/04_Pescador_LLC_801115343/BF19246235-1.pdf",
+        "bytes": 281511,
+        "sha256": "5fb188b4ce1e366a269941ac183bdbbbdd6b44e2ab3b35a6681144aabcaa1f2c"
+      },
+      {
+        "filename": "04_LARA/05_Northern_A-1_Industrial_Services_LLC_802380379/BF2416600-1.pdf",
+        "bytes": 174345,
+        "sha256": "a042147283719e5d28f5aec5139713707939731fc18d22fed6ae9414d0c6817f"
+      },
+      {
+        "filename": "04_LARA/05_Northern_A-1_Industrial_Services_LLC_802380379/BF2416602-1.pdf",
+        "bytes": 320186,
+        "sha256": "f7f1b720ffadcb7a89a91ad0e0ddccd7df6bf67ca85ada14e12fbe12e8439ac2"
+      },
+      {
+        "filename": "04_LARA/05_Northern_A-1_Industrial_Services_LLC_802380379/BF2416603-1.pdf",
+        "bytes": 37749,
+        "sha256": "d099ce87b37c9181396c7320cb83e3f9bdf3f021e19c37451c2f1c1c6e0553f7"
+      },
+      {
+        "filename": "04_LARA/06_GFL_Environmental_Services_USA_Inc_802255430/BF17614527-1.pdf",
+        "bytes": 322998,
+        "sha256": "7ae10f08d449c617eab75f23b96d75334fc72d4e1462952a1c8c5143ac9d1237"
+      },
+      {
+        "filename": "04_LARA/06_GFL_Environmental_Services_USA_Inc_802255430/BF17614528-1.pdf",
+        "bytes": 175938,
+        "sha256": "42d52503412532346ca73e2aa3c998258281c131fa393d9ec7116e36606084b2"
+      },
+      {
+        "filename": "04_LARA/06_GFL_Environmental_Services_USA_Inc_802255430/BF17614532-1.pdf",
+        "bytes": 1067300,
+        "sha256": "13ee929ec72b6635cc4a77c1321ffeaabefb67d134426d86d13b371f2e5641a1"
+      },
+      {
+        "filename": "04_LARA/06_GFL_Environmental_Services_USA_Inc_802255430/BF17614534-1.pdf",
+        "bytes": 58403,
+        "sha256": "75732f13d8f9ccec5e2e5f5faaa90dfc0b358b999f8987f7cad893bc7d158e3b"
+      },
+      {
+        "filename": "04_LARA/07_GFL_North_Michigan_Landfill_LLC_801110233/BF8497166-1.pdf",
+        "bytes": 281744,
+        "sha256": "6b7677170419f51b66edc2c0e6856433e1217be6e2d3a49699c8bd92f6ff882a"
+      },
+      {
+        "filename": "04_LARA/07_GFL_North_Michigan_Landfill_LLC_801110233/BF8497168-1.pdf",
+        "bytes": 213687,
+        "sha256": "589fd6f9c867744b3eaef0af8f3f2d97f2bba44e0480070f78b64f78ecb10934"
+      },
+      {
+        "filename": "04_LARA/07_GFL_North_Michigan_Landfill_LLC_801110233/BF8497173-1.pdf",
+        "bytes": 174168,
+        "sha256": "7ca783795d8db8b6dd4e0a17e364e09065d63a1d09e7a8d064ceac0b13749854"
+      },
+      {
+        "filename": "04_LARA/07_GFL_North_Michigan_Landfill_LLC_801110233/BF8497189-1.pdf",
+        "bytes": 174035,
+        "sha256": "f203a38b4ee765f86a03b6b0636768717ab3725be1e0425963db356fb6e32229"
+      },
+      {
+        "filename": "04_LARA/08_American_Waste_Transfer_Station_LLC_801305622/BF14406314-1.pdf",
+        "bytes": 406131,
+        "sha256": "e3620bd8eaba36df55d20d6a165b3d92f3e301febcf465125fd257161d522248"
+      },
+      {
+        "filename": "04_LARA/08_American_Waste_Transfer_Station_LLC_801305622/BF17844543-1.pdf",
+        "bytes": 91504,
+        "sha256": "1d186408e065f00687940b8353ec8646cf97ecbcdd33778bf2bb89a7fdb4985e"
+      },
+      {
+        "filename": "04_LARA/09_American_Waste_Arrow_Inc_800736245/BF14595167-1.pdf",
+        "bytes": 101629,
+        "sha256": "0bd4b9e1dc1a06a430115b91dc67ad5059e03e12a954b24dc1122b5c10f57cdf"
+      },
+      {
+        "filename": "05_SEC/a2240777zex-21_1.htm",
+        "bytes": 82315,
+        "sha256": "8acd6184f8ff910205491a7cb971e706b9fba3224aa294cad638ba193b27bcd8"
+      }
+    ]
+  }
+]

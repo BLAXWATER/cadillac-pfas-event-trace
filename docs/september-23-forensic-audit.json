@@ -1,0 +1,368 @@
+{
+  "frameworkDate": "2026-09-23",
+  "generatedAt": "2026-09-24T00:59:45.788Z",
+  "verdict": "not-fully-compliant",
+  "catalog": {
+    "records": 1678,
+    "uniqueIds": 1678,
+    "uniqueHashes": 1678,
+    "localDeliveries": 834,
+    "externalDeliveries": 844,
+    "integrityFailures": [],
+    "placementFailures": []
+  },
+  "eightBatchBaseline": {
+    "batches": 8,
+    "records": 123,
+    "uniqueHashes": 123,
+    "exactCatalogMatches": 4,
+    "notExactHashReconciled": 119,
+    "exactMatches": [
+      {
+        "batch": "03_EGLE_Hearing",
+        "filename": "03_Hearing/29731868/61366 Hearing - OGMD Response.PDF",
+        "sha256": "1a26b8e7ef8d45dd9788291ec79de706e495b3c34faa2bb58b5d03a7abc68dee",
+        "canonicalRecordId": "115-1a26b8e7ef8d"
+      },
+      {
+        "batch": "03_EGLE_Hearing",
+        "filename": "03_Hearing/29731870/61366 Hearing - Transcript.PDF",
+        "sha256": "dacaccbf50614b5703e8b1ee44e19d02de6dd40774d1f18043e3cd7e09cc856e",
+        "canonicalRecordId": "112-dacaccbf5061"
+      },
+      {
+        "batch": "03_EGLE_Hearing",
+        "filename": "03_Hearing/29731871/61366 Hearing - Written Comments.PDF",
+        "sha256": "84ca68576d11988435610877cd26cd86057387d0fdd32ad079ad7882b5ea6d28",
+        "canonicalRecordId": "113-84ca68576d11"
+      },
+      {
+        "batch": "03_EGLE_Hearing",
+        "filename": "03_Hearing/29731872/61366 Hearing 2018-03-21.PDF",
+        "sha256": "302cac40449aa16d9e105cbec02ecc7495ba72a5ceb552ab3f6dd8e20266636b",
+        "canonicalRecordId": "114-302cac40449a"
+      }
+    ],
+    "january16Recovered": true,
+    "november30Photo29779825Recovered": true,
+    "operations": {
+      "records": 4,
+      "pages": 71,
+      "reviewedPages": 0,
+      "pendingPages": 71
+    }
+  },
+  "september23Manifests": {
+    "files": 21,
+    "records": 249,
+    "results": [
+      {
+        "manifest": "batch109-wexford-construction-permit-exact-recheck-audit-2026-09-23.json",
+        "records": 1,
+        "sixBatchEvidence": null,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "cadillac-american-waste-11-six-batch-audit-2026-09-23.json",
+        "records": 11,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 11,
+        "pageCoverageComplete": 11,
+        "separateStagesComplete": 11,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "cadillac-wexford-20-six-batch-audit-2026-09-23.json",
+        "records": 20,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "Exhibit C referenced by the 2015 Board minutes is absent.",
+          "Several referenced uploads/attachments are not embedded; the October 2019 sampling spreadsheet and contract-lab report remain absent.",
+          "Septage-information units remain unresolved because entered values conflict with printed MGD headings.",
+          "Facially implausible system pH values remain qualified source entries, not corrected chemistry."
+        ]
+      },
+      {
+        "manifest": "cadillac-wexford-fig6-permit-20-six-batch-audit-2026-09-23.json",
+        "records": 20,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "cadillac-wexford-final-26-six-batch-audit-2026-09-23.json",
+        "records": 26,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "cadillac-wexford-financial-packets-20-six-batch-audit-2026-09-23.json",
+        "records": 20,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "Final delivery date",
+          "Load-level gallons, manifests, tickets, invoices and carriers",
+          "Exact cessation date",
+          "PFAS content of individual loads",
+          "PFAS-treatment effectiveness",
+          "Causal link between leachate and NPDES violations"
+        ]
+      },
+      {
+        "manifest": "cadillac-wexford-maps-compliance-20-six-batch-audit-2026-09-23.json",
+        "records": 20,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "cadillac-wexford-minutes-budgets-20-six-batch-audit-2026-09-23.json",
+        "records": 20,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "caw-17-six-batch-audit-2026-09-23.json",
+        "records": 17,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 17,
+        "separateStagesComplete": 17,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "The SIU/CIU list contains no internal date; supplied 2018 naming conflicts with current 2020 catalog metadata.",
+          "The one-page November 15 record is an agenda, not a complete injection packet.",
+          "Named email attachments remain separate records and were not treated as embedded pages."
+        ]
+      },
+      {
+        "manifest": "caw-dmr-packet-20-six-batch-audit-2026-09-23.json",
+        "records": 20,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 14,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "Referenced application attachments were not included.",
+          "Wexford handwritten spill notation provenance and exact spill volume remain unresolved.",
+          "DMR footer count errors and daily/summary flow differences remain unexplained.",
+          "Draft/proposed records do not prove final issuance or operations.",
+          "No record in this group independently proves PFAS causation or migration."
+        ]
+      },
+      {
+        "manifest": "caw-rule2210-six-intake-audit-2026-09-23.json",
+        "records": 6,
+        "sixBatchEvidence": false,
+        "provenanceComplete": 6,
+        "pageCoverageComplete": 6,
+        "separateStagesComplete": 6,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "cedar-six-reconciliation-audit-2026-09-23.json",
+        "records": 6,
+        "sixBatchEvidence": false,
+        "provenanceComplete": 6,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 2,
+        "nonExactPublishedFalse": [
+          "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification.pdf",
+          "Cadillac_WWTP_2016_01_12_Original_Leachate_Spill_Notification_OCR.pdf"
+        ],
+        "unresolved": [
+          "The public-notice email names four attachments, but those attachments are separate records and are not present inside the one-page email PDF.",
+          "The five-page Cadillac resolution form is unexecuted; adoption is supported by the separately cataloged City Council minutes.",
+          "Municipal and public statements about risks, groundwater direction, capacity, treatment and contaminants are attributed statements unless independently supported by another source.",
+          "The spill letter documents an American Waste truck but does not identify the source landfill in its typed text or supply a measured spill volume.",
+          "The two newly supplied spill PDFs are preserved at their local source paths in this audit but are not published as duplicate cards; the canonical equivalent remains downloadable."
+        ]
+      },
+      {
+        "manifest": "epa-143861-149684-intake-audit-2026-09-23.json",
+        "records": 2,
+        "sixBatchEvidence": null,
+        "provenanceComplete": 2,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "epa-docs-six-batch-intake-audit-2026-09-23.json",
+        "records": 7,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "Historical Superfund records concern VOC and chromium remedies; they do not independently establish PFAS source attribution or a present pathway to Plett Road.",
+          "EPA_05_374468.pdf is an index page and carries no independent environmental finding."
+        ]
+      },
+      {
+        "manifest": "epa-docs-six-batch-intake-audit-b2-2026-09-23.json",
+        "records": 7,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "Five-year reviews are dated remedy snapshots and do not establish present conditions beyond their cited monitoring periods.",
+          "Historical VOC/chromium remedy records do not by themselves prove PFAS source attribution or a Wexford Landfill-to-Plett Road pathway.",
+          "Stakeholder statements and cleanup proposals in the 1989 correspondence and transcript are attributed statements, not approvals or independent determinations.",
+          "The 2025 review's planned monitoring and QAPP work is not treated as completed evidence."
+        ]
+      },
+      {
+        "manifest": "epa-docs-six-batch-intake-audit-b3-2026-09-23.json",
+        "records": 7,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "Historical chromium and VOC findings do not independently establish PFAS source attribution or a present pathway to Plett Road.",
+          "The Four Star report's degraded maps and handwritten logs are not character-perfect; its internal MW1/MW4 result-label discrepancy remains explicit.",
+          "The administrative index identifies acquisition targets but does not substitute for the underlying records.",
+          "No evidence-request requirement closes in this batch."
+        ]
+      },
+      {
+        "manifest": "epa-docs-six-batch-intake-audit-b4-2026-09-23.json",
+        "records": 7,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "Historical VOC/chromium findings and modeled scenarios do not establish PFAS source attribution or a present pathway to Plett Road.",
+          "The alternatives documents are preliminary screening records, not proof of remedy selection, construction, discharge or operation.",
+          "The appendix compilation supplies ten of the RI's listed appendices; nine remain absent.",
+          "The City statement is an attributed position and proposal, not independent proof of cogeneration implementation.",
+          "No currently open Plett Road/PFAS evidence-request requirement closes in this batch."
+        ]
+      },
+      {
+        "manifest": "epa-docs-six-batch-intake-audit-b5-2026-09-23.json",
+        "records": 7,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "Comment letters and summaries preserve attributed positions and requested revisions, not independent technical or legal determinations.",
+          "The cover letter in 234885 does not include its Kysor comments enclosure.",
+          "Referenced transcripts, proposals, draft/final response documents and the final ROD remain separate records unless independently supplied.",
+          "No current Plett Road/PFAS evidence-request requirement closes in this batch."
+        ]
+      },
+      {
+        "manifest": "epa-docs-six-batch-intake-audit-b6-2026-09-23.json",
+        "records": 5,
+        "sixBatchEvidence": null,
+        "provenanceComplete": 0,
+        "pageCoverageComplete": 0,
+        "separateStagesComplete": 0,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": [
+          "The final-draft FS is not the signed ROD and its 374 physical pages conflict with the index's 375-page count.",
+          "Kysor's comments are party positions; proposed pumping, discharge and cogeneration are not proof of implementation.",
+          "The one-page 1995/1998 index is not either underlying 21-page record.",
+          "The 66-page hearing transcript, 120-page ROD, August 24 letter and 1998 compliance/closure record remain missing.",
+          "No modern PFAS, Plett Road, receiving-volume or Wexford-to-Cadillac causation requirement closes in this batch."
+        ]
+      },
+      {
+        "manifest": "pfas-second-ten-six-batch-audit-2026-09-23.json",
+        "records": 10,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 10,
+        "pageCoverageComplete": 10,
+        "separateStagesComplete": 10,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      },
+      {
+        "manifest": "pfas-ten-six-batch-audit-2026-09-23.json",
+        "records": 10,
+        "sixBatchEvidence": true,
+        "provenanceComplete": 10,
+        "pageCoverageComplete": 10,
+        "separateStagesComplete": 10,
+        "publishedFalse": 0,
+        "nonExactPublishedFalse": [],
+        "unresolved": []
+      }
+    ]
+  },
+  "releaseControls": {
+    "placementManifestRegenerated": true,
+    "anonymousPublicDownloadsVerified": 1513,
+    "anonymousPublicDownloadFailures": 0,
+    "completedExistingSourceRoutesVerified": 102,
+    "previewCoverageVerified": 1678,
+    "fiveDayBadgeRuleTested": true,
+    "shareControlTested": true
+  },
+  "blockers": [
+    "The 123-entry eight-batch baseline has only four byte-exact catalog matches; 119 records require content/render reconciliation before they can be called cataloged or published.",
+    "The four Operations records contain 71 pages; the renewed coverage ledger marks 0 reviewed and 71 pending.",
+    "Several September 23 intake manifests omit per-record full paths, full SHA-256 values, page-order coverage, or separate stage states.",
+    "Two Cedar Creek variants are marked published=false for rendered-content/OCR equivalence rather than byte-exact duplication, contrary to the exact-duplicate-only rule."
+  ]
+}

@@ -4070,7 +4070,7 @@ export default function Home() {
     return acc;
   }, new Map()))
     .map(([year, items]) => ({ year, items: [...items].sort((a, b) => (a.isoDate ?? a.date).localeCompare(b.isoDate ?? b.date)) }))
-    .sort((a, b) => Number(a.year) - Number(b.year));
+    .sort((a, b) => Number(b.year) - Number(a.year));
   const sourceCount = events.reduce((count, event) => count + event.sources.length, 0);
   const globalSearchResults = searchLibrary(librarySearchIndex, globalQuery);
   const { visible: visibleGlobalResults, remaining: remainingGlobalResults } = librarySearchWindow(globalSearchResults, globalSearch.limit);

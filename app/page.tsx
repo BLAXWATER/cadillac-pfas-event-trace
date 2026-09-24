@@ -36,7 +36,6 @@ import newFolderLeachateAudit from "./new-folder-leachate-intake-audit-2026-09-1
 import newFolderCountyAgendasAudit from "./new-folder-county-agendas-audit-2026-09-14.json";
 import evidenceRequestQueue from "./evidence-request-queue.json";
 import evidenceQueueUpdates from "./evidence-request-queue-updates.json";
-import uploadReviewQueue from "./upload-review-queue";
 import formSubmissionAudit from "./form-submission-audit.json";
 import formSubmissionDocuments from "./form-submission-documents.json";
 import ippAudit from "./ipp-audit.json";
@@ -65,8 +64,7 @@ import { DocumentShareButton } from "./document-share-button";
 import { documentPreviewCaption } from "./document-controls";
 import { DocumentDownloadButton } from "./document-download-button";
 import { RecordActivityBadge } from "./record-activity-badge";
-import { existingSourceAliases, normalizeSourceAsset, timelineSourceTargets } from "./existing-source-routing";
-import { catalogPageList, type CatalogRecord } from "./catalog/catalog-data";
+import { existingSourceAliases } from "./existing-source-routing";
 import { DocumentPreviewImage } from "./document-preview-image";
 import { documentSummary } from "./document-summary.mjs";
 import verifiedFilenameAliases from "./verified-filename-aliases.json";
@@ -228,20 +226,6 @@ const categoryJumpLinks = [
   { slug: "wwtp-operations-infrastructure", label: "WWTP OPERATIONS & INFRASTRUCTURE", href: "/catalog/wwtp-operations-infrastructure" },
   { slug: "chemicals-sds", label: "CHEMICALS & SDS", href: "/catalog/chemicals-sds" },
 ] as const;
-
-const catalogPlacementByAsset = new Map<string, { record: CatalogRecord; href: string; label: string }>();
-for (const page of catalogPageList) {
-  for (const record of page.documents) {
-    const asset = normalizeSourceAsset(record.url);
-    if (!catalogPlacementByAsset.has(asset)) {
-      catalogPlacementByAsset.set(asset, {
-        record,
-        href: `/catalog/${page.slug}#record-${record.id}`,
-        label: page.buttonLabel,
-      });
-    }
-  }
-}
 
 const librarySearchRecords: LibrarySearchRecord[] = libraryArchives.flatMap((archive) =>
   archive.documents.map((document) => ({
@@ -4964,71 +4948,6 @@ export default function Home() {
             <p>{evidenceQueueUpdates.note}</p>
             <p className="queue-scope">{evidenceQueueUpdates.scope}</p>
           </div>
-          <section className="upload-queue-tree" aria-labelledby="upload-queue-title">
-            <div className="upload-queue-heading">
-              <div><p className="eyebrow">FILE INTAKE STATUS</p><h3 id="upload-queue-title">Upload review queue</h3></div>
-              <p>{uploadReviewQueue.note}</p>
-            </div>
-            <ol className="upload-queue-list" role="tree" aria-label="Uploaded files waiting for review">
-              {uploadReviewQueue.items.map((item) => {
-                const canonicalAsset = "canonicalAsset" in item ? item.canonicalAsset : undefined;
-                const catalogPlacement = catalogPlacementByAsset.get(normalizeSourceAsset(canonicalAsset));
-                const timelinePlacement = timelineSourceTargets[normalizeSourceAsset(canonicalAsset)];
-                const placement = catalogPlacement ?? timelinePlacement;
-                const canonicalDocument: CatalogDocument | undefined = canonicalAsset ? {
-                  name: catalogPlacement?.record.name ?? item.name,
-                  url: canonicalAsset,
-                  preview: catalogPlacement?.record.preview,
-                  format: catalogPlacement?.record.format ?? "PDF",
-                  pages: catalogPlacement?.record.pages ?? item.pages,
-                  year: catalogPlacement?.record.year,
-                  description: catalogPlacement?.record.description ?? item.detail,
-                  type: catalogPlacement?.record.type ?? "Verified existing source",
-                } : undefined;
-                const preview = canonicalAsset ? bundledFirstPagePreview(canonicalAsset) : undefined;
-                return (
-                <li className={`upload-queue-item queue-${item.lane}`} role="treeitem" aria-level={1} aria-posinset={item.position} aria-setsize={uploadReviewQueue.items.length} key={`${item.position}-${item.sha256}`}>
-                  <div className="upload-queue-position" aria-hidden="true"><span>{String(item.position).padStart(2, "0")}</span></div>
-                  <div className="upload-queue-file">
-                    <div className="upload-queue-topline"><Badge variant="outline">{item.status}</Badge><span>{item.pages.toLocaleString()} {item.pages === 1 ? "page" : "pages"} · {formatBytes(item.bytes)}</span></div>
-                    <h4 title={item.name}>{item.name}</h4>
-                    <p className="upload-queue-category">{item.category}</p>
-                    <p>{item.detail}</p>
-                    {item.status === "Completed · existing source" && canonicalDocument && (
-                      <div className="upload-existing-source">
-                        <button type="button" className="upload-existing-preview" onClick={() => setSelected(catalogSource(canonicalDocument))} aria-label={`View first page of ${item.name}`}>
-                          {preview ? <img src={preview} alt={`First page of ${item.name}`} loading="lazy" /> : <FileSearch aria-hidden="true" />}
-                        </button>
-                        <div>
-                          <strong>Transferred to established source block</strong>
-                          <p>{placement?.label ?? "Canonical source record"}</p>
-                          <div className="upload-existing-actions">
-                            <Button type="button" variant="outline" size="sm" onClick={() => setSelected(catalogSource(canonicalDocument))}>Page view<FileSearch /></Button>
-                            {placement && <a href={placement.href}>Open supporting block</a>}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    <ul className="upload-stage-list" aria-label={`${item.name} processing stages`}>
-                      {Object.entries({
-                        received: "Received",
-                        extractedOrOcr: "Extracted / OCR",
-                        reviewed: "Reviewed",
-                        verified: "Verified",
-                        cataloged: "Cataloged",
-                        published: "Published",
-                      }).map(([stage, label]) => {
-                        const complete = item.stages[stage as keyof typeof item.stages];
-                        return <li className={complete ? "is-complete" : "is-waiting"} key={stage}><span aria-hidden="true">{complete ? "✓" : "○"}</span>{label}</li>;
-                      })}
-                    </ul>
-                    <p className="upload-queue-hash" title={item.sha256}>SHA-256 {item.sha256.slice(0, 16)}…</p>
-                  </div>
-                </li>
-                );
-              })}
-            </ol>
-          </section>
           <section className="evidence-chain" aria-labelledby="evidence-chain-title">
             <div className="evidence-chain-heading">
               <div><p className="eyebrow">WORK-IN-PROCESS HANDOFF MAP</p><h3 id="evidence-chain-title">Authority → record → next verification</h3></div>

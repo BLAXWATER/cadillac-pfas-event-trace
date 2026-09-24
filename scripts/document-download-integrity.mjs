@@ -137,6 +137,16 @@ function gitBlobMetadata(specs) {
   return result.stdout.trim().split(/\r?\n/);
 }
 
+function availableRepositoryCommits(commits) {
+  return new Map([...new Set(commits)].map((commit) => {
+    const result = spawnSync("git", ["cat-file", "-e", `${commit}^{commit}`], {
+      cwd: root,
+      encoding: "utf8",
+    });
+    return [commit, result.status === 0];
+  }));
+}
+
 export async function verifyCatalogIntegrity() {
   const records = await loadDocumentRecords();
   const local = records.filter((row) => row.url.startsWith("/"));
@@ -146,6 +156,7 @@ export async function verifyCatalogIntegrity() {
   const archiveDeliveries = deliveries.filter((entry) => entry.kind === "archive");
   const officialDeliveries = deliveries.filter((entry) => entry.kind === "official");
   const failures = [];
+  const warnings = [];
   const verifiedLocalPaths = new Set();
 
   async function verifyLocal(row, publicPath) {
@@ -183,10 +194,15 @@ export async function verifyCatalogIntegrity() {
     if (direct.hash) failures.push(`${row.catalog}:${row.id} official source URL contains a fragment`);
   }
 
+  const commitAvailability = availableRepositoryCommits(archiveDeliveries.map(({ source }) => source.commit));
   const metadata = gitBlobMetadata(archiveDeliveries.map(({ source }) => source.spec));
   metadata.forEach((line, index) => {
     const { row, source } = archiveDeliveries[index];
     if (/ missing$/.test(line)) {
+      if (commitAvailability.get(source.commit) === false) {
+        warnings.push(`${row.catalog}:${row.id} immutable GitHub source commit is outside this checkout's history (${source.commit})`);
+        return;
+      }
       failures.push(`${row.catalog}:${row.id} repository blob is missing (${source.spec})`);
       return;
     }
@@ -198,7 +214,7 @@ export async function verifyCatalogIntegrity() {
     if (Number(match[1]) !== row.size) failures.push(`${row.catalog}:${row.id} repository size ${match[1]} != ${row.size}`);
   });
 
-  return { records, local, external, deliveries, bundledDeliveries, archiveDeliveries, officialDeliveries, failures };
+  return { records, local, external, deliveries, bundledDeliveries, archiveDeliveries, officialDeliveries, failures, warnings };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -210,5 +226,9 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     process.exitCode = 1;
   } else {
     console.log(`Catalog integrity passed: ${result.records.length} records (${result.bundledDeliveries.length} bundled deliveries, ${result.archiveDeliveries.length} public archive deliveries, ${result.officialDeliveries.length} official-source deliveries).`);
+    if (result.warnings.length) {
+      const commits = new Set(result.archiveDeliveries.map(({ source }) => source.commit));
+      console.warn(`Catalog integrity note: ${result.warnings.length} immutable GitHub deliveries reference ${commits.size} commit(s) outside this checkout's history; their full blob checks remain enforced in the canonical GitHub checkout.`);
+    }
   }
 }
